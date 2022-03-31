@@ -17,30 +17,25 @@ public class LineDrawer : MonoBehaviour {
     private bool isDragging;
     private float RADIUS = 0.35f;
 
-    private void Awake()
-    {
+    private void Awake() {
         instance = this;
     }
 
-    private void Start()
-    {
+    private void Start() {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.sortingLayerName = "MyLineRenderer";
     }
 
-    private void Update()
-    {
+    private void Update() {
         if (DialogController.instance.IsDialogShowing()) return;
         if (SocialRegion.instance.isShowing) return;
 
-        if (Input.GetMouseButtonDown(0))
-        {
+        if (Input.GetMouseButtonDown(0)) {
             textPreview.SetText("");
             textPreview.FadeIn();
         }
 
-        if (Input.GetMouseButton(0))
-        {
+        if (Input.GetMouseButton(0)) {
             isDragging = true;
             textPreview.SetActive(true);
 
@@ -49,24 +44,18 @@ public class LineDrawer : MonoBehaviour {
 
             int nearest = GetNearestPosition(mousePoint, letterPositions);
             Vector3 letterPosition = letterPositions[nearest];
-            if (Vector3.Distance(letterPosition, mousePoint) < RADIUS)
-            {
-                if (currentIndexes.Count >= 2 && currentIndexes[currentIndexes.Count - 2] == nearest)
-                {
+            if (Vector3.Distance(letterPosition, mousePoint) < RADIUS) {
+                if (currentIndexes.Count >= 2 && currentIndexes[currentIndexes.Count - 2] == nearest) {
                     currentIndexes.RemoveAt(currentIndexes.Count - 1);
                     textPreview.SetIndexes(currentIndexes);
-                }
-                else if (!currentIndexes.Contains(nearest))
-                {
+                } else if (!currentIndexes.Contains(nearest)) {
                     currentIndexes.Add(nearest);
                     textPreview.SetIndexes(currentIndexes);
                 }
             }
 
             BuildPoints();
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
+        } else if (Input.GetMouseButtonUp(0)) {
             isDragging = false;
             currentIndexes.Clear();
 #if UNITY_5_5
@@ -78,9 +67,10 @@ public class LineDrawer : MonoBehaviour {
             WordRegion.instance.CheckAnswer(textPreview.GetText());
         }
 
-        if (points.Count >= 2 && isDragging)
-        {
+        if (points.Count >= 2 && isDragging) {
             // positions = iTween.GetSmoothPoints(points.ToArray(), 8);
+            positions = iTween.MakeSmoothCurve(points.ToArray(), 8);
+
 #if UNITY_5_5
             lineRenderer.numPositions = positions.Count;
 #else
@@ -90,15 +80,12 @@ public class LineDrawer : MonoBehaviour {
         }
     }
 
-    private int GetNearestPosition(Vector3 point, List<Vector3> letters)
-    {
+    private int GetNearestPosition(Vector3 point, List<Vector3> letters) {
         float min = float.MaxValue;
         int index = -1;
-        for(int i = 0; i < letters.Count; i++)
-        {
+        for (int i = 0; i < letters.Count; i++) {
             float distant = Vector3.Distance(point, letters[i]);
-            if (distant < min)
-            {
+            if (distant < min) {
                 min = distant;
                 index = i;
             }
@@ -106,13 +93,11 @@ public class LineDrawer : MonoBehaviour {
         return index;
     }
 
-    private void BuildPoints()
-    {
+    private void BuildPoints() {
         points.Clear();
         foreach (var i in currentIndexes) points.Add(letterPositions[i]);
 
-        if (currentIndexes.Count == 1 || points.Count >= 1 && Vector3.Distance(mousePoint, points[points.Count - 1]) >= RADIUS)
-        {
+        if (currentIndexes.Count == 1 || points.Count >= 1 && Vector3.Distance(mousePoint, points[points.Count - 1]) >= RADIUS) {
             points.Add(mousePoint);
         }
     }
