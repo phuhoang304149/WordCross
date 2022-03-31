@@ -1,7 +1,7 @@
 ﻿//#define DEVELOPMENT
 public class CommonConst
 {
-    public const iTween.DimensionMode ITWEEN_MODE = iTween.DimensionMode.mode2D;
+    // public const iTween.DimensionMode ITWEEN_MODE = iTween.DimensionMode.mode2D;
 
     public static readonly int[] START_FRIEND_LEVELS = { 3, 5, 7, 12, 18 };
     public static int GetTargetScore(int level)

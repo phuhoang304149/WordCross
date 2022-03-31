@@ -80,7 +80,7 @@ public class LineDrawer : MonoBehaviour {
 
         if (points.Count >= 2 && isDragging)
         {
-            positions = iTween.GetSmoothPoints(points.ToArray(), 8);
+            // positions = iTween.GetSmoothPoints(points.ToArray(), 8);
 #if UNITY_5_5
             lineRenderer.numPositions = positions.Count;
 #else
