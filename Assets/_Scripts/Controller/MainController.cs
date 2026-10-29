@@ -40,7 +40,7 @@ public class MainController : BaseController {
             });
         }
 
-        levelNameText.text = GameState.currentSubWorldName + " - " + (level + 1);
+        levelNameText.text = Locator<LocalizationController>.Instance.Get("world.sub", "n", subWorld + 1) + " - " + (level + 1);
         levelSubText.text = Locator<LocalizationController>.Instance.Get("common.level", "n", level + 1);
     }
 
