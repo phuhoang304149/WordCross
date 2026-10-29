@@ -19,7 +19,7 @@ namespace WordCross.Gameplay
     //   shop | rate | language | rewarded:<ready|loading|cooldown|nofill|offline|playing|success|cancel|error> (mở trong Home)
     //   daily[:fresh|risk|safe|lost]  dialog Daily ở Home với dữ liệu chuỗi giả (lưu thật, trả lại bằng reset)
     //   dailymain[:fresh|risk|safe|lost]  Main với bàn Daily hôm nay
-    //   dailywin[:fresh|risk|safe|lost]   Win biến thể Daily (thắng bàn hôm nay; ruby/dữ liệu Daily trả lại sau 1 giây)
+    //   dailywin[:fresh|two|risk|safe|lost]   Win biến thể Daily (thắng bàn hôm nay; ruby/dữ liệu Daily trả lại sau 1 giây)
     //   Hậu tố ;glang=vi|en|fr|es|pt đổi ngôn ngữ chơi (lưu thật; trả lại bằng ;glang=en).
     //   Hậu tố ;solve=K (cho main) tự nhập mọi đáp án trừ K từ cuối, in toạ độ màn hình của các chữ trong vòng ("letters") để adb swipe nốt.
     //   Hậu tố ;noads=N giả lập mua gói tắt quảng cáo thành công sau N giây (gọi Purchaser.GrantNoAds, cùng đường OnNoAdsRestored; không qua Google Play).
@@ -285,6 +285,7 @@ namespace WordCross.Gameplay
             int best = 0;
             if (state == "risk") { offsets = new[] { -1, -2, -3 }; best = 3; }
             else if (state == "safe") { offsets = new[] { 0, -1, -2, -3 }; best = 6; }
+            else if (state == "two") { offsets = new[] { -1 }; best = 1; }
             else if (state == "lost") { offsets = new[] { -5, -6 }; best = 6; }
             var days = new string[offsets.Length];
             for (int i = 0; i < offsets.Length; i++) days[i] = daily.AddDays(today, offsets[i]);

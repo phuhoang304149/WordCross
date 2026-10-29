@@ -180,7 +180,7 @@ public class WinDialog : Dialog {
         rewardText.text = first ? Loc.Get("win.dailyReward", "n", reward) : Loc.Get("win.replay");
         doubleRewardButton.gameObject.SetActive(first);
 
-        string streak = Loc.Get("win.streak", "n", dailyResult.streak);
+        string streak = Loc.Get(dailyResult.streak == 1 ? "win.streak.one" : "win.streak", "n", dailyResult.streak);
         if (dailyResult.milestone > 0) streak += "\n" + Loc.Get("win.milestone", "d", dailyResult.milestoneDays, "n", dailyResult.milestone);
         goalText.text = streak;
         goalText.gameObject.SetActive(true);
