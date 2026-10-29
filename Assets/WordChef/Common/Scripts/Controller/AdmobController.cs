@@ -22,6 +22,12 @@ public class AdmobController : MonoBehaviour
 
     private const string REWARDED_ACTION = "rewarded_video";
 
+#if GAME_DEBUG || DEVELOPMENT_BUILD
+    // Quảng cáo giả cho tools/ui-preview (DebugOpener ;ad=): reward = xem xong, close = đóng sớm, fail = không phát được, nofill = không có quảng cáo; rỗng = quảng cáo thật.
+    public string debugAd = "";
+    public float debugAdSeconds = 2f;
+#endif
+
     // true trong lúc gọi CatGamingAds.ShowRewarded: callback(false) đến ngay trong lệnh gọi nghĩa là không phát được, không phải đóng sớm.
     private bool isShowingRewarded;
 
@@ -120,6 +126,9 @@ public class AdmobController : MonoBehaviour
     // Trả về true khi rewarded video đã sẵn sàng.
     public bool IsRewardedVideoLoaded()
     {
+#if GAME_DEBUG || DEVELOPMENT_BUILD
+        if (debugAd.Length > 0) return debugAd != "nofill";
+#endif
 #if CATGAMING_ADS && CATGAMING_ADMOB
         return isAdsReady && Locator<AdmobService>.Instance != null && Locator<AdmobService>.Instance.IsRewardedReady;
 #else
@@ -150,6 +159,13 @@ public class AdmobController : MonoBehaviour
             return;
         }
 
+#if GAME_DEBUG || DEVELOPMENT_BUILD
+        if (debugAd.Length > 0)
+        {
+            StartCoroutine(ShowDebugAd());
+            return;
+        }
+#endif
 #if CATGAMING_ADS && CATGAMING_ADMOB
         isShowingRewarded = true;
         bool started = CatGamingAds.ShowRewarded(OnRewardedCompleted);
@@ -168,4 +184,16 @@ public class AdmobController : MonoBehaviour
     {
         if (onRewardedVideoRewarded != null) onRewardedVideoRewarded();
     }
+
+#if GAME_DEBUG || DEVELOPMENT_BUILD
+    private IEnumerator ShowDebugAd()
+    {
+        Debug.Log("[DebugAd] show mode=" + debugAd);
+        yield return new WaitForSecondsRealtime(debugAdSeconds);
+        Debug.Log("[DebugAd] end mode=" + debugAd);
+        if (debugAd == "reward") HandleRewardBasedVideoRewarded();
+        else if (debugAd == "close" && onRewardedVideoClosed != null) onRewardedVideoClosed();
+        else if (debugAd == "fail" && onRewardedVideoFailed != null) onRewardedVideoFailed();
+    }
+#endif
 }
