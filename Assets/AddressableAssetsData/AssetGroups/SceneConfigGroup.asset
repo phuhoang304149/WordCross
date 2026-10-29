@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: SceneConfigGroup
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: SceneConfigGroup
+  m_GUID: 8575c4fb580874dc8832878361e457c2
+  m_SerializeEntries:
+  - m_GUID: 064b96d707ae11340bcbed5e31361e30
+    m_Address: Assets/_Scenes/Home.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - preload_1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 739f8ceaaec6de542a34d1a121b43241
+    m_Address: Assets/_Scenes/SelectLevel.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - preload_1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5a6bde723c00464083985bffb55a5b7
+    m_Address: Assets/_Scenes/Main.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - preload_1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac051abc6abdcc54ebb3be68da026268
+    m_Address: Assets/_Scenes/SelectWorld.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - preload_1
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 07c88aaa1219342c1b685fa6409c9e6a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 2140ffafe47da4c788e41e226ef86bc2, type: 2}
