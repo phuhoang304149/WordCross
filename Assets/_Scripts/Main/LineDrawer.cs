@@ -30,8 +30,13 @@ public class LineDrawer : MonoBehaviour {
 
     private void Update()
     {
-        if (DialogController.instance.IsDialogShowing()) return;
-        if (SocialRegion.instance.isShowing) return;
+        if (DialogController.instance.IsDialogShowing() || SocialRegion.instance.isShowing)
+        {
+            // Dialog/Pause mở giữa lúc kéo thì MouseUp không tới đây: bỏ lựa chọn dở để không kẹt.
+            if (isDragging || currentIndexes.Count > 0) ResetSelection();
+            return;
+        }
+        if (letterPositions.Count == 0) return;
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -91,6 +96,21 @@ public class LineDrawer : MonoBehaviour {
 #endif
             lineRenderer.SetPositions(positions.ToArray());
         }
+    }
+
+    private void ResetSelection()
+    {
+        isDragging = false;
+        currentIndexes.Clear();
+        points.Clear();
+        Pan.instance.SetSelectedPositions(currentIndexes);
+        textPreview.SetText("");
+        textPreview.SetActive(false);
+#if UNITY_5_5
+        lineRenderer.numPositions = 0;
+#else
+        lineRenderer.positionCount = 0;
+#endif
     }
 
     private int GetNearestPosition(Vector3 point, List<Vector3> letters)

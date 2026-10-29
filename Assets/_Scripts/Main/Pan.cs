@@ -29,15 +29,13 @@ public class Pan : MonoBehaviour
         instance = this;
     }
 
-    private void Start()
+    public void Load(GameLevel gameLevel)
     {
+        // Gán tại đây thay vì Start để không phụ thuộc thứ tự Start với MainController.
         world = GameState.currentWorld;
         subWorld = GameState.currentSubWorld;
         level = GameState.currentLevel;
-    }
 
-    public void Load(GameLevel gameLevel)
-    {
         this.gameLevel = gameLevel;
         numLetters = gameLevel.word.Trim().Length;
 
