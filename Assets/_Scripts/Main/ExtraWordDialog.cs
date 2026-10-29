@@ -33,7 +33,9 @@ public class ExtraWordDialog : Dialog
         Prefs.extraProgress = (int)extraProgress.current;
         UpdateUI();
 
-        StartCoroutine(ClaimEffect());
+        // Ruby cộng ngay; hiệu ứng bay chỉ trang trí, chạy trên MonoUtils để không chết theo dialog.
+        CurrencyController.CreditBalance(claimQuantity);
+        if (MonoUtils.instance != null) MonoUtils.instance.StartCoroutine(ClaimEffect());
         ExtraWord.instance.OnClaimed();
 
         if (Prefs.extraTarget == 5 && Prefs.totalExtraAdded > 10)
@@ -46,14 +48,17 @@ public class ExtraWordDialog : Dialog
 
     private IEnumerator ClaimEffect()
     {
-        Transform rubyBalance = GameObject.FindWithTag("RubyBalance").transform;
+        GameObject balanceObj = GameObject.FindWithTag("RubyBalance");
+        if (balanceObj == null) yield break;
+        Transform rubyBalance = balanceObj.transform;
         // Pivot của RubyBalance nằm ở mép phải pill nên bay về icon ruby con (nếu có) thay vì pivot
         Transform rubyIcon = rubyBalance.Find("Ruby");
         Vector3 targetPosition = rubyIcon != null ? rubyIcon.position : rubyBalance.position;
         var middlePoint = CUtils.GetMiddlePoint(claimTr.position, targetPosition, -0.4f);
         Vector3[] waypoints = { claimTr.position, middlePoint, targetPosition };
+        int quantity = claimQuantity;
 
-        for (int i = 0; i < claimQuantity; i++)
+        for (int i = 0; i < quantity; i++)
         {
             GameObject gameObj = Instantiate(MonoUtils.instance.rubyFly);
             gameObj.transform.position = waypoints[0];

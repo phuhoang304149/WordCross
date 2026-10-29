@@ -3,7 +3,7 @@ UNITY=${UNITY_PATH:-/Applications/Unity/Hub/Editor/6000.3.9f1/Unity.app/Contents
 export ANDROID_SERIAL=${ANDROID_SERIAL:-R58MC2CSLQZ}
 PKG=com.PHltd.wordcrossy
 ACTIVITY=com.unity3d.player.UnityPlayerActivity
-PORT=${PREVIEW_PORT:-18080}
+PORT=${PREVIEW_PORT:-$((18080 + $(printf %s "$ANDROID_SERIAL" | cksum | cut -d" " -f1) % 200))}   # one port per device so devices can run in parallel
 APKREV=1   # bump when apk_repack.py/catalog_patch.py change the repacked APK layout
 
 say() { printf '[ui-preview] %s\n' "$*" >&2; }
@@ -24,7 +24,7 @@ resolve_main() {
   MAIN=$(dirname "$COMMON")
   LOGS=$MAIN/Build/remote-r2-0.3
   SHOTS=$LOGS/qa-shots
-  STATE=$COMMON/task-hotupdate
+  STATE=$COMMON/task-hotupdate/dev-$ANDROID_SERIAL   # lock + state per device
   ORIG_APK=${WC_ORIGINAL_APK:-$LOGS/wordcrossy_0.3_6_202610291042_DEVELOPER_LOG.apk}
   mkdir -p "$STATE" "$SHOTS"
 }
