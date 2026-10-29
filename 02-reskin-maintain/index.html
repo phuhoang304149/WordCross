@@ -1059,16 +1059,16 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T128",
       "title": "Nút Back ở SelectWorld không quay về được (USER báo)",
-      "type": "code",
-      "status": "doing",
+      "type": "runtime",
+      "status": "done",
       "screen": "Màn SelectWorld",
       "goal": "Back về Home",
       "scope": "Header.prefab ButtonGotoScene, SelectWorld scene; kiểm mọi đường Back",
       "owner": "CLAUDE (dev)",
       "deps": "",
       "criteria": "Mọi nút Back UI + Back hệ thống về đúng màn trên OTA thật",
-      "evidence": "",
-      "note": "[2026-10-30] USER manual check. Prefab Back: ButtonGotoScene sceneIndex 0 (Home), cấu hình đúng → nghi lỗi runtime (raycast đè/fader)."
+      "evidence": "[2026-10-30] Nguyên nhân: Header (Back) là sibling dưới Scroll View toàn màn (Viewport Image raycastTarget) → tap bị nuốt, không log. Sửa: Header m_RootOrder lên trên Scroll View ở SelectWorld + SelectLevel (2b52335, merge bcbbf15). Máy OTA thật: SelectWorld Back → Home, SelectLevel Back → SelectWorld, Back hệ thống đúng; Main Pause → VỀ MENU OK. OTA AA 1.0.0 catalog 5c7c6b75 (9/9 sha256), CLR giữ 2cf2e776. Ảnh qa-shots/t128-*.",
+      "note": "[2026-10-30] USER manual check. Prefab Back: ButtonGotoScene sceneIndex 0 (Home), cấu hình đúng → nghi lỗi runtime (raycast đè/fader).\n[2026-10-30] Back hệ thống ở Main mở Pause (hành vi gốc). Đề xuất thêm kiểm tự động \"Header là sibling cuối Canvas\"."
     },
     {
       "id": "T020",
