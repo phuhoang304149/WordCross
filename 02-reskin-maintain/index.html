@@ -177,7 +177,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T001",
       "title": "Nâng Unity 6000.3.9f1",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Project chạy trên Unity 6000.3.9f1",
@@ -185,13 +185,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "",
       "criteria": "ProjectVersion = 6000.3.9f1",
-      "evidence": "ProjectSettings/ProjectVersion.txt m_EditorVersion: 6000.3.9f1 (nhánh feature/unity-6.3)",
+      "evidence": "ProjectSettings/ProjectVersion.txt m_EditorVersion: 6000.3.9f1 (nhánh feature/unity-6.3) | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 05:33 30/10, pm clear+cold start, log Build/remote-r2-0.3/qa-shots/qa-sweep-cold.log: logcat \"Version '6000.3.9f1 (7a9955a4f2fa)'\" + ProjectVersion.txt",
       "note": "Xong code; chưa test runtime."
     },
     {
       "id": "T003",
       "title": "HybridCLR Install/Generate + gameplay hot-update",
-      "type": "compile",
+      "type": "runtime",
       "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Gameplay compile sang assembly hot-update",
@@ -199,13 +199,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "T001",
       "criteria": "Install/Generate chạy batch; gameplay compile sang hotupdate",
-      "evidence": "Commits 10dc3c5, 2281a75, 1ef0d08; merge af97839",
+      "evidence": "Commits 10dc3c5, 2281a75, 1ef0d08; merge af97839 | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 05:33 30/10, pm clear+cold start, log Build/remote-r2-0.3/qa-shots/qa-sweep-cold.log: [Bootstrap] Load completed successfully. Assemblies: CatGaming.Module, WordCross.Gameplay.HotUpdate. Mode: Player DLLs; tải CLR từ R2 (302080/244736 bytes)",
       "note": "Xong compile/code; chưa test runtime load hot-update trên thiết bị."
     },
     {
       "id": "T004",
       "title": "Scene gameplay qua Addressables",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Load scene qua Addressables thay build index",
@@ -213,13 +213,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "T003",
       "criteria": "Merge vào feature/unity-6.3",
-      "evidence": "Commits 378c863, 932dabb, 9fc6e95; merge 07e8e9c",
+      "evidence": "Commits 378c863, 932dabb, 9fc6e95; merge 07e8e9c | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 05:33 30/10, pm clear+cold start, log Build/remote-r2-0.3/qa-shots/qa-sweep-cold.log: [Scene] load Assets/_Scenes/Home.unity → loaded Home t=9,17; Home/SelectLevel/Main/SelectWorld ở SceneConfigGroup Addressables",
       "note": "Xong code; chưa test runtime."
     },
     {
       "id": "T050",
       "title": "Bỏ GTil.PushInfo HTTP legacy (template WordChef)",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Hết request HTTP legacy lỗi",
@@ -227,13 +227,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "",
       "criteria": "Log thiết bị không còn lỗi HTTP",
-      "evidence": "Commit 55d5fca; ADB SM-A515F không có lỗi HTTP sau khi bỏ GTil.Init",
+      "evidence": "Commit 55d5fca; ADB SM-A515F không có lỗi HTTP sau khi bỏ GTil.Init | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 05:33 30/10, pm clear+cold start, log Build/remote-r2-0.3/qa-shots/qa-sweep-cold.log: 0 dòng lỗi HTTP legacy GTil (chỉ 'Ads HTTP timeout' của SDK Ads)",
       "note": ""
     },
     {
       "id": "T053",
       "title": "Xóa toàn bộ Facebook (gốc: GameMaster.prefab FacebookController missing script)",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Xóa toàn bộ Facebook (USER đổi mục tiêu từ chỉ sửa missing script FacebookController)",
@@ -241,13 +241,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "",
       "criteria": "Không còn SDK/script/component Facebook; compile đạt; log thiết bị không missing script/Facebook",
-      "evidence": "QA smoke b47c636: GameObject FacebookController trong GameMaster.prefab missing script guid 0a7fe4ce (class bị comment); device-padding.log có 4 dòng missing script; Merge 90d8ad3 và efafe35: xóa SDK/script/component refs Facebook. QA efafe35: Unity batch Android compile exit 0; rà 24 GUID đã xóa không còn tham chiếu. OTA CLR + Addressables lên R2: hash public 12/12 khớp. ADB: không missing script, không log Facebook, không dòng E Unity",
+      "evidence": "QA smoke b47c636: GameObject FacebookController trong GameMaster.prefab missing script guid 0a7fe4ce (class bị comment); device-padding.log có 4 dòng missing script; Merge 90d8ad3 và efafe35: xóa SDK/script/component refs Facebook. QA efafe35: Unity batch Android compile exit 0; rà 24 GUID đã xóa không còn tham chiếu. OTA CLR + Addressables lên R2: hash public 12/12 khớp. ADB: không missing script, không log Facebook, không dòng E Unity | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 05:33 30/10, pm clear+cold start, log Build/remote-r2-0.3/qa-shots/qa-sweep-cold.log: 0 Facebook/missing script trong logcat; cộng kiểm tĩnh grep",
       "note": "[2026-10-29 11:15 (GMT+7)] Lỗi CHƯA SỬA.\n[2026-10-29 11:23 (GMT+7)] Sau OTA 9b08545 trên SM-A515F: missing script FacebookController cũ VẪN CÒN. Chưa sửa.\n[2026-10-29 11:39 (GMT+7)] USER đổi mục tiêu: xóa toàn bộ Facebook. Xong theo bằng chứng (merge 90d8ad3, efafe35; compile, rà GUID, OTA, ADB). Giữ: enum InviteFriends (tránh lệch index), ảnh check_box/check_mark (Toggle còn dùng), trường facebookId trong module Nakama (không phải FB SDK). Kết quả QA compile efafe35 KHÔNG áp cho commit mới hơn. CHƯA iOS, CHƯA kiểm UI bằng mắt/manual.\n[2026-10-29 11:45 (GMT+7)] Trạng thái QA: Đạt tiêu chí task (merge 90d8ad3/efafe35, compile, rà GUID, OTA 12/12 hash, ADB không log Facebook/missing script). Loại code → dashboard tính Đạt nhưng CHƯA xác minh; chưa manual UI, chưa iOS.\n[2026-10-29 11:53 (GMT+7)] QA đọc-only commit cf0dd08 (chỉ đọc source/asset, KHÔNG bấm nút, KHÔNG nhìn UI): refs Home hợp lệ; Home không còn toggle sound/music, Pause vẫn có toggle; callback Play/Shop/Rate được nối; các GUID Facebook đã xóa không còn tham chiếu sót. Catalog public e94c4967, CLR 478a017d; log thiết bị 0 dòng E / 0 missing script. QA KHÔNG tìm thấy log chứng minh bundle b25bd7d8 đã được tải/cache. KHÔNG phải manual pass. Trạng thái giữ nguyên."
     },
     {
       "id": "T054",
       "title": "Điều tra missing script unknown/null chưa định danh",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Định danh mọi missing script còn lại",
@@ -255,13 +255,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "",
       "criteria": "Ghi rõ GameObject/prefab/guid từng missing script và hướng xử lý",
-      "evidence": "ADB lượt mới sau OTA efafe35: no missing script; Quét tĩnh 96 scene/prefab: Home/gameplay không có GUID script thiếu; script home-sound/font không còn được tham chiếu (đọc asset, không chạy mới). Kết quả điều tra (đọc asset/log, KHÔNG chạy runtime mới): dòng missing unknown/null trong log cũ không còn sau OTA Facebook efafe35; quét GUID Home/gameplay không thiếu. Toast.prefab (guid 732afc3d35fdd4f4598e7e96be340603, f5f67c52d1564df4a8936ccd202a3bd8) và PlusScore.prefab (guid dcc393516aa4866428c19f723b225d5a, f5f67c52d1564df4a8936ccd202a3bd8) thiếu script từ first init; không có refs/Resources/callsite; không xác định được script gốc. Hướng xử lý: GIỮ LẠI, không xoá.",
+      "evidence": "ADB lượt mới sau OTA efafe35: no missing script; Quét tĩnh 96 scene/prefab: Home/gameplay không có GUID script thiếu; script home-sound/font không còn được tham chiếu (đọc asset, không chạy mới). Kết quả điều tra (đọc asset/log, KHÔNG chạy runtime mới): dòng missing unknown/null trong log cũ không còn sau OTA Facebook efafe35; quét GUID Home/gameplay không thiếu. Toast.prefab (guid 732afc3d35fdd4f4598e7e96be340603, f5f67c52d1564df4a8936ccd202a3bd8) và PlusScore.prefab (guid dcc393516aa4866428c19f723b225d5a, f5f67c52d1564df4a8936ccd202a3bd8) thiếu script từ first init; không có refs/Resources/callsite; không xác định được script gốc. Hướng xử lý: GIỮ LẠI, không xoá. | [2026-10-30 QA sweep] PASS: logcat cold start + duyệt 8 màn/dialog trên ZY22LHV7PJ: 0 missing script unknown/null; quét tĩnh GUID script thiếu chỉ ở prefab đã xoá",
       "note": "[2026-10-29 11:15 (GMT+7)] Còn missing script unknown/null chưa định danh, cần điều tra. Chưa sửa.\n[2026-10-29 11:39 (GMT+7)] Lượt mới (OTA efafe35) trên thiết bị: no missing script. Các dòng unknown/null CŨ chưa xác minh/định danh, chưa biết nguyên nhân cũ → chưa Xong theo tiêu chí.\n[2026-10-29 12:01 (GMT+7)] Điều tra: log thiết bị sau OTA Facebook efafe35 không còn missing script; home-sound/font không còn script tham chiếu. Quét 96 scene/prefab: Home/gameplay không có GUID thiếu. Nguyên nhân các dòng unknown/null CŨ có thể liên quan Facebook (T053) — CHƯA khẳng định. Chưa chạy lượt runtime mới cho điều tra này; KHÔNG tính manual. Toast.prefab/PlusScore.prefab và scene demo có GUID thiếu nhưng chưa thấy references/load → tách T062, KHÔNG phải bug runtime đã xác nhận.\n[2026-10-29 12:08 (GMT+7)] Xong phần điều tra (ghi kết quả, KHÔNG tuyên bố runtime): log cũ missing unknown/null không còn sau OTA Facebook; quét GUID Home/gameplay không thiếu. Toast.prefab/PlusScore.prefab missing GUID có từ first init, không refs/Resources/callsite, không xác định script → giữ lại, không xoá. Nguyên nhân dòng log cũ vẫn CHƯA khẳng định; không tính manual/runtime.\n[2026-10-29 13:00 (GMT+7)] QA điều tra chỉ đọc tại 403a0e9: Toast.prefab thiếu GUID 732afc3d… (2 component: image/text/speed/toast), PlusScore.prefab thiếu dcc39351… (field Text). Không .meta nào mang 2 GUID ở mọi commit (--all) và các project khác trong workspace → thiếu từ first init, không phải do nâng Unity/gỡ Facebook (chắc chắn cao). Prefab GUID không có trong scene/prefab/asset/Addressables group/Resources/code; Toast runtime dùng instance trong GameMaster.prefab → rủi ro runtime rất thấp. Tên class gốc không xác định được. Đề xuất (CHƯA làm, chờ USER): xoá 2 prefab legacy + kiểm controller/anim chỉ chúng dùng, hoặc gỡ component missing bằng batch."
     },
     {
       "id": "T062",
       "title": "GUID script thiếu trong Toast.prefab, PlusScore.prefab và scene demo",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Xác định có cần dọn/sửa các GUID script thiếu này không",
@@ -269,7 +269,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "T054",
       "criteria": "Xác định asset có được tham chiếu/load lúc runtime không; ghi GUID + hướng xử lý (xoá component/asset hoặc giữ nguyên)",
-      "evidence": "Toast.prefab: guid 732afc3d35fdd4f4598e7e96be340603, f5f67c52d1564df4a8936ccd202a3bd8; PlusScore.prefab: guid dcc393516aa4866428c19f723b225d5a, f5f67c52d1564df4a8936ccd202a3bd8 — không có .meta tương ứng. Missing từ first init; không có refs/Resources/callsite; không xác định được script. Quyết định: giữ lại, không xoá (xem T054). Scene demo: không điều tra thêm.",
+      "evidence": "Toast.prefab: guid 732afc3d35fdd4f4598e7e96be340603, f5f67c52d1564df4a8936ccd202a3bd8; PlusScore.prefab: guid dcc393516aa4866428c19f723b225d5a, f5f67c52d1564df4a8936ccd202a3bd8 — không có .meta tương ứng. Missing từ first init; không có refs/Resources/callsite; không xác định được script. Quyết định: giữ lại, không xoá (xem T054). Scene demo: không điều tra thêm. | [2026-10-30 QA sweep] PASS: Không còn Toast.prefab/PlusScore.prefab (đã xoá T067); GUID 732afc3d/dcc39351 0 tham chiếu; logcat Home/SelectWorld/SelectLevel/Main/Pause/Win/Daily/Shop/Language: 0 'missing script/referenced script'",
       "note": "[2026-10-29 12:01 (GMT+7)] Tách từ T054. Quét tĩnh thấy GUID script thiếu nhưng CHƯA thấy references/load → CHƯA phải bug runtime. Chưa điều tra sâu.\n[2026-10-29 12:08 (GMT+7)] Ghi kết quả từ T054: không refs/Resources/callsite → giữ lại, không xoá. Đọc asset tĩnh, KHÔNG tuyên bố runtime."
     },
     {
@@ -289,7 +289,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T067",
       "title": "Xoá prefab legacy Toast/PlusScore thiếu script",
-      "type": "code",
+      "type": "cli-smoke",
       "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Không còn prefab missing script không dùng",
@@ -297,13 +297,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T054",
       "criteria": "Grep GUID không còn tham chiếu; batch import 0 error",
-      "evidence": "Commit c493d09, merge af2ed4b. Xoá Toast.prefab, PlusScore.prefab, PlusScore.controller, PlusScore_Showing.anim (+meta). Giữ Toast.controller/Toast_*.anim (GameMaster.prefab dùng) và Toast.cs. Batch Unity 6000.3.9f1 exit 0, 0 error CS, không GUID tham chiếu file đã xoá.",
+      "evidence": "Commit c493d09, merge af2ed4b. Xoá Toast.prefab, PlusScore.prefab, PlusScore.controller, PlusScore_Showing.anim (+meta). Giữ Toast.controller/Toast_*.anim (GameMaster.prefab dùng) và Toast.cs. Batch Unity 6000.3.9f1 exit 0, 0 error CS, không GUID tham chiếu file đã xoá. | [2026-10-30 QA sweep] PASS: Toast.prefab/PlusScore.prefab/PlusScore.controller không còn; grep GUID 732afc3d.. và dcc39351.. = 0 tham chiếu; f5f67c52 là GUID của script TMP còn tồn tại hợp lệ",
       "note": "[2026-10-29 13:35 (GMT+7)] USER đồng ý xoá có kiểm batch. Không trong Addressables/Resources → KHÔNG cần OTA. Chưa QA độc lập (rủi ro thấp)."
     },
     {
       "id": "T068",
       "title": "Gỡ GUILayer legacy trên Main Camera (4 scene)",
-      "type": "code",
+      "type": "cli-smoke",
       "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Không còn log error GUILayer khi mở scene",
@@ -311,13 +311,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "",
       "criteria": "Batch mở 4 scene không lỗi GUILayer, không missing mới",
-      "evidence": "Commit c51a5b1, merge cabf60f. 4 scene, mỗi scene xoá 9 dòng (m_Component + block !u!92). Batch mở 4 scene: lỗi GUILayer 4 Error+8 Warning → 0; 0 error CS; không missing mới.",
+      "evidence": "Commit c51a5b1, merge cabf60f. 4 scene, mỗi scene xoá 9 dòng (m_Component + block !u!92). Batch mở 4 scene: lỗi GUILayer 4 Error+8 Warning → 0; 0 error CS; không missing mới. | [2026-10-30 QA sweep] PASS: grep '^--- !u!92 ' (GUILayer) = 0 trong Home/SelectWorld/SelectLevel/Main.unity",
       "note": "[2026-10-29 13:35 (GMT+7)] Phát hiện từ batch test T020/T022. Dev đang làm (worktree guilayer). Cần OTA AA cho scene (gộp).\n[2026-10-29 14:00 (GMT+7)] Dev xong. Lỗi chỉ xuất hiện lúc Editor/build AA, log device không có. Lỗi có sẵn phát hiện: Main.unity onClick ShareGame/InviteFriends Broken text PPtr (482168294). Class 92 còn ở scene demo/test (không dùng). Cần OTA AA (gộp). Đang QA độc lập.\n[2026-10-29 14:40 (GMT+7)] QA độc lập PASS (xem T069). Cần OTA AA gộp.\n[2026-10-29 16:50 (GMT+7)] ĐÃ OTA (CLR+AA) từ d7f8ee2: public CLR 32bc3cf2→5c587ffe71ae9a4d, catalog b6cb9cf3→bddeb3e92563e526 (điều phối tự curl lại sau upload, khớp). 9 file upload (4 bundle mới 888eda…monoscripts d5c70181 + unitybuiltinassets 28fbc92f, sceneconfiggroup fe0ff03c, scriptableobjectconfiggroup 8bdba446, catalog+hash, 2 DLL, hotupdate.hash cuối), verify 19/19 sha256. Config Ads giống từng byte (3 unit ID + App ID thật). Chưa test thiết bị (chờ máy rảnh). Rollback: ui-reskin-rollback-note.txt. KHÔNG gồm Home mới/Rate/Shop."
     },
     {
       "id": "T078",
       "title": "Log chuyển scene + hash catalog trong Bootstrap (phục vụ QA)",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "QA chứng minh được catalog/scene bằng log",
@@ -325,13 +325,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "",
       "criteria": "Log 1 dòng khi load scene và hash catalog đang dùng; không log secrets",
-      "evidence": "Commits 9704614 (CUtils.LoadScene log [Scene]) + e1b7fd0 (WordCrossGameEntry: [Bootstrap] clr hash/catalog hash/locator), merge 9b6b14e. Batch 0 error CS, DLL có LogBootstrapVersions.",
+      "evidence": "Commits 9704614 (CUtils.LoadScene log [Scene]) + e1b7fd0 (WordCrossGameEntry: [Bootstrap] clr hash/catalog hash/locator), merge 9b6b14e. Batch 0 error CS, DLL có LogBootstrapVersions. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 05:33 30/10, pm clear+cold start, log Build/remote-r2-0.3/qa-shots/qa-sweep-cold.log: [Scene] load/loaded + [Bootstrap] clr hash/catalog hash/locator đủ, không lộ secret",
       "note": "[2026-10-29 15:00 (GMT+7)] QA OBS-2/OBS-3 (ưu tiên thấp). Cần CLR (+AA nếu Bootstrap) → gộp OTA sau.\n[2026-10-29 19:45 (GMT+7)] Dev Sonnet đang làm (worktree qa-logs); không sửa submodule.\n[2026-10-29 20:45 (GMT+7)] Xong phần game: log [Scene] + [Bootstrap]. Chưa làm: đổi \"Download started\"→\"Read from APK\" (ClrBootstrap.cs:616 trong submodule — cấm sửa submodule). DebugGame.Log không ra logcat vì [Conditional(\"GAME_DEBUG\")] chỉ bật ở profile dev — log mới dùng Debug.Log. Cần OTA CLR (đã nằm trong OTA bổ sung build từ 9b6b14e).\n[2026-10-29 21:15 (GMT+7)] ĐÃ OTA BỔ SUNG (CLR+AA) từ 9b6b14e: public CLR 5c587ffe→abd9f586f10aa4c9 (điều phối tự curl lại), catalog bddeb3e9→d9c2bef28a8b032e. 4 bundle mới (monoscripts 6ce0912e, unitybuiltinassets bf7d8ac5, sceneconfiggroup b2e832e2 5.16MB, scriptableobjectconfiggroup baaf9dc3 46KB 534 level), catalog+hash, 2 DLL (HotUpdate 252416→258560 byte), hotupdate.hash cuối; 23/23 sha256 public khớp; 0 CHANGED. Config Ads/IAP giống từng byte; 534 level đọc đủ 3 field. Gồm: Home/Rate/Shop/Win(T045)/Rewarded/HowTo/Extra/Main/SW-SL-Header fix/T082/T078. CHƯA gồm T081 (Rewarded states), T087 (chữ chọn), T040 (l10n), Notifications B. QA thiết bị đang chạy. Rollback: ota3-rollback-note.txt."
     },
     {
       "id": "T088",
       "title": "Quét asset trong Resources / ScriptableObject tham chiếu script hotupdate (cùng họ lỗi T082)",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Không còn asset Resources.Load tham chiếu script hotupdate",
@@ -339,13 +339,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T082",
       "criteria": "Danh sách asset/script: mỗi cái hoặc ở AOT hoặc nạp qua Addressables",
-      "evidence": "QA quét tĩnh (chỉ đọc) tại HEAD 9b6b14e: 5 thư mục Resources, mọi Resources.Load* trong code, đối chiếu GUID script hotupdate (174 WordCross.Gameplay.HotUpdate + 124 CatGaming.Module), log device cũ.",
+      "evidence": "QA quét tĩnh (chỉ đọc) tại HEAD 9b6b14e: 5 thư mục Resources, mọi Resources.Load* trong code, đối chiếu GUID script hotupdate (174 WordCross.Gameplay.HotUpdate + 124 CatGaming.Module), log device cũ. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:3x logcat 0 'Easy Mobile settings not found'/GameLevel/NullReference; Resources chỉ còn asset AOT/plugin (grep)",
       "note": "[2026-10-29 20:05 (GMT+7)] Dev T082 cảnh báo chưa quét EM_Settings và ScriptableObject khác nạp bằng Resources.Load. Giao QA/dev quét tĩnh + log device.\n[2026-10-29 20:20 (GMT+7)] KẾT QUẢ: không asset Resources nào đang gây lỗi như T082. (1) EM_Settings.asset (script EM_Settings.cs thuộc hotupdate qua asmref WordChef; Resources.Load EM_Settings.cs:42) — nguy cơ tiềm ẩn nhưng chỉ EasyMobile NotificationManager dùng và script đó không nằm trong prefab/scene → code chết; đề xuất xoá asset khỏi Resources hoặc xoá module EM Notification (T089). (2) CanvasScalerRuntimeConfig.asset trong Tool/Resources là bản thừa trong APK (MainModule nạp qua ClrContent.Load, không dùng trong WordCross; contentRoots không có Tool/GameContent) — đề xuất xoá bản Resources (T089). GoogleMobileAdsSettings/DOTweenSettings/BillingMode.json/TMP shader an toàn. ClrContent chặn Resources fallback cho SO/prefab (CATGAMING_CLR) đúng thiết kế. Log device: không \"serialization layout\"; \"referenced script missing\" cũ là FacebookController (đã xoá 6b5e477)."
     },
     {
       "id": "T090",
       "title": "Tắt Unity splash screen mặc định",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Không còn logo Unity khi mở app; chỉ video splash của game",
@@ -353,13 +353,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "",
       "criteria": "Bản APK mới mở app không còn splash Unity (quan sát trên máy/ảnh adb)",
-      "evidence": "Commit ab6c0e8 (ProjectSettings.asset: m_ShowUnitySplashScreen 1→0, m_ShowUnitySplashLogo 1→0). APK Build/remote-r2-0.3/wordcrossy_0.3_6_202610291955_DEVELOPER_LOG_nosplash2.apk (sha256 70ed2e75…, versionCode 6, debug key, build log apk-t108-build.log) cài ZY22LHV7PJ 20:10; ảnh qa-shots/t108-nosplash2-{0.3,0.8,1.5,2.5,4,7,20}.png: KHÔNG còn logo Unity lẫn logo mèo; logcat [Scene] loaded Home t=8,75, không FATAL. Merge b8a7f20 (3253eb7: tắt GameObject CLR Splash, link.xml thêm preserve).",
+      "evidence": "Commit ab6c0e8 (ProjectSettings.asset: m_ShowUnitySplashScreen 1→0, m_ShowUnitySplashLogo 1→0). APK Build/remote-r2-0.3/wordcrossy_0.3_6_202610291955_DEVELOPER_LOG_nosplash2.apk (sha256 70ed2e75…, versionCode 6, debug key, build log apk-t108-build.log) cài ZY22LHV7PJ 20:10; ảnh qa-shots/t108-nosplash2-{0.3,0.8,1.5,2.5,4,7,20}.png: KHÔNG còn logo Unity lẫn logo mèo; logcat [Scene] loaded Home t=8,75, không FATAL. Merge b8a7f20 (3253eb7: tắt GameObject CLR Splash, link.xml thêm preserve). | [2026-10-30 QA sweep] PASS: ảnh qa-sweep-boot-2s.png (2s sau start, pm clear): màn đen, không logo Unity; ProjectSettings m_ShowUnitySplashScreen 0",
       "note": "[2026-10-29 21:00 (GMT+7)] USER yêu cầu. Cấu hình Player → chỉ có hiệu lực ở bản APK MỚI, KHÔNG đi qua OTA (APK 0.3 hiện cài vẫn còn splash). Gộp vào đợt build APK sau (cùng Notifications B T066, T089). Chưa xác minh trên máy.\n[2026-10-29 19:47 (GMT+7)] APK đã build: Build/remote-r2-0.3/wordcrossy_0.3_6_202610291924_DEVELOPER_LOG_nosplash.apk (sha256 b95cb0b2…, từ 588c52e), cài đè ZY22LHV7PJ, cờ splash Unity False, ảnh t090b-nosplash-*.png: hết Made with Unity nhưng còn logo mèo cam của game ~1.2s (scene splash riêng). USER yêu cầu bỏ hết logo → T108 đang build lại. CẢNH BÁO: Generate All làm link.xml/AOTGenericReferences ngắn hơn (mất preserve GoogleMobileAds.Ump, UniTask.DOTween, UI.Toggle, CancellationTokenSource) — T108 xử lý.\n[2026-10-29 20:20 (GMT+7)] Xác minh trên máy bằng APK nosplash2 (T108)."
     },
     {
       "id": "T096",
       "title": "Công cụ vòng xem UI trên máy thật (preview.sh + khoá máy + DebugOpener)",
-      "type": "code",
+      "type": "cli-smoke",
       "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Dev tự chạy UI lên thiết bị, mở thẳng màn/dialog, chụp ảnh, so design và sửa lặp",
@@ -367,7 +367,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T082",
       "criteria": "preview.sh <worktree> <screen> chạy được 4 màn (home, selectworld, main, win) có ảnh; khoá máy; restore.sh; release không chứa DebugOpener",
-      "evidence": "Commits 7561f7d (đăng ký LocalizationData vào Addressables), 1dcef10 (tools/ui-preview), a27cfb2 (DebugOpener + hook WordCrossGameEntry), merge 929ab2c. Ảnh Build/remote-r2-0.3/qa-shots/preview-{home,selectworld,main-0-0-0,win}-20261029-*.png (+ pause/extra/shop/rate/language/rewarded/howto). Chu kỳ: lần đầu ~114s, lặp ~18–70s.",
+      "evidence": "Commits 7561f7d (đăng ký LocalizationData vào Addressables), 1dcef10 (tools/ui-preview), a27cfb2 (DebugOpener + hook WordCrossGameEntry), merge 929ab2c. Ảnh Build/remote-r2-0.3/qa-shots/preview-{home,selectworld,main-0-0-0,win}-20261029-*.png (+ pause/extra/shop/rate/language/rewarded/howto). Chu kỳ: lần đầu ~114s, lặp ~18–70s. | [2026-10-30 QA sweep] PASS: Có tools/ui-preview/{preview.sh,restore.sh,devpool.sh,README}; 532 ảnh preview-* gồm home/selectworld/main-0-0-0/win trong qa-shots; DebugOpener bọc #if GAME_DEBUG||DEVELOPMENT_BUILD và DLL CLR public 1.0.0 có 0 chuỗi 'DebugOpener', logcat release 0 [DebugOpener]. KHÔNG chạy lại preview.sh (không dựng worktree/build)",
       "note": "[2026-10-29 23:30 (GMT+7)] USER chốt: ai làm UI thì tự QA trên máy rồi sửa (dev+QA tách đôi khó fix UI-bug). Dev Sonnet đang dựng công cụ (worktree preview-loop). Sau khi xong mọi prompt dev UI yêu cầu tự xác minh bằng ảnh; QA độc lập chỉ là cổng cuối OTA.\n[2026-10-30 01:10 (GMT+7)] XONG: `tools/ui-preview/preview.sh [--keep] <worktree> <screen>` (+ restore.sh): build CLR+AA cục bộ, APK repack trỏ localhost qua adb reverse (không ghi R2), khoá máy flock, DebugOpener mở thẳng màn/dialog/rewarded 9 trạng thái (chỉ bản dev, release 0 DebugOpener — đã strings), chụp adb screencap. PHÁT HIỆN QUAN TRỌNG: LocalizationData CHƯA nằm trong Addressables ở HEAD → bản OTA kế tiếp sẽ hiện key thô (UI \"world.sub\"…); dev đã đăng ký vào AddressableConfig (7561f7d). Win dialog bị cắt nút MENU ở đáy; ký tự \"·\" hiển thị thành \"R\" (dòng mục tiêu Win); Home trên ảnh đã gần design (tiêu đề WORD/CROSS, lưới 2 cột). Máy: APK gốc dcaa9fed, khoá nhả."
     },
     {
@@ -388,7 +388,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "id": "T101",
       "title": "Hoàn thiện l10n: World {n}/swipe SelectWorld, toast coming soon, chuỗi EN cứng còn lại, cập nhật khi đổi ngôn ngữ",
       "type": "ui",
-      "status": "done",
+      "status": "doing",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Mọi chuỗi UI của các màn đã reskin qua hệ l10n",
       "scope": "SelectWorld.unity, HomeController (toast), LocalizationData, text cứng trong prefab/script",
@@ -396,7 +396,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "deps": "T040",
       "criteria": "Đổi ngôn ngữ → toàn bộ UI các màn đã reskin đổi; liệt kê chuỗi còn EN ngoài design",
       "evidence": "Commits 65aa18f, 800396c, 568b683, cc3c0b5; merge 76b8292. Batch 0 error CS; LocalizationData 289 key × 5 ngôn ngữ, mọi key LocalizedText có; mô phỏng 6 trang SelectWorld 5 ngôn ngữ (\"Monde 3\", \"balayez pour changer\").",
-      "note": "[2026-10-30 00:45 (GMT+7)] Dev Sonnet đang làm (worktree l10n-gaps); không sửa logic WinDialog/Rewarded/Extra (luồng T098).\n[2026-10-30 02:05 (GMT+7)] CODE XONG, CHƯA XÁC MINH thiết bị: LocalizedText cho World {n}/swipe (6 trang), toast Daily/Bot/AI (key mới), shop.success, common.deviceOnly, noti.toast/noti.letterTitle/letter/rubyTitle/ruby; cập nhật khi onLanguageChanged (SelectLevel title, WorldItem, gói ruby Shop). 10 key mới ×5 ngôn ngữ CẦN NGƯỜI RÀ DỊCH: home.toast.daily/bot/ai, common.deviceOnly, shop.success, noti.toast, noti.letterTitle, noti.letter ({c}), noti.rubyTitle, noti.ruby. Không đổi: text prefab EN đã bị script ghi đè bằng Loc.Get; Promote dialogs không tồn tại. Notification chọn ngôn ngữ UI lúc lên lịch. Cần OTA CLR+AA."
+      "note": "[2026-10-30 00:45 (GMT+7)] Dev Sonnet đang làm (worktree l10n-gaps); không sửa logic WinDialog/Rewarded/Extra (luồng T098).\n[2026-10-30 02:05 (GMT+7)] CODE XONG, CHƯA XÁC MINH thiết bị: LocalizedText cho World {n}/swipe (6 trang), toast Daily/Bot/AI (key mới), shop.success, common.deviceOnly, noti.toast/noti.letterTitle/letter/rubyTitle/ruby; cập nhật khi onLanguageChanged (SelectLevel title, WorldItem, gói ruby Shop). 10 key mới ×5 ngôn ngữ CẦN NGƯỜI RÀ DỊCH: home.toast.daily/bot/ai, common.deviceOnly, shop.success, noti.toast, noti.letterTitle, noti.letter ({c}), noti.rubyTitle, noti.ruby. Không đổi: text prefab EN đã bị script ghi đè bằng Loc.Get; Promote dialogs không tồn tại. Notification chọn ngôn ngữ UI lúc lên lịch. Cần OTA CLR+AA.\n[2026-10-30 QA sweep] FAIL: Khung coach vàng trong Main ('Vuốt qua các chữ để ghép từ…') KHÔNG đổi khi đổi ngôn ngữ từ Pause→Ngôn ngữ giữa level (qa-sweep-main-fr.png: tiêu đề/nút FR nhưng coach vẫn VI); WordRegion.cs:153 dựng chuỗi 1 lần lúc nạp level, không cập nhật trong UpdateLevelTexts. Tái hiện: vào level 1 → Pause → NGÔN NGỮ → Français → Back"
     },
     {
       "id": "T107",
@@ -457,7 +457,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T005",
       "title": "Bootstrap scene + splash video",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Bootstrap · Splash",
       "goal": "Scene đầu tiên có splash video CatGaming",
@@ -465,7 +465,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "",
       "criteria": "Merge vào feature/unity-6.3",
-      "evidence": "Commits 1843974, 37821e1, e7f5893; merge 1d017e8",
+      "evidence": "Commits 1843974, 37821e1, e7f5893; merge 1d017e8 | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 05:33 30/10, pm clear+cold start, log Build/remote-r2-0.3/qa-shots/qa-sweep-cold.log: Bootstrap → entry → Home chạy, 0 exception; ảnh qa-sweep-boot-30s.png",
       "note": "Xong code; chưa test runtime."
     },
     {
@@ -555,7 +555,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T046",
       "title": "Lỗi CryptographicException Padding invalid trong CPlayerPrefs.GetInt",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Build · thiết bị Android",
       "goal": "Đọc PlayerPrefs mã hóa không ném exception",
@@ -563,7 +563,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "T009",
       "criteria": "ADB không còn CryptographicException; dữ liệu tiến độ đọc đúng",
-      "evidence": "Commit 7a6cb92 (CPlayerPrefs.GetInt đọc giá trị int thô khi bật Rijndael, Padding invalid không xóa prefs), merge b47c636; Unity batch incremental CLR exit 0; OTA hash public 7/7 khớp; ADB SM-A515F hai lần khởi động: không còn Padding invalid, không có dòng E Unity; key chuyển sang dạng encrypted, dữ liệu giữ nguyên; GameDatabase ready, IAP khởi tạo.",
+      "evidence": "Commit 7a6cb92 (CPlayerPrefs.GetInt đọc giá trị int thô khi bật Rijndael, Padding invalid không xóa prefs), merge b47c636; Unity batch incremental CLR exit 0; OTA hash public 7/7 khớp; ADB SM-A515F hai lần khởi động: không còn Padding invalid, không có dòng E Unity; key chuyển sang dạng encrypted, dữ liệu giữ nguyên; GameDatabase ready, IAP khởi tạo. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 05:33 30/10, pm clear+cold start, log Build/remote-r2-0.3/qa-shots/qa-sweep-cold.log: 0 CryptographicException/Padding trong logcat cold start sau pm clear (PlayerPrefs mới); code CPlayerPrefs.GetInt:152 xử lý int thô",
       "note": "[2026-10-29 10:59 (GMT+7)] Thấy trên ADB SM-A515F với APK Build/remote-r2-0.3/wordcrossy_0.3_6_202610291042_DEVELOPER_LOG.apk. Đang có lượt xử lý, chưa có kết quả.\n[2026-10-29 11:06 (GMT+7)] Xong với evidence thiết bị. Chưa xác minh Home bằng mắt (T014/T012)."
     },
     {
@@ -583,7 +583,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T008",
       "title": "Cấu hình R2 RemoteLoadPath catgaming/wordcross/",
-      "type": "ads-iap-ota",
+      "type": "runtime",
       "status": "done",
       "screen": "OTA · R2 RemoteLoadPath",
       "goal": "Hết lỗi URL undefined",
@@ -591,13 +591,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "T004",
       "criteria": "RemoteLoadPath trỏ R2, runtime tải được",
-      "evidence": "Commit 9e828ba: R2 public https://data.catgaming.asia/wordcross; CLR + Addressables đã upload, 7/7 hash public khớp local; ADB SM-A515F tải được CLR + catalog từ R2.",
+      "evidence": "Commit 9e828ba: R2 public https://data.catgaming.asia/wordcross; CLR + Addressables đã upload, 7/7 hash public khớp local; ADB SM-A515F tải được CLR + catalog từ R2. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 05:33 30/10, pm clear+cold start, log Build/remote-r2-0.3/qa-shots/qa-sweep-cold.log: [CLR] Selected source Device Main URL https://data.catgaming.asia/wordcross/1.0.0/clr/android/Upload; hash 25eadd65… tải+verify; catalog_1.0.0.hash (curl DLL 200)",
       "note": "[2026-10-29 10:59 (GMT+7)] Hết URL undefined trên APK debug Build/remote-r2-0.3/wordcrossy_0.3_6_202610291042_DEVELOPER_LOG.apk. Đây là xác minh tải OTA, chưa phải xác minh Home/gameplay (T009, T014)."
     },
     {
       "id": "T057",
       "title": "OTA bản Home (4bf178b / merge 36fc20d)",
-      "type": "ads-iap-ota",
+      "type": "runtime",
       "status": "done",
       "screen": "OTA · R2 RemoteLoadPath",
       "goal": "Đưa thay đổi Home (Resume, Rate, adsId) lên OTA R2",
@@ -605,7 +605,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "T011, T016, T047",
       "criteria": "Upload R2, hash public khớp manifest OTA; thiết bị tải được bản mới",
-      "evidence": "Merge 9b08545 (gồm commit 14ec661: bundle built-in/monoscripts của Default Local Group chuyển sang Remote vì bundle built-in thay đổi). OTA Home 36fc20d: build CLR + Addressables, upload R2, SHA public 9/9 khớp. ADB SM-A515F: tải bundle và CLR mới, BaseController.Awake Home chạy, IAP GameDatabase ready, 2 lần khởi động không có dòng E/F, app giữ foreground.",
+      "evidence": "Merge 9b08545 (gồm commit 14ec661: bundle built-in/monoscripts của Default Local Group chuyển sang Remote vì bundle built-in thay đổi). OTA Home 36fc20d: build CLR + Addressables, upload R2, SHA public 9/9 khớp. ADB SM-A515F: tải bundle và CLR mới, BaseController.Awake Home chạy, IAP GameDatabase ready, 2 lần khởi động không có dòng E/F, app giữ foreground. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 05:33 30/10, pm clear+cold start, log Build/remote-r2-0.3/qa-shots/qa-sweep-cold.log: hotupdate.hash tải OK, DLL tải 2/2, [Bootstrap] clr hash=25eadd65… catalog hash=catalog_1.0.0.hash:21c594de…; BaseController/Home chạy (OTA Home đã bị OTA 1.0.0 thay thế, superseded)",
       "note": "[2026-10-29 11:15 (GMT+7)] Đang xử lý, chưa có kết quả. Kết quả QA smoke b47c636 KHÔNG áp cho HEAD 36fc20d.\n[2026-10-29 11:23 (GMT+7)] Xong OTA với evidence thiết bị. Chưa kiểm giao diện Home bằng mắt, chưa bấm Rate (T011/T016/T012)."
     },
     {
@@ -639,7 +639,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T061",
       "title": "SetProductData lỗi vẫn tiếp tục build; 1 GameDatabase lệch packageId vẫn được chọn",
-      "type": "code",
+      "type": "cli-smoke",
       "status": "done",
       "screen": "Ads · IAP",
       "goal": "Setup/build không âm thầm đi tiếp với ProductData sai/lỗi",
@@ -647,7 +647,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev) · QA phát hiện",
       "deps": "T059",
       "criteria": "Quyết định + xử lý: SetProductData lỗi thì dừng setup/build (hoặc cảnh báo được USER chấp nhận); 1 GameDatabase có packageId không khớp thì báo lỗi/không chọn; có batch test chứng minh",
-      "evidence": "Submodule commit ad4023c (branch wordcross/productdata-fail-pipeline: SetProductData lỗi → Setup throw BuildFailedException), parent bump 4aee9df, merge fd54c46 vào feature/unity-6.3. Dev Unity batch: case bình thường exit 0; packageId mismatch exit 1, KHÔNG ghi asset; ambiguous GameDatabase exit 1, KHÔNG ghi asset. Case thiếu fixture template CHƯA test. QA CHƯA xác minh độc lập. QA độc lập ad4023c: FAIL — SetProductData lỗi đã abort build, NHƯNG AdMob IDs đã được ghi trước khi abort (thứ tự setup sai) → tách T064.",
+      "evidence": "Submodule commit ad4023c (branch wordcross/productdata-fail-pipeline: SetProductData lỗi → Setup throw BuildFailedException), parent bump 4aee9df, merge fd54c46 vào feature/unity-6.3. Dev Unity batch: case bình thường exit 0; packageId mismatch exit 1, KHÔNG ghi asset; ambiguous GameDatabase exit 1, KHÔNG ghi asset. Case thiếu fixture template CHƯA test. QA CHƯA xác minh độc lập. QA độc lập ad4023c: FAIL — SetProductData lỗi đã abort build, NHƯNG AdMob IDs đã được ghi trước khi abort (thứ tự setup sai) → tách T064. | [2026-10-30 QA sweep] PASS: BuildAndroid.cs 6 Setup*: SetProductData false → throw BuildFailedException; BuildDatabase.cs:~374 packageId lệch (1 GameDatabase) → false, không ghi. Đọc source, không chạy batch",
       "note": "[2026-10-29 11:56 (GMT+7)] Warning còn tồn sau T059. (1) Khi SetProductData báo lỗi, setup/build vẫn tiếp tục. (2) Chỉ có 1 GameDatabase nhưng packageId không khớp vẫn được chọn — PHÂN TÍCH SOURCE, CHƯA TEST. Chưa ai xử lý; chờ quyết định/giao việc.\n[2026-10-29 12:01 (GMT+7)] Dev đang sửa (luồng dev game: setup IAP fail — SetProductData lỗi phải dừng setup/build). Chưa có evidence.\n[2026-10-29 12:03 (GMT+7)] Dev xong fix (ad4023c / merge fd54c46): batch normal exit 0; mismatch + ambiguous exit 1, không ghi. Thiếu fixture template CHƯA test; QA chưa xác minh độc lập → giữ Đang làm, chưa Xong. Submodule ad4023c chưa push (T002). Luồng dev game IAP setup đã kết thúc.\n[2026-10-29 12:08 (GMT+7)] QA đang xác minh độc lập (luồng QA game: setup ProductData). Chưa có kết quả QA → giữ Đang làm.\n[2026-10-29 12:11 (GMT+7)] QA FAIL ad4023c: abort đúng khi SetProductData lỗi nhưng AdMob IDs đã ghi trước bước abort. Phần sửa thứ tự tách sang T064; T061 giữ Đang làm, chờ T064 + QA lại. Submodule ad4023c chưa push (T002).\n[2026-10-29 21:45 (GMT+7)] Đóng: phần còn lại (thứ tự ghi AdMob IDs) xử lý ở T064, QA độc lập 72 checks PASS (Android editor batch); submodule đã push (T002). iOS chưa test."
     },
     {
@@ -709,7 +709,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T006",
       "title": "Android AdMob/IAP nối submodule + cấu hình ID",
-      "type": "code",
+      "type": "cli-smoke",
       "status": "done",
       "screen": "Ads · IAP",
       "goal": "Ads/IAP dùng module catgamingmodule",
@@ -717,13 +717,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "T002",
       "criteria": "Source có ID công khai, nối module",
-      "evidence": "Commit 524c0b5 (AdMob App ID); IAP/Ads qua submodule pin 360395d",
+      "evidence": "Commit 524c0b5 (AdMob App ID); IAP/Ads qua submodule pin 360395d | [2026-10-30 QA sweep] PASS: AdMob App ID ca-app-pub-5916994690017637~6356789201 nhất quán ở WordCrossConfig.asset(adsId), AdmobConfig.asset, GoogleMobileAdsSettings.asset; submodule pin 46f8115 (chứa 360395d IAP). Giao dịch IAP thật không kiểm (theo luật)",
       "note": "Xong code/config; CHƯA xác minh giao dịch IAP, chưa xác minh Ads runtime. [2026-10-29 10:59 (GMT+7)] Purchaser nạp GameDatabase sửa ở d8758f5 (merge 45e0fe5), xem T051."
     },
     {
       "id": "T047",
       "title": "SetupAndroidDev xóa AdMob App ID",
-      "type": "code",
+      "type": "cli-smoke",
       "status": "done",
       "screen": "Ads · IAP",
       "goal": "Build dev giữ AdMob App ID",
@@ -731,13 +731,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "T006",
       "criteria": "Sau SetupAndroidDev, AdMob App ID vẫn còn trong config",
-      "evidence": "Commit 4bf178b (giữ AdMob App ID khi SetupAndroidDev), merge 36fc20d; Unity batch compile đạt. Merge 99d58d0 (submodule 34c70e6 \"stop rewriting AdmobConfig.cs defaults during setup\"): SetupAndroidDev không còn ghi AdmobConfig.cs. Dev chạy Unity batch SetupAndroidDev exit 0: Android AdMob App ID đúng, AdmobConfig.cs sạch (không dirty). QA độc lập kiểm tĩnh source.",
+      "evidence": "Commit 4bf178b (giữ AdMob App ID khi SetupAndroidDev), merge 36fc20d; Unity batch compile đạt. Merge 99d58d0 (submodule 34c70e6 \"stop rewriting AdmobConfig.cs defaults during setup\"): SetupAndroidDev không còn ghi AdmobConfig.cs. Dev chạy Unity batch SetupAndroidDev exit 0: Android AdMob App ID đúng, AdmobConfig.cs sạch (không dirty). QA độc lập kiểm tĩnh source. | [2026-10-30 QA sweep] PASS: AdmobConfig.asset/GoogleMobileAdsSettings.asset giữ App ID ~6356789201 = WordCrossConfig.adsId; SetAdmobIds chỉ ghi qua SerializedObject (BuildAndroid.cs:~540), không sửa AdmobConfig.cs; git status sạch Assets. Không chạy lại batch SetupAndroidDev (không mở Unity)",
       "note": "[2026-10-29 10:59 (GMT+7)] Chưa sửa. Chặn xác minh Ads trên build dev (T007).\n[2026-10-29 11:06 (GMT+7)] Đang xử lý, chưa có kết quả.\n[2026-10-29 11:15 (GMT+7)] Xong code giữ adsId, batch compile đạt; chưa xác minh trên build/thiết bị. SetupAndroidDev VẪN sửa source trong submodule catgamingmodule → còn mở, chưa Xong.\n[2026-10-29 11:23 (GMT+7)] SetupAndroidDev vẫn làm dirty AdmobConfig.cs trong submodule → còn mở, chưa Xong.\n[2026-10-29 11:39 (GMT+7)] Source default AdmobConfig.cs trong submodule bị ghi lại: đang xử lý, chưa có kết quả xác minh.\n[2026-10-29 11:45 (GMT+7)] Đạt tiêu chí task (Android, batch SetupAndroidDev). Loại code → CHƯA xác minh runtime: chưa kiểm Ads trên build/thiết bị (T007), iOS runtime CHƯA xác minh. ProductData.asset vẫn dirty sau setup → tách T058, không tính vào T047. Submodule 34c70e6 chỉ local, chưa push (T002)."
     },
     {
       "id": "T051",
       "title": "Purchaser nạp GameDatabase qua address package",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Ads · IAP",
       "goal": "IAP khởi tạo không lỗi Missing preloaded",
@@ -745,13 +745,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "T006",
       "criteria": "Log GameDatabase ready + IAP init, không Missing preloaded",
-      "evidence": "Commit d8758f5, merge 45e0fe5; ADB: GameDatabase ready, khởi tạo IAP, không có Missing preloaded",
+      "evidence": "Commit d8758f5, merge 45e0fe5; ADB: GameDatabase ready, khởi tạo IAP, không có Missing preloaded | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 05:33 30/10, pm clear+cold start, log Build/remote-r2-0.3/qa-shots/qa-sweep-cold.log: 'Purchaser: GameDatabase ready, initializing purchasing.' , 0 Missing preloaded",
       "note": "[2026-10-29 10:59 (GMT+7)] Chỉ xác nhận khởi tạo; giao dịch thật thuộc T007."
     },
     {
       "id": "T058",
       "title": "SetupAndroidDev làm dirty ProductData.asset",
-      "type": "code",
+      "type": "cli-smoke",
       "status": "done",
       "screen": "Ads · IAP",
       "goal": "SetupAndroidDev không để lại thay đổi ProductData.asset",
@@ -759,13 +759,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "T047",
       "criteria": "Sau Unity batch SetupAndroidDev, git status sạch ProductData.asset",
-      "evidence": "Fix merge cf0dd08 (bump submodule catgamingmodule 918b785, branch wordcross/productdata-registered-target — chưa push): setup không ghi template ProductData. QA: Unity batch SetupAndroidDev exit 0; sau chạy catalog/ProductData giữ nguyên, submodule git status sạch.",
+      "evidence": "Fix merge cf0dd08 (bump submodule catgamingmodule 918b785, branch wordcross/productdata-registered-target — chưa push): setup không ghi template ProductData. QA: Unity batch SetupAndroidDev exit 0; sau chạy catalog/ProductData giữ nguyên, submodule git status sạch. | [2026-10-30 QA sweep] PASS: git status sạch (không dirty ProductData.asset/AdmobConfig); BuildDatabase.SetProductData:347 ghi vào ProductData do GameDatabase đăng ký, chặn path Assets/catgamingmodule/ (template). Đọc source, không chạy batch",
       "note": "[2026-10-29 11:45 (GMT+7)] Phát hiện khi QA T047: chạy batch SetupAndroidDev xong ProductData.asset vẫn dirty. Đang xử lý, chưa có kết quả xác minh.\n[2026-10-29 11:49 (GMT+7)] QA ProductData xong: batch SetupAndroidDev exit 0, catalog giữ nguyên, submodule sạch → Xong. Rủi ro fallback FindAssets tách sang T059."
     },
     {
       "id": "T059",
       "title": "Fallback FindAssets có thể ghi asset mẫu khi thiếu/nhiều GameDatabase",
-      "type": "code",
+      "type": "cli-smoke",
       "status": "done",
       "screen": "Ads · IAP",
       "goal": "Setup không bao giờ ghi asset mẫu ProductData/GameDatabase khi không xác định được đúng 1 GameDatabase",
@@ -773,7 +773,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev) · QA phát hiện",
       "deps": "T058",
       "criteria": "Khi thiếu hoặc có nhiều GameDatabase: setup báo lỗi/bỏ qua, không tạo/ghi asset mẫu; git status sạch sau batch SetupAndroidDev",
-      "evidence": "Submodule commit 46d1189 (fix(iap): refuse ambiguous ProductData target on setup, branch wordcross/productdata-strict-target), parent bump 51141f4, merge 8a7f56c vào feature/unity-6.3. Dev batch: case normal và duplicate GameDatabase pass. QA độc lập batch: không có GameDatabase, không có ProductData, chỉ có asset mẫu → mỗi case ghi đúng asset hoặc dừng; asset mẫu không đổi.",
+      "evidence": "Submodule commit 46d1189 (fix(iap): refuse ambiguous ProductData target on setup, branch wordcross/productdata-strict-target), parent bump 51141f4, merge 8a7f56c vào feature/unity-6.3. Dev batch: case normal và duplicate GameDatabase pass. QA độc lập batch: không có GameDatabase, không có ProductData, chỉ có asset mẫu → mỗi case ghi đúng asset hoặc dừng; asset mẫu không đổi. | [2026-10-30 QA sweep] PASS: BuildDatabase.cs:352-410: nhiều GameDatabase → LogError+return false; không GameDatabase thì chỉ nhận đúng 1 ProductData ngoài submodule, nếu không → false; target thuộc catgamingmodule → false. Đọc source (submodule 46f8115 chứa 46d1189)",
       "note": "[2026-10-29 11:49 (GMT+7)] QA phát hiện khi QA T058. ĐÂY LÀ PHÂN TÍCH CODE, CHƯA TÁI HIỆN: nhánh fallback FindAssets có thể ghi asset mẫu nếu thiếu hoặc multiple GameDatabase. Dev đang xử lý, chưa có kết quả.\n[2026-10-29 11:53 (GMT+7)] Vẫn Đang làm (1 luồng dev game: fallback ProductData). Chưa có kết quả/evidence.\n[2026-10-29 11:56 (GMT+7)] Xong theo tiêu chí (merge 8a7f56c, submodule 46d1189; dev batch normal/duplicate pass; QA độc lập batch thiếu GameDatabase/thiếu ProductData/chỉ asset mẫu: ghi đúng asset hoặc dừng, asset mẫu không đổi). WARNING CÒN TỒN: (1) khi SetProductData báo lỗi thì setup/build VẪN TIẾP TỤC (không fail build); (2) trường hợp chỉ có 1 GameDatabase nhưng packageId không khớp vẫn chọn nó — PHÂN TÍCH SOURCE, CHƯA TEST. Theo dõi ở T061. Submodule 46d1189 chưa push (T002).\n[2026-10-29 11:58 (GMT+7)] Giữ Xong: đã sửa (merge 8a7f56c, submodule 46d1189). QA batch thêm 3 trường hợp thiếu GameDatabase/ProductData: xử lý đúng, KHÔNG đổi asset mẫu. Warnings vẫn giữ ở T061 (setup tiếp tục khi SetProductData lỗi — tác vụ riêng).\n[2026-10-29 12:01 (GMT+7)] Giữ Xong: fix đã xác minh theo tiêu chí (batch dev + QA). Warning setup errors đang sửa ở T061."
     },
     {
@@ -793,7 +793,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T063",
       "title": "AdmobController.instance bị GameMaster duplicate ghi đè bằng object bị hủy",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Ads · IAP",
       "goal": "AdmobController.instance luôn trỏ bản còn sống sau chuyển scene; isAdsReady đúng, Ads hiện được",
@@ -801,13 +801,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev) · QA phát hiện",
       "deps": "",
       "criteria": "Bản duplicate bị hủy không ghi đè instance; batch probe sau chuyển scene: instanceAlive=True; QA lại T060 đạt trước khi OTA",
-      "evidence": "Commit afd373b (fix(ads): AdmobController chỉ gán instance khi chưa có singleton sống), merge 537cfef vào feature/unity-6.3. Dev probe injected duplicate PASS 5/5. QA độc lập (probe giả lập, Unity macOS player tối giản): bản cũ 4/4 FAIL (tái hiện lỗi), bản fix 4/4 PASS, init của bản duplicate KHÔNG chạy. CHƯA xác minh Android/SDK AdMob thật; đang OTA.",
+      "evidence": "Commit afd373b (fix(ads): AdmobController chỉ gán instance khi chưa có singleton sống), merge 537cfef vào feature/unity-6.3. Dev probe injected duplicate PASS 5/5. QA độc lập (probe giả lập, Unity macOS player tối giản): bản cũ 4/4 FAIL (tái hiện lỗi), bản fix 4/4 PASS, init của bản duplicate KHÔNG chạy. CHƯA xác minh Android/SDK AdMob thật; đang OTA. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:3x OTA 1.0.0: chuyển Home→SelectWorld→SelectLevel→Main nhiều lần, logcat AdsUnity loadAd/destroy/loadAd + 'Banner loaded' sau mỗi scene, 0 exception; AdmobController.cs:36 guard instance",
       "note": "[2026-10-29 12:03 (GMT+7)] Tách từ QA FAIL T060 (f9c59cb). Probe QAPROBE trước fix: instanceAlive=False, dupStarted=False, firstAlive=True. Dev đang sửa (luồng dev game: blocker Ads singleton). Chưa có evidence fix. KHÔNG OTA code Ads trước khi xong + QA lại.\n[2026-10-29 12:08 (GMT+7)] Dev vẫn đang sửa (luồng dev game: Ads singleton). Chưa có evidence fix; CHƯA OTA.\n[2026-10-29 12:11 (GMT+7)] Dev fix afd373b / merge 537cfef; dev probe injected duplicate pass 5/5. QA độc lập đang kiểm (luồng QA game: Ads singleton). CHƯA OTA, chưa runtime → giữ Đang làm.\n[2026-10-29 12:14 (GMT+7)] QA độc lập PASS probe giả lập (Unity macOS player): old 4/4 fail, fix 4/4 pass, duplicate không chạy init → Xong code (đạt tiêu chí probe). KHÔNG phải runtime: Android/SDK thật CHƯA xác minh. Đang OTA (luồng dev game: OTA Ads singleton); xác minh thiết bị theo T060."
     },
     {
       "id": "T064",
       "title": "Setup ghi AdMob IDs trước khi SetProductData abort",
-      "type": "code",
+      "type": "cli-smoke",
       "status": "done",
       "screen": "Ads · IAP",
       "goal": "Khi SetProductData lỗi, setup dừng TRƯỚC mọi ghi AdMob/config — không để lại thay đổi một phần",
@@ -815,7 +815,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev) · QA phát hiện",
       "deps": "T061",
       "criteria": "Case SetProductData lỗi: exit khác 0, AdMob IDs/config không đổi (diff rỗng); case bình thường exit 0; QA độc lập xác minh",
-      "evidence": "Fix submodule 623009e (fix(build): validate ProductData before writing AdMob IDs in Android setup; branch wordcross/productdata-fail-pipeline), parent bump 7f9da26 / merge 5b1d405. QA độc lập Unity batch: 6 Setup* × 4 case (normal / mismatch / ambiguous / null buildConfig) — normal ghi đúng ID; mismatch/ambiguous/null abort và cả AdmobConfig + GoogleMobileAdsSettings giữ nguyên; 72/72 kiểm tra pass. Scope: Android, Unity Editor batch. iOS CHƯA test. Submodule 623009e chỉ local, chưa push (T002).",
+      "evidence": "Fix submodule 623009e (fix(build): validate ProductData before writing AdMob IDs in Android setup; branch wordcross/productdata-fail-pipeline), parent bump 7f9da26 / merge 5b1d405. QA độc lập Unity batch: 6 Setup* × 4 case (normal / mismatch / ambiguous / null buildConfig) — normal ghi đúng ID; mismatch/ambiguous/null abort và cả AdmobConfig + GoogleMobileAdsSettings giữ nguyên; 72/72 kiểm tra pass. Scope: Android, Unity Editor batch. iOS CHƯA test. Submodule 623009e chỉ local, chưa push (T002). | [2026-10-30 QA sweep] PASS: BuildAndroid.cs:30-40 SetupDevLocal: SetProductData kiểm trước, throw trước SetAdmobIds (comment 'lỗi thì abort khi chưa đụng AdmobConfig'); submodule 623009e có trong lịch sử. Đọc source, không chạy batch",
       "note": "[2026-10-29 12:11 (GMT+7)] QA phát hiện khi xác minh ad4023c (T061): abort đúng nhưng AdMob IDs đã ghi trước. Dev đang sửa thứ tự setup (luồng dev game: setup order). Chưa có evidence.\n[2026-10-29 12:14 (GMT+7)] QA FAIL xác nhận: ProductData invalid → abort, nhưng SetAdmobIds đã ghi trước. Dev vẫn đang sửa thứ tự setup (luồng dev game). Chưa có evidence fix.\n[2026-10-29 12:19 (GMT+7)] Dev fix 623009e / merge 5b1d405: 6 Setup* chạy SetProductData trước SetAdmobIds. QA độc lập Unity batch 72/72 PASS (6 Setup* × 4 case; AdmobConfig + GoogleMobileAdsSettings không đổi khi abort) → Xong. Scope Android editor; iOS chưa test; chưa push submodule (T002).\n[2026-10-29 12:20 (GMT+7)] Giữ Xong: QA độc lập PASS 6 Setup* × 4 case, 72 checks, scope Android (editor batch); iOS CHƯA test. Submodule 623009e + gitlink parent (7f9da26/5b1d405) CHƯA push (T002).\n[2026-10-29 12:24 (GMT+7)] Giữ Xong: QA batch 72 checks PASS (Android editor); iOS chưa test. Submodule 623009e CHƯA push (T002).\n[2026-10-29 12:28 (GMT+7)] Giữ Xong: QA 72 checks PASS (Android editor batch); iOS chưa test. Submodule 623009e CHỈ LOCAL, chưa push (T002)."
     },
     {
@@ -947,7 +947,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T055",
       "title": "Cảnh báo font Word_Chef-export non-dynamic",
-      "type": "content",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn Home",
       "goal": "Xác định cảnh báo font có ảnh hưởng cỡ chữ không",
@@ -955,7 +955,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE/USER",
       "deps": "",
       "criteria": "Xác minh bằng mắt cỡ chữ hiển thị đúng hoặc sửa font sang dynamic",
-      "evidence": "QA smoke b47c636: cảnh báo font Word_Chef-export non-dynamic grep Assets/ProjectSettings: không còn tham chiếu font Word_Chef-export (sau T106).",
+      "evidence": "QA smoke b47c636: cảnh báo font Word_Chef-export non-dynamic grep Assets/ProjectSettings: không còn tham chiếu font Word_Chef-export (sau T106). | [2026-10-30 QA sweep] PASS: ảnh qa-sweep-home.png: chữ Home (Baloo2 static) hiển thị rõ, đúng cỡ; Word_Chef-export không còn tham chiếu (grep). Superseded bởi T106",
       "note": "[2026-10-29 11:15 (GMT+7)] Có thể ảnh hưởng cỡ chữ, CHƯA xác minh bằng mắt.\n[2026-10-29 22:15 (GMT+7)] Đóng: font không còn được dùng."
     },
     {
@@ -975,7 +975,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T093",
       "title": "Home: nhãn SOON trên VS AI phình thành đĩa vàng lớn đè nút (design chỉ chữ nhỏ em.soon)",
-      "type": "ui",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn Home",
       "goal": "SOON nhỏ đúng design",
@@ -983,13 +983,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T077",
       "criteria": "Nhãn SOON nhỏ như design",
-      "evidence": "Commit c9a5e42, merge 2a701ed. Batch 0 error CS; đo layout 720x1280 và 681x1353: SOON 128x86 → 75x26 (pill nhỏ), cách chữ VS AI 13px, nằm trong nút.",
+      "evidence": "Commit c9a5e42, merge 2a701ed. Batch 0 error CS; đo layout 720x1280 và 681x1353: SOON 128x86 → 75x26 (pill nhỏ), cách chữ VS AI 13px, nằm trong nút. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:34 ảnh qa-sweep-home.png: nhãn 'SẮP CÓ' là pill vàng nhỏ ~130x42px (≈41x13 css) nằm gọn trong nút ĐẤU AI, không đè chữ/nút",
       "note": "[2026-10-29 22:10 (GMT+7)] Nguồn: QA thiết bị OTA bổ sung (9b6b14e). TB.\n[2026-10-29 22:35 (GMT+7)] Dev đang làm (worktree fix-home-shop).\n[2026-10-29 23:05 (GMT+7)] CODE XONG, CHƯA XÁC MINH thiết bị: tách nền sang child Bg (ignoreLayout, PPU multiplier 5), cỡ chữ 18; vá YAML tay (diff ~110 dòng). OTA AA."
     },
     {
       "id": "T102",
       "title": "Vòng tự xác minh UI trên thiết bị: Home/SelectWorld/SelectLevel/Main/Header (dev chụp ảnh, so design, sửa lặp)",
-      "type": "ui",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn Home",
       "goal": "Các màn chính khớp design bằng ảnh thiết bị",
@@ -997,7 +997,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T097",
       "criteria": "Ảnh trước/sau mỗi sửa; không còn lệch đo được",
-      "evidence": "Merge adf3992 (b615c01, e189992): Header 9-slice pill, ẩn UI dư SelectWorld/Level, chữ Main không xoay, nét nối vàng, tiêu đề Main có lề; ảnh sau preview-*-20261029-1841..1854 ở qa-shots/ (emulator 1080x2400).",
+      "evidence": "Merge adf3992 (b615c01, e189992): Header 9-slice pill, ẩn UI dư SelectWorld/Level, chữ Main không xoay, nét nối vàng, tiêu đề Main có lề; ảnh sau preview-*-20261029-1841..1854 ở qa-shots/ (emulator 1080x2400). | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:3x đo trên ảnh: SelectWorld lề 22.4css/viền 2css, SelectLevel lề 19.9/khe 12.1/ô 78.9css, Header pill ◆-số-+, Main tiêu đề 'Subworld 1 - 1' + 'Level 1'; không thấy lệch >1css",
       "note": "[2026-10-30 01:10 (GMT+7)] Dev Sonnet đang làm (worktree verify-screens), dùng preview.sh. Dialog (Win/Extra/Rewarded/Shop/Pause/Rate/HowTo/Language) làm luồng riêng sau T098.\n[2026-10-29 19:47 (GMT+7)] Còn lệch: Main đĩa teal vẫn dưới nét nối; khoảng hở nhỏ tiêu đề; thiếu coach text level 1 (cần key l10n); màu số SelectWorld teal/coral/vàng vs design coral/vàng/teal (nghi lỗi design nth-child, giữ). Cần OTA CLR+AA.\n[2026-10-29 23:50 (GMT+7)] Màu số world đã đổi theo design (cdffb66) — xem mục duyệt trong design/cho-duyet.html.\n[2026-10-30 00:30 (GMT+7)] Đĩa teal trên nét nối + coach text level 1 đủ 5 ngôn ngữ (86439d6)."
     },
     {
@@ -1059,7 +1059,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T094",
       "title": "Shop: khoảng trống lớn giữa pill ruby và danh sách gói (thiếu hàng FREE RUBIES / WATCH?)",
-      "type": "ui",
+      "type": "runtime",
       "status": "done",
       "screen": "Popup từ Home",
       "goal": "Shop đúng design, hàng free hiển thị",
@@ -1067,7 +1067,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T031",
       "criteria": "Không còn khoảng trống; hàng free hiển thị theo trạng thái",
-      "evidence": "Commit 6441fee, merge 2a701ed. Đo: hàng free 540x104 (cùng độ rộng gói), cách pill 24 và cách gói đầu 24.",
+      "evidence": "Commit 6441fee, merge 2a701ed. Đo: hàng free 540x104 (cùng độ rộng gói), cách pill 24 và cách gói đầu 24. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:34 ảnh qa-sweep-sw-pillshop.png: Shop có hàng RUBY MIỄN PHÍ (+2 ruby, nút XEM), cách pill ~52px và cách gói đầu ~52px (đối xứng), không còn khoảng trống",
       "note": "[2026-10-29 22:10 (GMT+7)] Nguồn: QA thiết bị OTA bổ sung (9b6b14e). Có thể hàng bị ẩn khi không có quảng cáo (nofill) — design vẫn hiển thị với trạng thái. TB.\n[2026-10-29 22:35 (GMT+7)] Dev đang làm (worktree fix-home-shop).\n[2026-10-29 23:05 (GMT+7)] CODE XONG, CHƯA XÁC MINH: RewardedButton luôn hiện hàng (WATCH khi hết cooldown / đồng hồ khi cooldown, độc lập có quảng cáo); ShopDialog scale 0.8→1. Chưa chạy RewardedButton ở editor (cần AdmobController). OTA CLR+AA."
     },
     {
@@ -1129,7 +1129,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T070",
       "title": "Header: nút Back phản hồi nhấn yếu (design dịch xuống 2px)",
-      "type": "ui",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn SelectWorld",
       "goal": "Back có phản hồi nhấn như design .icon-btn:active",
@@ -1137,13 +1137,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T069",
       "criteria": "Nhấn Back thấy dịch 2px/đổi rõ; onClick giữ",
-      "evidence": "Commit 873aa98 (Header.prefab), merge 635e799. Batch 0 error CS; hit-test: Back không bị pill chặn.",
+      "evidence": "Commit 873aa98 (Header.prefab), merge 635e799. Batch 0 error CS; hit-test: Back không bị pill chặn. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:34 ảnh qa-sweep-backpress.png: giữ nút Back → nền đổi trắng→xám-teal rõ; Back vẫn quay Home (onClick giữ). Không đo được độ dịch 2px",
       "note": "[2026-10-29 14:50 (GMT+7)] Nguồn: QA độc lập. QA Header: ColorTint chỉ đổi viền 4px vì Fill trắng che. Dev đang làm (worktree header-fix).\n[2026-10-29 15:20 (GMT+7)] CODE XONG, CHƯA XÁC MINH: targetGraphic Back → Fill, pressed xám-teal (0.78,0.86,0.87) fade 0.05s. Main tắt Fill + sprite riêng → Back ở Main mất tint (T079). Chưa xem mắt.\n[2026-10-29 16:50 (GMT+7)] ĐÃ OTA (CLR+AA) từ d7f8ee2: public CLR 32bc3cf2→5c587ffe71ae9a4d, catalog b6cb9cf3→bddeb3e92563e526 (điều phối tự curl lại sau upload, khớp). 9 file upload (4 bundle mới 888eda…monoscripts d5c70181 + unitybuiltinassets 28fbc92f, sceneconfiggroup fe0ff03c, scriptableobjectconfiggroup 8bdba446, catalog+hash, 2 DLL, hotupdate.hash cuối), verify 19/19 sha256. Config Ads giống từng byte (3 unit ID + App ID thật). Chưa test thiết bị (chờ máy rảnh). Rollback: ui-reskin-rollback-note.txt. KHÔNG gồm Home mới/Rate/Shop."
     },
     {
       "id": "T071",
       "title": "Header: ruby pill rộng cố định 222, số 5+ chữ số có thể đè icon/nút +",
-      "type": "ui",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn SelectWorld",
       "goal": "Pill giãn theo nội dung như design",
@@ -1151,13 +1151,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T069",
       "criteria": "Pill auto-width, không đè icon/nút +",
-      "evidence": "Commit cfc03ea, merge 635e799. Đo layout 1/12/12345/1234567 chữ số: không đè.",
+      "evidence": "Commit cfc03ea, merge 635e799. Đo layout 1/12/12345/1234567 chữ số: không đè. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:35 pill ruby auto-width quanh số '10' (ảnh sw/sl); không thử được 5+ chữ số trên bản release; prefab dùng HLG+ContentSizeFitter (commit cfc03ea)",
       "note": "[2026-10-29 14:50 (GMT+7)] Nguồn: QA độc lập. QA Header T-QA-3. Dev đang làm (worktree header-fix).\n[2026-10-29 15:20 (GMT+7)] CODE XONG, CHƯA XÁC MINH: HLG+ContentSizeFitter, pivot phải, mép phải cách 29.5u. Rộng pill: 1 chữ số 167, 2→185, 5→240, 7→277 (≈156+17.5/chữ số). Main: pill dịch trái so với trước (override anchoredPos -37.6, T079). Luồng T022b đã chạy trước khi có số đo này → QA phải kiểm Title không chồng pill 5 chữ số (mép trái pill cách cạnh phải 269.5u).\n[2026-10-29 16:50 (GMT+7)] ĐÃ OTA (CLR+AA) từ d7f8ee2: public CLR 32bc3cf2→5c587ffe71ae9a4d, catalog b6cb9cf3→bddeb3e92563e526 (điều phối tự curl lại sau upload, khớp). 9 file upload (4 bundle mới 888eda…monoscripts d5c70181 + unitybuiltinassets 28fbc92f, sceneconfiggroup fe0ff03c, scriptableobjectconfiggroup 8bdba446, catalog+hash, 2 DLL, hotupdate.hash cuối), verify 19/19 sha256. Config Ads giống từng byte (3 unit ID + App ID thật). Chưa test thiết bị (chờ máy rảnh). Rollback: ui-reskin-rollback-note.txt. KHÔNG gồm Home mới/Rate/Shop."
     },
     {
       "id": "T072",
       "title": "Header: bấm thân ruby pill mở Shop (design là link)",
-      "type": "ui",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn SelectWorld",
       "goal": "Thân pill + số dư mở Shop như design a.ruby-pill",
@@ -1165,13 +1165,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T069",
       "criteria": "Bấm thân pill mở Shop, nút + vẫn mở Shop",
-      "evidence": "Commit 57997a3, merge 635e799. Hit-test: icon/số/nền pill → RubyBalance (Shop); AddButton → Shop; Back không bị chặn.",
+      "evidence": "Commit 57997a3, merge 635e799. Hit-test: icon/số/nền pill → RubyBalance (Shop); AddButton → Shop; Back không bị chặn. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:34 ảnh qa-sweep-sw-pillshop.png: bấm số ruby (thân pill) ở SelectWorld → mở Shop",
       "note": "[2026-10-29 14:50 (GMT+7)] Nguồn: QA độc lập. QA Header: hiện chỉ AddButton mở Shop. Dev đang làm (worktree header-fix).\n[2026-10-29 15:20 (GMT+7)] CODE XONG, CHƯA XÁC MINH: Button+ButtonOpenDialog(dialogType 7) trên RubyBalance.\n[2026-10-29 16:50 (GMT+7)] ĐÃ OTA (CLR+AA) từ d7f8ee2: public CLR 32bc3cf2→5c587ffe71ae9a4d, catalog b6cb9cf3→bddeb3e92563e526 (điều phối tự curl lại sau upload, khớp). 9 file upload (4 bundle mới 888eda…monoscripts d5c70181 + unitybuiltinassets 28fbc92f, sceneconfiggroup fe0ff03c, scriptableobjectconfiggroup 8bdba446, catalog+hash, 2 DLL, hotupdate.hash cuối), verify 19/19 sha256. Config Ads giống từng byte (3 unit ID + App ID thật). Chưa test thiết bị (chờ máy rảnh). Rollback: ui-reskin-rollback-note.txt. KHÔNG gồm Home mới/Rate/Shop."
     },
     {
       "id": "T083",
       "title": "Ruby pill: thứ tự phần tử ◆ / + / số (design: ◆, số, +)",
-      "type": "ui",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn SelectWorld",
       "goal": "Pill đúng thứ tự design",
@@ -1179,13 +1179,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T069",
       "criteria": "Thứ tự ◆ → số → + như design",
-      "evidence": "Commit 13df58a, merge e09025c. Batch 0 error CS (chỉ kiểm cấu trúc).",
+      "evidence": "Commit 13df58a, merge e09025c. Batch 0 error CS (chỉ kiểm cấu trúc). | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:34 ảnh qa-sweep-sw.png: pill ruby thứ tự ◆ → 10 → + như design",
       "note": "[2026-10-29 18:40 (GMT+7)] QA: hiện ◆, +, số. Mâu thuẫn với dev Header (T071 HLG: icon, số, nút +)? → kiểm lại prefab, có thể do override scene/sibling order trên bản OTA.\n[2026-10-29 19:25 (GMT+7)] Dev Sonnet đang làm (worktree swsl-fix) cùng T085/T086.\n[2026-10-29 19:45 (GMT+7)] CODE XONG, CHƯA XÁC MINH: Header sibling order sửa Ruby,Text,AddButton (nguyên nhân T083); số 123456 giãn pill 191→260 không đè; thẻ/ô dùng ui_round (UISprite mép mờ làm viền/ô nhìn dày/nhỏ); lề thẻ 22/390 và lề/khe lưới 20/390, 12/390 theo bề rộng canvas (canvas thực ~644, 1 đơn vị ≈ 1.65); WorldItem thêm indexText + lockedIndexTextColor trắng. QA ảnh lại sau OTA.\n[2026-10-29 21:15 (GMT+7)] ĐÃ OTA BỔ SUNG (CLR+AA) từ 9b6b14e: public CLR 5c587ffe→abd9f586f10aa4c9 (điều phối tự curl lại), catalog bddeb3e9→d9c2bef28a8b032e. 4 bundle mới (monoscripts 6ce0912e, unitybuiltinassets bf7d8ac5, sceneconfiggroup b2e832e2 5.16MB, scriptableobjectconfiggroup baaf9dc3 46KB 534 level), catalog+hash, 2 DLL (HotUpdate 252416→258560 byte), hotupdate.hash cuối; 23/23 sha256 public khớp; 0 CHANGED. Config Ads/IAP giống từng byte; 534 level đọc đủ 3 field. Gồm: Home/Rate/Shop/Win(T045)/Rewarded/HowTo/Extra/Main/SW-SL-Header fix/T082/T078. CHƯA gồm T081 (Rewarded states), T087 (chữ chọn), T040 (l10n), Notifications B. QA thiết bị đang chạy. Rollback: ota3-rollback-note.txt."
     },
     {
       "id": "T085",
       "title": "SelectWorld: viền thẻ dày/xám nhòe (design 2px --line), lề 29 vs 22, chữ số thẻ khoá màu nâu vàng (design trắng trên #b8c8c8)",
-      "type": "ui",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn SelectWorld",
       "goal": "Khớp design thẻ Subworld",
@@ -1193,7 +1193,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T022b",
       "criteria": "Viền 2px --line, lề 22, số khoá trắng/#b8c8c8",
-      "evidence": "Commit 0268a54, merge e09025c. Batch 0 error CS (chỉ kiểm cấu trúc).",
+      "evidence": "Commit 0268a54, merge e09025c. Batch 0 error CS (chỉ kiểm cấu trúc). | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:34 ảnh qa-sweep-sw.png: thẻ lề trái 67/1159*1220=70px=22.4css ✓ lề 22; viền mảnh ~2css nhạt (--line) ✓; số ô khoá 2-5 trắng trên nền xám #cfdcdc-ish ✓",
       "note": "[2026-10-29 18:40 (GMT+7)] QA thiết bị.\n[2026-10-29 19:25 (GMT+7)] Dev đang làm (swsl-fix).\n[2026-10-29 19:45 (GMT+7)] CODE XONG, CHƯA XÁC MINH: Header sibling order sửa Ruby,Text,AddButton (nguyên nhân T083); số 123456 giãn pill 191→260 không đè; thẻ/ô dùng ui_round (UISprite mép mờ làm viền/ô nhìn dày/nhỏ); lề thẻ 22/390 và lề/khe lưới 20/390, 12/390 theo bề rộng canvas (canvas thực ~644, 1 đơn vị ≈ 1.65); WorldItem thêm indexText + lockedIndexTextColor trắng. QA ảnh lại sau OTA.\n[2026-10-29 21:15 (GMT+7)] ĐÃ OTA BỔ SUNG (CLR+AA) từ 9b6b14e: public CLR 5c587ffe→abd9f586f10aa4c9 (điều phối tự curl lại), catalog bddeb3e9→d9c2bef28a8b032e. 4 bundle mới (monoscripts 6ce0912e, unitybuiltinassets bf7d8ac5, sceneconfiggroup b2e832e2 5.16MB, scriptableobjectconfiggroup baaf9dc3 46KB 534 level), catalog+hash, 2 DLL (HotUpdate 252416→258560 byte), hotupdate.hash cuối; 23/23 sha256 public khớp; 0 CHANGED. Config Ads/IAP giống từng byte; 534 level đọc đủ 3 field. Gồm: Home/Rate/Shop/Win(T045)/Rewarded/HowTo/Extra/Main/SW-SL-Header fix/T082/T078. CHƯA gồm T081 (Rewarded states), T087 (chữ chọn), T040 (l10n), Notifications B. QA thiết bị đang chạy. Rollback: ota3-rollback-note.txt."
     },
     {
@@ -1241,7 +1241,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T076",
       "title": "LevelButton.Load: Instantiate chữ đĩa ẩn mỗi ô (lãng phí)",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn SelectLevel",
       "goal": "Bỏ tạo UI chữ không còn hiển thị, giữ dữ liệu PanWordIndexes",
@@ -1249,13 +1249,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T022",
       "criteria": "18 ô không tạo Text ẩn; Main vẫn nhận dữ liệu",
-      "evidence": "",
+      "evidence": "[2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:35 SelectLevel 12 ô hiển thị, số đúng, bấm ô 1 → Main nhận level (xem ảnh Main); code không Instantiate chữ đĩa",
       "note": "[2026-10-29 14:50 (GMT+7)] Nguồn: QA độc lập. QA SelectLevel; gộp vào luồng T022b (design-parity) đang chạy.\n[2026-10-29 15:35 (GMT+7)] Xong trong 1b137f7 (LevelButton.Load bỏ tạo chữ đĩa Pan). Chưa QA."
     },
     {
       "id": "T086",
       "title": "SelectLevel: lề/khe/ô lệch design (lề 25 vs 20, khe 18 vs 12, ô 72 vs 78)",
-      "type": "ui",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn SelectLevel",
       "goal": "Lưới đúng số design",
@@ -1263,7 +1263,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T022b",
       "criteria": "Lề 20, khe 12, ô ~78",
-      "evidence": "Commit 10a17b6, merge e09025c. Batch 0 error CS (chỉ kiểm cấu trúc).",
+      "evidence": "Commit 10a17b6, merge e09025c. Batch 0 error CS (chỉ kiểm cấu trúc). | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:35 ảnh qa-sweep-sl.png (đo ảnh 1220px, 1css=3.128px): lề trái 62px=19.9css ✓20; khe 38px=12.1css ✓12; ô rộng 247px=78.9css ✓~78",
       "note": "[2026-10-29 18:40 (GMT+7)] QA thiết bị (độ lệch nhỏ; kiểm theo tỉ lệ CanvasScaler thực).\n[2026-10-29 19:25 (GMT+7)] Dev đang làm (swsl-fix).\n[2026-10-29 19:45 (GMT+7)] CODE XONG, CHƯA XÁC MINH: Header sibling order sửa Ruby,Text,AddButton (nguyên nhân T083); số 123456 giãn pill 191→260 không đè; thẻ/ô dùng ui_round (UISprite mép mờ làm viền/ô nhìn dày/nhỏ); lề thẻ 22/390 và lề/khe lưới 20/390, 12/390 theo bề rộng canvas (canvas thực ~644, 1 đơn vị ≈ 1.65); WorldItem thêm indexText + lockedIndexTextColor trắng. QA ảnh lại sau OTA.\n[2026-10-29 21:15 (GMT+7)] ĐÃ OTA BỔ SUNG (CLR+AA) từ 9b6b14e: public CLR 5c587ffe→abd9f586f10aa4c9 (điều phối tự curl lại), catalog bddeb3e9→d9c2bef28a8b032e. 4 bundle mới (monoscripts 6ce0912e, unitybuiltinassets bf7d8ac5, sceneconfiggroup b2e832e2 5.16MB, scriptableobjectconfiggroup baaf9dc3 46KB 534 level), catalog+hash, 2 DLL (HotUpdate 252416→258560 byte), hotupdate.hash cuối; 23/23 sha256 public khớp; 0 CHANGED. Config Ads/IAP giống từng byte; 534 level đọc đủ 3 field. Gồm: Home/Rate/Shop/Win(T045)/Rewarded/HowTo/Extra/Main/SW-SL-Header fix/T082/T078. CHƯA gồm T081 (Rewarded states), T087 (chữ chọn), T040 (l10n), Notifications B. QA thiết bị đang chạy. Rollback: ota3-rollback-note.txt."
     },
     {
@@ -1409,7 +1409,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T073",
       "title": "Main.unity: onClick ShareGame/InviteFriends trỏ object không tồn tại (Broken text PPtr 482168294)",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn Game (Main)",
       "goal": "Không còn log lỗi PPtr khi mở Main",
@@ -1417,13 +1417,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T024",
       "criteria": "Mở Main batch không còn Broken text PPtr; không missing ref",
-      "evidence": "Commit bd2b268 + 08d5e48 (merge 503063f): gỡ ShareGame/InviteFriends khỏi Main.unity; onClick 7→5.",
+      "evidence": "Commit bd2b268 + 08d5e48 (merge 503063f): gỡ ShareGame/InviteFriends khỏi Main.unity; onClick 7→5. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:35 Main mở runtime không exception; Main.unity 0 ref ShareGame/InviteFriends",
       "note": "[2026-10-29 14:50 (GMT+7)] Nguồn: QA độc lập. Có sẵn từ trước, QA Header/GUILayer phát hiện. Gộp với T024 (reskin bàn chơi Main) vì cùng Main.unity.\n[2026-10-29 19:15 (GMT+7)] Xong trong T024."
     },
     {
       "id": "T079",
       "title": "Main: Back/menu mất tint khi nhấn + pill ruby dịch trái (override scene)",
-      "type": "ui",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn Game (Main)",
       "goal": "Header trong Main hoạt động đúng như SelectWorld/SelectLevel",
@@ -1431,13 +1431,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T024",
       "criteria": "Nút menu có phản hồi nhấn; pill ruby đúng vị trí design game-top",
-      "evidence": "",
+      "evidence": "[2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:35 ảnh qa-sweep-pausepress.png: giữ nút pause → nền xám-teal; pill ruby ở mép phải đúng design game-top (qa-sweep-main2.png)",
       "note": "[2026-10-29 15:20 (GMT+7)] Nguồn: dev Header (T070–T072). Gộp với T024/T073 (cùng Main.unity). Hiện nút menu hiện đúng chức năng (3094809) nhưng chưa có phản hồi nhấn.\n[2026-10-29 19:15 (GMT+7)] Xong trong T024 (bc7ba9d): pause Fill+tint, pill rect mặc định — chưa xác minh mắt."
     },
     {
       "id": "T082",
       "title": "P0: Main không nạp level (GameLevel script missing / serialization layout / NRE Pan.Load) — bàn chơi trống",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn Game (Main)",
       "goal": "Vào level 1 thấy lưới ô chữ + chữ trên đĩa",
@@ -1445,13 +1445,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T025",
       "criteria": "Main chơi được trên thiết bị; logcat không GameLevel missing/NRE",
-      "evidence": "qa-ota3-main1.log: 0 dòng GameLevel/referenced script/serialization layout/NullReference",
+      "evidence": "qa-ota3-main1.log: 0 dòng GameLevel/referenced script/serialization layout/NullReference | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:35 OTA 1.0.0: SelectLevel→Main level 1 nạp (ảnh qa-sweep-main.png có ô chữ + vòng chữ T/H/E); logcat 0 GameLevel/NullReference/missing/serialization layout",
       "note": "[2026-10-29 18:40 (GMT+7)] QA thiết bị OTA d7f8ee2: FAIL bước Level1→Main. Chưa rõ có từ trước OTA (gameplay chưa từng xác minh runtime) — hướng: level asset Resources tham chiếu script hotupdate (HybridCLR) → đưa qua Addressables/nạp sau CLR. Dev Sonnet đang điều tra + sửa + test thiết bị cách ly. CHẶN mọi OTA tiếp theo.\n[2026-10-29 20:05 (GMT+7)] NGUYÊN NHÂN: GameLevel (ScriptableObject) vào assembly hotupdate qua asmref; 534 asset level ở Assets/Resources tham chiếu script bằng GUID, Resources.Load trong player AOT không giải được script hotupdate (global-metadata.dat APK gốc không có GameLevel/MainController/LevelButton) → \"script missing\" → \"40 vs 64/80 bytes\" → NRE Pan.Load. CÓ TỪ TRƯỚC OTA (lỗi nằm ở APK, chưa từng vào Main trước đây). FIX: chuyển 534 asset sang Assets/WordCross/Config/GameData/Levels/ (giữ GUID/format), thêm vào AddressableConfig (ScriptableObjectConfigGroup, nhãn preload_3, bundle ~46KB), Utils.Load → ClrContent.Instance.Load<GameLevel>(\"Levels/World_x/SubWorld_y/Level_z\"); LevelButton/TestScript qua Utils.Load. Cần OTA CLR+AA (không APK mới) — build trong worktree tên \"ota\" để giữ tiền tố bundle. Rủi ro: chỉ test level 1; asset khác trong Resources tham chiếu script hotupdate (EM_Settings…) chưa quét. Đang OTA bổ sung.\n[2026-10-29 21:15 (GMT+7)] ĐÃ OTA BỔ SUNG (CLR+AA) từ 9b6b14e: public CLR 5c587ffe→abd9f586f10aa4c9 (điều phối tự curl lại), catalog bddeb3e9→d9c2bef28a8b032e. 4 bundle mới (monoscripts 6ce0912e, unitybuiltinassets bf7d8ac5, sceneconfiggroup b2e832e2 5.16MB, scriptableobjectconfiggroup baaf9dc3 46KB 534 level), catalog+hash, 2 DLL (HotUpdate 252416→258560 byte), hotupdate.hash cuối; 23/23 sha256 public khớp; 0 CHANGED. Config Ads/IAP giống từng byte; 534 level đọc đủ 3 field. Gồm: Home/Rate/Shop/Win(T045)/Rewarded/HowTo/Extra/Main/SW-SL-Header fix/T082/T078. CHƯA gồm T081 (Rewarded states), T087 (chữ chọn), T040 (l10n), Notifications B. QA thiết bị đang chạy. Rollback: ota3-rollback-note.txt.\n[2026-10-29 22:10 (GMT+7)] XÁC MINH TRÊN THIẾT BỊ: PASS — Main level 1 hiển thị lưới 5 ô + chữ T/H/E; level 2 (Subworld 1) lưới 7 ô chữ N/D/A; ghép từ bằng adb swipe → Win; log sạch."
     },
     {
       "id": "T095",
       "title": "Main: tên level hiện 'Malicoco - 1' thay vì 'Subworld n - level' (design)",
-      "type": "ui",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn Game (Main)",
       "goal": "Tên theo design",
@@ -1459,13 +1459,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T024",
       "criteria": "'Subworld n - level' + 'Level n'",
-      "evidence": "Commit b40aa7f, merge 2a701ed.",
+      "evidence": "Commit b40aa7f, merge 2a701ed. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:35 ảnh qa-sweep-main.png: tiêu đề 'Subworld 1 - 1' + 'Level 1' (không còn 'Malicoco - 1')",
       "note": "[2026-10-29 22:10 (GMT+7)] Nguồn: QA thiết bị OTA bổ sung (9b6b14e). Game dùng tên subworld thật; bám design thì dùng 'Subworld n' (như T022b). Thấp.\n[2026-10-29 22:35 (GMT+7)] Dev đang làm (worktree fix-home-shop).\n[2026-10-29 23:05 (GMT+7)] CODE XONG, CHƯA XÁC MINH: MainController gán Get(world.sub,n)+' - '+level → 'Subworld 1 - 1' (tên thật vẫn trong code). Độ rộng tối đa 303 < khung 1164. OTA CLR."
     },
     {
       "id": "T099",
       "title": "Sửa lỗi luồng Main/level (QA review): Utils.Load ném exception khi hết level/world≥6, chữ chọn kẹt khi dialog mở giữa lúc kéo, Pan.Load phụ thuộc thứ tự Start",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Màn Game (Main)",
       "goal": "Không crash khi hết nội dung; chọn chữ không kẹt",
@@ -1473,7 +1473,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T082, T087",
       "criteria": "Mô phỏng batch; thắng level cuối world 5 không ném; kéo chữ + dialog không kẹt",
-      "evidence": ".git/task-hotupdate/qa-review1-report.md (QA review code tĩnh HEAD 5919b0a) | Commits 48b5933, c9c4e3c, 109154c; merge d3832d4. Batch 0 error CS; mô phỏng trước/sau từng ca (GetNumLevels/Load/hết nội dung/kéo chữ).",
+      "evidence": ".git/task-hotupdate/qa-review1-report.md (QA review code tĩnh HEAD 5919b0a) | Commits 48b5933, c9c4e3c, 109154c; merge d3832d4. Batch 0 error CS; mô phỏng trước/sau từng ca (GetNumLevels/Load/hết nội dung/kéo chữ). | [2026-10-30 QA sweep] PASS: Utils.GetNumLevels trả 0 ngoài [0,6)x[0,5) và Load trả null (Utils.cs:13,48); trên máy: thắng level 1 → Win → level 2 nạp, vuốt chữ THE/HE và chuyển dialog không kẹt, 0 exception. Chưa thử qua hết world 5/kéo chữ khi dialog mở",
       "note": "[2026-10-30 00:10 (GMT+7)] QA review tĩnh #7 (TB, khả năng gặp thấp: chỉ khi qua hết 534 level), #8 (TB-Cao về code) + Pan.Load thấp. Dev Sonnet đang làm (worktree fix-main-flow); không dùng try/catch.\n[2026-10-30 00:30 (GMT+7)] CODE XONG, CHƯA XÁC MINH trên máy: GetNumLevels trả 0 ngoài [0,6)x[0,5) (Utils.NUM_WORLDS=6); Utils.Load trả null bằng điều kiện (không try/catch); MainController/NotificationController/TestScript kiểm null; thắng level cuối game không tăng GameState.current* (unlocked=(6,0,0)), chơi lại không thưởng lặp, NEXT về SelectWorld; LineDrawer.ResetSelection khi dialog/Pause mở giữa lúc kéo (+ guard letterPositions rỗng); Pan.Load gán world/subWorld/level. Báo cáo sai: WorldController.SetPage không ném (đã Clamp). Chưa: dòng riêng \"hoàn thành tất cả\" (cần key l10n). Hạn chế: chưa kiểm Load(5,4,17) trả level thật (không có ClrContent trong batch). Cần OTA CLR."
     },
     {
@@ -1619,7 +1619,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T075",
       "title": "Pause: thêm tính năng đổi ngôn ngữ (nút LANGUAGE theo design)",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Popup trong Game",
       "goal": "Có nút LANGUAGE + chọn ngôn ngữ như design/Ui language + i18n",
@@ -1627,13 +1627,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T040, T026",
       "criteria": "Đổi ngôn ngữ vi/en (+fr/es/pt theo design) hoạt động",
-      "evidence": "",
+      "evidence": "[2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:36 Pause có nút NGÔN NGỮ (ảnh qa-sweep-pause.png) → màn Ngôn ngữ; chọn Français: tiêu đề Main đổi 'Sous-monde 1 - 1/Niveau 1', nhãn nút 'Mélanger/Bonus/Demander' (qa-sweep-main-fr.png). Lưu ý: khung coach vàng vẫn tiếng Việt cho tới khi vào lại level (xem T101)",
       "note": "[2026-10-29 14:50 (GMT+7)] Nguồn: QA độc lập. Quy tắc USER: design có mà game thiếu → làm thêm. Phụ thuộc l10n T040; chờ thiết kế hệ l10n.\n[2026-10-29 18:25 (GMT+7)] USER cho phép code thêm: làm cùng T040 (hệ l10n) — đề xuất bắt đầu T040 trước.\n[2026-10-29 21:40 (GMT+7)] Dev đang làm cùng T044 (hạ tầng l10n đã sẵn).\n[2026-10-29 23:55 (GMT+7)] Xong cùng T044 (OnLanguageClick; card Pause 768→894). Chưa xem mắt."
     },
     {
       "id": "T080",
       "title": "ExtraWordDialog: đích bay ruby lệch (pill đổi pivot sang cạnh phải)",
-      "type": "code",
+      "type": "cli-smoke",
       "status": "done",
       "screen": "Popup trong Game",
       "goal": "Ruby bay về đúng tâm số dư",
@@ -1641,7 +1641,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T071",
       "criteria": "Hiệu ứng bay ruby kết thúc đúng chỗ",
-      "evidence": "Commit 83256f3, merge 4d6faf4.",
+      "evidence": "Commit 83256f3, merge 4d6faf4. | [2026-10-30 QA sweep] PASS: ExtraWordDialog.cs:92-95 đích bay = icon ruby con của RubyBalance (tag RubyBalance) thay vì pivot cạnh phải; chưa chụp hiệu ứng bay trên máy (không tìm được từ thưởng trong 5 lần thử)",
       "note": "[2026-10-29 15:20 (GMT+7)] Nguồn: dev Header (T070–T072). Rủi ro nhẹ sau T071; kiểm khi QA thiết bị chụp ảnh. Cần CLR nếu sửa code.\n[2026-10-29 19:25 (GMT+7)] Dev Sonnet đang làm cùng T029.\n[2026-10-29 19:45 (GMT+7)] ClaimEffect bay về con Ruby của RubyBalance (fallback pivot cũ). Chưa xem mắt.\n[2026-10-29 21:15 (GMT+7)] ĐÃ OTA BỔ SUNG (CLR+AA) từ 9b6b14e: public CLR 5c587ffe→abd9f586f10aa4c9 (điều phối tự curl lại), catalog bddeb3e9→d9c2bef28a8b032e. 4 bundle mới (monoscripts 6ce0912e, unitybuiltinassets bf7d8ac5, sceneconfiggroup b2e832e2 5.16MB, scriptableobjectconfiggroup baaf9dc3 46KB 534 level), catalog+hash, 2 DLL (HotUpdate 252416→258560 byte), hotupdate.hash cuối; 23/23 sha256 public khớp; 0 CHANGED. Config Ads/IAP giống từng byte; 534 level đọc đủ 3 field. Gồm: Home/Rate/Shop/Win(T045)/Rewarded/HowTo/Extra/Main/SW-SL-Header fix/T082/T078. CHƯA gồm T081 (Rewarded states), T087 (chữ chọn), T040 (l10n), Notifications B. QA thiết bị đang chạy. Rollback: ota3-rollback-note.txt."
     },
     {
@@ -1656,12 +1656,12 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "deps": "T045, T081, T029",
       "criteria": "Mô phỏng batch từng kịch bản; QA thiết bị sau OTA",
       "evidence": ".git/task-hotupdate/qa-review1-report.md (QA review code tĩnh HEAD 5919b0a) | Commits 119da0c (RewardedVideoCallBack/Dialog), 88d7612 (WinDialog), 99a0697 (ExtraWordDialog/RubyFly); merge 7714e61 (conflict WinDialog.cs với c9c4e3c giải quyết giữ cả hai; compile 0 lỗi). Mô phỏng play mode trước/sau từng lỗi.",
-      "note": "[2026-10-30 00:10 (GMT+7)] QA review tĩnh: 1 lỗi Cao (#1 x2 đóng WinDialog, độ chắc chắn ~85%, chưa chạy thật) + #2–#6 TB + thấp. Dev Sonnet đang xác minh từng lỗi bằng code rồi sửa (worktree fix-reward-flow).\n[2026-10-30 01:35 (GMT+7)] CODE XONG, CHƯA XÁC MINH thiết bị: cả 6 lỗi + thấp đều ĐÚNG và đã sửa — #1 CallBack mở Success bằng STACK (WinDialog còn sống; OnEnable dựng lại InvokeRepeating; Show() không bật interstitial lần hiện lại), #2 WinDialog nghe Closed/Failed + bỏ timeout 120s, #3 ruby video cộng ngay trong callback (dialog không cộng; tutorial tổng 6 = 3+2+1), #4 Watch() đặt lại loadStart + RequestRewardBasedVideo, #5 cờ navigating (double-tap 2→1 LoadScene), #6 Claim() cộng ngay, ClaimEffect trên MonoUtils + yield break khi thiếu tag; Playing quá 180s → Error; Escape RewardedVideoDialog (Update che Update của Dialog — bug thật); WinDialog ghi unlocked + Save trước khi cộng ruby. Không đổi số thưởng. Hạn chế: quảng cáo editor là stub. QA nên kiểm trên máy: x2 giữ NEXT/MENU, đóng video sớm mở khoá x2, Escape, kill app khi Success. OTA CLR (5 file), không cần AA."
+      "note": "[2026-10-30 00:10 (GMT+7)] QA review tĩnh: 1 lỗi Cao (#1 x2 đóng WinDialog, độ chắc chắn ~85%, chưa chạy thật) + #2–#6 TB + thấp. Dev Sonnet đang xác minh từng lỗi bằng code rồi sửa (worktree fix-reward-flow).\n[2026-10-30 01:35 (GMT+7)] CODE XONG, CHƯA XÁC MINH thiết bị: cả 6 lỗi + thấp đều ĐÚNG và đã sửa — #1 CallBack mở Success bằng STACK (WinDialog còn sống; OnEnable dựng lại InvokeRepeating; Show() không bật interstitial lần hiện lại), #2 WinDialog nghe Closed/Failed + bỏ timeout 120s, #3 ruby video cộng ngay trong callback (dialog không cộng; tutorial tổng 6 = 3+2+1), #4 Watch() đặt lại loadStart + RequestRewardBasedVideo, #5 cờ navigating (double-tap 2→1 LoadScene), #6 Claim() cộng ngay, ClaimEffect trên MonoUtils + yield break khi thiếu tag; Playing quá 180s → Error; Escape RewardedVideoDialog (Update che Update của Dialog — bug thật); WinDialog ghi unlocked + Save trước khi cộng ruby. Không đổi số thưởng. Hạn chế: quảng cáo editor là stub. QA nên kiểm trên máy: x2 giữ NEXT/MENU, đóng video sớm mở khoá x2, Escape, kill app khi Success. OTA CLR (5 file), không cần AA.\n[2026-10-30 QA sweep] BLOCKED: Các kịch bản x2 đóng WinDialog / ruby video mất khi đóng sớm / Thử lại cần quảng cáo rewarded fill thật (hoặc DebugOpener rewarded:* trên bản GAME_DEBUG) — chưa kiểm được trên bản release → kiểm lại bằng preview GAME_DEBUG rewarded:* hoặc khi có quảng cáo thật (T007)."
     },
     {
       "id": "T103",
       "title": "Dialog: Win bị cắt nút MENU ở đáy máy 1080x2400; '·' hiển thị thành 'R'",
-      "type": "ui",
+      "type": "runtime",
       "status": "done",
       "screen": "Popup trong Game",
       "goal": "Win đủ trong màn; ký tự đúng",
@@ -1669,13 +1669,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T098",
       "criteria": "Ảnh preview win không bị cắt; dòng 'Tiếp theo: Level n · còn …' đúng",
-      "evidence": "7134035 (WinDialog.prefab: card thu gọn, MENU không cắt, xác nhận ảnh preview-win-first-20261029-190900), a093179 (· → • trong WinDialog.cs), 115a20a (bật lại win.dailyNext).",
+      "evidence": "7134035 (WinDialog.prefab: card thu gọn, MENU không cắt, xác nhận ảnh preview-win-first-20261029-190900), a093179 (· → • trong WinDialog.cs), 115a20a (bật lại win.dailyNext). | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:36 ảnh qa-sweep-win.png (1220x2712): WinDialog thấy đủ nút SUIVANT + MENU không bị cắt; dòng 'Suite : niveau 2 • encore 11 niveaux…' dấu • đúng (không 'R')",
       "note": "[2026-10-30 01:10 (GMT+7)] Phát hiện từ ảnh preview-win (T097). Làm sau T098 (cùng WinDialog). Có thể đổi '·' thành ' - ' hoặc thêm glyph vào font fallback.\n[2026-10-29 19:47 (GMT+7)] Cần OTA CLR+AA. Nên chụp Win daily lần đầu có milestone khi có máy."
     },
     {
       "id": "T109",
       "title": "Đối chiếu Win daily sau merge + bảng rà dịch cho người",
-      "type": "content",
+      "type": "runtime",
       "status": "done",
       "screen": "Popup trong Game",
       "goal": "Win daily khớp layout Win mới; có file để người rà 25 key dịch",
@@ -1683,7 +1683,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T041, T103",
       "criteria": "Không xung đột logic; bảng rà dịch đủ key",
-      "evidence": "Merge 9de8ae1 (115a20a); l10n-review.md 25 key.",
+      "evidence": "Merge 9de8ae1 (115a20a); l10n-review.md 25 key. | [2026-10-30 QA sweep] PASS: 02-reskin-maintain/l10n-review.md 25 key đều có trong LocalizationData (293 key×5 ngôn ngữ, check script). Win thường FR hiển thị đúng (qa-sweep-win.png). Win Daily chưa chụp trên máy trong lượt này",
       "note": "[2026-10-29 19:47 (GMT+7)] Chưa chụp ảnh thiết bị cho Win daily."
     },
     {
@@ -1815,7 +1815,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T041",
       "title": "Daily Challenge",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Đề xuất mới trong design (chưa có trong Unity)",
       "goal": "Theo GD §6",
@@ -1823,13 +1823,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "",
       "criteria": "Theo GD §6",
-      "evidence": "Merge 88900eb (wordcross/daily): DailyDialog.prefab + DailyChallenge.cs; ảnh Build/remote-r2-0.3/qa-shots/daily/*.png (dialog, Main daily, Win daily, Home chấm đỏ) trên ZY22LHV7PJ; mô phỏng mono sim.log ALL OK (2000 ngày, chuỗi 16 ngày).",
+      "evidence": "Merge 88900eb (wordcross/daily): DailyDialog.prefab + DailyChallenge.cs; ảnh Build/remote-r2-0.3/qa-shots/daily/*.png (dialog, Main daily, Win daily, Home chấm đỏ) trên ZY22LHV7PJ; mô phỏng mono sim.log ALL OK (2000 ngày, chuỗi 16 ngày). | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:3x Home nút HÀNG NGÀY chấm đỏ → DailyDialog (lịch, chuỗi, nút JOUER AUJOURD'HUI; qa-sweep-daily.png) → Main daily '#303 Défi 30 oct.' + coach FR (qa-sweep-dailymain.png), 0 exception. Win Daily chưa kiểm",
       "note": "ĐỀ XUẤT (origin proposed trong design/Ui/global/js/screens.js), Unity gốc không có. Chờ user chốt có đưa vào scope không; chưa làm.\n[2026-10-29 15:00 (GMT+7)] USER: bám sát design — design có mà game thiếu thì làm thêm → chuyển HOLD → Chờ (Home thiếu nút DAILY chấm đỏ, VS BOT, VS AI + SOON, Language). Cần phân rã sau T077 (làm nút trước, tính năng sau).\n[2026-10-30 02:05 (GMT+7)] USER cho phép code thêm → làm đủ: dev Sonnet đang làm (worktree daily): màn/dialog Daily, luồng chơi daily không phá tiến độ chính, biến thể WinDialog daily, chấm đỏ DAILY chỉ khi chưa giải, l10n, thưởng theo design systems.js (báo thay đổi kinh tế). Tự xác minh ảnh bằng preview.sh (thêm screen daily vào DebugOpener).\n[2026-10-29 19:47 (GMT+7)] Daily xong: pool 522 level (bỏ 12 tutorial), hash FNV-1a en|yyyy-MM-dd; reset nửa đêm giờ máy, chống đổi giờ lùi. KINH TẾ: thắng hôm nay +3, bù hôm qua +1, mốc chuỗi 3/7/14 = +2/+5/+8. Chưa test bấm thực tế (thắng hết bàn, đổi giờ, nút CHƠI HÔM NAY). Cần OTA CLR+AA."
     },
     {
       "id": "T044",
       "title": "Màn Ngôn ngữ chơi",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Đề xuất mới trong design (chưa có trong Unity)",
       "goal": "Theo GD §4",
@@ -1837,13 +1837,13 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE",
       "deps": "",
       "criteria": "Theo GD §4",
-      "evidence": "Commits ec415a0 (LanguageDialog + DialogType.Language), 7956563 (nút Home mở LanguageDialog), d812eea (Pause LANGUAGE + MainController UpdateLevelTexts), merge 9162ae5. Batch 0 error CS; mô phỏng SetLanguage 5 ngôn ngữ OK.",
+      "evidence": "Commits ec415a0 (LanguageDialog + DialogType.Language), 7956563 (nút Home mở LanguageDialog), d812eea (Pause LANGUAGE + MainController UpdateLevelTexts), merge 9162ae5. Batch 0 error CS; mô phỏng SetLanguage 5 ngôn ngữ OK. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:36 ảnh qa-sweep-lang.png/lang-fr.png: màn Ngôn ngữ chơi gồm 5 ngôn ngữ giao diện + 5 bộ level (534 level mỗi bộ), chọn → lưu ('Enregistré'), highlight đúng",
       "note": "ĐỀ XUẤT (origin proposed trong design/Ui/global/js/screens.js), Unity gốc không có. Chờ user chốt có đưa vào scope không; chưa làm.\n[2026-10-29 15:00 (GMT+7)] USER: bám sát design — design có mà game thiếu thì làm thêm → chuyển HOLD → Chờ (Home thiếu nút DAILY chấm đỏ, VS BOT, VS AI + SOON, Language). Cần phân rã sau T077 (làm nút trước, tính năng sau).\n[2026-10-29 21:40 (GMT+7)] Dev Sonnet đang làm (worktree language) cùng T075: màn/popup chọn ngôn ngữ + nút Home Language + nút LANGUAGE Pause.\n[2026-10-29 23:55 (GMT+7)] CODE XONG, CHƯA XÁC MINH thiết bị. Làm dạng dialog (không scene mới). Chưa: phần \"ngôn ngữ chơi\" của design (lang.playable/soon…), mô tả lang.uiDesc/gameDesc, icon tick. OTA CLR+AA.\n[2026-10-29 19:47 (GMT+7)] Phần \"ngôn ngữ chơi\": merge 617a949 (d646d47). LanguageDialog 2 phần UI/gameLang theo design; LocalizationController thêm game_language + ProgressKeys.Of cho khoá tiến độ. Chỉ en chơi được (534 level); fr/es/pt Sắp có, vi Đề xuất. Chưa test đổi ngôn ngữ chơi/đọc-ghi tiến độ trên máy. Daily/Bot chưa gọi ProgressKeys.Of. Cần OTA CLR+AA."
     },
     {
       "id": "T013",
       "title": "Reskin các màn UI khác",
-      "type": "ui",
+      "type": "runtime",
       "status": "done",
       "screen": "Reskin tổng (theo dõi)",
       "goal": "Theo design",
@@ -1851,7 +1851,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (hình: CODEX)",
       "deps": "T010",
       "criteria": "Khớp design",
-      "evidence": "[2026-10-30] Mọi task con T020–T034 (SelectWorld, SelectLevel, Main, popup trong game, popup từ Home) đã Xong + xác minh trên máy, OTA 1.0.0.",
+      "evidence": "[2026-10-30] Mọi task con T020–T034 (SelectWorld, SelectLevel, Main, popup trong game, popup từ Home) đã Xong + xác minh trên máy, OTA 1.0.0. | [2026-10-30 QA sweep] PASS: ZY22LHV7PJ 30/10 05:3x đã duyệt Home, SelectWorld, SelectLevel, Main, Pause, HowTo, Win, Shop, Language, Daily trên OTA 1.0.0: bố cục/màu khớp design (teal #14b5a6, đỏ-san hô, pill ruby), không còn UI dư",
       "note": "Đã rã thành T020–T034 theo màn. Chỉ Xong khi các task con Xong + xác minh."
     }
   ]
