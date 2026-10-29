@@ -7,7 +7,8 @@
     "editorMainUrl": "",
     "streamingAssetsFolder": "clr",
     "hotUpdateAssemblies": [
-        "CatGaming.Module"
+        "CatGaming.Module",
+        "WordCross.Gameplay.HotUpdate"
     ],
     "aotMetadataAssemblies": [
         "CatGaming.Clr.Runtime",
@@ -37,6 +38,10 @@
         {
             "assembly": "CatGaming.Module",
             "assetGuid": "a9a76d15823564a30ad27eff9720d172"
+        },
+        {
+            "assembly": "WordCross.Gameplay.HotUpdate",
+            "assetGuid": "c7bea111757d4650be43d8182bba8cf5"
         }
     ],
     "aotMetadataAssemblyAssets": [
@@ -136,5 +141,10 @@
         "preload_1",
         "preload_3"
     ],
-    "entryPoints": []
+    "entryPoints": [
+        {
+            "assembly": "WordCross.Gameplay.HotUpdate",
+            "entryType": "WordCross.Gameplay.WordCrossGameEntry"
+        }
+    ]
 }

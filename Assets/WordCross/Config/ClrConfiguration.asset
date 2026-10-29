@@ -23,6 +23,8 @@ MonoBehaviour:
     _serializedList:
     - Key: CatGaming.Module
       Value: {fileID: 5897886265953266890, guid: a9a76d15823564a30ad27eff9720d172, type: 3}
+    - Key: WordCross.Gameplay.HotUpdate
+      Value: {fileID: 5897886265953266890, guid: c7bea111757d4650be43d8182bba8cf5, type: 3}
   aotMetadataAssemblies:
     _serializedList:
     - Key: CatGaming.Clr.Runtime
@@ -76,4 +78,6 @@ MonoBehaviour:
   - preload_1
   - preload_3
   entryPoints:
-    _serializedList: []
+    _serializedList:
+    - Key: WordCross.Gameplay.HotUpdate
+      Value: WordCross.Gameplay.WordCrossGameEntry
