@@ -80,7 +80,7 @@ MonoBehaviour:
       - m_Id: 1bf9d8c54eab34a14a7998927c23453e
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
       - m_Id: 27ac3ee1b3a2b4e99afbafec5586bc76
-        m_Value: https://data.catgaming.asia/wordcross/data/1.0.0/android
+        m_Value: https://data.catgaming.asia/wordcross/1.0.0/data/android
       - m_Id: 473a739acd8fd440ebc91860817177ed
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: c13969abaf33c4d3f88f8408c71df8ec

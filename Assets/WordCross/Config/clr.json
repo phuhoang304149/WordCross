@@ -1,10 +1,10 @@
 {
     "projectType": "pikachu",
-    "hotUpdateBaseUrl": "https://data.catgaming.asia/wordcross/clr/1.0.0",
+    "hotUpdateBaseUrl": "https://data.catgaming.asia/wordcross/1.0.0/clr",
     "allowDevelopmentHttp": false,
     "editorSource": 0,
     "editorLocalUrl": "Export/CLR",
-    "editorMainUrl": "https://data.catgaming.asia/wordcross/clr/1.0.0",
+    "editorMainUrl": "https://data.catgaming.asia/wordcross/1.0.0/clr",
     "streamingAssetsFolder": "clr",
     "hotUpdateAssemblies": [
         "CatGaming.Module",
