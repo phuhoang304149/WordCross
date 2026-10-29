@@ -10,7 +10,8 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - Baloo 2
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5081ab6b5b5b3498f927d3a8b6e5eb18, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
