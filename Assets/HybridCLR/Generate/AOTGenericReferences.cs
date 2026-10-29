@@ -220,6 +220,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // DG.Tweening.Plugins.Core.ABSTweenPlugin<object,object,DG.Tweening.Plugins.Options.StringOptions>
     // DG.Tweening.Plugins.Core.ABSTweenPlugin<uint,uint,DG.Tweening.Plugins.Options.UintOptions>
     // DG.Tweening.Plugins.Core.ABSTweenPlugin<ulong,ulong,DG.Tweening.Plugins.Options.NoOptions>
+    // DelegateList<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>>
     // DelegateList<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<long>>
     // DelegateList<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>>
     // DelegateList<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle>
@@ -233,6 +234,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.Action<UnityEngine.GradientColorKey>
     // System.Action<UnityEngine.Quaternion>
     // System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle,object>
+    // System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>>
     // System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<long>>
     // System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>>
     // System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle>
@@ -599,6 +601,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.Func<UnityEngine.GradientColorKey,UnityEngine.Color>
     // System.Func<UnityEngine.GradientColorKey,byte>
     // System.Func<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle,UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>>
+    // System.Func<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // System.Func<UnityEngine.Vector3,UnityEngine.Vector3>
     // System.Func<UnityEngine.Vector3,byte>
     // System.Func<byte>
@@ -620,6 +623,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.Func<object,System.ValueTuple<byte,System.ValueTuple<byte,object>>>
     // System.Func<object,System.ValueTuple<byte,long>>
     // System.Func<object,System.ValueTuple<byte,object>>
+    // System.Func<object,UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // System.Func<object,UnityEngine.Vector3>
     // System.Func<object,byte>
     // System.Func<object,float>
@@ -717,6 +721,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter<System.ValueTuple<byte,System.ValueTuple<byte,object>>>
     // System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter<System.ValueTuple<byte,long>>
     // System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter<System.ValueTuple<byte,object>>
+    // System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter<long>
     // System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter<object>
     // System.Runtime.CompilerServices.ConfiguredTaskAwaitable<System.Threading.Tasks.VoidTaskResult>
@@ -733,6 +738,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.Runtime.CompilerServices.ConfiguredTaskAwaitable<System.ValueTuple<byte,System.ValueTuple<byte,object>>>
     // System.Runtime.CompilerServices.ConfiguredTaskAwaitable<System.ValueTuple<byte,long>>
     // System.Runtime.CompilerServices.ConfiguredTaskAwaitable<System.ValueTuple<byte,object>>
+    // System.Runtime.CompilerServices.ConfiguredTaskAwaitable<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // System.Runtime.CompilerServices.ConfiguredTaskAwaitable<long>
     // System.Runtime.CompilerServices.ConfiguredTaskAwaitable<object>
     // System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable.ConfiguredValueTaskAwaiter<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>
@@ -781,6 +787,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.Runtime.CompilerServices.TaskAwaiter<System.ValueTuple<byte,System.ValueTuple<byte,object>>>
     // System.Runtime.CompilerServices.TaskAwaiter<System.ValueTuple<byte,long>>
     // System.Runtime.CompilerServices.TaskAwaiter<System.ValueTuple<byte,object>>
+    // System.Runtime.CompilerServices.TaskAwaiter<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // System.Runtime.CompilerServices.TaskAwaiter<long>
     // System.Runtime.CompilerServices.TaskAwaiter<object>
     // System.Runtime.CompilerServices.ValueTaskAwaiter<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>
@@ -817,6 +824,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.Threading.Tasks.ContinuationTaskFromResultTask<System.ValueTuple<byte,System.ValueTuple<byte,object>>>
     // System.Threading.Tasks.ContinuationTaskFromResultTask<System.ValueTuple<byte,long>>
     // System.Threading.Tasks.ContinuationTaskFromResultTask<System.ValueTuple<byte,object>>
+    // System.Threading.Tasks.ContinuationTaskFromResultTask<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // System.Threading.Tasks.ContinuationTaskFromResultTask<long>
     // System.Threading.Tasks.ContinuationTaskFromResultTask<object>
     // System.Threading.Tasks.Sources.IValueTaskSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>
@@ -852,8 +860,10 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.Threading.Tasks.Task<System.ValueTuple<byte,System.ValueTuple<byte,object>>>
     // System.Threading.Tasks.Task<System.ValueTuple<byte,long>>
     // System.Threading.Tasks.Task<System.ValueTuple<byte,object>>
+    // System.Threading.Tasks.Task<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // System.Threading.Tasks.Task<long>
     // System.Threading.Tasks.Task<object>
+    // System.Threading.Tasks.TaskCompletionSource<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // System.Threading.Tasks.TaskCompletionSource<long>
     // System.Threading.Tasks.TaskCompletionSource<object>
     // System.Threading.Tasks.TaskFactory.<>c__DisplayClass35_0<System.Threading.Tasks.VoidTaskResult>
@@ -868,6 +878,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.Threading.Tasks.TaskFactory.<>c__DisplayClass35_0<System.ValueTuple<byte,System.ValueTuple<byte,object>>>
     // System.Threading.Tasks.TaskFactory.<>c__DisplayClass35_0<System.ValueTuple<byte,long>>
     // System.Threading.Tasks.TaskFactory.<>c__DisplayClass35_0<System.ValueTuple<byte,object>>
+    // System.Threading.Tasks.TaskFactory.<>c__DisplayClass35_0<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // System.Threading.Tasks.TaskFactory.<>c__DisplayClass35_0<long>
     // System.Threading.Tasks.TaskFactory.<>c__DisplayClass35_0<object>
     // System.Threading.Tasks.TaskFactory<System.Threading.Tasks.VoidTaskResult>
@@ -884,6 +895,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.Threading.Tasks.TaskFactory<System.ValueTuple<byte,System.ValueTuple<byte,object>>>
     // System.Threading.Tasks.TaskFactory<System.ValueTuple<byte,long>>
     // System.Threading.Tasks.TaskFactory<System.ValueTuple<byte,object>>
+    // System.Threading.Tasks.TaskFactory<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // System.Threading.Tasks.TaskFactory<long>
     // System.Threading.Tasks.TaskFactory<object>
     // System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>
@@ -958,14 +970,19 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.ValueTuple<byte,object>
     // UnityEngine.AddressableAssets.AddressablesImpl.<>c__DisplayClass79_0<object>
     // UnityEngine.Events.UnityAction<UnityEngine.SceneManagement.Scene,int>
+    // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationBase.<>c__DisplayClass60_0<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationBase.<>c__DisplayClass60_0<long>
     // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationBase.<>c__DisplayClass60_0<object>
+    // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationBase.<>c__DisplayClass61_0<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationBase.<>c__DisplayClass61_0<long>
     // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationBase.<>c__DisplayClass61_0<object>
+    // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationBase<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationBase<long>
     // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationBase<object>
+    // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle.<>c<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle.<>c<long>
     // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle.<>c<object>
+    // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance>
     // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<long>
     // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>
     // UnityEngine.ResourceManagement.ChainOperationTypelessDepedency<object>
@@ -1065,6 +1082,8 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
         // object Newtonsoft.Json.JsonConvert.DeserializeObject<object>(string,Newtonsoft.Json.JsonSerializerSettings)
         // object System.Activator.CreateInstance<object>()
         // object[] System.Array.Empty<object>()
+        // int System.Array.FindIndex<object>(object[],System.Predicate<object>)
+        // int System.Array.FindIndex<object>(object[],int,int,System.Predicate<object>)
         // int System.Array.IndexOf<object>(object[],object)
         // int System.Array.IndexOfImpl<object>(object[],object,int,int)
         // bool System.Linq.Enumerable.Any<object>(System.Collections.Generic.IEnumerable<object>,System.Func<object,bool>)

@@ -13,7 +13,23 @@ MonoBehaviour:
   m_Name: AddressableConfig
   m_EditorClassIdentifier: 
   sceneGroupLabel: preload_1
-  scenes: []
+  scenes:
+  - path: Assets/_Scenes/Home.unity
+    scene: {fileID: 102900000, guid: 064b96d707ae11340bcbed5e31361e30, type: 3}
+    address: Assets/_Scenes/Home.unity
+    label: 
+  - path: Assets/_Scenes/SelectWorld.unity
+    scene: {fileID: 102900000, guid: ac051abc6abdcc54ebb3be68da026268, type: 3}
+    address: Assets/_Scenes/SelectWorld.unity
+    label: 
+  - path: Assets/_Scenes/SelectLevel.unity
+    scene: {fileID: 102900000, guid: 739f8ceaaec6de542a34d1a121b43241, type: 3}
+    address: Assets/_Scenes/SelectLevel.unity
+    label: 
+  - path: Assets/_Scenes/Main.unity
+    scene: {fileID: 102900000, guid: a5a6bde723c00464083985bffb55a5b7, type: 3}
+    address: Assets/_Scenes/Main.unity
+    label: 
   prefabGroupLabel: preload_2
   prefabs: []
   scriptableObjectGroupLabel: preload_3
@@ -26,9 +42,14 @@ MonoBehaviour:
     asset: {fileID: 11400000, guid: 745ede4e20c3459092eb505abfe86c88, type: 2}
     address: PopupDatabase/com.phltd.wordcrossy
     label: 
+  - path: Assets/WordCross/Config/GameData/ProductData.asset
+    asset: {fileID: 11400000, guid: 96bdd2140e6c40e08373d6e2bf09b2c0, type: 2}
+    address: Assets/WordCross/Config/GameData/ProductData.asset
+    label: 
   noLoadGroupLabel: no_load
   noLoadScriptableObjects: []
   assetGroupLabel: preload_4
   assets: []
   preloadLabels:
+  - preload_1
   - preload_3
