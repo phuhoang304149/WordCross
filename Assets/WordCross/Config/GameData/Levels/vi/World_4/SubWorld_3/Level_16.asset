@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88afd11c802cdf6449faf33ed6e4e3bd, type: 3}
+  m_Name: Level_16
+  m_EditorClassIdentifier: WordCross.Gameplay.HotUpdate::GameLevel
+  word: "ngo\xE0m"
+  answers: "go|n\xE0|\xE0o|mo|m\xE0|om|ong|g\xE0n|ng\xE0|n\xE0o|nom|m\xE0n|mong|ng\xE0o|ngo\xE0m|"
+  validWords: "go|n\xE0|\xE0o|mo|m\xE0|om|ong|g\xE0n|ng\xE0|n\xE0o|nom|m\xE0n|mong|ng\xE0o|ngo\xE0m|g\xE0|no|o\xE0|gom|g\xE0o|m\xE0o|m\xE0ng"

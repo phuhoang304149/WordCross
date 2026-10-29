@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88afd11c802cdf6449faf33ed6e4e3bd, type: 3}
+  m_Name: Level_5
+  m_EditorClassIdentifier: WordCross.Gameplay.HotUpdate::GameLevel
+  word: "donn\xE9es"
+  answers: "de|en|ne|se|on|n\xE9|des|son|non|nos|dos|donne|donn\xE9|donn\xE9e|donn\xE9es|"
+  validWords: "de|en|ne|se|on|n\xE9|des|son|non|nos|dos|donne|donn\xE9|donn\xE9e|donn\xE9es|don|d\xE9s|n\xE9e|n\xE9s|ose|os\xE9|dons|dose|donn\xE9s"

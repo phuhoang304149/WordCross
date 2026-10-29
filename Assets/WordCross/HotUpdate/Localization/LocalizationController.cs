@@ -20,8 +20,8 @@ namespace WordCross.Gameplay
         [SerializeField] private string dataKey = "Localization/LocalizationData";
         [Tooltip("Ngôn ngữ chơi mặc định: tiến độ giữ khoá cũ (không tiền tố progress.<lang>.).")]
         [SerializeField] private string defaultGameLanguage = "en";
-        [Tooltip("Ngôn ngữ chơi đã có bộ level. Ngôn ngữ khác hiển thị 'sắp có'.")]
-        [SerializeField] private string[] playableGameLanguages = { "en" };
+        // Ngôn ngữ chơi đã có bộ level (Levels/<mã>/... trong Addressables; en ở Levels/). Không serialize để OTA CLR đổi được.
+        private readonly string[] playableGameLanguages = { "en", "vi", "fr", "es", "pt" };
 
         public event Action<string> onLanguageChanged;
         public event Action<string> onGameLanguageChanged;
@@ -35,6 +35,9 @@ namespace WordCross.Gameplay
         public string GameLanguage => gameLanguage;
         public string DefaultGameLanguage => defaultGameLanguage;
         public string[] Languages => languages;
+
+        // Thư mục gốc level của ngôn ngữ chơi: en giữ "Levels" như bản đang chạy, ngôn ngữ khác "Levels/<mã>".
+        public string LevelFolder => gameLanguage == defaultGameLanguage ? "Levels" : "Levels/" + gameLanguage;
 
         private void Awake()
         {

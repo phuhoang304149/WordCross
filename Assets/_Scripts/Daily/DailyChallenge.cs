@@ -19,7 +19,7 @@ public class DailyResult
     public int streak;
 }
 
-// Luật Daily Challenge (design: systems.js WC.daily*). Dữ liệu lưu PlayerPrefs, key mới daily_*; không đụng tiến độ chính.
+// Luật Daily Challenge (design: systems.js WC.daily*). Dữ liệu lưu PlayerPrefs, key mới daily_* (theo ngôn ngữ chơi qua ProgressKeys; en giữ khoá cũ); không đụng tiến độ chính.
 // Ngày tính theo giờ máy (00:00), định dạng yyyy-MM-dd. Chống đổi giờ lùi: "hôm nay" = max(ngày máy, ngày lớn nhất từng thấy).
 public class DailyChallenge
 {
@@ -43,8 +43,8 @@ public class DailyChallenge
 
     public int best
     {
-        get { return CPlayerPrefs.GetInt(BEST_KEY, 0); }
-        private set { CPlayerPrefs.SetInt(BEST_KEY, value); }
+        get { return CPlayerPrefs.GetInt(Prefs.progressKeys.Of(BEST_KEY), 0); }
+        private set { CPlayerPrefs.SetInt(Prefs.progressKeys.Of(BEST_KEY), value); }
     }
 
     // ---------- ngày ----------
@@ -104,6 +104,13 @@ public class DailyChallenge
         return h;
     }
 
+    // Mã ngôn ngữ chơi ("en" khi chưa có Localization) làm hạt giống bàn Daily: mỗi ngôn ngữ một bàn riêng, en giữ nguyên.
+    private string GameLang()
+    {
+        var loc = Locator<LocalizationController>.Instance;
+        return loc == null ? "en" : loc.GameLanguage;
+    }
+
     public int PoolSize()
     {
         int total = 0;
@@ -116,7 +123,7 @@ public class DailyChallenge
     // Chọn level thứ (POOL_SKIP + hash % pool) theo thứ tự world/sub/level.
     public void PickLevel(string date, out int world, out int subWorld, out int level)
     {
-        int index = POOL_SKIP + (int)(Hash("en|" + date) % (uint)PoolSize());
+        int index = POOL_SKIP + (int)(Hash(GameLang() + "|" + date) % (uint)PoolSize());
         for (world = 0; world < Superpow.Utils.NUM_WORLDS; world++)
         {
             for (subWorld = 0; subWorld < Const.NUM_SUBWORLD; subWorld++)
@@ -151,7 +158,7 @@ public class DailyChallenge
 
     private HashSet<string> Load(string key)
     {
-        string raw = CPlayerPrefs.GetString(key, "");
+        string raw = CPlayerPrefs.GetString(Prefs.progressKeys.Of(key), "");
         return new HashSet<string>(raw.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
     }
 
@@ -163,7 +170,7 @@ public class DailyChallenge
             if (sb.Length > 0) sb.Append(',');
             sb.Append(item);
         }
-        CPlayerPrefs.SetString(key, sb.ToString());
+        CPlayerPrefs.SetString(Prefs.progressKeys.Of(key), sb.ToString());
     }
 
     public bool IsSolved(string date)

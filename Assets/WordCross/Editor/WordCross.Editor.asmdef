@@ -4,7 +4,8 @@
   "references": [
     "UnityEngine.UI",
     "Unity.TextMeshPro",
-    "WordCross.Gameplay.HotUpdate"
+    "WordCross.Gameplay.HotUpdate",
+    "CatGaming.Module.Editor.Tool.Editor"
   ],
   "includePlatforms": [
     "Editor"
