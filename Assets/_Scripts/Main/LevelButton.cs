@@ -12,6 +12,10 @@ public class LevelButton : MonoBehaviour {
 
     public Sprite solvedSprite, currentSprite, lockedSprite;
 
+    // index 0: solved, 1: current, 2: locked
+    public Image shadow;
+    public Color[] backColors, shadowColors, textColors;
+
     private List<Vector3> letterLocalPositions = new List<Vector3>();
     private List<Text> letterTexts = new List<Text>();
     private GameLevel gameLevel;
@@ -41,16 +45,26 @@ public class LevelButton : MonoBehaviour {
             (world == unlockedWorld && subWorld <= unlockedSubWorld && level < unlockedLevel))
         {
             background.sprite = solvedSprite;
+            ApplyColors(0);
         }
         else if (world == unlockedWorld && subWorld == unlockedSubWorld && level == unlockedLevel)
         {
             background.sprite = currentSprite;
+            ApplyColors(1);
         }
         else
         {
             background.sprite = lockedSprite;
             GetComponent<Button>().interactable = false;
+            ApplyColors(2);
         }
+    }
+
+    private void ApplyColors(int state)
+    {
+        if (state < backColors.Length) background.color = backColors[state];
+        if (shadow != null && state < shadowColors.Length) shadow.color = shadowColors[state];
+        if (state < textColors.Length) levelText.color = textColors[state];
     }
 
     public void Load()
