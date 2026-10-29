@@ -9,6 +9,7 @@ public class ExtraWord : MonoBehaviour {
     public GameObject existMessage;
     public Transform beginPoint, endPoint;
     public GameObject lightEffect, lightOpenEffect;
+    public Text progressText;
 
     private int world, subWorld, level;
     private CanvasGroup existMessageCG;
@@ -38,6 +39,7 @@ public class ExtraWord : MonoBehaviour {
     private void UpdateUI()
     {
         lightOpenEffect.SetActive(Prefs.extraProgress >= Prefs.extraTarget);
+        progressText.text = Prefs.extraProgress.ToString();
     }
 
     public void ProcessWorld(string word)
