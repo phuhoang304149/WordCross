@@ -25,7 +25,7 @@ class EditorUpdate
             AssetDatabase.MoveAsset(from, to);
         }
         
-        EditorUserBuildSettings.androidBuildSystem = AndroidBuildSystem.Internal;
+        EditorUserBuildSettings.androidBuildSystem = AndroidBuildSystem.Gradle;
 #endif
     }
 }
