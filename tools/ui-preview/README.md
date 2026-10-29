@@ -21,9 +21,9 @@ In ra đường dẫn ảnh `Build/remote-r2-0.3/qa-shots/preview-<screen>-<th�
 | `rewarded:<ready\|loading\|cooldown\|nofill\|offline\|playing\|success\|cancel\|error>` | popup rewarded ở Home, giữ nguyên trạng thái |
 | `daily[:fresh\|risk\|safe\|lost]` | dialog Daily ở Home với chuỗi giả (lưu thật; trả lại bằng `reset`) |
 | `dailymain[:state]`, `dailywin[:state]` | Main với bàn Daily hôm nay / Win biến thể Daily (dữ liệu Daily và ruby trả lại sau 1 giây) |
-| `reset` | trả số ruby và dữ liệu Daily về giá trị trước khi ghi đè |
+| `reset` | trả số ruby, dữ liệu Daily và level đang mở khoá (`;unlock=`) về giá trị trước khi ghi đè |
 
-Hậu tố `;extra=N` đặt tiến độ từ thưởng (lưu thật, trả lại bằng `;extra=0`). Hậu tố `;ruby=N` đặt số ruby (ví dụ `shop;ruby=99999`; nhớ chạy `reset` sau đó). `win` vào level đang mở khoá nên là "thắng lần đầu" (+ruby);
+Hậu tố `;lang=fr` đổi ngôn ngữ giao diện (lưu thật; trả lại bằng `;lang=vi`). Hậu tố `;unlock=w-s-l` đặt level đang mở khoá (ví dụ `selectworld;unlock=1-2-5`; lưu thật, trả lại bằng `reset`). Hậu tố `;extra=N` đặt tiến độ từ thưởng (lưu thật, trả lại bằng `;extra=0`). Hậu tố `;ruby=N` đặt số ruby (ví dụ `shop;ruby=99999`; nhớ chạy `reset` sau đó). `win` vào level đang mở khoá nên là "thắng lần đầu" (+ruby);
 `win:replay` là level đã qua. Win/Extra ghi tiến độ khi mở nên DebugOpener trả lại ruby/tiến độ sau 1 giây; số ruby hiển thị trong ảnh có thể khác số đã lưu.
 
 Tùy chọn: `--settle SEC` (chờ hoạt ảnh trước khi chụp, mặc định 3), `--wait MIN` (chờ khoá, mặc định 20), `--name N` (tên ảnh), `--rebuild` (ép build lại), `--no-build`.

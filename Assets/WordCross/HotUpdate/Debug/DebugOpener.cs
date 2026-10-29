@@ -4,6 +4,7 @@ using System.Collections;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Script.Utils;
 
 namespace WordCross.Gameplay
 {
@@ -11,6 +12,8 @@ namespace WordCross.Gameplay
     // Nguồn lệnh: intent extra "open" (adb shell am start --es open win) hoặc file <persistentDataPath>/debug_open.txt (đọc xong xoá).
     // Cú pháp: <màn>[:<tham số>][;ruby=N][;level=w-s-l]
     //   Hậu tố ;extra=N đặt tiến độ từ thưởng (lưu thật, như ruby).
+    //   Hậu tố ;lang=vi|en|fr|es|pt đổi ngôn ngữ giao diện (lưu thật; trả lại bằng ;lang=<mã cũ>).
+    //   Hậu tố ;unlock=w-s-l đặt level đang mở khoá (lưu thật; `reset` trả lại giá trị trước khi ghi đè).
     //   home | selectworld | selectlevel[:w-s] | main:w-s-l
     //   pause | win[:first|replay] | extra[:ready|notready] | howto   (mở trong Main, mặc định level đang mở khoá)
     //   shop | rate | language | rewarded:<ready|loading|cooldown|nofill|offline|playing|success|cancel|error> (mở trong Home)
@@ -23,6 +26,7 @@ namespace WordCross.Gameplay
         private const string FileName = "debug_open.txt";
         private const string RubyBackupKey = "debug_ruby_backup";
         private const string DailyBackupKey = "debug_daily_backup";
+        private const string UnlockBackupKey = "debug_unlock_backup";
         private static readonly string[] DailyKeys = { "daily_solved", "daily_milestones", "daily_best", "daily_last_seen" };
 
         private void Awake()
@@ -82,6 +86,8 @@ namespace WordCross.Gameplay
                 if (key == "ruby") ApplyRuby(int.Parse(pair[1]));
                 else if (key == "level") level = ParseLevel(pair[1]);
                 else if (key == "extra") Prefs.extraProgress = int.Parse(pair[1]);
+                else if (key == "unlock") ApplyUnlock(ParseLevel(pair[1]));
+                else if (key == "lang") Locator<LocalizationController>.Instance.SetLanguage(pair[1]);
             }
 
             switch (name)
@@ -89,6 +95,7 @@ namespace WordCross.Gameplay
                 case "reset":
                     RestoreRuby();
                     RestoreDaily();
+                    RestoreUnlock();
                     break;
                 case "daily":
                     ApplyDaily(arg);
@@ -166,6 +173,22 @@ namespace WordCross.Gameplay
             if (!PlayerPrefs.HasKey(RubyBackupKey)) PlayerPrefs.SetInt(RubyBackupKey, CurrencyController.GetBalance());
             CurrencyController.SetBalance(value);
             if (CurrencyController.onBalanceChanged != null) CurrencyController.onBalanceChanged();
+        }
+
+        private void ApplyUnlock(int[] unlock)
+        {
+            if (!PlayerPrefs.HasKey(UnlockBackupKey))
+                PlayerPrefs.SetString(UnlockBackupKey, Prefs.unlockedWorld + "-" + Prefs.unlockedSubWorld + "-" + Prefs.unlockedLevel);
+            Prefs.unlockedWorld = unlock[0];
+            Prefs.unlockedSubWorld = unlock.Length > 1 ? unlock[1] : 0;
+            Prefs.unlockedLevel = unlock.Length > 2 ? unlock[2] : 0;
+        }
+
+        private void RestoreUnlock()
+        {
+            if (!PlayerPrefs.HasKey(UnlockBackupKey)) return;
+            ApplyUnlock(ParseLevel(PlayerPrefs.GetString(UnlockBackupKey)));
+            PlayerPrefs.DeleteKey(UnlockBackupKey);
         }
 
         private void RestoreRuby()
