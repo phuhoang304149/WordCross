@@ -46,6 +46,6 @@ case "${1:-list}" in
     s=$(awk -F'|' '$3=="finish"{print $1; exit}' "$STATE")
     [ -n "$s" ] || exit 1
     set_status "$s" working "${2:-unknown}"; render; echo "$s" ;;
-  release) set_status "$2" finish ""; render ;;
+  release) grep -q "^${2:-none}|" "$STATE" || { echo "unknown serial: $2" >&2; exit 1; }; set_status "$2" finish ""; render ;;
   list) cat "$STATE" ;;
 esac
