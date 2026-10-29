@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
 using System;
+#if CATGAMING_ADS && CATGAMING_ADMOB
+using catgamingmodule.Monetization;
+using Script.Utils;
+#endif
 
-// Google Mobile Ads SDK đã được gỡ. Các hàm dưới đây là điểm gắn để tích hợp lại SDK quảng cáo
-// (ví dụ CatGamingAds của catgamingmodule); hiện chỉ ghi log và không hiển thị quảng cáo.
+// Nối quảng cáo với CatGamingAds/AdmobService của catgamingmodule (Google Mobile Ads SDK).
+// App ID và ad unit ID lấy từ AdmobConfig đăng ký trong GameDatabase.
 public class AdmobController : MonoBehaviour
 {
     public static AdmobController instance;
 
-    // Gọi khi người chơi xem xong rewarded video; SDK mới cần invoke sự kiện này.
+    // Gọi khi người chơi xem xong rewarded video.
     public event Action onRewardedVideoRewarded;
 
     private void Awake()
@@ -17,54 +21,78 @@ public class AdmobController : MonoBehaviour
 
     private void Start()
     {
+#if CATGAMING_ADS && CATGAMING_ADMOB
+        CatGamingAds.Initialize(OnAdsInitialized);
+#endif
+    }
+
+#if CATGAMING_ADS && CATGAMING_ADMOB
+    private void OnAdsInitialized()
+    {
         if (!CUtils.IsBuyItem() && !CUtils.IsAdsRemoved())
         {
             RequestBanner();
-            RequestInterstitial();
         }
-
-        RequestRewardBasedVideo();
     }
+#endif
 
-    // Điểm gắn: tải banner.
     public void RequestBanner()
     {
-        print("AdmobController.RequestBanner: ads SDK not integrated.");
+#if CATGAMING_ADS && CATGAMING_ADMOB
+        if (CUtils.IsBuyItem() || CUtils.IsAdsRemoved()) return;
+        CatGamingAds.ShowBanner();
+#endif
     }
 
-    // Điểm gắn: tải interstitial.
     public void RequestInterstitial()
     {
-        print("AdmobController.RequestInterstitial: ads SDK not integrated.");
+#if CATGAMING_ADS && CATGAMING_ADMOB
+        if (Locator<AdmobService>.Instance != null) Locator<AdmobService>.Instance.LoadInterstitial();
+#endif
     }
 
-    // Điểm gắn: tải rewarded video.
     public void RequestRewardBasedVideo()
     {
-        print("AdmobController.RequestRewardBasedVideo: ads SDK not integrated.");
+#if CATGAMING_ADS && CATGAMING_ADMOB
+        if (Locator<AdmobService>.Instance != null) Locator<AdmobService>.Instance.LoadRewarded();
+#endif
     }
 
     public void ShowBanner()
     {
         if (CUtils.IsBuyItem()) return;
-        // Điểm gắn: hiển thị banner.
+#if CATGAMING_ADS && CATGAMING_ADMOB
+        if (CUtils.IsAdsRemoved()) return;
+        CatGamingAds.ShowBanner();
+#endif
     }
 
     public void HideBanner()
     {
-        // Điểm gắn: ẩn banner.
+#if CATGAMING_ADS && CATGAMING_ADMOB
+        CatGamingAds.HideBanner();
+#endif
     }
 
-    // Điểm gắn: trả về true khi interstitial được hiển thị.
+    // Trả về true khi interstitial được hiển thị.
     public bool ShowInterstitial(bool video = false)
     {
+        if (CUtils.IsBuyItem() || CUtils.IsAdsRemoved()) return false;
+#if CATGAMING_ADS && CATGAMING_ADMOB
+        return CatGamingAds.ShowInterstitial();
+#else
         return false;
+#endif
     }
 
-    // Điểm gắn: trả về true khi rewarded video đã sẵn sàng.
+    // Trả về true khi rewarded video đã sẵn sàng.
     public bool IsRewardedVideoLoaded()
     {
+#if CATGAMING_ADS && CATGAMING_ADMOB
+        return Locator<AdmobService>.Instance != null && Locator<AdmobService>.Instance.IsRewardedReady;
+#else
         return false;
+#endif
     }
 
     public void ShowRewardBasedVideo()
@@ -72,10 +100,20 @@ public class AdmobController : MonoBehaviour
         if (!IsRewardedVideoLoaded())
         {
             print("Reward based video ad is not ready yet");
+            RequestRewardBasedVideo();
+            return;
         }
+
+#if CATGAMING_ADS && CATGAMING_ADMOB
+        CatGamingAds.ShowRewarded(OnRewardedCompleted);
+#endif
     }
 
-    // SDK mới gọi hàm này trong callback nhận thưởng.
+    private void OnRewardedCompleted(bool rewarded)
+    {
+        if (rewarded) HandleRewardBasedVideoRewarded();
+    }
+
     public void HandleRewardBasedVideoRewarded()
     {
         if (onRewardedVideoRewarded != null) onRewardedVideoRewarded();
