@@ -271,7 +271,7 @@ PlayerSettings:
   useCustomGradlePropertiesTemplate: 0
   useCustomGradleSettingsTemplate: 0
   useCustomProguardFile: 0
-  AndroidTargetArchitectures: 1
+  AndroidTargetArchitectures: 2
   AndroidAllowedArchitectures: -1
   AndroidSplashScreenScale: 2
   androidSplashScreen: {fileID: 0}
@@ -962,7 +962,7 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Android: IAP;TMP_PRESENT;EASY_MOBILE_LITE;CATGAMING_CLR;CATGAMING_ADDRESSABLES;DOTWEEN
+    Android: IAP;TMP_PRESENT;EASY_MOBILE_LITE;CATGAMING_CLR;CATGAMING_ADDRESSABLES;CATGAMING_IAP;CATGAMING_ADS;CATGAMING_ADMOB;DOTWEEN
     EmbeddedLinux: DOTWEEN
     GameCoreScarlett: DOTWEEN
     GameCoreXboxOne: DOTWEEN
@@ -978,13 +978,13 @@ PlayerSettings:
     WebGL: IAP;DOTWEEN
     Windows Store Apps: IAP;EASY_MOBILE_LITE;DOTWEEN
     XboxOne: DOTWEEN
-    iPhone: IAP;NO_GPGS;EASY_MOBILE_LITE;CATGAMING_CLR;CATGAMING_ADDRESSABLES;DOTWEEN
+    iPhone: IAP;NO_GPGS;EASY_MOBILE_LITE;CATGAMING_CLR;CATGAMING_ADDRESSABLES;CATGAMING_IAP;CATGAMING_ADS;CATGAMING_ADMOB;DOTWEEN
     tvOS: IAP;DOTWEEN
   additionalCompilerArguments: {}
   platformArchitecture:
     iPhone: 1
   scriptingBackend:
-    Android: 0
+    Android: 1
     Standalone: 0
     WP8: 2
     WebGL: 1
