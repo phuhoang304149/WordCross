@@ -16,6 +16,10 @@ public class AdmobController : MonoBehaviour
     // Gọi khi người chơi xem xong rewarded video.
     public event Action onRewardedVideoRewarded;
 
+    // Chỉ true sau khi consent + MobileAds.Initialize xong; mọi request ads trước đó bị bỏ qua
+    // để AdmobService không tự Initialize sớm (trước consent/GameDatabase) và đọc ad unit ID rỗng.
+    private bool isAdsReady;
+
     private void Awake()
     {
         instance = this;
@@ -38,6 +42,7 @@ public class AdmobController : MonoBehaviour
 #if CATGAMING_ADS && CATGAMING_ADMOB
     private void OnAdsInitialized()
     {
+        isAdsReady = true;
         if (!CUtils.IsBuyItem() && !CUtils.IsAdsRemoved())
         {
             RequestBanner();
@@ -48,6 +53,7 @@ public class AdmobController : MonoBehaviour
     public void RequestBanner()
     {
 #if CATGAMING_ADS && CATGAMING_ADMOB
+        if (!isAdsReady) return;
         if (CUtils.IsBuyItem() || CUtils.IsAdsRemoved()) return;
         CatGamingAds.ShowBanner();
 #endif
@@ -56,14 +62,14 @@ public class AdmobController : MonoBehaviour
     public void RequestInterstitial()
     {
 #if CATGAMING_ADS && CATGAMING_ADMOB
-        if (Locator<AdmobService>.Instance != null) Locator<AdmobService>.Instance.LoadInterstitial();
+        if (isAdsReady && Locator<AdmobService>.Instance != null) Locator<AdmobService>.Instance.LoadInterstitial();
 #endif
     }
 
     public void RequestRewardBasedVideo()
     {
 #if CATGAMING_ADS && CATGAMING_ADMOB
-        if (Locator<AdmobService>.Instance != null) Locator<AdmobService>.Instance.LoadRewarded();
+        if (isAdsReady && Locator<AdmobService>.Instance != null) Locator<AdmobService>.Instance.LoadRewarded();
 #endif
     }
 
@@ -72,6 +78,8 @@ public class AdmobController : MonoBehaviour
         if (CUtils.IsBuyItem()) return;
 #if CATGAMING_ADS && CATGAMING_ADMOB
         if (CUtils.IsAdsRemoved()) return;
+        // Chưa init thì OnAdsInitialized sẽ tự request banner.
+        if (!isAdsReady) return;
         CatGamingAds.ShowBanner();
 #endif
     }
@@ -88,6 +96,7 @@ public class AdmobController : MonoBehaviour
     {
         if (CUtils.IsBuyItem() || CUtils.IsAdsRemoved()) return false;
 #if CATGAMING_ADS && CATGAMING_ADMOB
+        if (!isAdsReady) return false;
         return CatGamingAds.ShowInterstitial();
 #else
         return false;
@@ -98,7 +107,7 @@ public class AdmobController : MonoBehaviour
     public bool IsRewardedVideoLoaded()
     {
 #if CATGAMING_ADS && CATGAMING_ADMOB
-        return Locator<AdmobService>.Instance != null && Locator<AdmobService>.Instance.IsRewardedReady;
+        return isAdsReady && Locator<AdmobService>.Instance != null && Locator<AdmobService>.Instance.IsRewardedReady;
 #else
         return false;
 #endif
