@@ -379,7 +379,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b331ade7ebdb6ad4eb5384a72a964373, type: 2}
+    m_Font: {fileID: 12800000, guid: d7192bdb4724ef044892a51055d8c1aa, type: 2}
     m_FontSize: 28
     m_FontStyle: 1
     m_BestFit: 1
@@ -1545,7 +1545,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b331ade7ebdb6ad4eb5384a72a964373, type: 2}
+    m_Font: {fileID: 12800000, guid: d7192bdb4724ef044892a51055d8c1aa, type: 2}
     m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
@@ -1716,7 +1716,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b331ade7ebdb6ad4eb5384a72a964373, type: 2}
+    m_Font: {fileID: 12800000, guid: d7192bdb4724ef044892a51055d8c1aa, type: 2}
     m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
@@ -1887,7 +1887,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b331ade7ebdb6ad4eb5384a72a964373, type: 2}
+    m_Font: {fileID: 12800000, guid: d7192bdb4724ef044892a51055d8c1aa, type: 2}
     m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
@@ -2058,7 +2058,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b331ade7ebdb6ad4eb5384a72a964373, type: 2}
+    m_Font: {fileID: 12800000, guid: d7192bdb4724ef044892a51055d8c1aa, type: 2}
     m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
@@ -2274,7 +2274,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b331ade7ebdb6ad4eb5384a72a964373, type: 2}
+    m_Font: {fileID: 12800000, guid: d7192bdb4724ef044892a51055d8c1aa, type: 2}
     m_FontSize: 44
     m_FontStyle: 1
     m_BestFit: 0
@@ -2383,7 +2383,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b331ade7ebdb6ad4eb5384a72a964373, type: 2}
+    m_Font: {fileID: 12800000, guid: d7192bdb4724ef044892a51055d8c1aa, type: 2}
     m_FontSize: 34
     m_FontStyle: 1
     m_BestFit: 0
@@ -2608,7 +2608,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b331ade7ebdb6ad4eb5384a72a964373, type: 2}
+    m_Font: {fileID: 12800000, guid: d7192bdb4724ef044892a51055d8c1aa, type: 2}
     m_FontSize: 28
     m_FontStyle: 1
     m_BestFit: 0
