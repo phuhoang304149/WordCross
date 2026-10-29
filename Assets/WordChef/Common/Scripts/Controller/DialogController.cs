@@ -21,7 +21,8 @@ public enum DialogType
     RateGame,
     Language,
     Daily,
-    LowRuby
+    LowRuby,
+    AiSoon
 };
 
 public enum DialogShow

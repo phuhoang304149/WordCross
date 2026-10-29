@@ -13,6 +13,10 @@ public class ExtraWordDialog : Dialog
     public Text progressText;
     public Text claimText;
 
+    // Toạ độ gốc trong prefab (1 dòng mô tả, 1 dòng ghi chú); chữ dài xuống dòng thì dịch các phần tử quanh các giá trị này.
+    private const float DESC_Y = 57f, TITLE_Y = 126f, CLOSE_Y = 191f, NOTE_Y = -45f, CLAIM_Y = -120f, BG_HEIGHT = 402f, TEXT_HEIGHT = 30f;
+    private const float NOTE_WIDTH = 412f;
+
     private int numWords, claimQuantity;
     private LocalizationController Loc { get { return Locator<LocalizationController>.Instance; } }
 
@@ -23,6 +27,43 @@ public class ExtraWordDialog : Dialog
         extraProgress.current = Prefs.extraProgress;
 
         UpdateUI();
+        FitTexts();
+    }
+
+    // Mô tả và ghi chú có thể xuống dòng (fr/es/pt): ghi chú chừa chỗ cho số tiến độ bên phải, card và các phần tử kế bên giãn theo số dòng.
+    private void FitTexts()
+    {
+        Transform content = transform.Find("Content");
+        Text desc = content.Find("Text").GetComponent<Text>();
+        Transform progress = content.Find("VerticalGroup/Progress");
+        RectTransform noteRect = (RectTransform)progress.Find("Note");
+        Text note = noteRect.GetComponent<Text>();
+        noteRect.sizeDelta = new Vector2(NOTE_WIDTH, noteRect.sizeDelta.y);
+
+        float descExtra = ExtraHeight(desc);
+        float noteExtra = ExtraHeight(note);
+        Place((RectTransform)desc.transform, DESC_Y + descExtra / 2, TEXT_HEIGHT + descExtra);
+        Place(noteRect, NOTE_Y - noteExtra / 2, TEXT_HEIGHT + noteExtra);
+        Place((RectTransform)content.Find("Title"), TITLE_Y + descExtra, -1f);
+        Place((RectTransform)content.Find("CloseButton"), CLOSE_Y + descExtra, -1f);
+        Place((RectTransform)content.Find("VerticalGroup/Claim"), CLAIM_Y - noteExtra, -1f);
+        Place((RectTransform)content.Find("BG"), (descExtra - noteExtra) / 2, BG_HEIGHT + descExtra + noteExtra);
+    }
+
+    // Chiều cao thêm so với một dòng.
+    private float ExtraHeight(Text text)
+    {
+        TextGenerator generator = text.cachedTextGeneratorForLayout;
+        generator.Populate(text.text, text.GetGenerationSettings(new Vector2(text.rectTransform.rect.width, 0f)));
+        int lines = Mathf.Max(1, generator.lineCount);
+        return text.preferredHeight / lines * (lines - 1);
+    }
+
+    // height < 0: giữ nguyên chiều cao.
+    private void Place(RectTransform rt, float y, float height)
+    {
+        rt.anchoredPosition = new Vector2(rt.anchoredPosition.x, y);
+        if (height >= 0f) rt.sizeDelta = new Vector2(rt.sizeDelta.x, height);
     }
 
     public void Claim()
