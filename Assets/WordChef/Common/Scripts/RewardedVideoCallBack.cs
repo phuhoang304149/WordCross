@@ -17,9 +17,20 @@ public class RewardedVideoCallBack : MonoBehaviour {
     private const string ACTION_NAME = "rewarded_video";
     public void HandleRewardBasedVideoRewarded()
     {
-        var dialog = (RewardedVideoDialog)DialogController.instance.GetDialog(DialogType.RewardedVideo);
-        dialog.SetAmount(ConfigController.Config.rewardedVideoAmount);
-        DialogController.instance.ShowDialog(dialog);
+        // Dialog xác nhận đang chờ video thì chuyển sang Success tại chỗ, không mở dialog thứ hai.
+        var open = FindFirstObjectByType<RewardedVideoDialog>();
+        if (open != null && open.State == RewardedVideoState.Playing)
+        {
+            open.SetAmount(ConfigController.Config.rewardedVideoAmount);
+            open.ShowSuccess();
+        }
+        else
+        {
+            var dialog = (RewardedVideoDialog)DialogController.instance.GetDialog(DialogType.RewardedVideo);
+            dialog.SetAmount(ConfigController.Config.rewardedVideoAmount);
+            dialog.ShowSuccess();
+            DialogController.instance.ShowDialog(dialog);
+        }
 
         CUtils.SetActionTime(ACTION_NAME);
     }

@@ -34,9 +34,22 @@ public class RewardedButton : MonoBehaviour
 #endif
     }
 
+    private void OnEnable()
+    {
+        if (!isEventAttached) return;
+        if (!IsAvailableToShow() && IsAdAvailable() && !IsActionAvailable())
+        {
+            content.SetActive(false);
+            // Coroutine của TimerText đã chết khi Shop bị ẩn; Stop để Run() chạy lại.
+            if (timerText != null) timerText.Stop();
+            ShowTimerText((int)(ConfigController.Config.rewardedVideoPeriod - CUtils.GetActionDeltaTime(ACTION_NAME)));
+        }
+    }
+
     private void AddEvents()
     {
         AdmobController.instance.onRewardedVideoRewarded += HandleRewardBasedVideoRewarded;
+        isEventAttached = true;
     }
 
     private void IUpdate()
@@ -44,10 +57,13 @@ public class RewardedButton : MonoBehaviour
         content.SetActive(IsAvailableToShow());
     }
 
+    // Mở popup xác nhận (design: rewarded-video ready); popup tự xử lý loading/cooldown/nofill/offline và phát video.
     public void OnClick()
     {
-        AdmobController.instance.ShowRewardBasedVideo();
         Sound.instance.PlayButton();
+        var dialog = (RewardedVideoDialog)DialogController.instance.GetDialog(DialogType.RewardedVideo);
+        dialog.SetAmount(ConfigController.Config.rewardedVideoAmount);
+        DialogController.instance.ShowDialog(dialog, DialogShow.STACK);
     }
 
     private void ShowTimerText(int time)
@@ -62,6 +78,8 @@ public class RewardedButton : MonoBehaviour
 
     public void HandleRewardBasedVideoRewarded()
     {
+        // Shop bị ẩn dưới popup (STACK): coroutine TimerText không chạy được trên object tắt; OnEnable dựng lại khi hiện.
+        if (!isActiveAndEnabled) return;
         content.SetActive(false);
         ShowTimerText(ConfigController.Config.rewardedVideoPeriod);
     }
