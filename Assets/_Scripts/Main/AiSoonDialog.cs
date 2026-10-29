@@ -49,6 +49,12 @@ public class AiSoonDialog : Dialog {
         Refresh();
     }
 
+    public void OnCloseClick()
+    {
+        Sound.instance.PlayButton();
+        Close();
+    }
+
     // Nút "Đấu Bot": Bot chưa có màn riêng nên đóng popup và báo như nút Bot ở Home.
     public void OnBotClick()
     {

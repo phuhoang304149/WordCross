@@ -1032,8 +1032,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114990841052220570}
-        m_TargetAssemblyTypeName: LowRubyDialog, WordCross.Gameplay.HotUpdate
-        m_MethodName: OnSkipClick
+        m_TargetAssemblyTypeName: AiSoonDialog, WordCross.Gameplay.HotUpdate
+        m_MethodName: OnCloseClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
