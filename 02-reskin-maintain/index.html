@@ -387,15 +387,15 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T101",
       "title": "Hoàn thiện l10n: World {n}/swipe SelectWorld, toast coming soon, chuỗi EN cứng còn lại, cập nhật khi đổi ngôn ngữ",
-      "type": "ui",
-      "status": "doing",
+      "type": "runtime",
+      "status": "done",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
       "goal": "Mọi chuỗi UI của các màn đã reskin qua hệ l10n",
       "scope": "SelectWorld.unity, HomeController (toast), LocalizationData, text cứng trong prefab/script",
       "owner": "CLAUDE",
       "deps": "T040",
       "criteria": "Đổi ngôn ngữ → toàn bộ UI các màn đã reskin đổi; liệt kê chuỗi còn EN ngoài design",
-      "evidence": "Commits 65aa18f, 800396c, 568b683, cc3c0b5; merge 76b8292. Batch 0 error CS; LocalizationData 289 key × 5 ngôn ngữ, mọi key LocalizedText có; mô phỏng 6 trang SelectWorld 5 ngôn ngữ (\"Monde 3\", \"balayez pour changer\").",
+      "evidence": "Commits 65aa18f, 800396c, 568b683, cc3c0b5; merge 76b8292. Batch 0 error CS; LocalizationData 289 key × 5 ngôn ngữ, mọi key LocalizedText có; mô phỏng 6 trang SelectWorld 5 ngôn ngữ (\"Monde 3\", \"balayez pour changer\"). | [2026-10-30] Sửa FAIL QA: WordRegion nghe onLanguageChanged, dựng lại coach + wrap (06e6a8a). Máy: Pause→NGÔN NGỮ vi/fr/es/pt/en coach đổi ngay, es/pt 3 dòng trong khung; OTA thật vi→fr đúng (t101-final-main-*). OTA 1.0.0 CLR c97c5a77 (curl khớp) + AA catalog 54f5b573, 9/9 sha256, cold start 540 asset 4,73s; merge 7f016c7.",
       "note": "[2026-10-30 00:45 (GMT+7)] Dev Sonnet đang làm (worktree l10n-gaps); không sửa logic WinDialog/Rewarded/Extra (luồng T098).\n[2026-10-30 02:05 (GMT+7)] CODE XONG, CHƯA XÁC MINH thiết bị: LocalizedText cho World {n}/swipe (6 trang), toast Daily/Bot/AI (key mới), shop.success, common.deviceOnly, noti.toast/noti.letterTitle/letter/rubyTitle/ruby; cập nhật khi onLanguageChanged (SelectLevel title, WorldItem, gói ruby Shop). 10 key mới ×5 ngôn ngữ CẦN NGƯỜI RÀ DỊCH: home.toast.daily/bot/ai, common.deviceOnly, shop.success, noti.toast, noti.letterTitle, noti.letter ({c}), noti.rubyTitle, noti.ruby. Không đổi: text prefab EN đã bị script ghi đè bằng Loc.Get; Promote dialogs không tồn tại. Notification chọn ngôn ngữ UI lúc lên lịch. Cần OTA CLR+AA.\n[2026-10-30 QA sweep] FAIL: Khung coach vàng trong Main ('Vuốt qua các chữ để ghép từ…') KHÔNG đổi khi đổi ngôn ngữ từ Pause→Ngôn ngữ giữa level (qa-sweep-main-fr.png: tiêu đề/nút FR nhưng coach vẫn VI); WordRegion.cs:153 dựng chuỗi 1 lần lúc nạp level, không cập nhật trong UpdateLevelTexts. Tái hiện: vào level 1 → Pause → NGÔN NGỮ → Français → Back"
     },
     {
@@ -1647,7 +1647,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T098",
       "title": "Sửa lỗi luồng thưởng/quảng cáo (QA review): x2 đóng WinDialog (CAO), nút x2 kẹt, ruby video mất khi đóng sớm, Thử lại ra NoFill, double-tap NEXT, ExtraWord ruby mất khi đóng",
-      "type": "code",
+      "type": "runtime",
       "status": "done",
       "screen": "Popup trong Game",
       "goal": "Luồng Win/Rewarded/Extra không mất thưởng, không mất NEXT/MENU",
@@ -1655,7 +1655,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "T045, T081, T029",
       "criteria": "Mô phỏng batch từng kịch bản; QA thiết bị sau OTA",
-      "evidence": ".git/task-hotupdate/qa-review1-report.md (QA review code tĩnh HEAD 5919b0a) | Commits 119da0c (RewardedVideoCallBack/Dialog), 88d7612 (WinDialog), 99a0697 (ExtraWordDialog/RubyFly); merge 7714e61 (conflict WinDialog.cs với c9c4e3c giải quyết giữ cả hai; compile 0 lỗi). Mô phỏng play mode trước/sau từng lỗi.",
+      "evidence": ".git/task-hotupdate/qa-review1-report.md (QA review code tĩnh HEAD 5919b0a) | Commits 119da0c (RewardedVideoCallBack/Dialog), 88d7612 (WinDialog), 99a0697 (ExtraWordDialog/RubyFly); merge 7714e61 (conflict WinDialog.cs với c9c4e3c giải quyết giữ cả hai; compile 0 lỗi). Mô phỏng play mode trước/sau từng lỗi. | [2026-10-30] Phát hiện + sửa: nút x2 WinDialog không bao giờ nhận chạm (Image DoubleReward m_RaycastTarget 0→1, 4acf594). Quảng cáo giả GAME_DEBUG ;ad=reward|close|fail|nofill (bcacaf5). (a) x2 bấm 2 lần ruby 10→13 đúng 1 lần, Win không đóng; (b) đóng sớm 10→10, x2 bật lại; (c) lỗi→TRY AGAIN, xem xong 10→12; (d) NEXT 2 lần chỉ 1 [Scene] load Main. Ảnh qa-shots/t098-*. OTA 1.0.0 CLR c97c5a77 (curl khớp) + AA catalog 54f5b573, 9/9 sha256, cold start 540 asset 4,73s; merge 7f016c7.",
       "note": "[2026-10-30 00:10 (GMT+7)] QA review tĩnh: 1 lỗi Cao (#1 x2 đóng WinDialog, độ chắc chắn ~85%, chưa chạy thật) + #2–#6 TB + thấp. Dev Sonnet đang xác minh từng lỗi bằng code rồi sửa (worktree fix-reward-flow).\n[2026-10-30 01:35 (GMT+7)] CODE XONG, CHƯA XÁC MINH thiết bị: cả 6 lỗi + thấp đều ĐÚNG và đã sửa — #1 CallBack mở Success bằng STACK (WinDialog còn sống; OnEnable dựng lại InvokeRepeating; Show() không bật interstitial lần hiện lại), #2 WinDialog nghe Closed/Failed + bỏ timeout 120s, #3 ruby video cộng ngay trong callback (dialog không cộng; tutorial tổng 6 = 3+2+1), #4 Watch() đặt lại loadStart + RequestRewardBasedVideo, #5 cờ navigating (double-tap 2→1 LoadScene), #6 Claim() cộng ngay, ClaimEffect trên MonoUtils + yield break khi thiếu tag; Playing quá 180s → Error; Escape RewardedVideoDialog (Update che Update của Dialog — bug thật); WinDialog ghi unlocked + Save trước khi cộng ruby. Không đổi số thưởng. Hạn chế: quảng cáo editor là stub. QA nên kiểm trên máy: x2 giữ NEXT/MENU, đóng video sớm mở khoá x2, Escape, kill app khi Success. OTA CLR (5 file), không cần AA.\n[2026-10-30 QA sweep] BLOCKED: Các kịch bản x2 đóng WinDialog / ruby video mất khi đóng sớm / Thử lại cần quảng cáo rewarded fill thật (hoặc DebugOpener rewarded:* trên bản GAME_DEBUG) — chưa kiểm được trên bản release → kiểm lại bằng preview GAME_DEBUG rewarded:* hoặc khi có quảng cáo thật (T007)."
     },
     {
