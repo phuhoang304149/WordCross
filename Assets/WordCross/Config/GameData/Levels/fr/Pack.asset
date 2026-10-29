@@ -646,309 +646,309 @@ MonoBehaviour:
   - world: 1
     subWorld: 1
     level: 3
+    word: chute
+    answers: et|ce|eu|tu|te|cet|eut|chute|
+    validWords: et|ce|eu|tu|te|cet|eut|chute
+  - world: 1
+    subWorld: 1
+    level: 4
     word: frais
     answers: sa|si|ai|air|ira|ris|fais|frais|
     validWords: sa|si|ai|air|ira|ris|fais|frais
   - world: 1
     subWorld: 1
-    level: 4
+    level: 5
     word: table
     answers: la|le|et|te|tel|bel|bat|table|
     validWords: la|le|et|te|tel|bel|bat|table
   - world: 1
     subWorld: 1
-    level: 5
+    level: 6
     word: "donn\xE9"
     answers: "on|n\xE9|non|don|donn\xE9|"
     validWords: "on|n\xE9|non|don|donn\xE9"
   - world: 1
     subWorld: 1
-    level: 6
+    level: 7
     word: venir
     answers: en|ne|ni|vie|vin|nie|rien|nier|venir|
     validWords: en|ne|ni|vie|vin|nie|rien|nier|venir
   - world: 1
     subWorld: 1
-    level: 7
+    level: 8
     word: avons
     answers: on|sa|va|an|son|ans|nos|vos|avons|
     validWords: on|sa|va|an|son|ans|nos|vos|avons
   - world: 1
     subWorld: 1
-    level: 8
+    level: 9
     word: aucun
     answers: un|au|an|nu|aucun|
     validWords: un|au|an|nu|aucun
   - world: 1
     subWorld: 1
-    level: 9
+    level: 10
     word: "\xE9tant"
     answers: "an|n\xE9|tant|\xE9tat|\xE9tant|"
     validWords: "an|n\xE9|tant|\xE9tat|\xE9tant"
   - world: 1
     subWorld: 1
-    level: 10
+    level: 11
     word: cours
     answers: ou|or|su|sur|cru|cou|cour|crus|cours|
     validWords: ou|or|su|sur|cru|cou|cour|crus|cours
   - world: 1
     subWorld: 1
-    level: 11
+    level: 12
     word: peine
     answers: en|ne|ni|nie|peine|
     validWords: en|ne|ni|nie|peine
   - world: 1
     subWorld: 1
-    level: 12
+    level: 13
     word: passe
     answers: se|sa|pas|ses|passe|
     validWords: se|sa|pas|ses|passe
   - world: 1
     subWorld: 1
-    level: 13
+    level: 14
     word: carte
     answers: et|ce|te|cet|car|art|acte|carte|trace|
     validWords: et|ce|te|cet|car|art|acte|carte|trace
   - world: 1
     subWorld: 1
-    level: 14
+    level: 15
     word: ville
     answers: le|il|vie|lie|ville|
     validWords: le|il|vie|lie|ville
   - world: 1
     subWorld: 1
-    level: 15
+    level: 16
     word: avoir
     answers: va|or|ai|via|roi|air|ira|voir|vrai|avoir|
     validWords: va|or|ai|via|roi|air|ira|voir|vrai|avoir
   - world: 1
     subWorld: 1
-    level: 16
+    level: 17
     word: court
     answers: ou|or|tu|cru|cou|tour|cour|trou|truc|court|
     validWords: ou|or|tu|cru|cou|tour|cour|trou|truc|court
   - world: 1
-    subWorld: 1
-    level: 17
+    subWorld: 2
+    level: 0
     word: style
     answers: le|et|se|te|les|est|tel|sel|tels|style|
     validWords: le|et|se|te|les|est|tel|sel|tels|style
   - world: 1
     subWorld: 2
-    level: 0
+    level: 1
     word: reste
     answers: et|se|te|est|sert|reste|
     validWords: et|se|te|est|sert|reste
   - world: 1
     subWorld: 2
-    level: 1
+    level: 2
     word: "ann\xE9e"
     answers: "en|ne|an|n\xE9|n\xE9e|ann\xE9e|"
     validWords: "en|ne|an|n\xE9|n\xE9e|ann\xE9e"
   - world: 1
     subWorld: 2
-    level: 2
+    level: 3
     word: temps
     answers: et|se|me|te|est|met|mes|sept|mets|temps|
     validWords: et|se|me|te|est|met|mes|sept|mets|temps
   - world: 1
     subWorld: 2
-    level: 3
+    level: 4
     word: "dur\xE9e"
     answers: "de|du|eu|rue|dur|due|dure|rude|dur\xE9|dur\xE9e|"
     validWords: "de|du|eu|rue|dur|due|dure|rude|dur\xE9|dur\xE9e"
   - world: 1
     subWorld: 2
-    level: 4
+    level: 5
     word: sorte
     answers: et|se|or|te|est|ose|sort|sert|rose|sorte|
     validWords: et|se|or|te|est|ose|sort|sert|rose|sorte
   - world: 1
     subWorld: 2
-    level: 5
+    level: 6
     word: avait
     answers: va|ai|via|ait|vit|avait|
     validWords: va|ai|via|ait|vit|avait
   - world: 1
     subWorld: 2
-    level: 6
+    level: 7
     word: titre
     answers: et|te|tri|tir|tire|titre|
     validWords: et|te|tri|tir|tire|titre
   - world: 1
     subWorld: 2
-    level: 7
+    level: 8
     word: avril
     answers: la|il|va|ai|via|air|ira|vrai|rail|avril|
     validWords: la|il|va|ai|via|air|ira|vrai|rail|avril
   - world: 1
     subWorld: 2
-    level: 8
+    level: 9
     word: femme
     answers: me|femme|
     validWords: me|femme
   - world: 1
     subWorld: 2
-    level: 9
+    level: 10
     word: bonne
     answers: en|ne|on|non|bon|bonne|
     validWords: en|ne|on|non|bon|bonne
   - world: 1
     subWorld: 2
-    level: 10
+    level: 11
     word: monde
     answers: de|en|ne|on|me|nom|mon|don|mode|monde|
     validWords: de|en|ne|on|me|nom|mon|don|mode|monde
   - world: 1
     subWorld: 2
-    level: 11
+    level: 12
     word: celui
     answers: le|ce|il|eu|lu|lui|lie|lieu|ciel|celui|
     validWords: le|ce|il|eu|lu|lui|lie|lieu|ciel|celui
   - world: 1
     subWorld: 2
-    level: 12
+    level: 13
     word: connu
     answers: un|ou|on|nu|non|cou|connu|
     validWords: un|ou|on|nu|non|cou|connu
   - world: 1
     subWorld: 2
-    level: 13
+    level: 14
     word: enfin
     answers: en|ne|ni|fin|nie|fine|enfin|
     validWords: en|ne|ni|fin|nie|fine|enfin
   - world: 1
     subWorld: 2
-    level: 14
+    level: 15
     word: donne
     answers: de|en|ne|on|non|don|donne|
     validWords: de|en|ne|on|non|don|donne
   - world: 1
     subWorld: 2
-    level: 15
+    level: 16
     word: terme
     answers: et|me|te|met|mer|terme|remet|
     validWords: et|me|te|met|mer|terme|remet
   - world: 1
     subWorld: 2
-    level: 16
+    level: 17
     word: autre
     answers: et|au|eu|tu|te|rue|art|eau|eut|tuer|autre|
     validWords: et|au|eu|tu|te|rue|art|eau|eut|tuer|autre
   - world: 1
-    subWorld: 2
-    level: 17
+    subWorld: 3
+    level: 0
     word: jouer
     answers: ou|je|eu|or|rue|jeu|jour|joue|euro|roue|jouer|
     validWords: ou|je|eu|or|rue|jeu|jour|joue|euro|roue|jouer
   - world: 1
     subWorld: 3
-    level: 0
+    level: 1
     word: plein
     answers: le|en|ne|il|ni|lin|lie|nie|lien|pile|plein|
     validWords: le|en|ne|il|ni|lin|lie|nie|lien|pile|plein
   - world: 1
     subWorld: 3
-    level: 1
+    level: 2
     word: porte
     answers: et|or|te|top|pot|pro|trop|port|opte|porte|opter|
     validWords: et|or|te|top|pot|pro|trop|port|opte|porte|opter
   - world: 1
     subWorld: 3
-    level: 2
+    level: 3
     word: vente
     answers: et|en|ne|te|net|vent|vente|
     validWords: et|en|ne|te|net|vent|vente
   - world: 1
     subWorld: 3
-    level: 3
+    level: 4
     word: parmi
     answers: ma|ai|par|mai|ami|air|ira|mari|pari|pair|parmi|
     validWords: ma|ai|par|mai|ami|air|ira|mari|pari|pair|parmi
   - world: 1
     subWorld: 3
-    level: 4
+    level: 5
     word: doute
     answers: de|et|du|ou|eu|tu|te|due|duo|eut|doute|
     validWords: de|et|du|ou|eu|tu|te|due|duo|eut|doute
   - world: 1
     subWorld: 3
-    level: 5
+    level: 6
     word: texte
     answers: et|te|texte|
     validWords: et|te|texte
   - world: 1
     subWorld: 3
-    level: 6
+    level: 7
     word: effet
     answers: et|te|effet|
     validWords: et|te|effet
   - world: 1
     subWorld: 3
-    level: 7
+    level: 8
     word: entre
     answers: et|en|ne|te|net|entre|rente|
     validWords: et|en|ne|te|net|entre|rente
   - world: 1
     subWorld: 3
-    level: 8
+    level: 9
     word: terre
     answers: et|te|terre|
     validWords: et|te|terre
   - world: 1
     subWorld: 3
-    level: 9
+    level: 10
     word: celle
     answers: le|ce|elle|celle|
     validWords: le|ce|elle|celle
   - world: 1
     subWorld: 3
-    level: 10
+    level: 11
     word: salle
     answers: la|le|se|sa|les|sel|sale|salle|
     validWords: la|le|se|sa|les|sel|sale|salle
   - world: 1
     subWorld: 3
-    level: 11
+    level: 12
     word: notre
     answers: et|en|ne|on|or|te|ont|net|ton|note|notre|noter|
     validWords: et|en|ne|on|or|te|ont|net|ton|note|notre|noter
   - world: 1
     subWorld: 3
-    level: 12
+    level: 13
     word: selon
     answers: le|en|ne|se|on|les|son|nos|sol|sel|ose|selon|
     validWords: le|en|ne|se|on|les|son|nos|sol|sel|ose|selon
   - world: 1
     subWorld: 3
-    level: 13
+    level: 14
     word: tiers
     answers: et|se|si|te|est|tri|tir|ris|site|sert|tire|tiers|
     validWords: et|se|si|te|est|tri|tir|ris|site|sert|tire|tiers
   - world: 1
     subWorld: 3
-    level: 14
+    level: 15
     word: ainsi
     answers: sa|si|an|ni|ai|ans|sain|ainsi|
     validWords: sa|si|an|ni|ai|ans|sain|ainsi
   - world: 1
     subWorld: 3
-    level: 15
+    level: 16
     word: parti
     answers: ai|par|ait|art|air|ira|tri|tir|part|pari|pair|parti|
     validWords: ai|par|ait|art|air|ira|tri|tir|part|pari|pair|parti
   - world: 1
     subWorld: 3
-    level: 16
+    level: 17
     word: ligne
     answers: le|en|ne|il|ni|lin|gel|lie|nie|lien|ligne|linge|
     validWords: le|en|ne|il|ni|lin|gel|lie|nie|lien|ligne|linge
-  - world: 1
-    subWorld: 3
-    level: 17
-    word: coeur
-    answers: ce|ou|eu|or|rue|cru|cou|euro|cour|cure|roue|coeur|
-    validWords: ce|ou|eu|or|rue|cru|cou|euro|cour|cure|roue|coeur
   - world: 1
     subWorld: 4
     level: 0
@@ -1192,765 +1192,765 @@ MonoBehaviour:
   - world: 2
     subWorld: 1
     level: 4
+    word: "achet\xE9"
+    answers: "et|ce|te|cet|th\xE9|acte|chat|tache|achet\xE9|"
+    validWords: "et|ce|te|cet|th\xE9|acte|chat|tache|achet\xE9"
+  - world: 2
+    subWorld: 1
+    level: 5
     word: rachat
     answers: car|art|chat|achat|rachat|
     validWords: car|art|chat|achat|rachat
   - world: 2
     subWorld: 1
-    level: 5
+    level: 6
     word: "r\xE9gion"
     answers: "on|ni|n\xE9|or|roi|gr\xE9|noir|giron|r\xE9gion|"
     validWords: "on|ni|n\xE9|or|roi|gr\xE9|noir|giron|r\xE9gion"
   - world: 2
     subWorld: 1
-    level: 6
+    level: 7
     word: faudra
     answers: du|au|dur|aura|faudra|
     validWords: du|au|dur|aura|faudra
   - world: 2
     subWorld: 1
-    level: 7
+    level: 8
     word: vendre
     answers: de|en|ne|rend|vend|vendre|
     validWords: de|en|ne|rend|vend|vendre
   - world: 2
     subWorld: 1
-    level: 8
+    level: 9
     word: "cr\xE9dit"
     answers: "dit|tri|tir|cri|cit\xE9|tir\xE9|\xE9crit|r\xE9cit|cr\xE9dit|d\xE9crit|"
     validWords: "dit|tri|tir|cri|cit\xE9|tir\xE9|\xE9crit|r\xE9cit|cr\xE9dit|d\xE9crit"
   - world: 2
     subWorld: 1
-    level: 9
+    level: 10
     word: grands
     answers: sa|an|ans|dans|sang|rang|gras|grand|rangs|grands|
     validWords: sa|an|ans|dans|sang|rang|gras|grand|rangs|grands
   - world: 2
     subWorld: 1
-    level: 10
+    level: 11
     word: penser
     answers: en|ne|se|pense|peser|penser|
     validWords: en|ne|se|pense|peser|penser
   - world: 2
     subWorld: 1
-    level: 11
+    level: 12
     word: "r\xE9duit"
     answers: "du|tu|dit|dur|tri|tir|tu\xE9|tir\xE9|dur\xE9|r\xE9duit|"
     validWords: "du|tu|dit|dur|tri|tir|tu\xE9|tir\xE9|dur\xE9|r\xE9duit"
   - world: 2
     subWorld: 1
-    level: 12
+    level: 13
     word: encore
     answers: en|ne|ce|on|or|encore|
     validWords: en|ne|ce|on|or|encore
   - world: 2
     subWorld: 1
-    level: 13
+    level: 14
     word: parler
     answers: la|le|par|rare|parle|parler|
     validWords: la|le|par|rare|parle|parler
   - world: 2
     subWorld: 1
-    level: 14
+    level: 15
     word: durant
     answers: un|du|au|an|tu|nu|dur|art|tard|durant|
     validWords: un|du|au|an|tu|nu|dur|art|tard|durant
   - world: 2
     subWorld: 1
-    level: 15
+    level: 16
     word: "num\xE9ro"
     answers: "un|ou|on|n\xE9|or|nu|nom|mon|mur|num\xE9ro|"
     validWords: "un|ou|on|n\xE9|or|nu|nom|mon|mur|num\xE9ro"
   - world: 2
     subWorld: 1
-    level: 16
+    level: 17
     word: croire
     answers: ce|or|roi|cri|rire|croire|
     validWords: ce|or|roi|cri|rire|croire
   - world: 2
-    subWorld: 1
-    level: 17
+    subWorld: 2
+    level: 0
     word: hommes
     answers: se|me|mes|ose|homme|somme|hommes|
     validWords: se|me|mes|ose|homme|somme|hommes
   - world: 2
     subWorld: 2
-    level: 0
+    level: 1
     word: faible
     answers: la|le|il|ai|fil|bel|lie|bail|file|faible|fiable|
     validWords: la|le|il|ai|fil|bel|lie|bail|file|faible|fiable
   - world: 2
     subWorld: 2
-    level: 1
+    level: 2
     word: marque
     answers: au|me|eu|ma|que|rue|mer|eau|mur|arme|marque|
     validWords: au|me|eu|ma|que|rue|mer|eau|mur|arme|marque
   - world: 2
     subWorld: 2
-    level: 2
+    level: 3
     word: guerre
     answers: eu|rue|guerre|
     validWords: eu|rue|guerre
   - world: 2
     subWorld: 2
-    level: 3
+    level: 4
     word: "r\xE9seau"
     answers: "au|se|sa|eu|su|sur|rue|eau|sera|rues|r\xE9seau|"
     validWords: "au|se|sa|eu|su|sur|rue|eau|sera|rues|r\xE9seau"
   - world: 2
     subWorld: 2
-    level: 4
+    level: 5
     word: chemin
     answers: en|ne|ce|me|ni|nie|mine|niche|chien|mince|chemin|
     validWords: en|ne|ce|me|ni|nie|mine|niche|chien|mince|chemin
   - world: 2
     subWorld: 2
-    level: 5
+    level: 6
     word: "cin\xE9ma"
     answers: "an|ni|ma|n\xE9|ai|mai|ami|main|aim\xE9|anim\xE9|cin\xE9ma|"
     validWords: "an|ni|ma|n\xE9|ai|mai|ami|main|aim\xE9|anim\xE9|cin\xE9ma"
   - world: 2
     subWorld: 2
-    level: 6
+    level: 7
     word: budget
     answers: de|et|du|eu|tu|te|but|due|eut|tube|budget|
     validWords: de|et|du|eu|tu|te|but|due|eut|tube|budget
   - world: 2
     subWorld: 2
-    level: 7
+    level: 8
     word: "d\xE9cid\xE9"
     answers: "c\xE9d\xE9|d\xE9di\xE9|d\xE9cid\xE9|"
     validWords: "c\xE9d\xE9|d\xE9di\xE9|d\xE9cid\xE9"
   - world: 2
     subWorld: 2
-    level: 8
+    level: 9
     word: "r\xE9ussi"
     answers: "si|su|sur|ris|suis|issu|r\xE9ussi|"
     validWords: "si|su|sur|ris|suis|issu|r\xE9ussi"
   - world: 2
     subWorld: 2
-    level: 9
+    level: 10
     word: perdre
     answers: de|perd|perdre|
     validWords: de|perd|perdre
   - world: 2
     subWorld: 2
-    level: 10
+    level: 11
     word: acquis
     answers: au|sa|si|ai|su|qui|cas|sac|quai|quasi|acquis|
     validWords: au|sa|si|ai|su|qui|cas|sac|quai|quasi|acquis
   - world: 2
     subWorld: 2
-    level: 11
+    level: 12
     word: regard
     answers: de|rare|gare|rage|garde|regard|garder|
     validWords: de|rare|gare|rage|garde|regard|garder
   - world: 2
     subWorld: 2
-    level: 12
+    level: 13
     word: "\xE9lev\xE9s"
     answers: "le|se|les|sel|lev\xE9|\xE9lev\xE9|\xE9lev\xE9s|"
     validWords: "le|se|les|sel|lev\xE9|\xE9lev\xE9|\xE9lev\xE9s"
   - world: 2
     subWorld: 2
-    level: 13
+    level: 14
     word: volume
     answers: le|ou|me|eu|vu|lu|vue|vol|loue|vole|volume|
     validWords: le|ou|me|eu|vu|lu|vue|vol|loue|vole|volume
   - world: 2
     subWorld: 2
-    level: 14
+    level: 15
     word: bureau
     answers: au|eu|rue|eau|bar|beau|bureau|
     validWords: au|eu|rue|eau|bar|beau|bureau
   - world: 2
     subWorld: 2
-    level: 15
+    level: 16
     word: "\xE9viter"
     answers: "et|te|vie|vit|tri|tir|vite|vert|tire|tir\xE9|\xE9vite|\xE9viter|"
     validWords: "et|te|vie|vit|tri|tir|vite|vert|tire|tir\xE9|\xE9vite|\xE9viter"
   - world: 2
     subWorld: 2
-    level: 16
+    level: 17
     word: grande
     answers: de|en|ne|an|rend|rang|gare|rage|grand|garde|grande|danger|
     validWords: de|en|ne|an|rend|rang|gare|rage|grand|garde|grande|danger
   - world: 2
-    subWorld: 2
-    level: 17
+    subWorld: 3
+    level: 0
     word: presse
     answers: se|ses|peser|presse|
     validWords: se|ses|peser|presse
   - world: 2
     subWorld: 3
-    level: 0
+    level: 1
     word: totale
     answers: la|le|et|te|tel|lot|total|totale|
     validWords: la|le|et|te|tel|lot|total|totale
   - world: 2
     subWorld: 3
-    level: 1
+    level: 2
     word: hausse
     answers: au|se|sa|eu|su|ses|eau|hausse|
     validWords: au|se|sa|eu|su|ses|eau|hausse
   - world: 2
     subWorld: 3
-    level: 2
+    level: 3
     word: suffit
     answers: si|su|tu|fut|fit|suit|suffi|suffit|
     validWords: si|su|tu|fut|fit|suit|suffi|suffit
   - world: 2
     subWorld: 3
-    level: 3
+    level: 4
     word: ancien
     answers: en|ne|ce|an|ni|ai|nie|ancien|
     validWords: en|ne|ce|an|ni|ai|nie|ancien
   - world: 2
     subWorld: 3
-    level: 4
+    level: 5
     word: climat
     answers: la|il|ma|ai|mal|mai|ait|lit|ami|lac|lait|climat|
     validWords: la|il|ma|ai|mal|mai|ait|lit|ami|lac|lait|climat
   - world: 2
     subWorld: 3
-    level: 5
+    level: 6
     word: "m\xE9tier"
     answers: "et|me|te|met|mer|tri|tir|tire|tir\xE9|\xE9met|m\xE9tier|m\xE9rite|"
     validWords: "et|me|te|met|mer|tri|tir|tire|tir\xE9|\xE9met|m\xE9tier|m\xE9rite"
   - world: 2
     subWorld: 3
-    level: 6
+    level: 7
     word: semble
     answers: le|se|me|les|mes|bel|sel|semble|
     validWords: le|se|me|les|mes|bel|sel|semble
   - world: 2
     subWorld: 3
-    level: 7
+    level: 8
     word: existe
     answers: et|se|si|te|est|six|site|existe|
     validWords: et|se|si|te|est|six|site|existe
   - world: 2
     subWorld: 3
-    level: 8
+    level: 9
     word: risque
     answers: se|si|eu|su|que|qui|sur|rue|ris|rues|risque|requis|
     validWords: se|si|eu|su|que|qui|sur|rue|ris|rues|risque|requis
   - world: 2
     subWorld: 3
-    level: 9
+    level: 10
     word: petite
     answers: et|te|petit|petite|
     validWords: et|te|petit|petite
   - world: 2
     subWorld: 3
-    level: 10
+    level: 11
     word: heures
     answers: se|eu|su|sur|rue|rues|heure|heures|
     validWords: se|eu|su|sur|rue|rues|heure|heures
   - world: 2
     subWorld: 3
-    level: 11
+    level: 12
     word: belges
     answers: le|se|les|bel|sel|gel|belge|belges|
     validWords: le|se|les|bel|sel|gel|belge|belges
   - world: 2
     subWorld: 3
-    level: 12
+    level: 13
     word: commun
     answers: un|ou|on|nu|nom|mon|cou|commun|
     validWords: un|ou|on|nu|nom|mon|cou|commun
   - world: 2
     subWorld: 3
-    level: 13
+    level: 14
     word: banque
     answers: en|un|au|ne|an|eu|nu|une|que|eau|beau|banque|
     validWords: en|un|au|ne|an|eu|nu|une|que|eau|beau|banque
   - world: 2
     subWorld: 3
-    level: 14
+    level: 15
     word: propos
     answers: or|pop|pro|propos|
     validWords: or|pop|pro|propos
   - world: 2
     subWorld: 3
-    level: 15
+    level: 16
     word: coupon
     answers: un|ou|on|pu|nu|cou|coup|coupon|
     validWords: un|ou|on|pu|nu|cou|coup|coupon
   - world: 2
     subWorld: 3
-    level: 16
+    level: 17
     word: propre
     answers: or|pop|pro|propre|
     validWords: or|pop|pro|propre
   - world: 2
-    subWorld: 3
-    level: 17
+    subWorld: 4
+    level: 0
     word: faveur
     answers: au|va|eu|vu|vue|rue|feu|fer|eau|fera|revu|veau|faveur|
     validWords: au|va|eu|vu|vue|rue|feu|fer|eau|fera|revu|veau|faveur
   - world: 2
     subWorld: 4
-    level: 0
+    level: 1
     word: permet
     answers: et|me|te|met|mer|terme|perte|remet|permet|
     validWords: et|me|te|met|mer|terme|perte|remet|permet
   - world: 2
     subWorld: 4
-    level: 1
+    level: 2
     word: passer
     answers: se|sa|par|pas|ses|sera|passe|repas|passer|
     validWords: se|sa|par|pas|ses|sera|passe|repas|passer
   - world: 2
     subWorld: 4
-    level: 2
+    level: 3
     word: nombre
     answers: en|ne|on|me|or|bon|nom|mon|mer|robe|norme|ombre|nombre|
     validWords: en|ne|on|me|or|bon|nom|mon|mer|robe|norme|ombre|nombre
   - world: 2
     subWorld: 4
-    level: 3
+    level: 4
     word: lancer
     answers: la|le|en|ne|ce|an|car|lac|cela|clan|cran|lance|lancer|
     validWords: la|le|en|ne|ce|an|car|lac|cela|clan|cran|lance|lancer
   - world: 2
     subWorld: 4
-    level: 4
+    level: 5
     word: devant
     answers: de|et|en|ne|va|an|te|net|date|vend|vent|tend|devant|
     validWords: de|et|en|ne|va|an|te|net|date|vend|vent|tend|devant
   - world: 2
     subWorld: 4
-    level: 5
+    level: 6
     word: compte
     answers: et|ce|me|te|cet|met|mot|top|pot|cote|opte|comte|compte|
     validWords: et|ce|me|te|cet|met|mot|top|pot|cote|opte|comte|compte
   - world: 2
     subWorld: 4
-    level: 6
+    level: 7
     word: femmes
     answers: se|me|mes|femme|femmes|
     validWords: se|me|mes|femme|femmes
   - world: 2
     subWorld: 4
-    level: 7
+    level: 8
     word: choses
     answers: se|ce|ses|ces|sec|ose|secs|chose|choses|
     validWords: se|ce|ses|ces|sec|ose|secs|chose|choses
   - world: 2
     subWorld: 4
-    level: 8
+    level: 9
     word: double
     answers: de|le|du|ou|eu|lu|bel|due|duo|bleu|loue|boule|double|
     validWords: de|le|du|ou|eu|lu|bel|due|duo|bleu|loue|boule|double
   - world: 2
     subWorld: 4
-    level: 9
+    level: 10
     word: autour
     answers: au|ou|or|tu|art|tour|trou|auto|autour|
     validWords: au|ou|or|tu|art|tour|trou|auto|autour
   - world: 2
     subWorld: 4
-    level: 10
+    level: 11
     word: rendre
     answers: de|en|ne|rend|rendre|
     validWords: de|en|ne|rend|rendre
   - world: 2
     subWorld: 4
-    level: 11
+    level: 12
     word: projet
     answers: et|je|or|te|top|jet|pot|pro|trop|port|opte|porte|opter|projet|
     validWords: et|je|or|te|top|jet|pot|pro|trop|port|opte|porte|opter|projet
   - world: 2
     subWorld: 4
-    level: 12
+    level: 13
     word: quatre
     answers: et|au|eu|tu|te|que|rue|art|eau|eut|tuer|autre|quart|quatre|
     validWords: et|au|eu|tu|te|que|rue|art|eau|eut|tuer|autre|quart|quatre
   - world: 2
     subWorld: 4
-    level: 13
+    level: 14
     word: jamais
     answers: sa|si|ma|ai|mis|mai|ami|mais|amis|jamais|
     validWords: sa|si|ma|ai|mis|mai|ami|mais|amis|jamais
   - world: 2
     subWorld: 4
-    level: 14
+    level: 15
     word: milieu
     answers: le|il|me|eu|lu|lui|lie|lieu|miel|milieu|
     validWords: le|il|me|eu|lu|lui|lie|lieu|miel|milieu
   - world: 2
     subWorld: 4
-    level: 15
+    level: 16
     word: fiscal
     answers: la|il|sa|si|ai|cas|ils|fil|sac|lac|fils|fisc|fais|fiscal|
     validWords: la|il|sa|si|ai|cas|ils|fil|sac|lac|fils|fisc|fais|fiscal
   - world: 2
     subWorld: 4
-    level: 16
+    level: 17
     word: effets
     answers: et|se|te|est|effet|effets|
     validWords: et|se|te|est|effet|effets
-  - world: 2
-    subWorld: 4
-    level: 17
+  - world: 3
+    subWorld: 0
+    level: 0
     word: facile
     answers: la|le|ce|il|ai|fil|lac|lie|cela|face|ciel|clef|file|facile|
     validWords: la|le|ce|il|ai|fil|lac|lie|cela|face|ciel|clef|file|facile
   - world: 3
     subWorld: 0
-    level: 0
+    level: 1
     word: pourra
     answers: au|ou|pu|or|par|pur|pro|pour|paru|pourra|
     validWords: au|ou|pu|or|par|pur|pro|pour|paru|pourra
   - world: 3
     subWorld: 0
-    level: 1
+    level: 2
     word: manque
     answers: en|un|au|ne|an|me|eu|ma|nu|une|que|eau|menu|manque|
     validWords: en|un|au|ne|an|me|eu|ma|nu|une|que|eau|menu|manque
   - world: 3
     subWorld: 0
-    level: 2
+    level: 3
     word: profit
     answers: or|roi|top|foi|fit|pot|tri|tir|pro|trop|fort|port|trio|profit|
     validWords: or|roi|top|foi|fit|pot|tri|tir|pro|trop|fort|port|trio|profit
   - world: 3
     subWorld: 0
-    level: 3
+    level: 4
     word: moyens
     answers: en|ne|se|on|me|son|nos|nom|mon|mes|yen|noms|yens|moyen|moyens|
     validWords: en|ne|se|on|me|son|nos|nom|mon|mes|yen|noms|yens|moyen|moyens|ose
   - world: 3
     subWorld: 0
-    level: 4
+    level: 5
     word: groupe
     answers: ou|eu|pu|or|peu|rue|pur|pro|pour|euro|peur|pure|roue|rouge|groupe|
     validWords: ou|eu|pu|or|peu|rue|pur|pro|pour|euro|peur|pure|roue|rouge|groupe
   - world: 3
     subWorld: 0
-    level: 5
+    level: 6
     word: social
     answers: la|il|sa|si|ai|cas|ils|loi|soi|sol|sac|lac|lois|clos|social|
     validWords: la|il|sa|si|ai|cas|ils|loi|soi|sol|sac|lac|lois|clos|social|col|colis
   - world: 3
     subWorld: 0
-    level: 6
+    level: 7
     word: simple
     answers: le|se|il|si|me|les|ils|mis|mes|sel|mise|miel|pile|piles|simple|
     validWords: le|se|il|si|me|les|ils|mis|mes|sel|mise|miel|pile|piles|simple|lie|pis
   - world: 3
     subWorld: 0
-    level: 7
+    level: 8
     word: permis
     answers: se|si|me|mis|mes|mer|pis|mise|pris|pire|prise|prime|remis|permis|primes|
     validWords: se|si|me|mis|mes|mer|pis|mise|pris|pire|prise|prime|remis|permis|primes|ris
   - world: 3
     subWorld: 0
-    level: 8
+    level: 9
     word: direct
     answers: de|et|ce|te|cet|dit|tri|tir|cri|dire|dite|tire|cite|citer|direct|
     validWords: de|et|ce|te|cet|dit|tri|tir|cri|dire|dite|tire|cite|citer|direct
   - world: 3
     subWorld: 0
-    level: 9
+    level: 10
     word: raison
     answers: on|sa|si|an|ni|or|son|ans|nos|soi|roi|noir|soir|soin|raison|
     validWords: on|sa|si|an|ni|or|son|ans|nos|soi|roi|noir|soir|soin|raison|ai|air|ira|ris|sain|noirs
   - world: 3
     subWorld: 0
-    level: 10
+    level: 11
     word: serait
     answers: et|se|sa|si|ai|est|ait|art|air|sera|site|sait|sert|tiers|serait|
     validWords: et|se|sa|si|ai|est|ait|art|air|sera|site|sait|sert|tiers|serait|te|ira|ris|tas|tir|tri|arts|star|tire
   - world: 3
     subWorld: 0
-    level: 11
+    level: 12
     word: centre
     answers: et|en|ne|ce|te|cet|net|cent|entre|rente|centre|
     validWords: et|en|ne|ce|te|cet|net|cent|entre|rente|centre
   - world: 3
     subWorld: 0
-    level: 12
+    level: 13
     word: autant
     answers: un|au|an|tu|nu|tant|autant|
     validWords: un|au|an|tu|nu|tant|autant
   - world: 3
     subWorld: 0
-    level: 13
+    level: 14
     word: limite
     answers: le|et|il|me|te|tel|met|lit|lie|miel|limite|
     validWords: le|et|il|me|te|tel|met|lit|lie|miel|limite
   - world: 3
     subWorld: 0
-    level: 14
+    level: 15
     word: second
     answers: de|en|ne|se|ce|on|des|son|ces|nos|dos|sec|donc|code|second|
     validWords: de|en|ne|se|ce|on|des|son|ces|nos|dos|sec|donc|code|second|don|ose|dons|dose|codes|ondes
   - world: 3
     subWorld: 0
-    level: 15
+    level: 16
     word: savoir
     answers: sa|si|va|or|via|vos|soi|roi|air|voir|vrai|soir|avis|avoir|savoir|
     validWords: sa|si|va|or|via|vos|soi|roi|air|voir|vrai|soir|avis|avoir|savoir|ai|ira|ris|vis|vais|vois|vrais|avoirs
   - world: 3
     subWorld: 0
-    level: 16
+    level: 17
     word: cartes
     answers: et|se|ce|sa|est|ces|cas|cet|car|art|sac|sera|sert|carte|cartes|
     validWords: et|se|ce|sa|est|ces|cas|cet|car|art|sac|sera|sert|carte|cartes|te|sec|tas|acte|arts|star|actes|trace|traces
   - world: 3
-    subWorld: 0
-    level: 17
+    subWorld: 1
+    level: 0
     word: divers
     answers: de|se|si|des|vie|dis|vis|ris|vers|dire|vise|vide|servi|vides|divers|
     validWords: de|se|si|des|vie|dis|vis|ris|vers|dire|vise|vide|servi|vides|divers|vies|viser
   - world: 3
     subWorld: 1
-    level: 0
+    level: 1
     word: sommes
     answers: se|me|ses|mes|ose|somme|sommes|
     validWords: se|me|ses|mes|ose|somme|sommes
   - world: 3
     subWorld: 1
-    level: 1
+    level: 2
     word: droits
     answers: si|or|dit|soi|roi|dos|soit|doit|sort|soir|trio|trois|droit|sorti|droits|
     validWords: si|or|dit|soi|roi|dos|soit|doit|sort|soir|trio|trois|droit|sorti|droits|dis|ris|tir|tri|dits|dois
   - world: 3
     subWorld: 1
-    level: 2
+    level: 3
     word: "\xE9tudes"
     answers: "de|et|du|se|eu|su|tu|des|est|sud|due|dus|dues|\xE9tude|\xE9tudes|"
     validWords: "de|et|du|se|eu|su|tu|des|est|sud|due|dus|dues|\xE9tude|\xE9tudes|te|d\xE9s|eut|tu\xE9"
   - world: 3
     subWorld: 1
-    level: 3
+    level: 4
     word: valeur
     answers: la|le|au|va|eu|vu|lu|vue|rue|eau|leur|revu|veau|valu|valeur|
     validWords: la|le|au|va|eu|vu|lu|vue|rue|eau|leur|revu|veau|valu|valeur|laver
   - world: 3
     subWorld: 1
-    level: 4
+    level: 5
     word: lignes
     answers: le|en|ne|se|il|si|ni|les|ils|gens|sein|lien|ligne|signe|lignes|
     validWords: le|en|ne|se|il|si|ni|les|ils|gens|sein|lien|ligne|signe|lignes|gel|lie|lin|nie|sel|sien|liens|linge
   - world: 3
     subWorld: 1
-    level: 5
+    level: 6
     word: aurait
     answers: au|ai|tu|ait|art|air|ira|tri|tir|aura|aurait|
     validWords: au|ai|tu|ait|art|air|ira|tri|tir|aura|aurait
   - world: 3
     subWorld: 1
-    level: 6
+    level: 7
     word: unique
     answers: en|un|ne|ni|eu|nu|une|que|qui|nie|unique|
     validWords: en|un|ne|ni|eu|nu|une|que|qui|nie|unique
   - world: 3
     subWorld: 1
-    level: 7
+    level: 8
     word: soient
     answers: et|en|ne|se|on|si|ni|est|son|ont|nos|sont|soit|sein|soient|
     validWords: et|en|ne|se|on|si|ni|est|son|ont|nos|sont|soit|sein|soient|net|soi|ton|note|sent|site|soie|soin|notes
   - world: 3
     subWorld: 1
-    level: 8
+    level: 9
     word: droite
     answers: de|et|or|te|dit|roi|tri|tir|doit|dire|dite|tire|trio|droit|droite|
     validWords: de|et|or|te|dit|roi|tri|tir|doit|dire|dite|tire|trio|droit|droite|doter
   - world: 3
     subWorld: 1
-    level: 9
+    level: 10
     word: devait
     answers: de|et|va|ai|vie|dit|via|ait|vit|vite|date|aide|vide|dite|devait|
     validWords: de|et|va|ai|vie|dit|via|ait|vit|vite|date|aide|vide|dite|devait|te
   - world: 3
     subWorld: 1
-    level: 10
+    level: 11
     word: nouvel
     answers: le|en|un|ne|ou|on|eu|vu|lu|une|vue|vol|nul|venu|nouvel|
     validWords: le|en|un|ne|ou|on|eu|vu|lu|une|vue|vol|nul|venu|nouvel|nu|loue|lune|vole|envol
   - world: 3
     subWorld: 1
-    level: 11
+    level: 12
     word: rapide
     answers: de|ai|par|air|ira|dire|pied|paie|aide|pire|perd|pari|pair|aider|rapide|
     validWords: de|ai|par|air|ira|dire|pied|paie|aide|pire|perd|pari|pair|aider|rapide|dira|paire
   - world: 3
     subWorld: 1
-    level: 12
+    level: 13
     word: points
     answers: on|si|ni|son|ont|nos|soi|ton|top|sont|soit|soin|pont|point|points|
     validWords: on|si|ni|son|ont|nos|soi|ton|top|sont|soit|soin|pont|point|points|pis|pot|spot|tons|ponts
   - world: 3
     subWorld: 1
-    level: 13
+    level: 14
     word: seront
     answers: et|en|ne|se|on|est|son|ont|nos|net|sont|sort|notre|sorte|seront|
     validWords: et|en|ne|se|on|est|son|ont|nos|net|sont|sort|notre|sorte|seront|or|ton|nets|note|rose|sent|sert|noter|notes
   - world: 3
     subWorld: 1
-    level: 14
+    level: 15
     word: longue
     answers: le|en|un|ne|ou|on|eu|lu|une|nul|gel|long|loue|lune|longue|
     validWords: le|en|un|ne|ou|on|eu|lu|une|nul|gel|long|loue|lune|longue|nu
   - world: 3
     subWorld: 1
-    level: 15
+    level: 16
     word: tandis
     answers: sa|si|an|ni|ai|ans|dit|ait|dis|tas|dans|sait|dits|saint|tandis|
     validWords: sa|si|an|ni|ai|ans|dit|ait|dis|tas|dans|sait|dits|saint|tandis|sain|satin|stand|disant
   - world: 3
     subWorld: 1
-    level: 16
+    level: 17
     word: suivre
     answers: se|si|eu|vu|sur|vie|vue|rue|vers|vise|revu|rues|virus|suivre|survie|
     validWords: se|si|eu|vu|sur|vie|vue|rue|vers|vise|revu|rues|virus|suivre|survie|su|ris|vis|vies|vues|servi|viser
   - world: 3
-    subWorld: 1
-    level: 17
+    subWorld: 2
+    level: 0
     word: maison
     answers: on|sa|si|an|ni|son|ans|nos|mis|nom|mon|mais|mois|moins|maison|
     validWords: on|sa|si|an|ni|son|ans|nos|mis|nom|mon|mais|mois|moins|maison|ma|mai|moi|soi|amis|main|noms|soin|mains
   - world: 3
     subWorld: 2
-    level: 0
+    level: 1
     word: moteur
     answers: et|ou|me|eu|or|rue|met|mot|mer|tour|mort|euro|outre|route|moteur|
     validWords: et|ou|me|eu|or|rue|met|mot|mer|tour|mort|euro|outre|route|moteur|te|tu|eut|mur|roue|trou|tuer|meurt|morte
   - world: 3
     subWorld: 2
-    level: 1
+    level: 2
     word: besoin
     answers: en|ne|se|on|si|ni|son|bon|nos|bien|sein|bons|bois|biens|besoin|
     validWords: en|ne|se|on|si|ni|son|bon|nos|bien|sein|bons|bois|biens|besoin|nie|ose|soi|sien|soie|soin
   - world: 3
     subWorld: 2
-    level: 2
+    level: 3
     word: actifs
     answers: sa|si|ai|cas|ait|sac|fit|tas|fait|sait|fisc|fais|faits|actif|actifs|
     validWords: sa|si|ai|cas|ait|sac|fit|tas|fait|sait|fisc|fais|faits|actif|actifs
   - world: 3
     subWorld: 2
-    level: 3
+    level: 4
     word: livres
     answers: le|se|il|si|les|ils|vie|sel|vis|vers|lire|vise|livre|servi|livres|
     validWords: le|se|il|si|les|ils|vie|sel|vis|vers|lire|vise|livre|servi|livres|lie|ris|vies|lires|viser
   - world: 3
     subWorld: 2
-    level: 4
+    level: 5
     word: nature
     answers: et|en|un|au|ne|an|eu|une|rue|net|art|eau|tenu|autre|nature|
     validWords: et|en|un|au|ne|an|eu|une|rue|net|art|eau|tenu|autre|nature|nu|te|tu|eut|tuer
   - world: 3
     subWorld: 2
-    level: 5
+    level: 6
     word: patron
     answers: on|an|or|par|ont|art|ton|top|pot|pro|trop|part|port|pont|patron|
     validWords: on|an|or|par|ont|art|ton|top|pot|pro|trop|part|port|pont|patron
   - world: 3
     subWorld: 2
-    level: 6
+    level: 7
     word: "ann\xE9es"
     answers: "en|ne|se|sa|an|n\xE9|ans|n\xE9e|n\xE9s|ann\xE9e|ann\xE9es|"
     validWords: "en|ne|se|sa|an|n\xE9|ans|n\xE9e|n\xE9s|ann\xE9e|ann\xE9es"
   - world: 3
     subWorld: 2
-    level: 7
+    level: 8
     word: contre
     answers: et|en|ne|ce|on|ont|cet|net|ton|note|cent|cote|notre|noter|contre|
     validWords: et|en|ne|ce|on|ont|cet|net|ton|note|cent|cote|notre|noter|contre|or|te|conte
   - world: 3
     subWorld: 2
-    level: 8
+    level: 9
     word: partie
     answers: et|ai|par|ait|art|air|ira|part|paie|pire|tire|pari|pair|parti|partie|
     validWords: et|ai|par|ait|art|air|ira|part|paie|pire|tire|pari|pair|parti|partie|te|tir|tri|paire
   - world: 3
     subWorld: 2
-    level: 9
+    level: 10
     word: montre
     answers: et|en|ne|on|me|ont|nom|mon|net|met|mot|mort|note|notre|montre|
     validWords: et|en|ne|on|me|ont|nom|mon|net|met|mot|mort|note|notre|montre|or|te|mer|ton|monte|morte|norme|noter|monter
   - world: 3
     subWorld: 2
-    level: 10
+    level: 11
     word: autres
     answers: et|au|se|sa|eu|est|sur|rue|art|eau|sera|sert|rues|autre|autres|
     validWords: et|au|se|sa|eu|est|sur|rue|art|eau|sera|sert|rues|autre|autres|su|tu|eut|tas|arts|saut|star|tuer|sauter
   - world: 3
     subWorld: 2
-    level: 11
+    level: 12
     word: papier
     answers: ai|par|air|ira|paie|pire|pari|pair|pape|paire|papier|
     validWords: ai|par|air|ira|paie|pire|pari|pair|pape|paire|papier
   - world: 3
     subWorld: 2
-    level: 12
+    level: 13
     word: client
     answers: le|et|en|ne|ce|il|ni|cet|tel|net|lit|cent|lien|ciel|client|
     validWords: le|et|en|ne|ce|il|ni|cet|tel|net|lit|cent|lien|ciel|client|te|lie|lin|nie|cite|lent
   - world: 3
     subWorld: 2
-    level: 13
+    level: 14
     word: disque
     answers: de|du|se|si|eu|su|des|que|qui|sud|due|dus|dis|dues|disque|
     validWords: de|du|se|si|eu|su|des|que|qui|sud|due|dus|dis|dues|disque
   - world: 3
     subWorld: 2
-    level: 14
+    level: 15
     word: actuel
     answers: la|le|et|au|ce|eu|tu|lu|cet|tel|eau|eut|cela|acte|actuel|
     validWords: la|le|et|au|ce|eu|tu|lu|cet|tel|eau|eut|cela|acte|actuel|te|lac|culte
   - world: 3
     subWorld: 2
-    level: 15
+    level: 16
     word: trouve
     answers: et|ou|eu|vu|vue|rue|veut|tour|euro|vert|votre|outre|route|trouve|ouvert|
     validWords: et|ou|eu|vu|vue|rue|veut|tour|euro|vert|votre|outre|route|trouve|ouvert|or|tu|eut|revu|trou|tuer|vote|ouvre|vertu
   - world: 3
     subWorld: 2
-    level: 16
+    level: 17
     word: fusion
     answers: un|ou|on|si|ni|son|fin|nos|soi|oui|uns|nous|fois|soin|fusion|
     validWords: un|ou|on|si|ni|son|fin|nos|soi|oui|uns|nous|fois|soin|fusion|nu|su|foi|fou|fins|fous|soif
   - world: 3
-    subWorld: 2
-    level: 17
+    subWorld: 3
+    level: 0
     word: depuis
     answers: de|du|se|si|eu|pu|su|des|peu|sud|due|puis|pied|pieds|depuis|
     validWords: de|du|se|si|eu|pu|su|des|peu|sud|due|puis|pied|pieds|depuis|dis|dus|pis|dues
   - world: 3
     subWorld: 3
-    level: 0
+    level: 1
     word: portes
     answers: et|se|est|trop|pose|sort|sept|sert|rose|sorte|porte|poste|sport|poser|portes|
     validWords: et|se|est|trop|pose|sort|sept|sert|rose|sorte|porte|poste|sport|poser|portes|or|pot|pro|top|opte|port|spot|opter|repos
   - world: 3
     subWorld: 3
-    level: 1
+    level: 2
     word: niveau
     answers: en|un|au|ne|va|an|ni|eu|vu|une|vie|vue|via|vin|niveau|
     validWords: en|un|au|ne|va|an|ni|eu|vu|une|vie|vue|via|vin|niveau|ai|nu|eau|nie|vain|veau|venu
   - world: 3
     subWorld: 3
-    level: 2
+    level: 3
     word: mesure
     answers: se|me|eu|su|sur|rue|mes|mer|mur|murs|rues|mesure|
     validWords: se|me|eu|su|sur|rue|mes|mer|mur|murs|rues|mesure
   - world: 3
     subWorld: 3
-    level: 3
+    level: 4
     word: preuve
     answers: eu|vu|pu|peu|vue|rue|pur|peur|revu|pure|revue|preuve|
     validWords: eu|vu|pu|peu|vue|rue|pur|peur|revu|pure|revue|preuve
-  - world: 3
-    subWorld: 3
-    level: 4
-    word: oeuvre
-    answers: ou|eu|vu|or|vue|rue|euro|revu|roue|ouvre|revue|oeuvre|
-    validWords: ou|eu|vu|or|vue|rue|euro|revu|roue|ouvre|revue|oeuvre
   - world: 3
     subWorld: 3
     level: 5
@@ -2140,879 +2140,879 @@ MonoBehaviour:
   - world: 4
     subWorld: 0
     level: 0
+    word: flamand
+    answers: la|an|ma|mal|flamand|
+    validWords: la|an|ma|mal|flamand
+  - world: 4
+    subWorld: 0
+    level: 1
     word: "march\xE9s"
     answers: "sa|ma|cas|car|sac|mars|sacr\xE9|march\xE9|sch\xE9ma|march\xE9s|"
     validWords: "sa|ma|cas|car|sac|mars|sacr\xE9|march\xE9|sch\xE9ma|march\xE9s"
   - world: 4
     subWorld: 0
-    level: 1
+    level: 2
     word: "f\xE9vrier"
     answers: "vie|fer|vif|rire|fier|f\xE9vrier|"
     validWords: "vie|fer|vif|rire|fier|f\xE9vrier"
   - world: 4
     subWorld: 0
-    level: 2
+    level: 3
     word: "m\xE9moire"
     answers: "me|or|moi|mer|roi|m\xE9moire|"
     validWords: "me|or|moi|mer|roi|m\xE9moire"
   - world: 4
     subWorld: 0
-    level: 3
+    level: 4
     word: affiche
     answers: ce|ai|face|chef|fiche|affiche|
     validWords: ce|ai|face|chef|fiche|affiche
   - world: 4
     subWorld: 0
-    level: 4
+    level: 5
     word: exemple
     answers: le|me|exemple|
     validWords: le|me|exemple
   - world: 4
     subWorld: 0
-    level: 5
+    level: 6
     word: vigueur
     answers: eu|vu|vie|vue|rue|revu|vigueur|
     validWords: eu|vu|vie|vue|rue|revu|vigueur
   - world: 4
     subWorld: 0
-    level: 6
+    level: 7
     word: "d\xE9l\xE9gu\xE9"
     answers: "du|lu|\xE9lu|d\xE9l\xE9gu\xE9|"
     validWords: "du|lu|\xE9lu|d\xE9l\xE9gu\xE9"
   - world: 4
     subWorld: 0
-    level: 7
+    level: 8
     word: "m\xE9thode"
     answers: "de|et|me|te|met|mot|th\xE9|mode|dot\xE9|\xE9met|dot\xE9e|m\xE9thode|"
     validWords: "de|et|me|te|met|mot|th\xE9|mode|dot\xE9|\xE9met|dot\xE9e|m\xE9thode"
   - world: 4
     subWorld: 0
-    level: 8
+    level: 9
     word: "p\xE9riode"
     answers: "de|or|roi|pro|dire|pied|id\xE9e|pire|perd|dor\xE9|proie|p\xE9riode|"
     validWords: "de|or|roi|pro|dire|pied|id\xE9e|pire|perd|dor\xE9|proie|p\xE9riode"
   - world: 4
     subWorld: 0
-    level: 9
+    level: 10
     word: "s\xE9rieux"
     answers: "se|si|eu|su|sur|eux|rue|six|ris|rues|s\xE9rie|s\xE9rieux|"
     validWords: "se|si|eu|su|sur|eux|rue|six|ris|rues|s\xE9rie|s\xE9rieux"
   - world: 4
     subWorld: 0
-    level: 10
+    level: 11
     word: octobre
     answers: et|ce|or|te|cet|cote|robe|robot|octobre|
     validWords: et|ce|or|te|cet|cote|robe|robot|octobre
   - world: 4
     subWorld: 0
-    level: 11
+    level: 12
     word: "d\xE9chets"
     answers: "de|et|se|ce|te|des|est|ces|cet|sec|th\xE9|d\xE9s|d\xE9chets|"
     validWords: "de|et|se|ce|te|des|est|ces|cet|sec|th\xE9|d\xE9s|d\xE9chets"
   - world: 4
     subWorld: 0
-    level: 12
+    level: 13
     word: dollars
     answers: la|sa|or|sol|dos|lors|alors|dollar|dollars|
     validWords: la|sa|or|sol|dos|lors|alors|dollar|dollars
   - world: 4
     subWorld: 0
-    level: 13
+    level: 14
     word: "annonc\xE9"
     answers: "on|an|n\xE9|non|annonc\xE9|"
     validWords: "on|an|n\xE9|non|annonc\xE9"
   - world: 4
     subWorld: 0
-    level: 14
+    level: 15
     word: chiffre
     answers: ce|fer|cri|chef|cher|fier|hier|riche|fiche|chiffre|
     validWords: ce|fer|cri|chef|cher|fier|hier|riche|fiche|chiffre
   - world: 4
     subWorld: 0
-    level: 15
+    level: 16
     word: contact
     answers: on|an|ont|ton|tant|contact|
     validWords: on|an|ont|ton|tant|contact
   - world: 4
     subWorld: 0
-    level: 16
+    level: 17
     word: "volont\xE9"
     answers: "on|n\xE9|ont|vol|ton|lot|vont|v\xE9lo|vot\xE9|volont\xE9|"
     validWords: "on|n\xE9|ont|vol|ton|lot|vont|v\xE9lo|vot\xE9|volont\xE9"
   - world: 4
-    subWorld: 0
-    level: 17
+    subWorld: 1
+    level: 0
     word: membres
     answers: se|me|mes|mer|membre|membres|
     validWords: se|me|mes|mer|membre|membres
   - world: 4
     subWorld: 1
-    level: 0
+    level: 1
     word: travaux
     answers: au|va|vu|tu|aux|art|taux|aura|vaut|travaux|
     validWords: au|va|vu|tu|aux|art|taux|aura|vaut|travaux
   - world: 4
     subWorld: 1
-    level: 1
+    level: 2
     word: changer
     answers: en|ne|ce|an|car|cher|rang|gare|rage|grec|cran|charge|change|changer|
     validWords: en|ne|ce|an|car|cher|rang|gare|rage|grec|cran|charge|change|changer
   - world: 4
     subWorld: 1
-    level: 2
+    level: 3
     word: capital
     answers: la|il|ai|ait|lit|cap|lac|plat|lait|capital|
     validWords: la|il|ai|ait|lit|cap|lac|plat|lait|capital
   - world: 4
     subWorld: 1
-    level: 3
+    level: 4
     word: "soci\xE9t\xE9"
     answers: "si|\xE9t\xE9|soi|os\xE9|soit|cit\xE9|cot\xE9|cot\xE9s|cit\xE9s|soci\xE9t\xE9|"
     validWords: "si|\xE9t\xE9|soi|os\xE9|soit|cit\xE9|cot\xE9|cot\xE9s|cit\xE9s|soci\xE9t\xE9"
   - world: 4
     subWorld: 1
-    level: 4
+    level: 5
     word: justice
     answers: et|se|ce|si|je|eu|est|ces|cet|jeu|site|suite|sujet|juste|justice|
     validWords: et|se|ce|si|je|eu|est|ces|cet|jeu|site|suite|sujet|juste|justice|su|tu|eut|jet|jus|sec|cite|suit|situe
   - world: 4
     subWorld: 1
-    level: 5
+    level: 6
     word: produit
     answers: du|ou|pu|dit|put|dur|roi|oui|pour|doit|trop|tour|port|droit|produit|
     validWords: du|ou|pu|dit|put|dur|roi|oui|pour|doit|trop|tour|port|droit|produit|or|tu|duo|pot|pur|top|tri|trio|trou
   - world: 4
     subWorld: 1
-    level: 6
+    level: 7
     word: puisque
     answers: se|si|eu|pu|su|que|qui|peu|pis|puis|puisque|
     validWords: se|si|eu|pu|su|que|qui|peu|pis|puis|puisque
   - world: 4
     subWorld: 1
-    level: 7
+    level: 8
     word: voiture
     answers: et|ou|eu|vu|vie|vue|rue|voir|veut|vite|tour|votre|outre|trouve|voiture|
     validWords: et|ou|eu|vu|vie|vue|rue|voir|veut|vite|tour|votre|outre|trouve|voiture|roi|vit|euro|vert|voie|voit|route|voire|ouvert
   - world: 4
     subWorld: 1
-    level: 8
+    level: 9
     word: "r\xE9seaux"
     answers: "au|se|sa|eu|su|sur|aux|eux|rue|eau|sera|eaux|rues|r\xE9seau|r\xE9seaux|"
     validWords: "au|se|sa|eu|su|sur|aux|eux|rue|eau|sera|eaux|rues|r\xE9seau|r\xE9seaux|axe|ax\xE9|axes|ax\xE9e"
   - world: 4
     subWorld: 1
-    level: 9
+    level: 10
     word: "destin\xE9"
     answers: "de|et|en|ne|se|si|ni|des|est|dit|net|sein|site|id\xE9e|destin\xE9|"
     validWords: "de|et|en|ne|se|si|ni|des|est|dit|net|sein|site|id\xE9e|destin\xE9|n\xE9|n\xE9e|dite|sent|dents|dites|id\xE9es|destin|disent"
   - world: 4
     subWorld: 1
-    level: 10
+    level: 11
     word: oublier
     answers: le|il|ou|eu|lui|loi|rue|bel|roi|leur|lieu|lire|euro|libre|oublier|
-    validWords: le|il|ou|eu|lui|loi|rue|bel|roi|leur|lieu|lire|euro|libre|oublier|lu|or|oui|bleu|oeil|robe|boire|louer|oublie
+    validWords: le|il|ou|eu|lui|loi|rue|bel|roi|leur|lieu|lire|euro|libre|oublier|lu|or|oui|bleu|loue|robe|boire|louer|oublie
   - world: 4
     subWorld: 1
-    level: 11
+    level: 12
     word: compris
     answers: si|or|mis|moi|soi|roi|pro|mois|pris|soir|porc|corps|crois|promis|compris|
     validWords: si|or|mis|moi|soi|roi|pro|mois|pris|soir|porc|corps|crois|promis|compris|cri|pis|ris
   - world: 4
     subWorld: 1
-    level: 12
+    level: 13
     word: "pr\xE9voit"
     answers: "or|roi|vit|top|pot|trop|voir|voit|port|opt\xE9|tir\xE9|trio|priv\xE9|port\xE9|pr\xE9voit|"
     validWords: "or|roi|vit|top|pot|trop|voir|voit|port|opt\xE9|tir\xE9|trio|priv\xE9|port\xE9|pr\xE9voit|pro|tir|tri|vot\xE9"
   - world: 4
     subWorld: 1
-    level: 13
+    level: 14
     word: conseil
     answers: le|en|ne|se|ce|il|on|si|les|son|ces|ils|nos|selon|conseil|
     validWords: le|en|ne|se|ce|il|on|si|les|son|ces|ils|nos|selon|conseil|ni|loi|sel|soi|sol|lien|loin|sein|soin
   - world: 4
     subWorld: 1
-    level: 14
+    level: 15
     word: janvier
     answers: en|ne|je|va|an|ni|vie|via|vin|rien|vrai|venir|vraie|avenir|janvier|
     validWords: en|ne|je|va|an|ni|vie|via|vin|rien|vrai|venir|vraie|avenir|janvier|ai|air|ira|nie|nier|vain|varie|navire
   - world: 4
     subWorld: 1
-    level: 15
+    level: 16
     word: actions
     answers: on|sa|si|an|ni|son|ont|ans|cas|nos|sont|soit|sait|action|actions|
     validWords: on|sa|si|an|ni|son|ont|ans|cas|nos|sont|soit|sait|action|actions|ai|ait|sac|soi|ton|coin|soin|tons|coins
   - world: 4
     subWorld: 1
-    level: 16
+    level: 17
     word: pouvoir
     answers: ou|vu|pu|or|roi|oui|pur|pro|pour|voir|pouvoir|
     validWords: ou|vu|pu|or|roi|oui|pur|pro|pour|voir|pouvoir
   - world: 4
-    subWorld: 1
-    level: 17
+    subWorld: 2
+    level: 0
     word: suivant
     answers: un|au|sa|si|va|an|ni|vu|ans|via|ait|vin|vaut|sait|suivant|
     validWords: un|au|sa|si|va|an|ni|vu|ans|via|ait|vin|vaut|sait|suivant|ai|su|uns|vit|avis|nuit|suit|vins|visant
   - world: 4
     subWorld: 2
-    level: 0
+    level: 1
     word: logique
-    answers: le|il|ou|eu|lu|que|qui|lui|loi|oui|lieu|quoi|quel|oeil|logique|
-    validWords: le|il|ou|eu|lu|que|qui|lui|loi|oui|lieu|quoi|quel|oeil|logique|gel|lie|loue
+    answers: le|il|ou|eu|lu|que|qui|lui|loi|oui|gel|lieu|quoi|quel|logique|
+    validWords: le|il|ou|eu|lu|que|qui|lui|loi|oui|gel|lieu|quoi|quel|logique|lie|loue
   - world: 4
     subWorld: 2
-    level: 1
+    level: 2
     word: "libert\xE9"
     answers: "le|et|il|tel|bel|li\xE9|lit|lire|r\xE9el|li\xE9e|tire|tir\xE9|libre|litre|libert\xE9|"
     validWords: "le|et|il|tel|bel|li\xE9|lit|lire|r\xE9el|li\xE9e|tire|tir\xE9|libre|litre|libert\xE9|te|lie|tir|tri|reli\xE9"
   - world: 4
     subWorld: 2
-    level: 2
+    level: 3
     word: comptes
     answers: et|se|ce|me|est|ces|cet|met|mes|mot|pose|temps|poste|compte|comptes|
     validWords: et|se|ce|me|est|ces|cet|met|mes|mot|pose|temps|poste|compte|comptes|pot|sec|top|cote|mets|mots|opte|sept|spot
   - world: 4
     subWorld: 2
-    level: 3
+    level: 4
     word: passant
     answers: sa|an|pas|ans|tas|sans|passant|
     validWords: sa|an|pas|ans|tas|sans|passant
   - world: 4
     subWorld: 2
-    level: 4
+    level: 5
     word: "qualit\xE9"
     answers: "la|au|il|ai|tu|lu|qui|lui|ait|li\xE9|lit|\xE9lu|tu\xE9|lait|qualit\xE9|"
     validWords: "la|au|il|ai|tu|lu|qui|lui|ait|li\xE9|lit|\xE9lu|tu\xE9|lait|qualit\xE9|quai"
   - world: 4
     subWorld: 2
-    level: 5
+    level: 6
     word: pendant
     answers: de|et|en|ne|an|te|net|date|tend|panne|pendant|
     validWords: de|et|en|ne|an|te|net|date|tend|panne|pendant
   - world: 4
     subWorld: 2
-    level: 6
+    level: 7
     word: courant
     answers: un|au|ou|on|an|ont|car|art|ton|cru|tour|cour|court|auront|courant|
     validWords: un|au|ou|on|an|ont|car|art|ton|cru|tour|cour|court|auront|courant|nu|or|tu|cou|auto|cran|trou|truc|carton
   - world: 4
     subWorld: 2
-    level: 7
+    level: 8
     word: emplois
     answers: le|se|il|si|me|les|ils|mis|loi|moi|mes|mois|mise|simple|emplois|
-    validWords: le|se|il|si|me|les|ils|mis|loi|moi|mes|mois|mise|simple|emplois|sel|soi|sol|lois|oeil|pose|soie|emploi|impose
+    validWords: le|se|il|si|me|les|ils|mis|loi|moi|mes|mois|mise|simple|emplois|sel|soi|sol|lois|miel|pose|soie|emploi|impose
   - world: 4
     subWorld: 2
-    level: 8
+    level: 9
     word: "pr\xE9cise"
     answers: "se|ce|si|ces|sec|cri|pris|cr\xE9e|pire|pes\xE9|crise|s\xE9rie|prise|pr\xE9cis|pr\xE9cise|"
     validWords: "se|ce|si|ces|sec|cri|pris|cr\xE9e|pire|pes\xE9|crise|s\xE9rie|prise|pr\xE9cis|pr\xE9cise|pis|ris|\xE9pices"
   - world: 4
     subWorld: 2
-    level: 9
+    level: 10
     word: machine
     answers: en|ne|ce|an|me|ni|ma|ai|mai|ami|main|aime|mine|chemin|machine|
     validWords: en|ne|ce|an|me|ni|ma|ai|mai|ami|main|aime|mine|chemin|machine|nie|amie|chien|haine|mince|niche
   - world: 4
     subWorld: 2
-    level: 10
+    level: 11
     word: banques
     answers: en|un|au|ne|se|sa|an|eu|une|que|ans|bas|base|banque|banques|
     validWords: en|un|au|ne|se|sa|an|eu|une|que|ans|bas|base|banque|banques|nu|su|bus|eau|uns|abus|beau|unes
   - world: 4
     subWorld: 2
-    level: 11
+    level: 12
     word: doivent
     answers: de|et|en|ne|on|ni|ont|vie|dit|dont|doit|vont|vite|vient|doivent|
     validWords: de|et|en|ne|on|ni|ont|vie|dit|dont|doit|vont|vite|vient|doivent|net|vin|vit|note|vend|vent|voie|voit|voient
   - world: 4
     subWorld: 2
-    level: 12
+    level: 13
     word: projets
     answers: et|se|je|est|trop|pose|sort|sept|sorte|porte|poste|sport|projet|portes|projets|
     validWords: et|se|je|est|trop|pose|sort|sept|sorte|porte|poste|sport|projet|portes|projets|or|jet|pot|top|port|rose|sert|poser|repos
   - world: 4
     subWorld: 2
-    level: 13
+    level: 14
     word: domaine
     answers: de|en|ne|on|an|me|ni|ma|nom|mon|mai|mode|main|monde|domaine|
     validWords: de|en|ne|on|an|me|ni|ma|nom|mon|mai|mode|main|monde|domaine|ai|ami|don|moi|aide|aime|demi|mine|demain
   - world: 4
     subWorld: 2
-    level: 14
+    level: 15
     word: fiscale
     answers: la|le|se|ce|il|sa|si|les|ces|cas|ils|fil|cela|face|fiscale|
     validWords: la|le|se|ce|il|sa|si|les|ces|cas|ils|fil|cela|face|fiscale|ai|sac|sec|sel|ciel|fils|fisc|facile|fiscal
   - world: 4
     subWorld: 2
-    level: 15
+    level: 16
     word: niveaux
     answers: en|un|au|ne|va|an|ni|eu|une|aux|vie|vue|eux|niveau|niveaux|
     validWords: en|un|au|ne|va|an|ni|eu|une|aux|vie|vue|eux|niveau|niveaux|ai|vu|eau|via|vin|eaux|venu|veux|vieux
   - world: 4
     subWorld: 2
-    level: 16
+    level: 17
     word: clients
     answers: le|et|en|ne|se|ce|il|si|ni|les|est|ces|ils|cet|clients|
     validWords: le|et|en|ne|se|ce|il|si|ni|les|est|ces|ils|cet|clients|net|tel|cent|lien|sein|site|tels|liste|client
   - world: 4
-    subWorld: 2
-    level: 17
+    subWorld: 3
+    level: 0
     word: "r\xE9alise"
     answers: "la|le|se|il|sa|si|les|ils|li\xE9|sera|lire|r\xE9el|li\xE9s|s\xE9rie|r\xE9alise|"
     validWords: "la|le|se|il|sa|si|les|ils|li\xE9|sera|lire|r\xE9el|li\xE9s|s\xE9rie|r\xE9alise|ai|air|sel|li\xE9e|ailes|laser|li\xE9es|r\xE9els|relais"
   - world: 4
     subWorld: 3
-    level: 0
+    level: 1
     word: obtenir
     answers: et|en|ne|on|ni|ont|bon|net|bien|rien|noir|note|notre|tenir|obtenir|
     validWords: et|en|ne|on|ni|ont|bon|net|bien|rien|noir|note|notre|tenir|obtenir|or|roi|ton|robe|tire|trio|boire|noire|noter
   - world: 4
     subWorld: 3
-    level: 1
+    level: 2
     word: publics
     answers: il|si|pu|su|lui|ils|pub|bus|plus|puis|club|subi|clubs|public|publics|
     validWords: il|si|pu|su|lui|ils|pub|bus|plus|puis|club|subi|clubs|public|publics|lu|pis
   - world: 4
     subWorld: 3
-    level: 2
+    level: 3
     word: "pr\xE9sent"
     answers: "et|en|ne|se|n\xE9|est|net|n\xE9e|sept|sert|sent|rest\xE9|entr\xE9|pens\xE9|pr\xE9sent|"
     validWords: "et|en|ne|se|n\xE9|est|net|n\xE9e|sept|sert|sent|rest\xE9|entr\xE9|pens\xE9|pr\xE9sent|te|n\xE9s|nets|pes\xE9"
   - world: 4
     subWorld: 3
-    level: 3
+    level: 4
     word: parents
     answers: et|en|ne|se|sa|an|est|par|pas|ans|net|sera|part|parts|parents|
     validWords: et|en|ne|se|sa|an|est|par|pas|ans|net|sera|part|parts|parents|art|tas|arts|nets|sent|sept|sert|star|repas
   - world: 4
     subWorld: 3
-    level: 4
+    level: 5
     word: grandes
     answers: de|en|ne|se|sa|an|des|ans|dans|sera|gens|grand|grande|grands|grandes|
     validWords: de|en|ne|se|sa|an|des|ans|dans|sera|gens|grand|grande|grands|grandes|gare|gras|rang|rend|sang|danse|garde|rangs|danger
   - world: 4
     subWorld: 3
-    level: 5
+    level: 6
     word: "g\xE9n\xE9ral"
     answers: "la|an|n\xE9|gr\xE9|rang|\xE9gal|g\xE9r\xE9|\xE9lan|r\xE9gl\xE9|agr\xE9\xE9|g\xE9n\xE9ral|"
     validWords: "la|an|n\xE9|gr\xE9|rang|\xE9gal|g\xE9r\xE9|\xE9lan|r\xE9gl\xE9|agr\xE9\xE9|g\xE9n\xE9ral"
   - world: 4
     subWorld: 3
-    level: 6
+    level: 7
     word: mondial
     answers: la|il|on|an|ni|ma|nom|mal|loi|mon|mai|moi|loin|main|mondial|
     validWords: la|il|on|an|ni|ma|nom|mal|loi|mon|mai|moi|loin|main|mondial|ai|ami|don|lin|lion
   - world: 4
     subWorld: 3
-    level: 7
+    level: 8
     word: souvent
     answers: et|en|un|ne|se|ou|on|une|est|son|ont|sont|nous|vous|souvent|
     validWords: et|en|un|ne|se|ou|on|une|est|son|ont|sont|nous|vous|souvent|eu|vu|net|nos|vos|vue|tous|veut|vont
   - world: 4
     subWorld: 3
-    level: 8
+    level: 9
     word: minutes
     answers: et|en|un|ne|se|si|me|ni|eu|une|est|mis|mise|suite|minutes|
     validWords: et|en|un|ne|se|si|me|ni|eu|une|est|mis|mise|suite|minutes|mes|met|net|nuit|sein|site|suit|tenu|situe
   - world: 4
     subWorld: 3
-    level: 9
+    level: 10
     word: lorsque
     answers: le|se|ou|eu|les|que|sur|rue|leur|lors|seul|quel|euro|leurs|lorsque|
-    validWords: le|se|ou|eu|les|que|sur|rue|leur|lors|seul|quel|euro|leurs|lorsque|or|su|sel|sol|rose|rues|quels|roues|soeur
+    validWords: le|se|ou|eu|les|que|sur|rue|leur|lors|seul|quel|euro|leurs|lorsque|or|su|sel|sol|rose|rues|louer|quels|roues
   - world: 4
     subWorld: 3
-    level: 10
+    level: 11
     word: groupes
     answers: se|ou|eu|pu|sur|peu|rue|pour|gros|euro|pose|peur|rouge|groupe|groupes|
     validWords: se|ou|eu|pu|sur|peu|rue|pour|gros|euro|pose|peur|rouge|groupe|groupes|or|su|pur|pure|rose|rues|poser|repos|rouges
   - world: 4
     subWorld: 3
-    level: 11
+    level: 12
     word: parties
     answers: et|se|sa|si|est|par|pas|sera|part|pris|site|sait|partie|serait|parties|
     validWords: et|se|sa|si|est|par|pas|sera|part|pris|site|sait|partie|serait|parties|ait|paie|sept|sert|parti|parts|prise|tiers|partis
   - world: 4
     subWorld: 3
-    level: 12
+    level: 13
     word: version
     answers: en|ne|se|on|si|ni|son|vie|nos|vos|vers|rien|voir|sein|version|
     validWords: en|ne|se|on|si|ni|son|vie|nos|vos|vers|rien|voir|sein|version|soi|vin|noir|soir|vins|vise|voie|venir|voire
   - world: 4
     subWorld: 3
-    level: 13
+    level: 14
     word: charges
     answers: se|ce|sa|ces|cas|car|sac|sec|sera|cher|gras|gare|chers|charge|charges|
     validWords: se|ce|sa|ces|cas|car|sac|sec|sera|cher|gras|gare|chers|charge|charges|grec|rage|sage
   - world: 4
     subWorld: 3
-    level: 14
+    level: 15
     word: pouvait
     answers: au|ou|va|vu|pu|ai|via|ait|put|vit|oui|top|vaut|voit|pouvait|
     validWords: au|ou|va|vu|pu|ai|via|ait|put|vit|oui|top|vaut|voit|pouvait|tu|pot|auto
   - world: 4
     subWorld: 3
-    level: 15
+    level: 16
     word: annonce
     answers: en|ne|ce|on|an|non|annonce|
     validWords: en|ne|ce|on|an|non|annonce
   - world: 4
     subWorld: 3
-    level: 16
+    level: 17
     word: soutien
     answers: et|en|un|ne|se|ou|on|si|une|est|son|ont|sont|nous|soutien|
     validWords: et|en|un|ne|se|ou|on|si|une|est|son|ont|sont|nous|soutien|eu|ni|net|nos|sein|site|soit|tous|suite
   - world: 4
-    subWorld: 3
-    level: 17
+    subWorld: 4
+    level: 0
     word: parfois
     answers: sa|si|or|ai|par|pas|soi|roi|foi|air|fois|pris|soir|frais|parfois|
     validWords: sa|si|or|ai|par|pas|soi|roi|foi|air|fois|pris|soir|frais|parfois|ira|pis|pro|ris|fais|pair|pari|soif|pairs
   - world: 4
     subWorld: 4
-    level: 0
+    level: 1
     word: moindre
     answers: de|en|ne|on|me|ni|nom|mon|moi|rien|dire|mode|noir|monde|moindre|
     validWords: de|en|ne|on|me|ni|nom|mon|moi|rien|dire|mode|noir|monde|moindre|or|mer|roi|demi|mine|nord|rend|noire|norme
   - world: 4
     subWorld: 4
-    level: 1
+    level: 2
     word: musique
     answers: se|si|me|eu|su|que|qui|mis|mes|mise|musique|
     validWords: se|si|me|eu|su|que|qui|mis|mes|mise|musique
   - world: 4
     subWorld: 4
-    level: 2
+    level: 3
     word: formule
     answers: le|ou|me|eu|or|rue|feu|mer|fer|mur|leur|euro|four|forme|formule|
     validWords: le|ou|me|eu|or|rue|feu|mer|fer|mur|leur|euro|four|forme|formule|lu|fou|flou|loue|roue|fleur|foule|louer|roule
   - world: 4
     subWorld: 4
-    level: 3
+    level: 4
     word: devrait
     answers: de|et|va|vie|dit|via|ait|dire|tard|vrai|vite|date|vert|devra|devrait|
     validWords: de|et|va|vie|dit|via|ait|dire|tard|vrai|vite|date|vert|devra|devrait|air|art|vit|aide|vide|aider|varie|vraie|devait
   - world: 4
     subWorld: 4
-    level: 4
+    level: 5
     word: sociale
     answers: la|le|se|ce|il|sa|si|les|ces|cas|ils|loi|cela|social|sociale|
     validWords: la|le|se|ce|il|sa|si|les|ces|cas|ils|loi|cela|social|sociale|ai|sac|sec|sel|soi|sol|ciel|lois|soie
   - world: 4
     subWorld: 4
-    level: 5
+    level: 6
     word: marques
     answers: au|se|sa|me|eu|ma|que|sur|rue|mes|mer|sera|mars|marque|marques|
     validWords: au|se|sa|me|eu|ma|que|sur|rue|mes|mer|sera|mars|marque|marques|su|eau|mur|arme|murs|rues|armes|masque
   - world: 4
     subWorld: 4
-    level: 6
+    level: 7
     word: valeurs
     answers: la|le|au|se|sa|va|les|sur|leur|sera|vers|seul|leurs|valeur|valeurs|
     validWords: la|le|au|se|sa|va|les|sur|leur|sera|vers|seul|leurs|valeur|valeurs|eu|vu|eau|rue|sel|vue|revu|rues|laser
   - world: 4
     subWorld: 4
-    level: 7
+    level: 8
     word: gestion
     answers: et|en|ne|se|on|si|ni|est|son|ont|nos|sont|soit|gens|gestion|
     validWords: et|en|ne|se|on|si|ni|est|son|ont|nos|sont|soit|gens|gestion|net|soi|ton|note|sein|site|soin|signe|soient
   - world: 4
     subWorld: 4
-    level: 8
+    level: 9
     word: certain
     answers: et|en|ne|ce|an|ni|cet|car|net|ait|rien|carte|train|tenir|certain|
     validWords: et|en|ne|ce|an|ni|cet|car|net|ait|rien|carte|train|tenir|certain|ai|air|art|acte|cent|tire|aient|trace|crainte
   - world: 4
     subWorld: 4
-    level: 9
+    level: 10
     word: "r\xE9ponse"
     answers: "en|ne|se|on|n\xE9|or|son|nos|n\xE9e|pose|rose|pos\xE9|poser|repos|r\xE9ponse|"
     validWords: "en|ne|se|on|n\xE9|or|son|nos|n\xE9e|pose|rose|pos\xE9|poser|repos|r\xE9ponse|n\xE9s|ose|os\xE9|pro|peso|pes\xE9|ros\xE9|pens\xE9|pos\xE9e"
   - world: 4
     subWorld: 4
-    level: 10
+    level: 11
     word: compter
     answers: et|ce|me|cet|met|mot|mer|top|trop|mort|cote|port|porte|compte|compter|
     validWords: et|ce|me|cet|met|mot|mer|top|trop|mort|cote|port|porte|compte|compter|or|pot|pro|opte|porc|morte|opter|promet|trompe
   - world: 4
     subWorld: 4
-    level: 11
+    level: 12
     word: positif
     answers: si|soi|top|foi|fit|pot|pis|soit|fois|spot|soif|positif|
     validWords: si|soi|top|foi|fit|pot|pis|soit|fois|spot|soif|positif
   - world: 4
     subWorld: 4
-    level: 12
+    level: 13
     word: premier
     answers: me|mer|pire|rire|prime|pierre|empire|premier|
     validWords: me|mer|pire|rire|prime|pierre|empire|premier
   - world: 4
     subWorld: 4
-    level: 13
+    level: 14
     word: affaire
     answers: ai|fer|air|ira|fera|fier|faire|affaire|
     validWords: ai|fer|air|ira|fera|fier|faire|affaire
   - world: 4
     subWorld: 4
-    level: 14
+    level: 15
     word: choisir
     answers: si|or|ici|soi|roi|cri|ris|hors|soir|crois|choisi|choisir|
     validWords: si|or|ici|soi|roi|cri|ris|hors|soir|crois|choisi|choisir
   - world: 4
     subWorld: 4
-    level: 15
+    level: 16
     word: contrat
     answers: on|an|or|ont|car|art|ton|tant|tort|cran|carton|contrat|
     validWords: on|an|or|ont|car|art|ton|tant|tort|cran|carton|contrat
   - world: 4
     subWorld: 4
-    level: 16
+    level: 17
     word: demande
     answers: de|en|ne|an|me|ma|dame|amende|demande|
     validWords: de|en|ne|an|me|ma|dame|amende|demande
-  - world: 4
-    subWorld: 4
-    level: 17
+  - world: 5
+    subWorld: 0
+    level: 0
     word: plupart
     answers: la|au|pu|tu|lu|par|put|art|pur|part|plat|paru|plupart|
     validWords: la|au|pu|tu|lu|par|put|art|pur|part|plat|paru|plupart
   - world: 5
     subWorld: 0
-    level: 0
+    level: 1
     word: minimum
     answers: un|ni|nu|muni|minimum|
     validWords: un|ni|nu|muni|minimum
   - world: 5
     subWorld: 0
-    level: 1
+    level: 2
     word: acheter
     answers: et|ce|te|cet|car|art|cher|acte|chat|carte|trace|tache|acheter|
     validWords: et|ce|te|cet|car|art|cher|acte|chat|carte|trace|tache|acheter
   - world: 5
     subWorld: 0
-    level: 2
+    level: 3
     word: maximum
     answers: au|ma|ai|aux|mai|ami|maux|maxi|maximum|
     validWords: au|ma|ai|aux|mai|ami|maux|maxi|maximum
   - world: 5
     subWorld: 0
-    level: 3
+    level: 4
     word: presque
     answers: se|eu|pu|su|que|sur|peu|rue|pur|peur|rues|pure|peser|presque|
     validWords: se|eu|pu|su|que|sur|peu|rue|pur|peur|rues|pure|peser|presque
   - world: 5
     subWorld: 0
-    level: 4
+    level: 5
     word: bureaux
     answers: au|eu|aux|eux|rue|eau|bar|axe|beau|eaux|baux|beaux|bureau|bureaux|
     validWords: au|eu|aux|eux|rue|eau|bar|axe|beau|eaux|baux|beaux|bureau|bureaux
   - world: 5
     subWorld: 0
-    level: 5
+    level: 6
     word: passage
     answers: se|sa|pas|ses|page|sage|saga|passe|pages|passage|
     validWords: se|sa|pas|ses|page|sage|saga|passe|pages|passage
   - world: 5
     subWorld: 0
-    level: 6
+    level: 7
     word: moyenne
     answers: en|ne|on|me|non|nom|mon|yen|moyen|moyenne|
     validWords: en|ne|on|me|non|nom|mon|yen|moyen|moyenne
   - world: 5
     subWorld: 0
-    level: 7
+    level: 8
     word: prendre
     answers: de|en|ne|rend|perd|prend|rendre|perdre|prendre|reprend|
     validWords: de|en|ne|rend|perd|prend|rendre|perdre|prendre|reprend
   - world: 5
     subWorld: 0
-    level: 8
+    level: 9
     word: peuvent
     answers: et|en|un|ne|eu|vu|pu|une|peu|vue|net|peut|veut|vente|peuvent|
     validWords: et|en|un|ne|eu|vu|pu|une|peu|vue|net|peut|veut|vente|peuvent|tu|eut|put|tenu|vent|venu|neuve|tenue|venue
   - world: 5
     subWorld: 0
-    level: 9
+    level: 10
     word: lecteur
     answers: le|et|ce|eu|tu|lu|cet|rue|tel|cru|leur|cure|recul|lecteur|lecture|
     validWords: le|et|ce|eu|tu|lu|cet|rue|tel|cru|leur|cure|recul|lecteur|lecture|te|eut|truc|tuer|culte
   - world: 5
     subWorld: 0
-    level: 10
+    level: 11
     word: secteur
     answers: et|se|ce|eu|est|sur|ces|cet|rue|cru|sert|reste|certes|secret|secteur|
     validWords: et|se|ce|eu|est|sur|ces|cet|rue|cru|sert|reste|certes|secret|secteur|su|tu|eut|sec|cure|rues|truc|tuer|sucre
   - world: 5
     subWorld: 0
-    level: 11
+    level: 12
     word: juillet
     answers: le|et|il|je|eu|tu|lu|lui|tel|jeu|lit|jet|lieu|utile|juillet|
     validWords: le|et|il|je|eu|tu|lu|lui|tel|jeu|lit|jet|lieu|utile|juillet|te|eut|lie
   - world: 5
     subWorld: 0
-    level: 12
+    level: 13
     word: comment
     answers: et|en|ne|ce|on|me|ont|cet|nom|mon|net|met|comme|moment|comment|
     validWords: et|en|ne|ce|on|me|ont|cet|nom|mon|net|met|comme|moment|comment|te|mot|ton|cent|cote|note|comte|conte|monte
   - world: 5
     subWorld: 0
-    level: 13
+    level: 14
     word: seconde
     answers: de|en|ne|se|ce|on|des|son|ces|nos|dos|donc|code|second|seconde|
     validWords: de|en|ne|se|ce|on|des|son|ces|nos|dos|donc|code|second|seconde|don|ose|sec|dons|dose|codes|dense|ondes
   - world: 5
     subWorld: 0
-    level: 14
+    level: 15
     word: revient
     answers: et|en|ne|ni|vie|net|vin|rien|vite|entre|vente|vient|venir|tenir|revient|
     validWords: et|en|ne|ni|vie|net|vin|rien|vite|entre|vente|vient|venir|tenir|revient|vit|tire|vent|vert|envie|reine|rente|verte|entier
   - world: 5
     subWorld: 0
-    level: 15
+    level: 16
     word: "\xE9l\xE9ment"
     answers: "le|et|en|ne|me|n\xE9|\xE9t\xE9|tel|net|met|n\xE9e|men\xE9|t\xE9l\xE9|\xE9met|\xE9l\xE9ment|"
     validWords: "le|et|en|ne|me|n\xE9|\xE9t\xE9|tel|net|met|n\xE9e|men\xE9|t\xE9l\xE9|\xE9met|\xE9l\xE9ment|te|lent"
   - world: 5
     subWorld: 0
-    level: 16
+    level: 17
     word: "d\xE9tient"
     answers: "de|et|en|ne|ni|n\xE9|dit|net|n\xE9e|id\xE9e|dite|tient|tent\xE9|entit\xE9|d\xE9tient|"
     validWords: "de|et|en|ne|ni|n\xE9|dit|net|n\xE9e|id\xE9e|dite|tient|tent\xE9|entit\xE9|d\xE9tient|te|nie|tend|teint"
   - world: 5
-    subWorld: 0
-    level: 17
+    subWorld: 1
+    level: 0
     word: environ
     answers: en|ne|on|ni|non|vie|vin|roi|rien|voir|voie|noir|voire|venir|environ|
     validWords: en|ne|on|ni|non|vie|vin|roi|rien|voir|voie|noir|voire|venir|environ|or|nie|nier|noire
   - world: 5
     subWorld: 1
-    level: 0
+    level: 1
     word: risques
     answers: se|si|eu|su|que|qui|sur|ses|rue|suis|rues|russe|issue|risque|risques|
     validWords: se|si|eu|su|que|qui|sur|ses|rue|suis|rues|russe|issue|risque|risques|ris|issu|requis
   - world: 5
     subWorld: 1
-    level: 1
+    level: 2
     word: concept
     answers: et|en|ne|ce|on|ont|cet|net|ton|top|note|cent|cote|pont|concept|
     validWords: et|en|ne|ce|on|ont|cet|net|ton|top|note|cent|cote|pont|concept|te|pot|opte|conte
   - world: 5
     subWorld: 1
-    level: 2
+    level: 3
     word: besoins
     answers: en|ne|se|on|si|ni|son|ses|bon|nos|bien|sens|sein|besoin|besoins|
     validWords: en|ne|se|on|si|ni|son|ses|bon|nos|bien|sens|sein|besoin|besoins|soi|bois|bons|sien|soie|soin|sons|biens|soins
   - world: 5
     subWorld: 1
-    level: 3
+    level: 4
     word: travers
     answers: et|se|sa|va|est|art|sera|vers|vert|rare|sert|rares|vaste|verra|travers|
     validWords: et|se|sa|va|est|art|sera|vers|vert|rare|sert|rares|vaste|verra|travers|te|tas|arts|star|rater|verts
   - world: 5
     subWorld: 1
-    level: 4
+    level: 5
     word: service
     answers: se|ce|si|ces|vie|sec|vis|cri|vers|vise|vice|crise|servi|verse|service|
     validWords: se|ce|si|ces|vie|sec|vis|cri|vers|vise|vice|crise|servi|verse|service|ris|vies|viser
   - world: 5
     subWorld: 1
-    level: 5
+    level: 6
     word: "r\xE9alit\xE9"
     answers: "la|il|ai|\xE9t\xE9|ait|art|li\xE9|lit|air|ira|tri|lait|t\xE9l\xE9|tir\xE9|r\xE9alit\xE9|"
     validWords: "la|il|ai|\xE9t\xE9|ait|art|li\xE9|lit|air|ira|tri|lait|t\xE9l\xE9|tir\xE9|r\xE9alit\xE9|tir|rail|rat\xE9"
   - world: 5
     subWorld: 1
-    level: 6
+    level: 7
     word: options
     answers: on|si|ni|son|ont|nos|soi|ton|sont|soit|soin|point|points|option|options|
     validWords: on|si|ni|son|ont|nos|soi|ton|sont|soit|soin|point|points|option|options|pis|pot|top|pont|spot|tons|ponts
   - world: 5
     subWorld: 1
-    level: 7
+    level: 8
     word: pension
     answers: en|ne|se|on|si|ni|son|non|nos|soi|sein|pose|soin|sinon|pension|
     validWords: en|ne|se|on|si|ni|son|non|nos|soi|sein|pose|soin|sinon|pension|nie|ose|pis|peso|sien|soie|sonne
   - world: 5
     subWorld: 1
-    level: 8
+    level: 9
     word: devenir
     answers: de|en|ne|ni|vie|vin|rien|dire|rend|vend|vide|venir|envie|vendre|devenir|
     validWords: de|en|ne|ni|vie|vin|rien|dire|rend|vend|vide|venir|envie|vendre|devenir|nie|nier|reine|veine
   - world: 5
     subWorld: 1
-    level: 9
+    level: 10
     word: partout
     answers: au|ou|pu|or|par|put|art|top|pour|tout|trop|part|tour|port|partout|
     validWords: au|ou|pu|or|par|put|art|top|pour|tout|trop|part|tour|port|partout|tu|pot|pro|pur|auto|paru|tort|trou|atout
   - world: 5
     subWorld: 1
-    level: 10
+    level: 11
     word: laisser
     answers: la|le|se|il|sa|si|les|ses|ils|sel|sera|lire|laser|laisse|laisser|
     validWords: la|le|se|il|sa|si|les|ses|ils|sel|sera|lire|laser|laisse|laisser|ai|air|ira|sais|ailes|essai|lisse|sales|relais
   - world: 5
     subWorld: 1
-    level: 11
+    level: 12
     word: famille
     answers: la|le|il|me|ma|ai|mal|mai|fil|ami|film|aime|fille|mille|famille|
     validWords: la|le|il|me|ma|ai|mal|mai|fil|ami|film|aime|fille|mille|famille|lie|amie|faim|file|miel|allie|faille
   - world: 5
     subWorld: 1
-    level: 12
+    level: 13
     word: agences
     answers: en|ne|se|ce|sa|an|ces|ans|cas|sac|sec|gens|sang|agence|agences|
     validWords: en|ne|se|ce|sa|an|ces|ans|cas|sac|sec|gens|sang|agence|agences|sage
   - world: 5
     subWorld: 1
-    level: 13
+    level: 14
     word: affirme
     answers: me|ma|ai|mai|mer|fer|ami|air|fera|aime|mari|fier|faire|firme|affirme|
     validWords: me|ma|ai|mai|mer|fer|ami|air|fera|aime|mari|fier|faire|firme|affirme|ira|amie|arme|faim|aimer|marie
   - world: 5
     subWorld: 1
-    level: 14
+    level: 15
     word: dossier
     answers: de|se|si|or|des|ses|soi|roi|dos|dire|soir|rose|soie|roses|dossier|
     validWords: de|se|si|or|des|ses|soi|roi|dos|dire|soir|rose|soie|roses|dossier|dis|ose|ris|dois|dose|essor
   - world: 5
     subWorld: 1
-    level: 15
+    level: 16
     word: semaine
     answers: en|ne|se|sa|si|an|me|ni|ans|mis|mai|mais|mise|sein|semaine|
     validWords: en|ne|se|sa|si|an|me|ni|ans|mis|mai|mais|mise|sein|semaine|ma|ami|mes|aime|amis|main|mine|mains|mines
   - world: 5
     subWorld: 1
-    level: 16
+    level: 17
     word: enfants
     answers: et|en|ne|se|sa|an|te|est|ans|net|tas|sent|nets|enfant|enfants|
     validWords: et|en|ne|se|sa|an|te|est|ans|net|tas|sent|nets|enfant|enfants
   - world: 5
-    subWorld: 1
-    level: 17
+    subWorld: 2
+    level: 0
     word: mauvais
     answers: au|sa|si|va|vu|ma|ai|mis|mai|via|ami|mais|avis|amis|mauvais|
     validWords: au|sa|si|va|vu|ma|ai|mis|mai|via|ami|mais|avis|amis|mauvais|su|vis|vais
   - world: 5
     subWorld: 2
-    level: 0
+    level: 1
     word: "\xE9taient"
     answers: "et|en|ne|an|ni|n\xE9|net|ait|tant|\xE9tat|\xE9tait|\xE9tant|tient|tent\xE9|\xE9taient|"
     validWords: "et|en|ne|an|ni|n\xE9|net|ait|tant|\xE9tat|\xE9tait|\xE9tant|tient|tent\xE9|\xE9taient|ai|te|nie|n\xE9e|aient|teint|entit\xE9|tenait"
   - world: 5
     subWorld: 2
-    level: 1
+    level: 2
     word: travail
     answers: la|il|va|ai|via|ait|vit|art|lit|air|vrai|lait|avait|avril|travail|
     validWords: la|il|va|ai|via|ait|vit|art|lit|air|vrai|lait|avait|avril|travail|ira|tir|tri|aval|rail|vital|valait
   - world: 5
     subWorld: 2
-    level: 2
+    level: 3
     word: culture
     answers: le|et|ce|eu|tu|lu|cet|rue|tel|cru|eut|leur|cure|recul|culture|
     validWords: le|et|ce|eu|tu|lu|cet|rue|tel|cru|eut|leur|cure|recul|culture|te|truc|tuer|culte
   - world: 5
     subWorld: 2
-    level: 3
+    level: 4
     word: "r\xE9cente"
     answers: "et|en|ne|ce|n\xE9|cet|net|n\xE9e|cent|cr\xE9e|entre|centre|entr\xE9e|r\xE9cent|r\xE9cente|"
     validWords: "et|en|ne|ce|n\xE9|cet|net|n\xE9e|cent|cr\xE9e|entre|centre|entr\xE9e|r\xE9cent|r\xE9cente|te|entr\xE9|rente|cr\xE9ent"
   - world: 5
     subWorld: 2
-    level: 4
+    level: 5
     word: devient
     answers: de|et|en|ne|ni|vie|dit|net|vin|vit|vite|vend|vente|vient|devient|
     validWords: de|et|en|ne|ni|vie|dit|net|vin|vit|vite|vend|vente|vient|devient|te|nie|dite|tend|vent|vide|envie|veine
   - world: 5
     subWorld: 2
-    level: 5
+    level: 6
     word: "donn\xE9es"
     answers: "de|en|ne|se|on|n\xE9|des|son|non|nos|dos|donne|donn\xE9|donn\xE9e|donn\xE9es|"
     validWords: "de|en|ne|se|on|n\xE9|des|son|non|nos|dos|donne|donn\xE9|donn\xE9e|donn\xE9es|don|d\xE9s|n\xE9e|n\xE9s|ose|os\xE9|dons|dose|donn\xE9s"
   - world: 5
     subWorld: 2
-    level: 6
+    level: 7
     word: cuisine
     answers: en|un|ne|se|ce|si|ni|eu|une|ces|ici|uns|sein|usine|cuisine|
     validWords: en|un|ne|se|ce|si|ni|eu|une|ces|ici|uns|sein|usine|cuisine|nu|su|nie|sec|sien|unes
   - world: 5
     subWorld: 2
-    level: 7
+    level: 8
     word: maisons
     answers: on|sa|si|an|ni|son|ans|nos|mis|nom|mais|sans|mois|moins|maisons|
     validWords: on|sa|si|an|ni|son|ans|nos|mis|nom|mais|sans|mois|moins|maisons|ma|mai|moi|mon|soi|main|mains|maison|saison
   - world: 5
     subWorld: 2
-    level: 8
+    level: 9
     word: ensuite
     answers: et|en|un|ne|se|si|ni|eu|une|est|net|sein|site|suite|ensuite|
     validWords: et|en|un|ne|se|si|ni|eu|une|est|net|sein|site|suite|ensuite|su|uns|nuit|sent|suit|tenu|situe|tenue|usine
   - world: 5
     subWorld: 2
-    level: 9
+    level: 10
     word: raisons
     answers: on|sa|si|an|ni|son|ans|nos|soi|sans|noir|soir|raison|saison|raisons|
     validWords: on|sa|si|an|ni|son|ans|nos|soi|sans|noir|soir|raison|saison|raisons|ai|or|air|ira|roi|sais|soin|noirs|soins
   - world: 5
     subWorld: 2
-    level: 10
+    level: 11
     word: anciens
     answers: en|ne|se|ce|sa|si|an|ni|ces|ans|cas|sac|sein|ancien|anciens|
     validWords: en|ne|se|ce|sa|si|an|ni|ces|ans|cas|sac|sein|ancien|anciens|ai|nie|sec|sain|sien|saine
   - world: 5
     subWorld: 2
-    level: 11
+    level: 12
     word: avaient
     answers: et|en|ne|va|an|ni|vie|via|net|ait|vite|avant|avait|vient|avaient|
     validWords: et|en|ne|va|an|ni|vie|via|net|ait|vite|avant|avait|vient|avaient|ai|te|nie|vin|vit|vain|vent|aient|venait
   - world: 5
     subWorld: 2
-    level: 12
+    level: 13
     word: plaisir
     answers: la|il|sa|si|ai|par|pas|ils|air|ira|pris|pari|pair|rails|plaisir|
     validWords: la|il|sa|si|ai|par|pas|ils|air|ira|pris|pari|pair|rails|plaisir|pis|ris|laps|rail|pairs
   - world: 5
     subWorld: 2
-    level: 13
+    level: 14
     word: "r\xE9duire"
     answers: "de|du|eu|rue|dur|due|dire|id\xE9e|rire|dure|rude|dur\xE9|dur\xE9e|durer|r\xE9duire|"
     validWords: "de|du|eu|rue|dur|due|dire|id\xE9e|rire|dure|rude|dur\xE9|dur\xE9e|durer|r\xE9duire"
   - world: 5
     subWorld: 2
-    level: 14
+    level: 15
     word: investi
     answers: et|en|ne|se|si|ni|est|vie|net|vin|sein|site|vite|vient|investi|
     validWords: et|en|ne|se|si|ni|est|vie|net|vin|sein|site|vite|vient|investi|vit|nets|sent|vent|vins|vise|invite|visent|visite
   - world: 5
     subWorld: 2
-    level: 15
+    level: 16
     word: monnaie
     answers: en|ne|on|an|me|ni|ma|non|nom|mon|mai|moi|main|aime|monnaie|
     validWords: en|ne|on|an|me|ni|ma|non|nom|mon|mai|moi|main|aime|monnaie|ai|ami|nie|amie|mine|manne
   - world: 5
     subWorld: 2
-    level: 16
+    level: 17
     word: nouveau
     answers: en|un|au|ne|ou|on|va|an|eu|vu|une|vue|eau|venu|nouveau|
     validWords: en|un|au|ne|ou|on|va|an|eu|vu|une|vue|eau|venu|nouveau|nu|veau|avoue
   - world: 5
-    subWorld: 2
-    level: 17
-    word: couleur
-    answers: le|ce|ou|eu|or|rue|cru|leur|euro|cour|cure|coeur|recul|louer|couleur|
-    validWords: le|ce|ou|eu|or|rue|cru|leur|euro|cour|cure|coeur|recul|louer|couleur|lu|col|cou|loue|roue|roule|couler
-  - world: 5
     subWorld: 3
     level: 0
-    word: recours
-    answers: se|ce|ou|eu|sur|ces|rue|euro|cour|rose|cours|coeur|source|course|recours|
-    validWords: se|ce|ou|eu|sur|ces|rue|euro|cour|rose|cours|coeur|source|course|recours|or|su|cru|sec|cure|rues|roues|soeur|sucre
+    word: couleur
+    answers: le|ce|ou|eu|or|lu|rue|cru|leur|euro|cour|cure|recul|louer|couleur|
+    validWords: le|ce|ou|eu|or|lu|rue|cru|leur|euro|cour|cure|recul|louer|couleur|col|cou|loue|roue|roule|couler
   - world: 5
     subWorld: 3
     level: 1
-    word: oeuvres
-    answers: se|ou|eu|vu|sur|vue|rue|vos|vous|vers|euro|ouvre|revue|oeuvre|oeuvres|
-    validWords: se|ou|eu|vu|sur|vue|rue|vos|vous|vers|euro|ouvre|revue|oeuvre|oeuvres|or|su|revu|rose|rues|vues|roues|soeur|revues
+    word: recours
+    answers: se|ce|ou|eu|sur|ces|rue|cru|euro|cour|rose|cours|source|course|recours|
+    validWords: se|ce|ou|eu|sur|ces|rue|cru|euro|cour|rose|cours|source|course|recours|or|su|cou|sec|cure|rues|roues|score|sucre
   - world: 5
     subWorld: 3
     level: 2

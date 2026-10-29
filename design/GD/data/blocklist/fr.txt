@@ -38,3 +38,14 @@ fur	từ tiếng Anh/ngoại lai
 sus	từ tiếng Anh/ngoại lai
 hutu	tên riêng viết thường
 sexe	nhạy cảm
+boeuf	chính tả cũ
+coeur	chính tả cũ
+manoeuvre	chính tả cũ
+manoeuvres	chính tả cũ
+moeurs	chính tả cũ
+oeil	chính tả cũ
+oeufs	chính tả cũ
+oeuvre	chính tả cũ
+oeuvres	chính tả cũ
+soeur	chính tả cũ
+soeurs	chính tả cũ

@@ -59,22 +59,22 @@
   },
   "fr": {
    "corpusLines": 10001,
-   "usableWords": 3670,
+   "usableWords": 3661,
    "rejected": {
-    "length": 3758,
+    "length": 3756,
     "uppercase/proper": 1658,
     "space/hyphen/punct/digit": 862,
-    "blocklist": 40,
+    "blocklist": 51,
     "duplicate": 1,
     "no-vowel": 11,
     "empty": 1
    },
    "seedCandidatesByLen": {
     "3": 89,
-    "4": 338,
-    "5": 679,
-    "6": 1047,
-    "7": 1208
+    "4": 337,
+    "5": 676,
+    "6": 1045,
+    "7": 1207
    },
    "quotaUsedByLen": {
     "3": 12,
@@ -91,7 +91,7 @@
     }
    ],
    "levels": 534,
-   "sha256": "466ac649dae3163089465cd44f4fd04ada6ebf9bdaf8acf4661ec166a4a658c0"
+   "sha256": "b66b710318f1aa4e34faeb769f2d0b7a31b6020179ec96a2bde4ed8af8437907"
   },
   "es": {
    "corpusLines": 10001,
@@ -128,19 +128,19 @@
   },
   "pt": {
    "corpusLines": 4928,
-   "usableWords": 3448,
+   "usableWords": 3427,
    "rejected": {
-    "length": 1333,
+    "length": 1318,
     "no-vowel": 11,
-    "blocklist": 135,
+    "blocklist": 171,
     "empty": 1
    },
    "seedCandidatesByLen": {
     "3": 123,
-    "4": 395,
-    "5": 861,
-    "6": 900,
-    "7": 809
+    "4": 392,
+    "5": 857,
+    "6": 894,
+    "7": 805
    },
    "quotaUsedByLen": {
     "3": 12,
@@ -157,7 +157,7 @@
     }
    ],
    "levels": 534,
-   "sha256": "6377e3f18605772bb4804005e69ad9a93d66d7168fee7e7cc5bed92a9dce6cc3"
+   "sha256": "3403195317241b0fffe24aae72857c5ee8441aa0425a44cbfb6ddc93393d6d9f"
   }
  },
  "outputs": {}

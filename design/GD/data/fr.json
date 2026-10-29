@@ -2225,6 +2225,34 @@
    "world": 2,
    "subworld": 2,
    "level": 4,
+   "word": "chute",
+   "answers": [
+    "et",
+    "ce",
+    "eu",
+    "tu",
+    "te",
+    "cet",
+    "eut",
+    "chute"
+   ],
+   "bonusWords": [],
+   "validWords": [
+    "et",
+    "ce",
+    "eu",
+    "tu",
+    "te",
+    "cet",
+    "eut",
+    "chute"
+   ]
+  },
+  {
+   "id": "fr-2-2-5",
+   "world": 2,
+   "subworld": 2,
+   "level": 5,
    "word": "frais",
    "answers": [
     "sa",
@@ -2249,10 +2277,10 @@
    ]
   },
   {
-   "id": "fr-2-2-5",
+   "id": "fr-2-2-6",
    "world": 2,
    "subworld": 2,
-   "level": 5,
+   "level": 6,
    "word": "table",
    "answers": [
     "la",
@@ -2277,10 +2305,10 @@
    ]
   },
   {
-   "id": "fr-2-2-6",
+   "id": "fr-2-2-7",
    "world": 2,
    "subworld": 2,
-   "level": 6,
+   "level": 7,
    "word": "donné",
    "answers": [
     "on",
@@ -2299,10 +2327,10 @@
    ]
   },
   {
-   "id": "fr-2-2-7",
+   "id": "fr-2-2-8",
    "world": 2,
    "subworld": 2,
-   "level": 7,
+   "level": 8,
    "word": "venir",
    "answers": [
     "en",
@@ -2329,10 +2357,10 @@
    ]
   },
   {
-   "id": "fr-2-2-8",
+   "id": "fr-2-2-9",
    "world": 2,
    "subworld": 2,
-   "level": 8,
+   "level": 9,
    "word": "avons",
    "answers": [
     "on",
@@ -2359,10 +2387,10 @@
    ]
   },
   {
-   "id": "fr-2-2-9",
+   "id": "fr-2-2-10",
    "world": 2,
    "subworld": 2,
-   "level": 9,
+   "level": 10,
    "word": "aucun",
    "answers": [
     "un",
@@ -2381,10 +2409,10 @@
    ]
   },
   {
-   "id": "fr-2-2-10",
+   "id": "fr-2-2-11",
    "world": 2,
    "subworld": 2,
-   "level": 10,
+   "level": 11,
    "word": "étant",
    "answers": [
     "an",
@@ -2403,10 +2431,10 @@
    ]
   },
   {
-   "id": "fr-2-2-11",
+   "id": "fr-2-2-12",
    "world": 2,
    "subworld": 2,
-   "level": 11,
+   "level": 12,
    "word": "cours",
    "answers": [
     "ou",
@@ -2433,10 +2461,10 @@
    ]
   },
   {
-   "id": "fr-2-2-12",
+   "id": "fr-2-2-13",
    "world": 2,
    "subworld": 2,
-   "level": 12,
+   "level": 13,
    "word": "peine",
    "answers": [
     "en",
@@ -2455,10 +2483,10 @@
    ]
   },
   {
-   "id": "fr-2-2-13",
+   "id": "fr-2-2-14",
    "world": 2,
    "subworld": 2,
-   "level": 13,
+   "level": 14,
    "word": "passe",
    "answers": [
     "se",
@@ -2477,10 +2505,10 @@
    ]
   },
   {
-   "id": "fr-2-2-14",
+   "id": "fr-2-2-15",
    "world": 2,
    "subworld": 2,
-   "level": 14,
+   "level": 15,
    "word": "carte",
    "answers": [
     "et",
@@ -2507,10 +2535,10 @@
    ]
   },
   {
-   "id": "fr-2-2-15",
+   "id": "fr-2-2-16",
    "world": 2,
    "subworld": 2,
-   "level": 15,
+   "level": 16,
    "word": "ville",
    "answers": [
     "le",
@@ -2529,10 +2557,10 @@
    ]
   },
   {
-   "id": "fr-2-2-16",
+   "id": "fr-2-2-17",
    "world": 2,
    "subworld": 2,
-   "level": 16,
+   "level": 17,
    "word": "avoir",
    "answers": [
     "va",
@@ -2561,10 +2589,10 @@
    ]
   },
   {
-   "id": "fr-2-2-17",
+   "id": "fr-2-2-18",
    "world": 2,
    "subworld": 2,
-   "level": 17,
+   "level": 18,
    "word": "court",
    "answers": [
     "ou",
@@ -2593,10 +2621,10 @@
    ]
   },
   {
-   "id": "fr-2-2-18",
+   "id": "fr-2-3-1",
    "world": 2,
-   "subworld": 2,
-   "level": 18,
+   "subworld": 3,
+   "level": 1,
    "word": "style",
    "answers": [
     "le",
@@ -2625,10 +2653,10 @@
    ]
   },
   {
-   "id": "fr-2-3-1",
+   "id": "fr-2-3-2",
    "world": 2,
    "subworld": 3,
-   "level": 1,
+   "level": 2,
    "word": "reste",
    "answers": [
     "et",
@@ -2649,10 +2677,10 @@
    ]
   },
   {
-   "id": "fr-2-3-2",
+   "id": "fr-2-3-3",
    "world": 2,
    "subworld": 3,
-   "level": 2,
+   "level": 3,
    "word": "année",
    "answers": [
     "en",
@@ -2673,10 +2701,10 @@
    ]
   },
   {
-   "id": "fr-2-3-3",
+   "id": "fr-2-3-4",
    "world": 2,
    "subworld": 3,
-   "level": 3,
+   "level": 4,
    "word": "temps",
    "answers": [
     "et",
@@ -2705,10 +2733,10 @@
    ]
   },
   {
-   "id": "fr-2-3-4",
+   "id": "fr-2-3-5",
    "world": 2,
    "subworld": 3,
-   "level": 4,
+   "level": 5,
    "word": "durée",
    "answers": [
     "de",
@@ -2737,10 +2765,10 @@
    ]
   },
   {
-   "id": "fr-2-3-5",
+   "id": "fr-2-3-6",
    "world": 2,
    "subworld": 3,
-   "level": 5,
+   "level": 6,
    "word": "sorte",
    "answers": [
     "et",
@@ -2769,10 +2797,10 @@
    ]
   },
   {
-   "id": "fr-2-3-6",
+   "id": "fr-2-3-7",
    "world": 2,
    "subworld": 3,
-   "level": 6,
+   "level": 7,
    "word": "avait",
    "answers": [
     "va",
@@ -2793,10 +2821,10 @@
    ]
   },
   {
-   "id": "fr-2-3-7",
+   "id": "fr-2-3-8",
    "world": 2,
    "subworld": 3,
-   "level": 7,
+   "level": 8,
    "word": "titre",
    "answers": [
     "et",
@@ -2817,10 +2845,10 @@
    ]
   },
   {
-   "id": "fr-2-3-8",
+   "id": "fr-2-3-9",
    "world": 2,
    "subworld": 3,
-   "level": 8,
+   "level": 9,
    "word": "avril",
    "answers": [
     "la",
@@ -2849,10 +2877,10 @@
    ]
   },
   {
-   "id": "fr-2-3-9",
+   "id": "fr-2-3-10",
    "world": 2,
    "subworld": 3,
-   "level": 9,
+   "level": 10,
    "word": "femme",
    "answers": [
     "me",
@@ -2865,10 +2893,10 @@
    ]
   },
   {
-   "id": "fr-2-3-10",
+   "id": "fr-2-3-11",
    "world": 2,
    "subworld": 3,
-   "level": 10,
+   "level": 11,
    "word": "bonne",
    "answers": [
     "en",
@@ -2889,10 +2917,10 @@
    ]
   },
   {
-   "id": "fr-2-3-11",
+   "id": "fr-2-3-12",
    "world": 2,
    "subworld": 3,
-   "level": 11,
+   "level": 12,
    "word": "monde",
    "answers": [
     "de",
@@ -2921,10 +2949,10 @@
    ]
   },
   {
-   "id": "fr-2-3-12",
+   "id": "fr-2-3-13",
    "world": 2,
    "subworld": 3,
-   "level": 12,
+   "level": 13,
    "word": "celui",
    "answers": [
     "le",
@@ -2953,10 +2981,10 @@
    ]
   },
   {
-   "id": "fr-2-3-13",
+   "id": "fr-2-3-14",
    "world": 2,
    "subworld": 3,
-   "level": 13,
+   "level": 14,
    "word": "connu",
    "answers": [
     "un",
@@ -2979,10 +3007,10 @@
    ]
   },
   {
-   "id": "fr-2-3-14",
+   "id": "fr-2-3-15",
    "world": 2,
    "subworld": 3,
-   "level": 14,
+   "level": 15,
    "word": "enfin",
    "answers": [
     "en",
@@ -3005,10 +3033,10 @@
    ]
   },
   {
-   "id": "fr-2-3-15",
+   "id": "fr-2-3-16",
    "world": 2,
    "subworld": 3,
-   "level": 15,
+   "level": 16,
    "word": "donne",
    "answers": [
     "de",
@@ -3031,10 +3059,10 @@
    ]
   },
   {
-   "id": "fr-2-3-16",
+   "id": "fr-2-3-17",
    "world": 2,
    "subworld": 3,
-   "level": 16,
+   "level": 17,
    "word": "terme",
    "answers": [
     "et",
@@ -3057,10 +3085,10 @@
    ]
   },
   {
-   "id": "fr-2-3-17",
+   "id": "fr-2-3-18",
    "world": 2,
    "subworld": 3,
-   "level": 17,
+   "level": 18,
    "word": "autre",
    "answers": [
     "et",
@@ -3091,10 +3119,10 @@
    ]
   },
   {
-   "id": "fr-2-3-18",
+   "id": "fr-2-4-1",
    "world": 2,
-   "subworld": 3,
-   "level": 18,
+   "subworld": 4,
+   "level": 1,
    "word": "jouer",
    "answers": [
     "ou",
@@ -3125,10 +3153,10 @@
    ]
   },
   {
-   "id": "fr-2-4-1",
+   "id": "fr-2-4-2",
    "world": 2,
    "subworld": 4,
-   "level": 1,
+   "level": 2,
    "word": "plein",
    "answers": [
     "le",
@@ -3159,10 +3187,10 @@
    ]
   },
   {
-   "id": "fr-2-4-2",
+   "id": "fr-2-4-3",
    "world": 2,
    "subworld": 4,
-   "level": 2,
+   "level": 3,
    "word": "porte",
    "answers": [
     "et",
@@ -3193,10 +3221,10 @@
    ]
   },
   {
-   "id": "fr-2-4-3",
+   "id": "fr-2-4-4",
    "world": 2,
    "subworld": 4,
-   "level": 3,
+   "level": 4,
    "word": "vente",
    "answers": [
     "et",
@@ -3219,10 +3247,10 @@
    ]
   },
   {
-   "id": "fr-2-4-4",
+   "id": "fr-2-4-5",
    "world": 2,
    "subworld": 4,
-   "level": 4,
+   "level": 5,
    "word": "parmi",
    "answers": [
     "ma",
@@ -3253,10 +3281,10 @@
    ]
   },
   {
-   "id": "fr-2-4-5",
+   "id": "fr-2-4-6",
    "world": 2,
    "subworld": 4,
-   "level": 5,
+   "level": 6,
    "word": "doute",
    "answers": [
     "de",
@@ -3287,10 +3315,10 @@
    ]
   },
   {
-   "id": "fr-2-4-6",
+   "id": "fr-2-4-7",
    "world": 2,
    "subworld": 4,
-   "level": 6,
+   "level": 7,
    "word": "texte",
    "answers": [
     "et",
@@ -3305,10 +3333,10 @@
    ]
   },
   {
-   "id": "fr-2-4-7",
+   "id": "fr-2-4-8",
    "world": 2,
    "subworld": 4,
-   "level": 7,
+   "level": 8,
    "word": "effet",
    "answers": [
     "et",
@@ -3323,10 +3351,10 @@
    ]
   },
   {
-   "id": "fr-2-4-8",
+   "id": "fr-2-4-9",
    "world": 2,
    "subworld": 4,
-   "level": 8,
+   "level": 9,
    "word": "entre",
    "answers": [
     "et",
@@ -3349,10 +3377,10 @@
    ]
   },
   {
-   "id": "fr-2-4-9",
+   "id": "fr-2-4-10",
    "world": 2,
    "subworld": 4,
-   "level": 9,
+   "level": 10,
    "word": "terre",
    "answers": [
     "et",
@@ -3367,10 +3395,10 @@
    ]
   },
   {
-   "id": "fr-2-4-10",
+   "id": "fr-2-4-11",
    "world": 2,
    "subworld": 4,
-   "level": 10,
+   "level": 11,
    "word": "celle",
    "answers": [
     "le",
@@ -3387,10 +3415,10 @@
    ]
   },
   {
-   "id": "fr-2-4-11",
+   "id": "fr-2-4-12",
    "world": 2,
    "subworld": 4,
-   "level": 11,
+   "level": 12,
    "word": "salle",
    "answers": [
     "la",
@@ -3415,10 +3443,10 @@
    ]
   },
   {
-   "id": "fr-2-4-12",
+   "id": "fr-2-4-13",
    "world": 2,
    "subworld": 4,
-   "level": 12,
+   "level": 13,
    "word": "notre",
    "answers": [
     "et",
@@ -3451,10 +3479,10 @@
    ]
   },
   {
-   "id": "fr-2-4-13",
+   "id": "fr-2-4-14",
    "world": 2,
    "subworld": 4,
-   "level": 13,
+   "level": 14,
    "word": "selon",
    "answers": [
     "le",
@@ -3487,10 +3515,10 @@
    ]
   },
   {
-   "id": "fr-2-4-14",
+   "id": "fr-2-4-15",
    "world": 2,
    "subworld": 4,
-   "level": 14,
+   "level": 15,
    "word": "tiers",
    "answers": [
     "et",
@@ -3523,10 +3551,10 @@
    ]
   },
   {
-   "id": "fr-2-4-15",
+   "id": "fr-2-4-16",
    "world": 2,
    "subworld": 4,
-   "level": 15,
+   "level": 16,
    "word": "ainsi",
    "answers": [
     "sa",
@@ -3551,10 +3579,10 @@
    ]
   },
   {
-   "id": "fr-2-4-16",
+   "id": "fr-2-4-17",
    "world": 2,
    "subworld": 4,
-   "level": 16,
+   "level": 17,
    "word": "parti",
    "answers": [
     "ai",
@@ -3587,10 +3615,10 @@
    ]
   },
   {
-   "id": "fr-2-4-17",
+   "id": "fr-2-4-18",
    "world": 2,
    "subworld": 4,
-   "level": 17,
+   "level": 18,
    "word": "ligne",
    "answers": [
     "le",
@@ -3620,42 +3648,6 @@
     "lien",
     "ligne",
     "linge"
-   ]
-  },
-  {
-   "id": "fr-2-4-18",
-   "world": 2,
-   "subworld": 4,
-   "level": 18,
-   "word": "coeur",
-   "answers": [
-    "ce",
-    "ou",
-    "eu",
-    "or",
-    "rue",
-    "cru",
-    "cou",
-    "euro",
-    "cour",
-    "cure",
-    "roue",
-    "coeur"
-   ],
-   "bonusWords": [],
-   "validWords": [
-    "ce",
-    "ou",
-    "eu",
-    "or",
-    "rue",
-    "cru",
-    "cou",
-    "euro",
-    "cour",
-    "cure",
-    "roue",
-    "coeur"
    ]
   },
   {
@@ -4765,6 +4757,36 @@
    "world": 3,
    "subworld": 2,
    "level": 5,
+   "word": "acheté",
+   "answers": [
+    "et",
+    "ce",
+    "te",
+    "cet",
+    "thé",
+    "acte",
+    "chat",
+    "tache",
+    "acheté"
+   ],
+   "bonusWords": [],
+   "validWords": [
+    "et",
+    "ce",
+    "te",
+    "cet",
+    "thé",
+    "acte",
+    "chat",
+    "tache",
+    "acheté"
+   ]
+  },
+  {
+   "id": "fr-3-2-6",
+   "world": 3,
+   "subworld": 2,
+   "level": 6,
    "word": "rachat",
    "answers": [
     "car",
@@ -4783,10 +4805,10 @@
    ]
   },
   {
-   "id": "fr-3-2-6",
+   "id": "fr-3-2-7",
    "world": 3,
    "subworld": 2,
-   "level": 6,
+   "level": 7,
    "word": "région",
    "answers": [
     "on",
@@ -4813,10 +4835,10 @@
    ]
   },
   {
-   "id": "fr-3-2-7",
+   "id": "fr-3-2-8",
    "world": 3,
    "subworld": 2,
-   "level": 7,
+   "level": 8,
    "word": "faudra",
    "answers": [
     "du",
@@ -4835,10 +4857,10 @@
    ]
   },
   {
-   "id": "fr-3-2-8",
+   "id": "fr-3-2-9",
    "world": 3,
    "subworld": 2,
-   "level": 8,
+   "level": 9,
    "word": "vendre",
    "answers": [
     "de",
@@ -4859,10 +4881,10 @@
    ]
   },
   {
-   "id": "fr-3-2-9",
+   "id": "fr-3-2-10",
    "world": 3,
    "subworld": 2,
-   "level": 9,
+   "level": 10,
    "word": "crédit",
    "answers": [
     "dit",
@@ -4891,10 +4913,10 @@
    ]
   },
   {
-   "id": "fr-3-2-10",
+   "id": "fr-3-2-11",
    "world": 3,
    "subworld": 2,
-   "level": 10,
+   "level": 11,
    "word": "grands",
    "answers": [
     "sa",
@@ -4923,10 +4945,10 @@
    ]
   },
   {
-   "id": "fr-3-2-11",
+   "id": "fr-3-2-12",
    "world": 3,
    "subworld": 2,
-   "level": 11,
+   "level": 12,
    "word": "penser",
    "answers": [
     "en",
@@ -4947,10 +4969,10 @@
    ]
   },
   {
-   "id": "fr-3-2-12",
+   "id": "fr-3-2-13",
    "world": 3,
    "subworld": 2,
-   "level": 12,
+   "level": 13,
    "word": "réduit",
    "answers": [
     "du",
@@ -4979,10 +5001,10 @@
    ]
   },
   {
-   "id": "fr-3-2-13",
+   "id": "fr-3-2-14",
    "world": 3,
    "subworld": 2,
-   "level": 13,
+   "level": 14,
    "word": "encore",
    "answers": [
     "en",
@@ -5003,10 +5025,10 @@
    ]
   },
   {
-   "id": "fr-3-2-14",
+   "id": "fr-3-2-15",
    "world": 3,
    "subworld": 2,
-   "level": 14,
+   "level": 15,
    "word": "parler",
    "answers": [
     "la",
@@ -5027,10 +5049,10 @@
    ]
   },
   {
-   "id": "fr-3-2-15",
+   "id": "fr-3-2-16",
    "world": 3,
    "subworld": 2,
-   "level": 15,
+   "level": 16,
    "word": "durant",
    "answers": [
     "un",
@@ -5059,10 +5081,10 @@
    ]
   },
   {
-   "id": "fr-3-2-16",
+   "id": "fr-3-2-17",
    "world": 3,
    "subworld": 2,
-   "level": 16,
+   "level": 17,
    "word": "numéro",
    "answers": [
     "un",
@@ -5091,10 +5113,10 @@
    ]
   },
   {
-   "id": "fr-3-2-17",
+   "id": "fr-3-2-18",
    "world": 3,
    "subworld": 2,
-   "level": 17,
+   "level": 18,
    "word": "croire",
    "answers": [
     "ce",
@@ -5115,10 +5137,10 @@
    ]
   },
   {
-   "id": "fr-3-2-18",
+   "id": "fr-3-3-1",
    "world": 3,
-   "subworld": 2,
-   "level": 18,
+   "subworld": 3,
+   "level": 1,
    "word": "hommes",
    "answers": [
     "se",
@@ -5141,10 +5163,10 @@
    ]
   },
   {
-   "id": "fr-3-3-1",
+   "id": "fr-3-3-2",
    "world": 3,
    "subworld": 3,
-   "level": 1,
+   "level": 2,
    "word": "faible",
    "answers": [
     "la",
@@ -5175,10 +5197,10 @@
    ]
   },
   {
-   "id": "fr-3-3-2",
+   "id": "fr-3-3-3",
    "world": 3,
    "subworld": 3,
-   "level": 2,
+   "level": 3,
    "word": "marque",
    "answers": [
     "au",
@@ -5209,10 +5231,10 @@
    ]
   },
   {
-   "id": "fr-3-3-3",
+   "id": "fr-3-3-4",
    "world": 3,
    "subworld": 3,
-   "level": 3,
+   "level": 4,
    "word": "guerre",
    "answers": [
     "eu",
@@ -5227,10 +5249,10 @@
    ]
   },
   {
-   "id": "fr-3-3-4",
+   "id": "fr-3-3-5",
    "world": 3,
    "subworld": 3,
-   "level": 4,
+   "level": 5,
    "word": "réseau",
    "answers": [
     "au",
@@ -5261,10 +5283,10 @@
    ]
   },
   {
-   "id": "fr-3-3-5",
+   "id": "fr-3-3-6",
    "world": 3,
    "subworld": 3,
-   "level": 5,
+   "level": 6,
    "word": "chemin",
    "answers": [
     "en",
@@ -5295,10 +5317,10 @@
    ]
   },
   {
-   "id": "fr-3-3-6",
+   "id": "fr-3-3-7",
    "world": 3,
    "subworld": 3,
-   "level": 6,
+   "level": 7,
    "word": "cinéma",
    "answers": [
     "an",
@@ -5329,10 +5351,10 @@
    ]
   },
   {
-   "id": "fr-3-3-7",
+   "id": "fr-3-3-8",
    "world": 3,
    "subworld": 3,
-   "level": 7,
+   "level": 8,
    "word": "budget",
    "answers": [
     "de",
@@ -5363,10 +5385,10 @@
    ]
   },
   {
-   "id": "fr-3-3-8",
+   "id": "fr-3-3-9",
    "world": 3,
    "subworld": 3,
-   "level": 8,
+   "level": 9,
    "word": "décidé",
    "answers": [
     "cédé",
@@ -5381,10 +5403,10 @@
    ]
   },
   {
-   "id": "fr-3-3-9",
+   "id": "fr-3-3-10",
    "world": 3,
    "subworld": 3,
-   "level": 9,
+   "level": 10,
    "word": "réussi",
    "answers": [
     "si",
@@ -5407,10 +5429,10 @@
    ]
   },
   {
-   "id": "fr-3-3-10",
+   "id": "fr-3-3-11",
    "world": 3,
    "subworld": 3,
-   "level": 10,
+   "level": 11,
    "word": "perdre",
    "answers": [
     "de",
@@ -5425,10 +5447,10 @@
    ]
   },
   {
-   "id": "fr-3-3-11",
+   "id": "fr-3-3-12",
    "world": 3,
    "subworld": 3,
-   "level": 11,
+   "level": 12,
    "word": "acquis",
    "answers": [
     "au",
@@ -5459,10 +5481,10 @@
    ]
   },
   {
-   "id": "fr-3-3-12",
+   "id": "fr-3-3-13",
    "world": 3,
    "subworld": 3,
-   "level": 12,
+   "level": 13,
    "word": "regard",
    "answers": [
     "de",
@@ -5485,10 +5507,10 @@
    ]
   },
   {
-   "id": "fr-3-3-13",
+   "id": "fr-3-3-14",
    "world": 3,
    "subworld": 3,
-   "level": 13,
+   "level": 14,
    "word": "élevés",
    "answers": [
     "le",
@@ -5511,10 +5533,10 @@
    ]
   },
   {
-   "id": "fr-3-3-14",
+   "id": "fr-3-3-15",
    "world": 3,
    "subworld": 3,
-   "level": 14,
+   "level": 15,
    "word": "volume",
    "answers": [
     "le",
@@ -5545,10 +5567,10 @@
    ]
   },
   {
-   "id": "fr-3-3-15",
+   "id": "fr-3-3-16",
    "world": 3,
    "subworld": 3,
-   "level": 15,
+   "level": 16,
    "word": "bureau",
    "answers": [
     "au",
@@ -5571,10 +5593,10 @@
    ]
   },
   {
-   "id": "fr-3-3-16",
+   "id": "fr-3-3-17",
    "world": 3,
    "subworld": 3,
-   "level": 16,
+   "level": 17,
    "word": "éviter",
    "answers": [
     "et",
@@ -5607,10 +5629,10 @@
    ]
   },
   {
-   "id": "fr-3-3-17",
+   "id": "fr-3-3-18",
    "world": 3,
    "subworld": 3,
-   "level": 17,
+   "level": 18,
    "word": "grande",
    "answers": [
     "de",
@@ -5643,10 +5665,10 @@
    ]
   },
   {
-   "id": "fr-3-3-18",
+   "id": "fr-3-4-1",
    "world": 3,
-   "subworld": 3,
-   "level": 18,
+   "subworld": 4,
+   "level": 1,
    "word": "presse",
    "answers": [
     "se",
@@ -5663,10 +5685,10 @@
    ]
   },
   {
-   "id": "fr-3-4-1",
+   "id": "fr-3-4-2",
    "world": 3,
    "subworld": 4,
-   "level": 1,
+   "level": 2,
    "word": "totale",
    "answers": [
     "la",
@@ -5691,10 +5713,10 @@
    ]
   },
   {
-   "id": "fr-3-4-2",
+   "id": "fr-3-4-3",
    "world": 3,
    "subworld": 4,
-   "level": 2,
+   "level": 3,
    "word": "hausse",
    "answers": [
     "au",
@@ -5719,10 +5741,10 @@
    ]
   },
   {
-   "id": "fr-3-4-3",
+   "id": "fr-3-4-4",
    "world": 3,
    "subworld": 4,
-   "level": 3,
+   "level": 4,
    "word": "suffit",
    "answers": [
     "si",
@@ -5747,10 +5769,10 @@
    ]
   },
   {
-   "id": "fr-3-4-4",
+   "id": "fr-3-4-5",
    "world": 3,
    "subworld": 4,
-   "level": 4,
+   "level": 5,
    "word": "ancien",
    "answers": [
     "en",
@@ -5775,10 +5797,10 @@
    ]
   },
   {
-   "id": "fr-3-4-5",
+   "id": "fr-3-4-6",
    "world": 3,
    "subworld": 4,
-   "level": 5,
+   "level": 6,
    "word": "climat",
    "answers": [
     "la",
@@ -5811,10 +5833,10 @@
    ]
   },
   {
-   "id": "fr-3-4-6",
+   "id": "fr-3-4-7",
    "world": 3,
    "subworld": 4,
-   "level": 6,
+   "level": 7,
    "word": "métier",
    "answers": [
     "et",
@@ -5847,10 +5869,10 @@
    ]
   },
   {
-   "id": "fr-3-4-7",
+   "id": "fr-3-4-8",
    "world": 3,
    "subworld": 4,
-   "level": 7,
+   "level": 8,
    "word": "semble",
    "answers": [
     "le",
@@ -5875,10 +5897,10 @@
    ]
   },
   {
-   "id": "fr-3-4-8",
+   "id": "fr-3-4-9",
    "world": 3,
    "subworld": 4,
-   "level": 8,
+   "level": 9,
    "word": "existe",
    "answers": [
     "et",
@@ -5903,10 +5925,10 @@
    ]
   },
   {
-   "id": "fr-3-4-9",
+   "id": "fr-3-4-10",
    "world": 3,
    "subworld": 4,
-   "level": 9,
+   "level": 10,
    "word": "risque",
    "answers": [
     "se",
@@ -5939,10 +5961,10 @@
    ]
   },
   {
-   "id": "fr-3-4-10",
+   "id": "fr-3-4-11",
    "world": 3,
    "subworld": 4,
-   "level": 10,
+   "level": 11,
    "word": "petite",
    "answers": [
     "et",
@@ -5959,10 +5981,10 @@
    ]
   },
   {
-   "id": "fr-3-4-11",
+   "id": "fr-3-4-12",
    "world": 3,
    "subworld": 4,
-   "level": 11,
+   "level": 12,
    "word": "heures",
    "answers": [
     "se",
@@ -5987,10 +6009,10 @@
    ]
   },
   {
-   "id": "fr-3-4-12",
+   "id": "fr-3-4-13",
    "world": 3,
    "subworld": 4,
-   "level": 12,
+   "level": 13,
    "word": "belges",
    "answers": [
     "le",
@@ -6015,10 +6037,10 @@
    ]
   },
   {
-   "id": "fr-3-4-13",
+   "id": "fr-3-4-14",
    "world": 3,
    "subworld": 4,
-   "level": 13,
+   "level": 14,
    "word": "commun",
    "answers": [
     "un",
@@ -6043,10 +6065,10 @@
    ]
   },
   {
-   "id": "fr-3-4-14",
+   "id": "fr-3-4-15",
    "world": 3,
    "subworld": 4,
-   "level": 14,
+   "level": 15,
    "word": "banque",
    "answers": [
     "en",
@@ -6079,10 +6101,10 @@
    ]
   },
   {
-   "id": "fr-3-4-15",
+   "id": "fr-3-4-16",
    "world": 3,
    "subworld": 4,
-   "level": 15,
+   "level": 16,
    "word": "propos",
    "answers": [
     "or",
@@ -6099,10 +6121,10 @@
    ]
   },
   {
-   "id": "fr-3-4-16",
+   "id": "fr-3-4-17",
    "world": 3,
    "subworld": 4,
-   "level": 16,
+   "level": 17,
    "word": "coupon",
    "answers": [
     "un",
@@ -6127,10 +6149,10 @@
    ]
   },
   {
-   "id": "fr-3-4-17",
+   "id": "fr-3-4-18",
    "world": 3,
    "subworld": 4,
-   "level": 17,
+   "level": 18,
    "word": "propre",
    "answers": [
     "or",
@@ -6147,10 +6169,10 @@
    ]
   },
   {
-   "id": "fr-3-4-18",
+   "id": "fr-3-5-1",
    "world": 3,
-   "subworld": 4,
-   "level": 18,
+   "subworld": 5,
+   "level": 1,
    "word": "faveur",
    "answers": [
     "au",
@@ -6185,10 +6207,10 @@
    ]
   },
   {
-   "id": "fr-3-5-1",
+   "id": "fr-3-5-2",
    "world": 3,
    "subworld": 5,
-   "level": 1,
+   "level": 2,
    "word": "permet",
    "answers": [
     "et",
@@ -6215,10 +6237,10 @@
    ]
   },
   {
-   "id": "fr-3-5-2",
+   "id": "fr-3-5-3",
    "world": 3,
    "subworld": 5,
-   "level": 2,
+   "level": 3,
    "word": "passer",
    "answers": [
     "se",
@@ -6245,10 +6267,10 @@
    ]
   },
   {
-   "id": "fr-3-5-3",
+   "id": "fr-3-5-4",
    "world": 3,
    "subworld": 5,
-   "level": 3,
+   "level": 4,
    "word": "nombre",
    "answers": [
     "en",
@@ -6283,10 +6305,10 @@
    ]
   },
   {
-   "id": "fr-3-5-4",
+   "id": "fr-3-5-5",
    "world": 3,
    "subworld": 5,
-   "level": 4,
+   "level": 5,
    "word": "lancer",
    "answers": [
     "la",
@@ -6321,10 +6343,10 @@
    ]
   },
   {
-   "id": "fr-3-5-5",
+   "id": "fr-3-5-6",
    "world": 3,
    "subworld": 5,
-   "level": 5,
+   "level": 6,
    "word": "devant",
    "answers": [
     "de",
@@ -6359,10 +6381,10 @@
    ]
   },
   {
-   "id": "fr-3-5-6",
+   "id": "fr-3-5-7",
    "world": 3,
    "subworld": 5,
-   "level": 6,
+   "level": 7,
    "word": "compte",
    "answers": [
     "et",
@@ -6397,10 +6419,10 @@
    ]
   },
   {
-   "id": "fr-3-5-7",
+   "id": "fr-3-5-8",
    "world": 3,
    "subworld": 5,
-   "level": 7,
+   "level": 8,
    "word": "femmes",
    "answers": [
     "se",
@@ -6419,10 +6441,10 @@
    ]
   },
   {
-   "id": "fr-3-5-8",
+   "id": "fr-3-5-9",
    "world": 3,
    "subworld": 5,
-   "level": 8,
+   "level": 9,
    "word": "choses",
    "answers": [
     "se",
@@ -6449,10 +6471,10 @@
    ]
   },
   {
-   "id": "fr-3-5-9",
+   "id": "fr-3-5-10",
    "world": 3,
    "subworld": 5,
-   "level": 9,
+   "level": 10,
    "word": "double",
    "answers": [
     "de",
@@ -6487,10 +6509,10 @@
    ]
   },
   {
-   "id": "fr-3-5-10",
+   "id": "fr-3-5-11",
    "world": 3,
    "subworld": 5,
-   "level": 10,
+   "level": 11,
    "word": "autour",
    "answers": [
     "au",
@@ -6517,10 +6539,10 @@
    ]
   },
   {
-   "id": "fr-3-5-11",
+   "id": "fr-3-5-12",
    "world": 3,
    "subworld": 5,
-   "level": 11,
+   "level": 12,
    "word": "rendre",
    "answers": [
     "de",
@@ -6539,10 +6561,10 @@
    ]
   },
   {
-   "id": "fr-3-5-12",
+   "id": "fr-3-5-13",
    "world": 3,
    "subworld": 5,
-   "level": 12,
+   "level": 13,
    "word": "projet",
    "answers": [
     "et",
@@ -6579,10 +6601,10 @@
    ]
   },
   {
-   "id": "fr-3-5-13",
+   "id": "fr-3-5-14",
    "world": 3,
    "subworld": 5,
-   "level": 13,
+   "level": 14,
    "word": "quatre",
    "answers": [
     "et",
@@ -6619,10 +6641,10 @@
    ]
   },
   {
-   "id": "fr-3-5-14",
+   "id": "fr-3-5-15",
    "world": 3,
    "subworld": 5,
-   "level": 14,
+   "level": 15,
    "word": "jamais",
    "answers": [
     "sa",
@@ -6651,10 +6673,10 @@
    ]
   },
   {
-   "id": "fr-3-5-15",
+   "id": "fr-3-5-16",
    "world": 3,
    "subworld": 5,
-   "level": 15,
+   "level": 16,
    "word": "milieu",
    "answers": [
     "le",
@@ -6683,10 +6705,10 @@
    ]
   },
   {
-   "id": "fr-3-5-16",
+   "id": "fr-3-5-17",
    "world": 3,
    "subworld": 5,
-   "level": 16,
+   "level": 17,
    "word": "fiscal",
    "answers": [
     "la",
@@ -6723,10 +6745,10 @@
    ]
   },
   {
-   "id": "fr-3-5-17",
+   "id": "fr-3-5-18",
    "world": 3,
    "subworld": 5,
-   "level": 17,
+   "level": 18,
    "word": "effets",
    "answers": [
     "et",
@@ -6747,10 +6769,10 @@
    ]
   },
   {
-   "id": "fr-3-5-18",
-   "world": 3,
-   "subworld": 5,
-   "level": 18,
+   "id": "fr-4-1-1",
+   "world": 4,
+   "subworld": 1,
+   "level": 1,
    "word": "facile",
    "answers": [
     "la",
@@ -6787,10 +6809,10 @@
    ]
   },
   {
-   "id": "fr-4-1-1",
+   "id": "fr-4-1-2",
    "world": 4,
    "subworld": 1,
-   "level": 1,
+   "level": 2,
    "word": "pourra",
    "answers": [
     "au",
@@ -6819,10 +6841,10 @@
    ]
   },
   {
-   "id": "fr-4-1-2",
+   "id": "fr-4-1-3",
    "world": 4,
    "subworld": 1,
-   "level": 2,
+   "level": 3,
    "word": "manque",
    "answers": [
     "en",
@@ -6859,10 +6881,10 @@
    ]
   },
   {
-   "id": "fr-4-1-3",
+   "id": "fr-4-1-4",
    "world": 4,
    "subworld": 1,
-   "level": 3,
+   "level": 4,
    "word": "profit",
    "answers": [
     "or",
@@ -6899,10 +6921,10 @@
    ]
   },
   {
-   "id": "fr-4-1-4",
+   "id": "fr-4-1-5",
    "world": 4,
    "subworld": 1,
-   "level": 4,
+   "level": 5,
    "word": "moyens",
    "answers": [
     "en",
@@ -6944,10 +6966,10 @@
    ]
   },
   {
-   "id": "fr-4-1-5",
+   "id": "fr-4-1-6",
    "world": 4,
    "subworld": 1,
-   "level": 5,
+   "level": 6,
    "word": "groupe",
    "answers": [
     "ou",
@@ -6986,10 +7008,10 @@
    ]
   },
   {
-   "id": "fr-4-1-6",
+   "id": "fr-4-1-7",
    "world": 4,
    "subworld": 1,
-   "level": 6,
+   "level": 7,
    "word": "social",
    "answers": [
     "la",
@@ -7033,10 +7055,10 @@
    ]
   },
   {
-   "id": "fr-4-1-7",
+   "id": "fr-4-1-8",
    "world": 4,
    "subworld": 1,
-   "level": 7,
+   "level": 8,
    "word": "simple",
    "answers": [
     "le",
@@ -7080,10 +7102,10 @@
    ]
   },
   {
-   "id": "fr-4-1-8",
+   "id": "fr-4-1-9",
    "world": 4,
    "subworld": 1,
-   "level": 8,
+   "level": 9,
    "word": "permis",
    "answers": [
     "se",
@@ -7125,10 +7147,10 @@
    ]
   },
   {
-   "id": "fr-4-1-9",
+   "id": "fr-4-1-10",
    "world": 4,
    "subworld": 1,
-   "level": 9,
+   "level": 10,
    "word": "direct",
    "answers": [
     "de",
@@ -7167,10 +7189,10 @@
    ]
   },
   {
-   "id": "fr-4-1-10",
+   "id": "fr-4-1-11",
    "world": 4,
    "subworld": 1,
-   "level": 10,
+   "level": 11,
    "word": "raison",
    "answers": [
     "on",
@@ -7222,10 +7244,10 @@
    ]
   },
   {
-   "id": "fr-4-1-11",
+   "id": "fr-4-1-12",
    "world": 4,
    "subworld": 1,
-   "level": 11,
+   "level": 12,
    "word": "serait",
    "answers": [
     "et",
@@ -7283,10 +7305,10 @@
    ]
   },
   {
-   "id": "fr-4-1-12",
+   "id": "fr-4-1-13",
    "world": 4,
    "subworld": 1,
-   "level": 12,
+   "level": 13,
    "word": "centre",
    "answers": [
     "et",
@@ -7317,10 +7339,10 @@
    ]
   },
   {
-   "id": "fr-4-1-13",
+   "id": "fr-4-1-14",
    "world": 4,
    "subworld": 1,
-   "level": 13,
+   "level": 14,
    "word": "autant",
    "answers": [
     "un",
@@ -7343,10 +7365,10 @@
    ]
   },
   {
-   "id": "fr-4-1-14",
+   "id": "fr-4-1-15",
    "world": 4,
    "subworld": 1,
-   "level": 14,
+   "level": 15,
    "word": "limite",
    "answers": [
     "le",
@@ -7377,10 +7399,10 @@
    ]
   },
   {
-   "id": "fr-4-1-15",
+   "id": "fr-4-1-16",
    "world": 4,
    "subworld": 1,
-   "level": 15,
+   "level": 16,
    "word": "second",
    "answers": [
     "de",
@@ -7432,10 +7454,10 @@
    ]
   },
   {
-   "id": "fr-4-1-16",
+   "id": "fr-4-1-17",
    "world": 4,
    "subworld": 1,
-   "level": 16,
+   "level": 17,
    "word": "savoir",
    "answers": [
     "sa",
@@ -7491,10 +7513,10 @@
    ]
   },
   {
-   "id": "fr-4-1-17",
+   "id": "fr-4-1-18",
    "world": 4,
    "subworld": 1,
-   "level": 17,
+   "level": 18,
    "word": "cartes",
    "answers": [
     "et",
@@ -7552,10 +7574,10 @@
    ]
   },
   {
-   "id": "fr-4-1-18",
+   "id": "fr-4-2-1",
    "world": 4,
-   "subworld": 1,
-   "level": 18,
+   "subworld": 2,
+   "level": 1,
    "word": "divers",
    "answers": [
     "de",
@@ -7599,10 +7621,10 @@
    ]
   },
   {
-   "id": "fr-4-2-1",
+   "id": "fr-4-2-2",
    "world": 4,
    "subworld": 2,
-   "level": 1,
+   "level": 2,
    "word": "sommes",
    "answers": [
     "se",
@@ -7625,10 +7647,10 @@
    ]
   },
   {
-   "id": "fr-4-2-2",
+   "id": "fr-4-2-3",
    "world": 4,
    "subworld": 2,
-   "level": 2,
+   "level": 3,
    "word": "droits",
    "answers": [
     "si",
@@ -7680,10 +7702,10 @@
    ]
   },
   {
-   "id": "fr-4-2-3",
+   "id": "fr-4-2-4",
    "world": 4,
    "subworld": 2,
-   "level": 3,
+   "level": 4,
    "word": "études",
    "answers": [
     "de",
@@ -7731,10 +7753,10 @@
    ]
   },
   {
-   "id": "fr-4-2-4",
+   "id": "fr-4-2-5",
    "world": 4,
    "subworld": 2,
-   "level": 4,
+   "level": 5,
    "word": "valeur",
    "answers": [
     "la",
@@ -7776,10 +7798,10 @@
    ]
   },
   {
-   "id": "fr-4-2-5",
+   "id": "fr-4-2-6",
    "world": 4,
    "subworld": 2,
-   "level": 5,
+   "level": 6,
    "word": "lignes",
    "answers": [
     "le",
@@ -7835,10 +7857,10 @@
    ]
   },
   {
-   "id": "fr-4-2-6",
+   "id": "fr-4-2-7",
    "world": 4,
    "subworld": 2,
-   "level": 6,
+   "level": 7,
    "word": "aurait",
    "answers": [
     "au",
@@ -7869,10 +7891,10 @@
    ]
   },
   {
-   "id": "fr-4-2-7",
+   "id": "fr-4-2-8",
    "world": 4,
    "subworld": 2,
-   "level": 7,
+   "level": 8,
    "word": "unique",
    "answers": [
     "en",
@@ -7903,10 +7925,10 @@
    ]
   },
   {
-   "id": "fr-4-2-8",
+   "id": "fr-4-2-9",
    "world": 4,
    "subworld": 2,
-   "level": 8,
+   "level": 9,
    "word": "soient",
    "answers": [
     "et",
@@ -7964,10 +7986,10 @@
    ]
   },
   {
-   "id": "fr-4-2-9",
+   "id": "fr-4-2-10",
    "world": 4,
    "subworld": 2,
-   "level": 9,
+   "level": 10,
    "word": "droite",
    "answers": [
     "de",
@@ -8009,10 +8031,10 @@
    ]
   },
   {
-   "id": "fr-4-2-10",
+   "id": "fr-4-2-11",
    "world": 4,
    "subworld": 2,
-   "level": 10,
+   "level": 11,
    "word": "devait",
    "answers": [
     "de",
@@ -8054,10 +8076,10 @@
    ]
   },
   {
-   "id": "fr-4-2-11",
+   "id": "fr-4-2-12",
    "world": 4,
    "subworld": 2,
-   "level": 11,
+   "level": 12,
    "word": "nouvel",
    "answers": [
     "le",
@@ -8107,10 +8129,10 @@
    ]
   },
   {
-   "id": "fr-4-2-12",
+   "id": "fr-4-2-13",
    "world": 4,
    "subworld": 2,
-   "level": 12,
+   "level": 13,
    "word": "rapide",
    "answers": [
     "de",
@@ -8154,10 +8176,10 @@
    ]
   },
   {
-   "id": "fr-4-2-13",
+   "id": "fr-4-2-14",
    "world": 4,
    "subworld": 2,
-   "level": 13,
+   "level": 14,
    "word": "points",
    "answers": [
     "on",
@@ -8207,10 +8229,10 @@
    ]
   },
   {
-   "id": "fr-4-2-14",
+   "id": "fr-4-2-15",
    "world": 4,
    "subworld": 2,
-   "level": 14,
+   "level": 15,
    "word": "seront",
    "answers": [
     "et",
@@ -8268,10 +8290,10 @@
    ]
   },
   {
-   "id": "fr-4-2-15",
+   "id": "fr-4-2-16",
    "world": 4,
    "subworld": 2,
-   "level": 15,
+   "level": 16,
    "word": "longue",
    "answers": [
     "le",
@@ -8313,10 +8335,10 @@
    ]
   },
   {
-   "id": "fr-4-2-16",
+   "id": "fr-4-2-17",
    "world": 4,
    "subworld": 2,
-   "level": 16,
+   "level": 17,
    "word": "tandis",
    "answers": [
     "sa",
@@ -8364,10 +8386,10 @@
    ]
   },
   {
-   "id": "fr-4-2-17",
+   "id": "fr-4-2-18",
    "world": 4,
    "subworld": 2,
-   "level": 17,
+   "level": 18,
    "word": "suivre",
    "answers": [
     "se",
@@ -8421,10 +8443,10 @@
    ]
   },
   {
-   "id": "fr-4-2-18",
+   "id": "fr-4-3-1",
    "world": 4,
-   "subworld": 2,
-   "level": 18,
+   "subworld": 3,
+   "level": 1,
    "word": "maison",
    "answers": [
     "on",
@@ -8482,10 +8504,10 @@
    ]
   },
   {
-   "id": "fr-4-3-1",
+   "id": "fr-4-3-2",
    "world": 4,
    "subworld": 3,
-   "level": 1,
+   "level": 2,
    "word": "moteur",
    "answers": [
     "et",
@@ -8543,10 +8565,10 @@
    ]
   },
   {
-   "id": "fr-4-3-2",
+   "id": "fr-4-3-3",
    "world": 4,
    "subworld": 3,
-   "level": 2,
+   "level": 3,
    "word": "besoin",
    "answers": [
     "en",
@@ -8598,10 +8620,10 @@
    ]
   },
   {
-   "id": "fr-4-3-3",
+   "id": "fr-4-3-4",
    "world": 4,
    "subworld": 3,
-   "level": 3,
+   "level": 4,
    "word": "actifs",
    "answers": [
     "sa",
@@ -8640,10 +8662,10 @@
    ]
   },
   {
-   "id": "fr-4-3-4",
+   "id": "fr-4-3-5",
    "world": 4,
    "subworld": 3,
-   "level": 4,
+   "level": 5,
    "word": "livres",
    "answers": [
     "le",
@@ -8693,10 +8715,10 @@
    ]
   },
   {
-   "id": "fr-4-3-5",
+   "id": "fr-4-3-6",
    "world": 4,
    "subworld": 3,
-   "level": 5,
+   "level": 6,
    "word": "nature",
    "answers": [
     "et",
@@ -8746,10 +8768,10 @@
    ]
   },
   {
-   "id": "fr-4-3-6",
+   "id": "fr-4-3-7",
    "world": 4,
    "subworld": 3,
-   "level": 6,
+   "level": 7,
    "word": "patron",
    "answers": [
     "on",
@@ -8788,10 +8810,10 @@
    ]
   },
   {
-   "id": "fr-4-3-7",
+   "id": "fr-4-3-8",
    "world": 4,
    "subworld": 3,
-   "level": 7,
+   "level": 8,
    "word": "années",
    "answers": [
     "en",
@@ -8822,10 +8844,10 @@
    ]
   },
   {
-   "id": "fr-4-3-8",
+   "id": "fr-4-3-9",
    "world": 4,
    "subworld": 3,
-   "level": 8,
+   "level": 9,
    "word": "contre",
    "answers": [
     "et",
@@ -8871,10 +8893,10 @@
    ]
   },
   {
-   "id": "fr-4-3-9",
+   "id": "fr-4-3-10",
    "world": 4,
    "subworld": 3,
-   "level": 9,
+   "level": 10,
    "word": "partie",
    "answers": [
     "et",
@@ -8922,10 +8944,10 @@
    ]
   },
   {
-   "id": "fr-4-3-10",
+   "id": "fr-4-3-11",
    "world": 4,
    "subworld": 3,
-   "level": 10,
+   "level": 11,
    "word": "montre",
    "answers": [
     "et",
@@ -8983,10 +9005,10 @@
    ]
   },
   {
-   "id": "fr-4-3-11",
+   "id": "fr-4-3-12",
    "world": 4,
    "subworld": 3,
-   "level": 11,
+   "level": 12,
    "word": "autres",
    "answers": [
     "et",
@@ -9044,10 +9066,10 @@
    ]
   },
   {
-   "id": "fr-4-3-12",
+   "id": "fr-4-3-13",
    "world": 4,
    "subworld": 3,
-   "level": 12,
+   "level": 13,
    "word": "papier",
    "answers": [
     "ai",
@@ -9078,10 +9100,10 @@
    ]
   },
   {
-   "id": "fr-4-3-13",
+   "id": "fr-4-3-14",
    "world": 4,
    "subworld": 3,
-   "level": 13,
+   "level": 14,
    "word": "client",
    "answers": [
     "le",
@@ -9133,10 +9155,10 @@
    ]
   },
   {
-   "id": "fr-4-3-14",
+   "id": "fr-4-3-15",
    "world": 4,
    "subworld": 3,
-   "level": 14,
+   "level": 15,
    "word": "disque",
    "answers": [
     "de",
@@ -9175,10 +9197,10 @@
    ]
   },
   {
-   "id": "fr-4-3-15",
+   "id": "fr-4-3-16",
    "world": 4,
    "subworld": 3,
-   "level": 15,
+   "level": 16,
    "word": "actuel",
    "answers": [
     "la",
@@ -9224,10 +9246,10 @@
    ]
   },
   {
-   "id": "fr-4-3-16",
+   "id": "fr-4-3-17",
    "world": 4,
    "subworld": 3,
-   "level": 16,
+   "level": 17,
    "word": "trouve",
    "answers": [
     "et",
@@ -9285,10 +9307,10 @@
    ]
   },
   {
-   "id": "fr-4-3-17",
+   "id": "fr-4-3-18",
    "world": 4,
    "subworld": 3,
-   "level": 17,
+   "level": 18,
    "word": "fusion",
    "answers": [
     "un",
@@ -9342,10 +9364,10 @@
    ]
   },
   {
-   "id": "fr-4-3-18",
+   "id": "fr-4-4-1",
    "world": 4,
-   "subworld": 3,
-   "level": 18,
+   "subworld": 4,
+   "level": 1,
    "word": "depuis",
    "answers": [
     "de",
@@ -9393,10 +9415,10 @@
    ]
   },
   {
-   "id": "fr-4-4-1",
+   "id": "fr-4-4-2",
    "world": 4,
    "subworld": 4,
-   "level": 1,
+   "level": 2,
    "word": "portes",
    "answers": [
     "et",
@@ -9454,10 +9476,10 @@
    ]
   },
   {
-   "id": "fr-4-4-2",
+   "id": "fr-4-4-3",
    "world": 4,
    "subworld": 4,
-   "level": 2,
+   "level": 3,
    "word": "niveau",
    "answers": [
     "en",
@@ -9511,10 +9533,10 @@
    ]
   },
   {
-   "id": "fr-4-4-3",
+   "id": "fr-4-4-4",
    "world": 4,
    "subworld": 4,
-   "level": 3,
+   "level": 4,
    "word": "mesure",
    "answers": [
     "se",
@@ -9547,10 +9569,10 @@
    ]
   },
   {
-   "id": "fr-4-4-4",
+   "id": "fr-4-4-5",
    "world": 4,
    "subworld": 4,
-   "level": 4,
+   "level": 5,
    "word": "preuve",
    "answers": [
     "eu",
@@ -9580,42 +9602,6 @@
     "pure",
     "revue",
     "preuve"
-   ]
-  },
-  {
-   "id": "fr-4-4-5",
-   "world": 4,
-   "subworld": 4,
-   "level": 5,
-   "word": "oeuvre",
-   "answers": [
-    "ou",
-    "eu",
-    "vu",
-    "or",
-    "vue",
-    "rue",
-    "euro",
-    "revu",
-    "roue",
-    "ouvre",
-    "revue",
-    "oeuvre"
-   ],
-   "bonusWords": [],
-   "validWords": [
-    "ou",
-    "eu",
-    "vu",
-    "or",
-    "vue",
-    "rue",
-    "euro",
-    "revu",
-    "roue",
-    "ouvre",
-    "revue",
-    "oeuvre"
    ]
   },
   {
@@ -10855,6 +10841,28 @@
    "world": 5,
    "subworld": 1,
    "level": 1,
+   "word": "flamand",
+   "answers": [
+    "la",
+    "an",
+    "ma",
+    "mal",
+    "flamand"
+   ],
+   "bonusWords": [],
+   "validWords": [
+    "la",
+    "an",
+    "ma",
+    "mal",
+    "flamand"
+   ]
+  },
+  {
+   "id": "fr-5-1-2",
+   "world": 5,
+   "subworld": 1,
+   "level": 2,
    "word": "marchés",
    "answers": [
     "sa",
@@ -10883,10 +10891,10 @@
    ]
   },
   {
-   "id": "fr-5-1-2",
+   "id": "fr-5-1-3",
    "world": 5,
    "subworld": 1,
-   "level": 2,
+   "level": 3,
    "word": "février",
    "answers": [
     "vie",
@@ -10907,10 +10915,10 @@
    ]
   },
   {
-   "id": "fr-5-1-3",
+   "id": "fr-5-1-4",
    "world": 5,
    "subworld": 1,
-   "level": 3,
+   "level": 4,
    "word": "mémoire",
    "answers": [
     "me",
@@ -10931,10 +10939,10 @@
    ]
   },
   {
-   "id": "fr-5-1-4",
+   "id": "fr-5-1-5",
    "world": 5,
    "subworld": 1,
-   "level": 4,
+   "level": 5,
    "word": "affiche",
    "answers": [
     "ce",
@@ -10955,10 +10963,10 @@
    ]
   },
   {
-   "id": "fr-5-1-5",
+   "id": "fr-5-1-6",
    "world": 5,
    "subworld": 1,
-   "level": 5,
+   "level": 6,
    "word": "exemple",
    "answers": [
     "le",
@@ -10973,10 +10981,10 @@
    ]
   },
   {
-   "id": "fr-5-1-6",
+   "id": "fr-5-1-7",
    "world": 5,
    "subworld": 1,
-   "level": 6,
+   "level": 7,
    "word": "vigueur",
    "answers": [
     "eu",
@@ -10999,10 +11007,10 @@
    ]
   },
   {
-   "id": "fr-5-1-7",
+   "id": "fr-5-1-8",
    "world": 5,
    "subworld": 1,
-   "level": 7,
+   "level": 8,
    "word": "délégué",
    "answers": [
     "du",
@@ -11019,10 +11027,10 @@
    ]
   },
   {
-   "id": "fr-5-1-8",
+   "id": "fr-5-1-9",
    "world": 5,
    "subworld": 1,
-   "level": 8,
+   "level": 9,
    "word": "méthode",
    "answers": [
     "de",
@@ -11055,10 +11063,10 @@
    ]
   },
   {
-   "id": "fr-5-1-9",
+   "id": "fr-5-1-10",
    "world": 5,
    "subworld": 1,
-   "level": 9,
+   "level": 10,
    "word": "période",
    "answers": [
     "de",
@@ -11091,10 +11099,10 @@
    ]
   },
   {
-   "id": "fr-5-1-10",
+   "id": "fr-5-1-11",
    "world": 5,
    "subworld": 1,
-   "level": 10,
+   "level": 11,
    "word": "sérieux",
    "answers": [
     "se",
@@ -11127,10 +11135,10 @@
    ]
   },
   {
-   "id": "fr-5-1-11",
+   "id": "fr-5-1-12",
    "world": 5,
    "subworld": 1,
-   "level": 11,
+   "level": 12,
    "word": "octobre",
    "answers": [
     "et",
@@ -11157,10 +11165,10 @@
    ]
   },
   {
-   "id": "fr-5-1-12",
+   "id": "fr-5-1-13",
    "world": 5,
    "subworld": 1,
-   "level": 12,
+   "level": 13,
    "word": "déchets",
    "answers": [
     "de",
@@ -11195,10 +11203,10 @@
    ]
   },
   {
-   "id": "fr-5-1-13",
+   "id": "fr-5-1-14",
    "world": 5,
    "subworld": 1,
-   "level": 13,
+   "level": 14,
    "word": "dollars",
    "answers": [
     "la",
@@ -11225,10 +11233,10 @@
    ]
   },
   {
-   "id": "fr-5-1-14",
+   "id": "fr-5-1-15",
    "world": 5,
    "subworld": 1,
-   "level": 14,
+   "level": 15,
    "word": "annoncé",
    "answers": [
     "on",
@@ -11247,10 +11255,10 @@
    ]
   },
   {
-   "id": "fr-5-1-15",
+   "id": "fr-5-1-16",
    "world": 5,
    "subworld": 1,
-   "level": 15,
+   "level": 16,
    "word": "chiffre",
    "answers": [
     "ce",
@@ -11279,10 +11287,10 @@
    ]
   },
   {
-   "id": "fr-5-1-16",
+   "id": "fr-5-1-17",
    "world": 5,
    "subworld": 1,
-   "level": 16,
+   "level": 17,
    "word": "contact",
    "answers": [
     "on",
@@ -11303,10 +11311,10 @@
    ]
   },
   {
-   "id": "fr-5-1-17",
+   "id": "fr-5-1-18",
    "world": 5,
    "subworld": 1,
-   "level": 17,
+   "level": 18,
    "word": "volonté",
    "answers": [
     "on",
@@ -11335,10 +11343,10 @@
    ]
   },
   {
-   "id": "fr-5-1-18",
+   "id": "fr-5-2-1",
    "world": 5,
-   "subworld": 1,
-   "level": 18,
+   "subworld": 2,
+   "level": 1,
    "word": "membres",
    "answers": [
     "se",
@@ -11359,10 +11367,10 @@
    ]
   },
   {
-   "id": "fr-5-2-1",
+   "id": "fr-5-2-2",
    "world": 5,
    "subworld": 2,
-   "level": 1,
+   "level": 2,
    "word": "travaux",
    "answers": [
     "au",
@@ -11391,10 +11399,10 @@
    ]
   },
   {
-   "id": "fr-5-2-2",
+   "id": "fr-5-2-3",
    "world": 5,
    "subworld": 2,
-   "level": 2,
+   "level": 3,
    "word": "changer",
    "answers": [
     "en",
@@ -11431,10 +11439,10 @@
    ]
   },
   {
-   "id": "fr-5-2-3",
+   "id": "fr-5-2-4",
    "world": 5,
    "subworld": 2,
-   "level": 3,
+   "level": 4,
    "word": "capital",
    "answers": [
     "la",
@@ -11463,10 +11471,10 @@
    ]
   },
   {
-   "id": "fr-5-2-4",
+   "id": "fr-5-2-5",
    "world": 5,
    "subworld": 2,
-   "level": 4,
+   "level": 5,
    "word": "société",
    "answers": [
     "si",
@@ -11495,10 +11503,10 @@
    ]
   },
   {
-   "id": "fr-5-2-5",
+   "id": "fr-5-2-6",
    "world": 5,
    "subworld": 2,
-   "level": 5,
+   "level": 6,
    "word": "justice",
    "answers": [
     "et",
@@ -11556,10 +11564,10 @@
    ]
   },
   {
-   "id": "fr-5-2-6",
+   "id": "fr-5-2-7",
    "world": 5,
    "subworld": 2,
-   "level": 6,
+   "level": 7,
    "word": "produit",
    "answers": [
     "du",
@@ -11617,10 +11625,10 @@
    ]
   },
   {
-   "id": "fr-5-2-7",
+   "id": "fr-5-2-8",
    "world": 5,
    "subworld": 2,
-   "level": 7,
+   "level": 8,
    "word": "puisque",
    "answers": [
     "se",
@@ -11651,10 +11659,10 @@
    ]
   },
   {
-   "id": "fr-5-2-8",
+   "id": "fr-5-2-9",
    "world": 5,
    "subworld": 2,
-   "level": 8,
+   "level": 9,
    "word": "voiture",
    "answers": [
     "et",
@@ -11712,10 +11720,10 @@
    ]
   },
   {
-   "id": "fr-5-2-9",
+   "id": "fr-5-2-10",
    "world": 5,
    "subworld": 2,
-   "level": 9,
+   "level": 10,
    "word": "réseaux",
    "answers": [
     "au",
@@ -11763,10 +11771,10 @@
    ]
   },
   {
-   "id": "fr-5-2-10",
+   "id": "fr-5-2-11",
    "world": 5,
    "subworld": 2,
-   "level": 10,
+   "level": 11,
    "word": "destiné",
    "answers": [
     "de",
@@ -11824,10 +11832,10 @@
    ]
   },
   {
-   "id": "fr-5-2-11",
+   "id": "fr-5-2-12",
    "world": 5,
    "subworld": 2,
-   "level": 11,
+   "level": 12,
    "word": "oublier",
    "answers": [
     "le",
@@ -11851,7 +11859,7 @@
     "or",
     "oui",
     "bleu",
-    "oeil",
+    "loue",
     "robe",
     "boire",
     "louer",
@@ -11877,7 +11885,7 @@
     "or",
     "oui",
     "bleu",
-    "oeil",
+    "loue",
     "robe",
     "boire",
     "louer",
@@ -11885,10 +11893,10 @@
    ]
   },
   {
-   "id": "fr-5-2-12",
+   "id": "fr-5-2-13",
    "world": 5,
    "subworld": 2,
-   "level": 12,
+   "level": 13,
    "word": "compris",
    "answers": [
     "si",
@@ -11934,10 +11942,10 @@
    ]
   },
   {
-   "id": "fr-5-2-13",
+   "id": "fr-5-2-14",
    "world": 5,
    "subworld": 2,
-   "level": 13,
+   "level": 14,
    "word": "prévoit",
    "answers": [
     "or",
@@ -11985,10 +11993,10 @@
    ]
   },
   {
-   "id": "fr-5-2-14",
+   "id": "fr-5-2-15",
    "world": 5,
    "subworld": 2,
-   "level": 14,
+   "level": 15,
    "word": "conseil",
    "answers": [
     "le",
@@ -12046,10 +12054,10 @@
    ]
   },
   {
-   "id": "fr-5-2-15",
+   "id": "fr-5-2-16",
    "world": 5,
    "subworld": 2,
-   "level": 15,
+   "level": 16,
    "word": "janvier",
    "answers": [
     "en",
@@ -12105,10 +12113,10 @@
    ]
   },
   {
-   "id": "fr-5-2-16",
+   "id": "fr-5-2-17",
    "world": 5,
    "subworld": 2,
-   "level": 16,
+   "level": 17,
    "word": "actions",
    "answers": [
     "on",
@@ -12166,10 +12174,10 @@
    ]
   },
   {
-   "id": "fr-5-2-17",
+   "id": "fr-5-2-18",
    "world": 5,
    "subworld": 2,
-   "level": 17,
+   "level": 18,
    "word": "pouvoir",
    "answers": [
     "ou",
@@ -12200,10 +12208,10 @@
    ]
   },
   {
-   "id": "fr-5-2-18",
+   "id": "fr-5-3-1",
    "world": 5,
-   "subworld": 2,
-   "level": 18,
+   "subworld": 3,
+   "level": 1,
    "word": "suivant",
    "answers": [
     "un",
@@ -12261,10 +12269,10 @@
    ]
   },
   {
-   "id": "fr-5-3-1",
+   "id": "fr-5-3-2",
    "world": 5,
    "subworld": 3,
-   "level": 1,
+   "level": 2,
    "word": "logique",
    "answers": [
     "le",
@@ -12277,14 +12285,13 @@
     "lui",
     "loi",
     "oui",
+    "gel",
     "lieu",
     "quoi",
     "quel",
-    "oeil",
     "logique"
    ],
    "bonusWords": [
-    "gel",
     "lie",
     "loue"
    ],
@@ -12299,21 +12306,20 @@
     "lui",
     "loi",
     "oui",
+    "gel",
     "lieu",
     "quoi",
     "quel",
-    "oeil",
     "logique",
-    "gel",
     "lie",
     "loue"
    ]
   },
   {
-   "id": "fr-5-3-2",
+   "id": "fr-5-3-3",
    "world": 5,
    "subworld": 3,
-   "level": 2,
+   "level": 3,
    "word": "liberté",
    "answers": [
     "le",
@@ -12363,10 +12369,10 @@
    ]
   },
   {
-   "id": "fr-5-3-3",
+   "id": "fr-5-3-4",
    "world": 5,
    "subworld": 3,
-   "level": 3,
+   "level": 4,
    "word": "comptes",
    "answers": [
     "et",
@@ -12424,10 +12430,10 @@
    ]
   },
   {
-   "id": "fr-5-3-4",
+   "id": "fr-5-3-5",
    "world": 5,
    "subworld": 3,
-   "level": 4,
+   "level": 5,
    "word": "passant",
    "answers": [
     "sa",
@@ -12450,10 +12456,10 @@
    ]
   },
   {
-   "id": "fr-5-3-5",
+   "id": "fr-5-3-6",
    "world": 5,
    "subworld": 3,
-   "level": 5,
+   "level": 6,
    "word": "qualité",
    "answers": [
     "la",
@@ -12495,10 +12501,10 @@
    ]
   },
   {
-   "id": "fr-5-3-6",
+   "id": "fr-5-3-7",
    "world": 5,
    "subworld": 3,
-   "level": 6,
+   "level": 7,
    "word": "pendant",
    "answers": [
     "de",
@@ -12529,10 +12535,10 @@
    ]
   },
   {
-   "id": "fr-5-3-7",
+   "id": "fr-5-3-8",
    "world": 5,
    "subworld": 3,
-   "level": 7,
+   "level": 8,
    "word": "courant",
    "answers": [
     "un",
@@ -12590,10 +12596,10 @@
    ]
   },
   {
-   "id": "fr-5-3-8",
+   "id": "fr-5-3-9",
    "world": 5,
    "subworld": 3,
-   "level": 8,
+   "level": 9,
    "word": "emplois",
    "answers": [
     "le",
@@ -12617,7 +12623,7 @@
     "soi",
     "sol",
     "lois",
-    "oeil",
+    "miel",
     "pose",
     "soie",
     "emploi",
@@ -12643,7 +12649,7 @@
     "soi",
     "sol",
     "lois",
-    "oeil",
+    "miel",
     "pose",
     "soie",
     "emploi",
@@ -12651,10 +12657,10 @@
    ]
   },
   {
-   "id": "fr-5-3-9",
+   "id": "fr-5-3-10",
    "world": 5,
    "subworld": 3,
-   "level": 9,
+   "level": 10,
    "word": "précise",
    "answers": [
     "se",
@@ -12700,10 +12706,10 @@
    ]
   },
   {
-   "id": "fr-5-3-10",
+   "id": "fr-5-3-11",
    "world": 5,
    "subworld": 3,
-   "level": 10,
+   "level": 11,
    "word": "machine",
    "answers": [
     "en",
@@ -12755,10 +12761,10 @@
    ]
   },
   {
-   "id": "fr-5-3-11",
+   "id": "fr-5-3-12",
    "world": 5,
    "subworld": 3,
-   "level": 11,
+   "level": 12,
    "word": "banques",
    "answers": [
     "en",
@@ -12814,10 +12820,10 @@
    ]
   },
   {
-   "id": "fr-5-3-12",
+   "id": "fr-5-3-13",
    "world": 5,
    "subworld": 3,
-   "level": 12,
+   "level": 13,
    "word": "doivent",
    "answers": [
     "de",
@@ -12875,10 +12881,10 @@
    ]
   },
   {
-   "id": "fr-5-3-13",
+   "id": "fr-5-3-14",
    "world": 5,
    "subworld": 3,
-   "level": 13,
+   "level": 14,
    "word": "projets",
    "answers": [
     "et",
@@ -12936,10 +12942,10 @@
    ]
   },
   {
-   "id": "fr-5-3-14",
+   "id": "fr-5-3-15",
    "world": 5,
    "subworld": 3,
-   "level": 14,
+   "level": 15,
    "word": "domaine",
    "answers": [
     "de",
@@ -12997,10 +13003,10 @@
    ]
   },
   {
-   "id": "fr-5-3-15",
+   "id": "fr-5-3-16",
    "world": 5,
    "subworld": 3,
-   "level": 15,
+   "level": 16,
    "word": "fiscale",
    "answers": [
     "la",
@@ -13058,10 +13064,10 @@
    ]
   },
   {
-   "id": "fr-5-3-16",
+   "id": "fr-5-3-17",
    "world": 5,
    "subworld": 3,
-   "level": 16,
+   "level": 17,
    "word": "niveaux",
    "answers": [
     "en",
@@ -13119,10 +13125,10 @@
    ]
   },
   {
-   "id": "fr-5-3-17",
+   "id": "fr-5-3-18",
    "world": 5,
    "subworld": 3,
-   "level": 17,
+   "level": 18,
    "word": "clients",
    "answers": [
     "le",
@@ -13180,10 +13186,10 @@
    ]
   },
   {
-   "id": "fr-5-3-18",
+   "id": "fr-5-4-1",
    "world": 5,
-   "subworld": 3,
-   "level": 18,
+   "subworld": 4,
+   "level": 1,
    "word": "réalise",
    "answers": [
     "la",
@@ -13241,10 +13247,10 @@
    ]
   },
   {
-   "id": "fr-5-4-1",
+   "id": "fr-5-4-2",
    "world": 5,
    "subworld": 4,
-   "level": 1,
+   "level": 2,
    "word": "obtenir",
    "answers": [
     "et",
@@ -13302,10 +13308,10 @@
    ]
   },
   {
-   "id": "fr-5-4-2",
+   "id": "fr-5-4-3",
    "world": 5,
    "subworld": 4,
-   "level": 2,
+   "level": 3,
    "word": "publics",
    "answers": [
     "il",
@@ -13349,10 +13355,10 @@
    ]
   },
   {
-   "id": "fr-5-4-3",
+   "id": "fr-5-4-4",
    "world": 5,
    "subworld": 4,
-   "level": 3,
+   "level": 4,
    "word": "présent",
    "answers": [
     "et",
@@ -13400,10 +13406,10 @@
    ]
   },
   {
-   "id": "fr-5-4-4",
+   "id": "fr-5-4-5",
    "world": 5,
    "subworld": 4,
-   "level": 4,
+   "level": 5,
    "word": "parents",
    "answers": [
     "et",
@@ -13461,10 +13467,10 @@
    ]
   },
   {
-   "id": "fr-5-4-5",
+   "id": "fr-5-4-6",
    "world": 5,
    "subworld": 4,
-   "level": 5,
+   "level": 6,
    "word": "grandes",
    "answers": [
     "de",
@@ -13522,10 +13528,10 @@
    ]
   },
   {
-   "id": "fr-5-4-6",
+   "id": "fr-5-4-7",
    "world": 5,
    "subworld": 4,
-   "level": 6,
+   "level": 7,
    "word": "général",
    "answers": [
     "la",
@@ -13556,10 +13562,10 @@
    ]
   },
   {
-   "id": "fr-5-4-7",
+   "id": "fr-5-4-8",
    "world": 5,
    "subworld": 4,
-   "level": 7,
+   "level": 8,
    "word": "mondial",
    "answers": [
     "la",
@@ -13609,10 +13615,10 @@
    ]
   },
   {
-   "id": "fr-5-4-8",
+   "id": "fr-5-4-9",
    "world": 5,
    "subworld": 4,
-   "level": 8,
+   "level": 9,
    "word": "souvent",
    "answers": [
     "et",
@@ -13670,10 +13676,10 @@
    ]
   },
   {
-   "id": "fr-5-4-9",
+   "id": "fr-5-4-10",
    "world": 5,
    "subworld": 4,
-   "level": 9,
+   "level": 10,
    "word": "minutes",
    "answers": [
     "et",
@@ -13731,10 +13737,10 @@
    ]
   },
   {
-   "id": "fr-5-4-10",
+   "id": "fr-5-4-11",
    "world": 5,
    "subworld": 4,
-   "level": 10,
+   "level": 11,
    "word": "lorsque",
    "answers": [
     "le",
@@ -13760,9 +13766,9 @@
     "sol",
     "rose",
     "rues",
+    "louer",
     "quels",
-    "roues",
-    "soeur"
+    "roues"
    ],
    "validWords": [
     "le",
@@ -13786,16 +13792,16 @@
     "sol",
     "rose",
     "rues",
+    "louer",
     "quels",
-    "roues",
-    "soeur"
+    "roues"
    ]
   },
   {
-   "id": "fr-5-4-11",
+   "id": "fr-5-4-12",
    "world": 5,
    "subworld": 4,
-   "level": 11,
+   "level": 12,
    "word": "groupes",
    "answers": [
     "se",
@@ -13853,10 +13859,10 @@
    ]
   },
   {
-   "id": "fr-5-4-12",
+   "id": "fr-5-4-13",
    "world": 5,
    "subworld": 4,
-   "level": 12,
+   "level": 13,
    "word": "parties",
    "answers": [
     "et",
@@ -13914,10 +13920,10 @@
    ]
   },
   {
-   "id": "fr-5-4-13",
+   "id": "fr-5-4-14",
    "world": 5,
    "subworld": 4,
-   "level": 13,
+   "level": 14,
    "word": "version",
    "answers": [
     "en",
@@ -13975,10 +13981,10 @@
    ]
   },
   {
-   "id": "fr-5-4-14",
+   "id": "fr-5-4-15",
    "world": 5,
    "subworld": 4,
-   "level": 14,
+   "level": 15,
    "word": "charges",
    "answers": [
     "se",
@@ -14024,10 +14030,10 @@
    ]
   },
   {
-   "id": "fr-5-4-15",
+   "id": "fr-5-4-16",
    "world": 5,
    "subworld": 4,
-   "level": 15,
+   "level": 16,
    "word": "pouvait",
    "answers": [
     "au",
@@ -14073,10 +14079,10 @@
    ]
   },
   {
-   "id": "fr-5-4-16",
+   "id": "fr-5-4-17",
    "world": 5,
    "subworld": 4,
-   "level": 16,
+   "level": 17,
    "word": "annonce",
    "answers": [
     "en",
@@ -14099,10 +14105,10 @@
    ]
   },
   {
-   "id": "fr-5-4-17",
+   "id": "fr-5-4-18",
    "world": 5,
    "subworld": 4,
-   "level": 17,
+   "level": 18,
    "word": "soutien",
    "answers": [
     "et",
@@ -14160,10 +14166,10 @@
    ]
   },
   {
-   "id": "fr-5-4-18",
+   "id": "fr-5-5-1",
    "world": 5,
-   "subworld": 4,
-   "level": 18,
+   "subworld": 5,
+   "level": 1,
    "word": "parfois",
    "answers": [
     "sa",
@@ -14221,10 +14227,10 @@
    ]
   },
   {
-   "id": "fr-5-5-1",
+   "id": "fr-5-5-2",
    "world": 5,
    "subworld": 5,
-   "level": 1,
+   "level": 2,
    "word": "moindre",
    "answers": [
     "de",
@@ -14282,10 +14288,10 @@
    ]
   },
   {
-   "id": "fr-5-5-2",
+   "id": "fr-5-5-3",
    "world": 5,
    "subworld": 5,
-   "level": 2,
+   "level": 3,
    "word": "musique",
    "answers": [
     "se",
@@ -14316,10 +14322,10 @@
    ]
   },
   {
-   "id": "fr-5-5-3",
+   "id": "fr-5-5-4",
    "world": 5,
    "subworld": 5,
-   "level": 3,
+   "level": 4,
    "word": "formule",
    "answers": [
     "le",
@@ -14377,10 +14383,10 @@
    ]
   },
   {
-   "id": "fr-5-5-4",
+   "id": "fr-5-5-5",
    "world": 5,
    "subworld": 5,
-   "level": 4,
+   "level": 5,
    "word": "devrait",
    "answers": [
     "de",
@@ -14438,10 +14444,10 @@
    ]
   },
   {
-   "id": "fr-5-5-5",
+   "id": "fr-5-5-6",
    "world": 5,
    "subworld": 5,
-   "level": 5,
+   "level": 6,
    "word": "sociale",
    "answers": [
     "la",
@@ -14499,10 +14505,10 @@
    ]
   },
   {
-   "id": "fr-5-5-6",
+   "id": "fr-5-5-7",
    "world": 5,
    "subworld": 5,
-   "level": 6,
+   "level": 7,
    "word": "marques",
    "answers": [
     "au",
@@ -14558,10 +14564,10 @@
    ]
   },
   {
-   "id": "fr-5-5-7",
+   "id": "fr-5-5-8",
    "world": 5,
    "subworld": 5,
-   "level": 7,
+   "level": 8,
    "word": "valeurs",
    "answers": [
     "la",
@@ -14619,10 +14625,10 @@
    ]
   },
   {
-   "id": "fr-5-5-8",
+   "id": "fr-5-5-9",
    "world": 5,
    "subworld": 5,
-   "level": 8,
+   "level": 9,
    "word": "gestion",
    "answers": [
     "et",
@@ -14680,10 +14686,10 @@
    ]
   },
   {
-   "id": "fr-5-5-9",
+   "id": "fr-5-5-10",
    "world": 5,
    "subworld": 5,
-   "level": 9,
+   "level": 10,
    "word": "certain",
    "answers": [
     "et",
@@ -14741,10 +14747,10 @@
    ]
   },
   {
-   "id": "fr-5-5-10",
+   "id": "fr-5-5-11",
    "world": 5,
    "subworld": 5,
-   "level": 10,
+   "level": 11,
    "word": "réponse",
    "answers": [
     "en",
@@ -14802,10 +14808,10 @@
    ]
   },
   {
-   "id": "fr-5-5-11",
+   "id": "fr-5-5-12",
    "world": 5,
    "subworld": 5,
-   "level": 11,
+   "level": 12,
    "word": "compter",
    "answers": [
     "et",
@@ -14863,10 +14869,10 @@
    ]
   },
   {
-   "id": "fr-5-5-12",
+   "id": "fr-5-5-13",
    "world": 5,
    "subworld": 5,
-   "level": 12,
+   "level": 13,
    "word": "positif",
    "answers": [
     "si",
@@ -14899,10 +14905,10 @@
    ]
   },
   {
-   "id": "fr-5-5-13",
+   "id": "fr-5-5-14",
    "world": 5,
    "subworld": 5,
-   "level": 13,
+   "level": 14,
    "word": "premier",
    "answers": [
     "me",
@@ -14927,10 +14933,10 @@
    ]
   },
   {
-   "id": "fr-5-5-14",
+   "id": "fr-5-5-15",
    "world": 5,
    "subworld": 5,
-   "level": 14,
+   "level": 15,
    "word": "affaire",
    "answers": [
     "ai",
@@ -14955,10 +14961,10 @@
    ]
   },
   {
-   "id": "fr-5-5-15",
+   "id": "fr-5-5-16",
    "world": 5,
    "subworld": 5,
-   "level": 15,
+   "level": 16,
    "word": "choisir",
    "answers": [
     "si",
@@ -14991,10 +14997,10 @@
    ]
   },
   {
-   "id": "fr-5-5-16",
+   "id": "fr-5-5-17",
    "world": 5,
    "subworld": 5,
-   "level": 16,
+   "level": 17,
    "word": "contrat",
    "answers": [
     "on",
@@ -15027,10 +15033,10 @@
    ]
   },
   {
-   "id": "fr-5-5-17",
+   "id": "fr-5-5-18",
    "world": 5,
    "subworld": 5,
-   "level": 17,
+   "level": 18,
    "word": "demande",
    "answers": [
     "de",
@@ -15057,10 +15063,10 @@
    ]
   },
   {
-   "id": "fr-5-5-18",
-   "world": 5,
-   "subworld": 5,
-   "level": 18,
+   "id": "fr-6-1-1",
+   "world": 6,
+   "subworld": 1,
+   "level": 1,
    "word": "plupart",
    "answers": [
     "la",
@@ -15095,10 +15101,10 @@
    ]
   },
   {
-   "id": "fr-6-1-1",
+   "id": "fr-6-1-2",
    "world": 6,
    "subworld": 1,
-   "level": 1,
+   "level": 2,
    "word": "minimum",
    "answers": [
     "un",
@@ -15117,10 +15123,10 @@
    ]
   },
   {
-   "id": "fr-6-1-2",
+   "id": "fr-6-1-3",
    "world": 6,
    "subworld": 1,
-   "level": 2,
+   "level": 3,
    "word": "acheter",
    "answers": [
     "et",
@@ -15155,10 +15161,10 @@
    ]
   },
   {
-   "id": "fr-6-1-3",
+   "id": "fr-6-1-4",
    "world": 6,
    "subworld": 1,
-   "level": 3,
+   "level": 4,
    "word": "maximum",
    "answers": [
     "au",
@@ -15185,10 +15191,10 @@
    ]
   },
   {
-   "id": "fr-6-1-4",
+   "id": "fr-6-1-5",
    "world": 6,
    "subworld": 1,
-   "level": 4,
+   "level": 5,
    "word": "presque",
    "answers": [
     "se",
@@ -15225,10 +15231,10 @@
    ]
   },
   {
-   "id": "fr-6-1-5",
+   "id": "fr-6-1-6",
    "world": 6,
    "subworld": 1,
-   "level": 5,
+   "level": 6,
    "word": "bureaux",
    "answers": [
     "au",
@@ -15265,10 +15271,10 @@
    ]
   },
   {
-   "id": "fr-6-1-6",
+   "id": "fr-6-1-7",
    "world": 6,
    "subworld": 1,
-   "level": 6,
+   "level": 7,
    "word": "passage",
    "answers": [
     "se",
@@ -15297,10 +15303,10 @@
    ]
   },
   {
-   "id": "fr-6-1-7",
+   "id": "fr-6-1-8",
    "world": 6,
    "subworld": 1,
-   "level": 7,
+   "level": 8,
    "word": "moyenne",
    "answers": [
     "en",
@@ -15329,10 +15335,10 @@
    ]
   },
   {
-   "id": "fr-6-1-8",
+   "id": "fr-6-1-9",
    "world": 6,
    "subworld": 1,
-   "level": 8,
+   "level": 9,
    "word": "prendre",
    "answers": [
     "de",
@@ -15361,10 +15367,10 @@
    ]
   },
   {
-   "id": "fr-6-1-9",
+   "id": "fr-6-1-10",
    "world": 6,
    "subworld": 1,
-   "level": 9,
+   "level": 10,
    "word": "peuvent",
    "answers": [
     "et",
@@ -15422,10 +15428,10 @@
    ]
   },
   {
-   "id": "fr-6-1-10",
+   "id": "fr-6-1-11",
    "world": 6,
    "subworld": 1,
-   "level": 10,
+   "level": 11,
    "word": "lecteur",
    "answers": [
     "le",
@@ -15475,10 +15481,10 @@
    ]
   },
   {
-   "id": "fr-6-1-11",
+   "id": "fr-6-1-12",
    "world": 6,
    "subworld": 1,
-   "level": 11,
+   "level": 12,
    "word": "secteur",
    "answers": [
     "et",
@@ -15536,10 +15542,10 @@
    ]
   },
   {
-   "id": "fr-6-1-12",
+   "id": "fr-6-1-13",
    "world": 6,
    "subworld": 1,
-   "level": 12,
+   "level": 13,
    "word": "juillet",
    "answers": [
     "le",
@@ -15585,10 +15591,10 @@
    ]
   },
   {
-   "id": "fr-6-1-13",
+   "id": "fr-6-1-14",
    "world": 6,
    "subworld": 1,
-   "level": 13,
+   "level": 14,
    "word": "comment",
    "answers": [
     "et",
@@ -15646,10 +15652,10 @@
    ]
   },
   {
-   "id": "fr-6-1-14",
+   "id": "fr-6-1-15",
    "world": 6,
    "subworld": 1,
-   "level": 14,
+   "level": 15,
    "word": "seconde",
    "answers": [
     "de",
@@ -15705,10 +15711,10 @@
    ]
   },
   {
-   "id": "fr-6-1-15",
+   "id": "fr-6-1-16",
    "world": 6,
    "subworld": 1,
-   "level": 15,
+   "level": 16,
    "word": "revient",
    "answers": [
     "et",
@@ -15766,10 +15772,10 @@
    ]
   },
   {
-   "id": "fr-6-1-16",
+   "id": "fr-6-1-17",
    "world": 6,
    "subworld": 1,
-   "level": 16,
+   "level": 17,
    "word": "élément",
    "answers": [
     "le",
@@ -15813,10 +15819,10 @@
    ]
   },
   {
-   "id": "fr-6-1-17",
+   "id": "fr-6-1-18",
    "world": 6,
    "subworld": 1,
-   "level": 17,
+   "level": 18,
    "word": "détient",
    "answers": [
     "de",
@@ -15864,10 +15870,10 @@
    ]
   },
   {
-   "id": "fr-6-1-18",
+   "id": "fr-6-2-1",
    "world": 6,
-   "subworld": 1,
-   "level": 18,
+   "subworld": 2,
+   "level": 1,
    "word": "environ",
    "answers": [
     "en",
@@ -15915,10 +15921,10 @@
    ]
   },
   {
-   "id": "fr-6-2-1",
+   "id": "fr-6-2-2",
    "world": 6,
    "subworld": 2,
-   "level": 1,
+   "level": 2,
    "word": "risques",
    "answers": [
     "se",
@@ -15964,10 +15970,10 @@
    ]
   },
   {
-   "id": "fr-6-2-2",
+   "id": "fr-6-2-3",
    "world": 6,
    "subworld": 2,
-   "level": 2,
+   "level": 3,
    "word": "concept",
    "answers": [
     "et",
@@ -16015,10 +16021,10 @@
    ]
   },
   {
-   "id": "fr-6-2-3",
+   "id": "fr-6-2-4",
    "world": 6,
    "subworld": 2,
-   "level": 3,
+   "level": 4,
    "word": "besoins",
    "answers": [
     "en",
@@ -16076,10 +16082,10 @@
    ]
   },
   {
-   "id": "fr-6-2-4",
+   "id": "fr-6-2-5",
    "world": 6,
    "subworld": 2,
-   "level": 4,
+   "level": 5,
    "word": "travers",
    "answers": [
     "et",
@@ -16131,10 +16137,10 @@
    ]
   },
   {
-   "id": "fr-6-2-5",
+   "id": "fr-6-2-6",
    "world": 6,
    "subworld": 2,
-   "level": 5,
+   "level": 6,
    "word": "service",
    "answers": [
     "se",
@@ -16180,10 +16186,10 @@
    ]
   },
   {
-   "id": "fr-6-2-6",
+   "id": "fr-6-2-7",
    "world": 6,
    "subworld": 2,
-   "level": 6,
+   "level": 7,
    "word": "réalité",
    "answers": [
     "la",
@@ -16229,10 +16235,10 @@
    ]
   },
   {
-   "id": "fr-6-2-7",
+   "id": "fr-6-2-8",
    "world": 6,
    "subworld": 2,
-   "level": 7,
+   "level": 8,
    "word": "options",
    "answers": [
     "on",
@@ -16286,10 +16292,10 @@
    ]
   },
   {
-   "id": "fr-6-2-8",
+   "id": "fr-6-2-9",
    "world": 6,
    "subworld": 2,
-   "level": 8,
+   "level": 9,
    "word": "pension",
    "answers": [
     "en",
@@ -16343,10 +16349,10 @@
    ]
   },
   {
-   "id": "fr-6-2-9",
+   "id": "fr-6-2-10",
    "world": 6,
    "subworld": 2,
-   "level": 9,
+   "level": 10,
    "word": "devenir",
    "answers": [
     "de",
@@ -16394,10 +16400,10 @@
    ]
   },
   {
-   "id": "fr-6-2-10",
+   "id": "fr-6-2-11",
    "world": 6,
    "subworld": 2,
-   "level": 10,
+   "level": 11,
    "word": "partout",
    "answers": [
     "au",
@@ -16455,10 +16461,10 @@
    ]
   },
   {
-   "id": "fr-6-2-11",
+   "id": "fr-6-2-12",
    "world": 6,
    "subworld": 2,
-   "level": 11,
+   "level": 12,
    "word": "laisser",
    "answers": [
     "la",
@@ -16516,10 +16522,10 @@
    ]
   },
   {
-   "id": "fr-6-2-12",
+   "id": "fr-6-2-13",
    "world": 6,
    "subworld": 2,
-   "level": 12,
+   "level": 13,
    "word": "famille",
    "answers": [
     "la",
@@ -16573,10 +16579,10 @@
    ]
   },
   {
-   "id": "fr-6-2-13",
+   "id": "fr-6-2-14",
    "world": 6,
    "subworld": 2,
-   "level": 13,
+   "level": 14,
    "word": "agences",
    "answers": [
     "en",
@@ -16618,10 +16624,10 @@
    ]
   },
   {
-   "id": "fr-6-2-14",
+   "id": "fr-6-2-15",
    "world": 6,
    "subworld": 2,
-   "level": 14,
+   "level": 15,
    "word": "affirme",
    "answers": [
     "me",
@@ -16673,10 +16679,10 @@
    ]
   },
   {
-   "id": "fr-6-2-15",
+   "id": "fr-6-2-16",
    "world": 6,
    "subworld": 2,
-   "level": 15,
+   "level": 16,
    "word": "dossier",
    "answers": [
     "de",
@@ -16728,10 +16734,10 @@
    ]
   },
   {
-   "id": "fr-6-2-16",
+   "id": "fr-6-2-17",
    "world": 6,
    "subworld": 2,
-   "level": 16,
+   "level": 17,
    "word": "semaine",
    "answers": [
     "en",
@@ -16789,10 +16795,10 @@
    ]
   },
   {
-   "id": "fr-6-2-17",
+   "id": "fr-6-2-18",
    "world": 6,
    "subworld": 2,
-   "level": 17,
+   "level": 18,
    "word": "enfants",
    "answers": [
     "et",
@@ -16831,10 +16837,10 @@
    ]
   },
   {
-   "id": "fr-6-2-18",
+   "id": "fr-6-3-1",
    "world": 6,
-   "subworld": 2,
-   "level": 18,
+   "subworld": 3,
+   "level": 1,
    "word": "mauvais",
    "answers": [
     "au",
@@ -16880,10 +16886,10 @@
    ]
   },
   {
-   "id": "fr-6-3-1",
+   "id": "fr-6-3-2",
    "world": 6,
    "subworld": 3,
-   "level": 1,
+   "level": 2,
    "word": "étaient",
    "answers": [
     "et",
@@ -16939,10 +16945,10 @@
    ]
   },
   {
-   "id": "fr-6-3-2",
+   "id": "fr-6-3-3",
    "world": 6,
    "subworld": 3,
-   "level": 2,
+   "level": 3,
    "word": "travail",
    "answers": [
     "la",
@@ -16996,10 +17002,10 @@
    ]
   },
   {
-   "id": "fr-6-3-3",
+   "id": "fr-6-3-4",
    "world": 6,
    "subworld": 3,
-   "level": 3,
+   "level": 4,
    "word": "culture",
    "answers": [
     "le",
@@ -17047,10 +17053,10 @@
    ]
   },
   {
-   "id": "fr-6-3-4",
+   "id": "fr-6-3-5",
    "world": 6,
    "subworld": 3,
-   "level": 4,
+   "level": 5,
    "word": "récente",
    "answers": [
     "et",
@@ -17098,10 +17104,10 @@
    ]
   },
   {
-   "id": "fr-6-3-5",
+   "id": "fr-6-3-6",
    "world": 6,
    "subworld": 3,
-   "level": 5,
+   "level": 6,
    "word": "devient",
    "answers": [
     "de",
@@ -17157,10 +17163,10 @@
    ]
   },
   {
-   "id": "fr-6-3-6",
+   "id": "fr-6-3-7",
    "world": 6,
    "subworld": 3,
-   "level": 6,
+   "level": 7,
    "word": "données",
    "answers": [
     "de",
@@ -17218,10 +17224,10 @@
    ]
   },
   {
-   "id": "fr-6-3-7",
+   "id": "fr-6-3-8",
    "world": 6,
    "subworld": 3,
-   "level": 7,
+   "level": 8,
    "word": "cuisine",
    "answers": [
     "en",
@@ -17273,10 +17279,10 @@
    ]
   },
   {
-   "id": "fr-6-3-8",
+   "id": "fr-6-3-9",
    "world": 6,
    "subworld": 3,
-   "level": 8,
+   "level": 9,
    "word": "maisons",
    "answers": [
     "on",
@@ -17334,10 +17340,10 @@
    ]
   },
   {
-   "id": "fr-6-3-9",
+   "id": "fr-6-3-10",
    "world": 6,
    "subworld": 3,
-   "level": 9,
+   "level": 10,
    "word": "ensuite",
    "answers": [
     "et",
@@ -17395,10 +17401,10 @@
    ]
   },
   {
-   "id": "fr-6-3-10",
+   "id": "fr-6-3-11",
    "world": 6,
    "subworld": 3,
-   "level": 10,
+   "level": 11,
    "word": "raisons",
    "answers": [
     "on",
@@ -17456,10 +17462,10 @@
    ]
   },
   {
-   "id": "fr-6-3-11",
+   "id": "fr-6-3-12",
    "world": 6,
    "subworld": 3,
-   "level": 11,
+   "level": 12,
    "word": "anciens",
    "answers": [
     "en",
@@ -17511,10 +17517,10 @@
    ]
   },
   {
-   "id": "fr-6-3-12",
+   "id": "fr-6-3-13",
    "world": 6,
    "subworld": 3,
-   "level": 12,
+   "level": 13,
    "word": "avaient",
    "answers": [
     "et",
@@ -17572,10 +17578,10 @@
    ]
   },
   {
-   "id": "fr-6-3-13",
+   "id": "fr-6-3-14",
    "world": 6,
    "subworld": 3,
-   "level": 13,
+   "level": 14,
    "word": "plaisir",
    "answers": [
     "la",
@@ -17625,10 +17631,10 @@
    ]
   },
   {
-   "id": "fr-6-3-14",
+   "id": "fr-6-3-15",
    "world": 6,
    "subworld": 3,
-   "level": 14,
+   "level": 15,
    "word": "réduire",
    "answers": [
     "de",
@@ -17667,10 +17673,10 @@
    ]
   },
   {
-   "id": "fr-6-3-15",
+   "id": "fr-6-3-16",
    "world": 6,
    "subworld": 3,
-   "level": 15,
+   "level": 16,
    "word": "investi",
    "answers": [
     "et",
@@ -17728,10 +17734,10 @@
    ]
   },
   {
-   "id": "fr-6-3-16",
+   "id": "fr-6-3-17",
    "world": 6,
    "subworld": 3,
-   "level": 16,
+   "level": 17,
    "word": "monnaie",
    "answers": [
     "en",
@@ -17783,10 +17789,10 @@
    ]
   },
   {
-   "id": "fr-6-3-17",
+   "id": "fr-6-3-18",
    "world": 6,
    "subworld": 3,
-   "level": 17,
+   "level": 18,
    "word": "nouveau",
    "answers": [
     "en",
@@ -17832,10 +17838,10 @@
    ]
   },
   {
-   "id": "fr-6-3-18",
+   "id": "fr-6-4-1",
    "world": 6,
-   "subworld": 3,
-   "level": 18,
+   "subworld": 4,
+   "level": 1,
    "word": "couleur",
    "answers": [
     "le",
@@ -17843,19 +17849,18 @@
     "ou",
     "eu",
     "or",
+    "lu",
     "rue",
     "cru",
     "leur",
     "euro",
     "cour",
     "cure",
-    "coeur",
     "recul",
     "louer",
     "couleur"
    ],
    "bonusWords": [
-    "lu",
     "col",
     "cou",
     "loue",
@@ -17869,17 +17874,16 @@
     "ou",
     "eu",
     "or",
+    "lu",
     "rue",
     "cru",
     "leur",
     "euro",
     "cour",
     "cure",
-    "coeur",
     "recul",
     "louer",
     "couleur",
-    "lu",
     "col",
     "cou",
     "loue",
@@ -17889,10 +17893,10 @@
    ]
   },
   {
-   "id": "fr-6-4-1",
+   "id": "fr-6-4-2",
    "world": 6,
    "subworld": 4,
-   "level": 1,
+   "level": 2,
    "word": "recours",
    "answers": [
     "se",
@@ -17902,11 +17906,11 @@
     "sur",
     "ces",
     "rue",
+    "cru",
     "euro",
     "cour",
     "rose",
     "cours",
-    "coeur",
     "source",
     "course",
     "recours"
@@ -17914,12 +17918,12 @@
    "bonusWords": [
     "or",
     "su",
-    "cru",
+    "cou",
     "sec",
     "cure",
     "rues",
     "roues",
-    "soeur",
+    "score",
     "sucre"
    ],
    "validWords": [
@@ -17930,84 +17934,23 @@
     "sur",
     "ces",
     "rue",
+    "cru",
     "euro",
     "cour",
     "rose",
     "cours",
-    "coeur",
     "source",
     "course",
     "recours",
     "or",
     "su",
-    "cru",
+    "cou",
     "sec",
     "cure",
     "rues",
     "roues",
-    "soeur",
+    "score",
     "sucre"
-   ]
-  },
-  {
-   "id": "fr-6-4-2",
-   "world": 6,
-   "subworld": 4,
-   "level": 2,
-   "word": "oeuvres",
-   "answers": [
-    "se",
-    "ou",
-    "eu",
-    "vu",
-    "sur",
-    "vue",
-    "rue",
-    "vos",
-    "vous",
-    "vers",
-    "euro",
-    "ouvre",
-    "revue",
-    "oeuvre",
-    "oeuvres"
-   ],
-   "bonusWords": [
-    "or",
-    "su",
-    "revu",
-    "rose",
-    "rues",
-    "vues",
-    "roues",
-    "soeur",
-    "revues"
-   ],
-   "validWords": [
-    "se",
-    "ou",
-    "eu",
-    "vu",
-    "sur",
-    "vue",
-    "rue",
-    "vos",
-    "vous",
-    "vers",
-    "euro",
-    "ouvre",
-    "revue",
-    "oeuvre",
-    "oeuvres",
-    "or",
-    "su",
-    "revu",
-    "rose",
-    "rues",
-    "vues",
-    "roues",
-    "soeur",
-    "revues"
    ]
   },
   {

@@ -9,11 +9,11 @@ public class LetterText : MonoBehaviour
 
     public Color idleColor;
 
-    private const float DesignWidth = 390f, GlyphDropCss = 2.45f;
+    private const float DesignWidth = 390f, GlyphDropCss = 1.3f;
 
     private bool selected;
 
-    // Font game có chữ cái nằm cao hơn font design ~2,5 css so với tâm dòng: hạ chữ để tâm chữ trùng tâm đĩa.
+    // Font game có chữ cái nằm cao hơn tâm dòng ~1,3 css (đo trên máy, tâm hộp bao chữ hoa so với vị trí chữ): hạ chữ để tâm chữ trùng tâm vị trí/đĩa.
     // Đĩa chọn và chữ trắng nằm trên nét nối (thiết kế: nét nối dưới các chữ); phải gắn sau khi đã vào canvas cha, nếu không Unity xoá overrideSorting.
     private void Start()
     {
@@ -26,6 +26,8 @@ public class LetterText : MonoBehaviour
         {
             rect.pivot = new Vector2(rect.pivot.x, 0.5f + GlyphDropCss * localPerCss / letter.preferredHeight);
         }
+        // Rect chữ bị hạ cùng pivot nên đĩa (con của rect) cũng hạ theo: nâng đĩa lại để tâm đĩa trùng vị trí chữ, chữ trắng vẫn hạ như chữ thường.
+        selectDisc.rectTransform.anchoredPosition = new Vector2(0f, GlyphDropCss * localPerCss);
         selectGlyph.rectTransform.anchoredPosition = new Vector2(0f, -GlyphDropCss * localPerCss);
     }
 
