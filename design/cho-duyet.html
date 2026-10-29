@@ -196,6 +196,22 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 <textarea placeholder="Ghi chú"></textarea>
 </div>
 
+<div class="item" data-id="iap-noads">
+<h3>Mua bất kỳ gói ruby nào cũng tắt quảng cáo <span class="tag">T116</span></h3>
+<p>Theo ghi chú trong Shop (“Mua bất kỳ gói nào sẽ tắt quảng cáo”), giờ mỗi đơn ruby đều đặt cờ đã mua + tắt ads + ẩn banner ngay, kể cả đơn về lúc Shop đóng.</p>
+<label class="opt"><input type="radio" name="iap-noads" value="giu">Giữ: gói nào cũng tắt quảng cáo</label>
+<label class="opt"><input type="radio" name="iap-noads" value="rieng">Chỉ gói tắt quảng cáo riêng (cần thêm sản phẩm trên Play)</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
+<div class="item" data-id="iap-unknown">
+<h3>Đơn IAP có mã sản phẩm lạ <span class="tag">T116</span></h3>
+<p>Đơn có productId không thuộc 5 gói word.item1..5 hiện vẫn được xác nhận với store mà không cộng gì (hành vi cũ), để store không giao lại mãi.</p>
+<label class="opt"><input type="radio" name="iap-unknown" value="giu">Giữ như hiện tại</label>
+<label class="opt"><input type="radio" name="iap-unknown" value="khong-confirm">Không xác nhận đơn lạ (để xử lý tay/hoàn tiền)</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
 <h2>3. Phát hành &amp; tài khoản</h2>
 
 <div class="item" data-id="keystore">
@@ -237,6 +253,7 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 <li>Đã xong thêm: màn Main (bàn chơi, vòng chữ, banner chỉ ở Main, coach level 1), gameplay chơi thật: hint 2 ruby, shuffle, thắng +3, Next.</li>
 <li>Đã xong thêm: popup trong game (Pause, Cách chơi, Win lần đầu/chơi lại/Daily, Từ thưởng) khớp design.</li>
 <li>Đã xong thêm: popup thiếu ruby (design có, game chưa có).</li>
+<li>Đã xong thêm: level vi/fr/es/pt chơi được (mở app 4,7 giây); mua tắt ads ẩn banner ngay; sửa lỗi đơn IAP về khi Shop đóng không cộng ruby.</li>
 <li>Đã xong thêm: 5 ngôn ngữ UI đổi trên máy thật, sửa 7 lỗi tràn/ngắt chữ fr/es/pt; popup Đấu AI sắp ra mắt.</li>
 <li>Đang làm: localization; sau đó đề xuất mới (Đấu Bot chờ duyệt, dữ liệu level ngôn ngữ).</li>
 <li>Nhánh chưa merge: <code>wordcross/bot</code> (chờ duyệt cách chơi), <code>wordcross/banner</code> (làm ở nhóm Main).</li>

@@ -1241,16 +1241,16 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T116",
       "title": "Đơn IAP về khi Shop đóng (mở lại app/pending) không cộng ruby nhưng vẫn xác nhận store",
-      "type": "code",
-      "status": "doing",
+      "type": "runtime",
+      "status": "done",
       "screen": "Ads · IAP",
       "goal": "Mọi đơn hợp lệ đều cộng ruby + buy_item, kể cả khi Shop không mở",
       "scope": "Purchaser.ProcessPurchase cộng thưởng; ShopDialog chỉ hiện toast",
       "owner": "CLAUDE (dev)",
       "deps": "T114",
       "criteria": "Mô phỏng ProcessPurchase khi Shop đóng → ruby cộng đúng, buy_item set, banner ẩn; mua trong Shop không cộng đôi",
-      "evidence": "",
-      "note": "[2026-10-30] Phát hiện khi làm T110: chỉ ShopDialog nghe onItemPurchased; OnPendingPurchase gọi ConfirmPurchase dù không ai cộng thưởng → mất tiền người chơi. OTA CLR."
+      "evidence": "[2026-10-30] Purchaser.ProcessPurchase cộng CreditBalance + GrantNoAds trước onItemPurchased; ShopDialog chỉ toast (6ae807d, merge 84e5fc2). Máy (mô phỏng ProcessPurchase qua DebugOpener iap:): (a) Shop đóng item1 ruby 10→60 buy_item=True; (b) Shop mở item2 60→170 một lần; (c) kill app giữ 170. OTA CLR 2cf2e776 (curl khớp), cold start 540 asset 4,70s. Ảnh qa-shots/t116-final-*.",
+      "note": "[2026-10-30] Phát hiện khi làm T110: chỉ ShopDialog nghe onItemPurchased; OnPendingPurchase gọi ConfirmPurchase dù không ai cộng thưởng → mất tiền người chơi. OTA CLR.\n[2026-10-30] Luồng store thật → OnPendingPurchase kiểm cùng T007. Toast (b) chưa có ảnh. Chờ USER: cho-duyet iap-noads, iap-unknown."
     },
     {
       "id": "T025",
