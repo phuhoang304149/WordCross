@@ -12,14 +12,26 @@ public class ShopDialog : Dialog
         base.Start();
 #if IAP && UNITY_PURCHASING
         Purchaser.instance.onItemPurchased += OnItemPurchased;
+        Locator<LocalizationController>.Instance.onLanguageChanged += OnLanguageChanged;
+        UpdatePacks();
+#endif
+    }
 
+#if IAP && UNITY_PURCHASING
+    private void OnLanguageChanged(string code)
+    {
+        UpdatePacks();
+    }
+
+    private void UpdatePacks()
+    {
         for(int i = 0; i < numRubyTexts.Length; i++)
         {
             numRubyTexts[i].text = Locator<LocalizationController>.Instance.Get("shop.pack", "n", Purchaser.instance.iapItems[i].value);
             priceTexts[i].text = Purchaser.instance.iapItems[i].price + "$";
         }
-#endif
     }
+#endif
 
     public void OnBuyProduct(int index)
 	{
@@ -38,7 +50,7 @@ public class ShopDialog : Dialog
         if (item.productType == PType.Consumable)
         {
             CurrencyController.CreditBalance(item.value);
-            Toast.instance.ShowMessage("Your purchase is successful");
+            Toast.instance.ShowMessage(Locator<LocalizationController>.Instance.Get("shop.success"));
             CUtils.SetBuyItem();
         }
         // Or ... a non-consumable product has been purchased by this user.
@@ -58,6 +70,8 @@ public class ShopDialog : Dialog
     private void OnDestroy()
     {
         Purchaser.instance.onItemPurchased -= OnItemPurchased;
+        if (Locator<LocalizationController>.Instance != null)
+            Locator<LocalizationController>.Instance.onLanguageChanged -= OnLanguageChanged;
     }
 #endif
 }

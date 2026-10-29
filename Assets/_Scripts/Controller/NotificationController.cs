@@ -5,6 +5,8 @@ using Assets.SimpleAndroidNotifications;
 using System;
 using Superpow;
 using System.Text;
+using Script.Utils;
+using WordCross.Gameplay;
 
 public class NotificationController : MonoBehaviour {
 
@@ -93,7 +95,7 @@ public class NotificationController : MonoBehaviour {
 
         if (num > 0)
         {
-            Toast.instance.ShowMessage(string.Format("You got {0} free rubies", num));
+            Toast.instance.ShowMessage(Locator<LocalizationController>.Instance.Get("noti.toast", "n", num));
         }
 
         Prefs.isNoti1Enabled = false;
@@ -215,8 +217,8 @@ public class NotificationController : MonoBehaviour {
     private void PushUnlockLetter(char letter, double delay)
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
-        string message = "We unlocked a letter " + letter + " for you. Open the game and continue :)";
-        NotificationManager.SendWithAppIcon(TimeSpan.FromHours(delay), "Unlock letter", message, new Color(0, 0.6f, 1), NotificationIcon.Message);
+        var loc = Locator<LocalizationController>.Instance;
+        NotificationManager.SendWithAppIcon(TimeSpan.FromHours(delay), loc.Get("noti.letterTitle"), loc.Get("noti.letter", "c", letter), new Color(0, 0.6f, 1), NotificationIcon.Message);
 #endif
     }
 
@@ -224,8 +226,8 @@ public class NotificationController : MonoBehaviour {
     {
         int num = UnityEngine.Random.Range(5, 8);
 #if UNITY_ANDROID && !UNITY_EDITOR
-        string message = "You got " + num + " free rubies. Let's play and challenge yourself";
-        NotificationManager.SendWithAppIcon(TimeSpan.FromHours(delay), "Ruby gift", message, new Color(0, 0.6f, 1), NotificationIcon.Message);
+        var loc = Locator<LocalizationController>.Instance;
+        NotificationManager.SendWithAppIcon(TimeSpan.FromHours(delay), loc.Get("noti.rubyTitle"), loc.Get("noti.ruby", "n", num), new Color(0, 0.6f, 1), NotificationIcon.Message);
 #endif
         return num;
     }
