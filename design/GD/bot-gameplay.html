@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WordCross — GD Bot 3 cách chơi</title>
+<style>
+:root{--bg0:#0b0f17;--bg1:#121a27;--panel:#17212f;--stroke:#2c3b50;--teal:#3fd6c4;--mint:#b8f3e6;--gold:#ffd35c;--cream:#eef3f8;--dim:#98a9bd;--ok:#2fd37a;--warn:#ffb020;--bad:#ff6b6b;--blue:#6aa8ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg0);color:var(--cream);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--teal)}
+header,main,footer{max-width:1000px;margin:auto;padding:0 18px}
+header{padding-top:36px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 22px}
+.nav a{padding:6px 12px;border:1px solid var(--stroke);border-radius:10px;text-decoration:none;font-size:13px;background:var(--bg1)}
+.nav a:hover{border-color:var(--gold);color:var(--gold)}
+.eyebrow{color:var(--gold);letter-spacing:.18em;font-size:12px;text-transform:uppercase;font-weight:700}
+h1{font-size:clamp(28px,6vw,46px);line-height:1.15;margin:8px 0 10px}
+h2{font-size:23px;margin:0 0 12px;color:var(--mint)}
+h3{font-size:17px;margin:18px 0 6px;color:var(--gold)}
+section{background:var(--bg1);border:1px solid var(--stroke);border-radius:16px;padding:20px;margin:18px 0;scroll-margin-top:12px}
+p{margin:8px 0;color:#d3dde8}
+.lead{color:var(--dim);font-size:16px}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:99px;margin-right:6px;vertical-align:middle;letter-spacing:.03em}
+.t-ok{background:var(--ok);color:#06281a}
+.t-need{background:var(--gold);color:#3a2a00}
+.t-assume{background:var(--warn);color:#3a2000}
+.t-open{background:var(--bad);color:#3a0808}
+.t-exist{background:var(--blue);color:#06193a}
+.t-custom{background:var(--stroke);color:var(--cream)}
+.ov-sel,.ov-txt{background:#0a1320;color:var(--cream);border:1px solid var(--stroke);border-radius:8px;padding:4px 8px;font:inherit;font-size:13px;max-width:100%}
+.ov-txt{margin-left:0;width:100%;min-width:140px}
+.ov-sel:focus,.ov-txt:focus{outline:2px solid var(--teal);outline-offset:1px}
+.ov-sel option{background:#0a1320;color:var(--cream)}
+.ov-sel.t-ok{background:var(--ok);color:#06281a}
+.ov-sel.t-need{background:var(--gold);color:#3a2a00}
+.ov-sel.t-assume{background:var(--warn);color:#3a2000}
+.ov-sel.t-open{background:var(--bad);color:#3a0808}
+.ov-sel.t-exist{background:var(--blue);color:#06193a}
+.ov-sel.t-custom{background:var(--stroke);color:var(--cream)}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px;margin:14px 0;font-size:14px;color:var(--dim)}
+.legend div{background:var(--bg1);border:1px solid var(--stroke);border-radius:10px;padding:8px 10px}
+ul{padding-left:22px;margin:8px 0}li{margin:4px 0}
+code{background:#0a1320;padding:1px 6px;border-radius:6px;color:var(--mint);font-size:.9em;overflow-wrap:anywhere}
+.tbl{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{border:1px solid var(--stroke);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#0e1826;color:var(--gold)}
+.note{border-left:4px solid var(--warn);background:#241c08;border-radius:10px;padding:10px 14px;margin:12px 0}
+footer{padding:10px 18px 50px;color:var(--dim);font-size:13px}
+
+.phones{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:12px 0}
+.phone{background:#0a1320;border:1px solid var(--stroke);border-radius:22px;padding:10px;max-width:380px;width:100%;margin:auto}
+.hud{display:flex;justify-content:space-between;align-items:center;gap:6px;font-size:12px;color:var(--dim);padding:2px 4px}
+.clock{font-weight:700;color:var(--gold);font-size:15px}
+.side{background:var(--panel);border:1px solid var(--stroke);border-radius:14px;padding:8px;margin:6px 0}
+.side.bot{border-color:#3a4f6d}.side.me{border-color:var(--teal)}
+.who{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700}
+.chip{font-size:10px;padding:1px 7px;border-radius:99px;background:var(--stroke);color:var(--cream);font-weight:700}
+.chip.b{background:var(--blue);color:#06193a}.chip.m{background:var(--teal);color:#032a25}
+.bar{height:6px;border-radius:99px;background:#0a1320;margin:5px 0;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--teal)}.side.bot .bar i{background:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:3px;margin:4px auto;max-width:210px}
+.c{aspect-ratio:1;border-radius:5px;background:#0e1826;border:1px solid var(--stroke);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--mint)}
+.c.o{background:transparent;border-color:transparent}.c.f{background:var(--teal);color:#032a25}.c.k{background:var(--blue);color:#06193a}
+.c.l{background:#2a2f3a;color:#6b778a;text-decoration:line-through}
+.wheel{width:74px;height:74px;border-radius:50%;border:2px solid var(--stroke);margin:4px auto;display:grid;place-items:center;font-size:13px;font-weight:700;letter-spacing:.2em;color:var(--gold);background:#0e1826}
+.wheel.off{opacity:.45;border-style:dashed}
+.sel{display:flex;gap:5px;flex-wrap:wrap;margin:5px 0}
+.opt{border:1px solid var(--stroke);border-radius:10px;padding:5px 10px;font-size:13px;background:#0e1826}
+.opt.on{border-color:var(--gold);color:var(--gold)}
+.cta{text-align:center;background:var(--gold);color:#3a2a00;font-weight:700;border-radius:12px;padding:8px;margin-top:8px}
+.cap{font-size:12px;color:var(--dim);text-align:center;margin:2px 0 0}
+@media(max-width:560px){section{padding:14px}.phone{max-width:100%}}
+</style></head>
+<body>
+<header>
+<nav class="nav"><a href="index.html">← GD chính</a><a href="index.html#bot">GD mục 7 Bot</a><a href="../Ui/index.html">UI catalogue</a><a href="../index.html">Portal</a><a href="#idea">1 Ý tưởng</a><a href="#cmp">2 So sánh</a><a href="#flow">3 Luồng</a><a href="#m1">4 Mode 1</a><a href="#m2">5 Mode 2</a><a href="#m3">6 Mode 3</a><a href="#fair">7 Công bằng</a><a href="#hud">8 HUD</a><a href="#setup">9 Setup</a><a href="#open">10 Chưa chốt</a></nav>
+<span class="eyebrow">Game Design · Bot</span>
+<h1>WordCross — Chơi với Bot: 3 cách chơi</h1>
+<p class="lead">Trang GD minh hoạ tĩnh, <b>chưa thực thi</b> trong Unity; không có gameplay chạy thật. Luật 90 giây cũ vẫn <b>HIỆN CÓ</b> trong prototype UI cũ; 3 cách chơi dưới đây là thiết kế mới. Ý tưởng gốc là của user, phần chi tiết do GD đề xuất.</p>
+<div class="legend">
+<div><span class="tag t-ok">DUYỆT</span> user đã chốt</div><div><span class="tag t-need">CẦN DUYỆT</span> đề xuất nhất quán, chờ user duyệt</div><div><span class="tag t-assume">CHƯA CHỐT</span> số/giả định tạm</div><div><span class="tag t-exist">HIỆN CÓ (prototype cũ)</span> chỉ nói về prototype cũ, không phải đã triển khai</div>
+</div>
+</header>
+<main>
+<section id="idea"><h2><span class="tag t-ok">DUYỆT</span> 1. Ý tưởng user đã chốt</h2>
+<ul>
+<li>Có <b>ba</b> cách chơi với bot: (1) một màn giới hạn 90 giây, (2) theo lượt, (3) đấu tốc độ chạy đua qua 10/20/… màn random.</li>
+<li><b>Hai bàn riêng</b> (người và bot) hiển thị <b>cùng một màn hình</b> theo layout split, không phải hai trang trận tách rời.</li>
+<li>Race: người chơi chọn 10 hoặc 20 màn (các số khác chỉ là <span class="tag t-assume">CHƯA CHỐT</span>).</li>
+<li>AI “Coming soon” là nút riêng, <b>không</b> phải mode thứ tư (xem mục 7 GD chính).</li>
+</ul>
+<p>Mọi luật chi tiết còn lại bên dưới là <span class="tag t-need">CẦN DUYỆT</span> hoặc <span class="tag t-assume">CHƯA CHỐT</span>, <b>chưa được duyệt</b>.</p></section>
+
+<section id="cmp"><h2><span class="tag t-need">CẦN DUYỆT</span> 2. So sánh 3 cách chơi</h2>
+<div class="tbl"><table><tr><th></th><th>1. Một màn 90s</th><th>2. Theo lượt</th><th>3. Đua tốc độ</th></tr>
+<tr><td>Số màn</td><td>1 level</td><td>1 level</td><td>N = 10 / 20 (random, không lặp)</td></tr>
+<tr><td>Hai bàn</td><td>2 bản sao độc lập, giải song song</td><td>2 bàn riêng, đổi lượt, <b>cùng một kho đáp án</b> (tranh từ)</td><td>2 bàn riêng, mỗi bên tiến độ riêng qua cùng danh sách màn</td></tr>
+<tr><td>Đồng hồ</td><td>Đếm ngược 90s toàn trận</td><td>Đếm ngược từng lượt (<span class="tag t-assume">CHƯA CHỐT</span> 20s)</td><td>Đếm lên, đo thời gian hoàn tất cả race; <b>không</b> có 90s</td></tr>
+<tr><td>Thắng</td><td>Giải hết trước; hết giờ so điểm</td><td>Điểm cao hơn khi hết kho đáp án / hết lượt</td><td>Hoàn tất N màn sớm hơn</td></tr>
+<tr><td>Hoà</td><td>Bằng điểm khi hết giờ</td><td>Bằng điểm và bằng thời gian dùng (<span class="tag t-need">CẦN DUYỆT</span>)</td><td>Cùng giây hoàn tất (<span class="tag t-need">CẦN DUYỆT</span>)</td></tr>
+<tr><td>Điểm</td><td>Số chữ của từ</td><td>Số chữ của từ <b>mình chiếm</b></td><td>Không dùng điểm, chỉ thời gian/tiến độ</td></tr></table></div></section>
+
+<section id="flow"><h2><span class="tag t-need">CẦN DUYỆT</span> 3. Luồng</h2>
+<p><b>Home</b> → nút ĐẤU BOT → <b>Bot setup</b> (chế độ, ngôn ngữ chơi, độ khó, số màn nếu Đua) → <b>Trận</b> (hai bàn cùng màn hình) → <b>Kết quả</b> (Thắng / Thua / Hoà, thống kê hai bên, CHƠI LẠI CÙNG BỘ / TRẬN MỚI / Home).</p>
+<ul>
+<li><b>Thoát trận:</b> hộp xác nhận; thoát = huỷ, không kết quả, không thưởng, không resume (bám hướng cũ).</li>
+<li><b>Hint:</b> tắt ở cả 3 mode (bám luật cũ). <b>Shuffle:</b> miễn phí, chỉ xáo vòng chữ của chính mình.</li>
+<li><b>Thưởng:</b> giữ hướng cũ (thắng Dễ/Vừa/Khó +1/+2/+3 ruby, hoà +1, thua 0, trần 6/ngày, mỗi mã trận một lần) — <span class="tag t-assume">CHƯA CHỐT</span>; mode Đua có thể nhân theo N, <b>chưa chốt</b>. Không thêm shop, ads hay cơ chế ngoài scope.</li>
+</ul></section>
+
+<section id="m1"><h2><span class="tag t-need">CẦN DUYỆT</span> 4. Mode 1 — Một màn, 90 giây</h2>
+<p>Kế thừa luật cũ <span class="tag t-exist">HIỆN CÓ (prototype cũ)</span>, nay là đề xuất của GD mới.</p>
+<ul>
+<li>Một level, cùng ngôn ngữ; mỗi bên một bản sao bàn độc lập, thấy tiến độ nhau (thanh + điểm) nhưng không ảnh hưởng nhau.</li>
+<li>Điểm = số chữ gốc của từ tìm được; từ thưởng không tính. Bên tìm đủ đáp án trước thắng; hết 90s so điểm, bằng nhau là hoà.</li>
+<li>Công thức, 90s, độ khó bot (Dễ ~12s/từ bỏ sót 35%; Vừa ~8s, 12%; Khó ~5,5s, 0%) là <span class="tag t-assume">CHƯA CHỐT</span> kế thừa từ mục 7 GD chính.</li>
+</ul>
+<div class="phones"><div class="phone"><div class="hud"><span>Thoát</span><span class="clock">01:12</span><span>Màn 1 / 1</span></div><div class="side bot"><div class="who"><span>Zip <span class="chip b">BOT</span></span><span>4 điểm</span></div><div class="bar"><i style="width:40%"></i></div><div class="grid"><span class="c k">C</span><span class="c k">A</span><span class="c k">T</span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c k">A</span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c e"></span><span class="c e"></span><span class="c e"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span></div><div class="wheel">T A C</div></div><div class="side me"><div class="who"><span>Bạn <span class="chip m">NGƯỜI</span></span><span>7 điểm</span></div><div class="bar"><i style="width:65%"></i></div><div class="grid"><span class="c f">C</span><span class="c f">A</span><span class="c f">T</span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c f">A</span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c e"></span><span class="c e"></span><span class="c e"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span></div><div class="wheel">C A T R</div></div><p class="cap">Hai bản sao bàn độc lập: bot gạch ô của bot, người gạch ô của người; không khoá từ của nhau.</p></div></div></section>
+
+<section id="m2"><h2><span class="tag t-need">CẦN DUYỆT</span> 5. Mode 2 — Theo lượt (LUẬT ĐỀ XUẤT: tranh từ)</h2>
+<p><b>Vấn đề tránh:</b> nếu hai bàn đều phải giải hết cùng đáp án thì điểm luôn bằng nhau → luôn hoà. Phương án nhất quán: <b>mỗi từ chỉ thuộc về người tìm ra trước</b>.</p>
+<ul>
+<li><b>Bàn:</b> cùng level và kho đáp án, nhưng mỗi bên có bàn hiển thị riêng. Từ do một bên chiếm hiện màu bên đó ở bàn của họ, và ở bàn đối phương hiện <b>khoá</b> (gạch ngang, không thể ghi điểm lại) kèm chú thích.</li>
+<li><b>Lượt:</b> người đi trước (<span class="tag t-assume">CHƯA CHỐT</span> lượt đầu theo seed). Trong lượt, bên đó nhập <b>một từ đúng chưa ai chiếm</b> để ghi điểm = số chữ. Lượt kết thúc khi: ghi được từ, hết giờ lượt (<span class="tag t-assume">CHƯA CHỐT</span> 20s) hoặc bấm BỎ LƯỢT. Từ sai/trùng/đã bị khoá: không mất điểm, đồng hồ lượt vẫn chạy.</li>
+<li><b>Đổi lượt:</b> ngay sau khi lượt kết thúc, vòng chữ bên kia sáng, bên vừa đi mờ.</li>
+<li><b>Kết thúc:</b> khi chiếm hết đáp án, hoặc mỗi bên đã đi tối đa <span class="tag t-assume">CHƯA CHỐT</span> 6 lượt; lượt bỏ/hết giờ vẫn tính vào 6.</li>
+<li><b>Thắng/hoà:</b> điểm cao hơn thắng. Bằng điểm → bên dùng ít thời gian tổng hơn thắng; vẫn bằng → hoà. <span class="tag t-need">CẦN DUYỆT</span></li>
+<li><b>Bot:</b> đến lượt, chọn từ theo kế hoạch tất định (seed + độ khó); “thời gian nghĩ” có trần, không nghe lén từ người đang gõ.</li>
+</ul>
+<div class="phones"><div class="phone"><div class="hud"><span>Thoát</span><span class="clock">0:14 · lượt Bạn</span><span>Lượt 3 / 6</span></div><div class="side bot"><div class="who"><span>Zip <span class="chip b">BOT</span></span><span>8 điểm · 3 từ</span></div><div class="bar"><i style="width:50%"></i></div><div class="grid"><span class="c l">C</span><span class="c l">A</span><span class="c l">T</span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c k">A</span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c e"></span><span class="c e"></span><span class="c e"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span></div><div class="wheel off">T A C</div></div><div class="side me"><div class="who"><span>Bạn <span class="chip m">NGƯỜI</span></span><span>6 điểm · 2 từ</span></div><div class="bar"><i style="width:40%"></i></div><div class="grid"><span class="c f">C</span><span class="c f">A</span><span class="c f">T</span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c l">A</span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c e"></span><span class="c e"></span><span class="c e"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span></div><div class="wheel">C A T R</div></div><p class="cap">Ô gạch ngang = đối phương đã chiếm từ đó; hiện ở bàn của mình dưới dạng khoá, không ghi điểm.</p></div></div></section>
+
+<section id="m3"><h2><span class="tag t-need">CẦN DUYỆT</span> 6. Mode 3 — Đua tốc độ qua N màn</h2>
+<ul>
+<li><b>Bộ màn:</b> chọn N = 10 hoặc 20 (<span class="tag t-ok">DUYỆT</span>); cùng ngôn ngữ; rút N level <b>random không lặp</b>, <b>cùng bộ và cùng thứ tự</b> cho người và bot, sinh từ seed của trận.</li>
+<li><b>Tiến độ độc lập:</b> mỗi bên chơi bàn riêng, giải xong tự sang màn kế; không chờ nhau, không khoá từ của nhau.</li>
+<li><b>Đồng hồ:</b> đếm lên, đo từ lúc bắt đầu đến khi hoàn tất màn N. <b>Không</b> áp giới hạn 90s của mode 1.</li>
+<li><b>Thắng:</b> hoàn tất N màn sớm hơn. Trùng giây → hoà (<span class="tag t-need">CẦN DUYỆT</span>). Khi người xong trước, kết thúc ngay không cần chờ bot.</li>
+<li><b>Giới hạn tổng (<span class="tag t-assume">CHƯA CHỐT</span>):</b> chỉ là giả định, ví dụ trần 30 phút → thua nếu bot xong; chưa chốt. Các N khác 10/20 và trần cũng là giả định.</li>
+<li><b>Khác mode 1:</b> nhiều màn, đồng hồ đếm lên đo cả race, thắng bằng tốc độ hoàn tất thay vì điểm/90s.</li>
+</ul>
+<div class="phones"><div class="phone"><div class="hud"><span>Thoát</span><span class="clock">02:41 (cả race)</span><span>Đua 10</span></div><div class="side bot"><div class="who"><span>Zip <span class="chip b">BOT</span></span><span>Màn 6 / 10</span></div><div class="bar"><i style="width:55%"></i></div><div class="grid"><span class="c k">C</span><span class="c k">A</span><span class="c k">T</span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c k">A</span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c e"></span><span class="c e"></span><span class="c e"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span></div><div class="wheel">T A C</div></div><div class="side me"><div class="who"><span>Bạn <span class="chip m">NGƯỜI</span></span><span>Màn 4 / 10</span></div><div class="bar"><i style="width:35%"></i></div><div class="grid"><span class="c f">C</span><span class="c f">A</span><span class="c f">T</span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c f">A</span><span class="c o"></span><span class="c o"></span><span class="c o"></span><span class="c e"></span><span class="c e"></span><span class="c e"></span><span class="c o"></span><span class="c o"></span><span class="c o"></span></div><div class="wheel">C A T R</div></div><p class="cap">Mỗi bên tiến độ riêng nhưng cùng danh sách màn; xong màn tự sang màn kế. Không có giới hạn 90 giây.</p></div></div></section>
+
+<section id="fair"><h2><span class="tag t-need">CẦN DUYỆT</span> 7. Công bằng của bot</h2>
+<ul>
+<li>Bot tất định: kế hoạch dựng từ <code>botPlan(level, độKhó, seed)</code>; cùng mã trận → cùng diễn biến, nên CHƠI LẠI CÙNG BỘ được.</li>
+<li>Không đọc input người, không nghe lén, không dùng LLM, không đồng hồ máy làm ngẫu nhiên. Phần điều khiển của người không bao giờ hiển thị đáp án của bot.</li>
+<li>Trạng thái BOT luôn hiện rõ (nhãn BOT trên bàn, tên Pip/Zip/Zap). Bot không phải người thật và không phải AI.</li>
+<li>Độ khó là tham số <span class="tag t-assume">CHƯA CHỐT</span>: tốc độ/giây mỗi từ, tỉ lệ bỏ sót; cân bằng thật cần playtest.</li>
+<li>Ngôn ngữ: chọn một locale chung cho cả hai bên trong setup; chỉ dùng dữ liệu level hiện có theo locale (vi/en có; fr/es/pt chỉ hiện khi dữ liệu sẵn sàng). Trang này không sửa dữ liệu.</li>
+</ul></section>
+
+<section id="hud"><h2><span class="tag t-need">CẦN DUYỆT</span> 8. HUD</h2>
+<div class="tbl"><table><tr><th>Phần tử</th><th>M1</th><th>M2</th><th>M3</th></tr>
+<tr><td>Đồng hồ</td><td>Đếm ngược 90s</td><td>Đếm ngược lượt + chỉ báo lượt ai</td><td>Đếm lên cả race</td></tr>
+<tr><td>Nhãn bàn</td><td colspan="3">Tên + chip BOT / NGƯỜI trên mỗi bàn</td></tr>
+<tr><td>Điểm / tiến độ</td><td>Điểm + thanh từ</td><td>Điểm + số từ chiếm + lượt n/6</td><td>Màn k / N mỗi bên</td></tr>
+<tr><td>Vòng chữ</td><td colspan="3">Mỗi bàn có vòng chữ riêng; M2 vòng của bên không có lượt bị mờ</td></tr>
+<tr><td>Nút</td><td>Thoát, Shuffle</td><td>Thoát, Shuffle, Bỏ lượt</td><td>Thoát, Shuffle</td></tr></table></div>
+<p>Mobile dọc: bàn bot ở trên (thu gọn), bàn người ở dưới (lớn hơn, vùng vuốt không bị che). Màn rộng: hai bàn ngang hàng.</p></section>
+
+<section id="setup"><h2><span class="tag t-need">CẦN DUYỆT</span> 9. Bot setup (phác thảo)</h2>
+<div class="phones"><div class="phone"><div class="hud"><span>← Home</span><b>BOT</b><span>Ruby 120</span></div>
+<p class="cap">Chế độ</p><div class="sel"><span class="opt on">1 màn · 90 giây</span><span class="opt">Theo lượt</span><span class="opt">Đua tốc độ</span></div>
+<p class="cap">Ngôn ngữ chơi (chung cho người &amp; bot)</p><div class="sel"><span class="opt on">Tiếng Việt</span><span class="opt">English</span><span class="opt">FR · sắp có</span></div>
+<p class="cap">Độ khó bot</p><div class="sel"><span class="opt">Dễ · Pip</span><span class="opt on">Vừa · Zip</span><span class="opt">Khó · Zap</span></div>
+<p class="cap">Số màn (chỉ khi Đua tốc độ)</p><div class="sel"><span class="opt on">10</span><span class="opt">20</span><span class="opt" style="opacity:.5">… (giả định)</span></div>
+<div class="cta">BẮT ĐẦU</div><p class="cap">Vào trận miễn phí, không video, không phí</p></div></div></section>
+
+<section id="open"><h2><span class="tag t-assume">CHƯA CHỐT</span> 10. Chưa chốt / chưa xác minh</h2>
+<ul>
+<li>Timer lượt (20s), số lượt tối đa (6), người đi trước, luật tie-break và hoà ở M2.</li>
+<li>Công thức điểm, độ khó, thưởng (đặc biệt cho Đua), trần tổng race, các N khác 10/20.</li>
+<li>Chưa xác minh: cân bằng thực, tính khả thi tranh từ với dữ liệu level, UI thật; không chạy Unity, không QA trình duyệt/ảnh chụp.</li>
+</ul></section>
+</main>
+<footer>design/GD/bot-gameplay.html — trang tĩnh, font hệ thống, không CDN, CSS nội bộ. <a href="index.html">← GD chính</a></footer>
+</body></html>
