@@ -58,3 +58,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+
+# ui-preview tooling output / Unity user settings
+/Export/
+/UserSettings/
