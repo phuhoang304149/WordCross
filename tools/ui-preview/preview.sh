@@ -38,7 +38,7 @@ T0=$SECONDS; T_CLR=0; T_AA=0; T_APK=0; GUARD=0; LOCKED=0
 # ---- worktree guard: Unity rewrites many tracked files during a batch run; put everything back afterwards
 snapshot_wt() {
   rm -rf "${PV:?}/snap"; mkdir -p "$PV/snap"
-  git -C "$WT" diff --name-only HEAD -z > "$PV/dirty-before"
+  git -C "$WT" diff --ignore-submodules=all --name-only HEAD -z > "$PV/dirty-before"
   while IFS= read -r -d '' f; do
     if [ -e "$WT/$f" ]; then mkdir -p "$PV/snap/$(dirname "$f")"; cp -p "$WT/$f" "$PV/snap/$f"; fi
   done < "$PV/dirty-before"
@@ -48,7 +48,7 @@ snapshot_wt() {
 restore_wt() {
   [ "$GUARD" = 1 ] || return 0
   GUARD=0
-  git -C "$WT" diff --name-only HEAD -z > "$PV/dirty-after"
+  git -C "$WT" diff --ignore-submodules=all --name-only HEAD -z > "$PV/dirty-after"
   tr '\0' '\n' < "$PV/dirty-before" > "$PV/before.txt"
   while IFS= read -r -d '' f; do
     if grep -qxF -- "$f" "$PV/before.txt"; then

@@ -63,6 +63,7 @@ public class HomeController : BaseController {
     {
         UpdateResume();
         UpdateDailyDot();
+        Invoke("FitDailyLabel", 0f);
     }
 
     private void OnLanguageChanged(string code)
@@ -71,29 +72,31 @@ public class HomeController : BaseController {
         Invoke("FitDailyLabel", 0f);
     }
 
-    // Nhãn Daily được xuống dòng giữa các từ nhưng không được ngắt giữa từ (fr "QUOTIDIEN"): giảm cỡ tới khi từ dài nhất vừa khung.
+    // Nhãn Daily luôn 1 dòng như design: giữ cỡ design khi đủ chỗ, thiếu thì giảm cỡ tới khi cả cụm chữ vừa phần còn lại sau chấm đỏ.
     private void FitDailyLabel()
     {
         var daily = GameObject.Find("Daily");
         if (daily == null) return;
         var label = daily.GetComponentInChildren<Text>(true);
-        if (label == null) return;
+        var group = label == null ? null : label.GetComponentInParent<HorizontalLayoutGroup>();
+        if (label == null || group == null) return;
         Canvas.ForceUpdateCanvases();
-        string longest = "";
-        foreach (var word in Locator<LocalizationController>.Instance.Get("home.daily").Split(' '))
-        {
-            if (word.Length > longest.Length) longest = word;
-        }
+        float available = group.GetComponent<RectTransform>().rect.width - group.padding.horizontal;
+        if (dailyDot != null && dailyDot.activeSelf)
+            available -= group.spacing + dailyDot.GetComponent<RectTransform>().rect.width;
+        string text = Locator<LocalizationController>.Instance.Get("home.daily");
         int size = DAILY_FONT;
         var generator = label.cachedTextGeneratorForLayout;
         var settings = label.GetGenerationSettings(Vector2.zero);
         settings.resizeTextForBestFit = false;
+        settings.horizontalOverflow = HorizontalWrapMode.Overflow;
         settings.fontSize = size;
-        while (size > DAILY_MIN_FONT && generator.GetPreferredWidth(longest, settings) / label.pixelsPerUnit > label.rectTransform.rect.width)
+        while (size > DAILY_MIN_FONT && generator.GetPreferredWidth(text, settings) / label.pixelsPerUnit > available)
         {
             size--;
             settings.fontSize = size;
         }
+        label.horizontalOverflow = HorizontalWrapMode.Overflow;
         label.fontSize = size;
     }
 
