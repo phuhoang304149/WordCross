@@ -34,7 +34,8 @@ public class AdmobController : MonoBehaviour
         if (Locator<GameDatabase>.Instance == null)
         {
             Debug.Log("AdmobController: waiting for GameDatabase before initializing ads.");
-            yield return new WaitUntil(() => Locator<GameDatabase>.Instance != null);
+            // Không dùng WaitUntil: APK 0.3 đã strip type này khỏi UnityEngine.CoreModule.
+            while (Locator<GameDatabase>.Instance == null) yield return null;
         }
         CatGamingAds.Initialize(OnAdsInitialized);
 #endif
