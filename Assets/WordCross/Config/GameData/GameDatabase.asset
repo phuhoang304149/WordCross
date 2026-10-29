@@ -15,7 +15,7 @@ MonoBehaviour:
   packageId: com.PHltd.wordcrossy
   gameInfo:
     version: 1.0.0
-    bundleCode: 6
+    bundleCode: 202001035
     addressableVersion: 1.0.0
   Data:
     _serializedList:
