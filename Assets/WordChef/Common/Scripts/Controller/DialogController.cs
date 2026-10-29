@@ -19,7 +19,8 @@ public enum DialogType
     Win,
     RewardedVideo,
     RateGame,
-    Language
+    Language,
+    Daily
 };
 
 public enum DialogShow

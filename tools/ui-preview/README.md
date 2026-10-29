@@ -19,7 +19,9 @@ In ra đường dẫn ảnh `Build/remote-r2-0.3/qa-shots/preview-<screen>-<th�
 | `pause`, `howto`, `extra[:ready\|notready]`, `win[:first\|replay]` | dialog trong Main, level đang mở khoá (đổi bằng `;level=w-s-l`) |
 | `shop`, `rate`, `language` | dialog trong Home |
 | `rewarded:<ready\|loading\|cooldown\|nofill\|offline\|playing\|success\|cancel\|error>` | popup rewarded ở Home, giữ nguyên trạng thái |
-| `reset` | trả số ruby về giá trị trước khi ghi đè |
+| `daily[:fresh\|risk\|safe\|lost]` | dialog Daily ở Home với chuỗi giả (lưu thật; trả lại bằng `reset`) |
+| `dailymain[:state]`, `dailywin[:state]` | Main với bàn Daily hôm nay / Win biến thể Daily (dữ liệu Daily và ruby trả lại sau 1 giây) |
+| `reset` | trả số ruby và dữ liệu Daily về giá trị trước khi ghi đè |
 
 Hậu tố `;extra=N` đặt tiến độ từ thưởng (lưu thật, trả lại bằng `;extra=0`). Hậu tố `;ruby=N` đặt số ruby (ví dụ `shop;ruby=99999`; nhớ chạy `reset` sau đó). `win` vào level đang mở khoá nên là "thắng lần đầu" (+ruby);
 `win:replay` là level đã qua. Win/Extra ghi tiến độ khi mở nên DebugOpener trả lại ruby/tiến độ sau 1 giây; số ruby hiển thị trong ảnh có thể khác số đã lưu.

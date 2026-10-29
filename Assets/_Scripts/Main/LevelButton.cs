@@ -82,6 +82,7 @@ public class LevelButton : MonoBehaviour {
     public void OnButtonClick()
     {
         GameState.currentLevel = level;
+        GameState.dailyDate = null;
 
         CUtils.LoadScene(3, true);
         Sound.instance.PlayButton();

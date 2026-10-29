@@ -60,6 +60,8 @@ public static class Prefs {
 
     public static bool IsLastLevel()
     {
+        // Bàn Daily không phải level tiến độ chính: không lưu/đọc level_progress, không tính là thắng lần đầu.
+        if (GameState.isDaily) return false;
         return  GameState.currentWorld == unlockedWorld &&
                 GameState.currentSubWorld == unlockedSubWorld && 
                 GameState.currentLevel == unlockedLevel;

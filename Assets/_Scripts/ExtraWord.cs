@@ -30,6 +30,13 @@ public class ExtraWord : MonoBehaviour {
         world = GameState.currentWorld;
         subWorld = GameState.currentSubWorld;
         level = GameState.currentLevel;
+        if (GameState.isDaily)
+        {
+            // Sổ từ extra của Daily tách khỏi level tiến độ chính (cùng bàn có thể trùng level thường).
+            world = -1;
+            subWorld = new DailyChallenge().DailyNo(GameState.dailyDate);
+            level = 0;
+        }
 
         extraWords = Prefs.GetExtraWords(world, subWorld, level).ToList();
         existMessage.SetActive(false);
