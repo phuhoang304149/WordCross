@@ -8,7 +8,5 @@ public class RubyFly : MonoBehaviour {
     {
         iTween.ScaleTo(gameObject, Vector3.zero, 0.15f);
         Destroy(gameObject, 0.2f);
-
-        CurrencyController.CreditBalance(1);
     }
 }
