@@ -249,7 +249,7 @@ public class WordRegion : MonoBehaviour {
     public void ClearLevelProgress()
     {
         if (!Prefs.IsLastLevel()) return;
-        CPlayerPrefs.DeleteKey("level_progress");
+        CPlayerPrefs.DeleteKey(Prefs.progressKeys.Of("level_progress"));
     }
 
     public bool CheckLevelProgress(string[] levelProgress, List<string> wordList)
