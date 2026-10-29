@@ -2,7 +2,7 @@
 # One command to look at a screen of a worktree on the real phone.
 #   tools/ui-preview/preview.sh [--keep] [--name N] [--wait MIN] [--settle SEC] [--rebuild] [--no-build] <worktree> <screen>
 # screen: home | selectworld | selectlevel[:w-s] | main:w-s-l | pause | win[:first|replay] | extra[:ready|notready] | howto |
-#         shop | rate | language | rewarded:<state>   (optional ;ruby=N and ;level=w-s-l suffixes) — see README.md
+#         lowruby | shop | rate | language | rewarded:<state>   (optional ;ruby=N and ;level=w-s-l suffixes) — see README.md
 set -euo pipefail
 HERE=$(cd "$(dirname "$0")" && pwd)
 . "$HERE/lib/common.sh"
@@ -28,7 +28,7 @@ HEADNAME=${SPEC%%[:;]*}; HEADNAME=$(printf '%s' "$HEADNAME" | tr 'A-Z' 'a-z')
 case "$HEADNAME" in
   home|shop|rate|language|rewarded|reset|daily) SCENE=Home ;;
   selectworld) SCENE=SelectWorld ;; selectlevel) SCENE=SelectLevel ;;
-  main|pause|win|extra|howto|dailymain|dailywin) SCENE=Main ;;
+  main|pause|win|extra|howto|lowruby|dailymain|dailywin) SCENE=Main ;;
   *) die "unknown screen '$SPEC'" ;;
 esac
 [ -n "$NAME" ] || NAME=$(printf '%s' "$SPEC" | tr ':;=' '-__' | tr -c 'A-Za-z0-9_.-' '_')

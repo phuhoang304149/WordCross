@@ -20,7 +20,8 @@ public enum DialogType
     RewardedVideo,
     RateGame,
     Language,
-    Daily
+    Daily,
+    LowRuby
 };
 
 public enum DialogShow
