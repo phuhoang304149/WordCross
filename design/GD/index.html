@@ -24,6 +24,11 @@ p{margin:8px 0;color:#d3dde8}
 .t-assume{background:var(--warn);color:#3a2000}
 .t-open{background:var(--bad);color:#3a0808}
 .t-exist{background:var(--blue);color:#06193a}
+.t-custom{background:var(--stroke);color:var(--cream)}
+.ov-sel,.ov-txt{background:#0a1320;color:var(--cream);border:1px solid var(--stroke);border-radius:8px;padding:4px 8px;font:inherit;font-size:13px;margin-left:6px;max-width:100%}
+.ov-txt{margin-left:0;width:100%;min-width:140px}
+.ov-sel:focus,.ov-txt:focus{outline:2px solid var(--teal);outline-offset:1px}
+.ov-sel option{background:#0a1320;color:var(--cream)}
 .legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px;margin:14px 0;font-size:14px;color:var(--dim)}
 .legend div{background:var(--bg1);border:1px solid var(--stroke);border-radius:10px;padding:8px 10px}
 ul{padding-left:22px;margin:8px 0}li{margin:4px 0}
@@ -42,30 +47,31 @@ footer{padding:10px 18px 50px;color:var(--dim);font-size:13px}
 <h1>WordCross — GD</h1>
 <p class="lead">Một trang, có mục lục. Mỗi mục tách <b>HIỆN CÓ</b> (đọc trực tiếp từ source/asset, có đường dẫn) và <b>ĐỀ XUẤT</b> (thiết kế mới, chưa có trong Unity). Không có thay đổi runtime/level/build nào được thực hiện. Tiền tệ giữ nguyên là <b>ruby</b> (gốc dùng ruby; quyết định của user), không có coin và không có migration.</p>
 <div class="legend">
-<div><span class="tag t-ok">ĐÃ CHỐT</span>có bằng chứng user chốt</div>
+<div><span class="tag t-ok">DUYỆT</span>đã duyệt / có bằng chứng user chốt</div>
 <div><span class="tag t-need">CẦN DUYỆT</span>đề xuất, chưa ai duyệt</div>
 <div><span class="tag t-assume">CHƯA CHỐT</span>giả định/tuning tạm</div>
 <div><span class="tag t-open">CHƯA XÁC MINH</span>chưa kiểm chứng</div>
 <div><span class="tag t-exist">HIỆN CÓ</span>có trong source/prototype — <b>không</b> đồng nghĩa đã được duyệt</div>
+<div><span class="tag t-custom">TUỲ CHỈNH</span>nội dung riêng do người xem nhập cho từng dòng</div>
 </div>
 </header>
 <main>
 <section id="ov">
 <h2>Tổng quan những điểm cần duyệt</h2>
-<p>Trạng thái duyệt (ĐÃ CHỐT / CẦN DUYỆT / CHƯA CHỐT) tách khỏi trạng thái triển khai (HIỆN CÓ). Trang này chưa có nút duyệt; việc duyệt do user thực hiện ngoài tài liệu.</p>
-<div class="tbl"><table><tr><th>Quyết định</th><th>Trạng thái duyệt</th><th>Chi tiết</th></tr>
-<tr><td>Tiền tệ giữ là <b>ruby</b>, không coin, không migration</td><td><span class="tag t-ok">ĐÃ CHỐT</span></td><td><a href="#eco">8 Ruby &amp; ads</a></td></tr>
-<tr><td>Home thêm DAILY, ĐẤU BOT, ĐẤU AI (Coming soon), NGÔN NGỮ; popup thiếu ruby; Win có mục tiêu kế và thưởng lần đầu</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#flow">2 Luồng</a></td></tr>
-<tr><td>Quy tắc độ khó/nhịp và validation level mới (không sửa level Unity)</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#levels">3 Level design</a></td></tr>
-<tr><td>Ngôn ngữ chơi tách UI; chuẩn hoá bỏ dấu; Pháp/TBN/Bồ là Coming soon; tiến độ riêng theo locale</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#lang">4 Ngôn ngữ</a></td></tr>
-<tr><td>Onboarding, mục tiêu kế, streak không phạt nặng, chống farm</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#ret">5 Giữ người chơi</a></td></tr>
-<tr><td>Daily Challenge: lịch, seed theo ngày, thưởng, mốc chuỗi, reset</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#daily">6 Daily</a></td></tr>
-<tr><td>Chơi với Bot (luật, độ khó, thưởng) và nút AI “Coming soon”</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#bot">7 Bot &amp; AI</a></td></tr>
-<tr><td>Nguồn/sink ruby, rewarded tự chọn, interstitial chỉ sau thắng (đổi so với gốc), không paywall</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#eco">8 Ruby &amp; ads</a></td></tr>
-<tr><td>Cơ chế i18n UI vi/en/fr/es/pt</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#loc">9 Localization</a></td></tr>
-<tr><td>Danh sách locale UI, tên Subworld, ghép gói ruby↔giá, mốc đếm ngày Daily, mọi số ruby/bot/ads, ngày demo</td><td><span class="tag t-assume">CHƯA CHỐT</span></td><td><a href="#open">12 Giả định</a></td></tr>
-<tr><td>Sprite ngoài 4 ảnh đã đọc, cột Unity với số từ lẻ, AdMob/IAP thật, cân bằng, từ điển fr/es/pt</td><td><span class="tag t-open">CHƯA XÁC MINH</span></td><td><a href="#open">12 Giả định</a></td></tr>
-<tr><td>Dữ liệu source/level/ads/shop hiện tại (534 level, Hint 2 ruby, adPeriod 90…)</td><td><span class="tag t-exist">HIỆN CÓ</span> không phải quyết định đã duyệt</td><td><a href="#src">1 Nguồn</a>, <a href="#map">10 Mapping</a></td></tr>
+<p>Trạng thái duyệt tách khỏi trạng thái triển khai (HIỆN CÓ). Mỗi dòng có dropdown để đổi trạng thái; chọn “Tuỳ chỉnh” để nhập nội dung riêng cho dòng đó. Mọi thay đổi tự lưu trong trình duyệt này (localStorage), không cần nút lưu. Các nhãn trong chi tiết từng mục bên dưới giữ nguyên, không đổi theo bảng này.</p>
+<div class="tbl"><table id="ov-table"><tr><th>Quyết định</th><th>Trạng thái duyệt</th><th id="ov-custom-th" hidden>Nội dung tuỳ chỉnh</th><th>Chi tiết</th></tr>
+<tr data-key="eco-currency" data-default="ok"><td>Tiền tệ giữ là <b>ruby</b>, không coin, không migration</td><td><span class="tag t-ok ov-badge">DUYỆT</span><select class="ov-sel" aria-label="Trạng thái: Tiền tệ giữ là ruby, không coin, không migration"><option value="need">Cần duyệt</option><option value="ok">Duyệt</option><option value="tbd">Chưa chốt</option><option value="unv">Chưa xác minh</option><option value="exist">Hiện có</option><option value="custom">Tuỳ chỉnh</option></select></td><td class="ov-ctd" hidden><input class="ov-txt" type="text" maxlength="200" placeholder="Nội dung riêng" aria-label="Nội dung tuỳ chỉnh: Tiền tệ giữ là ruby, không coin, không migration" hidden></td><td><a href="#eco">8 Ruby &amp; ads</a></td></tr>
+<tr data-key="home-flow" data-default="need"><td>Home thêm DAILY, ĐẤU BOT, ĐẤU AI (Coming soon), NGÔN NGỮ; popup thiếu ruby; Win có mục tiêu kế và thưởng lần đầu</td><td><span class="tag t-need ov-badge">CẦN DUYỆT</span><select class="ov-sel" aria-label="Trạng thái: Home thêm DAILY, ĐẤU BOT, ĐẤU AI (Coming soon), NGÔN NGỮ; popup thiếu ruby; Win có mục tiêu kế và thưởng lần đầu"><option value="need">Cần duyệt</option><option value="ok">Duyệt</option><option value="tbd">Chưa chốt</option><option value="unv">Chưa xác minh</option><option value="exist">Hiện có</option><option value="custom">Tuỳ chỉnh</option></select></td><td class="ov-ctd" hidden><input class="ov-txt" type="text" maxlength="200" placeholder="Nội dung riêng" aria-label="Nội dung tuỳ chỉnh: Home thêm DAILY, ĐẤU BOT, ĐẤU AI (Coming soon), NGÔN NGỮ; popup thiếu ruby; Win có mục tiêu kế và thưởng lần đầu" hidden></td><td><a href="#flow">2 Luồng</a></td></tr>
+<tr data-key="level-rules" data-default="need"><td>Quy tắc độ khó/nhịp và validation level mới (không sửa level Unity)</td><td><span class="tag t-need ov-badge">CẦN DUYỆT</span><select class="ov-sel" aria-label="Trạng thái: Quy tắc độ khó/nhịp và validation level mới (không sửa level Unity)"><option value="need">Cần duyệt</option><option value="ok">Duyệt</option><option value="tbd">Chưa chốt</option><option value="unv">Chưa xác minh</option><option value="exist">Hiện có</option><option value="custom">Tuỳ chỉnh</option></select></td><td class="ov-ctd" hidden><input class="ov-txt" type="text" maxlength="200" placeholder="Nội dung riêng" aria-label="Nội dung tuỳ chỉnh: Quy tắc độ khó/nhịp và validation level mới (không sửa level Unity)" hidden></td><td><a href="#levels">3 Level design</a></td></tr>
+<tr data-key="lang-rules" data-default="need"><td>Ngôn ngữ chơi tách UI; chuẩn hoá bỏ dấu; Pháp/TBN/Bồ là Coming soon; tiến độ riêng theo locale</td><td><span class="tag t-need ov-badge">CẦN DUYỆT</span><select class="ov-sel" aria-label="Trạng thái: Ngôn ngữ chơi tách UI; chuẩn hoá bỏ dấu; Pháp/TBN/Bồ là Coming soon; tiến độ riêng theo locale"><option value="need">Cần duyệt</option><option value="ok">Duyệt</option><option value="tbd">Chưa chốt</option><option value="unv">Chưa xác minh</option><option value="exist">Hiện có</option><option value="custom">Tuỳ chỉnh</option></select></td><td class="ov-ctd" hidden><input class="ov-txt" type="text" maxlength="200" placeholder="Nội dung riêng" aria-label="Nội dung tuỳ chỉnh: Ngôn ngữ chơi tách UI; chuẩn hoá bỏ dấu; Pháp/TBN/Bồ là Coming soon; tiến độ riêng theo locale" hidden></td><td><a href="#lang">4 Ngôn ngữ</a></td></tr>
+<tr data-key="retention" data-default="need"><td>Onboarding, mục tiêu kế, streak không phạt nặng, chống farm</td><td><span class="tag t-need ov-badge">CẦN DUYỆT</span><select class="ov-sel" aria-label="Trạng thái: Onboarding, mục tiêu kế, streak không phạt nặng, chống farm"><option value="need">Cần duyệt</option><option value="ok">Duyệt</option><option value="tbd">Chưa chốt</option><option value="unv">Chưa xác minh</option><option value="exist">Hiện có</option><option value="custom">Tuỳ chỉnh</option></select></td><td class="ov-ctd" hidden><input class="ov-txt" type="text" maxlength="200" placeholder="Nội dung riêng" aria-label="Nội dung tuỳ chỉnh: Onboarding, mục tiêu kế, streak không phạt nặng, chống farm" hidden></td><td><a href="#ret">5 Giữ người chơi</a></td></tr>
+<tr data-key="daily" data-default="need"><td>Daily Challenge: lịch, seed theo ngày, thưởng, mốc chuỗi, reset</td><td><span class="tag t-need ov-badge">CẦN DUYỆT</span><select class="ov-sel" aria-label="Trạng thái: Daily Challenge: lịch, seed theo ngày, thưởng, mốc chuỗi, reset"><option value="need">Cần duyệt</option><option value="ok">Duyệt</option><option value="tbd">Chưa chốt</option><option value="unv">Chưa xác minh</option><option value="exist">Hiện có</option><option value="custom">Tuỳ chỉnh</option></select></td><td class="ov-ctd" hidden><input class="ov-txt" type="text" maxlength="200" placeholder="Nội dung riêng" aria-label="Nội dung tuỳ chỉnh: Daily Challenge: lịch, seed theo ngày, thưởng, mốc chuỗi, reset" hidden></td><td><a href="#daily">6 Daily</a></td></tr>
+<tr data-key="bot-ai" data-default="need"><td>Chơi với Bot (luật, độ khó, thưởng) và nút AI “Coming soon”</td><td><span class="tag t-need ov-badge">CẦN DUYỆT</span><select class="ov-sel" aria-label="Trạng thái: Chơi với Bot (luật, độ khó, thưởng) và nút AI “Coming soon”"><option value="need">Cần duyệt</option><option value="ok">Duyệt</option><option value="tbd">Chưa chốt</option><option value="unv">Chưa xác minh</option><option value="exist">Hiện có</option><option value="custom">Tuỳ chỉnh</option></select></td><td class="ov-ctd" hidden><input class="ov-txt" type="text" maxlength="200" placeholder="Nội dung riêng" aria-label="Nội dung tuỳ chỉnh: Chơi với Bot (luật, độ khó, thưởng) và nút AI “Coming soon”" hidden></td><td><a href="#bot">7 Bot &amp; AI</a></td></tr>
+<tr data-key="eco-ads" data-default="need"><td>Nguồn/sink ruby, rewarded tự chọn, interstitial chỉ sau thắng (đổi so với gốc), không paywall</td><td><span class="tag t-need ov-badge">CẦN DUYỆT</span><select class="ov-sel" aria-label="Trạng thái: Nguồn/sink ruby, rewarded tự chọn, interstitial chỉ sau thắng (đổi so với gốc), không paywall"><option value="need">Cần duyệt</option><option value="ok">Duyệt</option><option value="tbd">Chưa chốt</option><option value="unv">Chưa xác minh</option><option value="exist">Hiện có</option><option value="custom">Tuỳ chỉnh</option></select></td><td class="ov-ctd" hidden><input class="ov-txt" type="text" maxlength="200" placeholder="Nội dung riêng" aria-label="Nội dung tuỳ chỉnh: Nguồn/sink ruby, rewarded tự chọn, interstitial chỉ sau thắng (đổi so với gốc), không paywall" hidden></td><td><a href="#eco">8 Ruby &amp; ads</a></td></tr>
+<tr data-key="i18n" data-default="need"><td>Cơ chế i18n UI vi/en/fr/es/pt</td><td><span class="tag t-need ov-badge">CẦN DUYỆT</span><select class="ov-sel" aria-label="Trạng thái: Cơ chế i18n UI vi/en/fr/es/pt"><option value="need">Cần duyệt</option><option value="ok">Duyệt</option><option value="tbd">Chưa chốt</option><option value="unv">Chưa xác minh</option><option value="exist">Hiện có</option><option value="custom">Tuỳ chỉnh</option></select></td><td class="ov-ctd" hidden><input class="ov-txt" type="text" maxlength="200" placeholder="Nội dung riêng" aria-label="Nội dung tuỳ chỉnh: Cơ chế i18n UI vi/en/fr/es/pt" hidden></td><td><a href="#loc">9 Localization</a></td></tr>
+<tr data-key="assume-locale-price" data-default="tbd"><td>Danh sách locale UI, tên Subworld, ghép gói ruby↔giá, mốc đếm ngày Daily, mọi số ruby/bot/ads, ngày demo</td><td><span class="tag t-assume ov-badge">CHƯA CHỐT</span><select class="ov-sel" aria-label="Trạng thái: Danh sách locale UI, tên Subworld, ghép gói ruby↔giá, mốc đếm ngày Daily, mọi số ruby/bot/ads, ngày demo"><option value="need">Cần duyệt</option><option value="ok">Duyệt</option><option value="tbd">Chưa chốt</option><option value="unv">Chưa xác minh</option><option value="exist">Hiện có</option><option value="custom">Tuỳ chỉnh</option></select></td><td class="ov-ctd" hidden><input class="ov-txt" type="text" maxlength="200" placeholder="Nội dung riêng" aria-label="Nội dung tuỳ chỉnh: Danh sách locale UI, tên Subworld, ghép gói ruby↔giá, mốc đếm ngày Daily, mọi số ruby/bot/ads, ngày demo" hidden></td><td><a href="#open">12 Giả định</a></td></tr>
+<tr data-key="unverified-assets" data-default="unv"><td>Sprite ngoài 4 ảnh đã đọc, cột Unity với số từ lẻ, AdMob/IAP thật, cân bằng, từ điển fr/es/pt</td><td><span class="tag t-open ov-badge">CHƯA XÁC MINH</span><select class="ov-sel" aria-label="Trạng thái: Sprite ngoài 4 ảnh đã đọc, cột Unity với số từ lẻ, AdMob/IAP thật, cân bằng, từ điển fr/es/pt"><option value="need">Cần duyệt</option><option value="ok">Duyệt</option><option value="tbd">Chưa chốt</option><option value="unv">Chưa xác minh</option><option value="exist">Hiện có</option><option value="custom">Tuỳ chỉnh</option></select></td><td class="ov-ctd" hidden><input class="ov-txt" type="text" maxlength="200" placeholder="Nội dung riêng" aria-label="Nội dung tuỳ chỉnh: Sprite ngoài 4 ảnh đã đọc, cột Unity với số từ lẻ, AdMob/IAP thật, cân bằng, từ điển fr/es/pt" hidden></td><td><a href="#open">12 Giả định</a></td></tr>
+<tr data-key="current-data" data-default="exist"><td>Dữ liệu source/level/ads/shop hiện tại (534 level, Hint 2 ruby, adPeriod 90…)</td><td><span class="tag t-exist ov-badge">HIỆN CÓ</span><select class="ov-sel" aria-label="Trạng thái: Dữ liệu source/level/ads/shop hiện tại (534 level, Hint 2 ruby, adPeriod 90…)"><option value="need">Cần duyệt</option><option value="ok">Duyệt</option><option value="tbd">Chưa chốt</option><option value="unv">Chưa xác minh</option><option value="exist">Hiện có</option><option value="custom">Tuỳ chỉnh</option></select> không phải quyết định đã duyệt</td><td class="ov-ctd" hidden><input class="ov-txt" type="text" maxlength="200" placeholder="Nội dung riêng" aria-label="Nội dung tuỳ chỉnh: Dữ liệu source/level/ads/shop hiện tại (534 level, Hint 2 ruby, adPeriod 90…)" hidden></td><td><a href="#src">1 Nguồn</a>, <a href="#map">10 Mapping</a></td></tr>
 </table></div>
 </section>
 <section id="src"><h2><span class="tag t-exist">HIỆN CÓ / THAM KHẢO</span> 1. Nguồn đã đọc</h2>
@@ -266,4 +272,37 @@ footer{padding:10px 18px 50px;color:var(--dim);font-size:13px}
 
 </main>
 <footer>design/GD/index.html — trang tĩnh, font hệ thống, không CDN, CSS nội bộ.</footer>
+<script>
+var OV_LABEL={need:"CẦN DUYỆT",ok:"DUYỆT",tbd:"CHƯA CHỐT",unv:"CHƯA XÁC MINH",exist:"HIỆN CÓ",custom:"TUỲ CHỈNH"};
+var OV_CLASS={need:"t-need",ok:"t-ok",tbd:"t-assume",unv:"t-open",exist:"t-exist",custom:"t-custom"};
+function ovRefresh(){
+var rows=document.querySelectorAll("#ov-table tr[data-key]");var any=false;
+for(var i=0;i<rows.length;i++){if(rows[i].querySelector(".ov-sel").value==="custom"){any=true;}}
+document.getElementById("ov-custom-th").hidden=!any;
+for(var j=0;j<rows.length;j++){
+var v=rows[j].querySelector(".ov-sel").value;
+var b=rows[j].querySelector(".ov-badge");b.className="tag ov-badge "+OV_CLASS[v];b.textContent=OV_LABEL[v];
+rows[j].querySelector(".ov-ctd").hidden=!any;
+rows[j].querySelector(".ov-txt").hidden=(v!=="custom");}
+}
+function ovInit(){
+var rows=document.querySelectorAll("#ov-table tr[data-key]");
+for(var i=0;i<rows.length;i++){
+var row=rows[i];var key=row.getAttribute("data-key");
+var sel=row.querySelector(".ov-sel");var txt=row.querySelector(".ov-txt");
+var st=localStorage.getItem("wcgd.ov."+key+".status");
+sel.value=OV_LABEL[st]?st:row.getAttribute("data-default");
+var ct=localStorage.getItem("wcgd.ov."+key+".custom");
+txt.value=ct===null?"":ct;
+sel.addEventListener("change",ovSave.bind(null,key,sel,txt));
+txt.addEventListener("input",ovSave.bind(null,key,sel,txt));}
+ovRefresh();
+}
+function ovSave(key,sel,txt){
+localStorage.setItem("wcgd.ov."+key+".status",sel.value);
+localStorage.setItem("wcgd.ov."+key+".custom",txt.value);
+ovRefresh();
+}
+ovInit();
+</script>
 </body></html>
