@@ -1,0 +1,3219 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338080847efd14361a821ed65d03012e, type: 3}
+  m_Name: Pack
+  m_EditorClassIdentifier: WordCross.Gameplay.HotUpdate::LocaleLevelPack
+  entries:
+  - world: 0
+    subWorld: 0
+    level: 0
+    word: "b\u1EE7a"
+    answers: "ba|b\u1EE7a|"
+    validWords: "ba|b\u1EE7a"
+  - world: 0
+    subWorld: 0
+    level: 1
+    word: "ch\xE8"
+    answers: "h\xE8|ch\xE8|"
+    validWords: "h\xE8|ch\xE8"
+  - world: 0
+    subWorld: 0
+    level: 2
+    word: "n\u1ED9m"
+    answers: "m\u1ED9|n\u1ED9|n\u1ED9m|"
+    validWords: "m\u1ED9|n\u1ED9|n\u1ED9m"
+  - world: 0
+    subWorld: 0
+    level: 3
+    word: "\u0111\xFAp"
+    answers: "\u0111\xFA|\xFAp|\u0111\xFAp|"
+    validWords: "\u0111\xFA|\xFAp|\u0111\xFAp"
+  - world: 0
+    subWorld: 0
+    level: 4
+    word: duy
+    answers: uy|du|duy|
+    validWords: uy|du|duy
+  - world: 0
+    subWorld: 0
+    level: 5
+    word: "c\xFAi"
+    answers: "\xFAc|c\xFA|c\xFAi|"
+    validWords: "\xFAc|c\xFA|c\xFAi"
+  - world: 0
+    subWorld: 0
+    level: 6
+    word: "n\u1ED1t"
+    answers: "t\u1ED1|n\u1ED1t|t\u1ED1n|"
+    validWords: "t\u1ED1|n\u1ED1t|t\u1ED1n"
+  - world: 0
+    subWorld: 0
+    level: 7
+    word: "r\xE8n"
+    answers: "n\xE8|r\xE8|r\xE8n|"
+    validWords: "n\xE8|r\xE8|r\xE8n"
+  - world: 0
+    subWorld: 0
+    level: 8
+    word: "t\u1EE7i"
+    answers: "\u1EE7i|ti|t\u1EE7|t\u1EE7i|"
+    validWords: "\u1EE7i|ti|t\u1EE7|t\u1EE7i"
+  - world: 0
+    subWorld: 0
+    level: 9
+    word: "x\xF3i"
+    answers: "xi|\xF3i|x\xF3|x\xF3i|"
+    validWords: "xi|\xF3i|x\xF3|x\xF3i"
+  - world: 0
+    subWorld: 0
+    level: 10
+    word: "\u0111em"
+    answers: "\u0111e|em|me|\u0111em|"
+    validWords: "\u0111e|em|me|\u0111em"
+  - world: 0
+    subWorld: 0
+    level: 11
+    word: "n\xF3i"
+    answers: "n\xF3|\xF3i|in|ni|n\xF3i|"
+    validWords: "n\xF3|\xF3i|in|ni|n\xF3i"
+  - world: 0
+    subWorld: 1
+    level: 0
+    word: chui
+    answers: chi|chui|
+    validWords: chi|chui
+  - world: 0
+    subWorld: 1
+    level: 1
+    word: "x\u01B0ng"
+    answers: "\u01B0ng|x\u01B0ng|"
+    validWords: "\u01B0ng|x\u01B0ng"
+  - world: 0
+    subWorld: 1
+    level: 2
+    word: "d\u0169ng"
+    answers: "ng\u0169|d\u0169ng|"
+    validWords: "ng\u0169|d\u0169ng"
+  - world: 0
+    subWorld: 1
+    level: 3
+    word: "kh\u1ECFa"
+    answers: "ha|kh\u1ECFa|"
+    validWords: "ha|kh\u1ECFa"
+  - world: 0
+    subWorld: 1
+    level: 4
+    word: "\u0111\u1ECBch"
+    answers: "ch\u1ECB|\u0111\u1ECBch|"
+    validWords: "ch\u1ECB|\u0111\u1ECBch"
+  - world: 0
+    subWorld: 1
+    level: 5
+    word: "ng\u1EE5y"
+    answers: "n\u1EE5|ng\u1EE5|ng\u1EE5y|"
+    validWords: "n\u1EE5|ng\u1EE5|ng\u1EE5y"
+  - world: 0
+    subWorld: 1
+    level: 6
+    word: "hi\u1EC7u"
+    answers: "h\u1EC7|hu\u1EC7|hi\u1EC7u|"
+    validWords: "h\u1EC7|hu\u1EC7|hi\u1EC7u"
+  - world: 0
+    subWorld: 1
+    level: 7
+    word: "tr\u1EB7c"
+    answers: "r\u1EB7c|r\u1EB7t|tr\u1EB7c|"
+    validWords: "r\u1EB7c|r\u1EB7t|tr\u1EB7c"
+  - world: 0
+    subWorld: 1
+    level: 8
+    word: "l\u1EEDng"
+    answers: "l\u1EED|\u1EEDng|l\u1EEDng|"
+    validWords: "l\u1EED|\u1EEDng|l\u1EEDng"
+  - world: 0
+    subWorld: 1
+    level: 9
+    word: "t\u1EA7ng"
+    answers: "t\u1EA7n|g\u1EA7n|t\u1EA7ng|"
+    validWords: "t\u1EA7n|g\u1EA7n|t\u1EA7ng"
+  - world: 0
+    subWorld: 1
+    level: 10
+    word: "l\u1ECBch"
+    answers: "l\u1ECB|ch\u1ECB|l\u1ECBch|"
+    validWords: "l\u1ECB|ch\u1ECB|l\u1ECBch"
+  - world: 0
+    subWorld: 1
+    level: 11
+    word: "kh\u1EDBp"
+    answers: "h\u1EDB|h\u1EDBp|kh\u1EDBp|"
+    validWords: "h\u1EDB|h\u1EDBp|kh\u1EDBp"
+  - world: 0
+    subWorld: 1
+    level: 12
+    word: "nh\u1EA9m"
+    answers: "\u1EA9n|\u1EA9m|nh\u1EA9m|"
+    validWords: "\u1EA9n|\u1EA9m|nh\u1EA9m"
+  - world: 0
+    subWorld: 1
+    level: 13
+    word: "di\u1EC7n"
+    answers: "n\u1EC7|in|ni|di\u1EC7n|"
+    validWords: "n\u1EC7|in|ni|di\u1EC7n"
+  - world: 0
+    subWorld: 1
+    level: 14
+    word: "kh\u1ECFi"
+    answers: "ki|h\u1ECFi|khi|kh\u1ECFi|"
+    validWords: "ki|h\u1ECFi|khi|kh\u1ECFi"
+  - world: 0
+    subWorld: 1
+    level: 15
+    word: "qu\u1EA9y"
+    answers: "uy|\u1EA9u|quy|qu\u1EA9y|"
+    validWords: "uy|\u1EA9u|quy|qu\u1EA9y"
+  - world: 0
+    subWorld: 1
+    level: 16
+    word: "r\u1ED1ng"
+    answers: "ng\u1ED1|r\u1ED1n|\u1ED1ng|r\u1ED1ng|"
+    validWords: "ng\u1ED1|r\u1ED1n|\u1ED1ng|r\u1ED1ng"
+  - world: 0
+    subWorld: 1
+    level: 17
+    word: "qu\u0103n"
+    answers: "nu|\u0103n|un|qu\u0103n|"
+    validWords: "nu|\u0103n|un|qu\u0103n"
+  - world: 0
+    subWorld: 2
+    level: 0
+    word: "gi\xE0u"
+    answers: "g\xE0|gi\xE0|g\xE0i|gi\xE0u|"
+    validWords: "g\xE0|gi\xE0|g\xE0i|gi\xE0u"
+  - world: 0
+    subWorld: 2
+    level: 1
+    word: "vu\u1ED9t"
+    answers: "t\u1ED9|vu|tu|vu\u1ED9t|"
+    validWords: "t\u1ED9|vu|tu|vu\u1ED9t"
+  - world: 0
+    subWorld: 2
+    level: 2
+    word: "t\u1ECBch"
+    answers: "t\u1ECB|th\u1ECB|ch\u1ECB|t\u1ECBch|"
+    validWords: "t\u1ECB|th\u1ECB|ch\u1ECB|t\u1ECBch"
+  - world: 0
+    subWorld: 2
+    level: 3
+    word: "c\u01B0\u1EDDm"
+    answers: "c\u01B0|c\u1EDD|m\u1EDD|c\u01B0\u1EDDm|"
+    validWords: "c\u01B0|c\u1EDD|m\u1EDD|c\u01B0\u1EDDm"
+  - world: 0
+    subWorld: 2
+    level: 4
+    word: "tr\xE0m"
+    answers: "t\xE0|m\xE0|r\xE0|tr\xE0|tr\xE0m|"
+    validWords: "t\xE0|m\xE0|r\xE0|tr\xE0|tr\xE0m"
+  - world: 0
+    subWorld: 2
+    level: 5
+    word: "ng\u1EEDi"
+    answers: "in|ni|g\u1EEDi|\u1EEDng|ng\u1EEDi|"
+    validWords: "in|ni|g\u1EEDi|\u1EEDng|ng\u1EEDi"
+  - world: 0
+    subWorld: 2
+    level: 6
+    word: "m\u01B0\u1EDDi"
+    answers: "im|mi|m\u1EDD|m\u1EDDi|m\u01B0\u1EDDi|"
+    validWords: "im|mi|m\u1EDD|m\u1EDDi|m\u01B0\u1EDDi"
+  - world: 0
+    subWorld: 2
+    level: 7
+    word: "qu\u1EA5t"
+    answers: "tu|\u1EA5u|u\u1EA5t|t\u1EA5u|qu\u1EA5t|"
+    validWords: "tu|\u1EA5u|u\u1EA5t|t\u1EA5u|qu\u1EA5t"
+  - world: 0
+    subWorld: 2
+    level: 8
+    word: "qu\xEDt"
+    answers: "\xEDt|tu|t\xED|qu\xED|qu\xEDt|"
+    validWords: "\xEDt|tu|t\xED|qu\xED|qu\xEDt"
+  - world: 0
+    subWorld: 2
+    level: 9
+    word: "h\u1ECBch"
+    answers: "ch\u1ECB|h\u1ECBch|"
+    validWords: "ch\u1ECB|h\u1ECBch"
+  - world: 0
+    subWorld: 2
+    level: 10
+    word: "kh\xE0n"
+    answers: "h\xE0|n\xE0|kh\xE0|h\xE0n|nh\xE0|kh\xE0n|"
+    validWords: "h\xE0|n\xE0|kh\xE0|h\xE0n|nh\xE0|kh\xE0n"
+  - world: 0
+    subWorld: 2
+    level: 11
+    word: "li\u1EC7m"
+    answers: "l\u1EC7|li|im|mi|lim|li\u1EC7m|"
+    validWords: "l\u1EC7|li|im|mi|lim|li\u1EC7m"
+  - world: 0
+    subWorld: 2
+    level: 12
+    word: "nh\u1EDBp"
+    answers: "n\u1EDB|h\u1EDB|\u1EDBn|h\u1EDBp|nh\u1EDB|nh\u1EDBp|"
+    validWords: "n\u1EDB|h\u1EDB|\u1EDBn|h\u1EDBp|nh\u1EDB|nh\u1EDBp"
+  - world: 0
+    subWorld: 2
+    level: 13
+    word: "\u01B0\u01A1ng"
+    answers: "n\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|"
+    validWords: "n\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng"
+  - world: 0
+    subWorld: 2
+    level: 14
+    word: "ng\u1EEBa"
+    answers: "g\u1EEB|na|ga|an|gan|ng\u1EEBa|"
+    validWords: "g\u1EEB|na|ga|an|gan|ng\u1EEBa"
+  - world: 0
+    subWorld: 2
+    level: 15
+    word: "n\u01B0\u1EDBc"
+    answers: "c\u01B0|n\u1EDB|c\u1EDB|\u1EDBn|\u01B0\u1EDBc|n\u01B0\u1EDBc|"
+    validWords: "c\u01B0|n\u1EDB|c\u1EDB|\u1EDBn|\u01B0\u1EDBc|n\u01B0\u1EDBc"
+  - world: 0
+    subWorld: 2
+    level: 16
+    word: "ph\u1ED1i"
+    answers: "h\u1ED1|pi|ph\u1ED1|phi|h\u1ED1i|ph\u1ED1i|"
+    validWords: "h\u1ED1|pi|ph\u1ED1|phi|h\u1ED1i|ph\u1ED1i"
+  - world: 0
+    subWorld: 2
+    level: 17
+    word: "ph\u1EA5n"
+    answers: "\u1EA5n|\u1EA5p|n\u1EA5p|h\u1EA5p|ph\u1EA5n|nh\u1EA5p|"
+    validWords: "\u1EA5n|\u1EA5p|n\u1EA5p|h\u1EA5p|ph\u1EA5n|nh\u1EA5p"
+  - world: 0
+    subWorld: 3
+    level: 0
+    word: vang
+    answers: na|va|ga|an|gan|van|vang|
+    validWords: na|va|ga|an|gan|van|vang
+  - world: 0
+    subWorld: 3
+    level: 1
+    word: "\u0111\xE0nh"
+    answers: "h\xE0|n\xE0|\u0111\xE0|\u0111\xE0n|h\xE0n|nh\xE0|\u0111\xE0nh|"
+    validWords: "h\xE0|n\xE0|\u0111\xE0|\u0111\xE0n|h\xE0n|nh\xE0|\u0111\xE0nh"
+  - world: 0
+    subWorld: 3
+    level: 2
+    word: "tr\xF3i"
+    answers: "ri|ti|\xF3i|t\xF3|\xF3t|r\xF3t|tr\xF3i|"
+    validWords: "ri|ti|\xF3i|t\xF3|\xF3t|r\xF3t|tr\xF3i"
+  - world: 0
+    subWorld: 3
+    level: 3
+    word: bang
+    answers: na|ba|ga|an|ban|gan|bang|
+    validWords: na|ba|ga|an|ban|gan|bang
+  - world: 0
+    subWorld: 3
+    level: 4
+    word: khen
+    answers: ke|ne|ken|nhe|khe|hen|khen|
+    validWords: ke|ne|ken|nhe|khe|hen|khen
+  - world: 0
+    subWorld: 3
+    level: 5
+    word: "n\u1ED3ng"
+    answers: "\u1ED3n|n\u1ED3|n\u1ED3ng|"
+    validWords: "\u1ED3n|n\u1ED3|n\u1ED3ng"
+  - world: 0
+    subWorld: 3
+    level: 6
+    word: danh
+    answers: na|da|an|ha|anh|nha|danh|
+    validWords: na|da|an|ha|anh|nha|danh
+  - world: 0
+    subWorld: 3
+    level: 7
+    word: "lu\u1EADn"
+    answers: "lu|nu|un|n\u1EADu|l\u1EADu|l\u1EADn|lu\u1EADn|"
+    validWords: "lu|nu|un|n\u1EADu|l\u1EADu|l\u1EADn|lu\u1EADn"
+  - world: 0
+    subWorld: 3
+    level: 8
+    word: khoe
+    answers: ke|oe|ho|kho|heo|khe|keo|khoe|
+    validWords: ke|oe|ho|kho|heo|khe|keo|khoe
+  - world: 0
+    subWorld: 3
+    level: 9
+    word: giun
+    answers: nu|in|ni|un|ung|nui|ngu|giun|
+    validWords: nu|in|ni|un|ung|nui|ngu|giun
+  - world: 0
+    subWorld: 3
+    level: 10
+    word: nhay
+    answers: na|an|ha|anh|nay|nha|hay|nhay|
+    validWords: na|an|ha|anh|nay|nha|hay|nhay
+  - world: 0
+    subWorld: 3
+    level: 11
+    word: "t\u01B0\u1EDBc"
+    answers: "t\u01B0|c\u01B0|\u1EDBt|c\u1EDB|t\u1EDB|\u01B0\u1EDBc|\u01B0\u1EDBt|t\u01B0\u1EDBc|"
+    validWords: "t\u01B0|c\u01B0|\u1EDBt|c\u1EDB|t\u1EDB|\u01B0\u1EDBc|\u01B0\u1EDBt|t\u01B0\u1EDBc"
+  - world: 0
+    subWorld: 3
+    level: 12
+    word: "thu\u1EBF"
+    answers: "tu|t\u1EBF|th\u1EBF|h\u1EBFt|tu\u1EBF|t\u1EBFu|thu|thu\u1EBF|"
+    validWords: "tu|t\u1EBF|th\u1EBF|h\u1EBFt|tu\u1EBF|t\u1EBFu|thu|thu\u1EBF"
+  - world: 0
+    subWorld: 3
+    level: 13
+    word: "gi\u1EA3m"
+    answers: "g\u1EA3|im|m\u1EA3|\u1EA3i|mi|m\u1EA3i|gi\u1EA3|gi\u1EA3m|"
+    validWords: "g\u1EA3|im|m\u1EA3|\u1EA3i|mi|m\u1EA3i|gi\u1EA3|gi\u1EA3m"
+  - world: 0
+    subWorld: 3
+    level: 14
+    word: "tr\xF3t"
+    answers: "t\xF3|\xF3t|r\xF3t|tr\xF3t|"
+    validWords: "t\xF3|\xF3t|r\xF3t|tr\xF3t"
+  - world: 0
+    subWorld: 3
+    level: 15
+    word: "ki\u1EBFm"
+    answers: "k\u1EBF|im|\u1EBFm|ki|mi|m\u1EBF|kim|ki\u1EBFm|"
+    validWords: "k\u1EBF|im|\u1EBFm|ki|mi|m\u1EBF|kim|ki\u1EBFm"
+  - world: 0
+    subWorld: 3
+    level: 16
+    word: "\u0111o\u1EA1n"
+    answers: "\u0111o|n\u1EA1|no|\u0111\u1EA1n|\u0111\u1EA1o|\u0111on|n\u1EA1o|\u0111o\u1EA1n|"
+    validWords: "\u0111o|n\u1EA1|no|\u0111\u1EA1n|\u0111\u1EA1o|\u0111on|n\u1EA1o|\u0111o\u1EA1n"
+  - world: 0
+    subWorld: 3
+    level: 17
+    word: "s\xE1nh"
+    answers: "\xE1n|n\xE1|h\xE1|s\xE1|\xE1nh|nh\xE1|h\xE1n|s\xE1n|s\xE1nh|"
+    validWords: "\xE1n|n\xE1|h\xE1|s\xE1|\xE1nh|nh\xE1|h\xE1n|s\xE1n|s\xE1nh"
+  - world: 0
+    subWorld: 4
+    level: 0
+    word: giao
+    answers: ai|go|ga|ao|oi|gai|gia|oai|giao|
+    validWords: ai|go|ga|ao|oi|gai|gia|oai|giao
+  - world: 0
+    subWorld: 4
+    level: 1
+    word: ninh
+    answers: in|ni|inh|nhi|ninh|
+    validWords: in|ni|inh|nhi|ninh
+  - world: 0
+    subWorld: 4
+    level: 2
+    word: "g\xF4ng"
+    answers: "\xF4n|n\xF4|ng\xF4|\xF4ng|g\xF4ng|"
+    validWords: "\xF4n|n\xF4|ng\xF4|\xF4ng|g\xF4ng"
+  - world: 0
+    subWorld: 4
+    level: 3
+    word: "to\xE0n"
+    answers: "n\xE0|to|\xE0o|t\xE0|o\xE0|no|n\xE0o|t\xE0n|to\xE0|to\xE0n|"
+    validWords: "n\xE0|to|\xE0o|t\xE0|o\xE0|no|n\xE0o|t\xE0n|to\xE0|to\xE0n"
+  - world: 0
+    subWorld: 4
+    level: 4
+    word: "ng\xF3n"
+    answers: "n\xF3|ng\xF3|\xF3ng|n\xF3n|ng\xF3n|n\xF3ng|"
+    validWords: "n\xF3|ng\xF3|\xF3ng|n\xF3n|ng\xF3n|n\xF3ng"
+  - world: 0
+    subWorld: 4
+    level: 5
+    word: nheo
+    answers: oe|ho|ne|no|heo|nho|neo|nhe|hen|nheo|
+    validWords: oe|ho|ne|no|heo|nho|neo|nhe|hen|nheo
+  - world: 0
+    subWorld: 4
+    level: 6
+    word: "th\xEDt"
+    answers: "\xEDt|t\xED|t\xEDt|th\xED|h\xEDt|th\xEDt|"
+    validWords: "\xEDt|t\xED|t\xEDt|th\xED|h\xEDt|th\xEDt"
+  - world: 0
+    subWorld: 4
+    level: 7
+    word: "ph\xFAc"
+    answers: "h\xFA|\xFAc|\xFAp|c\xFA|ph\xFA|h\xFAc|ch\xFA|h\xFAp|c\xFAp|ph\xFAc|"
+    validWords: "h\xFA|\xFAc|\xFAp|c\xFA|ph\xFA|h\xFAc|ch\xFA|h\xFAp|c\xFAp|ph\xFAc"
+  - world: 0
+    subWorld: 4
+    level: 8
+    word: "n\u1EA1nh"
+    answers: "h\u1EA1|n\u1EA1|h\u1EA1n|n\u1EA1n|n\u1EA1nh|nh\u1EA1n|"
+    validWords: "h\u1EA1|n\u1EA1|h\u1EA1n|n\u1EA1n|n\u1EA1nh|nh\u1EA1n"
+  - world: 0
+    subWorld: 4
+    level: 9
+    word: nham
+    answers: ma|na|an|ha|anh|ham|man|nha|nam|nham|manh|
+    validWords: ma|na|an|ha|anh|ham|man|nha|nam|nham|manh
+  - world: 0
+    subWorld: 4
+    level: 10
+    word: "n\xF4ng"
+    answers: "\xF4n|n\xF4|ng\xF4|n\xF4n|\xF4ng|n\xF4ng|ng\xF4n|"
+    validWords: "\xF4n|n\xF4|ng\xF4|n\xF4n|\xF4ng|n\xF4ng|ng\xF4n"
+  - world: 0
+    subWorld: 4
+    level: 11
+    word: xoan
+    answers: xa|na|ao|an|xo|no|xan|nao|xao|oan|xoa|xoan|
+    validWords: xa|na|ao|an|xo|no|xan|nao|xao|oan|xoa|xoan
+  - world: 0
+    subWorld: 4
+    level: 12
+    word: "m\xE1nh"
+    answers: "m\xE1|\xE1n|n\xE1|\xE1m|h\xE1|\xE1nh|nh\xE1|n\xE1m|h\xE1m|h\xE1n|m\xE1nh|nh\xE1m|"
+    validWords: "m\xE1|\xE1n|n\xE1|\xE1m|h\xE1|\xE1nh|nh\xE1|n\xE1m|h\xE1m|h\xE1n|m\xE1nh|nh\xE1m"
+  - world: 0
+    subWorld: 4
+    level: 13
+    word: "nh\xE1c"
+    answers: "\xE1n|n\xE1|h\xE1|\xE1c|c\xE1|c\xE1n|\xE1nh|nh\xE1|\xE1ch|h\xE1n|nh\xE1c|n\xE1ch|ch\xE1n|c\xE1nh|"
+    validWords: "\xE1n|n\xE1|h\xE1|\xE1c|c\xE1|c\xE1n|\xE1nh|nh\xE1|\xE1ch|h\xE1n|nh\xE1c|n\xE1ch|ch\xE1n|c\xE1nh"
+  - world: 0
+    subWorld: 4
+    level: 14
+    word: "nh\xE1o"
+    answers: "\xE1n|n\xE1|h\xE1|ho|\xE1o|nho|\xE1nh|h\xE1o|nh\xE1|h\xE1n|o\xE1n|ho\xE1|n\xE1o|nh\xE1o|ho\xE1n|"
+    validWords: "\xE1n|n\xE1|h\xE1|ho|\xE1o|nho|\xE1nh|h\xE1o|nh\xE1|h\xE1n|o\xE1n|ho\xE1|n\xE1o|nh\xE1o|ho\xE1n|no"
+  - world: 0
+    subWorld: 4
+    level: 15
+    word: "ph\u1EB3ng"
+    answers: "h\u1EB3n|ph\u1EB3ng|"
+    validWords: "h\u1EB3n|ph\u1EB3ng"
+  - world: 0
+    subWorld: 4
+    level: 16
+    word: "kh\u1EB3ng"
+    answers: "h\u1EB3n|kh\u1EB3ng|"
+    validWords: "h\u1EB3n|kh\u1EB3ng"
+  - world: 0
+    subWorld: 4
+    level: 17
+    word: "th\u1EB3ng"
+    answers: "h\u1EB3n|th\u1EB3ng|"
+    validWords: "h\u1EB3n|th\u1EB3ng"
+  - world: 1
+    subWorld: 0
+    level: 0
+    word: "tr\u01B0ng"
+    answers: "t\u01B0|\u01B0ng|tr\u01B0ng|"
+    validWords: "t\u01B0|\u01B0ng|tr\u01B0ng"
+  - world: 1
+    subWorld: 0
+    level: 1
+    word: "ch\u1EB3ng"
+    answers: "h\u1EB3n|c\u1EB3ng|ch\u1EB3ng|"
+    validWords: "h\u1EB3n|c\u1EB3ng|ch\u1EB3ng"
+  - world: 1
+    subWorld: 0
+    level: 2
+    word: "tr\u0169ng"
+    answers: "r\u0169|ng\u0169|tr\u0169ng|"
+    validWords: "r\u0169|ng\u0169|tr\u0169ng"
+  - world: 1
+    subWorld: 0
+    level: 3
+    word: "chi\xEAu"
+    answers: "ch\xEA|chi|chui|chi\xEAu|"
+    validWords: "ch\xEA|chi|chui|chi\xEAu"
+  - world: 1
+    subWorld: 0
+    level: 4
+    word: "ch\u1EEFng"
+    answers: "n\u1EEF|ng\u1EEF|ch\u1EEF|ch\u1EEFng|"
+    validWords: "n\u1EEF|ng\u1EEF|ch\u1EEF|ch\u1EEFng"
+  - world: 1
+    subWorld: 0
+    level: 5
+    word: "ph\u0103ng"
+    answers: "\u0103n|ph\u0103n|h\u0103ng|ph\u0103ng|"
+    validWords: "\u0103n|ph\u0103n|h\u0103ng|ph\u0103ng"
+  - world: 1
+    subWorld: 0
+    level: 6
+    word: "ch\u1EB7ng"
+    answers: "n\u1EB7c|c\u1EB7n|ch\u1EB7n|ch\u1EB7ng|"
+    validWords: "n\u1EB7c|c\u1EB7n|ch\u1EB7n|ch\u1EB7ng"
+  - world: 1
+    subWorld: 0
+    level: 7
+    word: "kh\u0103ng"
+    answers: "\u0103n|kh\u0103n|h\u0103ng|kh\u0103ng|"
+    validWords: "\u0103n|kh\u0103n|h\u0103ng|kh\u0103ng"
+  - world: 1
+    subWorld: 0
+    level: 8
+    word: "ki\u1EC5ng"
+    answers: "ki|in|ni|ki\u1EC5ng|"
+    validWords: "ki|in|ni|ki\u1EC5ng"
+  - world: 1
+    subWorld: 0
+    level: 9
+    word: "ch\u1EEBng"
+    answers: "g\u1EEB|ch\u1EEB|nh\u1EEB|h\u1EEBng|ch\u1EEBng|"
+    validWords: "g\u1EEB|ch\u1EEB|nh\u1EEB|h\u1EEBng|ch\u1EEBng"
+  - world: 1
+    subWorld: 0
+    level: 10
+    word: "qu\u1EF3nh"
+    answers: "nu|un|nhu|qu\u1EF3|qu\u1EF3nh|"
+    validWords: "nu|un|nhu|qu\u1EF3|qu\u1EF3nh"
+  - world: 1
+    subWorld: 0
+    level: 11
+    word: "th\u1EB7ng"
+    answers: "g\u1EB7t|nh\u1EB7t|ng\u1EB7t|t\u1EB7ng|th\u1EB7ng|"
+    validWords: "g\u1EB7t|nh\u1EB7t|ng\u1EB7t|t\u1EB7ng|th\u1EB7ng"
+  - world: 1
+    subWorld: 0
+    level: 12
+    word: "th\u1EB1ng"
+    answers: "h\u1EB1n|g\u1EB1n|h\u1EB1ng|t\u1EB1ng|th\u1EB1ng|"
+    validWords: "h\u1EB1n|g\u1EB1n|h\u1EB1ng|t\u1EB1ng|th\u1EB1ng"
+  - world: 1
+    subWorld: 0
+    level: 13
+    word: "th\u0103ng"
+    answers: "\u0103n|th\u0103n|h\u0103ng|t\u0103ng|th\u0103ng|"
+    validWords: "\u0103n|th\u0103n|h\u0103ng|t\u0103ng|th\u0103ng"
+  - world: 1
+    subWorld: 0
+    level: 14
+    word: "tr\u1EE9ng"
+    answers: "t\u1EE9|r\u1EE9t|n\u1EE9t|\u1EE9ng|tr\u1EE9ng|"
+    validWords: "t\u1EE9|r\u1EE9t|n\u1EE9t|\u1EE9ng|tr\u1EE9ng"
+  - world: 1
+    subWorld: 0
+    level: 15
+    word: "vi\u1EBFng"
+    answers: "vi|v\u1EBF|in|ni|vi\u1EBFng|"
+    validWords: "vi|v\u1EBF|in|ni|vi\u1EBFng"
+  - world: 1
+    subWorld: 0
+    level: 16
+    word: "b\u01B0\u1EDBng"
+    answers: "n\u1EDB|\u1EDBn|\u01B0ng|b\u01B0ng|b\u01B0\u1EDBng|"
+    validWords: "n\u1EDB|\u1EDBn|\u01B0ng|b\u01B0ng|b\u01B0\u1EDBng"
+  - world: 1
+    subWorld: 0
+    level: 17
+    word: "ph\u1ECFng"
+    answers: "n\u1ECF|nh\u1ECF|ng\u1ECF|h\u1ECFng|ph\u1ECFng|"
+    validWords: "n\u1ECF|nh\u1ECF|ng\u1ECF|h\u1ECFng|ph\u1ECFng"
+  - world: 1
+    subWorld: 1
+    level: 0
+    word: "tr\u1EAFng"
+    answers: "\u1EAFt|g\u1EAFn|g\u1EAFt|ng\u1EAFt|tr\u1EAFng|"
+    validWords: "\u1EAFt|g\u1EAFn|g\u1EAFt|ng\u1EAFt|tr\u1EAFng"
+  - world: 1
+    subWorld: 1
+    level: 1
+    word: "x\u01B0\u1EDBng"
+    answers: "n\u1EDB|\u1EDBn|\u01B0ng|x\u01B0ng|x\u01B0\u1EDBng|"
+    validWords: "n\u1EDB|\u1EDBn|\u01B0ng|x\u01B0ng|x\u01B0\u1EDBng"
+  - world: 1
+    subWorld: 1
+    level: 2
+    word: "chi\u1EC1u"
+    answers: "h\u1EC1|hu\u1EC1|chi|chui|chi\u1EC1u|"
+    validWords: "h\u1EC1|hu\u1EC1|chi|chui|chi\u1EC1u"
+  - world: 1
+    subWorld: 1
+    level: 3
+    word: "ng\u01B0\u1EE3c"
+    answers: "c\u01B0|n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|ng\u01B0\u1EE3c|"
+    validWords: "c\u01B0|n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|ng\u01B0\u1EE3c"
+  - world: 1
+    subWorld: 1
+    level: 4
+    word: "quy\u1EC1n"
+    answers: "uy|nu|n\u1EC1|un|quy|quy\u1EC1n|"
+    validWords: "uy|nu|n\u1EC1|un|quy|quy\u1EC1n"
+  - world: 1
+    subWorld: 1
+    level: 5
+    word: "ngh\u1EBDn"
+    answers: "nh\u1EBD|ngh\u1EBDn|"
+    validWords: "nh\u1EBD|ngh\u1EBDn"
+  - world: 1
+    subWorld: 1
+    level: 6
+    word: "x\u01B0\u1EDFng"
+    answers: "n\u1EDF|x\u1EDF|g\u1EDF|\u01B0ng|x\u01B0ng|x\u01B0\u1EDFng|"
+    validWords: "n\u1EDF|x\u1EDF|g\u1EDF|\u01B0ng|x\u01B0ng|x\u01B0\u1EDFng"
+  - world: 1
+    subWorld: 1
+    level: 7
+    word: "d\u01B0\u1EE3ng"
+    answers: "d\u01B0|n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|d\u01B0\u1EE3ng|"
+    validWords: "d\u01B0|n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|d\u01B0\u1EE3ng"
+  - world: 1
+    subWorld: 1
+    level: 8
+    word: "ki\u1EC3ng"
+    answers: "ki|in|n\u1EC3|ni|k\u1EC3|ki\u1EC3ng|"
+    validWords: "ki|in|n\u1EC3|ni|k\u1EC3|ki\u1EC3ng"
+  - world: 1
+    subWorld: 1
+    level: 9
+    word: "si\xEAng"
+    answers: "si|in|ni|sin|s\xEAn|si\xEAng|"
+    validWords: "si|in|ni|sin|s\xEAn|si\xEAng"
+  - world: 1
+    subWorld: 1
+    level: 10
+    word: "chu\u1ED7i"
+    answers: "c\u1ED7|c\u1ED7i|ch\u1ED7|chi|chui|chu\u1ED7i|"
+    validWords: "c\u1ED7|c\u1ED7i|ch\u1ED7|chi|chui|chu\u1ED7i"
+  - world: 1
+    subWorld: 1
+    level: 11
+    word: "tr\u0103ng"
+    answers: "\u0103n|r\u0103n|tr\u0103n|r\u0103ng|t\u0103ng|tr\u0103ng|"
+    validWords: "\u0103n|r\u0103n|tr\u0103n|r\u0103ng|t\u0103ng|tr\u0103ng"
+  - world: 1
+    subWorld: 1
+    level: 12
+    word: "nh\u01B0\u1EE3c"
+    answers: "h\u01B0|c\u01B0|n\u1EE3|ch\u1EE3|nh\u01B0|nh\u01B0\u1EE3c|"
+    validWords: "h\u01B0|c\u01B0|n\u1EE3|ch\u1EE3|nh\u01B0|nh\u01B0\u1EE3c"
+  - world: 1
+    subWorld: 1
+    level: 13
+    word: "ph\u1EE5ng"
+    answers: "n\u1EE5|h\u1EE5p|ph\u1EE5|nh\u1EE5|ng\u1EE5|ph\u1EE5ng|"
+    validWords: "n\u1EE5|h\u1EE5p|ph\u1EE5|nh\u1EE5|ng\u1EE5|ph\u1EE5ng"
+  - world: 1
+    subWorld: 1
+    level: 14
+    word: "quy\u1EC7n"
+    answers: "uy|nu|n\u1EC7|un|quy|quy\u1EC7n|"
+    validWords: "uy|nu|n\u1EC7|un|quy|quy\u1EC7n"
+  - world: 1
+    subWorld: 1
+    level: 15
+    word: "chi\u1EBFu"
+    answers: "ch\u1EBF|chi|\u1EBFch|chui|hi\u1EBFu|chi\u1EBFu|"
+    validWords: "ch\u1EBF|chi|\u1EBFch|chui|hi\u1EBFu|chi\u1EBFu"
+  - world: 1
+    subWorld: 1
+    level: 16
+    word: "tr\u1EEBng"
+    answers: "g\u1EEB|t\u1EEB|tr\u1EEB|r\u1EEBng|t\u1EEBng|tr\u1EEBng|"
+    validWords: "g\u1EEB|t\u1EEB|tr\u1EEB|r\u1EEBng|t\u1EEBng|tr\u1EEBng"
+  - world: 1
+    subWorld: 1
+    level: 17
+    word: "kh\u1ED1ng"
+    answers: "h\u1ED1|ng\u1ED1|\u1ED1ng|kh\u1ED1|kh\u1ED1n|kh\u1ED1ng|"
+    validWords: "h\u1ED1|ng\u1ED1|\u1ED1ng|kh\u1ED1|kh\u1ED1n|kh\u1ED1ng"
+  - world: 1
+    subWorld: 2
+    level: 0
+    word: "ki\xEAng"
+    answers: "ki|in|k\xEA|ni|ki\xEAn|ki\xEAng|"
+    validWords: "ki|in|k\xEA|ni|ki\xEAn|ki\xEAng"
+  - world: 1
+    subWorld: 2
+    level: 1
+    word: "ngh\u1EB9t"
+    answers: "h\u1EB9|nh\u1EB9|gh\u1EB9|h\u1EB9n|th\u1EB9n|ngh\u1EB9t|"
+    validWords: "h\u1EB9|nh\u1EB9|gh\u1EB9|h\u1EB9n|th\u1EB9n|ngh\u1EB9t"
+  - world: 1
+    subWorld: 2
+    level: 2
+    word: "kh\xF9ng"
+    answers: "g\xF9|\xF9n|ng\xF9|\xF9ng|h\xF9ng|kh\xF9ng|"
+    validWords: "g\xF9|\xF9n|ng\xF9|\xF9ng|h\xF9ng|kh\xF9ng"
+  - world: 1
+    subWorld: 2
+    level: 3
+    word: "xi\u1EC1ng"
+    answers: "xi|in|ni|n\u1EC1|xin|xi\u1EC1ng|"
+    validWords: "xi|in|ni|n\u1EC1|xin|xi\u1EC1ng"
+  - world: 1
+    subWorld: 2
+    level: 4
+    word: "t\u01B0\u1EDFng"
+    answers: "t\u01B0|n\u1EDF|g\u1EDF|t\u1EDF|\u01B0ng|t\u01B0\u1EDFng|"
+    validWords: "t\u01B0|n\u1EDF|g\u1EDF|t\u1EDF|\u01B0ng|t\u01B0\u1EDFng"
+  - world: 1
+    subWorld: 2
+    level: 5
+    word: "qu\u1EB7ng"
+    answers: "nu|un|ung|ngu|qu\u1EB7n|qu\u1EB7ng|"
+    validWords: "nu|un|ung|ngu|qu\u1EB7n|qu\u1EB7ng"
+  - world: 1
+    subWorld: 2
+    level: 6
+    word: "\u0111\u01B0\u1EDDng"
+    answers: "n\u1EDD|g\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|\u0111\u01B0\u1EDDng|"
+    validWords: "n\u1EDD|g\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|\u0111\u01B0\u1EDDng"
+  - world: 1
+    subWorld: 2
+    level: 7
+    word: "ch\u01B0ng"
+    answers: "h\u01B0|c\u01B0|\u01B0ng|nh\u01B0|h\u01B0ng|ch\u01B0ng|"
+    validWords: "h\u01B0|c\u01B0|\u01B0ng|nh\u01B0|h\u01B0ng|ch\u01B0ng"
+  - world: 1
+    subWorld: 2
+    level: 8
+    word: "v\u01B0\u1EDBng"
+    answers: "n\u1EDB|\u1EDBn|v\u1EDB|\u01B0ng|v\u01B0ng|v\u01B0\u1EDBng|"
+    validWords: "n\u1EDB|\u1EDBn|v\u1EDB|\u01B0ng|v\u01B0ng|v\u01B0\u1EDBng"
+  - world: 1
+    subWorld: 2
+    level: 9
+    word: "\u0111i\u1EBFng"
+    answers: "\u0111i|\u0111\u1EBF|in|ni|\u0111\u1EBFn|\u0111i\u1EBFng|"
+    validWords: "\u0111i|\u0111\u1EBF|in|ni|\u0111\u1EBFn|\u0111i\u1EBFng"
+  - world: 1
+    subWorld: 2
+    level: 10
+    word: "ch\u0103ng"
+    answers: "\u0103n|c\u0103n|h\u0103ng|c\u0103ng|ch\u0103n|ch\u0103ng|"
+    validWords: "\u0103n|c\u0103n|h\u0103ng|c\u0103ng|ch\u0103n|ch\u0103ng"
+  - world: 1
+    subWorld: 2
+    level: 11
+    word: "ki\u1EC1ng"
+    answers: "ki|in|ni|k\u1EC1|n\u1EC1|ki\u1EC1ng|"
+    validWords: "ki|in|ni|k\u1EC1|n\u1EC1|ki\u1EC1ng"
+  - world: 1
+    subWorld: 2
+    level: 12
+    word: "ki\u1EBFng"
+    answers: "k\u1EBF|ki|in|ni|ki\u1EBFn|ki\u1EBFng|"
+    validWords: "k\u1EBF|ki|in|ni|ki\u1EBFn|ki\u1EBFng"
+  - world: 1
+    subWorld: 2
+    level: 13
+    word: chung
+    answers: nu|un|ung|nhu|ngu|cung|chung|
+    validWords: nu|un|ung|nhu|ngu|cung|chung
+  - world: 1
+    subWorld: 2
+    level: 14
+    word: "qu\u0103ng"
+    answers: "nu|\u0103n|un|ung|ngu|qu\u0103n|qu\u0103ng|"
+    validWords: "nu|\u0103n|un|ung|ngu|qu\u0103n|qu\u0103ng"
+  - world: 1
+    subWorld: 2
+    level: 15
+    word: "kh\u01B0\u1EDBc"
+    answers: "h\u01B0|c\u01B0|h\u1EDB|c\u1EDB|\u01B0\u1EDBc|ch\u1EDB|kh\u01B0\u1EDBc|"
+    validWords: "h\u01B0|c\u01B0|h\u1EDB|c\u1EDB|\u01B0\u1EDBc|ch\u1EDB|kh\u01B0\u1EDBc"
+  - world: 1
+    subWorld: 2
+    level: 16
+    word: "tr\u1ED3ng"
+    answers: "\u1ED3n|n\u1ED3|t\u1ED3|r\u1ED3|t\u1ED3n|r\u1ED3ng|tr\u1ED3ng|"
+    validWords: "\u1ED3n|n\u1ED3|t\u1ED3|r\u1ED3|t\u1ED3n|r\u1ED3ng|tr\u1ED3ng"
+  - world: 1
+    subWorld: 2
+    level: 17
+    word: "quy\u1EC3n"
+    answers: "uy|nu|n\u1EC3|un|quy|y\u1EC3u|quy\u1EC3n|"
+    validWords: "uy|nu|n\u1EC3|un|quy|y\u1EC3u|quy\u1EC3n"
+  - world: 1
+    subWorld: 3
+    level: 0
+    word: "gi\xEAng"
+    answers: "in|ni|gi\xEAng|"
+    validWords: "in|ni|gi\xEAng"
+  - world: 1
+    subWorld: 3
+    level: 1
+    word: "ph\u1ED3ng"
+    answers: "\u1ED3n|h\u1ED3|n\u1ED3|ph\u1ED3|h\u1ED3n|h\u1ED3ng|ph\u1ED3ng|"
+    validWords: "\u1ED3n|h\u1ED3|n\u1ED3|ph\u1ED3|h\u1ED3n|h\u1ED3ng|ph\u1ED3ng"
+  - world: 1
+    subWorld: 3
+    level: 2
+    word: "gi\u1EBFng"
+    answers: "in|ni|gi\u1EBFng|"
+    validWords: "in|ni|gi\u1EBFng"
+  - world: 1
+    subWorld: 3
+    level: 3
+    word: "ch\xEAnh"
+    answers: "h\xEAn|ch\xEA|ch\xEAnh|"
+    validWords: "h\xEAn|ch\xEA|ch\xEAnh"
+  - world: 1
+    subWorld: 3
+    level: 4
+    word: "th\u1EE7ng"
+    answers: "t\u1EE7|h\u1EE7|nh\u1EE7|ng\u1EE7|th\u1EE7|\u1EE7ng|th\u1EE7ng|"
+    validWords: "t\u1EE7|h\u1EE7|nh\u1EE7|ng\u1EE7|th\u1EE7|\u1EE7ng|th\u1EE7ng"
+  - world: 1
+    subWorld: 3
+    level: 5
+    word: trong
+    answers: go|to|no|ong|tro|tong|trong|
+    validWords: go|to|no|ong|tro|tong|trong
+  - world: 1
+    subWorld: 3
+    level: 6
+    word: "d\u01B0\u1EDDng"
+    answers: "n\u1EDD|g\u1EDD|d\u01B0|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|d\u01B0\u1EDDng|"
+    validWords: "n\u1EDD|g\u1EDD|d\u01B0|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|d\u01B0\u1EDDng"
+  - world: 1
+    subWorld: 3
+    level: 7
+    word: "chu\xF4i"
+    answers: "h\xF4|c\xF4|c\xF4i|h\xF4i|chi|chui|chu\xF4i|"
+    validWords: "h\xF4|c\xF4|c\xF4i|h\xF4i|chi|chui|chu\xF4i"
+  - world: 1
+    subWorld: 3
+    level: 8
+    word: "nh\u1EEFng"
+    answers: "n\u1EEF|ng\u1EEF|nh\u1EEFng|"
+    validWords: "n\u1EEF|ng\u1EEF|nh\u1EEFng"
+  - world: 1
+    subWorld: 3
+    level: 9
+    word: phong
+    answers: go|ho|no|ong|nho|pho|phong|
+    validWords: go|ho|no|ong|nho|pho|phong
+  - world: 1
+    subWorld: 3
+    level: 10
+    word: "khu\u1EA5y"
+    answers: "uy|\u1EA5y|\u1EA5u|khu|kh\u1EA5u|khuy|khu\u1EA5y|"
+    validWords: "uy|\u1EA5y|\u1EA5u|khu|kh\u1EA5u|khuy|khu\u1EA5y"
+  - world: 1
+    subWorld: 3
+    level: 11
+    word: khung
+    answers: nu|un|ung|khu|nhu|ngu|khung|
+    validWords: nu|un|ung|khu|nhu|ngu|khung
+  - world: 1
+    subWorld: 3
+    level: 12
+    word: "phi\u1EBFu"
+    answers: "pi|ph\u1EBF|phi|phu|hi\u1EBFu|hi\u1EBFp|phi\u1EBFu|"
+    validWords: "pi|ph\u1EBF|phi|phu|hi\u1EBFu|hi\u1EBFp|phi\u1EBFu"
+  - world: 1
+    subWorld: 3
+    level: 13
+    word: "nh\u1EB7ng"
+    answers: "n\u1EB7n|n\u1EB7ng|nh\u1EB7ng|"
+    validWords: "n\u1EB7n|n\u1EB7ng|nh\u1EB7ng"
+  - world: 1
+    subWorld: 3
+    level: 14
+    word: "th\u01B0ng"
+    answers: "h\u01B0|t\u01B0|th\u01B0|\u01B0ng|nh\u01B0|h\u01B0ng|th\u01B0ng|"
+    validWords: "h\u01B0|t\u01B0|th\u01B0|\u01B0ng|nh\u01B0|h\u01B0ng|th\u01B0ng"
+  - world: 1
+    subWorld: 3
+    level: 15
+    word: "s\u01B0\u1EDBng"
+    answers: "s\u01B0|n\u1EDB|\u1EDBn|s\u1EDB|\u01B0ng|s\u01B0ng|s\u01B0\u1EDBng|"
+    validWords: "s\u01B0|n\u1EDB|\u1EDBn|s\u1EDB|\u01B0ng|s\u01B0ng|s\u01B0\u1EDBng"
+  - world: 1
+    subWorld: 3
+    level: 16
+    word: "th\u1EEBng"
+    answers: "g\u1EEB|t\u1EEB|nh\u1EEB|th\u1EEB|h\u1EEBng|t\u1EEBng|th\u1EEBng|"
+    validWords: "g\u1EEB|t\u1EEB|nh\u1EEB|th\u1EEB|h\u1EEBng|t\u1EEBng|th\u1EEBng"
+  - world: 1
+    subWorld: 3
+    level: 17
+    word: "t\u01B0\u1EDBng"
+    answers: "t\u01B0|\u1EDBt|n\u1EDB|\u1EDBn|t\u1EDB|\u01B0ng|\u01B0\u1EDBt|t\u01B0\u1EDBng|"
+    validWords: "t\u01B0|\u1EDBt|n\u1EDB|\u1EDBn|t\u1EDB|\u01B0ng|\u01B0\u1EDBt|t\u01B0\u1EDBng"
+  - world: 1
+    subWorld: 4
+    level: 0
+    word: "v\u01B0\u1EE3ng"
+    answers: "v\u1EE3|n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|v\u01B0ng|v\u01B0\u1EE3n|v\u01B0\u1EE3ng|"
+    validWords: "v\u1EE3|n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|v\u01B0ng|v\u01B0\u1EE3n|v\u01B0\u1EE3ng"
+  - world: 1
+    subWorld: 4
+    level: 1
+    word: "huy\u1EC7n"
+    answers: "uy|h\u1EC7|nu|n\u1EC7|un|nhu|hu\u1EC7|huy\u1EC7n|"
+    validWords: "uy|h\u1EC7|nu|n\u1EC7|un|nhu|hu\u1EC7|huy\u1EC7n"
+  - world: 1
+    subWorld: 4
+    level: 2
+    word: "ch\u1EC9nh"
+    answers: "n\u1EC9|ch\u1EC9|nh\u1EC9|ch\u1EC9nh|"
+    validWords: "n\u1EC9|ch\u1EC9|nh\u1EC9|ch\u1EC9nh"
+  - world: 1
+    subWorld: 4
+    level: 3
+    word: "d\u01B0\u1EE1ng"
+    answers: "d\u01B0|n\u1EE1|g\u1EE1|d\u1EE1|\u01B0\u1EE1n|\u01B0ng|ng\u1EE1|d\u01B0\u1EE1ng|"
+    validWords: "d\u01B0|n\u1EE1|g\u1EE1|d\u1EE1|\u01B0\u1EE1n|\u01B0ng|ng\u1EE1|d\u01B0\u1EE1ng"
+  - world: 1
+    subWorld: 4
+    level: 4
+    word: "ng\u01B0\u1EDBc"
+    answers: "c\u01B0|n\u1EDB|c\u1EDB|\u1EDBn|\u01B0\u1EDBc|\u01B0ng|n\u01B0\u1EDBc|ng\u01B0\u1EDBc|"
+    validWords: "c\u01B0|n\u1EDB|c\u1EDB|\u1EDBn|\u01B0\u1EDBc|\u01B0ng|n\u01B0\u1EDBc|ng\u01B0\u1EDBc"
+  - world: 1
+    subWorld: 4
+    level: 5
+    word: phung
+    answers: nu|un|ung|nhu|phu|ngu|phun|phung|
+    validWords: nu|un|ung|nhu|phu|ngu|phun|phung
+  - world: 1
+    subWorld: 4
+    level: 6
+    word: "thu\u1EABn"
+    answers: "nu|tu|un|n\u1EABu|nhu|thu|thun|thu\u1EABn|"
+    validWords: "nu|tu|un|n\u1EABu|nhu|thu|thun|thu\u1EABn"
+  - world: 1
+    subWorld: 4
+    level: 7
+    word: "huy\u1EC1n"
+    answers: "uy|nu|h\u1EC1|n\u1EC1|un|nhu|hu\u1EC1|huy\u1EC1n|"
+    validWords: "uy|nu|h\u1EC1|n\u1EC1|un|nhu|hu\u1EC1|huy\u1EC1n"
+  - world: 1
+    subWorld: 4
+    level: 8
+    word: "tr\u1EA3ng"
+    answers: "t\u1EA3|g\u1EA3|n\u1EA3|ng\u1EA3|t\u1EA3n|tr\u1EA3|t\u1EA3ng|tr\u1EA3ng|"
+    validWords: "t\u1EA3|g\u1EA3|n\u1EA3|ng\u1EA3|t\u1EA3n|tr\u1EA3|t\u1EA3ng|tr\u1EA3ng"
+  - world: 1
+    subWorld: 4
+    level: 9
+    word: "qu\xE3ng"
+    answers: "nu|g\xE3|n\xE3|un|ung|ng\xE3|ngu|qu\xE3ng|"
+    validWords: "nu|g\xE3|n\xE3|un|ung|ng\xE3|ngu|qu\xE3ng"
+  - world: 1
+    subWorld: 4
+    level: 10
+    word: "tr\u1ECBch"
+    answers: "r\u1ECB|t\u1ECB|r\u1ECBt|tr\u1ECB|th\u1ECB|ch\u1ECB|t\u1ECBch|tr\u1ECBch|"
+    validWords: "r\u1ECB|t\u1ECB|r\u1ECBt|tr\u1ECB|th\u1ECB|ch\u1ECB|t\u1ECBch|tr\u1ECBch"
+  - world: 1
+    subWorld: 4
+    level: 11
+    word: "c\u01B0\u1EDDng"
+    answers: "c\u01B0|n\u1EDD|g\u1EDD|c\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|c\u01B0\u1EDDng|"
+    validWords: "c\u01B0|n\u1EDD|g\u1EDD|c\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|c\u01B0\u1EDDng"
+  - world: 1
+    subWorld: 4
+    level: 12
+    word: "gh\u1EC1nh"
+    answers: "h\u1EC1|n\u1EC1|ngh\u1EC1|gh\u1EC1nh|"
+    validWords: "h\u1EC1|n\u1EC1|ngh\u1EC1|gh\u1EC1nh"
+  - world: 1
+    subWorld: 4
+    level: 13
+    word: "ngo\u1EB9o"
+    answers: "go|no|ong|ngo\u1EB9o|"
+    validWords: "go|no|ong|ngo\u1EB9o"
+  - world: 1
+    subWorld: 4
+    level: 14
+    word: "gi\u1EC1ng"
+    answers: "in|ni|n\u1EC1|gi\u1EC1ng|"
+    validWords: "in|ni|n\u1EC1|gi\u1EC1ng"
+  - world: 1
+    subWorld: 4
+    level: 15
+    word: khuya
+    answers: uy|ha|khu|hay|khay|khua|khuy|khuya|
+    validWords: uy|ha|khu|hay|khay|khua|khuy|khuya
+  - world: 1
+    subWorld: 4
+    level: 16
+    word: "qu\u1EA7ng"
+    answers: "nu|un|ung|g\u1EA7n|ngu|ng\u1EA7u|qu\u1EA7n|qu\u1EA7ng|"
+    validWords: "nu|un|ung|g\u1EA7n|ngu|ng\u1EA7u|qu\u1EA7n|qu\u1EA7ng"
+  - world: 1
+    subWorld: 4
+    level: 17
+    word: "th\u1EAFng"
+    answers: "\u1EAFt|g\u1EAFn|h\u1EAFn|g\u1EAFt|h\u1EAFt|nh\u1EAFt|ng\u1EAFt|th\u1EAFng|"
+    validWords: "\u1EAFt|g\u1EAFn|h\u1EAFn|g\u1EAFt|h\u1EAFt|nh\u1EAFt|ng\u1EAFt|th\u1EAFng"
+  - world: 2
+    subWorld: 0
+    level: 0
+    word: "qu\u1EA1nh"
+    answers: "nu|h\u1EA1|un|n\u1EA1|h\u1EA1n|nhu|qu\u1EA1|qu\u1EA1nh|"
+    validWords: "nu|h\u1EA1|un|n\u1EA1|h\u1EA1n|nhu|qu\u1EA1|qu\u1EA1nh"
+  - world: 2
+    subWorld: 0
+    level: 1
+    word: "c\u01B0\u1EE1ng"
+    answers: "c\u01B0|c\u1EE1|n\u1EE1|g\u1EE1|\u01B0\u1EE1n|\u01B0ng|ng\u1EE1|c\u01B0\u1EE1ng|"
+    validWords: "c\u01B0|c\u1EE1|n\u1EE1|g\u1EE1|\u01B0\u1EE1n|\u01B0ng|ng\u1EE1|c\u01B0\u1EE1ng"
+  - world: 2
+    subWorld: 0
+    level: 2
+    word: "ph\xEDch"
+    answers: "\xEDch|ph\xED|ch\xED|ph\xEDch|"
+    validWords: "\xEDch|ph\xED|ch\xED|ph\xEDch"
+  - world: 2
+    subWorld: 0
+    level: 3
+    word: "ph\xF9ng"
+    answers: "g\xF9|\xF9n|ph\xF9|ng\xF9|\xF9ng|ph\xF9n|h\xF9ng|ph\xF9ng|"
+    validWords: "g\xF9|\xF9n|ph\xF9|ng\xF9|\xF9ng|ph\xF9n|h\xF9ng|ph\xF9ng"
+  - world: 2
+    subWorld: 0
+    level: 4
+    word: "r\u01B0\u1EDDng"
+    answers: "n\u1EDD|g\u1EDD|r\u1EDD|ng\u1EDD|r\u1EDDn|\u01B0ng|\u01B0\u1EDDn|r\u01B0\u1EDDng|"
+    validWords: "n\u1EDD|g\u1EDD|r\u1EDD|ng\u1EDD|r\u1EDDn|\u01B0ng|\u01B0\u1EDDn|r\u01B0\u1EDDng"
+  - world: 2
+    subWorld: 0
+    level: 5
+    word: "tri\u1EC3n"
+    answers: "ri|ti|in|n\u1EC3|ni|r\u1EC3|tin|tri\u1EC3n|"
+    validWords: "ri|ti|in|n\u1EC3|ni|r\u1EC3|tin|tri\u1EC3n"
+  - world: 2
+    subWorld: 0
+    level: 6
+    word: "ph\xF2ng"
+    answers: "g\xF2|h\xF2|n\xF2|ph\xF2|ng\xF2|h\xF2n|h\xF2ng|ph\xF2ng|"
+    validWords: "g\xF2|h\xF2|n\xF2|ph\xF2|ng\xF2|h\xF2n|h\xF2ng|ph\xF2ng"
+  - world: 2
+    subWorld: 0
+    level: 7
+    word: "ngo\u1EAFc"
+    answers: "go|no|ong|g\u1EAFn|con|c\u1EAFn|cong|ngo\u1EAFc|"
+    validWords: "go|no|ong|g\u1EAFn|con|c\u1EAFn|cong|ngo\u1EAFc"
+  - world: 2
+    subWorld: 0
+    level: 8
+    word: "chu\u1EA9n"
+    answers: "nu|\u1EA9u|\u1EA9n|un|c\u1EA9n|nhu|c\u1EA9u|chu\u1EA9n|"
+    validWords: "nu|\u1EA9u|\u1EA9n|un|c\u1EA9n|nhu|c\u1EA9u|chu\u1EA9n"
+  - world: 2
+    subWorld: 0
+    level: 9
+    word: "ch\u1EE7ng"
+    answers: "c\u1EE7|h\u1EE7|nh\u1EE7|ch\u1EE7|ng\u1EE7|\u1EE7ng|c\u1EE7ng|ch\u1EE7ng|"
+    validWords: "c\u1EE7|h\u1EE7|nh\u1EE7|ch\u1EE7|ng\u1EE7|\u1EE7ng|c\u1EE7ng|ch\u1EE7ng"
+  - world: 2
+    subWorld: 0
+    level: 10
+    word: "s\u01B0\u1EE3ng"
+    answers: "s\u01B0|n\u1EE3|s\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|s\u01B0ng|s\u01B0\u1EE3ng|"
+    validWords: "s\u01B0|n\u1EE3|s\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|s\u01B0ng|s\u01B0\u1EE3ng"
+  - world: 2
+    subWorld: 0
+    level: 11
+    word: "luy\u1EC7n"
+    answers: "l\u1EC7|uy|lu|nu|n\u1EC7|un|ly|luy\u1EC7n|"
+    validWords: "l\u1EC7|uy|lu|nu|n\u1EC7|un|ly|luy\u1EC7n"
+  - world: 2
+    subWorld: 0
+    level: 12
+    word: "t\u01B0\u1EDDng"
+    answers: "t\u01B0|n\u1EDD|g\u1EDD|t\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|t\u01B0\u1EDDng|"
+    validWords: "t\u01B0|n\u1EDD|g\u1EDD|t\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|t\u01B0\u1EDDng"
+  - world: 2
+    subWorld: 0
+    level: 13
+    word: "t\u01B0\u1EE3ng"
+    answers: "t\u01B0|n\u1EE3|t\u1EE3|t\u1EE3n|g\u1EE3n|\u01B0ng|ng\u1EE3|t\u01B0\u1EE3ng|"
+    validWords: "t\u01B0|n\u1EE3|t\u1EE3|t\u1EE3n|g\u1EE3n|\u01B0ng|ng\u1EE3|t\u01B0\u1EE3ng"
+  - world: 2
+    subWorld: 0
+    level: 14
+    word: "h\u01B0\u1EDFng"
+    answers: "h\u01B0|h\u1EDF|n\u1EDF|g\u1EDF|\u01B0ng|nh\u01B0|h\u01B0ng|h\u01B0\u1EDFng|"
+    validWords: "h\u01B0|h\u1EDF|n\u1EDF|g\u1EDF|\u01B0ng|nh\u01B0|h\u01B0ng|h\u01B0\u1EDFng"
+  - world: 2
+    subWorld: 0
+    level: 15
+    word: "khu\u1EF7u"
+    answers: "k\u1EF7|hu\u1EF7|khu|khu\u1EF7u|"
+    validWords: "k\u1EF7|hu\u1EF7|khu|khu\u1EF7u"
+  - world: 2
+    subWorld: 0
+    level: 16
+    word: "ch\u01B0\u1EDDm"
+    answers: "h\u1EDD|h\u01B0|c\u01B0|c\u1EDD|m\u1EDD|ch\u1EDD|c\u01B0\u1EDDm|ch\u01B0\u1EDDm|"
+    validWords: "h\u1EDD|h\u01B0|c\u01B0|c\u1EDD|m\u1EDD|ch\u1EDD|c\u01B0\u1EDDm|ch\u01B0\u1EDDm"
+  - world: 2
+    subWorld: 0
+    level: 17
+    word: "ch\u1ED5ng"
+    answers: "c\u1ED5|\u1ED5n|h\u1ED5|n\u1ED5|nh\u1ED5|h\u1ED5ng|c\u1ED5ng|ch\u1ED5ng|"
+    validWords: "c\u1ED5|\u1ED5n|h\u1ED5|n\u1ED5|nh\u1ED5|h\u1ED5ng|c\u1ED5ng|ch\u1ED5ng"
+  - world: 2
+    subWorld: 1
+    level: 0
+    word: "ngo\u1EB7c"
+    answers: "go|no|ong|con|n\u1EB7c|c\u1EB7n|cong|ngo\u1EB7c|"
+    validWords: "go|no|ong|con|n\u1EB7c|c\u1EB7n|cong|ngo\u1EB7c"
+  - world: 2
+    subWorld: 1
+    level: 1
+    word: "chi\u1EBFc"
+    answers: "ch\u1EBF|chi|\u1EBFch|chi\u1EBFc|"
+    validWords: "ch\u1EBF|chi|\u1EBFch|chi\u1EBFc"
+  - world: 2
+    subWorld: 1
+    level: 2
+    word: "qu\xE1ch"
+    answers: "h\xE1|\xE1c|c\xE1|qu\xE1|\xE1ch|c\xE1u|ch\xE1u|qu\xE1ch|"
+    validWords: "h\xE1|\xE1c|c\xE1|qu\xE1|\xE1ch|c\xE1u|ch\xE1u|qu\xE1ch"
+  - world: 2
+    subWorld: 1
+    level: 3
+    word: "ch\u1ED3ng"
+    answers: "\u1ED3n|h\u1ED3|n\u1ED3|h\u1ED3n|c\u1ED3n|h\u1ED3ng|c\u1ED3ng|ch\u1ED3ng|"
+    validWords: "\u1ED3n|h\u1ED3|n\u1ED3|h\u1ED3n|c\u1ED3n|h\u1ED3ng|c\u1ED3ng|ch\u1ED3ng"
+  - world: 2
+    subWorld: 1
+    level: 4
+    word: "ph\xF3ng"
+    answers: "n\xF3|\xF3p|g\xF3p|ng\xF3|\xF3ng|ph\xF3|h\xF3ng|ph\xF3ng|"
+    validWords: "n\xF3|\xF3p|g\xF3p|ng\xF3|\xF3ng|ph\xF3|h\xF3ng|ph\xF3ng"
+  - world: 2
+    subWorld: 1
+    level: 5
+    word: "d\u01B0\u01A1ng"
+    answers: "n\u01A1|d\u01B0|\u01A1n|d\u01A1|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|d\u01B0\u01A1ng|"
+    validWords: "n\u01A1|d\u01B0|\u01A1n|d\u01A1|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|d\u01B0\u01A1ng"
+  - world: 2
+    subWorld: 1
+    level: 6
+    word: "th\xF9ng"
+    answers: "g\xF9|\xF9n|t\xF9|th\xF9|ng\xF9|\xF9ng|t\xF9ng|h\xF9ng|th\xF9ng|"
+    validWords: "g\xF9|\xF9n|t\xF9|th\xF9|ng\xF9|\xF9ng|t\xF9ng|h\xF9ng|th\xF9ng"
+  - world: 2
+    subWorld: 1
+    level: 7
+    word: "r\u01B0\u01A1ng"
+    answers: "n\u01A1|r\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|r\u01A1n|\u01B0\u01A1ng|r\u01B0\u01A1ng|"
+    validWords: "n\u01A1|r\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|r\u01A1n|\u01B0\u01A1ng|r\u01B0\u01A1ng"
+  - world: 2
+    subWorld: 1
+    level: 8
+    word: "t\u01B0\u01A1ng"
+    answers: "t\u01B0|n\u01A1|t\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|t\u01B0\u01A1ng|"
+    validWords: "t\u01B0|n\u01A1|t\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|t\u01B0\u01A1ng"
+  - world: 2
+    subWorld: 1
+    level: 9
+    word: "ch\u1EE9ng"
+    answers: "\u1EE9c|c\u1EE9|ch\u1EE9|\u1EE9ng|n\u1EE9c|h\u1EE9ng|nh\u1EE9c|c\u1EE9ng|ch\u1EE9ng|"
+    validWords: "\u1EE9c|c\u1EE9|ch\u1EE9|\u1EE9ng|n\u1EE9c|h\u1EE9ng|nh\u1EE9c|c\u1EE9ng|ch\u1EE9ng"
+  - world: 2
+    subWorld: 1
+    level: 10
+    word: "h\u01B0\u1EDBng"
+    answers: "h\u01B0|n\u1EDB|h\u1EDB|\u1EDBn|\u01B0ng|nh\u1EDB|nh\u01B0|h\u01B0ng|h\u01B0\u1EDBng|"
+    validWords: "h\u01B0|n\u1EDB|h\u1EDB|\u1EDBn|\u01B0ng|nh\u1EDB|nh\u01B0|h\u01B0ng|h\u01B0\u1EDBng"
+  - world: 2
+    subWorld: 1
+    level: 11
+    word: "tr\u1ECDng"
+    answers: "n\u1ECD|r\u1ECD|ng\u1ECD|tr\u1ECD|g\u1ECDt|g\u1ECDn|ng\u1ECDt|tr\u1ECDn|tr\u1ECDng|"
+    validWords: "n\u1ECD|r\u1ECD|ng\u1ECD|tr\u1ECD|g\u1ECDt|g\u1ECDn|ng\u1ECDt|tr\u1ECDn|tr\u1ECDng"
+  - world: 2
+    subWorld: 1
+    level: 12
+    word: "chu\u1ED3n"
+    answers: "\u1ED3n|h\u1ED3|n\u1ED3|nu|un|h\u1ED3n|nhu|c\u1ED3n|chu\u1ED3n|"
+    validWords: "\u1ED3n|h\u1ED3|n\u1ED3|nu|un|h\u1ED3n|nhu|c\u1ED3n|chu\u1ED3n"
+  - world: 2
+    subWorld: 1
+    level: 13
+    word: "g\u01B0\u1EE3ng"
+    answers: "n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|g\u01B0\u1EE3ng|"
+    validWords: "n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|g\u01B0\u1EE3ng"
+  - world: 2
+    subWorld: 1
+    level: 14
+    word: "\u0111\u01B0\u01A1ng"
+    answers: "n\u01A1|\u01A1n|\u0111\u01A1|\u0111\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|\u0111\u01B0\u01A1ng|"
+    validWords: "n\u01A1|\u01A1n|\u0111\u01A1|\u0111\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|\u0111\u01B0\u01A1ng"
+  - world: 2
+    subWorld: 1
+    level: 15
+    word: "gi\u0103ng"
+    answers: "in|\u0103n|ni|g\u0103ng|gi\u0103ng|"
+    validWords: "in|\u0103n|ni|g\u0103ng|gi\u0103ng"
+  - world: 2
+    subWorld: 1
+    level: 16
+    word: "luy\u1EBFn"
+    answers: "uy|lu|nu|un|ly|y\u1EBFu|y\u1EBFn|n\u1EBFu|luy\u1EBFn|"
+    validWords: "uy|lu|nu|un|ly|y\u1EBFu|y\u1EBFn|n\u1EBFu|luy\u1EBFn"
+  - world: 2
+    subWorld: 1
+    level: 17
+    word: "th\xF2ng"
+    answers: "g\xF2|h\xF2|n\xF2|th\xF2|ng\xF2|h\xF2n|t\xF2ng|h\xF2ng|th\xF2ng|"
+    validWords: "g\xF2|h\xF2|n\xF2|th\xF2|ng\xF2|h\xF2n|t\xF2ng|h\xF2ng|th\xF2ng"
+  - world: 2
+    subWorld: 2
+    level: 0
+    word: "x\u01B0\u01A1ng"
+    answers: "n\u01A1|x\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|x\u01B0ng|\u01B0\u01A1ng|x\u01B0\u01A1ng|"
+    validWords: "n\u01A1|x\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|x\u01B0ng|\u01B0\u01A1ng|x\u01B0\u01A1ng"
+  - world: 2
+    subWorld: 2
+    level: 1
+    word: "quy\u1EBFn"
+    answers: "uy|nu|un|y\u1EBFu|quy|y\u1EBFn|qu\u1EBF|n\u1EBFu|quy\u1EBFn|"
+    validWords: "uy|nu|un|y\u1EBFu|quy|y\u1EBFn|qu\u1EBF|n\u1EBFu|quy\u1EBFn"
+  - world: 2
+    subWorld: 2
+    level: 2
+    word: "tuy\u1EC3n"
+    answers: "uy|ty|nu|tu|n\u1EC3|un|tuy|y\u1EC3u|tuy\u1EC3n|"
+    validWords: "uy|ty|nu|tu|n\u1EC3|un|tuy|y\u1EC3u|tuy\u1EC3n"
+  - world: 2
+    subWorld: 2
+    level: 3
+    word: "nh\u1EB1ng"
+    answers: "h\u1EB1n|g\u1EB1n|h\u1EB1ng|nh\u1EB1n|nh\u1EB1ng|"
+    validWords: "h\u1EB1n|g\u1EB1n|h\u1EB1ng|nh\u1EB1n|nh\u1EB1ng"
+  - world: 2
+    subWorld: 2
+    level: 4
+    word: "thi\u1EC3m"
+    answers: "h\u1EC3|ti|im|mi|thi|th\u1EC3|tim|hi\u1EC3m|thi\u1EC3m|"
+    validWords: "h\u1EC3|ti|im|mi|thi|th\u1EC3|tim|hi\u1EC3m|thi\u1EC3m"
+  - world: 2
+    subWorld: 2
+    level: 5
+    word: "mu\u1ED7ng"
+    answers: "n\u1ED7|mu|nu|g\u1ED7|un|um|ung|ngu|mu\u1ED7ng|"
+    validWords: "n\u1ED7|mu|nu|g\u1ED7|un|um|ung|ngu|mu\u1ED7ng"
+  - world: 2
+    subWorld: 2
+    level: 6
+    word: huynh
+    answers: uy|nu|un|nhu|huynh|
+    validWords: uy|nu|un|nhu|huynh
+  - world: 2
+    subWorld: 2
+    level: 7
+    word: "chu\u1ED9c"
+    answers: "h\u1ED9|c\u1ED9c|h\u1ED9c|cu\u1ED9c|chu\u1ED9c|"
+    validWords: "h\u1ED9|c\u1ED9c|h\u1ED9c|cu\u1ED9c|chu\u1ED9c"
+  - world: 2
+    subWorld: 2
+    level: 8
+    word: "tuy\u1EC1n"
+    answers: "uy|ty|nu|tu|n\u1EC1|un|t\u1EC1|tuy|tuy\u1EC1n|"
+    validWords: "uy|ty|nu|tu|n\u1EC1|un|t\u1EC1|tuy|tuy\u1EC1n"
+  - world: 2
+    subWorld: 2
+    level: 9
+    word: "gi\u1EB1ng"
+    answers: "in|ni|g\u1EB1n|gi\u1EB1n|gi\u1EB1ng|"
+    validWords: "in|ni|g\u1EB1n|gi\u1EB1n|gi\u1EB1ng"
+  - world: 2
+    subWorld: 2
+    level: 10
+    word: "th\u1ECBnh"
+    answers: "t\u1ECB|n\u1ECBt|th\u1ECB|t\u1ECBnh|th\u1ECBnh|"
+    validWords: "t\u1ECB|n\u1ECBt|th\u1ECB|t\u1ECBnh|th\u1ECBnh"
+  - world: 2
+    subWorld: 2
+    level: 11
+    word: "khu\u1EA9n"
+    answers: "nu|\u1EA9u|\u1EA9n|un|khu|nhu|kh\u1EA9u|kh\u1EA9n|khu\u1EA9n|"
+    validWords: "nu|\u1EA9u|\u1EA9n|un|khu|nhu|kh\u1EA9u|kh\u1EA9n|khu\u1EA9n"
+  - world: 2
+    subWorld: 2
+    level: 12
+    word: "nhu\u1EA7n"
+    answers: "nu|un|nhu|h\u1EA7u|nhu\u1EA7n|"
+    validWords: "nu|un|nhu|h\u1EA7u|nhu\u1EA7n"
+  - world: 2
+    subWorld: 2
+    level: 13
+    word: "n\u01B0\u1EDBng"
+    answers: "n\u1EDB|\u1EDBn|\u01B0ng|n\u01B0ng|n\u01B0\u1EDBng|"
+    validWords: "n\u1EDB|\u1EDBn|\u01B0ng|n\u01B0ng|n\u01B0\u1EDBng"
+  - world: 2
+    subWorld: 2
+    level: 14
+    word: "khi\u1EBFu"
+    answers: "k\u1EBF|ki|khu|kh\u1EBF|khi|hi\u1EBFu|khui|ki\u1EBFu|khi\u1EBFu|"
+    validWords: "k\u1EBF|ki|khu|kh\u1EBF|khi|hi\u1EBFu|khui|ki\u1EBFu|khi\u1EBFu"
+  - world: 2
+    subWorld: 2
+    level: 15
+    word: "tr\u01B0\u1EDDn"
+    answers: "t\u01B0|n\u1EDD|t\u1EDD|r\u1EDD|r\u1EDDn|tr\u1EDD|\u01B0\u1EDDn|tr\u1EDDn|tr\u01B0\u1EDDn|"
+    validWords: "t\u01B0|n\u1EDD|t\u1EDD|r\u1EDD|r\u1EDDn|tr\u1EDD|\u01B0\u1EDDn|tr\u1EDDn|tr\u01B0\u1EDDn"
+  - world: 2
+    subWorld: 2
+    level: 16
+    word: "chi\xEAm"
+    answers: "im|m\xEA|\xEAm|mi|ch\xEA|chi|ch\xEAm|chim|chi\xEAm|"
+    validWords: "im|m\xEA|\xEAm|mi|ch\xEA|chi|ch\xEAm|chim|chi\xEAm"
+  - world: 2
+    subWorld: 2
+    level: 17
+    word: "nh\u1EBFch"
+    answers: "ch\u1EBF|h\u1EBFn|\u1EBFch|h\u1EBFch|nh\u1EBFch|"
+    validWords: "ch\u1EBF|h\u1EBFn|\u1EBFch|h\u1EBFch|nh\u1EBFch"
+  - world: 2
+    subWorld: 3
+    level: 0
+    word: "th\u1EC9nh"
+    answers: "t\u1EC9|n\u1EC9|nh\u1EC9|t\u1EC9nh|th\u1EC9nh|"
+    validWords: "t\u1EC9|n\u1EC9|nh\u1EC9|t\u1EC9nh|th\u1EC9nh"
+  - world: 2
+    subWorld: 3
+    level: 1
+    word: "ngh\u1EB9n"
+    answers: "h\u1EB9|nh\u1EB9|gh\u1EB9|h\u1EB9n|ngh\u1EB9n|"
+    validWords: "h\u1EB9|nh\u1EB9|gh\u1EB9|h\u1EB9n|ngh\u1EB9n"
+  - world: 2
+    subWorld: 3
+    level: 2
+    word: "xu\u1ED3ng"
+    answers: "\u1ED3n|xu|n\u1ED3|nu|un|ung|ngu|xung|xu\u1ED3ng|"
+    validWords: "\u1ED3n|xu|n\u1ED3|nu|un|ung|ngu|xung|xu\u1ED3ng"
+  - world: 2
+    subWorld: 3
+    level: 3
+    word: "ti\u1EBFng"
+    answers: "ti|in|ni|t\u1EBF|n\u1EBFt|tin|gi\u1EBFt|ti\u1EBFn|ti\u1EBFng|"
+    validWords: "ti|in|ni|t\u1EBF|n\u1EBFt|tin|gi\u1EBFt|ti\u1EBFn|ti\u1EBFng"
+  - world: 2
+    subWorld: 3
+    level: 4
+    word: "xuy\u1EBFn"
+    answers: "xu|uy|nu|x\u1EBF|un|y\u1EBFu|y\u1EBFn|n\u1EBFu|xuy\u1EBFn|"
+    validWords: "xu|uy|nu|x\u1EBF|un|y\u1EBFu|y\u1EBFn|n\u1EBFu|xuy\u1EBFn"
+  - world: 2
+    subWorld: 3
+    level: 5
+    word: "chi\xEAn"
+    answers: "in|ni|inh|h\xEAn|ch\xEA|chi|nhi|hi\xEAn|chi\xEAn|"
+    validWords: "in|ni|inh|h\xEAn|ch\xEA|chi|nhi|hi\xEAn|chi\xEAn"
+  - world: 2
+    subWorld: 3
+    level: 6
+    word: "ngo\u1EB7t"
+    answers: "go|to|no|ong|g\u1EB7t|tong|ng\u1EB7t|t\u1EB7ng|ngo\u1EB7t|"
+    validWords: "go|to|no|ong|g\u1EB7t|tong|ng\u1EB7t|t\u1EB7ng|ngo\u1EB7t"
+  - world: 2
+    subWorld: 3
+    level: 7
+    word: "khu\xE2n"
+    answers: "nu|\xE2u|un|\xE2n|khu|nhu|n\xE2u|kh\xE2u|khu\xE2n|"
+    validWords: "nu|\xE2u|un|\xE2n|khu|nhu|n\xE2u|kh\xE2u|khu\xE2n"
+  - world: 2
+    subWorld: 3
+    level: 8
+    word: "ng\u01B0\u1EDDi"
+    answers: "n\u1EDD|g\u1EDD|in|ni|gi\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|ng\u1EDDi|ng\u01B0\u1EDDi|"
+    validWords: "n\u1EDD|g\u1EDD|in|ni|gi\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|ng\u1EDDi|ng\u01B0\u1EDDi"
+  - world: 2
+    subWorld: 3
+    level: 9
+    word: "khi\u1EBFp"
+    answers: "k\u1EBF|ki|pi|ph\u1EBF|phi|kh\u1EBF|khi|ki\u1EBFp|hi\u1EBFp|khi\u1EBFp|"
+    validWords: "k\u1EBF|ki|pi|ph\u1EBF|phi|kh\u1EBF|khi|ki\u1EBFp|hi\u1EBFp|khi\u1EBFp"
+  - world: 2
+    subWorld: 3
+    level: 10
+    word: "kh\xEDch"
+    answers: "k\xED|\xEDch|ch\xED|kh\xED|k\xEDch|kh\xEDch|"
+    validWords: "k\xED|\xEDch|ch\xED|kh\xED|k\xEDch|kh\xEDch"
+  - world: 2
+    subWorld: 3
+    level: 11
+    word: thung
+    answers: nu|tu|un|ung|nhu|ngu|thu|tung|thun|thung|
+    validWords: nu|tu|un|ung|nhu|ngu|thu|tung|thun|thung
+  - world: 2
+    subWorld: 3
+    level: 12
+    word: "ngh\xE8o"
+    answers: "go|h\xE8|ho|n\xE8|no|h\xE8n|ong|nho|nh\xE8|ngh\xE8o|"
+    validWords: "go|h\xE8|ho|n\xE8|no|h\xE8n|ong|nho|nh\xE8|ngh\xE8o"
+  - world: 2
+    subWorld: 3
+    level: 13
+    word: "c\u01B0\u01A1ng"
+    answers: "c\u01B0|n\u01A1|\u01A1n|c\u01A1|\u01B0\u01A1n|ng\u01A1|\u01B0ng|c\u01A1n|\u01B0\u01A1ng|c\u01B0\u01A1ng|"
+    validWords: "c\u01B0|n\u01A1|\u01A1n|c\u01A1|\u01B0\u01A1n|ng\u01A1|\u01B0ng|c\u01A1n|\u01B0\u01A1ng|c\u01B0\u01A1ng"
+  - world: 2
+    subWorld: 3
+    level: 14
+    word: "tr\xF4ng"
+    answers: "r\xF4|\xF4n|n\xF4|t\xF4|ng\xF4|\xF4ng|t\xF4n|tr\xF4n|t\xF4ng|tr\xF4ng|"
+    validWords: "r\xF4|\xF4n|n\xF4|t\xF4|ng\xF4|\xF4ng|t\xF4n|tr\xF4n|t\xF4ng|tr\xF4ng"
+  - world: 2
+    subWorld: 3
+    level: 15
+    word: "mi\u1EC7ng"
+    answers: "im|n\u1EC7|mi|in|ni|min|n\u1EC7m|mi\u1EC7n|ni\u1EC7m|mi\u1EC7ng|"
+    validWords: "im|n\u1EC7|mi|in|ni|min|n\u1EC7m|mi\u1EC7n|ni\u1EC7m|mi\u1EC7ng"
+  - world: 2
+    subWorld: 3
+    level: 16
+    word: "cu\u1ED3ng"
+    answers: "\u1ED3n|n\u1ED3|nu|un|ung|c\u1ED3n|ngu|cung|c\u1ED3ng|cu\u1ED3ng|"
+    validWords: "\u1ED3n|n\u1ED3|nu|un|ung|c\u1ED3n|ngu|cung|c\u1ED3ng|cu\u1ED3ng"
+  - world: 2
+    subWorld: 3
+    level: 17
+    word: "chi\u1EBFm"
+    answers: "im|\u1EBFm|mi|m\u1EBF|ch\u1EBF|chi|\u1EBFch|chim|hi\u1EBFm|chi\u1EBFm|"
+    validWords: "im|\u1EBFm|mi|m\u1EBF|ch\u1EBF|chi|\u1EBFch|chim|hi\u1EBFm|chi\u1EBFm"
+  - world: 2
+    subWorld: 4
+    level: 0
+    word: "nh\xFAng"
+    answers: "h\xFA|nh\xFA|\xFAng|nh\xFAn|n\xFAng|nh\xFAng|"
+    validWords: "h\xFA|nh\xFA|\xFAng|nh\xFAn|n\xFAng|nh\xFAng"
+  - world: 2
+    subWorld: 4
+    level: 1
+    word: xoong
+    answers: go|xo|no|ong|xong|xoong|
+    validWords: go|xo|no|ong|xong|xoong
+  - world: 2
+    subWorld: 4
+    level: 2
+    word: "nh\u01B0ng"
+    answers: "h\u01B0|\u01B0ng|nh\u01B0|n\u01B0ng|h\u01B0ng|nh\u01B0ng|"
+    validWords: "h\u01B0|\u01B0ng|nh\u01B0|n\u01B0ng|h\u01B0ng|nh\u01B0ng"
+  - world: 2
+    subWorld: 4
+    level: 3
+    word: "v\u01B0\u01A1ng"
+    answers: "n\u01A1|v\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|v\u01B0ng|v\u01B0\u01A1n|v\u01B0\u01A1ng|"
+    validWords: "n\u01A1|v\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|v\u01B0ng|v\u01B0\u01A1n|v\u01B0\u01A1ng"
+  - world: 2
+    subWorld: 4
+    level: 4
+    word: "l\u01B0\u1EE3ng"
+    answers: "l\u01B0|l\u1EE3|n\u1EE3|l\u1EE3n|g\u1EE3n|\u01B0ng|ng\u1EE3|l\u01B0\u1EE3n|l\u01B0ng|l\u01B0\u1EE3ng|"
+    validWords: "l\u01B0|l\u1EE3|n\u1EE3|l\u1EE3n|g\u1EE3n|\u01B0ng|ng\u1EE3|l\u01B0\u1EE3n|l\u01B0ng|l\u01B0\u1EE3ng"
+  - world: 2
+    subWorld: 4
+    level: 5
+    word: "th\u1EA1ch"
+    answers: "t\u1EA1|h\u1EA1|h\u1EA1t|t\u1EA1c|h\u1EA1ch|th\u1EA1ch|"
+    validWords: "t\u1EA1|h\u1EA1|h\u1EA1t|t\u1EA1c|h\u1EA1ch|th\u1EA1ch"
+  - world: 2
+    subWorld: 4
+    level: 6
+    word: "tr\xF2ng"
+    answers: "r\xF2|g\xF2|n\xF2|tr\xF2|r\xF2n|ng\xF2|t\xF2ng|tr\xF2n|r\xF2ng|tr\xF2ng|"
+    validWords: "r\xF2|g\xF2|n\xF2|tr\xF2|r\xF2n|ng\xF2|t\xF2ng|tr\xF2n|r\xF2ng|tr\xF2ng"
+  - world: 2
+    subWorld: 4
+    level: 7
+    word: "nhi\u1EC5u"
+    answers: "nu|in|h\u1EC5|ni|un|nhu|inh|nui|nhi|nhi\u1EC5u|"
+    validWords: "nu|in|h\u1EC5|ni|un|nhu|inh|nui|nhi|nhi\u1EC5u"
+  - world: 2
+    subWorld: 4
+    level: 8
+    word: "ph\u01B0\u1EDBn"
+    answers: "h\u01B0|n\u1EDB|h\u1EDB|\u1EDBn|h\u1EDBp|\u01B0\u1EDBp|nh\u1EDB|nh\u01B0|nh\u1EDBp|ph\u01B0\u1EDBn|"
+    validWords: "h\u01B0|n\u1EDB|h\u1EDB|\u1EDBn|h\u1EDBp|\u01B0\u1EDBp|nh\u1EDB|nh\u01B0|nh\u1EDBp|ph\u01B0\u1EDBn"
+  - world: 2
+    subWorld: 4
+    level: 9
+    word: "ph\xECnh"
+    answers: "h\xEC|n\xEC|ph\xEC|nh\xEC|h\xECnh|ph\xECnh|"
+    validWords: "h\xEC|n\xEC|ph\xEC|nh\xEC|h\xECnh|ph\xECnh"
+  - world: 2
+    subWorld: 4
+    level: 10
+    word: "l\u01B0\u1EDDng"
+    answers: "l\u01B0|n\u1EDD|g\u1EDD|l\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|l\u01B0ng|l\u01B0\u1EDDn|l\u01B0\u1EDDng|"
+    validWords: "l\u01B0|n\u1EDD|g\u1EDD|l\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|l\u01B0ng|l\u01B0\u1EDDn|l\u01B0\u1EDDng"
+  - world: 2
+    subWorld: 4
+    level: 11
+    word: "duy\u1EC7t"
+    answers: "uy|ty|tu|t\u1EC7|du|duy|tuy|d\u1EC7t|tu\u1EC7|duy\u1EC7t|"
+    validWords: "uy|ty|tu|t\u1EC7|du|duy|tuy|d\u1EC7t|tu\u1EC7|duy\u1EC7t"
+  - world: 2
+    subWorld: 4
+    level: 12
+    word: "ph\u01B0\u1EDBc"
+    answers: "h\u01B0|c\u01B0|h\u1EDB|c\u1EDB|h\u1EDBp|\u01B0\u1EDBc|\u01B0\u1EDBp|ch\u1EDB|c\u01B0\u1EDBp|ch\u1EDBp|ph\u01B0\u1EDBc|"
+    validWords: "h\u01B0|c\u01B0|h\u1EDB|c\u1EDB|h\u1EDBp|\u01B0\u1EDBc|\u01B0\u1EDBp|ch\u1EDB|c\u01B0\u1EDBp|ch\u1EDBp|ph\u01B0\u1EDBc"
+  - world: 2
+    subWorld: 4
+    level: 13
+    word: "nh\xEDch"
+    answers: "\xEDch|ch\xED|nh\xED|ch\xEDn|n\xEDch|nh\xEDch|ch\xEDnh|"
+    validWords: "\xEDch|ch\xED|nh\xED|ch\xEDn|n\xEDch|nh\xEDch|ch\xEDnh"
+  - world: 2
+    subWorld: 4
+    level: 14
+    word: "thu\u1EADt"
+    answers: "tu|h\u1EADu|t\u1EADu|thu|t\u1EADt|th\u1EADt|thu\u1EADt|"
+    validWords: "tu|h\u1EADu|t\u1EADu|thu|t\u1EADt|th\u1EADt|thu\u1EADt"
+  - world: 2
+    subWorld: 4
+    level: 15
+    word: "nhu\u1ED1m"
+    answers: "mu|m\u1ED1|h\u1ED1|\u1ED1m|nu|un|um|nhu|u\u1ED1n|mu\u1ED1n|nhu\u1ED1m|"
+    validWords: "mu|m\u1ED1|h\u1ED1|\u1ED1m|nu|un|um|nhu|u\u1ED1n|mu\u1ED1n|nhu\u1ED1m"
+  - world: 2
+    subWorld: 4
+    level: 16
+    word: "g\u01B0\u01A1ng"
+    answers: "n\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|g\u01B0\u01A1ng|"
+    validWords: "n\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|g\u01B0\u01A1ng"
+  - world: 2
+    subWorld: 4
+    level: 17
+    word: "tr\xFAng"
+    answers: "t\xFA|r\xFA|\xFAt|g\xFAt|r\xFAt|n\xFAt|tr\xFA|\xFAng|ng\xFAt|t\xFAng|tr\xFAng|"
+    validWords: "t\xFA|r\xFA|\xFAt|g\xFAt|r\xFAt|n\xFAt|tr\xFA|\xFAng|ng\xFAt|t\xFAng|tr\xFAng"
+  - world: 3
+    subWorld: 0
+    level: 0
+    word: "tri\u1EC7n"
+    answers: "ri|ti|r\u1EC7|n\u1EC7|in|t\u1EC7|ni|tr\u1EC7|tin|ti\u1EC7n|tri\u1EC7n|"
+    validWords: "ri|ti|r\u1EC7|n\u1EC7|in|t\u1EC7|ni|tr\u1EC7|tin|ti\u1EC7n|tri\u1EC7n"
+  - world: 3
+    subWorld: 0
+    level: 1
+    word: "tri\u1EC1n"
+    answers: "ri|ti|in|ni|n\u1EC1|t\u1EC1|tr\u1EC1|r\u1EC1n|tin|ti\u1EC1n|tri\u1EC1n|"
+    validWords: "ri|ti|in|ni|n\u1EC1|t\u1EC1|tr\u1EC1|r\u1EC1n|tin|ti\u1EC1n|tri\u1EC1n"
+  - world: 3
+    subWorld: 0
+    level: 2
+    word: "nhu\u1ED9m"
+    answers: "mu|nu|h\u1ED9|m\u1ED9|un|um|n\u1ED9|n\u1ED9m|nhu|mu\u1ED9n|nhu\u1ED9m|"
+    validWords: "mu|nu|h\u1ED9|m\u1ED9|un|um|n\u1ED9|n\u1ED9m|nhu|mu\u1ED9n|nhu\u1ED9m"
+  - world: 3
+    subWorld: 0
+    level: 3
+    word: "kh\xF4ng"
+    answers: "\xF4n|n\xF4|h\xF4|kh\xF4|ng\xF4|h\xF4n|\xF4ng|nh\xF4|kh\xF4n|h\xF4ng|kh\xF4ng|"
+    validWords: "\xF4n|n\xF4|h\xF4|kh\xF4|ng\xF4|h\xF4n|\xF4ng|nh\xF4|kh\xF4n|h\xF4ng|kh\xF4ng"
+  - world: 3
+    subWorld: 0
+    level: 4
+    word: nhung
+    answers: nu|un|ung|nhu|ngu|nung|nhung|
+    validWords: nu|un|ung|nhu|ngu|nung|nhung
+  - world: 3
+    subWorld: 0
+    level: 5
+    word: "qu\xE0ng"
+    answers: "n\xE0|nu|un|g\xE0|ung|g\xE0n|ng\xE0|ngu|qu\xE0|qu\xE0n|qu\xE0ng|"
+    validWords: "n\xE0|nu|un|g\xE0|ung|g\xE0n|ng\xE0|ngu|qu\xE0|qu\xE0n|qu\xE0ng"
+  - world: 3
+    subWorld: 0
+    level: 6
+    word: trinh
+    answers: ri|ti|in|ni|thi|inh|tin|nhi|tinh|rinh|trinh|
+    validWords: ri|ti|in|ni|thi|inh|tin|nhi|tinh|rinh|trinh
+  - world: 3
+    subWorld: 0
+    level: 7
+    word: "khi\u1EC3n"
+    answers: "h\u1EC3|ki|in|n\u1EC3|ni|k\u1EC3|inh|khi|nhi|kinh|khi\u1EC3n|"
+    validWords: "h\u1EC3|ki|in|n\u1EC3|ni|k\u1EC3|inh|khi|nhi|kinh|khi\u1EC3n"
+  - world: 3
+    subWorld: 0
+    level: 8
+    word: "bu\xF4ng"
+    answers: "\xF4n|nu|n\xF4|un|ung|ng\xF4|ngu|\xF4ng|bu\xF4n|b\xF4ng|bu\xF4ng|"
+    validWords: "\xF4n|nu|n\xF4|un|ung|ng\xF4|ngu|\xF4ng|bu\xF4n|b\xF4ng|bu\xF4ng"
+  - world: 3
+    subWorld: 0
+    level: 9
+    word: "tr\u01B0\u1EE3t"
+    answers: "r\u1EE3|t\u01B0|t\u1EE3|tr\u1EE3|r\u01B0\u1EE3t|tr\u1EE3t|tr\u01B0\u1EE3t|"
+    validWords: "r\u1EE3|t\u01B0|t\u1EE3|tr\u1EE3|r\u01B0\u1EE3t|tr\u1EE3t|tr\u01B0\u1EE3t"
+  - world: 3
+    subWorld: 0
+    level: 10
+    word: "thi\u1EC7t"
+    answers: "h\u1EC7|ti|t\u1EC7|thi|h\u1EC7t|ti\u1EC7t|thi\u1EC7t|"
+    validWords: "h\u1EC7|ti|t\u1EC7|thi|h\u1EC7t|ti\u1EC7t|thi\u1EC7t"
+  - world: 3
+    subWorld: 0
+    level: 11
+    word: "kh\xE1ch"
+    answers: "h\xE1|\xE1c|c\xE1|kh\xE1|\xE1ch|kh\xE1c|kh\xE1ch|"
+    validWords: "h\xE1|\xE1c|c\xE1|kh\xE1|\xE1ch|kh\xE1c|kh\xE1ch"
+  - world: 3
+    subWorld: 0
+    level: 12
+    word: "ch\xFAng"
+    answers: "h\xFA|\xFAc|c\xFA|nh\xFA|h\xFAc|n\xFAc|ch\xFA|c\xFAn|\xFAng|c\xFAng|ch\xFAng|"
+    validWords: "h\xFA|\xFAc|c\xFA|nh\xFA|h\xFAc|n\xFAc|ch\xFA|c\xFAn|\xFAng|c\xFAng|ch\xFAng"
+  - world: 3
+    subWorld: 0
+    level: 13
+    word: "tr\xF9ng"
+    answers: "g\xF9|r\xF9|\xF9n|t\xF9|tr\xF9|ng\xF9|\xF9ng|t\xF9ng|r\xF9ng|tr\xF9n|tr\xF9ng|"
+    validWords: "g\xF9|r\xF9|\xF9n|t\xF9|tr\xF9|ng\xF9|\xF9ng|t\xF9ng|r\xF9ng|tr\xF9n|tr\xF9ng"
+  - world: 3
+    subWorld: 0
+    level: 14
+    word: "chi\u1EBFn"
+    answers: "in|ni|ch\u1EBF|inh|h\u1EBFn|chi|\u1EBFch|nhi|hi\u1EBFn|chi\u1EBFn|nhi\u1EBFc|"
+    validWords: "in|ni|ch\u1EBF|inh|h\u1EBFn|chi|\u1EBFch|nhi|hi\u1EBFn|chi\u1EBFn|nhi\u1EBFc"
+  - world: 3
+    subWorld: 0
+    level: 15
+    word: "khu\u1EA5t"
+    answers: "tu|\u1EA5u|khu|h\u1EA5t|u\u1EA5t|t\u1EA5u|thu|kh\u1EA5u|th\u1EA5u|kh\u1EA5t|khu\u1EA5t|"
+    validWords: "tu|\u1EA5u|khu|h\u1EA5t|u\u1EA5t|t\u1EA5u|thu|kh\u1EA5u|th\u1EA5u|kh\u1EA5t|khu\u1EA5t"
+  - world: 3
+    subWorld: 0
+    level: 16
+    word: "th\u1EA3ng"
+    answers: "t\u1EA3|g\u1EA3|h\u1EA3|n\u1EA3|ng\u1EA3|th\u1EA3|t\u1EA3n|nh\u1EA3|\u1EA3nh|t\u1EA3ng|th\u1EA3ng|"
+    validWords: "t\u1EA3|g\u1EA3|h\u1EA3|n\u1EA3|ng\u1EA3|th\u1EA3|t\u1EA3n|nh\u1EA3|\u1EA3nh|t\u1EA3ng|th\u1EA3ng"
+  - world: 3
+    subWorld: 0
+    level: 17
+    word: "tri\u1EC7t"
+    answers: "ri|ti|r\u1EC7|t\u1EC7|tr\u1EC7|ti\u1EC7t|tri\u1EC7t|"
+    validWords: "ri|ti|r\u1EC7|t\u1EC7|tr\u1EC7|ti\u1EC7t|tri\u1EC7t"
+  - world: 3
+    subWorld: 1
+    level: 0
+    word: "gi\u1ED1ng"
+    answers: "in|ni|ng\u1ED1|g\u1ED1i|n\u1ED1i|\u1ED1ng|gi\u1ED1ng|"
+    validWords: "in|ni|ng\u1ED1|g\u1ED1i|n\u1ED1i|\u1ED1ng|gi\u1ED1ng"
+  - world: 3
+    subWorld: 1
+    level: 1
+    word: trung
+    answers: nu|ru|tu|un|ung|ngu|run|tru|tung|rung|trung|
+    validWords: nu|ru|tu|un|ung|ngu|run|tru|tung|rung|trung
+  - world: 3
+    subWorld: 1
+    level: 2
+    word: "khi\xEAm"
+    answers: "im|m\xEA|\xEAm|ki|mi|k\xEA|kh\xEA|kim|khi|ki\xEAm|khi\xEAm|"
+    validWords: "im|m\xEA|\xEAm|ki|mi|k\xEA|kh\xEA|kim|khi|ki\xEAm|khi\xEAm"
+  - world: 3
+    subWorld: 1
+    level: 3
+    word: "nhi\u1EC5m"
+    answers: "im|mi|in|h\u1EC5|ni|inh|min|nhi|mi\u1EC5n|minh|nhi\u1EC5m|"
+    validWords: "im|mi|in|h\u1EC5|ni|inh|min|nhi|mi\u1EC5n|minh|nhi\u1EC5m"
+  - world: 3
+    subWorld: 1
+    level: 4
+    word: "nh\u0103ng"
+    answers: "\u0103n|n\u0103n|ng\u0103n|h\u0103ng|nh\u0103n|n\u0103ng|nh\u0103ng|"
+    validWords: "\u0103n|n\u0103n|ng\u0103n|h\u0103ng|nh\u0103n|n\u0103ng|nh\u0103ng"
+  - world: 3
+    subWorld: 1
+    level: 5
+    word: "chu\u1ED1i"
+    answers: "h\u1ED1|c\u1ED1|\u1ED1c|c\u1ED1i|chi|h\u1ED1i|h\u1ED1c|chui|ch\u1ED1i|cu\u1ED1i|chu\u1ED1i|"
+    validWords: "h\u1ED1|c\u1ED1|\u1ED1c|c\u1ED1i|chi|h\u1ED1i|h\u1ED1c|chui|ch\u1ED1i|cu\u1ED1i|chu\u1ED1i"
+  - world: 3
+    subWorld: 1
+    level: 6
+    word: "tr\xECnh"
+    answers: "r\xEC|t\xEC|h\xEC|n\xEC|nh\xEC|tr\xEC|th\xEC|th\xECn|r\xECnh|t\xECnh|tr\xECnh|"
+    validWords: "r\xEC|t\xEC|h\xEC|n\xEC|nh\xEC|tr\xEC|th\xEC|th\xECn|r\xECnh|t\xECnh|tr\xECnh"
+  - world: 3
+    subWorld: 1
+    level: 7
+    word: "ngo\u1EAFt"
+    answers: "go|to|\u1EAFt|no|ong|g\u1EAFn|o\u1EAFt|g\u1EAFt|tong|ng\u1EAFt|ngo\u1EAFt|"
+    validWords: "go|to|\u1EAFt|no|ong|g\u1EAFn|o\u1EAFt|g\u1EAFt|tong|ng\u1EAFt|ngo\u1EAFt"
+  - world: 3
+    subWorld: 1
+    level: 8
+    word: "n\u01B0\u1EDDng"
+    answers: "n\u1EDD|g\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|n\u01B0ng|n\u01B0\u1EDDng|"
+    validWords: "n\u1EDD|g\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|n\u01B0ng|n\u01B0\u1EDDng"
+  - world: 3
+    subWorld: 1
+    level: 9
+    word: "ng\u01B0\u01A1i"
+    answers: "n\u01A1|in|\u01A1n|ni|\u01B0\u01A1n|gi\u01A1|ng\u01A1|\u01B0ng|n\u01A1i|\u01B0\u01A1ng|ng\u01B0\u01A1i|"
+    validWords: "n\u01A1|in|\u01A1n|ni|\u01B0\u01A1n|gi\u01A1|ng\u01A1|\u01B0ng|n\u01A1i|\u01B0\u01A1ng|ng\u01B0\u01A1i"
+  - world: 3
+    subWorld: 1
+    level: 10
+    word: "bu\u1ED3ng"
+    answers: "\u1ED3n|b\u1ED3|n\u1ED3|nu|un|b\u1ED3n|ung|ngu|b\u1ED3ng|bu\u1ED3n|bu\u1ED3ng|"
+    validWords: "\u1ED3n|b\u1ED3|n\u1ED3|nu|un|b\u1ED3n|ung|ngu|b\u1ED3ng|bu\u1ED3n|bu\u1ED3ng"
+  - world: 3
+    subWorld: 1
+    level: 11
+    word: "lu\u1ED3ng"
+    answers: "\u1ED3n|n\u1ED3|lu|nu|un|ung|ngu|l\u1ED3ng|lung|lu\u1ED3n|lu\u1ED3ng|"
+    validWords: "\u1ED3n|n\u1ED3|lu|nu|un|ung|ngu|l\u1ED3ng|lung|lu\u1ED3n|lu\u1ED3ng"
+  - world: 3
+    subWorld: 1
+    level: 12
+    word: "ch\xEDch"
+    answers: "\xEDch|ch\xED|ch\xEDch|"
+    validWords: "\xEDch|ch\xED|ch\xEDch"
+  - world: 3
+    subWorld: 1
+    level: 13
+    word: "chu\u1ED1c"
+    answers: "h\u1ED1|c\u1ED1|\u1ED1c|c\u1ED1c|h\u1ED1c|ch\u1ED1c|chu\u1ED1c|"
+    validWords: "h\u1ED1|c\u1ED1|\u1ED1c|c\u1ED1c|h\u1ED1c|ch\u1ED1c|chu\u1ED1c"
+  - world: 3
+    subWorld: 1
+    level: 14
+    word: "duy\xEAn"
+    answers: "uy|nu|d\xEA|un|du|duy|y\xEAu|n\xEAu|y\xEAn|uy\xEAn|duy\xEAn|"
+    validWords: "uy|nu|d\xEA|un|du|duy|y\xEAu|n\xEAu|y\xEAn|uy\xEAn|duy\xEAn"
+  - world: 3
+    subWorld: 1
+    level: 15
+    word: "tuy\u1EC7t"
+    answers: "uy|ty|tu|t\u1EC7|tuy|tu\u1EC7|tuy\u1EC7t|"
+    validWords: "uy|ty|tu|t\u1EC7|tuy|tu\u1EC7|tuy\u1EC7t"
+  - world: 3
+    subWorld: 1
+    level: 16
+    word: "phi\u1EBFm"
+    answers: "im|\u1EBFm|mi|pi|m\u1EBF|ph\u1EBF|phi|phim|hi\u1EBFm|hi\u1EBFp|phi\u1EBFm|"
+    validWords: "im|\u1EBFm|mi|pi|m\u1EBF|ph\u1EBF|phi|phim|hi\u1EBFm|hi\u1EBFp|phi\u1EBFm"
+  - world: 3
+    subWorld: 1
+    level: 17
+    word: "chu\u1ED9t"
+    answers: "t\u1ED9|h\u1ED9|tu|t\u1ED9c|h\u1ED9t|h\u1ED9c|c\u1ED9t|thu|ch\u1ED9t|chu\u1ED9t|thu\u1ED9c|"
+    validWords: "t\u1ED9|h\u1ED9|tu|t\u1ED9c|h\u1ED9t|h\u1ED9c|c\u1ED9t|thu|ch\u1ED9t|chu\u1ED9t|thu\u1ED9c"
+  - world: 3
+    subWorld: 2
+    level: 0
+    word: "tr\u1EA1ng"
+    answers: "t\u1EA1|r\u1EA1|n\u1EA1|r\u1EA1t|r\u1EA1n|g\u1EA1n|n\u1EA1t|g\u1EA1t|t\u1EA1ng|ng\u1EA1t|tr\u1EA1ng|"
+    validWords: "t\u1EA1|r\u1EA1|n\u1EA1|r\u1EA1t|r\u1EA1n|g\u1EA1n|n\u1EA1t|g\u1EA1t|t\u1EA1ng|ng\u1EA1t|tr\u1EA1ng"
+  - world: 3
+    subWorld: 2
+    level: 1
+    word: "hu\u1ED1ng"
+    answers: "h\u1ED1|nu|un|ung|ng\u1ED1|nhu|u\u1ED1n|\u1ED1ng|ngu|u\u1ED1ng|hu\u1ED1ng|"
+    validWords: "h\u1ED1|nu|un|ung|ng\u1ED1|nhu|u\u1ED1n|\u1ED1ng|ngu|u\u1ED1ng|hu\u1ED1ng"
+  - world: 3
+    subWorld: 2
+    level: 2
+    word: "huy\u1EC7t"
+    answers: "uy|ty|h\u1EC7|tu|t\u1EC7|tuy|h\u1EC7t|hu\u1EC7|thu|tu\u1EC7|huy\u1EC7t|"
+    validWords: "uy|ty|h\u1EC7|tu|t\u1EC7|tuy|h\u1EC7t|hu\u1EC7|thu|tu\u1EC7|huy\u1EC7t"
+  - world: 3
+    subWorld: 2
+    level: 3
+    word: "s\u01B0\u01A1ng"
+    answers: "s\u01B0|n\u01A1|\u01A1n|s\u01A1|s\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|s\u01B0ng|s\u01B0\u01A1ng|"
+    validWords: "s\u01B0|n\u01A1|\u01A1n|s\u01A1|s\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|s\u01B0ng|s\u01B0\u01A1ng"
+  - world: 3
+    subWorld: 2
+    level: 4
+    word: "nh\u01B0\u1EDBn"
+    answers: "h\u01B0|n\u1EDB|h\u1EDB|\u1EDBn|nh\u1EDB|nh\u01B0|nh\u01B0\u1EDBn|"
+    validWords: "h\u01B0|n\u1EDB|h\u1EDB|\u1EDBn|nh\u1EDB|nh\u01B0|nh\u01B0\u1EDBn"
+  - world: 3
+    subWorld: 2
+    level: 5
+    word: "ng\u1EA9ng"
+    answers: "\u1EA9n|ng\u1EA9n|ng\u1EA9ng|"
+    validWords: "\u1EA9n|ng\u1EA9n|ng\u1EA9ng"
+  - world: 3
+    subWorld: 2
+    level: 6
+    word: "tri\u1EBFt"
+    answers: "ri|ti|t\u1EBF|t\u1EBFt|ti\u1EBFt|ri\u1EBFt|tri\u1EBFt|"
+    validWords: "ri|ti|t\u1EBF|t\u1EBFt|ti\u1EBFt|ri\u1EBFt|tri\u1EBFt"
+  - world: 3
+    subWorld: 2
+    level: 7
+    word: "quy\xEAn"
+    answers: "uy|nu|un|y\xEAu|quy|n\xEAu|y\xEAn|qu\xEA|uy\xEAn|qu\xEAn|quy\xEAn|"
+    validWords: "uy|nu|un|y\xEAu|quy|n\xEAu|y\xEAn|qu\xEA|uy\xEAn|qu\xEAn|quy\xEAn"
+  - world: 3
+    subWorld: 2
+    level: 8
+    word: "ng\u1ED7ng"
+    answers: "n\u1ED7|g\u1ED7|ng\u1ED7ng|"
+    validWords: "n\u1ED7|g\u1ED7|ng\u1ED7ng"
+  - world: 3
+    subWorld: 2
+    level: 9
+    word: "mi\u1EBFng"
+    answers: "im|\u1EBFm|mi|in|m\u1EBF|ni|n\u1EBFm|m\u1EBFn|min|mi\u1EBFn|mi\u1EBFng|"
+    validWords: "im|\u1EBFm|mi|in|m\u1EBF|ni|n\u1EBFm|m\u1EBFn|min|mi\u1EBFn|mi\u1EBFng"
+  - world: 3
+    subWorld: 2
+    level: 10
+    word: "ng\u01B0ng"
+    answers: "\u01B0ng|n\u01B0ng|ng\u01B0ng|"
+    validWords: "\u01B0ng|n\u01B0ng|ng\u01B0ng"
+  - world: 3
+    subWorld: 2
+    level: 11
+    word: "ghi\u1EC1n"
+    answers: "h\u1EC1|in|ni|n\u1EC1|ghi|inh|nhi|ngh\u1EC1|hi\u1EC1n|nghi|ghi\u1EC1n|"
+    validWords: "h\u1EC1|in|ni|n\u1EC1|ghi|inh|nhi|ngh\u1EC1|hi\u1EC1n|nghi|ghi\u1EC1n"
+  - world: 3
+    subWorld: 2
+    level: 12
+    word: "tr\u1ED1ng"
+    answers: "t\u1ED1|n\u1ED1t|ng\u1ED1|r\u1ED1n|tr\u1ED1|r\u1ED1t|t\u1ED1n|\u1ED1ng|r\u1ED1ng|tr\u1ED1n|t\u1ED1ng|tr\u1ED1ng|"
+    validWords: "t\u1ED1|n\u1ED1t|ng\u1ED1|r\u1ED1n|tr\u1ED1|r\u1ED1t|t\u1ED1n|\u1ED1ng|r\u1ED1ng|tr\u1ED1n|t\u1ED1ng|tr\u1ED1ng"
+  - world: 3
+    subWorld: 2
+    level: 13
+    word: "ngh\xECn"
+    answers: "g\xEC|h\xEC|n\xEC|nh\xEC|g\xECn|gh\xEC|nh\xECn|ngh\xECn|"
+    validWords: "g\xEC|h\xEC|n\xEC|nh\xEC|g\xECn|gh\xEC|nh\xECn|ngh\xECn"
+  - world: 3
+    subWorld: 2
+    level: 14
+    word: "th\u1ED1ng"
+    answers: "h\u1ED1|t\u1ED1|n\u1ED1t|h\u1ED1t|ng\u1ED1|th\u1ED1|t\u1ED1n|\u1ED1ng|th\u1ED1n|nh\u1ED1t|t\u1ED1ng|th\u1ED1ng|"
+    validWords: "h\u1ED1|t\u1ED1|n\u1ED1t|h\u1ED1t|ng\u1ED1|th\u1ED1|t\u1ED1n|\u1ED1ng|th\u1ED1n|nh\u1ED1t|t\u1ED1ng|th\u1ED1ng"
+  - world: 3
+    subWorld: 2
+    level: 15
+    word: "thi\u1EBFt"
+    answers: "ti|t\u1EBF|th\u1EBF|thi|h\u1EBFt|t\u1EBFt|ti\u1EBFt|thi\u1EBFt|"
+    validWords: "ti|t\u1EBF|th\u1EBF|thi|h\u1EBFt|t\u1EBFt|ti\u1EBFt|thi\u1EBFt"
+  - world: 3
+    subWorld: 2
+    level: 16
+    word: "gu\u1ED3ng"
+    answers: "\u1ED3n|n\u1ED3|nu|un|ung|ngu|g\u1ED3ng|gu\u1ED3ng|"
+    validWords: "\u1ED3n|n\u1ED3|nu|un|ung|ngu|g\u1ED3ng|gu\u1ED3ng"
+  - world: 3
+    subWorld: 2
+    level: 17
+    word: "ng\u1EEBng"
+    answers: "g\u1EEB|g\u1EEBng|n\u1EEBng|ng\u1EEBng|"
+    validWords: "g\u1EEB|g\u1EEBng|n\u1EEBng|ng\u1EEBng"
+  - world: 3
+    subWorld: 3
+    level: 0
+    word: "gi\u1ECDng"
+    answers: "in|ni|n\u1ECD|ng\u1ECD|g\u1ECDn|g\u1ECDi|g\u1ECDng|gi\u1ECDng|"
+    validWords: "in|ni|n\u1ECD|ng\u1ECD|g\u1ECDn|g\u1ECDi|g\u1ECDng|gi\u1ECDng"
+  - world: 3
+    subWorld: 3
+    level: 1
+    word: "ngh\u0129a"
+    answers: "na|ga|an|ha|anh|n\u0129a|nha|gan|ngh\u0129|ganh|hang|ngh\u0129a|"
+    validWords: "na|ga|an|ha|anh|n\u0129a|nha|gan|ngh\u0129|ganh|hang|ngh\u0129a"
+  - world: 3
+    subWorld: 3
+    level: 2
+    word: "tr\xEDch"
+    answers: "\xEDt|r\xED|t\xED|\xEDch|r\xEDt|th\xED|ch\xED|tr\xED|h\xEDt|r\xEDch|t\xEDch|tr\xEDch|"
+    validWords: "\xEDt|r\xED|t\xED|\xEDch|r\xEDt|th\xED|ch\xED|tr\xED|h\xEDt|r\xEDch|t\xEDch|tr\xEDch"
+  - world: 3
+    subWorld: 3
+    level: 3
+    word: "thi\u1EC3n"
+    answers: "h\u1EC3|ti|in|n\u1EC3|ni|thi|th\u1EC3|inh|tin|nhi|tinh|thi\u1EC3n|"
+    validWords: "h\u1EC3|ti|in|n\u1EC3|ni|thi|th\u1EC3|inh|tin|nhi|tinh|thi\u1EC3n"
+  - world: 3
+    subWorld: 3
+    level: 4
+    word: "qu\xE0nh"
+    answers: "h\xE0|n\xE0|nu|un|h\xE0n|nhu|h\xE0u|nh\xE0|qu\xE0|qu\xE0n|nh\xE0u|qu\xE0nh|"
+    validWords: "h\xE0|n\xE0|nu|un|h\xE0n|nhu|h\xE0u|nh\xE0|qu\xE0|qu\xE0n|nh\xE0u|qu\xE0nh"
+  - world: 3
+    subWorld: 3
+    level: 5
+    word: "tr\xE0ng"
+    answers: "n\xE0|t\xE0|r\xE0|g\xE0|g\xE0n|ng\xE0|tr\xE0|t\xE0n|tr\xE0n|r\xE0ng|t\xE0ng|tr\xE0ng|"
+    validWords: "n\xE0|t\xE0|r\xE0|g\xE0|g\xE0n|ng\xE0|tr\xE0|t\xE0n|tr\xE0n|r\xE0ng|t\xE0ng|tr\xE0ng"
+  - world: 3
+    subWorld: 3
+    level: 6
+    word: "xuy\xEAn"
+    answers: "xu|x\xEA|uy|nu|un|x\xEAu|y\xEAu|n\xEAu|y\xEAn|xu\xEA|uy\xEAn|xuy\xEAn|"
+    validWords: "xu|x\xEA|uy|nu|un|x\xEAu|y\xEAu|n\xEAu|y\xEAn|xu\xEA|uy\xEAn|xuy\xEAn"
+  - world: 3
+    subWorld: 3
+    level: 7
+    word: "m\u01B0\u01A1ng"
+    answers: "n\u01A1|m\u01A1|\u01A1n|\u01B0\u01A1m|\u01B0\u01A1n|ng\u01A1|\u01B0ng|n\u01A1m|m\u01A1n|\u01B0\u01A1ng|g\u01B0\u01A1m|m\u01B0\u01A1ng|"
+    validWords: "n\u01A1|m\u01A1|\u01A1n|\u01B0\u01A1m|\u01B0\u01A1n|ng\u01A1|\u01B0ng|n\u01A1m|m\u01A1n|\u01B0\u01A1ng|g\u01B0\u01A1m|m\u01B0\u01A1ng"
+  - world: 3
+    subWorld: 3
+    level: 8
+    word: "ru\u1ED3ng"
+    answers: "\u1ED3n|n\u1ED3|nu|ru|un|r\u1ED3|ung|ngu|run|rung|r\u1ED3ng|ru\u1ED3ng|"
+    validWords: "\u1ED3n|n\u1ED3|nu|ru|un|r\u1ED3|ung|ngu|run|rung|r\u1ED3ng|ru\u1ED3ng"
+  - world: 3
+    subWorld: 3
+    level: 9
+    word: "ph\xF4ng"
+    answers: "\xF4n|n\xF4|h\xF4|p\xF4|ng\xF4|ph\xF4|h\xF4n|\xF4ng|nh\xF4|ph\xF4n|h\xF4ng|ph\xF4ng|"
+    validWords: "\xF4n|n\xF4|h\xF4|p\xF4|ng\xF4|ph\xF4|h\xF4n|\xF4ng|nh\xF4|ph\xF4n|h\xF4ng|ph\xF4ng"
+  - world: 3
+    subWorld: 3
+    level: 10
+    word: "thi\u1EBFc"
+    answers: "ti|t\u1EBF|th\u1EBF|thi|ch\u1EBF|h\u1EBFt|chi|\u1EBFch|ch\u1EBFt|t\u1EBFch|ti\u1EBFc|thi\u1EBFc|"
+    validWords: "ti|t\u1EBF|th\u1EBF|thi|ch\u1EBF|h\u1EBFt|chi|\u1EBFch|ch\u1EBFt|t\u1EBFch|ti\u1EBFc|thi\u1EBFc"
+  - world: 3
+    subWorld: 3
+    level: 11
+    word: "tu\u1ED3ng"
+    answers: "\u1ED3n|n\u1ED3|nu|t\u1ED3|tu|un|ung|t\u1ED3n|ngu|tu\u1ED3n|tung|tu\u1ED3ng|"
+    validWords: "\u1ED3n|n\u1ED3|nu|t\u1ED3|tu|un|ung|t\u1ED3n|ngu|tu\u1ED3n|tung|tu\u1ED3ng"
+  - world: 3
+    subWorld: 3
+    level: 12
+    word: "lu\u1ED1ng"
+    answers: "lu|l\u1ED1|nu|un|ung|ng\u1ED1|u\u1ED1n|\u1ED1ng|ngu|u\u1ED1ng|lung|lu\u1ED1ng|"
+    validWords: "lu|l\u1ED1|nu|un|ung|ng\u1ED1|u\u1ED1n|\u1ED1ng|ngu|u\u1ED1ng|lung|lu\u1ED1ng"
+  - world: 3
+    subWorld: 3
+    level: 13
+    word: "thi\u1EC3u"
+    answers: "h\u1EC3|ti|tu|thi|th\u1EC3|tiu|tui|thu|ti\u1EC3u|hi\u1EC3u|thui|thi\u1EC3u|"
+    validWords: "h\u1EC3|ti|tu|thi|th\u1EC3|tiu|tui|thu|ti\u1EC3u|hi\u1EC3u|thui|thi\u1EC3u"
+  - world: 3
+    subWorld: 3
+    level: 14
+    word: "tri\u1EC1u"
+    answers: "ri|ti|ru|tu|t\u1EC1|tiu|tr\u1EC1|tui|tru|trui|ti\u1EC1u|tri\u1EC1u|"
+    validWords: "ri|ti|ru|tu|t\u1EC1|tiu|tr\u1EC1|tui|tru|trui|ti\u1EC1u|tri\u1EC1u"
+  - world: 3
+    subWorld: 3
+    level: 15
+    word: "th\xEDch"
+    answers: "\xEDt|t\xED|\xEDch|th\xED|ch\xED|h\xEDt|t\xEDch|th\xEDch|"
+    validWords: "\xEDt|t\xED|\xEDch|th\xED|ch\xED|h\xEDt|t\xEDch|th\xEDch"
+  - world: 3
+    subWorld: 3
+    level: 16
+    word: "l\u01B0\u01A1ng"
+    answers: "l\u01B0|n\u01A1|\u01A1n|l\u01A1|\u01B0\u01A1n|l\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|l\u01B0\u01A1n|l\u01B0ng|l\u01B0\u01A1ng|"
+    validWords: "l\u01B0|n\u01A1|\u01A1n|l\u01A1|\u01B0\u01A1n|l\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|l\u01B0\u01A1n|l\u01B0ng|l\u01B0\u01A1ng"
+  - world: 3
+    subWorld: 3
+    level: 17
+    word: "khu\xF4n"
+    answers: "\xF4n|nu|n\xF4|h\xF4|un|khu|nhu|kh\xF4|h\xF4n|nh\xF4|kh\xF4n|khu\xF4n|"
+    validWords: "\xF4n|nu|n\xF4|h\xF4|un|khu|nhu|kh\xF4|h\xF4n|nh\xF4|kh\xF4n|khu\xF4n"
+  - world: 3
+    subWorld: 4
+    level: 0
+    word: quang
+    answers: nu|na|ga|un|an|ung|qua|nau|ngu|gan|quan|quang|
+    validWords: nu|na|ga|un|an|ung|qua|nau|ngu|gan|quan|quang
+  - world: 3
+    subWorld: 4
+    level: 1
+    word: khinh
+    answers: ki|in|ni|inh|khi|nhi|kinh|khinh|
+    validWords: ki|in|ni|inh|khi|nhi|kinh|khinh
+  - world: 3
+    subWorld: 4
+    level: 2
+    word: "phi\u1EC1n"
+    answers: "h\u1EC1|in|pi|ni|n\u1EC1|phi|inh|pin|nhi|phin|hi\u1EC1n|phi\u1EC1n|"
+    validWords: "h\u1EC1|in|pi|ni|n\u1EC1|phi|inh|pin|nhi|phin|hi\u1EC1n|phi\u1EC1n"
+  - world: 3
+    subWorld: 4
+    level: 3
+    word: "n\u01B0\u01A1ng"
+    answers: "n\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|n\u01B0ng|n\u01B0\u01A1ng|"
+    validWords: "n\u01A1|\u01A1n|\u01B0\u01A1n|ng\u01A1|\u01B0ng|\u01B0\u01A1ng|n\u01B0ng|n\u01B0\u01A1ng"
+  - world: 3
+    subWorld: 4
+    level: 4
+    word: "ch\u1ED1ng"
+    answers: "h\u1ED1|c\u1ED1|\u1ED1c|ng\u1ED1|n\u1ED1c|\u1ED1ng|g\u1ED1c|h\u1ED1c|ng\u1ED1c|c\u1ED1ng|ch\u1ED1n|ch\u1ED1ng|"
+    validWords: "h\u1ED1|c\u1ED1|\u1ED1c|ng\u1ED1|n\u1ED1c|\u1ED1ng|g\u1ED1c|h\u1ED1c|ng\u1ED1c|c\u1ED1ng|ch\u1ED1n|ch\u1ED1ng"
+  - world: 3
+    subWorld: 4
+    level: 5
+    word: "gi\u1ED3ng"
+    answers: "\u1ED3n|n\u1ED3|in|ni|n\u1ED3i|g\u1ED3ng|ng\u1ED3i|gi\u1ED3ng|"
+    validWords: "\u1ED3n|n\u1ED3|in|ni|n\u1ED3i|g\u1ED3ng|ng\u1ED3i|gi\u1ED3ng"
+  - world: 3
+    subWorld: 4
+    level: 6
+    word: "thi\u1EC7p"
+    answers: "h\u1EC7|ti|pi|t\u1EC7|thi|phi|h\u1EC7t|ph\u1EC7|t\u1EC7p|ti\u1EC7p|hi\u1EC7p|thi\u1EC7p|"
+    validWords: "h\u1EC7|ti|pi|t\u1EC7|thi|phi|h\u1EC7t|ph\u1EC7|t\u1EC7p|ti\u1EC7p|hi\u1EC7p|thi\u1EC7p"
+  - world: 3
+    subWorld: 4
+    level: 7
+    word: "ng\u1EA3nh"
+    answers: "g\u1EA3|h\u1EA3|n\u1EA3|ng\u1EA3|n\u1EA3n|nh\u1EA3|\u1EA3nh|ng\u1EA3nh|"
+    validWords: "g\u1EA3|h\u1EA3|n\u1EA3|ng\u1EA3|n\u1EA3n|nh\u1EA3|\u1EA3nh|ng\u1EA3nh"
+  - world: 3
+    subWorld: 4
+    level: 8
+    word: trang
+    answers: ta|na|ga|an|ra|ran|tan|tra|gan|rang|tang|trang|
+    validWords: ta|na|ga|an|ra|ran|tan|tra|gan|rang|tang|trang
+  - world: 3
+    subWorld: 4
+    level: 9
+    word: "ngu\u1ED3n"
+    answers: "\u1ED3n|n\u1ED3|nu|un|ung|ngu|n\u1ED3ng|nung|ngu\u1ED3n|"
+    validWords: "\u1ED3n|n\u1ED3|nu|un|ung|ngu|n\u1ED3ng|nung|ngu\u1ED3n"
+  - world: 3
+    subWorld: 4
+    level: 10
+    word: "tuy\xEAn"
+    answers: "uy|ty|t\xEA|nu|tu|un|tuy|y\xEAu|n\xEAu|t\xEAn|y\xEAn|uy\xEAn|tuy\xEAn|"
+    validWords: "uy|ty|t\xEA|nu|tu|un|tuy|y\xEAu|n\xEAu|t\xEAn|y\xEAn|uy\xEAn|tuy\xEAn"
+  - world: 3
+    subWorld: 4
+    level: 11
+    word: "nhu\u1EADn"
+    answers: "nu|un|h\u1EADu|n\u1EADu|nhu|h\u1EADn|nh\u1EADu|nh\u1EADn|nhu\u1EADn|"
+    validWords: "nu|un|h\u1EADu|n\u1EADu|nhu|h\u1EADn|nh\u1EADu|nh\u1EADn|nhu\u1EADn"
+  - world: 3
+    subWorld: 4
+    level: 12
+    word: "qu\xE1nh"
+    answers: "\xE1n|n\xE1|nu|h\xE1|un|qu\xE1|\xE1nh|nhu|nh\xE1|n\xE1u|h\xE1n|qu\xE1n|qu\xE1nh|"
+    validWords: "\xE1n|n\xE1|nu|h\xE1|un|qu\xE1|\xE1nh|nhu|nh\xE1|n\xE1u|h\xE1n|qu\xE1n|qu\xE1nh"
+  - world: 3
+    subWorld: 4
+    level: 13
+    word: "kh\xE1nh"
+    answers: "\xE1n|n\xE1|h\xE1|\xE1nh|nh\xE1|kh\xE1|h\xE1n|kh\xE1n|kh\xE1nh|"
+    validWords: "\xE1n|n\xE1|h\xE1|\xE1nh|nh\xE1|kh\xE1|h\xE1n|kh\xE1n|kh\xE1nh"
+  - world: 3
+    subWorld: 4
+    level: 14
+    word: "h\u01B0\u01A1ng"
+    answers: "h\u01B0|n\u01A1|\u01A1n|h\u01A1|\u01B0\u01A1n|ng\u01A1|\u01B0ng|nh\u01B0|h\u01A1n|nh\u01A1|\u01B0\u01A1ng|h\u01B0ng|h\u01B0\u01A1ng|"
+    validWords: "h\u01B0|n\u01A1|\u01A1n|h\u01A1|\u01B0\u01A1n|ng\u01A1|\u01B0ng|nh\u01B0|h\u01A1n|nh\u01A1|\u01B0\u01A1ng|h\u01B0ng|h\u01B0\u01A1ng"
+  - world: 3
+    subWorld: 4
+    level: 15
+    word: "khi\u1EBFn"
+    answers: "k\u1EBF|ki|in|ni|inh|h\u1EBFn|kh\u1EBF|khi|nhi|ki\u1EBFn|kinh|hi\u1EBFn|khi\u1EBFn|"
+    validWords: "k\u1EBF|ki|in|ni|inh|h\u1EBFn|kh\u1EBF|khi|nhi|ki\u1EBFn|kinh|hi\u1EBFn|khi\u1EBFn"
+  - world: 3
+    subWorld: 4
+    level: 16
+    word: "tri\u1EC7u"
+    answers: "ri|ti|r\u1EC7|ru|tu|t\u1EC7|tiu|tui|tr\u1EC7|tru|tu\u1EC7|trui|tri\u1EC7u|"
+    validWords: "ri|ti|r\u1EC7|ru|tu|t\u1EC7|tiu|tui|tr\u1EC7|tru|tu\u1EC7|trui|tri\u1EC7u"
+  - world: 3
+    subWorld: 4
+    level: 17
+    word: "tr\u01B0\u1EDBc"
+    answers: "t\u01B0|c\u01B0|\u1EDBt|c\u1EDB|r\u1EDB|t\u1EDB|r\u1EDBt|\u01B0\u1EDBc|tr\u1EDB|\u01B0\u1EDBt|t\u01B0\u1EDBc|r\u01B0\u1EDBc|tr\u01B0\u1EDBc|"
+    validWords: "t\u01B0|c\u01B0|\u1EDBt|c\u1EDB|r\u1EDB|t\u1EDB|r\u1EDBt|\u01B0\u1EDBc|tr\u1EDB|\u01B0\u1EDBt|t\u01B0\u1EDBc|r\u01B0\u1EDBc|tr\u01B0\u1EDBc"
+  - world: 4
+    subWorld: 0
+    level: 0
+    word: "khi\xEAn"
+    answers: "ki|in|k\xEA|ni|kh\xEA|inh|h\xEAn|khi|nhi|ki\xEAn|kinh|hi\xEAn|khi\xEAn|"
+    validWords: "ki|in|k\xEA|ni|kh\xEA|inh|h\xEAn|khi|nhi|ki\xEAn|kinh|hi\xEAn|khi\xEAn"
+  - world: 4
+    subWorld: 0
+    level: 1
+    word: quanh
+    answers: nu|na|un|an|ha|qua|anh|nhu|nau|nha|nhau|quan|quanh|
+    validWords: nu|na|un|an|ha|qua|anh|nhu|nau|nha|nhau|quan|quanh
+  - world: 4
+    subWorld: 0
+    level: 2
+    word: "nhi\u1EC1u"
+    answers: "nu|h\u1EC1|in|ni|n\u1EC1|un|nhu|hu\u1EC1|inh|nui|nhi|hi\u1EC1n|nhi\u1EC1u|"
+    validWords: "nu|h\u1EC1|in|ni|n\u1EC1|un|nhu|hu\u1EC1|inh|nui|nhi|hi\u1EC1n|nhi\u1EC1u"
+  - world: 4
+    subWorld: 0
+    level: 3
+    word: "thi\u1EC1m"
+    answers: "ti|im|h\u1EC1|mi|m\u1EC1|t\u1EC1|thi|tim|th\u1EC1|ti\u1EC1m|th\u1EC1m|hi\u1EC1m|thi\u1EC1m|"
+    validWords: "ti|im|h\u1EC1|mi|m\u1EC1|t\u1EC1|thi|tim|th\u1EC1|ti\u1EC1m|th\u1EC1m|hi\u1EC1m|thi\u1EC1m"
+  - world: 4
+    subWorld: 0
+    level: 4
+    word: "kh\xE1ng"
+    answers: "\xE1n|n\xE1|h\xE1|g\xE1|\xE1ng|\xE1nh|nh\xE1|kh\xE1|g\xE1n|h\xE1n|kh\xE1n|g\xE1nh|kh\xE1ng|"
+    validWords: "\xE1n|n\xE1|h\xE1|g\xE1|\xE1ng|\xE1nh|nh\xE1|kh\xE1|g\xE1n|h\xE1n|kh\xE1n|g\xE1nh|kh\xE1ng"
+  - world: 4
+    subWorld: 0
+    level: 5
+    word: "th\xE0nh"
+    answers: "h\xE0|n\xE0|t\xE0|h\xE0n|th\xE0|nh\xE0|t\xE0n|h\xE0nh|th\xE0nh|"
+    validWords: "h\xE0|n\xE0|t\xE0|h\xE0n|th\xE0|nh\xE0|t\xE0n|h\xE0nh|th\xE0nh"
+  - world: 4
+    subWorld: 0
+    level: 6
+    word: "nhi\xEAu"
+    answers: "nu|in|ni|un|nhu|inh|h\xEAn|n\xEAu|nui|nhi|hi\xEAn|ni\xEAu|nhi\xEAu|"
+    validWords: "nu|in|ni|un|nhu|inh|h\xEAn|n\xEAu|nui|nhi|hi\xEAn|ni\xEAu|nhi\xEAu"
+  - world: 4
+    subWorld: 0
+    level: 7
+    word: "thu\u1EA7n"
+    answers: "nu|tu|un|nhu|t\u1EA7n|t\u1EA7u|h\u1EA7u|thu|th\u1EA7n|thun|th\u1EA7u|tu\u1EA7n|thu\u1EA7n|"
+    validWords: "nu|tu|un|nhu|t\u1EA7n|t\u1EA7u|h\u1EA7u|thu|th\u1EA7n|thun|th\u1EA7u|tu\u1EA7n|thu\u1EA7n"
+  - world: 4
+    subWorld: 0
+    level: 8
+    word: "th\xECnh"
+    answers: "t\xEC|h\xEC|n\xEC|nh\xEC|th\xEC|h\xECnh|th\xECn|t\xECnh|th\xECnh|"
+    validWords: "t\xEC|h\xEC|n\xEC|nh\xEC|th\xEC|h\xECnh|th\xECn|t\xECnh|th\xECnh"
+  - world: 4
+    subWorld: 0
+    level: 9
+    word: "tho\u1EAFt"
+    answers: "to|ho|\u1EAFt|t\u1EAFt|tho|o\u1EAFt|h\u1EAFt|th\u1EAFt|tho\u1EAFt|"
+    validWords: "to|ho|\u1EAFt|t\u1EAFt|tho|o\u1EAFt|h\u1EAFt|th\u1EAFt|tho\u1EAFt"
+  - world: 4
+    subWorld: 0
+    level: 10
+    word: "xu\u1ED1ng"
+    answers: "xu|nu|un|ung|ng\u1ED1|x\u1ED1n|u\u1ED1n|\u1ED1ng|ngu|x\u1ED1ng|u\u1ED1ng|xung|xu\u1ED1ng|"
+    validWords: "xu|nu|un|ung|ng\u1ED1|x\u1ED1n|u\u1ED1n|\u1ED1ng|ngu|x\u1ED1ng|u\u1ED1ng|xung|xu\u1ED1ng"
+  - world: 4
+    subWorld: 0
+    level: 11
+    word: "thi\u1EC1u"
+    answers: "ti|h\u1EC1|tu|t\u1EC1|thi|hu\u1EC1|tiu|th\u1EC1|tui|thu|ti\u1EC1u|thui|thi\u1EC1u|"
+    validWords: "ti|h\u1EC1|tu|t\u1EC1|thi|hu\u1EC1|tiu|th\u1EC1|tui|thu|ti\u1EC1u|thui|thi\u1EC1u"
+  - world: 4
+    subWorld: 0
+    level: 12
+    word: "th\xEDnh"
+    answers: "\xEDt|t\xED|n\xEDt|th\xED|t\xEDn|nh\xED|h\xEDt|t\xEDnh|th\xEDnh|"
+    validWords: "\xEDt|t\xED|n\xEDt|th\xED|t\xEDn|nh\xED|h\xEDt|t\xEDnh|th\xEDnh"
+  - world: 4
+    subWorld: 0
+    level: 13
+    word: "phi\xEAn"
+    answers: "in|pi|ni|ph\xEA|phi|inh|h\xEAn|pin|nhi|phin|ph\xEAn|hi\xEAn|phi\xEAn|"
+    validWords: "in|pi|ni|ph\xEA|phi|inh|h\xEAn|pin|nhi|phin|ph\xEAn|hi\xEAn|phi\xEAn"
+  - world: 4
+    subWorld: 0
+    level: 14
+    word: "ph\xE1ch"
+    answers: "h\xE1|\xE1p|\xE1c|c\xE1|\xE1ch|c\xE1p|ph\xE1|ph\xE1c|ph\xE1ch|"
+    validWords: "h\xE1|\xE1p|\xE1c|c\xE1|\xE1ch|c\xE1p|ph\xE1|ph\xE1c|ph\xE1ch"
+  - world: 4
+    subWorld: 0
+    level: 15
+    word: "ng\u1ED3ng"
+    answers: "\u1ED3n|n\u1ED3|n\u1ED3ng|g\u1ED3ng|ng\u1ED3ng|"
+    validWords: "\u1ED3n|n\u1ED3|n\u1ED3ng|g\u1ED3ng|ng\u1ED3ng"
+  - world: 4
+    subWorld: 0
+    level: 16
+    word: "ru\u1ED9ng"
+    answers: "nu|ru|r\u1ED9|un|n\u1ED9|ung|r\u1ED9n|ngu|run|ng\u1ED9|rung|r\u1ED9ng|ru\u1ED9ng|"
+    validWords: "nu|ru|r\u1ED9|un|n\u1ED9|ung|r\u1ED9n|ngu|run|ng\u1ED9|rung|r\u1ED9ng|ru\u1ED9ng"
+  - world: 4
+    subWorld: 0
+    level: 17
+    word: "ch\xF3ng"
+    answers: "n\xF3|c\xF3|\xF3c|g\xF3c|h\xF3c|ng\xF3|\xF3ng|n\xF3c|ch\xF3|h\xF3ng|nh\xF3c|ng\xF3c|ch\xF3ng|"
+    validWords: "n\xF3|c\xF3|\xF3c|g\xF3c|h\xF3c|ng\xF3|\xF3ng|n\xF3c|ch\xF3|h\xF3ng|nh\xF3c|ng\xF3c|ch\xF3ng"
+  - world: 4
+    subWorld: 1
+    level: 0
+    word: "ng\u1EA1ch"
+    answers: "h\u1EA1|n\u1EA1|h\u1EA1n|g\u1EA1n|c\u1EA1n|n\u1EA1c|g\u1EA1c|c\u1EA1nh|g\u1EA1ch|nh\u1EA1c|h\u1EA1ng|ng\u1EA1c|ng\u1EA1ch|"
+    validWords: "h\u1EA1|n\u1EA1|h\u1EA1n|g\u1EA1n|c\u1EA1n|n\u1EA1c|g\u1EA1c|c\u1EA1nh|g\u1EA1ch|nh\u1EA1c|h\u1EA1ng|ng\u1EA1c|ng\u1EA1ch"
+  - world: 4
+    subWorld: 1
+    level: 1
+    word: "thi\xEAu"
+    answers: "ti|t\xEA|tu|thi|tiu|th\xEA|tui|thu|ti\xEAu|thui|thu\xEA|th\xEAu|thi\xEAu|"
+    validWords: "ti|t\xEA|tu|thi|tiu|th\xEA|tui|thu|ti\xEAu|thui|thu\xEA|th\xEAu|thi\xEAu"
+  - world: 4
+    subWorld: 1
+    level: 2
+    word: "thi\u1EBFp"
+    answers: "ti|pi|t\u1EBF|th\u1EBF|ph\u1EBF|thi|phi|h\u1EBFt|th\u1EBFp|ph\u1EBFt|hi\u1EBFp|ti\u1EBFp|thi\u1EBFp|"
+    validWords: "ti|pi|t\u1EBF|th\u1EBF|ph\u1EBF|thi|phi|h\u1EBFt|th\u1EBFp|ph\u1EBFt|hi\u1EBFp|ti\u1EBFp|thi\u1EBFp"
+  - world: 4
+    subWorld: 1
+    level: 3
+    word: "qu\xE1ng"
+    answers: "\xE1n|n\xE1|nu|g\xE1|un|ung|\xE1ng|qu\xE1|n\xE1u|g\xE1n|ngu|qu\xE1n|qu\xE1ng|"
+    validWords: "\xE1n|n\xE1|nu|g\xE1|un|ung|\xE1ng|qu\xE1|n\xE1u|g\xE1n|ngu|qu\xE1n|qu\xE1ng"
+  - world: 4
+    subWorld: 1
+    level: 4
+    word: "ngo\u1EB1n"
+    answers: "go|no|ong|non|o\u1EB1n|g\u1EB1n|ngon|nong|ngo\u1EB1n|"
+    validWords: "go|no|ong|non|o\u1EB1n|g\u1EB1n|ngon|nong|ngo\u1EB1n"
+  - world: 4
+    subWorld: 1
+    level: 5
+    word: "th\xFAng"
+    answers: "t\xFA|h\xFA|\xFAt|g\xFAt|h\xFAt|th\xFA|nh\xFA|n\xFAt|\xFAng|nh\xFAt|ng\xFAt|t\xFAng|th\xFAng|"
+    validWords: "t\xFA|h\xFA|\xFAt|g\xFAt|h\xFAt|th\xFA|nh\xFA|n\xFAt|\xFAng|nh\xFAt|ng\xFAt|t\xFAng|th\xFAng"
+  - world: 4
+    subWorld: 1
+    level: 6
+    word: "quy\u1EBFt"
+    answers: "uy|ty|tu|t\u1EBF|y\u1EBFu|tuy|quy|qu\u1EBF|tu\u1EBF|y\u1EBFt|t\u1EBFu|qu\u1EBFt|quy\u1EBFt|"
+    validWords: "uy|ty|tu|t\u1EBF|y\u1EBFu|tuy|quy|qu\u1EBF|tu\u1EBF|y\u1EBFt|t\u1EBFu|qu\u1EBFt|quy\u1EBFt"
+  - world: 4
+    subWorld: 1
+    level: 7
+    word: "ngu\u1ED9i"
+    answers: "nu|in|ni|un|n\u1ED9|ung|g\u1ED9i|n\u1ED9i|nui|ngu|ng\u1ED9|giun|ngu\u1ED9i|"
+    validWords: "nu|in|ni|un|n\u1ED9|ung|g\u1ED9i|n\u1ED9i|nui|ngu|ng\u1ED9|giun|ngu\u1ED9i"
+  - world: 4
+    subWorld: 1
+    level: 8
+    word: "ch\xE0ng"
+    answers: "h\xE0|n\xE0|c\xE0|g\xE0|g\xE0n|ng\xE0|h\xE0n|ch\xE0|nh\xE0|c\xE0ng|c\xE0nh|h\xE0ng|g\xE0nh|ch\xE0ng|"
+    validWords: "h\xE0|n\xE0|c\xE0|g\xE0|g\xE0n|ng\xE0|h\xE0n|ch\xE0|nh\xE0|c\xE0ng|c\xE0nh|h\xE0ng|g\xE0nh|ch\xE0ng"
+  - world: 4
+    subWorld: 1
+    level: 9
+    word: phang
+    answers: pa|na|ga|an|ha|anh|pha|nha|gan|pan|panh|ganh|hang|phang|
+    validWords: pa|na|ga|an|ha|anh|pha|nha|gan|pan|panh|ganh|hang|phang
+  - world: 4
+    subWorld: 1
+    level: 10
+    word: "huy\u1EBFt"
+    answers: "uy|ty|tu|t\u1EBF|th\u1EBF|y\u1EBFu|tuy|h\u1EBFt|tu\u1EBF|y\u1EBFt|t\u1EBFu|thu|thu\u1EBF|huy\u1EBFt|"
+    validWords: "uy|ty|tu|t\u1EBF|th\u1EBF|y\u1EBFu|tuy|h\u1EBFt|tu\u1EBF|y\u1EBFt|t\u1EBFu|thu|thu\u1EBF|huy\u1EBFt"
+  - world: 4
+    subWorld: 1
+    level: 11
+    word: "thu\u1ED1c"
+    answers: "h\u1ED1|c\u1ED1|\u1ED1c|tu|t\u1ED1|h\u1ED1t|t\u1ED1c|th\u1ED1|c\u1ED1t|h\u1ED1c|thu|th\u1ED1c|ch\u1ED1t|thu\u1ED1c|"
+    validWords: "h\u1ED1|c\u1ED1|\u1ED1c|tu|t\u1ED1|h\u1ED1t|t\u1ED1c|th\u1ED1|c\u1ED1t|h\u1ED1c|thu|th\u1ED1c|ch\u1ED1t|thu\u1ED1c"
+  - world: 4
+    subWorld: 1
+    level: 12
+    word: "ng\u1ECDng"
+    answers: "n\u1ECD|ng\u1ECD|g\u1ECDn|ng\u1ECDn|g\u1ECDng|ng\u1ECDng|"
+    validWords: "n\u1ECD|ng\u1ECD|g\u1ECDn|ng\u1ECDn|g\u1ECDng|ng\u1ECDng"
+  - world: 4
+    subWorld: 1
+    level: 13
+    word: "gi\u1EA3ng"
+    answers: "g\u1EA3|\u1EA3i|in|ni|n\u1EA3|ng\u1EA3|gi\u1EA3|gi\u1EA3n|ng\u1EA3i|gi\u1EA3ng|"
+    validWords: "g\u1EA3|\u1EA3i|in|ni|n\u1EA3|ng\u1EA3|gi\u1EA3|gi\u1EA3n|ng\u1EA3i|gi\u1EA3ng"
+  - world: 4
+    subWorld: 1
+    level: 14
+    word: "xo\u1EA3ng"
+    answers: "g\u1EA3|go|x\u1EA3|\u1EA3o|xo|n\u1EA3|no|n\u1EA3o|x\u1EA3o|ng\u1EA3|ong|o\u1EA3n|xong|xo\u1EA3ng|"
+    validWords: "g\u1EA3|go|x\u1EA3|\u1EA3o|xo|n\u1EA3|no|n\u1EA3o|x\u1EA3o|ng\u1EA3|ong|o\u1EA3n|xong|xo\u1EA3ng"
+  - world: 4
+    subWorld: 1
+    level: 15
+    word: "gi\xF4ng"
+    answers: "\xF4n|n\xF4|in|ni|n\xF4i|ng\xF4|\xF4ng|g\xF4ng|ng\xF4i|gi\xF4ng|"
+    validWords: "\xF4n|n\xF4|in|ni|n\xF4i|ng\xF4|\xF4ng|g\xF4ng|ng\xF4i|gi\xF4ng"
+  - world: 4
+    subWorld: 1
+    level: 16
+    word: "phi\u1EBFn"
+    answers: "in|pi|ni|ph\u1EBF|phi|inh|h\u1EBFn|n\u1EBFp|pin|nhi|phin|hi\u1EBFn|hi\u1EBFp|phi\u1EBFn|"
+    validWords: "in|pi|ni|ph\u1EBF|phi|inh|h\u1EBFn|n\u1EBFp|pin|nhi|phin|hi\u1EBFn|hi\u1EBFp|phi\u1EBFn"
+  - world: 4
+    subWorld: 1
+    level: 17
+    word: "th\xF4ng"
+    answers: "\xF4n|n\xF4|h\xF4|t\xF4|th\xF4|ng\xF4|h\xF4n|\xF4ng|t\xF4n|nh\xF4|th\xF4n|t\xF4ng|h\xF4ng|th\xF4ng|"
+    validWords: "\xF4n|n\xF4|h\xF4|t\xF4|th\xF4|ng\xF4|h\xF4n|\xF4ng|t\xF4n|nh\xF4|th\xF4n|t\xF4ng|h\xF4ng|th\xF4ng"
+  - world: 4
+    subWorld: 2
+    level: 0
+    word: "tru\u1EA5t"
+    answers: "ru|tu|\u1EA5u|t\u1EA5t|u\u1EA5t|t\u1EA5u|tru|tr\u1EA5u|tu\u1EA5t|tru\u1EA5t|"
+    validWords: "ru|tu|\u1EA5u|t\u1EA5t|u\u1EA5t|t\u1EA5u|tru|tr\u1EA5u|tu\u1EA5t|tru\u1EA5t"
+  - world: 4
+    subWorld: 2
+    level: 1
+    word: "lo\xE3ng"
+    answers: "go|l\xE3|g\xE3|lo|n\xE3|no|ong|n\xE3o|ng\xE3|l\xE3o|lon|l\xE3ng|long|lo\xE3ng|"
+    validWords: "go|l\xE3|g\xE3|lo|n\xE3|no|ong|n\xE3o|ng\xE3|l\xE3o|lon|l\xE3ng|long|lo\xE3ng"
+  - world: 4
+    subWorld: 2
+    level: 2
+    word: "phi\u1EC7n"
+    answers: "h\u1EC7|n\u1EC7|in|pi|ni|phi|inh|ph\u1EC7|pin|nhi|phin|hi\u1EC7p|hi\u1EC7n|phi\u1EC7n|"
+    validWords: "h\u1EC7|n\u1EC7|in|pi|ni|phi|inh|ph\u1EC7|pin|nhi|phin|hi\u1EC7p|hi\u1EC7n|phi\u1EC7n"
+  - world: 4
+    subWorld: 2
+    level: 3
+    word: "ng\u1EA1nh"
+    answers: "h\u1EA1|n\u1EA1|h\u1EA1n|g\u1EA1n|n\u1EA1n|n\u1EA1nh|nh\u1EA1n|h\u1EA1ng|n\u1EA1ng|ng\u1EA1nh|"
+    validWords: "h\u1EA1|n\u1EA1|h\u1EA1n|g\u1EA1n|n\u1EA1n|n\u1EA1nh|nh\u1EA1n|h\u1EA1ng|n\u1EA1ng|ng\u1EA1nh"
+  - world: 4
+    subWorld: 2
+    level: 4
+    word: chanh
+    answers: ca|na|an|ha|anh|cha|can|nha|canh|hanh|chanh|
+    validWords: ca|na|an|ha|anh|cha|can|nha|canh|hanh|chanh
+  - world: 4
+    subWorld: 2
+    level: 5
+    word: "ngo\xE1i"
+    answers: "go|\xE1n|n\xE1|gi\xE1|\xE1ng|ong|g\xE1i|go\xE1|noi|g\xE1n|ngoi|ng\xE1i|ng\xE1o|gi\xE1o|ngo\xE1i|"
+    validWords: "go|\xE1n|n\xE1|gi\xE1|\xE1ng|ong|g\xE1i|go\xE1|noi|g\xE1n|ngoi|ng\xE1i|ng\xE1o|gi\xE1o|ngo\xE1i|g\xE1|in|ni|oi|\xE1o|n\xE1i|n\xE1o|o\xE1n|gi\xE1n"
+  - world: 4
+    subWorld: 2
+    level: 6
+    word: "cu\u1ED1ng"
+    answers: "nu|c\u1ED1|\u1ED1c|ung|ng\u1ED1|u\u1ED1n|n\u1ED1c|\u1ED1ng|ngu|g\u1ED1c|ng\u1ED1c|u\u1ED1ng|c\u1ED1ng|cung|cu\u1ED1ng|"
+    validWords: "nu|c\u1ED1|\u1ED1c|ung|ng\u1ED1|u\u1ED1n|n\u1ED1c|\u1ED1ng|ngu|g\u1ED1c|ng\u1ED1c|u\u1ED1ng|c\u1ED1ng|cung|cu\u1ED1ng|un|cu\u1ED1n|gu\u1ED1c"
+  - world: 4
+    subWorld: 2
+    level: 7
+    word: "kho\xE1c"
+    answers: "h\xE1|\xE1c|ho|c\xE1|kho|h\xE1o|cho|kh\xE1|\xE1ch|c\xE1o|ho\xE1|kh\xE1c|kh\xE1o|kho\xE1|kho\xE1c|"
+    validWords: "h\xE1|\xE1c|ho|c\xE1|kho|h\xE1o|cho|kh\xE1|\xE1ch|c\xE1o|ho\xE1|kh\xE1c|kh\xE1o|kho\xE1|kho\xE1c|\xE1o|ch\xE1o"
+  - world: 4
+    subWorld: 2
+    level: 8
+    word: "tho\u1EA1i"
+    answers: "t\u1EA1|ti|to|h\u1EA1|ho|ho\u1EA1|thi|t\u1EA1o|h\u1EA1t|t\u1EA1i|h\u1EA1i|thoi|ho\u1EA1t|ho\u1EA1i|tho\u1EA1i|"
+    validWords: "t\u1EA1|ti|to|h\u1EA1|ho|ho\u1EA1|thi|t\u1EA1o|h\u1EA1t|t\u1EA1i|h\u1EA1i|thoi|ho\u1EA1t|ho\u1EA1i|tho\u1EA1i|oi|tho|toi|th\u1EA1o|to\u1EA1i"
+  - world: 4
+    subWorld: 2
+    level: 9
+    word: "tho\u1EA3i"
+    answers: "t\u1EA3|ti|to|h\u1EA3|\u1EA3i|t\u1EA3i|thi|h\u1EA3o|th\u1EA3|ho\u1EA3|t\u1EA3o|th\u1EA3i|thoi|th\u1EA3o|tho\u1EA3i|"
+    validWords: "t\u1EA3|ti|to|h\u1EA3|\u1EA3i|t\u1EA3i|thi|h\u1EA3o|th\u1EA3|ho\u1EA3|t\u1EA3o|th\u1EA3i|thoi|th\u1EA3o|tho\u1EA3i|ho|oi|\u1EA3o|tho|toi|to\u1EA3|tho\u1EA3"
+  - world: 4
+    subWorld: 2
+    level: 10
+    word: "ho\xE0ng"
+    answers: "h\xE0|go|n\xE0|\xE0o|ong|g\xE0n|nho|ng\xE0|h\xE0n|ho\xE0|h\xE0o|nho\xE0|h\xE0ng|g\xE0nh|ho\xE0ng|"
+    validWords: "h\xE0|go|n\xE0|\xE0o|ong|g\xE0n|nho|ng\xE0|h\xE0n|ho\xE0|h\xE0o|nho\xE0|h\xE0ng|g\xE0nh|ho\xE0ng|g\xE0|ho|o\xE0|g\xE0o|nh\xE0|n\xE0o|ho\xE0n|ng\xE0o|nh\xE0o"
+  - world: 4
+    subWorld: 2
+    level: 11
+    word: "tr\xE1nh"
+    answers: "\xE1n|\xE1t|n\xE1|h\xE1|t\xE1|\xE1nh|nh\xE1|r\xE1t|t\xE1n|h\xE1n|h\xE1t|th\xE1|tr\xE1|tr\xE1n|tr\xE1nh|"
+    validWords: "\xE1n|\xE1t|n\xE1|h\xE1|t\xE1|\xE1nh|nh\xE1|r\xE1t|t\xE1n|h\xE1n|h\xE1t|th\xE1|tr\xE1|tr\xE1n|tr\xE1nh|r\xE1|n\xE1t|r\xE1n|nh\xE1t|t\xE1nh"
+  - world: 4
+    subWorld: 2
+    level: 12
+    word: "th\u01B0\u1EDBc"
+    answers: "h\u01B0|t\u01B0|c\u01B0|\u1EDBt|h\u1EDB|c\u1EDB|t\u1EDB|th\u01B0|h\u1EDBt|th\u1EDB|\u01B0\u1EDBc|ch\u1EDB|\u01B0\u1EDBt|t\u01B0\u1EDBc|th\u01B0\u1EDBc|"
+    validWords: "h\u01B0|t\u01B0|c\u01B0|\u1EDBt|h\u1EDB|c\u1EDB|t\u1EDB|th\u01B0|h\u1EDBt|th\u1EDB|\u01B0\u1EDBc|ch\u1EDB|\u01B0\u1EDBt|t\u01B0\u1EDBc|th\u01B0\u1EDBc"
+  - world: 4
+    subWorld: 2
+    level: 13
+    word: loang
+    answers: go|la|na|lo|ga|nao|ong|lan|lao|lon|oan|ngao|loan|lang|loang|
+    validWords: go|la|na|lo|ga|nao|ong|lan|lao|lon|oan|ngao|loan|lang|loang|an|ao|no|gan|loa|long|ngoa
+  - world: 4
+    subWorld: 2
+    level: 14
+    word: "kho\xE1n"
+    answers: "\xE1n|n\xE1|h\xE1|ho|kho|nho|\xE1nh|h\xE1o|nh\xE1|kh\xE1|nh\xE1o|kh\xE1o|kh\xE1n|kho\xE1|kho\xE1n|"
+    validWords: "\xE1n|n\xE1|h\xE1|ho|kho|nho|\xE1nh|h\xE1o|nh\xE1|kh\xE1|nh\xE1o|kh\xE1o|kh\xE1n|kho\xE1|kho\xE1n|no|\xE1o|ho\xE1|h\xE1n|n\xE1o|o\xE1n|ho\xE1n"
+  - world: 4
+    subWorld: 2
+    level: 15
+    word: "thi\u1EC1n"
+    answers: "ti|h\u1EC1|in|ni|n\u1EC1|t\u1EC1|thi|inh|th\u1EC1|tin|nhi|hi\u1EC1n|tinh|ti\u1EC1n|thi\u1EC1n|"
+    validWords: "ti|h\u1EC1|in|ni|n\u1EC1|t\u1EC1|thi|inh|th\u1EC1|tin|nhi|hi\u1EC1n|tinh|ti\u1EC1n|thi\u1EC1n"
+  - world: 4
+    subWorld: 2
+    level: 16
+    word: "th\xE1ng"
+    answers: "\xE1n|\xE1t|n\xE1|h\xE1|t\xE1|\xE1ng|\xE1nh|nh\xE1|t\xE1n|g\xE1n|h\xE1n|h\xE1t|ng\xE1t|g\xE1nh|th\xE1ng|"
+    validWords: "\xE1n|\xE1t|n\xE1|h\xE1|t\xE1|\xE1ng|\xE1nh|nh\xE1|t\xE1n|g\xE1n|h\xE1n|h\xE1t|ng\xE1t|g\xE1nh|th\xE1ng|g\xE1|n\xE1t|th\xE1|nh\xE1t|t\xE1ng|t\xE1nh"
+  - world: 4
+    subWorld: 2
+    level: 17
+    word: "vu\xF4ng"
+    answers: "v\xF4|\xF4n|nu|n\xF4|vu|un|ung|v\xF4n|vun|ng\xF4|ngu|\xF4ng|v\xF4ng|vung|vu\xF4ng|"
+    validWords: "v\xF4|\xF4n|nu|n\xF4|vu|un|ung|v\xF4n|vun|ng\xF4|ngu|\xF4ng|v\xF4ng|vung|vu\xF4ng"
+  - world: 4
+    subWorld: 3
+    level: 0
+    word: "ngo\u1EA1m"
+    answers: "go|mo|om|g\u1EA1o|m\u1EA1n|ong|g\u1EA1n|n\u1EA1m|m\u1EA1o|nom|n\u1EA1o|mong|m\u1EA1ng|ng\u1EA1o|ngo\u1EA1m|"
+    validWords: "go|mo|om|g\u1EA1o|m\u1EA1n|ong|g\u1EA1n|n\u1EA1m|m\u1EA1o|nom|n\u1EA1o|mong|m\u1EA1ng|ng\u1EA1o|ngo\u1EA1m|m\u1EA1|no|n\u1EA1|gom"
+  - world: 4
+    subWorld: 3
+    level: 1
+    word: hoang
+    answers: go|na|ga|ho|nao|ong|anh|hao|nho|nha|nhao|ngao|ganh|hang|hoang|
+    validWords: go|na|ga|ho|nao|ong|anh|hao|nho|nha|nhao|ngao|ganh|hang|hoang|an|ao|ha|no|gan|hoa|oan|ngoa|oanh
+  - world: 4
+    subWorld: 3
+    level: 2
+    word: "ng\xF3ng"
+    answers: "n\xF3|ng\xF3|\xF3ng|n\xF3n|ng\xF3n|n\xF3ng|ng\xF3ng|"
+    validWords: "n\xF3|ng\xF3|\xF3ng|n\xF3n|ng\xF3n|n\xF3ng|ng\xF3ng"
+  - world: 4
+    subWorld: 3
+    level: 3
+    word: "tho\xE0n"
+    answers: "h\xE0|n\xE0|to|\xE0o|t\xE0|nho|h\xE0n|ho\xE0|h\xE0o|th\xE0|n\xE0o|to\xE0n|thon|nho\xE0|tho\xE0n|"
+    validWords: "h\xE0|n\xE0|to|\xE0o|t\xE0|nho|h\xE0n|ho\xE0|h\xE0o|th\xE0|n\xE0o|to\xE0n|thon|nho\xE0|tho\xE0n|ho|o\xE0|nh\xE0|tho|to\xE0|t\xE0n|ho\xE0n|nh\xE0o|th\xE0o"
+  - world: 4
+    subWorld: 3
+    level: 4
+    word: "ngo\xE1y"
+    answers: "go|\xE1n|n\xE1|g\xE1|\xE1o|\xE1ng|ong|go\xE1|g\xE1n|o\xE1n|g\xE1y|n\xE1o|ng\xE1y|ng\xE1o|ngo\xE1y|"
+    validWords: "go|\xE1n|n\xE1|g\xE1|\xE1o|\xE1ng|ong|go\xE1|g\xE1n|o\xE1n|g\xE1y|n\xE1o|ng\xE1y|ng\xE1o|ngo\xE1y|no"
+  - world: 4
+    subWorld: 3
+    level: 5
+    word: "nho\xE0i"
+    answers: "h\xE0|n\xE0|\xE0o|nho|h\xE0n|ho\xE0|inh|h\xE0o|noi|n\xE0o|h\xE0i|nh\xE0|nho\xE0|nh\xE0i|nho\xE0i|"
+    validWords: "h\xE0|n\xE0|\xE0o|nho|h\xE0n|ho\xE0|inh|h\xE0o|noi|n\xE0o|h\xE0i|nh\xE0|nho\xE0|nh\xE0i|nho\xE0i|ho|in|ni|oi|o\xE0|n\xE0i|ho\xE0n|nhoi|nh\xE0o"
+  - world: 4
+    subWorld: 3
+    level: 6
+    word: "thi\u1EBFu"
+    answers: "ti|tu|t\u1EBF|th\u1EBF|thi|tiu|h\u1EBFt|tui|tu\u1EBF|t\u1EBFu|thu|thu\u1EBF|hi\u1EBFu|thui|thi\u1EBFu|"
+    validWords: "ti|tu|t\u1EBF|th\u1EBF|thi|tiu|h\u1EBFt|tui|tu\u1EBF|t\u1EBFu|thu|thu\u1EBF|hi\u1EBFu|thui|thi\u1EBFu"
+  - world: 4
+    subWorld: 3
+    level: 7
+    word: "xo\xE0ng"
+    answers: "go|n\xE0|\xE0o|x\xE0|xo|ong|g\xE0n|ng\xE0|x\xE0o|xo\xE0|n\xE0o|xong|ng\xE0o|xo\xE0n|xo\xE0ng|"
+    validWords: "go|n\xE0|\xE0o|x\xE0|xo|ong|g\xE0n|ng\xE0|x\xE0o|xo\xE0|n\xE0o|xong|ng\xE0o|xo\xE0n|xo\xE0ng|g\xE0|no|o\xE0|g\xE0o"
+  - world: 4
+    subWorld: 3
+    level: 8
+    word: "kho\u1EA3n"
+    answers: "h\u1EA3|ho|\u1EA3o|n\u1EA3|n\u1EA3o|kho|nho|h\u1EA3o|ho\u1EA3|nh\u1EA3|o\u1EA3n|\u1EA3nh|kh\u1EA3o|kh\u1EA3n|kho\u1EA3n|"
+    validWords: "h\u1EA3|ho|\u1EA3o|n\u1EA3|n\u1EA3o|kho|nho|h\u1EA3o|ho\u1EA3|nh\u1EA3|o\u1EA3n|\u1EA3nh|kh\u1EA3o|kh\u1EA3n|kho\u1EA3n|no"
+  - world: 4
+    subWorld: 3
+    level: 9
+    word: "tuy\u1EBFn"
+    answers: "uy|ty|nu|tu|un|t\u1EBF|y\u1EBFu|tuy|y\u1EBFn|n\u1EBFt|tu\u1EBF|n\u1EBFu|y\u1EBFt|t\u1EBFu|tuy\u1EBFn|"
+    validWords: "uy|ty|nu|tu|un|t\u1EBF|y\u1EBFu|tuy|y\u1EBFn|n\u1EBFt|tu\u1EBF|n\u1EBFu|y\u1EBFt|t\u1EBFu|tuy\u1EBFn"
+  - world: 4
+    subWorld: 3
+    level: 10
+    word: xoang
+    answers: go|xa|na|ga|xan|nao|ong|xao|oan|xoa|xoan|xong|xang|ngao|xoang|
+    validWords: go|xa|na|ga|xan|nao|ong|xao|oan|xoa|xoan|xong|xang|ngao|xoang|an|ao|no|xo|gan|ngoa
+  - world: 4
+    subWorld: 3
+    level: 11
+    word: "mu\u1ED1ng"
+    answers: "mu|m\u1ED1|\u1ED1m|nu|un|ung|ng\u1ED1|g\u1ED1m|u\u1ED1n|\u1ED1ng|ngu|u\u1ED1ng|m\u1ED1ng|mu\u1ED1n|mu\u1ED1ng|"
+    validWords: "mu|m\u1ED1|\u1ED1m|nu|un|ung|ng\u1ED1|g\u1ED1m|u\u1ED1n|\u1ED1ng|ngu|u\u1ED1ng|m\u1ED1ng|mu\u1ED1n|mu\u1ED1ng|um"
+  - world: 4
+    subWorld: 3
+    level: 12
+    word: "tho\xE1i"
+    answers: "\xE1t|ti|to|h\xE1|ho|t\xE1|t\xE1o|h\xE1i|thi|h\xE1o|t\xE1i|thoi|th\xE1i|th\xE1o|tho\xE1i|"
+    validWords: "\xE1t|ti|to|h\xE1|ho|t\xE1|t\xE1o|h\xE1i|thi|h\xE1o|t\xE1i|thoi|th\xE1i|th\xE1o|tho\xE1i|oi|\xE1o|ho\xE1|h\xE1t|o\xE1t|tho|th\xE1|toi"
+  - world: 4
+    subWorld: 3
+    level: 13
+    word: "thi\u1EC7n"
+    answers: "h\u1EC7|ti|n\u1EC7|in|t\u1EC7|ni|thi|h\u1EC7t|inh|tin|ti\u1EC7n|tinh|hi\u1EC7n|thi\u1EC7n|nhi\u1EC7t|"
+    validWords: "h\u1EC7|ti|n\u1EC7|in|t\u1EC7|ni|thi|h\u1EC7t|inh|tin|ti\u1EC7n|tinh|hi\u1EC7n|thi\u1EC7n|nhi\u1EC7t|nhi"
+  - world: 4
+    subWorld: 3
+    level: 14
+    word: "gi\xF3ng"
+    answers: "n\xF3|\xF3i|in|ni|n\xF3i|g\xF3i|ng\xF3|\xF3ng|gi\xF3|ng\xF3i|gi\xF3ng|"
+    validWords: "n\xF3|\xF3i|in|ni|n\xF3i|g\xF3i|ng\xF3|\xF3ng|gi\xF3|ng\xF3i|gi\xF3ng"
+  - world: 4
+    subWorld: 3
+    level: 15
+    word: "su\xF4ng"
+    answers: "s\xF4|su|\xF4n|nu|n\xF4|un|ung|sun|ng\xF4|ngu|\xF4ng|sung|su\xF4n|s\xF4ng|su\xF4ng|"
+    validWords: "s\xF4|su|\xF4n|nu|n\xF4|un|ung|sun|ng\xF4|ngu|\xF4ng|sung|su\xF4n|s\xF4ng|su\xF4ng"
+  - world: 4
+    subWorld: 3
+    level: 16
+    word: "ngo\xE0m"
+    answers: "go|n\xE0|\xE0o|mo|m\xE0|om|ong|g\xE0n|ng\xE0|n\xE0o|nom|m\xE0n|mong|ng\xE0o|ngo\xE0m|"
+    validWords: "go|n\xE0|\xE0o|mo|m\xE0|om|ong|g\xE0n|ng\xE0|n\xE0o|nom|m\xE0n|mong|ng\xE0o|ngo\xE0m|g\xE0|no|o\xE0|gom|g\xE0o|m\xE0o|m\xE0ng"
+  - world: 4
+    subWorld: 3
+    level: 17
+    word: phanh
+    answers: pa|na|an|ha|anh|pha|nha|pan|panh|hanh|phanh|
+    validWords: pa|na|an|ha|anh|pha|nha|pan|panh|hanh|phanh
+  - world: 4
+    subWorld: 4
+    level: 0
+    word: khoai
+    answers: ai|ki|ho|ao|oi|kho|hao|hai|kia|hoa|oai|khao|khai|khoa|khoai|
+    validWords: ai|ki|ho|ao|oi|kho|hao|hai|kia|hoa|oai|khao|khai|khoa|khoai|ha|khi
+  - world: 4
+    subWorld: 4
+    level: 1
+    word: "kho\xE9t"
+    answers: "\xE9t|to|k\xE9|h\xE9|ho|kho|h\xE9o|h\xE9t|k\xE9o|k\xE9t|tho|kh\xE9t|kho\xE9|kh\xE9o|kho\xE9t|"
+    validWords: "\xE9t|to|k\xE9|h\xE9|ho|kho|h\xE9o|h\xE9t|k\xE9o|k\xE9t|tho|kh\xE9t|kho\xE9|kh\xE9o|kho\xE9t"
+  - world: 4
+    subWorld: 4
+    level: 2
+    word: khoan
+    answers: na|ho|ao|nao|kho|anh|hao|nho|nha|oan|nhao|khao|khoa|oanh|khoan|
+    validWords: na|ho|ao|nao|kho|anh|hao|nho|nha|oan|nhao|khao|khoa|oanh|khoan|an|ha|no|hoa|khan
+  - world: 4
+    subWorld: 4
+    level: 3
+    word: "thi\xEAn"
+    answers: "ti|t\xEA|in|ni|thi|inh|h\xEAn|th\xEA|t\xEAn|tin|tinh|ti\xEAn|hi\xEAn|t\xEAnh|thi\xEAn|"
+    validWords: "ti|t\xEA|in|ni|thi|inh|h\xEAn|th\xEA|t\xEAn|tin|tinh|ti\xEAn|hi\xEAn|t\xEAnh|thi\xEAn|nhi"
+  - world: 4
+    subWorld: 4
+    level: 4
+    word: tranh
+    answers: ta|na|an|ha|ra|ran|anh|tan|tra|nha|tha|ranh|than|tanh|tranh|
+    validWords: ta|na|an|ha|ra|ran|anh|tan|tra|nha|tha|ranh|than|tanh|tranh
+  - world: 4
+    subWorld: 4
+    level: 5
+    word: "ho\u1EA3ng"
+    answers: "g\u1EA3|go|h\u1EA3|ho|\u1EA3o|n\u1EA3o|ng\u1EA3|ong|nho|h\u1EA3o|ho\u1EA3|nh\u1EA3|o\u1EA3n|\u1EA3nh|ho\u1EA3ng|"
+    validWords: "g\u1EA3|go|h\u1EA3|ho|\u1EA3o|n\u1EA3o|ng\u1EA3|ong|nho|h\u1EA3o|ho\u1EA3|nh\u1EA3|o\u1EA3n|\u1EA3nh|ho\u1EA3ng|no|n\u1EA3"
+  - world: 4
+    subWorld: 4
+    level: 6
+    word: "nhi\u1EC7m"
+    answers: "h\u1EC7|im|n\u1EC7|mi|in|ni|inh|min|n\u1EC7m|mi\u1EC7n|ni\u1EC7m|minh|hi\u1EC7n|m\u1EC7nh|nhi\u1EC7m|"
+    validWords: "h\u1EC7|im|n\u1EC7|mi|in|ni|inh|min|n\u1EC7m|mi\u1EC7n|ni\u1EC7m|minh|hi\u1EC7n|m\u1EC7nh|nhi\u1EC7m|nhi"
+  - world: 4
+    subWorld: 4
+    level: 7
+    word: "ngu\xF4i"
+    answers: "\xF4n|nu|n\xF4|in|ni|un|ung|n\xF4i|ng\xF4|nui|ngu|\xF4ng|giun|nu\xF4i|ngu\xF4i|"
+    validWords: "\xF4n|nu|n\xF4|in|ni|un|ung|n\xF4i|ng\xF4|nui|ngu|\xF4ng|giun|nu\xF4i|ngu\xF4i|ng\xF4i"
+  - world: 4
+    subWorld: 4
+    level: 8
+    word: "ngo\u1EA1i"
+    answers: "go|in|ni|n\u1EA1|oi|g\u1EA1o|ong|g\u1EA1n|noi|n\u1EA1o|n\u1EA1i|ngoi|ng\u1EA1o|ng\u1EA1i|ngo\u1EA1i|"
+    validWords: "go|in|ni|n\u1EA1|oi|g\u1EA1o|ong|g\u1EA1n|noi|n\u1EA1o|n\u1EA1i|ngoi|ng\u1EA1o|ng\u1EA1i|ngo\u1EA1i|no"
+  - world: 4
+    subWorld: 4
+    level: 9
+    word: "ng\xE1ch"
+    answers: "\xE1n|n\xE1|h\xE1|\xE1c|\xE1ng|c\xE1n|\xE1nh|nh\xE1|\xE1ch|g\xE1n|h\xE1n|nh\xE1c|g\xE1nh|n\xE1ch|ng\xE1ch|"
+    validWords: "\xE1n|n\xE1|h\xE1|\xE1c|\xE1ng|c\xE1n|\xE1nh|nh\xE1|\xE1ch|g\xE1n|h\xE1n|nh\xE1c|g\xE1nh|n\xE1ch|ng\xE1ch|c\xE1|g\xE1|g\xE1c|ch\xE1n|c\xE1nh"
+  - world: 4
+    subWorld: 4
+    level: 10
+    word: "thu\xF4n"
+    answers: "\xF4n|nu|n\xF4|tu|h\xF4|t\xF4|un|nhu|th\xF4|h\xF4n|t\xF4n|thun|th\xF4n|tu\xF4n|thu\xF4n|"
+    validWords: "\xF4n|nu|n\xF4|tu|h\xF4|t\xF4|un|nhu|th\xF4|h\xF4n|t\xF4n|thun|th\xF4n|tu\xF4n|thu\xF4n|nh\xF4|thu"
+  - world: 4
+    subWorld: 4
+    level: 11
+    word: "ngo\xE0i"
+    answers: "go|n\xE0|\xE0o|in|ong|g\xE0n|ng\xE0|gi\xE0|g\xE0i|noi|n\xE0o|gi\xE0n|ngoi|ng\xE0o|ngo\xE0i|"
+    validWords: "go|n\xE0|\xE0o|in|ong|g\xE0n|ng\xE0|gi\xE0|g\xE0i|noi|n\xE0o|gi\xE0n|ngoi|ng\xE0o|ngo\xE0i|g\xE0|ni|no|oi|o\xE0|g\xE0o|n\xE0i|ng\xE0i"
+  - world: 4
+    subWorld: 4
+    level: 12
+    word: "thi\u1EBFn"
+    answers: "ti|in|ni|t\u1EBF|th\u1EBF|thi|inh|h\u1EBFt|n\u1EBFt|h\u1EBFn|tin|tinh|hi\u1EBFn|ti\u1EBFn|thi\u1EBFn|"
+    validWords: "ti|in|ni|t\u1EBF|th\u1EBF|thi|inh|h\u1EBFt|n\u1EBFt|h\u1EBFn|tin|tinh|hi\u1EBFn|ti\u1EBFn|thi\u1EBFn|nhi"
+  - world: 4
+    subWorld: 4
+    level: 13
+    word: "tr\xE1ng"
+    answers: "\xE1n|\xE1t|n\xE1|t\xE1|g\xE1|\xE1ng|r\xE1t|t\xE1n|g\xE1n|tr\xE1|r\xE1n|ng\xE1t|tr\xE1n|t\xE1ng|tr\xE1ng|"
+    validWords: "\xE1n|\xE1t|n\xE1|t\xE1|g\xE1|\xE1ng|r\xE1t|t\xE1n|g\xE1n|tr\xE1|r\xE1n|ng\xE1t|tr\xE1n|t\xE1ng|tr\xE1ng|r\xE1|n\xE1t|r\xE1ng"
+  - world: 4
+    subWorld: 4
+    level: 14
+    word: toang
+    answers: ta|go|to|na|ga|toa|nao|ong|tao|tan|oan|tong|ngao|toan|toang|
+    validWords: ta|go|to|na|ga|toa|nao|ong|tao|tan|oan|tong|ngao|toan|toang|an|ao|no|gan|ngoa|tang
+  - world: 4
+    subWorld: 4
+    level: 15
+    word: "thu\u1EADn"
+    answers: "nu|tu|un|h\u1EADu|n\u1EADu|t\u1EADn|nhu|h\u1EADn|t\u1EADu|thu|th\u1EADn|thun|nh\u1EADu|nh\u1EADt|thu\u1EADn|"
+    validWords: "nu|tu|un|h\u1EADu|n\u1EADu|t\u1EADn|nhu|h\u1EADn|t\u1EADu|thu|th\u1EADn|thun|nh\u1EADu|nh\u1EADt|thu\u1EADn"
+  - world: 4
+    subWorld: 4
+    level: 16
+    word: "kho\xE1t"
+    answers: "\xE1t|to|h\xE1|ho|t\xE1|t\xE1o|kho|h\xE1o|kh\xE1|o\xE1t|tho|kh\xE1o|kho\xE1|th\xE1o|kho\xE1t|"
+    validWords: "\xE1t|to|h\xE1|ho|t\xE1|t\xE1o|kho|h\xE1o|kh\xE1|o\xE1t|tho|kh\xE1o|kho\xE1|th\xE1o|kho\xE1t|\xE1o|ho\xE1|h\xE1t|th\xE1|kh\xE1t"
+  - world: 4
+    subWorld: 4
+    level: 17
+    word: "kho\xE1i"
+    answers: "h\xE1|ki|ho|oi|\xE1o|h\xE1i|kho|h\xE1o|kh\xE1|ho\xE1|khi|kh\xE1o|kho\xE1|kh\xE1i|kho\xE1i|"
+    validWords: "h\xE1|ki|ho|oi|\xE1o|h\xE1i|kho|h\xE1o|kh\xE1|ho\xE1|khi|kh\xE1o|kho\xE1|kh\xE1i|kho\xE1i"
+  - world: 5
+    subWorld: 0
+    level: 0
+    word: "tr\xE1ch"
+    answers: "\xE1t|h\xE1|\xE1c|t\xE1|r\xE1c|r\xE1t|\xE1ch|c\xE1t|t\xE1c|h\xE1t|th\xE1|tr\xE1|r\xE1ch|ch\xE1t|tr\xE1ch|"
+    validWords: "\xE1t|h\xE1|\xE1c|t\xE1|r\xE1c|r\xE1t|\xE1ch|c\xE1t|t\xE1c|h\xE1t|th\xE1|tr\xE1|r\xE1ch|ch\xE1t|tr\xE1ch|c\xE1|r\xE1|th\xE1c|tr\xE1c|t\xE1ch"
+  - world: 5
+    subWorld: 0
+    level: 1
+    word: "tuy\u1EBFt"
+    answers: "uy|ty|tu|t\u1EBF|y\u1EBFu|tuy|t\u1EBFt|tu\u1EBF|y\u1EBFt|t\u1EBFu|tuy\u1EBFt|"
+    validWords: "uy|ty|tu|t\u1EBF|y\u1EBFu|tuy|t\u1EBFt|tu\u1EBF|y\u1EBFt|t\u1EBFu|tuy\u1EBFt"
+  - world: 5
+    subWorld: 0
+    level: 2
+    word: "gi\xE0nh"
+    answers: "h\xE0|n\xE0|g\xE0n|ng\xE0|h\xE0n|ghi|gi\xE0|inh|g\xE0i|h\xE0i|gi\xE0n|h\xE0ng|g\xE0nh|nh\xE0i|gi\xE0nh|"
+    validWords: "h\xE0|n\xE0|g\xE0n|ng\xE0|h\xE0n|ghi|gi\xE0|inh|g\xE0i|h\xE0i|gi\xE0n|h\xE0ng|g\xE0nh|nh\xE0i|gi\xE0nh|g\xE0|in|ni|nhi|nh\xE0|n\xE0i|nghi|ng\xE0i"
+  - world: 5
+    subWorld: 0
+    level: 3
+    word: "tho\u1EA1t"
+    answers: "t\u1EA1|to|h\u1EA1|ho|ho\u1EA1|t\u1EA1t|t\u1EA1o|h\u1EA1t|tho|ho\u1EA1t|th\u1EA1o|tho\u1EA1t|"
+    validWords: "t\u1EA1|to|h\u1EA1|ho|ho\u1EA1|t\u1EA1t|t\u1EA1o|h\u1EA1t|tho|ho\u1EA1t|th\u1EA1o|tho\u1EA1t"
+  - world: 5
+    subWorld: 0
+    level: 4
+    word: thanh
+    answers: ta|na|an|ha|anh|tan|nha|tha|hanh|than|tanh|thanh|
+    validWords: ta|na|an|ha|anh|tan|nha|tha|hanh|than|tanh|thanh
+  - world: 5
+    subWorld: 0
+    level: 5
+    word: "nh\xE1nh"
+    answers: "\xE1n|n\xE1|h\xE1|\xE1nh|nh\xE1|h\xE1n|n\xE1n|nh\xE1nh|"
+    validWords: "\xE1n|n\xE1|h\xE1|\xE1nh|nh\xE1|h\xE1n|n\xE1n|nh\xE1nh"
+  - world: 5
+    subWorld: 0
+    level: 6
+    word: "nh\xF4ng"
+    answers: "\xF4n|n\xF4|h\xF4|ng\xF4|h\xF4n|n\xF4n|\xF4ng|nh\xF4|n\xF4ng|ng\xF4n|h\xF4ng|nh\xF4ng|"
+    validWords: "\xF4n|n\xF4|h\xF4|ng\xF4|h\xF4n|n\xF4n|\xF4ng|nh\xF4|n\xF4ng|ng\xF4n|h\xF4ng|nh\xF4ng"
+  - world: 5
+    subWorld: 0
+    level: 7
+    word: "ng\xE1ng"
+    answers: "\xE1n|n\xE1|g\xE1|\xE1ng|g\xE1n|n\xE1n|ng\xE1n|ng\xE1ng|"
+    validWords: "\xE1n|n\xE1|g\xE1|\xE1ng|g\xE1n|n\xE1n|ng\xE1n|ng\xE1ng"
+  - world: 5
+    subWorld: 0
+    level: 8
+    word: "ng\xF4ng"
+    answers: "\xF4n|n\xF4|ng\xF4|n\xF4n|\xF4ng|n\xF4ng|g\xF4ng|ng\xF4n|ng\xF4ng|"
+    validWords: "\xF4n|n\xF4|ng\xF4|n\xF4n|\xF4ng|n\xF4ng|g\xF4ng|ng\xF4n|ng\xF4ng"
+  - world: 5
+    subWorld: 0
+    level: 9
+    word: "nu\xF4ng"
+    answers: "\xF4n|nu|n\xF4|un|ung|ng\xF4|ngu|n\xF4n|\xF4ng|n\xF4ng|nung|ng\xF4n|nu\xF4ng|"
+    validWords: "\xF4n|nu|n\xF4|un|ung|ng\xF4|ngu|n\xF4n|\xF4ng|n\xF4ng|nung|ng\xF4n|nu\xF4ng"
+  - world: 5
+    subWorld: 0
+    level: 10
+    word: nhanh
+    answers: na|an|ha|nan|anh|nha|nanh|hanh|nhanh|
+    validWords: na|an|ha|nan|anh|nha|nanh|hanh|nhanh
+  - world: 5
+    subWorld: 0
+    level: 11
+    word: "nh\xE1ng"
+    answers: "\xE1n|n\xE1|h\xE1|g\xE1|\xE1ng|\xE1nh|nh\xE1|g\xE1n|h\xE1n|n\xE1n|ng\xE1n|g\xE1nh|nh\xE1ng|"
+    validWords: "\xE1n|n\xE1|h\xE1|g\xE1|\xE1ng|\xE1nh|nh\xE1|g\xE1n|h\xE1n|n\xE1n|ng\xE1n|g\xE1nh|nh\xE1ng"
+  - world: 5
+    subWorld: 0
+    level: 12
+    word: ngang
+    answers: na|ga|an|nan|gan|nang|gang|ngan|ngang|
+    validWords: na|ga|an|nan|gan|nang|gang|ngan|ngang
+  - world: 5
+    subWorld: 0
+    level: 13
+    word: nhang
+    answers: na|ga|an|ha|nan|anh|nha|gan|nanh|nang|ganh|hang|ngan|nhang|
+    validWords: na|ga|an|ha|nan|anh|nha|gan|nanh|nang|ganh|hang|ngan|nhang
+  - world: 5
+    subWorld: 0
+    level: 14
+    word: "th\xE1ch"
+    answers: "\xE1t|h\xE1|\xE1c|t\xE1|c\xE1|\xE1ch|c\xE1t|t\xE1c|h\xE1t|th\xE1|ch\xE1t|t\xE1ch|th\xE1c|th\xE1ch|"
+    validWords: "\xE1t|h\xE1|\xE1c|t\xE1|c\xE1|\xE1ch|c\xE1t|t\xE1c|h\xE1t|th\xE1|ch\xE1t|t\xE1ch|th\xE1c|th\xE1ch"
+  - world: 5
+    subWorld: 0
+    level: 15
+    word: "ng\xE0nh"
+    answers: "h\xE0|n\xE0|g\xE0|g\xE0n|ng\xE0|h\xE0n|n\xE0n|nh\xE0|n\xE0nh|n\xE0ng|h\xE0ng|g\xE0nh|nh\xE0n|ng\xE0n|ng\xE0nh|"
+    validWords: "h\xE0|n\xE0|g\xE0|g\xE0n|ng\xE0|h\xE0n|n\xE0n|nh\xE0|n\xE0nh|n\xE0ng|h\xE0ng|g\xE0nh|nh\xE0n|ng\xE0n|ng\xE0nh"
+  - world: 5
+    subWorld: 0
+    level: 16
+    word: "tho\xE1t"
+    answers: "\xE1t|to|h\xE1|ho|t\xE1|t\xE1o|t\xE1t|h\xE1o|o\xE1t|tho|h\xE1t|th\xE1|th\xE1o|to\xE1t|tho\xE1t|"
+    validWords: "\xE1t|to|h\xE1|ho|t\xE1|t\xE1o|t\xE1t|h\xE1o|o\xE1t|tho|h\xE1t|th\xE1|th\xE1o|to\xE1t|tho\xE1t|\xE1o|ho\xE1"
+  - world: 5
+    subWorld: 0
+    level: 17
+    word: "ch\xE1nh"
+    answers: "\xE1n|n\xE1|h\xE1|\xE1c|c\xE1|c\xE1n|\xE1nh|nh\xE1|\xE1ch|h\xE1n|nh\xE1c|n\xE1ch|ch\xE1n|c\xE1nh|ch\xE1nh|"
+    validWords: "\xE1n|n\xE1|h\xE1|\xE1c|c\xE1|c\xE1n|\xE1nh|nh\xE1|\xE1ch|h\xE1n|nh\xE1c|n\xE1ch|ch\xE1n|c\xE1nh|ch\xE1nh"
+  - world: 5
+    subWorld: 1
+    level: 0
+    word: "ho\xE0nh"
+    answers: "h\xE0|n\xE0|\xE0o|ho|o\xE0|nho|h\xE0n|ho\xE0|h\xE0o|n\xE0o|nh\xE0|nho\xE0|ho\xE0n|h\xE0nh|ho\xE0nh|"
+    validWords: "h\xE0|n\xE0|\xE0o|ho|o\xE0|nho|h\xE0n|ho\xE0|h\xE0o|n\xE0o|nh\xE0|nho\xE0|ho\xE0n|h\xE0nh|ho\xE0nh|no|nh\xE0o"
+  - world: 5
+    subWorld: 1
+    level: 1
+    word: "th\xE1nh"
+    answers: "\xE1n|\xE1t|n\xE1|h\xE1|t\xE1|\xE1nh|nh\xE1|t\xE1n|h\xE1n|h\xE1t|th\xE1|n\xE1t|t\xE1nh|nh\xE1t|th\xE1nh|"
+    validWords: "\xE1n|\xE1t|n\xE1|h\xE1|t\xE1|\xE1nh|nh\xE1|t\xE1n|h\xE1n|h\xE1t|th\xE1|n\xE1t|t\xE1nh|nh\xE1t|th\xE1nh"
+  - world: 5
+    subWorld: 1
+    level: 2
+    word: ngoan
+    answers: go|na|ga|nan|nao|ong|non|oan|gan|ngon|nang|ngao|nong|ngoa|ngoan|
+    validWords: go|na|ga|nan|nao|ong|non|oan|gan|ngon|nang|ngao|nong|ngoa|ngoan|an|ao|no|ngan
+  - world: 5
+    subWorld: 1
+    level: 3
+    word: giang
+    answers: ai|na|ga|in|ni|an|gai|nai|gia|nia|gan|gian|gang|ngai|giang|
+    validWords: ai|na|ga|in|ni|an|gai|nai|gia|nia|gan|gian|gang|ngai|giang
+  - world: 5
+    subWorld: 1
+    level: 4
+    word: "ngh\u1ECBch"
+    answers: "ch\u1ECB|h\u1ECBch|ngh\u1ECB|ngh\u1ECBch|"
+    validWords: "ch\u1ECB|h\u1ECBch|ngh\u1ECB|ngh\u1ECBch"
+  - world: 5
+    subWorld: 1
+    level: 5
+    word: "chuy\u1EC3n"
+    answers: "h\u1EC3|uy|nu|n\u1EC3|un|y\u1EC3u|nhu|chuy\u1EC3n|"
+    validWords: "h\u1EC3|uy|nu|n\u1EC3|un|y\u1EC3u|nhu|chuy\u1EC3n"
+  - world: 5
+    subWorld: 1
+    level: 6
+    word: "chuy\u1EC1n"
+    answers: "uy|nu|h\u1EC1|n\u1EC1|un|nhu|hu\u1EC1|huy\u1EC1n|chuy\u1EC1n|"
+    validWords: "uy|nu|h\u1EC1|n\u1EC1|un|nhu|hu\u1EC1|huy\u1EC1n|chuy\u1EC1n"
+  - world: 5
+    subWorld: 1
+    level: 7
+    word: "chuy\u1EC7n"
+    answers: "uy|h\u1EC7|nu|n\u1EC7|un|nhu|hu\u1EC7|huy\u1EC7n|chuy\u1EC7n|"
+    validWords: "uy|h\u1EC7|nu|n\u1EC7|un|nhu|hu\u1EC7|huy\u1EC7n|chuy\u1EC7n"
+  - world: 5
+    subWorld: 1
+    level: 8
+    word: "ph\u01B0\u1EE3ng"
+    answers: "h\u01B0|n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|h\u1EE3p|nh\u01B0|ng\u1EE3p|h\u01B0ng|ph\u01B0\u1EE3ng|"
+    validWords: "h\u01B0|n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|h\u1EE3p|nh\u01B0|ng\u1EE3p|h\u01B0ng|ph\u01B0\u1EE3ng"
+  - world: 5
+    subWorld: 1
+    level: 9
+    word: "tr\u01B0\u1EDFng"
+    answers: "r\u1EDF|t\u01B0|n\u1EDF|g\u1EDF|t\u1EDF|\u01B0ng|tr\u1EDF|tr\u01B0ng|t\u01B0\u1EDFng|tr\u01B0\u1EDFng|"
+    validWords: "r\u1EDF|t\u01B0|n\u1EDF|g\u1EDF|t\u1EDF|\u01B0ng|tr\u1EDF|tr\u01B0ng|t\u01B0\u1EDFng|tr\u01B0\u1EDFng"
+  - world: 5
+    subWorld: 1
+    level: 10
+    word: "chuy\xEAn"
+    answers: "uy|nu|un|y\xEAu|nhu|h\xEAn|n\xEAu|ch\xEA|y\xEAn|uy\xEAn|chuy\xEAn|"
+    validWords: "uy|nu|un|y\xEAu|nhu|h\xEAn|n\xEAu|ch\xEA|y\xEAn|uy\xEAn|chuy\xEAn"
+  - world: 5
+    subWorld: 1
+    level: 11
+    word: "chuy\u1EBFn"
+    answers: "uy|nu|un|y\u1EBFu|ch\u1EBF|y\u1EBFn|nhu|h\u1EBFn|n\u1EBFu|\u1EBFch|chuy\u1EBFn|"
+    validWords: "uy|nu|un|y\u1EBFu|ch\u1EBF|y\u1EBFn|nhu|h\u1EBFn|n\u1EBFu|\u1EBFch|chuy\u1EBFn"
+  - world: 5
+    subWorld: 1
+    level: 12
+    word: khuynh
+    answers: uy|nu|un|khu|nhu|khuy|huynh|khuynh|
+    validWords: uy|nu|un|khu|nhu|khuy|huynh|khuynh
+  - world: 5
+    subWorld: 1
+    level: 13
+    word: "ngh\xEAnh"
+    answers: "h\xEAn|n\xEAn|gh\xEA|ngh\xEAnh|"
+    validWords: "h\xEAn|n\xEAn|gh\xEA|ngh\xEAnh"
+  - world: 5
+    subWorld: 1
+    level: 14
+    word: "chi\xEAng"
+    answers: "in|ni|ghi|inh|h\xEAn|gh\xEA|ch\xEA|chi|nhi|hi\xEAn|nghi|chi\xEAn|chi\xEAng|"
+    validWords: "in|ni|ghi|inh|h\xEAn|gh\xEA|ch\xEA|chi|nhi|hi\xEAn|nghi|chi\xEAn|chi\xEAng"
+  - world: 5
+    subWorld: 1
+    level: 15
+    word: "ph\u01B0\u1EDDng"
+    answers: "h\u1EDD|h\u01B0|n\u1EDD|g\u1EDD|h\u1EDDn|nh\u1EDD|ng\u1EDD|\u01B0ng|ph\u1EDD|\u01B0\u1EDDn|nh\u01B0|h\u01B0ng|ph\u01B0\u1EDDng|"
+    validWords: "h\u1EDD|h\u01B0|n\u1EDD|g\u1EDD|h\u1EDDn|nh\u1EDD|ng\u1EDD|\u01B0ng|ph\u1EDD|\u01B0\u1EDDn|nh\u01B0|h\u01B0ng|ph\u01B0\u1EDDng"
+  - world: 5
+    subWorld: 1
+    level: 16
+    word: "nguy\u1EC1n"
+    answers: "uy|nu|n\u1EC1|un|n\u1EC1n|ung|ngu|nung|nguy|nguy\u1EC1n|"
+    validWords: "uy|nu|n\u1EC1|un|n\u1EC1n|ung|ngu|nung|nguy|nguy\u1EC1n"
+  - world: 5
+    subWorld: 1
+    level: 17
+    word: "nguy\u1EC7t"
+    answers: "uy|ty|nu|n\u1EC7|tu|t\u1EC7|un|ung|tuy|ngu|tu\u1EC7|tung|nguy|nguy\u1EC7t|"
+    validWords: "uy|ty|nu|n\u1EC7|tu|t\u1EC7|un|ung|tuy|ngu|tu\u1EC7|tung|nguy|nguy\u1EC7t"
+  - world: 5
+    subWorld: 2
+    level: 0
+    word: "nh\u01B0\u1EE3ng"
+    answers: "h\u01B0|n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|nh\u01B0|n\u01B0ng|h\u01B0ng|nh\u01B0ng|nh\u01B0\u1EE3ng|"
+    validWords: "h\u01B0|n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|nh\u01B0|n\u01B0ng|h\u01B0ng|nh\u01B0ng|nh\u01B0\u1EE3ng"
+  - world: 5
+    subWorld: 2
+    level: 1
+    word: "nguy\u1EC7n"
+    answers: "uy|nu|n\u1EC7|un|ung|n\u1EC7n|ngu|nung|nguy|nguy\u1EC7n|"
+    validWords: "uy|nu|n\u1EC7|un|ung|n\u1EC7n|ngu|nung|nguy|nguy\u1EC7n"
+  - world: 5
+    subWorld: 2
+    level: 2
+    word: "th\u01B0\u1EE3ng"
+    answers: "h\u01B0|t\u01B0|n\u1EE3|t\u1EE3|th\u01B0|t\u1EE3n|g\u1EE3n|\u01B0ng|ng\u1EE3|th\u1EE3|nh\u01B0|nh\u1EE3t|h\u01B0ng|t\u01B0\u1EE3ng|th\u01B0\u1EE3ng|"
+    validWords: "h\u01B0|t\u01B0|n\u1EE3|t\u1EE3|th\u01B0|t\u1EE3n|g\u1EE3n|\u01B0ng|ng\u1EE3|th\u1EE3|nh\u01B0|nh\u1EE3t|h\u01B0ng|t\u01B0\u1EE3ng|th\u01B0\u1EE3ng|th\u01B0ng"
+  - world: 5
+    subWorld: 2
+    level: 3
+    word: "cho\xE1ng"
+    answers: "go|\xE1n|n\xE1|h\xE1|\xE1ng|c\xE1n|ong|nho|\xE1nh|h\xE1o|nh\xE1|cho|nh\xE1c|nh\xE1o|cho\xE1ng|"
+    validWords: "go|\xE1n|n\xE1|h\xE1|\xE1ng|c\xE1n|ong|nho|\xE1nh|h\xE1o|nh\xE1|cho|nh\xE1c|nh\xE1o|cho\xE1ng|ho|\xE1c|con|go\xE1|g\xE1n|\xE1ch|cong|g\xE1nh|ng\xE1o"
+  - world: 5
+    subWorld: 2
+    level: 4
+    word: "nghi\u1EC7p"
+    answers: "h\u1EC7|n\u1EC7|in|pi|ni|phi|ghi|inh|ph\u1EC7|pin|phin|hi\u1EC7p|ngh\u1EC7|hi\u1EC7n|nghi\u1EC7p|"
+    validWords: "h\u1EC7|n\u1EC7|in|pi|ni|phi|ghi|inh|ph\u1EC7|pin|phin|hi\u1EC7p|ngh\u1EC7|hi\u1EC7n|nghi\u1EC7p|nhi|nghi|phi\u1EC7n"
+  - world: 5
+    subWorld: 2
+    level: 5
+    word: khoang
+    answers: go|na|ga|nao|ong|kho|anh|hao|nho|nhao|khao|ngao|ganh|hoang|khoang|
+    validWords: go|na|ga|nao|ong|kho|anh|hao|nho|nhao|khao|ngao|ganh|hoang|khoang|ao|ho|gan|nha|oan|hang|khoa|ngoa|khoan
+  - world: 5
+    subWorld: 2
+    level: 6
+    word: "tr\u01B0\u1EE3ng"
+    answers: "r\u1EE3|t\u01B0|n\u1EE3|t\u1EE3|tr\u1EE3|t\u1EE3n|g\u1EE3n|\u01B0ng|r\u1EE3n|ng\u1EE3|tr\u1EE3n|r\u01B0\u1EE3t|tr\u01B0ng|t\u01B0\u1EE3ng|tr\u01B0\u1EE3ng|"
+    validWords: "r\u1EE3|t\u01B0|n\u1EE3|t\u1EE3|tr\u1EE3|t\u1EE3n|g\u1EE3n|\u01B0ng|r\u1EE3n|ng\u1EE3|tr\u1EE3n|r\u01B0\u1EE3t|tr\u01B0ng|t\u01B0\u1EE3ng|tr\u01B0\u1EE3ng"
+  - world: 5
+    subWorld: 2
+    level: 7
+    word: "ph\u01B0\u01A1ng"
+    answers: "h\u01B0|n\u01A1|\u01A1n|h\u01A1|\u01B0\u01A1n|ph\u01A1|ng\u01A1|\u01B0ng|nh\u01B0|h\u01A1n|nh\u01A1|\u01B0\u01A1ng|h\u01B0ng|h\u01B0\u01A1ng|ph\u01B0\u01A1ng|"
+    validWords: "h\u01B0|n\u01A1|\u01A1n|h\u01A1|\u01B0\u01A1n|ph\u01A1|ng\u01A1|\u01B0ng|nh\u01B0|h\u01A1n|nh\u01A1|\u01B0\u01A1ng|h\u01B0ng|h\u01B0\u01A1ng|ph\u01B0\u01A1ng"
+  - world: 5
+    subWorld: 2
+    level: 8
+    word: "khi\xEAng"
+    answers: "ki|in|k\xEA|ni|kh\xEA|ghi|inh|h\xEAn|gh\xEA|ki\xEAn|kinh|hi\xEAn|khi\xEAn|ki\xEAng|khi\xEAng|"
+    validWords: "ki|in|k\xEA|ni|kh\xEA|ghi|inh|h\xEAn|gh\xEA|ki\xEAn|kinh|hi\xEAn|khi\xEAn|ki\xEAng|khi\xEAng|khi|nhi|nghi"
+  - world: 5
+    subWorld: 2
+    level: 9
+    word: "th\u01B0\u1EDBng"
+    answers: "h\u01B0|t\u01B0|\u1EDBt|n\u1EDB|h\u1EDB|\u1EDBn|th\u01B0|h\u1EDBt|th\u1EDB|\u01B0ng|nh\u1EDB|nh\u1EDBt|t\u01B0\u1EDBng|h\u01B0\u1EDBng|th\u01B0\u1EDBng|"
+    validWords: "h\u01B0|t\u01B0|\u1EDBt|n\u1EDB|h\u1EDB|\u1EDBn|th\u01B0|h\u1EDBt|th\u1EDB|\u01B0ng|nh\u1EDB|nh\u1EDBt|t\u01B0\u1EDBng|h\u01B0\u1EDBng|th\u01B0\u1EDBng|t\u1EDB|nh\u01B0|\u01B0\u1EDBt|h\u01B0ng|th\u01B0ng"
+  - world: 5
+    subWorld: 2
+    level: 10
+    word: "chu\u1ED9ng"
+    answers: "nu|h\u1ED9|un|n\u1ED9|ung|nhu|g\u1ED9c|h\u1ED9c|ngu|ng\u1ED9|c\u1ED9ng|cung|cu\u1ED9n|chung|chu\u1ED9ng|"
+    validWords: "nu|h\u1ED9|un|n\u1ED9|ung|nhu|g\u1ED9c|h\u1ED9c|ngu|ng\u1ED9|c\u1ED9ng|cung|cu\u1ED9n|chung|chu\u1ED9ng"
+  - world: 5
+    subWorld: 2
+    level: 11
+    word: "gi\u01B0\u1EDDng"
+    answers: "n\u1EDD|g\u1EDD|in|ni|gi\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|ng\u1EDDi|ng\u01B0\u1EDDi|gi\u01B0\u1EDDng|"
+    validWords: "n\u1EDD|g\u1EDD|in|ni|gi\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|ng\u1EDDi|ng\u01B0\u1EDDi|gi\u01B0\u1EDDng"
+  - world: 5
+    subWorld: 2
+    level: 12
+    word: "th\u01B0\u01A1ng"
+    answers: "h\u01B0|t\u01B0|n\u01A1|t\u01A1|\u01A1n|th\u01A1|th\u01B0|\u01B0\u01A1n|ng\u01A1|\u01B0ng|nh\u01B0|\u01B0\u01A1ng|h\u01B0\u01A1ng|t\u01B0\u01A1ng|th\u01B0\u01A1ng|"
+    validWords: "h\u01B0|t\u01B0|n\u01A1|t\u01A1|\u01A1n|th\u01A1|th\u01B0|\u01B0\u01A1n|ng\u01A1|\u01B0ng|nh\u01B0|\u01B0\u01A1ng|h\u01B0\u01A1ng|t\u01B0\u01A1ng|th\u01B0\u01A1ng|h\u01A1|h\u01A1n|nh\u01A1|h\u01B0ng|th\u01B0ng"
+  - world: 5
+    subWorld: 2
+    level: 13
+    word: "tr\u01B0\u1EDBng"
+    answers: "t\u01B0|\u1EDBt|n\u1EDB|\u1EDBn|r\u1EDB|t\u1EDB|r\u1EDBt|\u01B0ng|tr\u1EDB|\u01B0\u1EDBt|r\u01B0\u1EDBn|tr\u1EDBn|t\u01B0\u1EDBng|tr\u01B0ng|tr\u01B0\u1EDBng|"
+    validWords: "t\u01B0|\u1EDBt|n\u1EDB|\u1EDBn|r\u1EDB|t\u1EDB|r\u1EDBt|\u01B0ng|tr\u1EDB|\u01B0\u1EDBt|r\u01B0\u1EDBn|tr\u1EDBn|t\u01B0\u1EDBng|tr\u01B0ng|tr\u01B0\u1EDBng"
+  - world: 5
+    subWorld: 2
+    level: 14
+    word: "tr\u01B0\u01A1ng"
+    answers: "t\u01B0|n\u01A1|r\u01A1|t\u01A1|tr\u01A1|\u01B0\u01A1n|ng\u01A1|\u01B0ng|r\u01A1n|\u01B0\u01A1ng|tr\u01A1n|r\u01B0\u01A1ng|t\u01B0\u01A1ng|tr\u01B0ng|tr\u01B0\u01A1ng|"
+    validWords: "t\u01B0|n\u01A1|r\u01A1|t\u01A1|tr\u01A1|\u01B0\u01A1n|ng\u01A1|\u01B0ng|r\u01A1n|\u01B0\u01A1ng|tr\u01A1n|r\u01B0\u01A1ng|t\u01B0\u01A1ng|tr\u01B0ng|tr\u01B0\u01A1ng|\u01A1n"
+  - world: 5
+    subWorld: 2
+    level: 15
+    word: "th\u01B0\u1EDDng"
+    answers: "h\u1EDD|h\u01B0|t\u01B0|n\u1EDD|g\u1EDD|th\u01B0|h\u1EDDn|nh\u1EDD|ng\u1EDD|th\u1EDD|\u01B0ng|\u01B0\u1EDDn|nh\u01B0|t\u01B0\u1EDDng|th\u01B0\u1EDDng|"
+    validWords: "h\u1EDD|h\u01B0|t\u01B0|n\u1EDD|g\u1EDD|th\u01B0|h\u1EDDn|nh\u1EDD|ng\u1EDD|th\u1EDD|\u01B0ng|\u01B0\u1EDDn|nh\u01B0|t\u01B0\u1EDDng|th\u01B0\u1EDDng|t\u1EDD|h\u01B0ng|th\u01B0ng"
+  - world: 5
+    subWorld: 2
+    level: 16
+    word: "kho\u1EA3ng"
+    answers: "g\u1EA3|go|h\u1EA3|ho|n\u1EA3o|ng\u1EA3|ong|kho|nho|h\u1EA3o|ho\u1EA3|nh\u1EA3|kh\u1EA3o|kho\u1EA3n|kho\u1EA3ng|"
+    validWords: "g\u1EA3|go|h\u1EA3|ho|n\u1EA3o|ng\u1EA3|ong|kho|nho|h\u1EA3o|ho\u1EA3|nh\u1EA3|kh\u1EA3o|kho\u1EA3n|kho\u1EA3ng|no|n\u1EA3|\u1EA3o|o\u1EA3n|\u1EA3nh|kh\u1EA3n|ho\u1EA3ng"
+  - world: 5
+    subWorld: 2
+    level: 17
+    word: "th\u01B0\u1EDFng"
+    answers: "h\u01B0|t\u01B0|h\u1EDF|n\u1EDF|g\u1EDF|t\u1EDF|th\u01B0|\u01B0ng|th\u1EDF|nh\u01B0|h\u01B0ng|h\u01B0\u1EDFng|t\u01B0\u1EDFng|th\u01B0ng|th\u01B0\u1EDFng|"
+    validWords: "h\u01B0|t\u01B0|h\u1EDF|n\u1EDF|g\u1EDF|t\u1EDF|th\u01B0|\u01B0ng|th\u1EDF|nh\u01B0|h\u01B0ng|h\u01B0\u1EDFng|t\u01B0\u1EDFng|th\u01B0ng|th\u01B0\u1EDFng"
+  - world: 5
+    subWorld: 3
+    level: 0
+    word: "tho\u1EA3ng"
+    answers: "t\u1EA3|g\u1EA3|go|to|h\u1EA3|n\u1EA3o|ng\u1EA3|ong|nho|h\u1EA3o|th\u1EA3|t\u1EA3ng|thon|tong|tho\u1EA3ng|"
+    validWords: "t\u1EA3|g\u1EA3|go|to|h\u1EA3|n\u1EA3o|ng\u1EA3|ong|nho|h\u1EA3o|th\u1EA3|t\u1EA3ng|thon|tong|tho\u1EA3ng|ho|\u1EA3o|ho\u1EA3|nh\u1EA3|tho|t\u1EA3n|t\u1EA3o|th\u1EA3o|th\u1EA3ng"
+  - world: 5
+    subWorld: 3
+    level: 1
+    word: "khuy\u1EBFt"
+    answers: "k\u1EBF|uy|ty|tu|th\u1EBF|y\u1EBFu|tuy|khu|h\u1EBFt|tu\u1EBF|y\u1EBFt|kh\u1EBF|thu\u1EBF|huy\u1EBFt|khuy\u1EBFt|"
+    validWords: "k\u1EBF|uy|ty|tu|th\u1EBF|y\u1EBFu|tuy|khu|h\u1EBFt|tu\u1EBF|y\u1EBFt|kh\u1EBF|thu\u1EBF|huy\u1EBFt|khuy\u1EBFt|t\u1EBF|k\u1EBFt|thu|t\u1EBFu|khuy"
+  - world: 5
+    subWorld: 3
+    level: 2
+    word: "kho\xE1ng"
+    answers: "go|\xE1n|n\xE1|h\xE1|\xE1ng|ong|kho|nho|\xE1nh|h\xE1o|nh\xE1|nh\xE1o|kh\xE1o|kho\xE1n|kho\xE1ng|"
+    validWords: "go|\xE1n|n\xE1|h\xE1|\xE1ng|ong|kho|nho|\xE1nh|h\xE1o|nh\xE1|nh\xE1o|kh\xE1o|kho\xE1n|kho\xE1ng|ho|go\xE1|g\xE1n|kh\xE1|g\xE1nh|kho\xE1|kh\xE1n|ng\xE1o|kh\xE1ng"
+  - world: 5
+    subWorld: 3
+    level: 3
+    word: "ch\u01B0\u01A1ng"
+    answers: "h\u01B0|c\u01B0|n\u01A1|\u01A1n|c\u01A1|\u01B0\u01A1n|ng\u01A1|\u01B0ng|c\u01A1n|nh\u01B0|\u01B0\u01A1ng|h\u01B0ng|h\u01B0\u01A1ng|c\u01B0\u01A1ng|ch\u01B0\u01A1ng|"
+    validWords: "h\u01B0|c\u01B0|n\u01A1|\u01A1n|c\u01A1|\u01B0\u01A1n|ng\u01A1|\u01B0ng|c\u01A1n|nh\u01B0|\u01B0\u01A1ng|h\u01B0ng|h\u01B0\u01A1ng|c\u01B0\u01A1ng|ch\u01B0\u01A1ng|h\u01A1|h\u01A1n|nh\u01A1|ch\u01B0ng"
+  - world: 5
+    subWorld: 3
+    level: 4
+    word: "nghi\u1EC7m"
+    answers: "h\u1EC7|im|n\u1EC7|mi|in|ghi|inh|min|mi\u1EC7n|ghim|ni\u1EC7m|minh|ngh\u1EC7|mi\u1EC7ng|nghi\u1EC7m|"
+    validWords: "h\u1EC7|im|n\u1EC7|mi|in|ghi|inh|min|mi\u1EC7n|ghim|ni\u1EC7m|minh|ngh\u1EC7|mi\u1EC7ng|nghi\u1EC7m|ni|nhi|n\u1EC7m|hi\u1EC7n|m\u1EC7nh|nghi|nhi\u1EC7m"
+  - world: 5
+    subWorld: 3
+    level: 5
+    word: "cho\xE0ng"
+    answers: "h\xE0|go|n\xE0|\xE0o|ong|g\xE0n|nho|ng\xE0|h\xE0n|ho\xE0|c\xE0ng|nho\xE0|ch\xE0ng|ho\xE0ng|cho\xE0ng|"
+    validWords: "h\xE0|go|n\xE0|\xE0o|ong|g\xE0n|nho|ng\xE0|h\xE0n|ho\xE0|c\xE0ng|nho\xE0|ch\xE0ng|ho\xE0ng|cho\xE0ng|c\xE0|cho|ch\xE0|h\xE0o|n\xE0o|c\xE0nh|g\xE0nh|h\xE0ng|ng\xE0o"
+  - world: 5
+    subWorld: 3
+    level: 6
+    word: "tho\xE1ng"
+    answers: "go|\xE1n|\xE1t|n\xE1|to|t\xE1o|\xE1ng|ong|nho|\xE1nh|nh\xE1o|ng\xE1t|thon|th\xE1ng|tho\xE1ng|"
+    validWords: "go|\xE1n|\xE1t|n\xE1|to|t\xE1o|\xE1ng|ong|nho|\xE1nh|nh\xE1o|ng\xE1t|thon|th\xE1ng|tho\xE1ng|h\xE1|go\xE1|g\xE1n|h\xE1o|nh\xE1|t\xE1n|th\xE1o|tong|to\xE1n"
+  - world: 5
+    subWorld: 3
+    level: 7
+    word: "truy\u1EC7n"
+    answers: "uy|ty|nu|r\u1EC7|ru|n\u1EC7|tu|t\u1EC7|un|tuy|tr\u1EC7|run|tru|truy|truy\u1EC7n|"
+    validWords: "uy|ty|nu|r\u1EC7|ru|n\u1EC7|tu|t\u1EC7|un|tuy|tr\u1EC7|run|tru|truy|truy\u1EC7n|tu\u1EC7"
+  - world: 5
+    subWorld: 3
+    level: 8
+    word: "ch\u01B0\u1EDBng"
+    answers: "h\u01B0|c\u01B0|n\u1EDB|h\u1EDB|c\u1EDB|\u1EDBn|\u01B0\u1EDBc|\u01B0ng|ch\u1EDB|nh\u1EDB|nh\u01B0|n\u01B0\u1EDBc|ng\u01B0\u1EDBc|h\u01B0\u1EDBng|ch\u01B0\u1EDBng|"
+    validWords: "h\u01B0|c\u01B0|n\u1EDB|h\u1EDB|c\u1EDB|\u1EDBn|\u01B0\u1EDBc|\u01B0ng|ch\u1EDB|nh\u1EDB|nh\u01B0|n\u01B0\u1EDBc|ng\u01B0\u1EDBc|h\u01B0\u1EDBng|ch\u01B0\u1EDBng|h\u01B0ng|ch\u01B0ng"
+  - world: 5
+    subWorld: 3
+    level: 9
+    word: "thuy\xEAn"
+    answers: "uy|ty|t\xEA|nu|tuy|y\xEAu|nhu|h\xEAn|n\xEAu|th\xEA|t\xEAn|uy\xEAn|thun|tuy\xEAn|thuy\xEAn|"
+    validWords: "uy|ty|t\xEA|nu|tuy|y\xEAu|nhu|h\xEAn|n\xEAu|th\xEA|t\xEAn|uy\xEAn|thun|tuy\xEAn|thuy\xEAn|tu|un|thu|y\xEAn|thu\xEA|th\xEAu|t\xEAnh"
+  - world: 5
+    subWorld: 3
+    level: 10
+    word: "nghi\xEAm"
+    answers: "im|m\xEA|\xEAm|mi|in|ghi|inh|h\xEAn|n\xEAm|gh\xEA|min|ghim|ni\xEAm|minh|nghi\xEAm|"
+    validWords: "im|m\xEA|\xEAm|mi|in|ghi|inh|h\xEAn|n\xEAm|gh\xEA|min|ghim|ni\xEAm|minh|nghi\xEAm|ni|nhi|hi\xEAn|nghi"
+  - world: 5
+    subWorld: 3
+    level: 11
+    word: "khuy\xEAn"
+    answers: "uy|nu|k\xEA|un|khu|y\xEAu|kh\xEA|nhu|h\xEAn|n\xEAu|k\xEAu|y\xEAn|uy\xEAn|kh\xEAu|khuy\xEAn|"
+    validWords: "uy|nu|k\xEA|un|khu|y\xEAu|kh\xEA|nhu|h\xEAn|n\xEAu|k\xEAu|y\xEAn|uy\xEAn|kh\xEAu|khuy\xEAn|khuy"
+  - world: 5
+    subWorld: 3
+    level: 12
+    word: "thi\xEAng"
+    answers: "ti|t\xEA|in|thi|ghi|inh|h\xEAn|th\xEA|gh\xEA|t\xEAn|tinh|ti\xEAn|hi\xEAn|thi\xEAn|thi\xEAng|"
+    validWords: "ti|t\xEA|in|thi|ghi|inh|h\xEAn|th\xEA|gh\xEA|t\xEAn|tinh|ti\xEAn|hi\xEAn|thi\xEAn|thi\xEAng|ni|nhi|tin|nghi|t\xEAnh"
+  - world: 5
+    subWorld: 3
+    level: 13
+    word: "tru\u1ED3ng"
+    answers: "\u1ED3n|n\u1ED3|nu|ru|t\u1ED3|tu|ung|t\u1ED3n|tu\u1ED3n|tung|ru\u1ED3ng|tr\u1ED3ng|trung|tu\u1ED3ng|tru\u1ED3ng|"
+    validWords: "\u1ED3n|n\u1ED3|nu|ru|t\u1ED3|tu|ung|t\u1ED3n|tu\u1ED3n|tung|ru\u1ED3ng|tr\u1ED3ng|trung|tu\u1ED3ng|tru\u1ED3ng|r\u1ED3|un|ngu|run|tru|rung|r\u1ED3ng"
+  - world: 5
+    subWorld: 3
+    level: 14
+    word: "chu\u1ED3ng"
+    answers: "\u1ED3n|h\u1ED3|n\u1ED3|nu|ung|h\u1ED3n|nhu|c\u1ED3n|ngu|h\u1ED3ng|cung|chung|chu\u1ED3n|cu\u1ED3ng|chu\u1ED3ng|"
+    validWords: "\u1ED3n|h\u1ED3|n\u1ED3|nu|ung|h\u1ED3n|nhu|c\u1ED3n|ngu|h\u1ED3ng|cung|chung|chu\u1ED3n|cu\u1ED3ng|chu\u1ED3ng|un|c\u1ED3ng|ch\u1ED3ng"
+  - world: 5
+    subWorld: 3
+    level: 15
+    word: "nghi\u1EC7t"
+    answers: "h\u1EC7|ti|n\u1EC7|in|t\u1EC7|thi|ghi|h\u1EC7t|inh|ti\u1EC7n|tinh|ngh\u1EC7|hi\u1EC7n|thi\u1EC7n|nghi\u1EC7t|"
+    validWords: "h\u1EC7|ti|n\u1EC7|in|t\u1EC7|thi|ghi|h\u1EC7t|inh|ti\u1EC7n|tinh|ngh\u1EC7|hi\u1EC7n|thi\u1EC7n|nghi\u1EC7t|ni|nhi|tin|nghi|nhi\u1EC7t"
+  - world: 5
+    subWorld: 3
+    level: 16
+    word: "thuy\u1EC1n"
+    answers: "uy|ty|nu|h\u1EC1|tu|n\u1EC1|un|tuy|nhu|hu\u1EC1|th\u1EC1|thun|huy\u1EC1n|tuy\u1EC1n|thuy\u1EC1n|"
+    validWords: "uy|ty|nu|h\u1EC1|tu|n\u1EC1|un|tuy|nhu|hu\u1EC1|th\u1EC1|thun|huy\u1EC1n|tuy\u1EC1n|thuy\u1EC1n|t\u1EC1|thu"
+  - world: 5
+    subWorld: 3
+    level: 17
+    word: "chu\xF4ng"
+    answers: "\xF4n|nu|n\xF4|h\xF4|c\xF4|ung|c\xF4n|nhu|ng\xF4|ngu|c\xF4ng|cung|ch\xF4n|chung|chu\xF4ng|"
+    validWords: "\xF4n|nu|n\xF4|h\xF4|c\xF4|ung|c\xF4n|nhu|ng\xF4|ngu|c\xF4ng|cung|ch\xF4n|chung|chu\xF4ng|un|h\xF4n|nh\xF4|\xF4ng|h\xF4ng"
+  - world: 5
+    subWorld: 4
+    level: 0
+    word: "tr\u01B0\u1EDDng"
+    answers: "t\u01B0|n\u1EDD|g\u1EDD|t\u1EDD|ng\u1EDD|r\u1EDDn|\u01B0ng|tr\u1EDD|\u01B0\u1EDDn|tr\u1EDDn|tr\u01B0ng|r\u01B0\u1EDDng|t\u01B0\u1EDDng|tr\u01B0\u1EDDn|tr\u01B0\u1EDDng|"
+    validWords: "t\u01B0|n\u1EDD|g\u1EDD|t\u1EDD|ng\u1EDD|r\u1EDDn|\u01B0ng|tr\u1EDD|\u01B0\u1EDDn|tr\u1EDDn|tr\u01B0ng|r\u01B0\u1EDDng|t\u01B0\u1EDDng|tr\u01B0\u1EDDn|tr\u01B0\u1EDDng|r\u1EDD"
+  - world: 5
+    subWorld: 4
+    level: 1
+    word: "truy\u1EC1n"
+    answers: "uy|ty|nu|ru|tu|n\u1EC1|un|tuy|tr\u1EC1|run|r\u1EC1n|tru|truy|tuy\u1EC1n|truy\u1EC1n|"
+    validWords: "uy|ty|nu|ru|tu|n\u1EC1|un|tuy|tr\u1EC1|run|r\u1EC1n|tru|truy|tuy\u1EC1n|truy\u1EC1n|t\u1EC1"
+  - world: 5
+    subWorld: 4
+    level: 2
+    word: "ng\u01B0\u1EE1ng"
+    answers: "n\u1EE1|g\u1EE1|\u01B0\u1EE1n|\u01B0ng|ng\u1EE1|n\u01B0ng|ng\u01B0ng|ng\u01B0\u1EE1ng|"
+    validWords: "n\u1EE1|g\u1EE1|\u01B0\u1EE1n|\u01B0ng|ng\u1EE1|n\u01B0ng|ng\u01B0ng|ng\u01B0\u1EE1ng"
+  - world: 5
+    subWorld: 4
+    level: 3
+    word: "nghi\u1EBFn"
+    answers: "in|ni|ghi|inh|h\u1EBFn|gh\u1EBF|nhi|n\u1EBFn|ninh|hi\u1EBFn|nghi|nghi\u1EBFn|"
+    validWords: "in|ni|ghi|inh|h\u1EBFn|gh\u1EBF|nhi|n\u1EBFn|ninh|hi\u1EBFn|nghi|nghi\u1EBFn"
+  - world: 5
+    subWorld: 4
+    level: 4
+    word: "ng\u01B0\u1EE3ng"
+    answers: "n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|n\u01B0ng|g\u01B0\u1EE3ng|ng\u01B0ng|ng\u01B0\u1EE3ng|"
+    validWords: "n\u1EE3|g\u1EE3n|\u01B0ng|ng\u1EE3|n\u01B0ng|g\u01B0\u1EE3ng|ng\u01B0ng|ng\u01B0\u1EE3ng"
+  - world: 5
+    subWorld: 4
+    level: 5
+    word: "nguy\xEAn"
+    answers: "uy|nu|un|ung|y\xEAu|n\xEAu|n\xEAn|ngu|y\xEAn|nung|uy\xEAn|nguy|nguy\xEAn|"
+    validWords: "uy|nu|un|ung|y\xEAu|n\xEAu|n\xEAn|ngu|y\xEAn|nung|uy\xEAn|nguy|nguy\xEAn"
+  - world: 5
+    subWorld: 4
+    level: 6
+    word: "gi\u01B0\u01A1ng"
+    answers: "n\u01A1|in|\u01A1n|ni|\u01B0\u01A1n|gi\u01A1|ng\u01A1|\u01B0ng|n\u01A1i|\u01B0\u01A1ng|g\u01B0\u01A1ng|ng\u01B0\u01A1i|gi\u01B0\u01A1ng|"
+    validWords: "n\u01A1|in|\u01A1n|ni|\u01B0\u01A1n|gi\u01A1|ng\u01A1|\u01B0ng|n\u01A1i|\u01B0\u01A1ng|g\u01B0\u01A1ng|ng\u01B0\u01A1i|gi\u01B0\u01A1ng"
+  - world: 5
+    subWorld: 4
+    level: 7
+    word: "nghi\xEAn"
+    answers: "in|ni|ghi|inh|h\xEAn|n\xEAn|gh\xEA|nhi|ninh|ni\xEAn|hi\xEAn|nghi|nghi\xEAn|"
+    validWords: "in|ni|ghi|inh|h\xEAn|n\xEAn|gh\xEA|nhi|ninh|ni\xEAn|hi\xEAn|nghi|nghi\xEAn"
+  - world: 5
+    subWorld: 4
+    level: 8
+    word: "nghi\u1EC1n"
+    answers: "h\u1EC1|in|ni|n\u1EC1|n\u1EC1n|ghi|inh|nhi|ninh|ngh\u1EC1|hi\u1EC1n|nghi|ghi\u1EC1n|nghi\u1EC1n|"
+    validWords: "h\u1EC1|in|ni|n\u1EC1|n\u1EC1n|ghi|inh|nhi|ninh|ngh\u1EC1|hi\u1EC1n|nghi|ghi\u1EC1n|nghi\u1EC1n"
+  - world: 5
+    subWorld: 4
+    level: 9
+    word: "nghi\u1EC7n"
+    answers: "h\u1EC7|n\u1EC7|in|ni|ghi|inh|n\u1EC7n|nhi|ninh|nh\u1EC7n|ngh\u1EC7|hi\u1EC7n|nghi|nghi\u1EC7n|"
+    validWords: "h\u1EC7|n\u1EC7|in|ni|ghi|inh|n\u1EC7n|nhi|ninh|nh\u1EC7n|ngh\u1EC7|hi\u1EC7n|nghi|nghi\u1EC7n"
+  - world: 5
+    subWorld: 4
+    level: 10
+    word: "ngo\u1EB1ng"
+    answers: "go|no|ong|non|o\u1EB1n|g\u1EB1n|ngon|nong|ngo\u1EB1n|ngo\u1EB1ng|"
+    validWords: "go|no|ong|non|o\u1EB1n|g\u1EB1n|ngon|nong|ngo\u1EB1n|ngo\u1EB1ng"
+  - world: 5
+    subWorld: 4
+    level: 11
+    word: "thuy\u1EBFt"
+    answers: "uy|ty|tu|t\u1EBF|th\u1EBF|y\u1EBFu|tuy|h\u1EBFt|t\u1EBFt|tu\u1EBF|y\u1EBFt|t\u1EBFu|thu\u1EBF|huy\u1EBFt|thuy\u1EBFt|"
+    validWords: "uy|ty|tu|t\u1EBF|th\u1EBF|y\u1EBFu|tuy|h\u1EBFt|t\u1EBFt|tu\u1EBF|y\u1EBFt|t\u1EBFu|thu\u1EBF|huy\u1EBFt|thuy\u1EBFt|thu|tuy\u1EBFt"
+  - world: 5
+    subWorld: 4
+    level: 12
+    word: "kho\u1EA3nh"
+    answers: "h\u1EA3|ho|\u1EA3o|n\u1EA3o|kho|nho|h\u1EA3o|ho\u1EA3|nh\u1EA3|o\u1EA3n|\u1EA3nh|kh\u1EA3o|kh\u1EA3n|kho\u1EA3n|kho\u1EA3nh|"
+    validWords: "h\u1EA3|ho|\u1EA3o|n\u1EA3o|kho|nho|h\u1EA3o|ho\u1EA3|nh\u1EA3|o\u1EA3n|\u1EA3nh|kh\u1EA3o|kh\u1EA3n|kho\u1EA3n|kho\u1EA3nh|no|n\u1EA3"
+  - world: 5
+    subWorld: 4
+    level: 13
+    word: "ngo\u1EA3nh"
+    answers: "g\u1EA3|go|h\u1EA3|ho|n\u1EA3o|ng\u1EA3|ong|non|nho|h\u1EA3o|n\u1EA3n|ho\u1EA3|ngon|nong|ngo\u1EA3nh|"
+    validWords: "g\u1EA3|go|h\u1EA3|ho|n\u1EA3o|ng\u1EA3|ong|non|nho|h\u1EA3o|n\u1EA3n|ho\u1EA3|ngon|nong|ngo\u1EA3nh|no|n\u1EA3|\u1EA3o|nh\u1EA3|o\u1EA3n|\u1EA3nh|ho\u1EA3ng|ng\u1EA3nh"
+  - world: 5
+    subWorld: 4
+    level: 14
+    word: "nho\xE1ng"
+    answers: "go|\xE1n|n\xE1|h\xE1|\xE1ng|ong|non|nho|\xE1nh|h\xE1o|nh\xE1|nh\xE1o|ng\xE1n|ngon|nho\xE1ng|"
+    validWords: "go|\xE1n|n\xE1|h\xE1|\xE1ng|ong|non|nho|\xE1nh|h\xE1o|nh\xE1|nh\xE1o|ng\xE1n|ngon|nho\xE1ng|g\xE1|ho|go\xE1|g\xE1n|h\xE1n|g\xE1nh|ng\xE1o|nong|nh\xE1ng"
+  - world: 5
+    subWorld: 4
+    level: 15
+    word: "nh\u01B0\u1EDDng"
+    answers: "h\u1EDD|h\u01B0|n\u1EDD|g\u1EDD|h\u1EDDn|nh\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|nh\u01B0|n\u01B0ng|nh\u1EDDn|nh\u01B0ng|n\u01B0\u1EDDng|nh\u01B0\u1EDDng|"
+    validWords: "h\u1EDD|h\u01B0|n\u1EDD|g\u1EDD|h\u1EDDn|nh\u1EDD|ng\u1EDD|\u01B0ng|\u01B0\u1EDDn|nh\u01B0|n\u01B0ng|nh\u1EDDn|nh\u01B0ng|n\u01B0\u1EDDng|nh\u01B0\u1EDDng|h\u01B0ng"
+  - world: 5
+    subWorld: 4
+    level: 16
+    word: khoanh
+    answers: na|ho|ao|nao|kho|anh|hao|nho|nha|oan|nhao|khao|hanh|khoan|khoanh|
+    validWords: na|ho|ao|nao|kho|anh|hao|nho|nha|oan|nhao|khao|hanh|khoan|khoanh|an|ha|no|hoa|khan|khoa|oanh
+  - world: 5
+    subWorld: 4
+    level: 17
+    word: "nghi\xEAng"
+    answers: "in|ni|ghi|inh|h\xEAn|n\xEAn|gh\xEA|nhi|ninh|ni\xEAn|hi\xEAn|nghi|gi\xEAng|nghi\xEAn|nghi\xEAng|"
+    validWords: "in|ni|ghi|inh|h\xEAn|n\xEAn|gh\xEA|nhi|ninh|ni\xEAn|hi\xEAn|nghi|gi\xEAng|nghi\xEAn|nghi\xEAng"
