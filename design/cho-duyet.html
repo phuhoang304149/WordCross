@@ -76,12 +76,19 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 
 <div class="item" data-id="worldcolor">
 <h3>Màu số World 1/2/3 trên SelectWorld</h3>
-<p>Game: teal / coral / vàng. Design (do cách đếm <code>nth-child</code> trong CSS lệch 1) ra coral / vàng / teal. Dev nghi đây là lỗi của design.</p>
+<p>Trước: teal / coral / vàng. Design (cách đếm <code>nth-child</code> trong CSS) ra coral / vàng / teal. <b>Đã làm theo design</b> (commit cdffb66, OTA 1.0.0, ảnh <a href="../Build/remote-r2-0.3/qa-shots/selectws-final-selectworld.png">selectws-final-selectworld.png</a>). Chọn “Giữ teal/coral/vàng” nếu muốn quay lại.</p>
 <label class="opt"><input type="radio" name="worldcolor" value="design">Theo design (coral/vàng/teal)</label>
 <label class="opt"><input type="radio" name="worldcolor" value="game">Giữ teal/coral/vàng</label>
 <textarea placeholder="Ghi chú"></textarea>
 </div>
 
+<div class="item" data-id="sprite">
+<h3>Cạnh thẻ / nút hơi mềm so với design <span class="tag">cần Codex nếu làm</span></h3>
+<p>Thẻ, pill, nút dùng sprite bo góc <code>ui_round</code> 128px kéo 9-slice nên cạnh mềm hơn CSS một chút (thấy rõ khi phóng to ảnh). Muốn sắc như design phải vẽ lại sprite độ phân giải cao hơn.</p>
+<label class="opt"><input type="radio" name="sprite" value="codex">Cho Codex vẽ lại sprite bo góc sắc hơn</label>
+<label class="opt"><input type="radio" name="sprite" value="giu">Chấp nhận như hiện tại</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
 <div class="item" data-id="rewardplaying">
 <h3>Rewarded lúc đang phát quảng cáo</h3>
 <p>Design có nút “ĐÓNG QUẢNG CÁO” (mô phỏng). Game dùng quảng cáo thật toàn màn hình nên không có nút này.</p>
@@ -161,7 +168,8 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 <ul>
 <li>Bản nội bộ <b>1.0.0</b> (code 202001035) đã chạy trên máy test; OTA ở <code>wordcross/1.0.0/clr</code> và <code>wordcross/1.0.0/data</code>. Bản live 0.3 không đổi.</li>
 <li>Đã xong + xác minh trên máy: bỏ splash, Notifications B, font Baloo 2, Ads (test ID), nút mua Shop, Home và các popup từ Home khớp design theo số đo.</li>
-<li>Đang làm: SelectWorld → SelectLevel; sau đó Main (gồm banner), popup trong game, localization, đề xuất mới.</li>
+<li>Đã xong thêm: SelectWorld, SelectLevel, Header dùng chung (khớp design theo số đo, OTA 1.0.0).</li>
+<li>Đang làm: Main (gồm banner); sau đó popup trong game, localization, đề xuất mới.</li>
 <li>Nhánh chưa merge: <code>wordcross/bot</code> (chờ duyệt cách chơi), <code>wordcross/banner</code> (làm ở nhóm Main).</li>
 </ul>
 </div>
