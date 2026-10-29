@@ -47,11 +47,6 @@ public class SellReadMeInspector : Editor
             Application.OpenURL("https://www.youtube.com/watch?v=f0TfqG9_Xbc");
         }
 
-        EditorGUILayout.Space();
-        if (GUILayout.Button("Enable Facebook Features", GUILayout.MinHeight(40)))
-        {
-            Application.OpenURL("https://drive.google.com/open?id=1bjhWT0xrIWOG0vY8t03Tiqh7_ErRCR2zTm8zNR667f4");
-        }
 
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("3. My Other Great Source Codes", EditorStyles.boldLabel);

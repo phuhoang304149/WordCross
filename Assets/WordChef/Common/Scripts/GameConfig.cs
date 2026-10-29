@@ -13,8 +13,6 @@ public class GameConfig
     public string androidPackageID;
     public string iosAppID;
     public string macAppID;
-    public string facebookPageID;
-    public bool enableFacebookFeatures;
 
     [Header("")]
     public int fontSizeInDiskSelectLevel;

@@ -90,9 +90,9 @@ public class CUtils
     public static void LikeFacebookPage(string faceID)
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
-		Application.OpenURL("fb://page/" + ConfigController.Config.facebookPageID);
+		Application.OpenURL("fb://page/" + faceID);
 #else
-        Application.OpenURL("https://www.facebook.com/" + ConfigController.Config.facebookPageID);
+        Application.OpenURL("https://www.facebook.com/" + faceID);
 #endif
         SetLikeFbPage(faceID);
     }
@@ -186,18 +186,6 @@ public class CUtils
         }
     }
 
-    public static string GetFacePictureURL(string facebookID, int? width = null, int? height = null, string type = null)
-    {
-        string url = string.Format("/{0}/picture", facebookID);
-        string query = width != null ? "&width=" + width.ToString() : "";
-        query += height != null ? "&height=" + height.ToString() : "";
-        query += type != null ? "&type=" + type : "";
-        query += "&redirect=false";
-        if (query != "")
-            url += ("?g" + query);
-        return url;
-    }
-
     public static double GetCurrentTime()
     {
         TimeSpan span = DateTime.Now.Subtract(new DateTime(1970, 1, 1, 0, 0, 0));
@@ -264,16 +252,6 @@ public class CUtils
         return controllerObj.GetComponent<BaseController>();
     }
 
-    public static void SetLoggedInFb()
-    {
-        CPlayerPrefs.SetBool("logged_in_fb", true);
-    }
-
-    public static bool IsLoggedInFb()
-    {
-        return CPlayerPrefs.GetBool("logged_in_fb", false);
-    }
-
     public static void SetBuyItem()
     {
         CPlayerPrefs.SetBool("buy_item", true);
@@ -307,11 +285,6 @@ public class CUtils
     public static void SetLikeFbPage(string id)
     {
         CPlayerPrefs.SetBool("like_page_" + id, true);
-    }
-
-    public static bool IsLikedFbPage(string id)
-    {
-        return CPlayerPrefs.GetBool("like_page_" + id, false);
     }
 
     public static void SetInitGame()
