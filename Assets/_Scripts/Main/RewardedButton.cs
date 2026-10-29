@@ -22,26 +22,22 @@ public class RewardedButton : MonoBehaviour
 #if UNITY_ANDROID || UNITY_IOS
         Timer.Schedule(this, 0.1f, AddEvents);
 
-        if (!IsAvailableToShow())
+        // Hàng free luôn hiện (design shop.free): WATCH khi hết cooldown, đồng hồ khi đang cooldown; popup lo trạng thái không có quảng cáo.
+        if (!IsActionAvailable())
         {
             content.SetActive(false);
-            if (IsAdAvailable() && !IsActionAvailable())
-            {
-                int remainTime = (int)(ConfigController.Config.rewardedVideoPeriod - CUtils.GetActionDeltaTime(ACTION_NAME));
-                ShowTimerText(remainTime);
-            }
+            int remainTime = (int)(ConfigController.Config.rewardedVideoPeriod - CUtils.GetActionDeltaTime(ACTION_NAME));
+            ShowTimerText(remainTime);
         }
 
         InvokeRepeating("IUpdate", 1, 1);
-#else
-        content.SetActive(false);
 #endif
     }
 
     private void OnEnable()
     {
         if (!isEventAttached) return;
-        if (!IsAvailableToShow() && IsAdAvailable() && !IsActionAvailable())
+        if (!IsActionAvailable())
         {
             content.SetActive(false);
             // Coroutine của TimerText đã chết khi Shop bị ẩn; Stop để Run() chạy lại.
@@ -58,7 +54,7 @@ public class RewardedButton : MonoBehaviour
 
     private void IUpdate()
     {
-        content.SetActive(IsAvailableToShow());
+        content.SetActive(IsActionAvailable());
     }
 
     // Mở popup xác nhận (design: rewarded-video ready); popup tự xử lý loading/cooldown/nofill/offline và phát video.
@@ -91,10 +87,7 @@ public class RewardedButton : MonoBehaviour
     private void OnCountDownComplete()
     {
         adAvailableTextHolder.SetActive(false);
-        if (IsAdAvailable())
-        {
-            content.SetActive(true);
-        }
+        content.SetActive(true);
     }
 
     public bool IsAvailableToShow()
