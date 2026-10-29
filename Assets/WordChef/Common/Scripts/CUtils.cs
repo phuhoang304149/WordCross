@@ -479,6 +479,9 @@ public class CUtils
         return list;
     }
 
+    // WordCrossBootstrap chiếm build index 0, chỉ số scene gameplay legacy lệch thêm 1.
+    private const int GameplaySceneBuildOffset = 1;
+
     public static void LoadScene(int sceneIndex, bool useScreenFader = false)
     {
         if (useScreenFader)
@@ -487,13 +490,13 @@ public class CUtils
         }
         else
         {
-            SceneManager.LoadScene(sceneIndex);
+            SceneManager.LoadScene(sceneIndex + GameplaySceneBuildOffset);
         }
     }
 
     public static void ReloadScene(bool useScreenFader = false)
     {
-        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        int currentIndex = SceneManager.GetActiveScene().buildIndex - GameplaySceneBuildOffset;
         LoadScene(currentIndex, useScreenFader);
     }
 
