@@ -332,6 +332,9 @@ public class WinDialog : Dialog {
 
     public void DoubleRewardClick()
     {
+#if GAME_DEBUG || DEVELOPMENT_BUILD
+        Debug.Log("[Win] x2 click reward=" + reward + " claimed=" + bonusClaimed + " pending=" + bonusPending + " cooldown=" + IsVideoCooldown() + " loaded=" + IsVideoLoaded());
+#endif
         if (reward <= 0 || bonusClaimed || bonusPending || IsVideoCooldown() || !IsVideoLoaded()) return;
 
         bonusPending = true;

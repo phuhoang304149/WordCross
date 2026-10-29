@@ -25,6 +25,8 @@ namespace WordCross.Gameplay
     //   Hậu tố ;noads=N giả lập mua gói tắt quảng cáo thành công sau N giây (gọi Purchaser.GrantNoAds, cùng đường OnNoAdsRestored; không qua Google Play).
     //   noads | noads:off   giả lập mua ngay / xoá cờ buy_item + remove_ads để chụp lại trạng thái có banner.
     //   Hậu tố ;iap=<productId> (hoặc lệnh iap:<productId> ở Home) giả lập đơn IAP về (gọi Purchaser.ProcessPurchase như tầng sau store, không qua Google Play; cộng ruby thật, trả lại bằng ;ruby/reset).
+    //   Hậu tố ;ad=reward|close|fail|nofill dùng quảng cáo rewarded giả (xem xong / đóng sớm / lỗi / không có; xoá cooldown video). Đổi chế độ khi đang chạy: ghi chữ vào <persistentDataPath>/debug_ad.txt.
+    //   Mọi lệnh bật log "[DebugOpener] ruby=N" mỗi khi số ruby đổi.
     //   reset (trả số ruby và dữ liệu Daily về giá trị trước khi ghi đè)
     public sealed class DebugOpener : MonoBehaviour
     {
@@ -42,6 +44,35 @@ namespace WordCross.Gameplay
         private void Start()
         {
             StartCoroutine(Run());
+            StartCoroutine(WatchAd());
+        }
+
+        // Theo dõi số ruby và file debug_ad.txt (đổi chế độ quảng cáo giả khi đang chạy), in log để kiểm bằng logcat.
+        private IEnumerator WatchAd()
+        {
+            string path = Path.Combine(Application.persistentDataPath, "debug_ad.txt");
+            int lastRuby = int.MinValue;
+            while (true)
+            {
+                if (File.Exists(path))
+                {
+                    string mode = File.ReadAllText(path).Trim().ToLowerInvariant();
+                    File.Delete(path);
+                    SetAd(mode);
+                }
+                int ruby = CurrencyController.GetBalance();
+                if (ruby != lastRuby) Debug.Log("[DebugOpener] ruby=" + ruby);
+                lastRuby = ruby;
+                yield return new WaitForSecondsRealtime(0.25f);
+            }
+        }
+
+        private void SetAd(string mode)
+        {
+            if (mode == "none") mode = "";
+            AdmobController.instance.debugAd = mode;
+            CPlayerPrefs.DeleteKey("rewarded_video_time");
+            Debug.Log("[DebugAd] mode=" + mode);
         }
 
         private string ReadCommand()
@@ -100,6 +131,7 @@ namespace WordCross.Gameplay
                 else if (key == "solve") solveKeep = int.Parse(pair[1]);
                 else if (key == "noads") noAdsDelay = float.Parse(pair[1]);
                 else if (key == "iap") iapProduct = pair[1].Trim();
+                else if (key == "ad") SetAd(pair[1].Trim().ToLowerInvariant());
             }
             if (noAdsDelay >= 0) StartCoroutine(GrantNoAdsAfter(noAdsDelay));
 
