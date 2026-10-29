@@ -1,0 +1,160 @@
+{
+ "schemaVersion": 1,
+ "target": {
+  "levelsPerLocale": 534,
+  "topology": "6 world x 5 subworld; W1 sub1 = 12, còn lại 18"
+ },
+ "policy": {
+  "answers": "mọi từ corpus cùng locale ghép được từ word (>=2 đáp án/level); nếu >15 giữ seed + từ phổ biến (fr/es/pt theo thứ hạng file; vi theo hash ổn định vì không có tần suất); phần còn lại thành bonus (<=9)",
+  "difficulty": "tăng dần theo độ dài word, chữ lặp, số đáp án; quota độ dài mặc định theo phân bố Anh, thiếu từ thì dồn sang độ dài kề, không nhân bản level",
+  "vi": "CHỈ tiếng đơn/âm tiết (Viet74K lọc mục không khoảng trắng/dấu nối). Là policy bộ data để tích hợp vòng chữ hiện tại, KHÔNG phải hỗ trợ từ ghép nhiều tiếng. Dấu giữ chính xác.",
+  "quality": "Chưa native-review. Corpus fr/es/pt là danh sách từ phổ biến đã hạ chữ thường (có thể lẫn tên riêng/viết tắt/động từ chia); vi là wordlist rộng gồm cả từ hiếm/phương ngữ."
+ },
+ "sources": {
+  "vi": {
+   "url": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/master/Viet74K.txt",
+   "author": "Hồ Ngọc Đức wordlist qua duyet/vietnamese-wordlist",
+   "license": "GPL-2.0 (LICENSE repo nguồn); output phái sinh, cần xem xét khi phát hành",
+   "rawSha256": "b83d49308336f12ca46d06287d8db6e2cdc7a725d9a9dac56930051775fafb90",
+   "stored": "design/GD/data/source/Viet74K.txt.gz"
+  },
+  "fr/es/pt": "Assets/10000 French Words, Assets/10000 Spanish Words, Assets/5000 Portuguese Words (ISO-8859-1, license chưa ghi trong repo)"
+ },
+ "locales": {
+  "vi": {
+   "corpusLines": 73902,
+   "usableWords": 6056,
+   "rejected": {
+    "length": 206,
+    "uppercase/proper": 5012,
+    "space/hyphen/punct/digit": 61569,
+    "not-vietnamese-syllable": 790,
+    "duplicate": 268,
+    "empty": 1
+   },
+   "seedCandidatesByLen": {
+    "3": 2112,
+    "4": 1837,
+    "5": 643,
+    "6": 101,
+    "7": 1
+   },
+   "quotaUsedByLen": {
+    "3": 12,
+    "4": 36,
+    "5": 384,
+    "6": 101,
+    "7": 1
+   },
+   "levelsShortfall": 0,
+   "files": [
+    {
+     "path": "design/GD/data/source/Viet74K.txt.gz",
+     "sha256": "27c2d7e5081dba9d8f1311b7581bd94ef7bb0d7665c19e91e51fe8f6b1311204"
+    }
+   ],
+   "levels": 534,
+   "sha256": "d6262f50dad4d5e43e6ecbfce922ed4a285a8dc62a14168c16270256c7219b44"
+  },
+  "fr": {
+   "corpusLines": 10001,
+   "usableWords": 3710,
+   "rejected": {
+    "length": 3758,
+    "uppercase/proper": 1658,
+    "space/hyphen/punct/digit": 862,
+    "duplicate": 1,
+    "no-vowel": 11,
+    "empty": 1
+   },
+   "seedCandidatesByLen": {
+    "3": 107,
+    "4": 359,
+    "5": 685,
+    "6": 1050,
+    "7": 1211
+   },
+   "quotaUsedByLen": {
+    "3": 12,
+    "4": 36,
+    "5": 126,
+    "6": 180,
+    "7": 180
+   },
+   "levelsShortfall": 0,
+   "files": [
+    {
+     "path": "Assets/10000 French Words/10000 common french words.txt",
+     "sha256": "4612960a06fc51aff4ca084c5372e93ab0df96a5804f57ff3dc5b606fc337b20"
+    }
+   ],
+   "levels": 534,
+   "sha256": "c3a5303adb56adcb5278a63a378316c61bd18d373b109aaeab850c70d24b6dcb"
+  },
+  "es": {
+   "corpusLines": 10001,
+   "usableWords": 5270,
+   "rejected": {
+    "length": 4707,
+    "no-vowel": 23,
+    "empty": 1
+   },
+   "seedCandidatesByLen": {
+    "3": 146,
+    "4": 482,
+    "5": 1130,
+    "6": 1425,
+    "7": 1615
+   },
+   "quotaUsedByLen": {
+    "3": 12,
+    "4": 36,
+    "5": 126,
+    "6": 180,
+    "7": 180
+   },
+   "levelsShortfall": 0,
+   "files": [
+    {
+     "path": "Assets/10000 Spanish Words/10000 common spanish words.txt",
+     "sha256": "e2ea5cefb6a375e9610060458f06fb5bbf2d35b7b873a29605014ff059c4bf0d"
+    }
+   ],
+   "levels": 534,
+   "sha256": "6037f3b23f3cc7125a79ac81295ae404ad2e343a05894aca2afe04e323c1ad1f"
+  },
+  "pt": {
+   "corpusLines": 4928,
+   "usableWords": 3583,
+   "rejected": {
+    "length": 1333,
+    "no-vowel": 11,
+    "empty": 1
+   },
+   "seedCandidatesByLen": {
+    "3": 167,
+    "4": 440,
+    "5": 878,
+    "6": 903,
+    "7": 810
+   },
+   "quotaUsedByLen": {
+    "3": 12,
+    "4": 36,
+    "5": 126,
+    "6": 180,
+    "7": 180
+   },
+   "levelsShortfall": 0,
+   "files": [
+    {
+     "path": "Assets/5000 Portuguese Words/5000 common portuguese words.txt",
+     "sha256": "a9c44d5efcd43a0b4663184fe8f7b70d3c590784c403d4f018db87c6baa744d9"
+    }
+   ],
+   "levels": 534,
+   "sha256": "a100bec19b83716a254ac7e8a55f5ec9ad6cb06c3f3a10011ccc93003a9d762f"
+  }
+ },
+ "outputs": {}
+}
