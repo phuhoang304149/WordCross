@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """Tiny static server for the preview Addressables export.
-Maps /wordcross/data/<ver>/android/<file> (the URL baked in the catalog) onto <root>/<ver>/android/<file>.
+Maps /wordcross/<ver>/data/android/<file> (current R2 layout; the older /wordcross/data/<ver>/android/<file> too) onto <root>/<ver>/android/<file>.
 Usage: serve.py <root> <port> <log>"""
-import functools, http.server, os, sys
+import functools, http.server, os, re, sys
 
 PREFIX = "/wordcross/data"
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def translate_path(self, path):
-        if path.startswith(PREFIX):
+        match = re.match(r"/wordcross/([^/]+)/data/(.*)", path)
+        if match:
+            path = "/%s/%s" % (match.group(1), match.group(2))
+        elif path.startswith(PREFIX):
             path = path[len(PREFIX):]
         return super().translate_path(path)
 
