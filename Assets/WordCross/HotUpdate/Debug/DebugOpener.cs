@@ -3,7 +3,10 @@ using System;
 using System.Collections;
 using System.IO;
 using UnityEngine;
+using TMPro;
+using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Script.Utils;
 
 namespace WordCross.Gameplay
@@ -193,6 +196,9 @@ namespace WordCross.Gameplay
                     break;
                 case "iap":
                     iapProduct = head[1].Trim();
+                    break;
+                case "tmpprobe":
+                    yield return OpenTmpProbe();
                     break;
                 case "home":
                     break;
@@ -407,6 +413,55 @@ namespace WordCross.Gameplay
             Prefs.extraTarget = savedExtraTarget;
             if (name == "win") CurrencyController.SetBalance(savedRuby);
             CPlayerPrefs.Save();
+        }
+
+        // Kiểm TMP (T123): nạp font Baloo2/CookieRun từ Addressables, vẽ chữ có dấu vi/fr/es/pt với character spacing 0 / 6 / 12.
+        private IEnumerator OpenTmpProbe()
+        {
+            string[] fonts = { "Baloo2/static/Baloo2-ExtraBold", "Baloo2/static/Baloo2-Bold", "Baloo2/static/Baloo2-SemiBold", "CookieRun/CookieRun Bold" };
+            string[] lines =
+            {
+                "Tiếng Việt: đ ơ ư ă â ê ô ặ ề ổ ữ ị",
+                "Français: é è à ç œ ù ï â ê ô",
+                "Español: ñ ¿ ¡ á í ó ú ü",
+                "Português: ã õ ç é ê â …",
+            };
+            float[] spacings = { 0f, 6f, 12f, 0f };
+            var root = new GameObject("TmpProbe", typeof(RectTransform));
+            var canvas = root.AddComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            canvas.sortingOrder = 30000;
+            var background = new GameObject("Bg", typeof(RectTransform)).AddComponent<Image>();
+            background.transform.SetParent(root.transform, false);
+            background.color = new Color(0.07f, 0.71f, 0.65f, 1f);
+            background.rectTransform.anchorMin = Vector2.zero;
+            background.rectTransform.anchorMax = Vector2.one;
+            background.rectTransform.offsetMin = Vector2.zero;
+            background.rectTransform.offsetMax = Vector2.zero;
+            for (int i = 0; i < fonts.Length; i++)
+            {
+                var handle = Addressables.LoadAssetAsync<TMP_FontAsset>("Assets/WordCross/Fonts/" + fonts[i] + " SDF.asset");
+                yield return handle;
+                var font = handle.Result;
+                Debug.Log("[TmpProbe] font=" + fonts[i] + " loaded=" + (font != null) + " glyphs=" + (font != null ? font.characterTable.Count : -1) + " mode=" + (font != null ? font.atlasPopulationMode.ToString() : "-"));
+                if (font == null) continue;
+                var text = new GameObject("Probe" + i, typeof(RectTransform)).AddComponent<TextMeshProUGUI>();
+                text.transform.SetParent(root.transform, false);
+                text.font = font;
+                text.fontSize = 56;
+                text.characterSpacing = spacings[i];
+                text.color = Color.white;
+                text.alignment = TextAlignmentOptions.Center;
+                text.textWrappingMode = TextWrappingModes.Normal;
+                text.text = fonts[i].Substring(fonts[i].LastIndexOf('/') + 1) + " cs=" + spacings[i] + "\n" + lines[i];
+                var rect = text.rectTransform;
+                rect.anchorMin = new Vector2(0f, 1f - (i + 1) * 0.22f);
+                rect.anchorMax = new Vector2(1f, 1f - i * 0.22f - 0.02f);
+                rect.offsetMin = Vector2.zero;
+                rect.offsetMax = Vector2.zero;
+            }
+            yield return new WaitForSeconds(0.5f);
+            Debug.Log("[TmpProbe] shown");
         }
 
         private IEnumerator OpenRewarded(string arg)
