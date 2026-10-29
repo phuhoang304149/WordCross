@@ -27,7 +27,8 @@ public class WordRegion : MonoBehaviour {
     private int numWords, numCol, numRow;
     private float sizeCss;
     private float[] colWidthCss;
-    private RectTransform coach;
+    private RectTransform coach, coachLabel;
+    private Text coachText;
     private float coachHeightCss, lastToolsY = float.NaN;
 
     private RectTransform rt;
@@ -113,6 +114,19 @@ public class WordRegion : MonoBehaviour {
         Layout();
     }
 
+    private void OnDestroy()
+    {
+        if (Locator<LocalizationController>.Instance != null)
+            Locator<LocalizationController>.Instance.onLanguageChanged -= OnLanguageChanged;
+    }
+
+    private void OnLanguageChanged(string code)
+    {
+        if (coach == null) return;
+        ApplyCoachText();
+        Layout();
+    }
+
     private void LateUpdate()
     {
         if (lines.Count == 0 || toolsTop == null) return;
@@ -148,12 +162,6 @@ public class WordRegion : MonoBehaviour {
     private void BuildCoach()
     {
         if (!ShowsCoach()) return;
-        var loc = Locator<LocalizationController>.Instance;
-        string message = GameState.isDaily
-            ? loc.Get("game.coachDaily", "n", numWords)
-            : loc.Get("game.coach1") + "\n" + loc.Get("game.coach2");
-        int numLines = GameState.isDaily ? 1 : 2;
-        coachHeightCss = CoachPadY * 2 + CoachLine * numLines;
 
         float perCss = LocalPerCss();
         var box = new GameObject("Coach", typeof(RectTransform), typeof(Image));
@@ -168,19 +176,38 @@ public class WordRegion : MonoBehaviour {
         image.raycastTarget = false;
 
         var label = new GameObject("Text", typeof(RectTransform), typeof(Text));
-        var labelRect = (RectTransform)label.transform;
-        labelRect.SetParent(coach, false);
-        labelRect.anchorMin = Vector2.zero;
-        labelRect.anchorMax = Vector2.one;
+        coachLabel = (RectTransform)label.transform;
+        coachLabel.SetParent(coach, false);
+        coachLabel.anchorMin = Vector2.zero;
+        coachLabel.anchorMax = Vector2.one;
+        coachText = label.GetComponent<Text>();
+        coachText.font = textPreview.text.font;
+        coachText.fontSize = Mathf.RoundToInt(CoachFont * perCss);
+        coachText.fontStyle = FontStyle.Bold;
+        coachText.alignment = TextAnchor.MiddleCenter;
+        coachText.color = new Color32(0x6b, 0x4d, 0x00, 255);
+        coachText.raycastTarget = false;
+
+        ApplyCoachText();
+        Locator<LocalizationController>.Instance.onLanguageChanged += OnLanguageChanged;
+    }
+
+    // Đặt chữ theo ngôn ngữ hiện tại rồi đo lại bề rộng/chiều cao khung (gọi lúc dựng và mỗi lần đổi ngôn ngữ).
+    private void ApplyCoachText()
+    {
+        var loc = Locator<LocalizationController>.Instance;
+        string message = GameState.isDaily
+            ? loc.Get("game.coachDaily", "n", numWords)
+            : loc.Get("game.coach1") + "\n" + loc.Get("game.coach2");
+        int numLines = GameState.isDaily ? 1 : 2;
+        coachHeightCss = CoachPadY * 2 + CoachLine * numLines;
+
+        float perCss = LocalPerCss();
+        var text = coachText;
+        var labelRect = coachLabel;
         labelRect.offsetMin = labelRect.offsetMax = Vector2.zero;
-        var text = label.GetComponent<Text>();
-        text.font = textPreview.text.font;
-        text.fontSize = Mathf.RoundToInt(CoachFont * perCss);
-        text.fontStyle = FontStyle.Bold;
-        text.alignment = TextAnchor.MiddleCenter;
         text.horizontalOverflow = HorizontalWrapMode.Overflow;
-        text.color = new Color32(0x6b, 0x4d, 0x00, 255);
-        text.raycastTarget = false;
+        text.verticalOverflow = VerticalWrapMode.Truncate;
         text.text = message;
 
         float width = text.preferredWidth + CoachPadX * 2 * perCss;
