@@ -1,7 +1,7 @@
 {
   "contentFolder": "Assets/WordCross/Config/GameData",
   "admob": {
-    "androidAppId": "",
+    "androidAppId": "ca-app-pub-5916994690017637~6356789201",
     "iosAppId": "",
     "androidBannerId": "ca-app-pub-5916994690017637/8327033343",
     "androidInterstitialId": "ca-app-pub-5916994690017637/7800242125",
