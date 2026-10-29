@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/WordCross/Bootstrap/WordCrossBootstrap.unity
+    guid: 4ce4820d6f27443f9a0360c79edbf231
+  - enabled: 1
     path: Assets/_Scenes/Home.unity
     guid: 064b96d707ae11340bcbed5e31361e30
   - enabled: 1
