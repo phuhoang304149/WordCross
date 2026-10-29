@@ -37,7 +37,8 @@ namespace Superpow
 
         public static GameLevel Load(int world, int subWorld, int level)
         {
-            return Resources.Load<GameLevel>("World_" + world + "/SubWorld_" + subWorld + "/Level_" + level);
+            if (level >= GetNumLevels(world, subWorld)) return null;
+            return CatGaming.Clr.ClrContent.Instance.Load<GameLevel>("Levels/World_" + world + "/SubWorld_" + subWorld + "/Level_" + level);
         }
     }
 }

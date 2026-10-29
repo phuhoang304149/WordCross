@@ -20,7 +20,7 @@ public class TestScript : MonoBehaviour {
                 int num = Superpow.Utils.GetNumLevels(world, sub);
                 for (int level = 0; level < num; level++)
                 {
-                    var gameLevel = Resources.Load<GameLevel>("World_" + world + "/SubWorld_" + sub + "/Level_" + level);
+                    var gameLevel = Superpow.Utils.Load(world, sub, level);
                     result += gameLevel.word + "\n";
                 }
             }
@@ -37,7 +37,7 @@ public class TestScript : MonoBehaviour {
                 int num = Superpow.Utils.GetNumLevels(world, sub);
                 for (int level = 0; level < num; level++)
                 {
-                    var gameLevel = Resources.Load<GameLevel>("World_" + world + "/SubWorld_" + sub + "/Level_" + level);
+                    var gameLevel = Superpow.Utils.Load(world, sub, level);
 
                     var answers = CUtils.BuildListFromString<string>(gameLevel.answers);
                     if (gameLevel.word.Contains("a") && gameLevel.word.Contains("m") && answers[0].Length == 2)

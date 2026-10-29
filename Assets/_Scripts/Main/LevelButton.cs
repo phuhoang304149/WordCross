@@ -26,7 +26,7 @@ public class LevelButton : MonoBehaviour {
         levelText.text = (level + 1).ToString();
         GetComponent<Button>().onClick.AddListener(OnButtonClick);
 
-        gameLevel = Resources.Load<GameLevel>("World_" + world + "/SubWorld_" + subWorld + "/Level_" + level);
+        gameLevel = Superpow.Utils.Load(world, subWorld, level);
 
         if (gameLevel != null)
         {
