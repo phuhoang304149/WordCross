@@ -7,8 +7,8 @@
 <h2 id="src">1. Nguồn đã đọc</h2>
 <h3>WordCross (HIỆN CÓ)</h3>
 <ul>
-<li><b>Scenes</b> <code>Assets/_Scenes/{Home,SelectWorld,SelectLevel,Main}.unity</code>: Home chỉ có m_Text <code>WORD CROSS</code>; các nhãn nút còn lại không có m_Text.</li>
-<li><b>Prefab dialog</b> <code>Assets/_Prefabs/Dialogs/*.prefab</code>, <code>Header</code>, <code>ShopItem</code>, <code>WorldItem</code>, <code>LevelButton</code>: chữ thật (m_Text) liệt kê ở mục 9. Nhãn dạng ảnh nằm trong <code>Assets/_Sprites/Main</code> (button_play, button_shop, button_hint, button_shuffle, button_next_level, button_menu, button_video, game_title, extra_word_dialog, how_play_preview00–02…). Chỉ đọc tên file, <b>chưa giải mã pixel</b> nên nội dung chữ trong ảnh là suy luận từ tên.</li>
+<li><b>Scenes</b> <code>Assets/_Scenes/{Home,SelectWorld,SelectLevel,Main}.unity</code>: Home chỉ có m_Text <code>WORD CROSS</code> (tên dự án giữ là WordCross; ảnh <code>game_title.png</code> đọc trực tiếp lại ghi <b>WORD CHEF</b>, khác text trong Home.unity); các nhãn nút còn lại không có m_Text.</li>
+<li><b>Prefab dialog</b> <code>Assets/_Prefabs/Dialogs/*.prefab</code>, <code>Header</code>, <code>ShopItem</code>, <code>WorldItem</code>, <code>LevelButton</code>: chữ thật (m_Text) liệt kê ở mục 9. Nhãn dạng ảnh nằm trong <code>Assets/_Sprites/Main</code> (button_play, button_shop, button_hint, button_shuffle, button_next_level, button_menu, button_video, game_title, extra_word_dialog, how_play_preview00–02…). Đọc trực tiếp file gốc (không qua screenshot) chỉ 4 ảnh: <code>game_title.png</code> ghi WORD CHEF; <code>button_play.png</code> chỉ có icon tam giác xanh, <b>không chữ PLAY</b>; <code>button_hint.png</code> chỉ có icon bóng đèn cam, <b>không chữ HINT</b>; <code>how_play_preview00.png</code> minh hoạ đĩa vòng chữ W/O/R/D và bảng 3 dòng ô đáp án (không lưới giao nhau). Các sprite còn lại chỉ biết tên file, chưa xem pixel nên nội dung là suy luận từ tên.</li>
 <li><b>Scripts</b> <code>Const.cs</code> (HINT_COST=2, NUM_SUBWORLD=5), <code>GameLevel.cs</code> (word/answers/validWords), <code>MainController.cs</code>, <code>WordRegion.cs</code> (CheckAnswer, HintClick, cột), <code>LineWord.cs</code> (ShowHint mở 1 ô), <code>ExtraWord.cs</code>, <code>ExtraWordDialog.cs</code>, <code>WinDialog.cs</code>, <code>RewardedButton.cs</code>, <code>RewardedVideoDialog.cs</code>, <code>Prefs.cs</code>, <code>Utils.cs</code> (GetNumLevels).</li>
 <li><b>Common</b> <code>WordChef/Common/Scripts</code>: <code>CurrencyController.cs</code> (ruby, DEFAULT_CURRENCY=10, Credit/Debit), <code>AdmobController.cs</code>, <code>CUtils.cs</code> (ShowInterstitialAd), <code>Dialog.cs</code>/<code>BaseController.cs</code> (nơi gọi interstitial), <code>ShopDialog.cs</code>, <code>GameConfig.cs</code>; giá trị thật trong <code>WordChef/Common/Prefabs/GameMaster.prefab</code>: adPeriod 90, rewardedVideoPeriod 120, rewardedVideoAmount 2, enableFacebookFeatures 0.</li>
 <li><b>Level</b> 534 asset <code>Assets/Resources/World_w/SubWorld_s/Level_l.asset</code>; <b>từ điển</b> <code>Assets/10000 English|French|Spanish Words</code>, <code>5000 Portuguese Words</code>, <code>words_used_in_game.txt</code> (534 dòng, khớp đúng 534 <code>word</code> của level).</li>
@@ -88,17 +88,16 @@
 <tr><td>Bắt đầu</td><td>Ruby khởi đầu (HIỆN CÓ)</td><td>10</td></tr>
 <tr><td>Level 1 (tutorial) thắng lần đầu</td><td>+3</td><td>13</td></tr>
 <tr><td>Level 2–5 thắng lần đầu</td><td>4 × +2</td><td>21</td></tr>
-<tr><td>Từ thưởng: gom đủ 5 và nhận</td><td>+2</td><td>23</td></tr>
-<tr><td>2 hint khi bí</td><td>2 × −2</td><td>19</td></tr>
-<tr><td>Daily hôm nay</td><td>+3</td><td><b>22</b></td></tr>
-<tr><td colspan="3">Tuỳ chọn: video x2 sau Daily +3 (ra 25). Không có bước nào bắt buộc xem ads.</td></tr></table></div>
+<tr><td>2 hint khi bí</td><td>2 × −2</td><td>17</td></tr>
+<tr><td>Daily hôm nay</td><td>+3</td><td><b>20</b></td></tr>
+<tr><td colspan="3">Level 1–5 trong levels-data.js không có từ thưởng nên phiên A không có bước nhận Từ thưởng. Tuỳ chọn: video x2 sau Daily +3 (ra 23). Không có bước nào bắt buộc xem ads.</td></tr></table></div>
 <div class="tb"><table><tr><th>Bước</th><th>Phiên B (ngày hôm sau, ~6 phút)</th><th>Ruby</th></tr>
-<tr><td>Bắt đầu</td><td>Số dư cuối phiên A</td><td>22</td></tr>
-<tr><td>Daily (chuỗi 2 ngày, chưa tới mốc 3)</td><td>+3</td><td>25</td></tr>
-<tr><td>Level 6–9 lần đầu</td><td>4 × +2</td><td>33</td></tr>
-<tr><td>Bot mức Vừa thắng</td><td>+2</td><td>35</td></tr>
-<tr><td>3 hint</td><td>3 × −2</td><td><b>29</b></td></tr>
-<tr><td colspan="3">Tuỳ chọn: Shop video +2 (ra 31). Ngày thứ 3 có mốc chuỗi +2. Số dư tăng ~+7/phiên → người chơi có ruby để dùng hint mà không cần mua.</td></tr></table></div>
+<tr><td>Bắt đầu</td><td>Số dư cuối phiên A</td><td>20</td></tr>
+<tr><td>Daily (chuỗi 2 ngày, chưa tới mốc 3)</td><td>+3</td><td>23</td></tr>
+<tr><td>Level 6–9 lần đầu</td><td>4 × +2</td><td>31</td></tr>
+<tr><td>Bot mức Vừa thắng</td><td>+2</td><td>33</td></tr>
+<tr><td>3 hint</td><td>3 × −2</td><td><b>27</b></td></tr>
+<tr><td colspan="3">Tuỳ chọn: Shop video +2 (ra 29). Ngày thứ 3 có mốc chuỗi +2. Số dư tăng ~+7/phiên → người chơi có ruby để dùng hint mà không cần mua.</td></tr></table></div>
 <h3>Chỉ số cần cân chỉnh sau phát hành (không phải cam kết retention)</h3>
 <ul><li>Tỷ lệ hoàn thành Level 1 và thời gian tới thắng đầu; D1/D7 quay lại.</li><li>Tỷ lệ level bị rời (quit) theo level; tỷ lệ dùng hint trên mỗi level; số dư ruby trung vị cuối phiên (quá cao → tăng chi phí/ giảm thưởng; quá thấp → tăng thưởng).</li><li>Tỷ lệ chơi Daily, tỷ lệ bù ngày, độ dài chuỗi trung vị.</li><li>Tỷ lệ bấm video tuỳ chọn và tỷ lệ hoàn thành; khiếu nại về quảng cáo.</li><li>Tỷ lệ thắng Bot theo độ khó (mục tiêu tham khảo: Dễ ~80%, Vừa ~55%, Khó ~30%).</li></ul>
 
@@ -165,7 +164,7 @@
 <tr><td>Rewarded: "Congratulation! You got {0} free rubies.", Claim</td><td>rv.*</td><td>Nhận thưởng! Đã cộng N ruby</td></tr>
 <tr><td>Rate: "If you love the game, Please rate us 5 stars…", YES / LATER</td><td>rate.*</td><td>…</td></tr>
 <tr><td>Header 12, LevelButton 1, WorldItem 7/18, “Hamberger” (placeholder)</td><td>số / tên subworld</td><td>“Subworld N” (giả định, tên thật nằm ở scene)</td></tr>
-<tr><td>Nhãn ảnh: Play, Shop, Hint, Shuffle, Next, Menu, Video…</td><td>home.*, game.*, win.*</td><td>chữ dựng bằng HTML thay vì ảnh</td></tr></table></div>
+<tr><td>Nút ảnh: Play (icon tam giác, không chữ), Hint (icon bóng đèn, không chữ); Shop, Shuffle, Next, Menu, Video… (chưa xem pixel)</td><td>home.*, game.*, win.*</td><td>chữ dựng bằng HTML thay vì ảnh</td></tr></table></div>
 <p>Khác biệt có chủ đích: prototype hiển thị chữ in hoa trên nút theo prefab; Win “LEVEL COMPLETE!” và các dòng thưởng/mục tiêu là <b>mới</b> (prefab Win không có m_Text).</p>
 
 <h2 id="map">10. Mapping màn hình → source</h2>
@@ -185,7 +184,7 @@
 <h2 id="open">12. Giả định &amp; chưa xác minh</h2>
 <ul>
 <li>Giả định: locale vi/en (user chưa chỉ định); tên Subworld; ghép cặp gói ruby ↔ giá Shop; mốc đếm ngày Daily; toàn bộ số ruby/bot/ads ở mục 5–8 là <b>proposed tuning</b>; ngày demo 2026-10-29.</li>
-<li>Chưa xác minh: chữ trong sprite (chưa giải mã ảnh); bố cục cột Unity với số từ lẻ; hành vi thật của AdMob/CatGamingAds; IAP/giá; cân bằng thật (cần playtest); chất lượng từ điển Pháp/Tây Ban Nha/Bồ Đào Nha cho level; không chạy Unity, không QA trên trình duyệt hay ảnh chụp.</li>
+<li>Chưa xác minh: pixel/chữ của các sprite ngoài 4 ảnh đã đọc; bố cục cột Unity với số từ lẻ; hành vi thật của AdMob/CatGamingAds; IAP/giá; cân bằng thật (cần playtest); chất lượng từ điển Pháp/Tây Ban Nha/Bồ Đào Nha cho level; không chạy Unity, không QA trên trình duyệt hay ảnh chụp.</li>
 <li>Prototype: Daily/Bot/ads là mô phỏng, không gọi mạng hay quảng cáo thật; dữ liệu lưu cục bộ trong trình duyệt.</li>
 </ul>
 </div></body></html>

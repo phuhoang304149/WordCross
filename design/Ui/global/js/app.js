@@ -175,11 +175,11 @@
   popups.win = function () {
     var c = S.winCtx || {kind: 'level', first: true, reward: E.firstClear, key: 'sample'};
     if (c.kind === 'daily') {
-      var x2id = 'x2d:' + c.date, got = S.claims[x2id];
+      var x2id = 'x2d:' + c.date, got = S.claims['ad:' + x2id];
       return dlg('<div class="badge">★</div><h3>' + t('win.dailyTitle') + '</h3><div class="big-ruby">' + ruby(1) + '+' + c.reward + '</div><p>' + t('win.dailyReward', {n: c.reward}) + '</p><div class="win-lines"><b>' + t('win.streak', {n: c.streak}) + '</b>' + (c.milestone ? '<span>' + t('win.milestone', {d: c.milestoneDays, n: c.milestone}) + '</span>' : '') + '<span>' + t('win.dailyNext') + '</span></div>' +
         (c.reward ? (got ? '<div class="note ok">' + t('win.x2done') + '</div>' : '<a class="btn yellow block" data-x2="' + x2id + ',' + c.reward + '" href="#">' + t('win.x2', {n: c.reward}) + '</a>') : '') + '<a class="btn coral block" href="' + go('daily') + '">' + t('win.toDaily') + '</a>');
     }
-    var lv = S.level, total = WC.subTotal(lv.w, lv.s), left = total - lv.l - 1, last = left === 0, xid = 'x2:' + c.key, gotx = S.claims[xid];
+    var lv = S.level, total = WC.subTotal(lv.w, lv.s), left = total - lv.l - 1, last = left === 0, xid = 'x2:' + c.key, gotx = S.claims['ad:' + xid];
     var goal = last ? t('win.goalLast', {s: lv.s + 2 > 5 ? 1 : lv.s + 2}) : t('win.goal', {l: lv.l + 2, n: left});
     var extra = S.extra.progress >= S.extra.target ? t('win.extraReady', {a: S.extra.progress, b: S.extra.target}) : t('win.extraNot', {a: S.extra.progress, b: S.extra.target});
     return dlg('<div class="badge">★</div><h3>' + t('win.title') + '</h3><div class="stars"><span>★</span><span>★</span><span>★</span></div>' +
@@ -239,7 +239,7 @@
   on('[data-sel]', 'click', function (a) { var p = a.dataset.sel.split(','); S.sel = {w: +p[0], s: +p[1]}; WC.save(); nav('select-level'); });
   on('[data-lvl]', 'click', function (a) {
     var p = a.dataset.lvl.split(',').map(Number); S.level = {w: p[0], s: p[1], l: p[2]}; S.mode = 'level';
-    if (S.cleared[WC.key(S.level)]) delete S.progress[WC.getLevel(S.level).key]; /* chơi lại: bắt đầu bàn mới */
+    if (S.cleared[WC.key(S.level)]) { var pk = WC.getLevel(S.level).key, old = S.progress[pk]; S.progress[pk] = {hints: {}, found: [], extras: old ? old.extras : []}; } /* chơi lại: bàn mới, giữ sổ extra đã tính */
     WC.save(); nav('game');
   });
 
@@ -249,7 +249,8 @@
     var p = a.dataset.ad.split(','); S.ads.ctx = {placement: p[0], amount: +p[1], back: p[2]}; WC.save(); nav('rewarded-video');
   });
   on('[data-x2]', 'click', function (a) {
-    var p = a.dataset.x2.split(','); S.ads.ctx = {placement: 'x2', amount: +p[1], back: S.winCtx && S.winCtx.kind === 'daily' ? 'win' : 'win', id: p[0]}; WC.save(); nav('rewarded-video');
+    var p = a.dataset.x2.split(','); if (S.claims['ad:' + p[0]]) { location.reload(); return; }
+     S.ads.ctx = {placement: 'x2', amount: +p[1], back: S.winCtx && S.winCtx.kind === 'daily' ? 'win' : 'win', id: p[0]}; WC.save(); nav('rewarded-video');
   });
   var rv = $('[data-rv]');
   if (rv) {
@@ -281,7 +282,7 @@
         if (shown !== 'playing') return;
         left--;
         if (left > 0) { draw(); tick(); return; }
-        if (S.ads.outcome === 'success') { WC.adComplete(sid, ctx.amount); shown = 'success'; }
+        if (S.ads.outcome === 'success') shown = WC.adComplete(sid, ctx.amount) ? 'success' : 'error';
         else shown = S.ads.outcome;
         draw(); bals();
       }, 1000);
@@ -305,7 +306,7 @@
   on('[data-month]', 'click', function (b) { S.dmonth = b.dataset.month; WC.save(); location.reload(); });
   on('[data-play-daily]', 'click', function (b) {
     var d = b.dataset.playDaily; S.mode = 'daily'; S.dailyDate = d;
-    if (S.daily.solved[d]) delete S.progress['daily:' + d];
+    if (S.daily.solved[d]) { var olde = S.progress['daily:' + d]; S.progress['daily:' + d] = {hints: {}, found: [], extras: olde ? olde.extras : []}; } /* giữ sổ extra đã tính */
     WC.save(); nav('game');
   });
   on('[data-advance]', 'click', function () { WC.advanceDay(); S.dsel = null; S.dmonth = null; WC.save(); location.reload(); });
@@ -390,11 +391,11 @@
       $('[data-ask]').addEventListener('click', function () { say(raw('game.ask.msg'), true); });
     } else {
       var plan = WC.botPlan(botKey, S.bot.diff, S.bot.seed);
-      /* đồng hồ mô phỏng: 1 tick = 0.5s thời gian trận (không phụ thuộc đồng hồ máy) → cùng seed cho cùng timeline */
+      /* đồng hồ mô phỏng: 1 tick 250ms = 0.25s thời gian trận (90s mô phỏng = 90s thực) (không phụ thuộc đồng hồ máy) → cùng seed cho cùng timeline */
       var tickBot = function () {
         setTimeout(function () {
           if (done) return;
-          simT += 0.5;
+          simT += 0.25;
           var bp = WC.botScoreAt(plan, simT), bf = WC.botFoundAt(plan, simT).length;
           $('[data-bpts]').textContent = raw('bot.pts', {n: bp});
           $('[data-timer]').textContent = raw('bot.time', {n: Math.max(0, Math.ceil(E.botLimit - simT))});
