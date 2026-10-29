@@ -159,7 +159,8 @@ public class WinDialog : Dialog {
         }
         else
         {
-            goalText.text = Loc.Get("win.goal", "l", level + 2, "n", left);
+            // Glyph '·' của font Rocko hiển thị sai (thành 'R'), đổi sang '•'
+            goalText.text = Loc.Get("win.goal", "l", level + 2, "n", left).Replace('\u00b7', '\u2022');
         }
         goalText.gameObject.SetActive(true);
 
