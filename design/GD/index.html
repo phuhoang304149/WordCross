@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WordCross — GD</title><link rel="stylesheet" href="../Ui/global/css/theme.css"></head>
+<body class="cat"><div class="doc"><a href="../index.html">← Portal</a><h1>GD — luồng &amp; mapping</h1>
+<p>Chỉ ghi lại luồng hiện có trong source, không thêm gameplay mới.</p>
+<h2>Luồng</h2>
+<p>Home (Play) → SelectWorld (cuộn theo World, chọn subworld) → SelectLevel (tới level mở khoá) → Main (gameplay). Hoàn thành → WinDialog: Next (level kế) hoặc Menu (về SelectLevel; level cuối về SelectWorld). Pause (Esc/nút): Continue, How to play, To Menu, Quit. Hint tốn <code>Const.HINT_COST = 2</code> ruby; thiếu ruby → Shop. Shop có video thưởng (RewardedVideoDialog) và gói ruby.</p>
+<h2>Mapping</h2>
+<table><tr><th>Design</th><th>Source</th></tr>
+<tr><td>home</td><td><code>_Scenes/Home.unity</code>, <code>HomeController</code> (Play → LoadScene 1)</td></tr>
+<tr><td>select-world</td><td><code>_Scenes/SelectWorld.unity</code>, <code>WorldItem</code> (n/total), <code>WorldController</code>, <code>Const.NUM_SUBWORLD = 5</code>, 6 World trong scene</td></tr>
+<tr><td>select-level</td><td><code>_Scenes/SelectLevel.unity</code>, <code>LevelButton</code>, <code>SelectLevelController</code></td></tr>
+<tr><td>game</td><td><code>_Scenes/Main.unity</code>, <code>MainController</code> (tên "Subworld - level"), <code>WordRegion</code> (Hint), <code>Pan</code> (vòng chữ), Shuffle, AskFriend/ShareGame (chụp màn hình), ExtraWords, BottomBanner</td></tr>
+<tr><td>pause / how-to-play / win / extra-word / shop / rewarded-video / rate</td><td><code>_Prefabs/Dialogs/*.prefab</code> tương ứng</td></tr></table>
+<h2>Nguồn style tham khảo</h2>
+<h3>Quan sát có bằng chứng (đọc YAML prefab)</h3>
+<ul>
+<li><b>breakfree-unity <code>Assets/Prefabs/GenericButton.prefab</code></b>: nút 205.8×109.116, gồm <code>bg</code> (Image, sprite thường <code>m_Type: 0</code>, không sliced, <code>PreserveAspect</code> bật, màu trắng 1,1,1,1) và <code>TextImage</code> (Image sprite riêng, scale 0.6, lệch y −8.3, cũng <code>PreserveAspect</code>). Không có component Text/TMP: nhãn là ảnh sprite. <code>Button</code> dùng ColorTint: highlighted 0.96, pressed 0.78, disabled 0.78 alpha 0.5, fade 0.1s.</li>
+<li><b>deuegambit <code>Layer Lab/GUI Pro-CasualGame/Prefabs/Prefabs_Component_Sliders/Slider_Level01_Green.prefab</code></b>: thanh 427.17×112.88; <code>Bg</code> là Image <code>Sliced</code> (<code>m_Type: 1</code>) màu xanh navy rất đậm (0.031, 0.078, 0.243); <code>Fill</code> là Image <code>Sliced</code> màu trắng (màu thật nằm ở sprite) trong <code>FillArea</code> có Mask; có <code>Shadow</code> màu đen alpha 0.196, lệch (0, −5) trên thanh và trên Bg; huy hiệu <code>Badge_Blue</code> 107×119 ở mép trái (<code>Badge_Yellow</code> tắt) chứa số, TMP cỡ 54; nhãn thanh TMP cỡ 32 trắng, căn giữa; giá trị mẫu 0.818, hướng 0 (trái→phải).</li>
+</ul>
+<h3>Giới hạn</h3>
+<p>YAML chỉ tham chiếu sprite bằng GUID nên <b>không kết luận được hình dạng thật (tròn/pill), màu sprite, hay viền 9-slice</b> của nút và thanh; cũng không biết font TMP cụ thể. Hai prefab này không chứng minh "bo pill", "teal" hay "casual tròn". Các ý trước về font (Baloo 2, Bagel Fat One, CookieRun), storyboard teal #087f78 và <code>Assets/KidVersion</code> chưa được đọc lại trong lần này nên không dùng làm bằng chứng.</p>
+<h3>Lựa chọn thiết kế của WordCross (không phải quan sát)</h3>
+<p>Style phẳng, nút/thẻ bo lớn, teal chủ đạo, nhấn bằng khối đặc lệch 4px, không blur là quyết định của WordCross. Chỉ có hai điểm được gợi ý từ prefab: bóng đặc lệch dọc (deuegambit dùng Shadow 0, −5 alpha ~0.2) và trạng thái nhấn tối đi ~22% (breakfree, ColorTint pressed 0.78).</p>
+<h2>Giả định demo</h2>
+<p>Level C-A-R-T, tên subworld, số ruby 12, ghép cặp gói ruby ↔ giá Shop (prefab có đủ 5 số ruby và 5 giá nhưng thứ tự ghép là giả định), tiêu đề/ngôi sao của Win (prefab không có text), phần thưởng 2 ruby của video (theo prefab). Nút Facebook/Invite không vẽ vì code đang comment.</p></div></body></html>
