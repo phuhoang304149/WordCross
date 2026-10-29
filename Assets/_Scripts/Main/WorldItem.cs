@@ -22,6 +22,15 @@ public class WorldItem : MonoBehaviour {
 
     public int world, subWorld;
 
+    // Design card (390 wide frame): the title/bar column ends before the right-aligned count, which has 16 padding and a 14 gap
+    public float designUnit = 1.6923f, designPadding = 16f, designGap = 14f;
+    // Index chip colors per sub world, like the design (coral, yellow, teal repeating) with its text colors
+    // Locked card: the design fades the whole card to 55% over the page (#f4fbfa); a group alpha would show the border through the card face
+    public Color32 pageColor = new Color32(244, 251, 250, 255);
+    private bool locked;
+    private readonly Color32[] indexColors = { new Color32(255, 107, 94, 255), new Color32(255, 201, 60, 255), new Color32(18, 181, 166, 255) };
+    private readonly Color32[] indexTextColors = { new Color32(255, 255, 255, 255), new Color32(90, 65, 0, 255), new Color32(255, 255, 255, 255) };
+
     private void OnDestroy()
     {
         if (Locator<LocalizationController>.Instance != null)
@@ -50,9 +59,13 @@ public class WorldItem : MonoBehaviour {
         int unlockedSubWorld = Prefs.unlockedSubWorld;
         int unlockedLevel = Prefs.unlockedLevel;
 
+        indexText.text = (subWorld + 1).ToString();
+        indexBack.color = indexColors[subWorld % 3];
+        indexText.color = indexTextColors[subWorld % 3];
+
         if (world > unlockedWorld || (world == unlockedWorld && subWorld > unlockedSubWorld))
         {
-            canvasGroup.alpha = lockedAlpha;
+            locked = true;
             button.interactable = false;
             play.sprite = playUnactive;
             indexBack.color = lockedIndexColor;
@@ -72,7 +85,32 @@ public class WorldItem : MonoBehaviour {
             SetProgress(numLevels, numLevels);
         }
 
+        LayoutCount();
+        if (locked) FadeToPage();
         button.onClick.AddListener(OnButtonClick);
+    }
+
+    private void FadeToPage()
+    {
+        foreach (Graphic graphic in GetComponentsInChildren<Graphic>(true))
+        {
+            Color color = graphic.color;
+            graphic.color = Color.Lerp(pageColor, new Color(color.r, color.g, color.b, 1f), lockedAlpha * color.a);
+        }
+    }
+
+    // The count text is as wide as its digits: the right-aligned count box and the title/bar column follow it
+    private void LayoutCount()
+    {
+        float width = processText.preferredWidth;
+        RectTransform count = processText.transform.parent as RectTransform;
+        count.sizeDelta = new Vector2(width, count.sizeDelta.y);
+
+        float right = (designPadding + designGap) * designUnit + width;
+        RectTransform title = titleText.rectTransform;
+        title.sizeDelta = new Vector2(-(title.anchoredPosition.x + right), title.sizeDelta.y);
+        RectTransform bar = progressFill.parent as RectTransform;
+        bar.sizeDelta = new Vector2(-(bar.anchoredPosition.x + right), bar.sizeDelta.y);
     }
 
     private void SetProgress(int done, int total)

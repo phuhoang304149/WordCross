@@ -11,8 +11,8 @@ public class SelectLevelController : BaseController {
     public Text titleText;
     public GridLayoutGroup grid;
     public float cellShadow = 7f;
-    // Design screen is 390 wide: grid padding 20 and gap 12 scale with the canvas width
-    public float designWidth = 390f, designPadding = 20f, designGap = 12f;
+    // Design screen is 390 wide: grid padding 20 (8 above, 30 below) and gap 12 scale with the canvas width
+    public float designWidth = 390f, designPadding = 20f, designGap = 12f, designTop = 8f, designBottom = 30f;
 
     protected override void Start()
     {
@@ -57,11 +57,14 @@ public class SelectLevelController : BaseController {
         int padding = Mathf.RoundToInt(designPadding * unit);
         grid.padding.left = padding;
         grid.padding.right = padding;
-        grid.spacing = new Vector2(designGap * unit, designGap * unit);
+        grid.padding.top = Mathf.RoundToInt(designTop * unit);
+        grid.padding.bottom = Mathf.RoundToInt(designBottom * unit);
+        // The shadow strip is part of the cell height but not of the design grid step (cell + gap)
+        grid.spacing = new Vector2(designGap * unit, designGap * unit - cellShadow);
 
         int columns = grid.constraintCount;
         float width = scrollRect.viewport.rect.width - grid.padding.left - grid.padding.right - grid.spacing.x * (columns - 1);
-        float cell = Mathf.Floor(width / columns);
+        float cell = width / columns;
         grid.cellSize = new Vector2(cell, cell + cellShadow);
     }
 

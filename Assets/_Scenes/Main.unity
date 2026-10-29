@@ -3560,17 +3560,17 @@ PrefabInstance:
     - target: {fileID: 224784307915400892, guid: 4caac91f78525e440abf18e47b7e0042,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 160.5
+      value: -88.31
       objectReference: {fileID: 0}
     - target: {fileID: 224784307915400892, guid: 4caac91f78525e440abf18e47b7e0042,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 45.01
       objectReference: {fileID: 0}
     - target: {fileID: 224784307915400892, guid: 4caac91f78525e440abf18e47b7e0042,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -413
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224784307915400892, guid: 4caac91f78525e440abf18e47b7e0042,
         type: 3}
@@ -3580,7 +3580,7 @@ PrefabInstance:
     - target: {fileID: 224784307915400892, guid: 4caac91f78525e440abf18e47b7e0042,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224784307915400892, guid: 4caac91f78525e440abf18e47b7e0042,
         type: 3}
@@ -3605,12 +3605,12 @@ PrefabInstance:
     - target: {fileID: 224784307915400892, guid: 4caac91f78525e440abf18e47b7e0042,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.9318
       objectReference: {fileID: 0}
     - target: {fileID: 224784307915400892, guid: 4caac91f78525e440abf18e47b7e0042,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.9318
       objectReference: {fileID: 0}
         type: 3}
     - target: {fileID: 1680830342094602, guid: 4caac91f78525e440abf18e47b7e0042, type: 3}
@@ -3635,6 +3635,10 @@ PrefabInstance:
     - target: {fileID: 1738631398250100, guid: 4caac91f78525e440abf18e47b7e0042, type: 3}
       propertyPath: m_TagString
       value: RubyBalance
+      objectReference: {fileID: 0}
+    - target: {fileID: 224784307915400892, guid: 4caac91f78525e440abf18e47b7e0042, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9318
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114612250271500080, guid: 4caac91f78525e440abf18e47b7e0042, type: 3}
