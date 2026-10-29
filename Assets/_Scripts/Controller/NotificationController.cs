@@ -174,7 +174,7 @@ public class NotificationController : MonoBehaviour {
     private char? GetUnlockLetter(int numPass)
     {
         string[] progress = Prefs.levelProgress;
-        GameLevel gameLevel = Utils.Load(Prefs.unlockedWorld, Prefs.unlockedSubWorld, Prefs.unlockedLevel);
+        GameLevel gameLevel = Superpow.Utils.Load(Prefs.unlockedWorld, Prefs.unlockedSubWorld, Prefs.unlockedLevel);
         var answers = CUtils.BuildListFromString<string>(gameLevel.answers);
 
         var index = GetUnlockLetterIndex(progress, numPass);

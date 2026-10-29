@@ -26,7 +26,7 @@ public class MainController : BaseController {
         subWorld = GameState.currentSubWorld;
         level = GameState.currentLevel;
 
-        gameLevel = Utils.Load(world, subWorld, level);
+        gameLevel = Superpow.Utils.Load(world, subWorld, level);
         Pan.instance.Load(gameLevel);
         WordRegion.instance.Load(gameLevel);
 
