@@ -9,6 +9,9 @@ public class WorldItem : MonoBehaviour {
     public Button button;
     public Sprite playUnactive;
     public Text processText, subWorldName;
+    public Image indexBack;
+    public RectTransform progressFill;
+    public Color lockedIndexColor = new Color(0.7216f, 0.7843f, 0.7843f, 1f);
 
     public int world, subWorld;
 
@@ -29,19 +32,30 @@ public class WorldItem : MonoBehaviour {
             SetColorAlpha(itemNumberBack, 0.5f);
             button.interactable = false;
             play.sprite = playUnactive;
+            indexBack.color = lockedIndexColor;
 
             processText.text = "0" + "/" + numLevels;
+            SetProgress(0, numLevels);
         }
         else if (world == unlockedWorld && subWorld == unlockedSubWorld)
         {
             processText.text = unlockedLevel + "/" + numLevels;
+            SetProgress(unlockedLevel, numLevels);
         }
         else
         {
             processText.text = numLevels + "/" + numLevels;
+            SetProgress(numLevels, numLevels);
         }
 
         button.onClick.AddListener(OnButtonClick);
+    }
+
+    private void SetProgress(int done, int total)
+    {
+        float ratio = total > 0 ? Mathf.Clamp01((float)done / total) : 0f;
+        progressFill.anchorMax = new Vector2(ratio, 1f);
+        progressFill.gameObject.SetActive(ratio > 0f);
     }
 
     private void SetColorAlpha(MaskableGraphic graphic, float alpha)
