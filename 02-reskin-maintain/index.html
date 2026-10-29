@@ -1057,6 +1057,20 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "note": "[2026-10-29 22:10 (GMT+7)] Nguồn: QA thiết bị OTA bổ sung (9b6b14e). Có thể hàng bị ẩn khi không có quảng cáo (nofill) — design vẫn hiển thị với trạng thái. TB.\n[2026-10-29 22:35 (GMT+7)] Dev đang làm (worktree fix-home-shop).\n[2026-10-29 23:05 (GMT+7)] CODE XONG, CHƯA XÁC MINH: RewardedButton luôn hiện hàng (WATCH khi hết cooldown / đồng hồ khi cooldown, độc lập có quảng cáo); ShopDialog scale 0.8→1. Chưa chạy RewardedButton ở editor (cần AdmobController). OTA CLR+AA."
     },
     {
+      "id": "T128",
+      "title": "Nút Back ở SelectWorld không quay về được (USER báo)",
+      "type": "code",
+      "status": "doing",
+      "screen": "Màn SelectWorld",
+      "goal": "Back về Home",
+      "scope": "Header.prefab ButtonGotoScene, SelectWorld scene; kiểm mọi đường Back",
+      "owner": "CLAUDE (dev)",
+      "deps": "",
+      "criteria": "Mọi nút Back UI + Back hệ thống về đúng màn trên OTA thật",
+      "evidence": "",
+      "note": "[2026-10-30] USER manual check. Prefab Back: ButtonGotoScene sceneIndex 0 (Home), cấu hình đúng → nghi lỗi runtime (raycast đè/fader)."
+    },
+    {
       "id": "T020",
       "title": "Reskin SelectWorld",
       "type": "runtime",
