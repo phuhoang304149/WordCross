@@ -108,6 +108,14 @@
     <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
     <type fullname="UnityEngine.AddressableAssets.ResourceLocators.IResourceLocator" preserve="all" />
   </assembly>
+  <assembly fullname="Unity.Notifications.Android">
+    <type fullname="Unity.Notifications.Android.AndroidNotification" preserve="all" />
+    <type fullname="Unity.Notifications.Android.AndroidNotificationCenter" preserve="all" />
+    <type fullname="Unity.Notifications.Android.AndroidNotificationChannel" preserve="all" />
+    <type fullname="Unity.Notifications.Android.Importance" preserve="all" />
+    <type fullname="Unity.Notifications.Android.PermissionRequest" preserve="all" />
+    <type fullname="Unity.Notifications.Android.PermissionStatus" preserve="all" />
+  </assembly>
   <assembly fullname="Unity.Purchasing">
     <type fullname="UnityEngine.Purchasing.CartItem" preserve="all" />
     <type fullname="UnityEngine.Purchasing.CatalogProvider" preserve="all" />
@@ -343,7 +351,6 @@
     <type fullname="UnityEngine.UI.Shadow" preserve="all" />
     <type fullname="UnityEngine.UI.Slider" preserve="all" />
     <type fullname="UnityEngine.UI.Text" preserve="all" />
-    <type fullname="UnityEngine.UI.Toggle" preserve="all" />
     <type fullname="UnityEngine.UI.VertexHelper" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.UIModule">
