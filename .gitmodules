@@ -1,0 +1,3 @@
+[submodule "Assets/catgamingmodule"]
+	path = Assets/catgamingmodule
+	url = https://github.com/catgaming-asia/catgamingmodule.git
