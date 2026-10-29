@@ -10,14 +10,14 @@ public class ShopDialog : Dialog
     protected override void Start()
     {
         base.Start();
-#if IAP && UNITY_PURCHASING
+#if CATGAMING_IAP
         Purchaser.instance.onItemPurchased += OnItemPurchased;
         Locator<LocalizationController>.Instance.onLanguageChanged += OnLanguageChanged;
         UpdatePacks();
 #endif
     }
 
-#if IAP && UNITY_PURCHASING
+#if CATGAMING_IAP
     private void OnLanguageChanged(string code)
     {
         UpdatePacks();
@@ -35,7 +35,7 @@ public class ShopDialog : Dialog
 
     public void OnBuyProduct(int index)
 	{
-#if IAP && UNITY_PURCHASING
+#if CATGAMING_IAP
         Sound.instance.PlayButton();
         Purchaser.instance.BuyProduct(index);
 #else
@@ -43,7 +43,7 @@ public class ShopDialog : Dialog
 #endif
     }
 
-#if IAP && UNITY_PURCHASING
+#if CATGAMING_IAP
     private void OnItemPurchased(IAPItem item, int index)
     {
         // A consumable product has been purchased by this user.
@@ -66,7 +66,7 @@ public class ShopDialog : Dialog
     }
 #endif
 
-#if IAP && UNITY_PURCHASING
+#if CATGAMING_IAP
     private void OnDestroy()
     {
         Purchaser.instance.onItemPurchased -= OnItemPurchased;
