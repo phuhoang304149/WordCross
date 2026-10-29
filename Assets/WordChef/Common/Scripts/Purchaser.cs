@@ -7,6 +7,11 @@ using catgamingmodule.Tool.Database;
 using Script.Utils;
 using UnityEngine.Purchasing;
 using PurchaseService = catgamingmodule.Purchase.PurchaseService;
+#if CATGAMING_ADDRESSABLES
+using CatGaming.Clr;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+#endif
 #endif
 
 public enum PType { Consumable, NonConsumable, Subscription };
@@ -31,6 +36,9 @@ public class Purchaser : MonoBehaviour
 
 #if CATGAMING_IAP
     private PurchaseService purchaseService;
+#if CATGAMING_ADDRESSABLES
+    private AsyncOperationHandle<GameDatabase> gameDatabaseHandle;
+#endif
 #endif
 
     private void Awake()
@@ -58,7 +66,19 @@ public class Purchaser : MonoBehaviour
     {
 #if CATGAMING_IAP
         if (purchaseService != null) return;
-        if (Locator<GameDatabase>.Instance == null) Locator<GameDatabase>.Set(GameDatabase.LoadInstance());
+        if (Locator<GameDatabase>.Instance == null)
+        {
+#if CATGAMING_ADDRESSABLES
+            // Cùng address package với MainModule; ClrContent chỉ alias Assets/Resources/GameDatabase.asset.
+            if (gameDatabaseHandle.IsValid()) return;
+            gameDatabaseHandle = Addressables.LoadAssetAsync<GameDatabase>("GameDatabase/" + Application.identifier.ToLowerInvariant());
+            ClrContent.Instance.RetainAddressable(gameDatabaseHandle);
+            gameDatabaseHandle.Completed += OnGameDatabaseLoaded;
+            return;
+#else
+            Locator<GameDatabase>.Set(GameDatabase.LoadInstance());
+#endif
+        }
         if (Locator<ProductService>.Instance == null) Locator<ProductService>.Set(new ProductService());
         purchaseService = new PurchaseService();
         purchaseService.PendingPurchase += OnPendingPurchase;
@@ -68,6 +88,20 @@ public class Purchaser : MonoBehaviour
         Debug.Log("Purchaser.InitializePurchasing: CATGAMING_IAP is not defined.");
 #endif
     }
+
+#if CATGAMING_IAP && CATGAMING_ADDRESSABLES
+    private void OnGameDatabaseLoaded(AsyncOperationHandle<GameDatabase> operation)
+    {
+        if (operation.Status != AsyncOperationStatus.Succeeded || operation.Result == null)
+        {
+            Debug.LogError("Purchaser: cannot load GameDatabase/" + Application.identifier.ToLowerInvariant());
+            return;
+        }
+        if (Locator<GameDatabase>.Instance == null) Locator<GameDatabase>.Set(operation.Result);
+        Debug.Log("Purchaser: GameDatabase ready, initializing purchasing.");
+        InitializePurchasing();
+    }
+#endif
 
     public void BuyProduct(int index)
     {
