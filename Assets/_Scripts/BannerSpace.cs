@@ -2,13 +2,14 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using Script.Utils;
+using WordCross.Gameplay;
 
 // Chừa vùng banner AdMob dưới vòng chữ ở màn Main (design: .banner cao 50 + lề dưới 12, chỉ khi chưa tắt quảng cáo).
+// Bố cục trong scene là bố cục không banner; có banner thì đẩy cả cụm vòng chữ + nút công cụ lên đúng 62 css.
 public class BannerSpace : MonoBehaviour
 {
-    private const float BannerDp = 60f;
-    private const float WheelBottom = 106f;
-    private const float Gap = 8f;
+    private const float DesignWidth = 390f;
+    private const float BannerCss = 50f, MarginCss = 12f;
 
     public RectTransform[] bottomItems;
 
@@ -35,12 +36,12 @@ public class BannerSpace : MonoBehaviour
     private void Reserve()
     {
         var canvas = MainController.instance.levelNameText.canvas.rootCanvas;
-        float density = Screen.dpi > 0 ? Screen.dpi / 160f : 1f;
-        float units = (BannerDp * density + Screen.safeArea.y) / canvas.scaleFactor;
-        shift = Mathf.Max(0f, units + Gap - WheelBottom);
+        float perCss = ((RectTransform)canvas.transform).rect.width / DesignWidth;
+        float inset = Screen.safeArea.y / canvas.scaleFactor;
+        shift = (BannerCss + MarginCss) * perCss + inset;
         reserved = true;
         Move(shift);
-        ShowPlaceholder(canvas, units);
+        ShowPlaceholder(canvas, perCss, inset);
     }
 
     private void Release()
@@ -59,13 +60,12 @@ public class BannerSpace : MonoBehaviour
         }
     }
 
-    private void ShowPlaceholder(Canvas canvas, float units)
+    private void ShowPlaceholder(Canvas canvas, float perCss, float inset)
     {
 #if GAME_DEBUG || DEVELOPMENT_BUILD || UNITY_EDITOR
         // Khung giữ chỗ theo design (.banner): chỉ ở bản debug, bản thật no-fill để trống vùng.
-        float unit = canvas.scaleFactor;
-        float k = 720f / 390f;
-        int w = Mathf.RoundToInt(720 - 32 * k), h = Mathf.RoundToInt(50 * k);
+        float k = 3f;
+        int w = Mathf.RoundToInt((DesignWidth - 32) * k), h = Mathf.RoundToInt(BannerCss * k);
         var tex = new Texture2D(w, h, TextureFormat.RGBA32, false);
         var line = new Color32(0xb8, 0xc8, 0xc8, 255);
         var clear = new Color32(0, 0, 0, 0);
@@ -91,11 +91,10 @@ public class BannerSpace : MonoBehaviour
         placeholder = new GameObject("BannerPlaceholder", typeof(RectTransform), typeof(RawImage));
         var rect = (RectTransform)placeholder.transform;
         rect.SetParent(canvas.transform, false);
-        rect.SetAsFirstSibling();
         rect.anchorMin = rect.anchorMax = new Vector2(0.5f, 0);
         rect.pivot = new Vector2(0.5f, 0);
-        rect.sizeDelta = new Vector2(w, h);
-        rect.anchoredPosition = new Vector2(0, (Screen.safeArea.y / unit) + 12 * k);
+        rect.sizeDelta = new Vector2((DesignWidth - 32) * perCss, BannerCss * perCss);
+        rect.anchoredPosition = new Vector2(0, inset + MarginCss * perCss);
         var img = placeholder.GetComponent<RawImage>();
         img.texture = tex;
         img.raycastTarget = false;
@@ -109,7 +108,7 @@ public class BannerSpace : MonoBehaviour
         var text = label.GetComponent<Text>();
         var source = MainController.instance.levelNameText;
         text.font = source.font;
-        text.fontSize = Mathf.RoundToInt(11 * k);
+        text.fontSize = Mathf.RoundToInt(11 * perCss);
         text.fontStyle = FontStyle.Bold;
         text.alignment = TextAnchor.MiddleCenter;
         text.color = new Color32(0x8a, 0xa0, 0xa0, 255);

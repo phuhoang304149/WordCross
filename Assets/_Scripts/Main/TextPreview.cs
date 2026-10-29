@@ -19,9 +19,74 @@ public class TextPreview : MonoBehaviour {
 
     public static TextPreview instance;
 
+    // Design (.preview b): mỗi chữ một ô 38 css cao, rộng tối thiểu 32, lề 8, cách nhau 4, chữ 20 css nâu #5a4100.
+    private const float DesignWidth = 390f, ChipHeight = 38f, ChipMinWidth = 32f, ChipPad = 8f, ChipGap = 4f, ChipFont = 20f;
+    private readonly List<GameObject> chips = new List<GameObject>();
+
     private void Awake()
     {
         instance = this;
+        backgroundRT.GetComponent<Image>().enabled = false;
+        text.enabled = false;
+    }
+
+    private float LocalPerCss()
+    {
+        RectTransform canvasRt = (RectTransform)content.transform.GetComponentInParent<Canvas>(true).rootCanvas.transform;
+        return canvasRt.rect.width / DesignWidth * canvasRt.lossyScale.x / content.transform.lossyScale.x;
+    }
+
+    private void BuildChips(string word)
+    {
+        foreach (var chip in chips) Destroy(chip);
+        chips.Clear();
+        float perCss = LocalPerCss();
+        var widths = new float[word.Length];
+        float total = ChipGap * perCss * Mathf.Max(0, word.Length - 1);
+        for (int i = 0; i < word.Length; i++)
+        {
+            GameObject chip = new GameObject("Chip", typeof(RectTransform), typeof(Image));
+            RectTransform rect = (RectTransform)chip.transform;
+            rect.SetParent(content.transform, false);
+            Image image = chip.GetComponent<Image>();
+            image.sprite = backgroundRT.GetComponent<Image>().sprite;
+            image.type = Image.Type.Sliced;
+            image.color = backgroundRT.GetComponent<Image>().color;
+            image.raycastTarget = false;
+
+            GameObject label = new GameObject("Text", typeof(RectTransform), typeof(Text));
+            RectTransform labelRect = (RectTransform)label.transform;
+            labelRect.SetParent(rect, false);
+            labelRect.anchorMin = Vector2.zero;
+            labelRect.anchorMax = Vector2.one;
+            labelRect.offsetMin = labelRect.offsetMax = Vector2.zero;
+            Text chipText = label.GetComponent<Text>();
+            chipText.font = text.font;
+            chipText.fontSize = Mathf.RoundToInt(ChipFont * perCss);
+            chipText.fontStyle = FontStyle.Bold;
+            chipText.alignment = TextAnchor.MiddleCenter;
+            chipText.horizontalOverflow = HorizontalWrapMode.Overflow;
+            chipText.color = new Color32(0x5a, 0x41, 0x00, 255);
+            chipText.raycastTarget = false;
+            chipText.text = word[i].ToString();
+
+            widths[i] = Mathf.Max(ChipMinWidth * perCss, chipText.preferredWidth + ChipPad * 2 * perCss);
+            rect.sizeDelta = new Vector2(widths[i], ChipHeight * perCss);
+            total += widths[i];
+            chips.Add(chip);
+        }
+        float x = -total / 2f;
+        for (int i = 0; i < chips.Count; i++)
+        {
+            ((RectTransform)chips[i].transform).anchoredPosition = new Vector2(x + widths[i] / 2f, 0f);
+            x += widths[i] + ChipGap * perCss;
+        }
+    }
+
+    private void Tint(Color color)
+    {
+        backgroundRT.GetComponent<Image>().color = color;
+        foreach (var chip in chips) chip.GetComponent<Image>().color = color;
     }
 
     public void SetIndexes(List<int> indexes)
@@ -32,7 +97,7 @@ public class TextPreview : MonoBehaviour {
             sb.Append(word[i]);
         }
         text.text = sb.ToString();
-        backgroundRT.sizeDelta = new Vector2(textRT.GetComponent<Text>().preferredWidth + 50, backgroundRT.sizeDelta.y);
+        BuildChips(text.text);
     }
 
     public void SetActive(bool isActive)
@@ -43,11 +108,13 @@ public class TextPreview : MonoBehaviour {
     public void ClearText()
     {
         text.text = "";
+        BuildChips("");
     }
 
     public void SetText(string textStr)
     {
         text.text = textStr;
+        BuildChips(textStr);
     }
 
     public string GetText()
@@ -57,27 +124,27 @@ public class TextPreview : MonoBehaviour {
 
     public void SetAnswerColor()
     {
-        backgroundRT.GetComponent<Image>().color = answerColor;
+        Tint(answerColor);
     }
 
     public void SetValidColor()
     {
-        backgroundRT.GetComponent<Image>().color = validColor;
+        Tint(validColor);
     }
 
     public void SetWrongColor()
     {
-        backgroundRT.GetComponent<Image>().color = wrongColor;
+        Tint(wrongColor);
     }
 
     public void SetDefaultColor()
     {
-        backgroundRT.GetComponent<Image>().color = defaultColor;
+        Tint(defaultColor);
     }
 
     public void SetExistColor()
     {
-        backgroundRT.GetComponent<Image>().color = existColor;
+        Tint(existColor);
     }
 
     public void FadeOut()
