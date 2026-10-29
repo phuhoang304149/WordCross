@@ -40,6 +40,23 @@ public class MainController : BaseController {
             });
         }
 
+        UpdateLevelTexts();
+        Locator<LocalizationController>.Instance.onLanguageChanged += OnLanguageChanged;
+    }
+
+    private void OnDestroy()
+    {
+        if (Locator<LocalizationController>.Instance != null)
+            Locator<LocalizationController>.Instance.onLanguageChanged -= OnLanguageChanged;
+    }
+
+    private void OnLanguageChanged(string code)
+    {
+        UpdateLevelTexts();
+    }
+
+    private void UpdateLevelTexts()
+    {
         levelNameText.text = Locator<LocalizationController>.Instance.Get("world.sub", "n", subWorld + 1) + " - " + (level + 1);
         levelSubText.text = Locator<LocalizationController>.Instance.Get("common.level", "n", level + 1);
     }

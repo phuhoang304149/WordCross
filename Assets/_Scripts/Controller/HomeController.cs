@@ -52,7 +52,7 @@ public class HomeController : BaseController {
                 Toast.instance.ShowMessage("VS AI is coming soon");
                 break;
             case LANGUAGE:
-                Toast.instance.ShowMessage("Language selection is coming soon");
+                DialogController.instance.ShowDialog(DialogType.Language);
                 break;
         }
         Sound.instance.PlayButton();

@@ -18,7 +18,8 @@ public enum DialogType
     ExtraWord,
     Win,
     RewardedVideo,
-    RateGame
+    RateGame,
+    Language
 };
 
 public enum DialogShow
