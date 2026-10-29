@@ -62,7 +62,7 @@ public class Pan : MonoBehaviour
             Text letter = Instantiate(MonoUtils.instance.letter);
             letter.transform.SetParent(centerPoint);
             letter.transform.localScale = Vector3.one;
-            letter.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(-10, 10)));
+            letter.transform.localRotation = Quaternion.identity;
             letter.text = gameLevel.word[i].ToString().ToUpper();
             letterTexts.Add(letter);
             letterViews.Add(letter.GetComponent<LetterText>());
@@ -127,7 +127,7 @@ public class Pan : MonoBehaviour
         foreach(var text in letterTexts)
         {
             iTween.MoveTo(text.gameObject, iTween.Hash("position", letterLocalPositions[indexes.IndexOf(i)], "time", 0.15f, "isLocal", true));
-            text.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(-10, 10)));
+            text.transform.localRotation = Quaternion.identity;
             i++;
         }
         Sound.instance.PlayButton();

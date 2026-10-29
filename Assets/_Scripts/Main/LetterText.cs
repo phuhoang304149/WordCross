@@ -11,6 +11,21 @@ public class LetterText : MonoBehaviour
 
     private bool selected;
 
+    // Đĩa chọn và chữ trắng nằm trên nét nối (thiết kế: nét nối dưới các chữ).
+    private void Awake()
+    {
+        RaiseAboveLine(selectDisc.gameObject, 6);
+        RaiseAboveLine(selectGlyph.gameObject, 7);
+    }
+
+    private void RaiseAboveLine(GameObject target, int order)
+    {
+        Canvas canvas = target.AddComponent<Canvas>();
+        canvas.overrideSorting = true;
+        canvas.sortingLayerName = "MyLineRenderer";
+        canvas.sortingOrder = order;
+    }
+
     public bool IsSelected()
     {
         return selected;
