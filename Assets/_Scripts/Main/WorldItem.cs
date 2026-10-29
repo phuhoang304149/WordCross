@@ -84,6 +84,7 @@ public class WorldItem : MonoBehaviour {
 
     private void OnButtonClick()
     {
+        GameState.dailyDate = null;
         GameState.currentWorld = world;
         GameState.currentSubWorld = subWorld;
         GameState.currentSubWorldName = subWorldName.text;

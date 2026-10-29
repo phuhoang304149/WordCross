@@ -14,11 +14,16 @@ namespace WordCross.Gameplay
     //   home | selectworld | selectlevel[:w-s] | main:w-s-l
     //   pause | win[:first|replay] | extra[:ready|notready] | howto   (mở trong Main, mặc định level đang mở khoá)
     //   shop | rate | language | rewarded:<ready|loading|cooldown|nofill|offline|playing|success|cancel|error> (mở trong Home)
-    //   reset (trả số ruby về giá trị trước khi ghi đè)
+    //   daily[:fresh|risk|safe|lost]  dialog Daily ở Home với dữ liệu chuỗi giả (lưu thật, trả lại bằng reset)
+    //   dailymain[:fresh|risk|safe|lost]  Main với bàn Daily hôm nay
+    //   dailywin[:fresh|risk|safe|lost]   Win biến thể Daily (thắng bàn hôm nay; ruby/dữ liệu Daily trả lại sau 1 giây)
+    //   reset (trả số ruby và dữ liệu Daily về giá trị trước khi ghi đè)
     public sealed class DebugOpener : MonoBehaviour
     {
         private const string FileName = "debug_open.txt";
         private const string RubyBackupKey = "debug_ruby_backup";
+        private const string DailyBackupKey = "debug_daily_backup";
+        private static readonly string[] DailyKeys = { "daily_solved", "daily_milestones", "daily_best", "daily_last_seen" };
 
         private void Awake()
         {
@@ -83,6 +88,15 @@ namespace WordCross.Gameplay
             {
                 case "reset":
                     RestoreRuby();
+                    RestoreDaily();
+                    break;
+                case "daily":
+                    ApplyDaily(arg);
+                    DialogController.instance.ShowDialog(DialogType.Daily);
+                    break;
+                case "dailymain":
+                case "dailywin":
+                    yield return OpenDailyInMain(name, arg);
                     break;
                 case "selectworld":
                     CUtils.LoadScene(1);
@@ -160,6 +174,61 @@ namespace WordCross.Gameplay
             CurrencyController.SetBalance(PlayerPrefs.GetInt(RubyBackupKey));
             PlayerPrefs.DeleteKey(RubyBackupKey);
             if (CurrencyController.onBalanceChanged != null) CurrencyController.onBalanceChanged();
+        }
+
+        private void ApplyDaily(string state)
+        {
+            if (!PlayerPrefs.HasKey(DailyBackupKey))
+            {
+                var saved = new string[DailyKeys.Length];
+                for (int i = 0; i < DailyKeys.Length; i++) saved[i] = CPlayerPrefs.GetString(DailyKeys[i], "");
+                PlayerPrefs.SetString(DailyBackupKey, string.Join("|", saved));
+            }
+            var daily = new DailyChallenge();
+            string today = daily.Today();
+            int[] offsets = new int[0];
+            int best = 0;
+            if (state == "risk") { offsets = new[] { -1, -2, -3 }; best = 3; }
+            else if (state == "safe") { offsets = new[] { 0, -1, -2, -3 }; best = 6; }
+            else if (state == "lost") { offsets = new[] { -5, -6 }; best = 6; }
+            var days = new string[offsets.Length];
+            for (int i = 0; i < offsets.Length; i++) days[i] = daily.AddDays(today, offsets[i]);
+            CPlayerPrefs.SetString("daily_solved", string.Join(",", days));
+            CPlayerPrefs.SetString("daily_milestones", "");
+            CPlayerPrefs.SetInt("daily_best", best);
+            CPlayerPrefs.Save();
+        }
+
+        private void RestoreDaily()
+        {
+            if (!PlayerPrefs.HasKey(DailyBackupKey)) return;
+            string[] saved = PlayerPrefs.GetString(DailyBackupKey).Split('|');
+            CPlayerPrefs.SetString("daily_solved", saved[0]);
+            CPlayerPrefs.SetString("daily_milestones", saved[1]);
+            CPlayerPrefs.SetInt("daily_best", saved[2].Length == 0 ? 0 : int.Parse(saved[2]));
+            CPlayerPrefs.SetString("daily_last_seen", saved[3]);
+            PlayerPrefs.DeleteKey(DailyBackupKey);
+            CPlayerPrefs.Save();
+        }
+
+        private IEnumerator OpenDailyInMain(string name, string arg)
+        {
+            ApplyDaily(arg);
+            int savedRuby = CurrencyController.GetBalance();
+            var daily = new DailyChallenge();
+            int world, subWorld, level;
+            GameState.dailyDate = daily.Today();
+            daily.PickLevel(GameState.dailyDate, out world, out subWorld, out level);
+            SetCurrentLevel(new[] { world, subWorld, level });
+            CUtils.LoadScene(3);
+            yield return WaitScene("Main");
+            if (name == "dailywin")
+            {
+                DialogController.instance.ShowDialog(DialogType.Win);
+                yield return new WaitForSecondsRealtime(1f);
+                CurrencyController.SetBalance(savedRuby);
+                RestoreDaily();
+            }
         }
 
         // Dialog trong Main: vào level đang mở khoá (hoặc level=w-s-l) rồi mở dialog tại đó.

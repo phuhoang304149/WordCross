@@ -1,4 +1,5 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine;
+using UnityEngine.UI;
 using Script.Utils;
 using WordCross.Gameplay;
 
@@ -10,12 +11,39 @@ public class HomeController : BaseController {
     private const int LANGUAGE = 4;
 
     public Text resumeText;
+    // Chấm đỏ trên nút DAILY (để trống thì tự tìm "Dot" dưới object "Daily" của scene).
+    public GameObject dailyDot;
 
     protected override void Start()
     {
         base.Start();
         UpdateResume();
+        UpdateDailyDot();
         Locator<LocalizationController>.Instance.onLanguageChanged += OnLanguageChanged;
+        if (GameState.openDailyOnHome)
+        {
+            GameState.openDailyOnHome = false;
+            DialogController.instance.ShowDialog(DialogType.Daily);
+        }
+    }
+
+    // Chấm đỏ chỉ hiện khi bàn Daily hôm nay chưa giải.
+    public void UpdateDailyDot()
+    {
+        if (dailyDot == null)
+        {
+            var daily = GameObject.Find("Daily");
+            if (daily != null)
+            {
+                foreach (var child in daily.GetComponentsInChildren<Transform>(true))
+                {
+                    if (child.name == "Dot") dailyDot = child.gameObject;
+                }
+            }
+        }
+        if (dailyDot == null) return;
+        var challenge = new DailyChallenge();
+        dailyDot.SetActive(!challenge.IsSolved(challenge.Today()));
     }
 
     private void OnDestroy()
@@ -43,7 +71,7 @@ public class HomeController : BaseController {
                 CUtils.LoadScene(1);
                 break;
             case DAILY:
-                Toast.instance.ShowMessage(Locator<LocalizationController>.Instance.Get("home.toast.daily"));
+                DialogController.instance.ShowDialog(DialogType.Daily);
                 break;
             case BOT:
                 Toast.instance.ShowMessage(Locator<LocalizationController>.Instance.Get("home.toast.bot"));

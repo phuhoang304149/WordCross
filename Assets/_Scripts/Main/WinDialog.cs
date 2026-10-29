@@ -35,6 +35,8 @@ public class WinDialog : Dialog {
     private int reward;
     private bool bonusClaimed, bonusPending;
     private bool started, navigating;
+    private bool isDaily;
+    private DailyResult dailyResult;
 
     protected override void Start()
     {
@@ -87,6 +89,11 @@ public class WinDialog : Dialog {
 
     private void CheckUnlock()
     {
+        if (GameState.isDaily)
+        {
+            CheckDailyComplete();
+            return;
+        }
         numLevels = Superpow.Utils.GetNumLevels(GameState.currentWorld, GameState.currentSubWorld);
         world = GameState.currentWorld;
         subWorld = GameState.currentSubWorld;
@@ -143,8 +150,48 @@ public class WinDialog : Dialog {
         }
     }
 
+    // Thắng bàn Daily: không đổi tiến độ chính (unlocked*/current*), thưởng + chuỗi + mốc do DailyChallenge ghi.
+    private void CheckDailyComplete()
+    {
+        isDaily = true;
+        numLevels = Superpow.Utils.GetNumLevels(GameState.currentWorld, GameState.currentSubWorld);
+        world = GameState.currentWorld;
+        subWorld = GameState.currentSubWorld;
+        level = GameState.currentLevel;
+        dailyResult = new DailyChallenge().Complete(GameState.dailyDate);
+        reward = dailyResult.reward;
+    }
+
+    private void ShowDailyInfo()
+    {
+        bool first = reward > 0;
+        foreach (var label in GetComponentsInChildren<LocalizedText>(true))
+        {
+            if (label.key == "win.title") label.SetKey("win.dailyTitle");
+            else if (label.key == "win.next") label.SetKey("win.toDaily");
+        }
+
+        rewardHolder.SetActive(first);
+        rewardAmountText.text = "+" + reward;
+        rewardText.gameObject.SetActive(true);
+        rewardText.text = first ? Loc.Get("win.dailyReward", "n", reward) : Loc.Get("win.replay");
+        doubleRewardButton.gameObject.SetActive(first);
+
+        string streak = Loc.Get("win.streak", "n", dailyResult.streak);
+        if (dailyResult.milestone > 0) streak += "\n" + Loc.Get("win.milestone", "d", dailyResult.milestoneDays, "n", dailyResult.milestone);
+        goalText.text = streak;
+        goalText.gameObject.SetActive(true);
+        extraWordsText.text = Loc.Get("win.dailyNext");
+        extraWordsText.gameObject.SetActive(true);
+    }
+
     private void ShowRewardInfo()
     {
+        if (isDaily)
+        {
+            ShowDailyInfo();
+            return;
+        }
         bool first = reward > 0;
         rewardHolder.SetActive(first);
         rewardAmountText.text = "+" + reward;
@@ -254,6 +301,14 @@ public class WinDialog : Dialog {
         Close();
         Sound.instance.PlayButton();
 
+        if (isDaily)
+        {
+            // Về Home và mở lại Daily (lịch/chuỗi đã cập nhật).
+            GameState.openDailyOnHome = true;
+            GameState.dailyDate = null;
+            CUtils.LoadScene(0, true);
+            return;
+        }
         CUtils.LoadScene(level == numLevels - 1 ? 1 : 3, true);
     }
 
@@ -263,6 +318,12 @@ public class WinDialog : Dialog {
         navigating = true;
         Close();
         Sound.instance.PlayButton();
+        if (isDaily)
+        {
+            GameState.dailyDate = null;
+            CUtils.LoadScene(0, true);
+            return;
+        }
         CUtils.LoadScene(level == numLevels - 1 ? 1 : 2, true);
     }
 

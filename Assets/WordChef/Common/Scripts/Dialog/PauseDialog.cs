@@ -22,7 +22,8 @@ public class PauseDialog : Dialog {
 
     public void OnMenuClick()
     {
-        CUtils.LoadScene(2, true);
+        // Daily vào từ Home nên Menu quay về Home, không phải chọn level.
+        CUtils.LoadScene(GameState.isDaily ? 0 : 2, true);
         Sound.instance.PlayButton();
         Close();
     }

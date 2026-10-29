@@ -64,8 +64,16 @@ public class MainController : BaseController {
 
     private void UpdateLevelTexts()
     {
-        levelNameText.text = Locator<LocalizationController>.Instance.Get("world.sub", "n", subWorld + 1) + " - " + (level + 1);
-        levelSubText.text = Locator<LocalizationController>.Instance.Get("common.level", "n", level + 1);
+        var loc = Locator<LocalizationController>.Instance;
+        if (GameState.isDaily)
+        {
+            var daily = new DailyChallenge();
+            levelNameText.text = loc.Get("game.dailyName", "d", daily.ShortDate(GameState.dailyDate));
+            levelSubText.text = "#" + daily.DailyNo(GameState.dailyDate);
+            return;
+        }
+        levelNameText.text = loc.Get("world.sub", "n", subWorld + 1) + " - " + (level + 1);
+        levelSubText.text = loc.Get("common.level", "n", level + 1);
     }
 
     public void OnComplete()
