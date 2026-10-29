@@ -22,6 +22,8 @@ WT=$(cd "${ARGS[0]}" && pwd); SPEC=${ARGS[1]}
 resolve_main "$WT"
 WTNAME=$(basename "$WT")
 EXP=$WT/Export; PV=$EXP/preview; mkdir -p "$PV"
+VER=$(sed -n 's/^  bundleVersion: //p' "$WT/ProjectSettings/ProjectSettings.asset" | head -1)   # CLR/AA export folders follow the game version
+[ -n "$VER" ] || die "cannot read bundleVersion from $WT/ProjectSettings/ProjectSettings.asset"
 HEADNAME=${SPEC%%[:;]*}; HEADNAME=$(printf '%s' "$HEADNAME" | tr 'A-Z' 'a-z')
 case "$HEADNAME" in
   home|shop|rate|language|rewarded|reset|daily) SCENE=Home ;;
@@ -96,7 +98,7 @@ build_content() {
   [ "$FP_ASSET" != "$last_asset" ] && need_aa=1
   if [ "$REBUILD" = 1 ]; then need_clr=1; need_aa=1; fi
   [ -f "$PV/Upload/hotupdate.hash" ] || need_clr=1
-  [ -f "$EXP/ServerData/0.3/android/catalog_0.3.bin" ] || need_aa=1
+  [ -f "$EXP/ServerData/$VER/android/catalog_$VER.bin" ] || need_aa=1
   if [ $need_clr = 0 ] && [ $need_aa = 0 ]; then say "content unchanged since the last build — skipping Unity"; return 0; fi
   snapshot_wt
   # GAME_DEBUG switches DebugOpener on in the hot-update DLL (restored afterwards)
@@ -110,7 +112,7 @@ if "GAME_DEBUG" not in m.group(2).split(";"):
     open(p, "w").write(s)
 PY
   if [ $need_clr = 1 ]; then
-    local rt="$EXP/CLR/0.3/android/Runtime"
+    local rt="$EXP/CLR/$VER/android/Runtime"
     if [ ! -f "$rt/config.json" ]; then # incremental CLR needs the AOT metadata of the installed APK: seed it from the original APK
       say "seeding CLR runtime metadata from the original APK"
       mkdir -p "$rt"; unzip -o -q "$ORIG_APK" 'assets/clr/*' -d "$PV/orig"
@@ -118,11 +120,11 @@ PY
       rm -f "$rt/WordCross.Gameplay.HotUpdate.dll.bytes" "$rt/CatGaming.Module.dll.bytes"; rm -rf "${PV:?}/orig"
     fi
     say "building CLR (HybridCLR incremental)…"; local t=$SECONDS
-    rm -rf "${EXP:?}/CLR/0.3/android/Upload"
+    rm -rf "${EXP:?}/CLR/$VER/android/Upload"
     unity_batch Util.Editor.BuildDatabase.BuildAndroid "$LOGS/preview-$WTNAME-clr.log" -batchIncrementalClr
     T_CLR=$((SECONDS - t))
-    [ -f "$EXP/CLR/0.3/android/Upload/hotupdate.hash" ] || { grep -E "\[CLR\]|Error" "$LOGS/preview-$WTNAME-clr.log" | head >&2; die "CLR export failed ($LOGS/preview-$WTNAME-clr.log)"; }
-    rm -rf "${PV:?}/Upload"; cp -R "$EXP/CLR/0.3/android/Upload" "$PV/Upload"
+    [ -f "$EXP/CLR/$VER/android/Upload/hotupdate.hash" ] || { grep -E "\[CLR\]|Error" "$LOGS/preview-$WTNAME-clr.log" | head >&2; die "CLR export failed ($LOGS/preview-$WTNAME-clr.log)"; }
+    rm -rf "${PV:?}/Upload"; cp -R "$EXP/CLR/$VER/android/Upload" "$PV/Upload"
   fi
   if [ $need_aa = 1 ]; then
     say "building Addressables (content update)…"; local t=$SECONDS
@@ -136,7 +138,7 @@ t = zipfile.ZipFile(sys.argv[1]).read("assets/aa/settings.json").decode()
 print(re.search(r"https://([^/\"]+)/", t).group(1))
 PY
 )
-    python3 -I "$HERE/lib/catalog_patch.py" "$EXP/ServerData/0.3/android" "$host" "$PORT" >&2
+    python3 -I "$HERE/lib/catalog_patch.py" "$EXP/ServerData/$VER/android" "$host" "$PORT" >&2
   fi
   restore_wt
   fingerprint
