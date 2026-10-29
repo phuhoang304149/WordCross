@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   packageId: com.PHltd.wordcrossy
   gameInfo:
-    version: 0.3
-    bundleCode: 6
-    addressableVersion: 0.3
+    version: 1.0.0
+    bundleCode: 202001035
+    addressableVersion: 1.0.0
   Data:
     _serializedList:
     - Key: catgamingmodule.Monetization.AdmobConfig
