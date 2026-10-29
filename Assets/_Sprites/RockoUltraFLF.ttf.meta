@@ -14,6 +14,7 @@ TrueTypeFontImporter:
   - RockoUltraFLF
   fallbackFontReferences:
   - {fileID: 12800000, guid: 4e0de5efaffbf3f4a9bc2047198aaf6d, type: 3}
+  - {fileID: 12800000, guid: ec0b06def8c887c4dafd364ab384c671, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
