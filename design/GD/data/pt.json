@@ -2387,6 +2387,36 @@
    "world": 2,
    "subworld": 2,
    "level": 5,
+   "word": "conta",
+   "answers": [
+    "no",
+    "na",
+    "ao",
+    "ano",
+    "toca",
+    "nota",
+    "taco",
+    "conta",
+    "canto"
+   ],
+   "bonusWords": [],
+   "validWords": [
+    "no",
+    "na",
+    "ao",
+    "ano",
+    "toca",
+    "nota",
+    "taco",
+    "conta",
+    "canto"
+   ]
+  },
+  {
+   "id": "pt-2-2-6",
+   "world": 2,
+   "subworld": 2,
+   "level": 6,
    "word": "todos",
    "answers": [
     "do",
@@ -2405,10 +2435,10 @@
    ]
   },
   {
-   "id": "pt-2-2-6",
+   "id": "pt-2-2-7",
    "world": 2,
    "subworld": 2,
-   "level": 6,
+   "level": 7,
    "word": "filha",
    "answers": [
     "la",
@@ -2435,10 +2465,10 @@
    ]
   },
   {
-   "id": "pt-2-2-7",
+   "id": "pt-2-2-8",
    "world": 2,
    "subworld": 2,
-   "level": 7,
+   "level": 8,
    "word": "achas",
    "answers": [
     "as",
@@ -2457,10 +2487,10 @@
    ]
   },
   {
-   "id": "pt-2-2-8",
+   "id": "pt-2-2-9",
    "world": 2,
    "subworld": 2,
-   "level": 8,
+   "level": 9,
    "word": "tanto",
    "answers": [
     "no",
@@ -2481,10 +2511,10 @@
    ]
   },
   {
-   "id": "pt-2-2-9",
+   "id": "pt-2-2-10",
    "world": 2,
    "subworld": 2,
-   "level": 9,
+   "level": 10,
    "word": "rapaz",
    "answers": [
     "ar",
@@ -2505,10 +2535,10 @@
    ]
   },
   {
-   "id": "pt-2-2-10",
+   "id": "pt-2-2-11",
    "world": 2,
    "subworld": 2,
-   "level": 10,
+   "level": 11,
    "word": "terra",
    "answers": [
     "te",
@@ -2529,10 +2559,10 @@
    ]
   },
   {
-   "id": "pt-2-2-11",
+   "id": "pt-2-2-12",
    "world": 2,
    "subworld": 2,
-   "level": 11,
+   "level": 12,
    "word": "causa",
    "answers": [
     "as",
@@ -2553,10 +2583,10 @@
    ]
   },
   {
-   "id": "pt-2-2-12",
+   "id": "pt-2-2-13",
    "world": 2,
    "subworld": 2,
-   "level": 12,
+   "level": 13,
    "word": "tarde",
    "answers": [
     "de",
@@ -2585,10 +2615,10 @@
    ]
   },
   {
-   "id": "pt-2-2-13",
+   "id": "pt-2-2-14",
    "world": 2,
    "subworld": 2,
-   "level": 13,
+   "level": 14,
    "word": "sinto",
    "answers": [
     "os",
@@ -2614,38 +2644,6 @@
     "isto",
     "sinto",
     "nisto"
-   ]
-  },
-  {
-   "id": "pt-2-2-14",
-   "world": 2,
-   "subworld": 2,
-   "level": 14,
-   "word": "conta",
-   "answers": [
-    "no",
-    "na",
-    "ao",
-    "ano",
-    "toca",
-    "nota",
-    "acto",
-    "taco",
-    "conta",
-    "canto"
-   ],
-   "bonusWords": [],
-   "validWords": [
-    "no",
-    "na",
-    "ao",
-    "ano",
-    "toca",
-    "nota",
-    "acto",
-    "taco",
-    "conta",
-    "canto"
    ]
   },
   {
@@ -4789,34 +4787,6 @@
    "world": 3,
    "subworld": 1,
    "level": 12,
-   "word": "óptimo",
-   "answers": [
-    "ti",
-    "oi",
-    "pó",
-    "tom",
-    "tio",
-    "tipo",
-    "ótimo",
-    "óptimo"
-   ],
-   "bonusWords": [],
-   "validWords": [
-    "ti",
-    "oi",
-    "pó",
-    "tom",
-    "tio",
-    "tipo",
-    "ótimo",
-    "óptimo"
-   ]
-  },
-  {
-   "id": "pt-3-1-13",
-   "world": 3,
-   "subworld": 1,
-   "level": 13,
    "word": "futuro",
    "answers": [
     "tu",
@@ -4833,10 +4803,10 @@
    ]
   },
   {
-   "id": "pt-3-1-14",
+   "id": "pt-3-1-13",
    "world": 3,
    "subworld": 1,
-   "level": 14,
+   "level": 13,
    "word": "frente",
    "answers": [
     "te",
@@ -4853,10 +4823,10 @@
    ]
   },
   {
-   "id": "pt-3-1-15",
+   "id": "pt-3-1-14",
    "world": 3,
    "subworld": 1,
-   "level": 15,
+   "level": 14,
    "word": "jantar",
    "answers": [
     "na",
@@ -4873,10 +4843,10 @@
    ]
   },
   {
-   "id": "pt-3-1-16",
+   "id": "pt-3-1-15",
    "world": 3,
    "subworld": 1,
-   "level": 16,
+   "level": 15,
    "word": "parece",
    "answers": [
     "ar",
@@ -4895,10 +4865,10 @@
    ]
   },
   {
-   "id": "pt-3-1-17",
+   "id": "pt-3-1-16",
    "world": 3,
    "subworld": 1,
-   "level": 17,
+   "level": 16,
    "word": "ganhar",
    "answers": [
     "na",
@@ -4917,10 +4887,10 @@
    ]
   },
   {
-   "id": "pt-3-1-18",
+   "id": "pt-3-1-17",
    "world": 3,
    "subworld": 1,
-   "level": 18,
+   "level": 17,
    "word": "último",
    "answers": [
     "lo",
@@ -4947,10 +4917,10 @@
    ]
   },
   {
-   "id": "pt-3-2-1",
+   "id": "pt-3-1-18",
    "world": 3,
-   "subworld": 2,
-   "level": 1,
+   "subworld": 1,
+   "level": 18,
    "word": "alguém",
    "answers": [
     "um",
@@ -4977,10 +4947,10 @@
    ]
   },
   {
-   "id": "pt-3-2-2",
+   "id": "pt-3-2-1",
    "world": 3,
    "subworld": 2,
-   "level": 2,
+   "level": 1,
    "word": "equipa",
    "answers": [
     "eu",
@@ -5007,10 +4977,10 @@
    ]
   },
   {
-   "id": "pt-3-2-3",
+   "id": "pt-3-2-2",
    "world": 3,
    "subworld": 2,
-   "level": 3,
+   "level": 2,
    "word": "graças",
    "answers": [
     "as",
@@ -5029,10 +4999,10 @@
    ]
   },
   {
-   "id": "pt-3-2-4",
+   "id": "pt-3-2-3",
    "world": 3,
    "subworld": 2,
-   "level": 4,
+   "level": 3,
    "word": "comigo",
    "answers": [
     "oi",
@@ -5051,10 +5021,10 @@
    ]
   },
   {
-   "id": "pt-3-2-5",
+   "id": "pt-3-2-4",
    "world": 3,
    "subworld": 2,
-   "level": 5,
+   "level": 4,
    "word": "porque",
    "answers": [
     "eu",
@@ -5081,10 +5051,10 @@
    ]
   },
   {
-   "id": "pt-3-2-6",
+   "id": "pt-3-2-5",
    "world": 3,
    "subworld": 2,
-   "level": 6,
+   "level": 5,
    "word": "senhor",
    "answers": [
     "se",
@@ -5111,10 +5081,10 @@
    ]
   },
   {
-   "id": "pt-3-2-7",
+   "id": "pt-3-2-6",
    "world": 3,
    "subworld": 2,
-   "level": 7,
+   "level": 6,
    "word": "lembro",
    "answers": [
     "me",
@@ -5141,10 +5111,10 @@
    ]
   },
   {
-   "id": "pt-3-2-8",
+   "id": "pt-3-2-7",
    "world": 3,
    "subworld": 2,
-   "level": 8,
+   "level": 7,
    "word": "perigo",
    "answers": [
     "ir",
@@ -5173,10 +5143,10 @@
    ]
   },
   {
-   "id": "pt-3-2-9",
+   "id": "pt-3-2-8",
    "world": 3,
    "subworld": 2,
-   "level": 9,
+   "level": 8,
    "word": "estava",
    "answers": [
     "se",
@@ -5197,10 +5167,10 @@
    ]
   },
   {
-   "id": "pt-3-2-10",
+   "id": "pt-3-2-9",
    "world": 3,
    "subworld": 2,
-   "level": 10,
+   "level": 9,
    "word": "fiquei",
    "answers": [
     "eu",
@@ -5221,10 +5191,10 @@
    ]
   },
   {
-   "id": "pt-3-2-11",
+   "id": "pt-3-2-10",
    "world": 3,
    "subworld": 2,
-   "level": 11,
+   "level": 10,
    "word": "amanhã",
    "answers": [
     "na",
@@ -5245,10 +5215,10 @@
    ]
   },
   {
-   "id": "pt-3-2-12",
+   "id": "pt-3-2-11",
    "world": 3,
    "subworld": 2,
-   "level": 12,
+   "level": 11,
    "word": "bonito",
    "answers": [
     "no",
@@ -5269,10 +5239,10 @@
    ]
   },
   {
-   "id": "pt-3-2-13",
+   "id": "pt-3-2-12",
    "world": 3,
    "subworld": 2,
-   "level": 13,
+   "level": 12,
    "word": "acabei",
    "answers": [
     "ei",
@@ -5293,10 +5263,10 @@
    ]
   },
   {
-   "id": "pt-3-2-14",
+   "id": "pt-3-2-13",
    "world": 3,
    "subworld": 2,
-   "level": 14,
+   "level": 13,
    "word": "venham",
    "answers": [
     "me",
@@ -5325,10 +5295,10 @@
    ]
   },
   {
-   "id": "pt-3-2-15",
+   "id": "pt-3-2-14",
    "world": 3,
    "subworld": 2,
-   "level": 15,
+   "level": 14,
    "word": "pronto",
    "answers": [
     "no",
@@ -5351,10 +5321,10 @@
    ]
   },
   {
-   "id": "pt-3-2-16",
+   "id": "pt-3-2-15",
    "world": 3,
    "subworld": 2,
-   "level": 16,
+   "level": 15,
    "word": "quente",
    "answers": [
     "eu",
@@ -5377,10 +5347,10 @@
    ]
   },
   {
-   "id": "pt-3-2-17",
+   "id": "pt-3-2-16",
    "world": 3,
    "subworld": 2,
-   "level": 17,
+   "level": 16,
    "word": "ataque",
    "answers": [
     "eu",
@@ -5403,10 +5373,10 @@
    ]
   },
   {
-   "id": "pt-3-2-18",
+   "id": "pt-3-2-17",
    "world": 3,
    "subworld": 2,
-   "level": 18,
+   "level": 17,
    "word": "guerra",
    "answers": [
     "eu",
@@ -5429,10 +5399,10 @@
    ]
   },
   {
-   "id": "pt-3-3-1",
+   "id": "pt-3-2-18",
    "world": 3,
-   "subworld": 3,
-   "level": 1,
+   "subworld": 2,
+   "level": 18,
    "word": "centro",
    "answers": [
     "te",
@@ -5463,10 +5433,10 @@
    ]
   },
   {
-   "id": "pt-3-3-2",
+   "id": "pt-3-3-1",
    "world": 3,
    "subworld": 3,
-   "level": 2,
+   "level": 1,
    "word": "bocado",
    "answers": [
     "do",
@@ -5489,10 +5459,10 @@
    ]
   },
   {
-   "id": "pt-3-3-3",
+   "id": "pt-3-3-2",
    "world": 3,
    "subworld": 3,
-   "level": 3,
+   "level": 2,
    "word": "guarda",
    "answers": [
     "da",
@@ -5515,10 +5485,10 @@
    ]
   },
   {
-   "id": "pt-3-3-4",
+   "id": "pt-3-3-3",
    "world": 3,
    "subworld": 3,
-   "level": 4,
+   "level": 3,
    "word": "prazer",
    "answers": [
     "ar",
@@ -5541,10 +5511,10 @@
    ]
   },
   {
-   "id": "pt-3-3-5",
+   "id": "pt-3-3-4",
    "world": 3,
    "subworld": 3,
-   "level": 5,
+   "level": 4,
    "word": "começa",
    "answers": [
     "me",
@@ -5575,10 +5545,10 @@
    ]
   },
   {
-   "id": "pt-3-3-6",
+   "id": "pt-3-3-5",
    "world": 3,
    "subworld": 3,
-   "level": 6,
+   "level": 5,
    "word": "acabou",
    "answers": [
     "ao",
@@ -5601,10 +5571,10 @@
    ]
   },
   {
-   "id": "pt-3-3-7",
+   "id": "pt-3-3-6",
    "world": 3,
    "subworld": 3,
-   "level": 7,
+   "level": 6,
    "word": "tinham",
    "answers": [
     "na",
@@ -5635,10 +5605,10 @@
    ]
   },
   {
-   "id": "pt-3-3-8",
+   "id": "pt-3-3-7",
    "world": 3,
    "subworld": 3,
-   "level": 8,
+   "level": 7,
    "word": "doente",
    "answers": [
     "de",
@@ -5663,10 +5633,10 @@
    ]
   },
   {
-   "id": "pt-3-3-9",
+   "id": "pt-3-3-8",
    "world": 3,
    "subworld": 3,
-   "level": 9,
+   "level": 8,
    "word": "almoço",
    "answers": [
     "ao",
@@ -5691,10 +5661,10 @@
    ]
   },
   {
-   "id": "pt-3-3-10",
+   "id": "pt-3-3-9",
    "world": 3,
    "subworld": 3,
-   "level": 10,
+   "level": 9,
    "word": "sempre",
    "answers": [
     "se",
@@ -5719,10 +5689,10 @@
    ]
   },
   {
-   "id": "pt-3-3-11",
+   "id": "pt-3-3-10",
    "world": 3,
    "subworld": 3,
-   "level": 11,
+   "level": 10,
    "word": "grande",
    "answers": [
     "de",
@@ -5755,10 +5725,10 @@
    ]
   },
   {
-   "id": "pt-3-3-12",
+   "id": "pt-3-3-11",
    "world": 3,
    "subworld": 3,
-   "level": 12,
+   "level": 11,
    "word": "miúdos",
    "answers": [
     "do",
@@ -5791,10 +5761,10 @@
    ]
   },
   {
-   "id": "pt-3-3-13",
+   "id": "pt-3-3-12",
    "world": 3,
    "subworld": 3,
-   "level": 13,
+   "level": 12,
    "word": "pensei",
    "answers": [
     "se",
@@ -5819,10 +5789,10 @@
    ]
   },
   {
-   "id": "pt-3-3-14",
+   "id": "pt-3-3-13",
    "world": 3,
    "subworld": 3,
-   "level": 14,
+   "level": 13,
    "word": "apenas",
    "answers": [
     "se",
@@ -5847,10 +5817,10 @@
    ]
   },
   {
-   "id": "pt-3-3-15",
+   "id": "pt-3-3-14",
    "world": 3,
    "subworld": 3,
-   "level": 15,
+   "level": 14,
    "word": "música",
    "answers": [
     "as",
@@ -5883,10 +5853,10 @@
    ]
   },
   {
-   "id": "pt-3-3-16",
+   "id": "pt-3-3-15",
    "world": 3,
    "subworld": 3,
-   "level": 16,
+   "level": 15,
    "word": "filhos",
    "answers": [
     "os",
@@ -5919,10 +5889,10 @@
    ]
   },
   {
-   "id": "pt-3-3-17",
+   "id": "pt-3-3-16",
    "world": 3,
    "subworld": 3,
-   "level": 17,
+   "level": 16,
    "word": "espero",
    "answers": [
     "se",
@@ -5947,10 +5917,10 @@
    ]
   },
   {
-   "id": "pt-3-3-18",
+   "id": "pt-3-3-17",
    "world": 3,
    "subworld": 3,
-   "level": 18,
+   "level": 17,
    "word": "melhor",
    "answers": [
     "me",
@@ -5983,10 +5953,10 @@
    ]
   },
   {
-   "id": "pt-3-4-1",
+   "id": "pt-3-3-18",
    "world": 3,
-   "subworld": 4,
-   "level": 1,
+   "subworld": 3,
+   "level": 18,
    "word": "deixem",
    "answers": [
     "de",
@@ -6011,10 +5981,10 @@
    ]
   },
   {
-   "id": "pt-3-4-2",
+   "id": "pt-3-4-1",
    "world": 3,
    "subworld": 4,
-   "level": 2,
+   "level": 1,
    "word": "abaixo",
    "answers": [
     "ao",
@@ -6039,10 +6009,10 @@
    ]
   },
   {
-   "id": "pt-3-4-3",
+   "id": "pt-3-4-2",
    "world": 3,
    "subworld": 4,
-   "level": 3,
+   "level": 2,
    "word": "espere",
    "answers": [
     "se",
@@ -6059,10 +6029,10 @@
    ]
   },
   {
-   "id": "pt-3-4-4",
+   "id": "pt-3-4-3",
    "world": 3,
    "subworld": 4,
-   "level": 4,
+   "level": 3,
    "word": "deixou",
    "answers": [
     "de",
@@ -6095,10 +6065,10 @@
    ]
   },
   {
-   "id": "pt-3-4-5",
+   "id": "pt-3-4-4",
    "world": 3,
    "subworld": 4,
-   "level": 5,
+   "level": 4,
    "word": "dentro",
    "answers": [
     "de",
@@ -6131,10 +6101,10 @@
    ]
   },
   {
-   "id": "pt-3-4-6",
+   "id": "pt-3-4-5",
    "world": 3,
    "subworld": 4,
-   "level": 6,
+   "level": 5,
    "word": "ajudar",
    "answers": [
     "da",
@@ -6159,10 +6129,10 @@
    ]
   },
   {
-   "id": "pt-3-4-7",
+   "id": "pt-3-4-6",
    "world": 3,
    "subworld": 4,
-   "level": 7,
+   "level": 6,
    "word": "querer",
    "answers": [
     "eu",
@@ -6179,10 +6149,10 @@
    ]
   },
   {
-   "id": "pt-3-4-8",
+   "id": "pt-3-4-7",
    "world": 3,
    "subworld": 4,
-   "level": 8,
+   "level": 7,
    "word": "minuto",
    "answers": [
     "um",
@@ -6215,10 +6185,10 @@
    ]
   },
   {
-   "id": "pt-3-4-9",
+   "id": "pt-3-4-8",
    "world": 3,
    "subworld": 4,
-   "level": 9,
+   "level": 8,
    "word": "quanto",
    "answers": [
     "no",
@@ -6251,10 +6221,10 @@
    ]
   },
   {
-   "id": "pt-3-4-10",
+   "id": "pt-3-4-9",
    "world": 3,
    "subworld": 4,
-   "level": 10,
+   "level": 9,
    "word": "mulher",
    "answers": [
     "um",
@@ -6289,10 +6259,10 @@
    ]
   },
   {
-   "id": "pt-3-4-11",
+   "id": "pt-3-4-10",
    "world": 3,
    "subworld": 4,
-   "level": 11,
+   "level": 10,
    "word": "regras",
    "answers": [
     "se",
@@ -6319,10 +6289,10 @@
    ]
   },
   {
-   "id": "pt-3-4-12",
+   "id": "pt-3-4-11",
    "world": 3,
    "subworld": 4,
-   "level": 12,
+   "level": 11,
    "word": "câmara",
    "answers": [
     "ar",
@@ -6349,10 +6319,10 @@
    ]
   },
   {
-   "id": "pt-3-4-13",
+   "id": "pt-3-4-12",
    "world": 3,
    "subworld": 4,
-   "level": 13,
+   "level": 12,
    "word": "tentei",
    "answers": [
     "te",
@@ -6371,10 +6341,10 @@
    ]
   },
   {
-   "id": "pt-3-4-14",
+   "id": "pt-3-4-13",
    "world": 3,
    "subworld": 4,
-   "level": 14,
+   "level": 13,
    "word": "morrer",
    "answers": [
     "me",
@@ -6393,10 +6363,10 @@
    ]
   },
   {
-   "id": "pt-3-4-15",
+   "id": "pt-3-4-14",
    "world": 3,
    "subworld": 4,
-   "level": 15,
+   "level": 14,
    "word": "deixei",
    "answers": [
     "de",
@@ -6415,10 +6385,10 @@
    ]
   },
   {
-   "id": "pt-3-4-16",
+   "id": "pt-3-4-15",
    "world": 3,
    "subworld": 4,
-   "level": 16,
+   "level": 15,
    "word": "rápido",
    "answers": [
     "do",
@@ -6453,10 +6423,10 @@
    ]
   },
   {
-   "id": "pt-3-4-17",
+   "id": "pt-3-4-16",
    "world": 3,
    "subworld": 4,
-   "level": 17,
+   "level": 16,
    "word": "entrar",
    "answers": [
     "te",
@@ -6483,10 +6453,10 @@
    ]
   },
   {
-   "id": "pt-3-4-18",
+   "id": "pt-3-4-17",
    "world": 3,
    "subworld": 4,
-   "level": 18,
+   "level": 17,
    "word": "aquilo",
    "answers": [
     "ao",
@@ -6521,10 +6491,10 @@
    ]
   },
   {
-   "id": "pt-3-5-1",
+   "id": "pt-3-4-18",
    "world": 3,
-   "subworld": 5,
-   "level": 1,
+   "subworld": 4,
+   "level": 18,
    "word": "última",
    "answers": [
     "ti",
@@ -6559,10 +6529,10 @@
    ]
   },
   {
-   "id": "pt-3-5-2",
+   "id": "pt-3-5-1",
    "world": 3,
    "subworld": 5,
-   "level": 2,
+   "level": 1,
    "word": "correr",
    "answers": [
     "cor",
@@ -6581,10 +6551,10 @@
    ]
   },
   {
-   "id": "pt-3-5-3",
+   "id": "pt-3-5-2",
    "world": 3,
    "subworld": 5,
-   "level": 3,
+   "level": 2,
    "word": "trazer",
    "answers": [
     "te",
@@ -6611,10 +6581,10 @@
    ]
   },
   {
-   "id": "pt-3-5-4",
+   "id": "pt-3-5-3",
    "world": 3,
    "subworld": 5,
-   "level": 4,
+   "level": 3,
    "word": "bebida",
    "answers": [
     "de",
@@ -6641,10 +6611,10 @@
    ]
   },
   {
-   "id": "pt-3-5-5",
+   "id": "pt-3-5-4",
    "world": 3,
    "subworld": 5,
-   "level": 5,
+   "level": 4,
    "word": "aposto",
    "answers": [
     "os",
@@ -6671,10 +6641,10 @@
    ]
   },
   {
-   "id": "pt-3-5-6",
+   "id": "pt-3-5-5",
    "world": 3,
    "subworld": 5,
-   "level": 6,
+   "level": 5,
    "word": "tenham",
    "answers": [
     "me",
@@ -6709,10 +6679,10 @@
    ]
   },
   {
-   "id": "pt-3-5-7",
+   "id": "pt-3-5-6",
    "world": 3,
    "subworld": 5,
-   "level": 7,
+   "level": 6,
    "word": "buscar",
    "answers": [
     "as",
@@ -6747,10 +6717,10 @@
    ]
   },
   {
-   "id": "pt-3-5-8",
+   "id": "pt-3-5-7",
    "world": 3,
    "subworld": 5,
-   "level": 8,
+   "level": 7,
    "word": "quarto",
    "answers": [
     "ao",
@@ -6785,10 +6755,10 @@
    ]
   },
   {
-   "id": "pt-3-5-9",
+   "id": "pt-3-5-8",
    "world": 3,
    "subworld": 5,
-   "level": 9,
+   "level": 8,
    "word": "acerca",
    "answers": [
     "ar",
@@ -6807,10 +6777,10 @@
    ]
   },
   {
-   "id": "pt-3-5-10",
+   "id": "pt-3-5-9",
    "world": 3,
    "subworld": 5,
-   "level": 10,
+   "level": 9,
    "word": "prisão",
    "answers": [
     "os",
@@ -6845,10 +6815,10 @@
    ]
   },
   {
-   "id": "pt-3-5-11",
+   "id": "pt-3-5-10",
    "world": 3,
    "subworld": 5,
-   "level": 11,
+   "level": 10,
    "word": "perder",
    "answers": [
     "de",
@@ -6867,10 +6837,10 @@
    ]
   },
   {
-   "id": "pt-3-5-12",
+   "id": "pt-3-5-11",
    "world": 3,
    "subworld": 5,
-   "level": 12,
+   "level": 11,
    "word": "gostas",
    "answers": [
     "os",
@@ -6897,10 +6867,10 @@
    ]
   },
   {
-   "id": "pt-3-5-13",
+   "id": "pt-3-5-12",
    "world": 3,
    "subworld": 5,
-   "level": 13,
+   "level": 12,
    "word": "bonita",
    "answers": [
     "no",
@@ -6935,10 +6905,10 @@
    ]
   },
   {
-   "id": "pt-3-5-14",
+   "id": "pt-3-5-13",
    "world": 3,
    "subworld": 5,
-   "level": 14,
+   "level": 13,
    "word": "menino",
    "answers": [
     "me",
@@ -6965,10 +6935,10 @@
    ]
   },
   {
-   "id": "pt-3-5-15",
+   "id": "pt-3-5-14",
    "world": 3,
    "subworld": 5,
-   "level": 15,
+   "level": 14,
    "word": "querem",
    "answers": [
     "um",
@@ -6995,10 +6965,10 @@
    ]
   },
   {
-   "id": "pt-3-5-16",
+   "id": "pt-3-5-15",
    "world": 3,
    "subworld": 5,
-   "level": 16,
+   "level": 15,
    "word": "aquele",
    "answers": [
     "eu",
@@ -7025,10 +6995,10 @@
    ]
   },
   {
-   "id": "pt-3-5-17",
+   "id": "pt-3-5-16",
    "world": 3,
    "subworld": 5,
-   "level": 17,
+   "level": 16,
    "word": "seguro",
    "answers": [
     "eu",
@@ -7063,10 +7033,10 @@
    ]
   },
   {
-   "id": "pt-3-5-18",
+   "id": "pt-3-5-17",
    "world": 3,
    "subworld": 5,
-   "level": 18,
+   "level": 17,
    "word": "dormir",
    "answers": [
     "do",
@@ -7093,10 +7063,10 @@
    ]
   },
   {
-   "id": "pt-4-1-1",
-   "world": 4,
-   "subworld": 1,
-   "level": 1,
+   "id": "pt-3-5-18",
+   "world": 3,
+   "subworld": 5,
+   "level": 18,
    "word": "cidade",
    "answers": [
     "de",
@@ -7125,10 +7095,10 @@
    ]
   },
   {
-   "id": "pt-4-1-2",
+   "id": "pt-4-1-1",
    "world": 4,
    "subworld": 1,
-   "level": 2,
+   "level": 1,
    "word": "esteja",
    "answers": [
     "se",
@@ -7157,10 +7127,10 @@
    ]
   },
   {
-   "id": "pt-4-1-3",
+   "id": "pt-4-1-2",
    "world": 4,
    "subworld": 1,
-   "level": 3,
+   "level": 2,
    "word": "espaço",
    "answers": [
     "se",
@@ -7197,10 +7167,10 @@
    ]
   },
   {
-   "id": "pt-4-1-4",
+   "id": "pt-4-1-3",
    "world": 4,
    "subworld": 1,
-   "level": 4,
+   "level": 3,
    "word": "alguns",
    "answers": [
     "as",
@@ -7237,10 +7207,10 @@
    ]
   },
   {
-   "id": "pt-4-1-5",
+   "id": "pt-4-1-4",
    "world": 4,
    "subworld": 1,
-   "level": 5,
+   "level": 4,
    "word": "salvar",
    "answers": [
     "as",
@@ -7269,10 +7239,10 @@
    ]
   },
   {
-   "id": "pt-4-1-6",
+   "id": "pt-4-1-5",
    "world": 4,
    "subworld": 1,
-   "level": 6,
+   "level": 5,
    "word": "voltou",
    "answers": [
     "tu",
@@ -7301,10 +7271,10 @@
    ]
   },
   {
-   "id": "pt-4-1-7",
+   "id": "pt-4-1-6",
    "world": 4,
    "subworld": 1,
-   "level": 7,
+   "level": 6,
    "word": "tinhas",
    "answers": [
     "as",
@@ -7341,10 +7311,10 @@
    ]
   },
   {
-   "id": "pt-4-1-8",
+   "id": "pt-4-1-7",
    "world": 4,
    "subworld": 1,
-   "level": 8,
+   "level": 7,
    "word": "perdeu",
    "answers": [
     "de",
@@ -7373,10 +7343,10 @@
    ]
   },
   {
-   "id": "pt-4-1-9",
+   "id": "pt-4-1-8",
    "world": 4,
    "subworld": 1,
-   "level": 9,
+   "level": 8,
    "word": "aquela",
    "answers": [
     "eu",
@@ -7405,10 +7375,10 @@
    ]
   },
   {
-   "id": "pt-4-1-10",
+   "id": "pt-4-1-9",
    "world": 4,
    "subworld": 1,
-   "level": 10,
+   "level": 9,
    "word": "juntos",
    "answers": [
     "os",
@@ -7445,10 +7415,10 @@
    ]
   },
   {
-   "id": "pt-4-1-11",
+   "id": "pt-4-1-10",
    "world": 4,
    "subworld": 1,
-   "level": 11,
+   "level": 10,
    "word": "mortos",
    "answers": [
     "os",
@@ -7477,10 +7447,10 @@
    ]
   },
   {
-   "id": "pt-4-1-12",
+   "id": "pt-4-1-11",
    "world": 4,
    "subworld": 1,
-   "level": 12,
+   "level": 11,
    "word": "viagem",
    "answers": [
     "me",
@@ -7517,10 +7487,10 @@
    ]
   },
   {
-   "id": "pt-4-1-13",
+   "id": "pt-4-1-12",
    "world": 4,
    "subworld": 1,
-   "level": 13,
+   "level": 12,
    "word": "pensas",
    "answers": [
     "se",
@@ -7551,10 +7521,10 @@
    ]
   },
   {
-   "id": "pt-4-1-14",
+   "id": "pt-4-1-13",
    "world": 4,
    "subworld": 1,
-   "level": 14,
+   "level": 13,
    "word": "gostar",
    "answers": [
     "os",
@@ -7598,10 +7568,10 @@
    ]
   },
   {
-   "id": "pt-4-1-15",
+   "id": "pt-4-1-14",
    "world": 4,
    "subworld": 1,
-   "level": 15,
+   "level": 14,
    "word": "embora",
    "answers": [
     "me",
@@ -7651,10 +7621,10 @@
    ]
   },
   {
-   "id": "pt-4-1-16",
+   "id": "pt-4-1-15",
    "world": 4,
    "subworld": 1,
-   "level": 16,
+   "level": 15,
    "word": "voltar",
    "answers": [
     "ao",
@@ -7696,10 +7666,10 @@
    ]
   },
   {
-   "id": "pt-4-1-17",
+   "id": "pt-4-1-16",
    "world": 4,
    "subworld": 1,
-   "level": 17,
+   "level": 16,
    "word": "acabar",
    "answers": [
     "ar",
@@ -7722,10 +7692,10 @@
    ]
   },
   {
-   "id": "pt-4-1-18",
+   "id": "pt-4-1-17",
    "world": 4,
    "subworld": 1,
-   "level": 18,
+   "level": 17,
    "word": "estará",
    "answers": [
     "se",
@@ -7781,10 +7751,10 @@
    ]
   },
   {
-   "id": "pt-4-2-1",
+   "id": "pt-4-1-18",
    "world": 4,
-   "subworld": 2,
-   "level": 1,
+   "subworld": 1,
+   "level": 18,
    "word": "cabelo",
    "answers": [
     "ao",
@@ -7828,10 +7798,10 @@
    ]
   },
   {
-   "id": "pt-4-2-2",
+   "id": "pt-4-2-1",
    "world": 4,
    "subworld": 2,
-   "level": 2,
+   "level": 1,
    "word": "ordens",
    "answers": [
     "de",
@@ -7873,10 +7843,10 @@
    ]
   },
   {
-   "id": "pt-4-2-3",
+   "id": "pt-4-2-2",
    "world": 4,
    "subworld": 2,
-   "level": 3,
+   "level": 2,
    "word": "seguir",
    "answers": [
     "eu",
@@ -7922,10 +7892,10 @@
    ]
   },
   {
-   "id": "pt-4-2-4",
+   "id": "pt-4-2-3",
    "world": 4,
    "subworld": 2,
-   "level": 4,
+   "level": 3,
    "word": "estado",
    "answers": [
     "de",
@@ -7973,10 +7943,10 @@
    ]
   },
   {
-   "id": "pt-4-2-5",
+   "id": "pt-4-2-4",
    "world": 4,
    "subworld": 2,
-   "level": 5,
+   "level": 4,
    "word": "muitas",
    "answers": [
     "um",
@@ -8034,10 +8004,10 @@
    ]
   },
   {
-   "id": "pt-4-2-6",
+   "id": "pt-4-2-5",
    "world": 4,
    "subworld": 2,
-   "level": 6,
+   "level": 5,
    "word": "amigos",
    "answers": [
     "os",
@@ -8089,10 +8059,10 @@
    ]
   },
   {
-   "id": "pt-4-2-7",
+   "id": "pt-4-2-6",
    "world": 4,
    "subworld": 2,
-   "level": 7,
+   "level": 6,
    "word": "passar",
    "answers": [
     "as",
@@ -8115,10 +8085,10 @@
    ]
   },
   {
-   "id": "pt-4-2-8",
+   "id": "pt-4-2-7",
    "world": 4,
    "subworld": 2,
-   "level": 8,
+   "level": 7,
    "word": "metade",
    "answers": [
     "de",
@@ -8149,10 +8119,10 @@
    ]
   },
   {
-   "id": "pt-4-2-9",
+   "id": "pt-4-2-8",
    "world": 4,
    "subworld": 2,
-   "level": 9,
+   "level": 8,
    "word": "mentir",
    "answers": [
     "me",
@@ -8194,10 +8164,10 @@
    ]
   },
   {
-   "id": "pt-4-2-10",
+   "id": "pt-4-2-9",
    "world": 4,
    "subworld": 2,
-   "level": 10,
+   "level": 9,
    "word": "humano",
    "answers": [
     "um",
@@ -8245,10 +8215,10 @@
    ]
   },
   {
-   "id": "pt-4-2-11",
+   "id": "pt-4-2-10",
    "world": 4,
    "subworld": 2,
-   "level": 11,
+   "level": 10,
    "word": "segura",
    "answers": [
     "eu",
@@ -8296,10 +8266,10 @@
    ]
   },
   {
-   "id": "pt-4-2-12",
+   "id": "pt-4-2-11",
    "world": 4,
    "subworld": 2,
-   "level": 12,
+   "level": 11,
    "word": "depois",
    "answers": [
     "de",
@@ -8355,10 +8325,10 @@
    ]
   },
   {
-   "id": "pt-4-2-13",
+   "id": "pt-4-2-12",
    "world": 4,
    "subworld": 2,
-   "level": 13,
+   "level": 12,
    "word": "morreu",
    "answers": [
     "um",
@@ -8389,10 +8359,10 @@
    ]
   },
   {
-   "id": "pt-4-2-14",
+   "id": "pt-4-2-13",
    "world": 4,
    "subworld": 2,
-   "level": 14,
+   "level": 13,
    "word": "podias",
    "answers": [
     "do",
@@ -8450,10 +8420,10 @@
    ]
   },
   {
-   "id": "pt-4-2-15",
+   "id": "pt-4-2-14",
    "world": 4,
    "subworld": 2,
-   "level": 15,
+   "level": 14,
    "word": "escola",
    "answers": [
     "se",
@@ -8511,10 +8481,10 @@
    ]
   },
   {
-   "id": "pt-4-2-16",
+   "id": "pt-4-2-15",
    "world": 4,
    "subworld": 2,
-   "level": 16,
+   "level": 15,
    "word": "sentir",
    "answers": [
     "se",
@@ -8562,10 +8532,10 @@
    ]
   },
   {
-   "id": "pt-4-2-17",
+   "id": "pt-4-2-16",
    "world": 4,
    "subworld": 2,
-   "level": 17,
+   "level": 16,
    "word": "outros",
    "answers": [
     "os",
@@ -8596,10 +8566,10 @@
    ]
   },
   {
-   "id": "pt-4-2-18",
+   "id": "pt-4-2-17",
    "world": 4,
    "subworld": 2,
-   "level": 18,
+   "level": 17,
    "word": "deixar",
    "answers": [
     "de",
@@ -8643,10 +8613,10 @@
    ]
   },
   {
-   "id": "pt-4-3-1",
+   "id": "pt-4-2-18",
    "world": 4,
-   "subworld": 3,
-   "level": 1,
+   "subworld": 2,
+   "level": 18,
    "word": "queria",
    "answers": [
     "eu",
@@ -8685,10 +8655,10 @@
    ]
   },
   {
-   "id": "pt-4-3-2",
+   "id": "pt-4-3-1",
    "world": 4,
    "subworld": 3,
-   "level": 2,
+   "level": 1,
    "word": "tempos",
    "answers": [
     "se",
@@ -8730,10 +8700,10 @@
    ]
   },
   {
-   "id": "pt-4-3-3",
+   "id": "pt-4-3-2",
    "world": 4,
    "subworld": 3,
-   "level": 3,
+   "level": 2,
    "word": "comida",
    "answers": [
     "do",
@@ -8777,10 +8747,10 @@
    ]
   },
   {
-   "id": "pt-4-3-4",
+   "id": "pt-4-3-3",
    "world": 4,
    "subworld": 3,
-   "level": 4,
+   "level": 3,
    "word": "normal",
    "answers": [
     "no",
@@ -8826,10 +8796,10 @@
    ]
   },
   {
-   "id": "pt-4-3-5",
+   "id": "pt-4-3-4",
    "world": 4,
    "subworld": 3,
-   "level": 5,
+   "level": 4,
    "word": "lembra",
    "answers": [
     "me",
@@ -8875,10 +8845,10 @@
    ]
   },
   {
-   "id": "pt-4-3-6",
+   "id": "pt-4-3-5",
    "world": 4,
    "subworld": 3,
-   "level": 6,
+   "level": 5,
    "word": "mostra",
    "answers": [
     "os",
@@ -8936,10 +8906,10 @@
    ]
   },
   {
-   "id": "pt-4-3-7",
+   "id": "pt-4-3-6",
    "world": 4,
    "subworld": 3,
-   "level": 7,
+   "level": 6,
    "word": "quando",
    "answers": [
     "do",
@@ -8978,10 +8948,10 @@
    ]
   },
   {
-   "id": "pt-4-3-8",
+   "id": "pt-4-3-7",
    "world": 4,
    "subworld": 3,
-   "level": 8,
+   "level": 7,
    "word": "muitos",
    "answers": [
     "um",
@@ -9027,10 +8997,10 @@
    ]
   },
   {
-   "id": "pt-4-3-9",
+   "id": "pt-4-3-8",
    "world": 4,
    "subworld": 3,
-   "level": 9,
+   "level": 8,
    "word": "pensar",
    "answers": [
     "se",
@@ -9076,10 +9046,10 @@
    ]
   },
   {
-   "id": "pt-4-3-10",
+   "id": "pt-4-3-9",
    "world": 4,
    "subworld": 3,
-   "level": 10,
+   "level": 9,
    "word": "minhas",
    "answers": [
     "as",
@@ -9121,10 +9091,10 @@
    ]
   },
   {
-   "id": "pt-4-3-11",
+   "id": "pt-4-3-10",
    "world": 4,
    "subworld": 3,
-   "level": 11,
+   "level": 10,
    "word": "outras",
    "answers": [
     "os",
@@ -9182,10 +9152,10 @@
    ]
   },
   {
-   "id": "pt-4-3-12",
+   "id": "pt-4-3-11",
    "world": 4,
    "subworld": 3,
-   "level": 12,
+   "level": 11,
    "word": "tenhas",
    "answers": [
     "se",
@@ -9224,10 +9194,10 @@
    ]
   },
   {
-   "id": "pt-4-3-13",
+   "id": "pt-4-3-12",
    "world": 4,
    "subworld": 3,
-   "level": 13,
+   "level": 12,
    "word": "missão",
    "answers": [
     "os",
@@ -9258,10 +9228,10 @@
    ]
   },
   {
-   "id": "pt-4-3-14",
+   "id": "pt-4-3-13",
    "world": 4,
    "subworld": 3,
-   "level": 14,
+   "level": 13,
    "word": "provas",
    "answers": [
     "os",
@@ -9305,10 +9275,10 @@
    ]
   },
   {
-   "id": "pt-4-3-15",
+   "id": "pt-4-3-14",
    "world": 4,
    "subworld": 3,
-   "level": 15,
+   "level": 14,
    "word": "demais",
    "answers": [
     "de",
@@ -9366,10 +9336,10 @@
    ]
   },
   {
-   "id": "pt-4-3-16",
+   "id": "pt-4-3-15",
    "world": 4,
    "subworld": 3,
-   "level": 16,
+   "level": 15,
    "word": "tratar",
    "answers": [
     "ar",
@@ -9384,10 +9354,10 @@
    ]
   },
   {
-   "id": "pt-4-3-17",
+   "id": "pt-4-3-16",
    "world": 4,
    "subworld": 3,
-   "level": 17,
+   "level": 16,
    "word": "manter",
    "answers": [
     "me",
@@ -9435,10 +9405,10 @@
    ]
   },
   {
-   "id": "pt-4-3-18",
+   "id": "pt-4-3-17",
    "world": 4,
    "subworld": 3,
-   "level": 18,
+   "level": 17,
    "word": "escuta",
    "answers": [
     "eu",
@@ -9486,10 +9456,10 @@
    ]
   },
   {
-   "id": "pt-4-4-1",
+   "id": "pt-4-3-18",
    "world": 4,
-   "subworld": 4,
-   "level": 1,
+   "subworld": 3,
+   "level": 18,
    "word": "devias",
    "answers": [
     "de",
@@ -9547,10 +9517,10 @@
    ]
   },
   {
-   "id": "pt-4-4-2",
+   "id": "pt-4-4-1",
    "world": 4,
    "subworld": 4,
-   "level": 2,
+   "level": 1,
    "word": "marido",
    "answers": [
     "do",
@@ -9605,6 +9575,57 @@
     "rio",
     "moda",
     "mora"
+   ]
+  },
+  {
+   "id": "pt-4-4-2",
+   "world": 4,
+   "subworld": 4,
+   "level": 2,
+   "word": "branco",
+   "answers": [
+    "no",
+    "na",
+    "ao",
+    "ar",
+    "boa",
+    "ano",
+    "ora",
+    "bar",
+    "cor",
+    "boca",
+    "cabo",
+    "rabo",
+    "barco",
+    "banco",
+    "branco"
+   ],
+   "bonusWords": [
+    "arco",
+    "caro",
+    "obra",
+    "cobra"
+   ],
+   "validWords": [
+    "no",
+    "na",
+    "ao",
+    "ar",
+    "boa",
+    "ano",
+    "ora",
+    "bar",
+    "cor",
+    "boca",
+    "cabo",
+    "rabo",
+    "barco",
+    "banco",
+    "branco",
+    "arco",
+    "caro",
+    "obra",
+    "cobra"
    ]
   },
   {
@@ -9729,13 +9750,11 @@
     "contar"
    ],
    "bonusWords": [
-    "acto",
     "arco",
     "nota",
     "rato",
     "rota",
     "taco",
-    "actor",
     "canto",
     "corta"
    ],
@@ -9755,13 +9774,11 @@
     "troca",
     "contra",
     "contar",
-    "acto",
     "arco",
     "nota",
     "rato",
     "rota",
     "taco",
-    "actor",
     "canto",
     "corta"
    ]
@@ -10220,6 +10237,46 @@
    "world": 4,
    "subworld": 4,
    "level": 18,
+   "word": "costas",
+   "answers": [
+    "os",
+    "as",
+    "ao",
+    "aos",
+    "soa",
+    "caso",
+    "saco",
+    "toca",
+    "caos",
+    "taco",
+    "costa",
+    "casos",
+    "sacos",
+    "costas"
+   ],
+   "bonusWords": [],
+   "validWords": [
+    "os",
+    "as",
+    "ao",
+    "aos",
+    "soa",
+    "caso",
+    "saco",
+    "toca",
+    "caos",
+    "taco",
+    "costa",
+    "casos",
+    "sacos",
+    "costas"
+   ]
+  },
+  {
+   "id": "pt-4-5-1",
+   "world": 4,
+   "subworld": 5,
+   "level": 1,
    "word": "alguma",
    "answers": [
     "um",
@@ -10256,10 +10313,10 @@
    ]
   },
   {
-   "id": "pt-4-5-1",
+   "id": "pt-4-5-2",
    "world": 4,
    "subworld": 5,
-   "level": 1,
+   "level": 2,
    "word": "partir",
    "answers": [
     "ir",
@@ -10293,48 +10350,6 @@
     "tirar",
     "trair",
     "partir"
-   ]
-  },
-  {
-   "id": "pt-4-5-2",
-   "world": 4,
-   "subworld": 5,
-   "level": 2,
-   "word": "costas",
-   "answers": [
-    "os",
-    "as",
-    "ao",
-    "aos",
-    "soa",
-    "caso",
-    "saco",
-    "toca",
-    "acto",
-    "caos",
-    "taco",
-    "costa",
-    "casos",
-    "sacos",
-    "costas"
-   ],
-   "bonusWords": [],
-   "validWords": [
-    "os",
-    "as",
-    "ao",
-    "aos",
-    "soa",
-    "caso",
-    "saco",
-    "toca",
-    "acto",
-    "caos",
-    "taco",
-    "costa",
-    "casos",
-    "sacos",
-    "costas"
    ]
   },
   {
@@ -12210,6 +12225,40 @@
    "world": 5,
    "subworld": 3,
    "level": 6,
+   "word": "coração",
+   "answers": [
+    "ao",
+    "ar",
+    "cão",
+    "ora",
+    "cor",
+    "aço",
+    "caro",
+    "ação",
+    "arco",
+    "coroa",
+    "coração"
+   ],
+   "bonusWords": [],
+   "validWords": [
+    "ao",
+    "ar",
+    "cão",
+    "ora",
+    "cor",
+    "aço",
+    "caro",
+    "ação",
+    "arco",
+    "coroa",
+    "coração"
+   ]
+  },
+  {
+   "id": "pt-5-3-7",
+   "world": 5,
+   "subworld": 3,
+   "level": 7,
    "word": "querido",
    "answers": [
     "de",
@@ -12259,10 +12308,10 @@
    ]
   },
   {
-   "id": "pt-5-3-7",
+   "id": "pt-5-3-8",
    "world": 5,
    "subworld": 3,
-   "level": 7,
+   "level": 8,
    "word": "socorro",
    "answers": [
     "os",
@@ -12277,10 +12326,10 @@
    ]
   },
   {
-   "id": "pt-5-3-8",
+   "id": "pt-5-3-9",
    "world": 5,
    "subworld": 3,
-   "level": 8,
+   "level": 9,
    "word": "sozinha",
    "answers": [
     "os",
@@ -12332,10 +12381,10 @@
    ]
   },
   {
-   "id": "pt-5-3-9",
+   "id": "pt-5-3-10",
    "world": 5,
    "subworld": 3,
-   "level": 9,
+   "level": 10,
    "word": "parecer",
    "answers": [
     "ar",
@@ -12358,10 +12407,10 @@
    ]
   },
   {
-   "id": "pt-5-3-10",
+   "id": "pt-5-3-11",
    "world": 5,
    "subworld": 3,
-   "level": 10,
+   "level": 11,
    "word": "últimos",
    "answers": [
     "os",
@@ -12403,10 +12452,10 @@
    ]
   },
   {
-   "id": "pt-5-3-11",
+   "id": "pt-5-3-12",
    "world": 5,
    "subworld": 3,
-   "level": 11,
+   "level": 12,
    "word": "preciso",
    "answers": [
     "se",
@@ -12464,10 +12513,10 @@
    ]
   },
   {
-   "id": "pt-5-3-12",
+   "id": "pt-5-3-13",
    "world": 5,
    "subworld": 3,
-   "level": 12,
+   "level": 13,
    "word": "senhora",
    "answers": [
     "se",
@@ -12525,10 +12574,10 @@
    ]
   },
   {
-   "id": "pt-5-3-13",
+   "id": "pt-5-3-14",
    "world": 5,
    "subworld": 3,
-   "level": 13,
+   "level": 14,
    "word": "coragem",
    "answers": [
     "me",
@@ -12586,10 +12635,10 @@
    ]
   },
   {
-   "id": "pt-5-3-14",
+   "id": "pt-5-3-15",
    "world": 5,
    "subworld": 3,
-   "level": 14,
+   "level": 15,
    "word": "sentido",
    "answers": [
     "de",
@@ -12647,10 +12696,10 @@
    ]
   },
   {
-   "id": "pt-5-3-15",
+   "id": "pt-5-3-16",
    "world": 5,
    "subworld": 3,
-   "level": 15,
+   "level": 16,
    "word": "querida",
    "answers": [
     "de",
@@ -12708,10 +12757,10 @@
    ]
   },
   {
-   "id": "pt-5-3-16",
+   "id": "pt-5-3-17",
    "world": 5,
    "subworld": 3,
-   "level": 16,
+   "level": 17,
    "word": "máquina",
    "answers": [
     "um",
@@ -12750,10 +12799,10 @@
    ]
   },
   {
-   "id": "pt-5-3-17",
+   "id": "pt-5-3-18",
    "world": 5,
    "subworld": 3,
-   "level": 17,
+   "level": 18,
    "word": "humanos",
    "answers": [
     "um",
@@ -12811,10 +12860,10 @@
    ]
   },
   {
-   "id": "pt-5-3-18",
+   "id": "pt-5-4-1",
    "world": 5,
-   "subworld": 3,
-   "level": 18,
+   "subworld": 4,
+   "level": 1,
    "word": "lamento",
    "answers": [
     "me",
@@ -12872,10 +12921,10 @@
    ]
   },
   {
-   "id": "pt-5-4-1",
+   "id": "pt-5-4-2",
    "world": 5,
    "subworld": 4,
-   "level": 1,
+   "level": 2,
    "word": "milhões",
    "answers": [
     "se",
@@ -12925,10 +12974,10 @@
    ]
   },
   {
-   "id": "pt-5-4-2",
+   "id": "pt-5-4-3",
    "world": 5,
    "subworld": 4,
-   "level": 2,
+   "level": 3,
    "word": "polícia",
    "answers": [
     "ao",
@@ -12970,10 +13019,10 @@
    ]
   },
   {
-   "id": "pt-5-4-3",
+   "id": "pt-5-4-4",
    "world": 5,
    "subworld": 4,
-   "level": 3,
+   "level": 4,
    "word": "caminho",
    "answers": [
     "no",
@@ -13027,10 +13076,10 @@
    ]
   },
   {
-   "id": "pt-5-4-4",
+   "id": "pt-5-4-5",
    "world": 5,
    "subworld": 4,
-   "level": 4,
+   "level": 5,
    "word": "minutos",
    "answers": [
     "um",
@@ -13088,10 +13137,10 @@
    ]
   },
   {
-   "id": "pt-5-4-5",
+   "id": "pt-5-4-6",
    "world": 5,
    "subworld": 4,
-   "level": 5,
+   "level": 6,
    "word": "confiar",
    "answers": [
     "no",
@@ -13149,10 +13198,10 @@
    ]
   },
   {
-   "id": "pt-5-4-6",
+   "id": "pt-5-4-7",
    "world": 5,
    "subworld": 4,
-   "level": 6,
+   "level": 7,
    "word": "questão",
    "answers": [
     "eu",
@@ -13208,10 +13257,10 @@
    ]
   },
   {
-   "id": "pt-5-4-7",
+   "id": "pt-5-4-8",
    "world": 5,
    "subworld": 4,
-   "level": 7,
+   "level": 8,
    "word": "decisão",
    "answers": [
     "de",
@@ -13269,10 +13318,10 @@
    ]
   },
   {
-   "id": "pt-5-4-8",
+   "id": "pt-5-4-9",
    "world": 5,
    "subworld": 4,
-   "level": 8,
+   "level": 9,
    "word": "maldito",
    "answers": [
     "do",
@@ -13330,10 +13379,10 @@
    ]
   },
   {
-   "id": "pt-5-4-9",
+   "id": "pt-5-4-10",
    "world": 5,
    "subworld": 4,
-   "level": 9,
+   "level": 10,
    "word": "fizeram",
    "answers": [
     "me",
@@ -13391,10 +13440,10 @@
    ]
   },
   {
-   "id": "pt-5-4-10",
+   "id": "pt-5-4-11",
    "world": 5,
    "subworld": 4,
-   "level": 10,
+   "level": 11,
    "word": "escolha",
    "answers": [
     "se",
@@ -13452,10 +13501,10 @@
    ]
   },
   {
-   "id": "pt-5-4-11",
+   "id": "pt-5-4-12",
    "world": 5,
    "subworld": 4,
-   "level": 11,
+   "level": 12,
    "word": "dólares",
    "answers": [
     "de",
@@ -13513,10 +13562,10 @@
    ]
   },
   {
-   "id": "pt-5-4-12",
+   "id": "pt-5-4-13",
    "world": 5,
    "subworld": 4,
-   "level": 12,
+   "level": 13,
    "word": "fazemos",
    "answers": [
     "se",
@@ -13570,10 +13619,10 @@
    ]
   },
   {
-   "id": "pt-5-4-13",
+   "id": "pt-5-4-14",
    "world": 5,
    "subworld": 4,
-   "level": 13,
+   "level": 14,
    "word": "segunda",
    "answers": [
     "de",
@@ -13631,10 +13680,10 @@
    ]
   },
   {
-   "id": "pt-5-4-14",
+   "id": "pt-5-4-15",
    "world": 5,
    "subworld": 4,
-   "level": 14,
+   "level": 15,
    "word": "tivemos",
    "answers": [
     "se",
@@ -13692,10 +13741,10 @@
    ]
   },
   {
-   "id": "pt-5-4-15",
+   "id": "pt-5-4-16",
    "world": 5,
    "subworld": 4,
-   "level": 15,
+   "level": 16,
    "word": "estação",
    "answers": [
     "se",
@@ -13734,10 +13783,10 @@
    ]
   },
   {
-   "id": "pt-5-4-16",
+   "id": "pt-5-4-17",
    "world": 5,
    "subworld": 4,
-   "level": 16,
+   "level": 17,
    "word": "licença",
    "answers": [
     "na",
@@ -13785,10 +13834,10 @@
    ]
   },
   {
-   "id": "pt-5-4-17",
+   "id": "pt-5-4-18",
    "world": 5,
    "subworld": 4,
-   "level": 17,
+   "level": 18,
    "word": "quantos",
    "answers": [
     "os",
@@ -13846,10 +13895,10 @@
    ]
   },
   {
-   "id": "pt-5-4-18",
+   "id": "pt-5-5-1",
    "world": 5,
-   "subworld": 4,
-   "level": 18,
+   "subworld": 5,
+   "level": 1,
    "word": "serviço",
    "answers": [
     "se",
@@ -13905,10 +13954,10 @@
    ]
   },
   {
-   "id": "pt-5-5-1",
+   "id": "pt-5-5-2",
    "world": 5,
    "subworld": 5,
-   "level": 1,
+   "level": 2,
    "word": "capitão",
    "answers": [
     "ao",
@@ -13928,7 +13977,6 @@
     "capitão"
    ],
    "bonusWords": [
-    "acto",
     "taco"
    ],
    "validWords": [
@@ -13947,15 +13995,14 @@
     "tipo",
     "toca",
     "capitão",
-    "acto",
     "taco"
    ]
   },
   {
-   "id": "pt-5-5-2",
+   "id": "pt-5-5-3",
    "world": 5,
    "subworld": 5,
-   "level": 2,
+   "level": 3,
    "word": "poderia",
    "answers": [
     "de",
@@ -14013,10 +14060,10 @@
    ]
   },
   {
-   "id": "pt-5-5-3",
+   "id": "pt-5-5-4",
    "world": 5,
    "subworld": 5,
-   "level": 3,
+   "level": 4,
    "word": "querias",
    "answers": [
     "eu",
@@ -14074,10 +14121,10 @@
    ]
   },
   {
-   "id": "pt-5-5-4",
+   "id": "pt-5-5-5",
    "world": 5,
    "subworld": 5,
-   "level": 4,
+   "level": 5,
    "word": "lembras",
    "answers": [
     "se",
@@ -14135,10 +14182,10 @@
    ]
   },
   {
-   "id": "pt-5-5-5",
+   "id": "pt-5-5-6",
    "world": 5,
    "subworld": 5,
-   "level": 5,
+   "level": 6,
    "word": "grandes",
    "answers": [
     "de",
@@ -14188,10 +14235,10 @@
    ]
   },
   {
-   "id": "pt-5-5-6",
+   "id": "pt-5-5-7",
    "world": 5,
    "subworld": 5,
-   "level": 6,
+   "level": 7,
    "word": "fizemos",
    "answers": [
     "se",
@@ -14247,10 +14294,10 @@
    ]
   },
   {
-   "id": "pt-5-5-7",
+   "id": "pt-5-5-8",
    "world": 5,
    "subworld": 5,
-   "level": 7,
+   "level": 8,
    "word": "segundo",
    "answers": [
     "de",
@@ -14308,10 +14355,10 @@
    ]
   },
   {
-   "id": "pt-5-5-8",
+   "id": "pt-5-5-9",
    "world": 5,
    "subworld": 5,
-   "level": 8,
+   "level": 9,
    "word": "durante",
    "answers": [
     "de",
@@ -14369,10 +14416,10 @@
    ]
   },
   {
-   "id": "pt-5-5-9",
+   "id": "pt-5-5-10",
    "world": 5,
    "subworld": 5,
-   "level": 9,
+   "level": 10,
    "word": "começar",
    "answers": [
     "me",
@@ -14430,10 +14477,10 @@
    ]
   },
   {
-   "id": "pt-5-5-10",
+   "id": "pt-5-5-11",
    "world": 5,
    "subworld": 5,
-   "level": 10,
+   "level": 11,
    "word": "ligação",
    "answers": [
     "ao",
@@ -14477,10 +14524,10 @@
    ]
   },
   {
-   "id": "pt-5-5-11",
+   "id": "pt-5-5-12",
    "world": 5,
    "subworld": 5,
-   "level": 11,
+   "level": 12,
    "word": "ouviste",
    "answers": [
     "eu",
@@ -14538,10 +14585,10 @@
    ]
   },
   {
-   "id": "pt-5-5-12",
+   "id": "pt-5-5-13",
    "world": 5,
    "subworld": 5,
-   "level": 12,
+   "level": 13,
    "word": "importa",
    "answers": [
     "ao",
@@ -14599,10 +14646,10 @@
    ]
   },
   {
-   "id": "pt-5-5-13",
+   "id": "pt-5-5-14",
    "world": 5,
    "subworld": 5,
-   "level": 13,
+   "level": 14,
    "word": "vestido",
    "answers": [
     "de",
@@ -14660,10 +14707,10 @@
    ]
   },
   {
-   "id": "pt-5-5-14",
+   "id": "pt-5-5-15",
    "world": 5,
    "subworld": 5,
-   "level": 14,
+   "level": 15,
    "word": "precisa",
    "answers": [
     "se",
@@ -14721,10 +14768,10 @@
    ]
   },
   {
-   "id": "pt-5-5-15",
+   "id": "pt-5-5-16",
    "world": 5,
    "subworld": 5,
-   "level": 15,
+   "level": 16,
    "word": "esquece",
    "answers": [
     "eu",
@@ -14746,42 +14793,6 @@
     "seu",
     "use",
     "esquece"
-   ]
-  },
-  {
-   "id": "pt-5-5-16",
-   "world": 5,
-   "subworld": 5,
-   "level": 16,
-   "word": "coração",
-   "answers": [
-    "ao",
-    "ar",
-    "cão",
-    "ora",
-    "cor",
-    "aço",
-    "caro",
-    "ação",
-    "arco",
-    "acção",
-    "coroa",
-    "coração"
-   ],
-   "bonusWords": [],
-   "validWords": [
-    "ao",
-    "ar",
-    "cão",
-    "ora",
-    "cor",
-    "aço",
-    "caro",
-    "ação",
-    "arco",
-    "acção",
-    "coroa",
-    "coração"
    ]
   },
   {

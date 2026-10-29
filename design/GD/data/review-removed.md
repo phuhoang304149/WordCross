@@ -7,9 +7,9 @@ Lý do chỉ ở mức nhóm; chưa native-review. Cột "đang dùng trong bộ
 | Locale | Từ trong blocklist | Trong level cũ (bị loại khỏi level) | Từ khác nhau ở level cũ |
 |---|---|---|---|
 | vi | 865 | 602 | 2209 |
-| fr | 40 | 40 | 1265 |
+| fr | 51 | 45 | 1265 |
 | es | 175 | 162 | 1494 |
-| pt | 135 | 129 | 1388 |
+| pt | 171 | 133 | 1388 |
 
 ## vi
 
@@ -26,6 +26,7 @@ Lý do chỉ ở mức nhóm; chưa native-review. Cột "đang dùng trong bộ
 | từ tiếng Anh/ngoại lai | 28 | **and** **cash** **center** **del** **den** **der** **di** **for** **fur** **hoc** **holding** **home** **in** **made** **manager** **money** **of** **out** **quo** **rating** **soft** **sus** **the** **to** **van** **von** **voor** **warrant** |
 | tên riêng viết thường | 1 | **hutu** |
 | nhạy cảm | 1 | **sexe** |
+| chính tả cũ (dạng "oe" thay cho œ, T118) | 11 | boeuf **coeur** manoeuvre manoeuvres moeurs **oeil** oeufs **oeuvre** **oeuvres** **soeur** soeurs |
 
 ## es
 
@@ -46,3 +47,4 @@ Lý do chỉ ở mức nhóm; chưa native-review. Cột "đang dùng trong bộ
 | khẩu ngữ/không chuẩn/gõ sai | 16 | dale **ha** **ias** **ihes** **io** **iá** **lsso** **mo** **nao** **né** **pra** **ta** **tá** **tás** **vamo** **vemo** |
 | nhạy cảm/tục | 5 | **cu** **foda** **merda** **porra** **puto** |
 | mảnh vô nghĩa | 3 | **ho** **sue** **ão** |
+| chính tả cũ (trước cải cách 1990, T118) | 36 | **acto** **actor** **acção** acções actividade colecção contactar contacto correcto detective directamente directo director direcção electricidade espectacular exactamente exacto excepto facto factos objectivo objecto projecto protecção reacção sector secção **óptimo** óptima dêem vêem vôo idéia jóias pára |
