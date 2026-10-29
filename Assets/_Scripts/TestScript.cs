@@ -21,6 +21,7 @@ public class TestScript : MonoBehaviour {
                 for (int level = 0; level < num; level++)
                 {
                     var gameLevel = Superpow.Utils.Load(world, sub, level);
+                    if (gameLevel == null) continue;
                     result += gameLevel.word + "\n";
                 }
             }
@@ -38,6 +39,7 @@ public class TestScript : MonoBehaviour {
                 for (int level = 0; level < num; level++)
                 {
                     var gameLevel = Superpow.Utils.Load(world, sub, level);
+                    if (gameLevel == null) continue;
 
                     var answers = CUtils.BuildListFromString<string>(gameLevel.answers);
                     if (gameLevel.word.Contains("a") && gameLevel.word.Contains("m") && answers[0].Length == 2)

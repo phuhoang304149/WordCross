@@ -29,6 +29,13 @@ public class MainController : BaseController {
         level = GameState.currentLevel;
 
         gameLevel = Superpow.Utils.Load(world, subWorld, level);
+        if (gameLevel == null)
+        {
+            // Không có nội dung cho level này (vd. đã hoàn thành hết): quay về chọn world.
+            Debug.LogWarning("MainController: no level " + BuildLevelName());
+            CUtils.LoadScene(1, true);
+            return;
+        }
         Pan.instance.Load(gameLevel);
         WordRegion.instance.Load(gameLevel);
 
