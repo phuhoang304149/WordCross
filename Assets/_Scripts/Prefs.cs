@@ -4,18 +4,20 @@ using UnityEngine;
 
 public static class Prefs {
 
+    public static readonly WordCross.Gameplay.ProgressKeys progressKeys = new WordCross.Gameplay.ProgressKeys();
+
     public static int unlockedWorld
     {
         get
         {
             if (GameState.unlockedWorld == -1)
             {
-                int value = CPlayerPrefs.GetInt("unlocked_world");
+                int value = CPlayerPrefs.GetInt(progressKeys.Of("unlocked_world"));
                 GameState.unlockedWorld = value;
             }
             return GameState.unlockedWorld;
         }
-        set { CPlayerPrefs.SetInt("unlocked_world", value); GameState.unlockedWorld = value; }
+        set { CPlayerPrefs.SetInt(progressKeys.Of("unlocked_world"), value); GameState.unlockedWorld = value; }
     }
 
     public static int unlockedSubWorld
@@ -24,12 +26,12 @@ public static class Prefs {
         {
             if (GameState.unlockedSubWord == -1)
             {
-                int value = CPlayerPrefs.GetInt("unlocked_sub_world");
+                int value = CPlayerPrefs.GetInt(progressKeys.Of("unlocked_sub_world"));
                 GameState.unlockedSubWord = value;
             }
             return GameState.unlockedSubWord;
         }
-        set { CPlayerPrefs.SetInt("unlocked_sub_world", value); GameState.unlockedSubWord = value; }
+        set { CPlayerPrefs.SetInt(progressKeys.Of("unlocked_sub_world"), value); GameState.unlockedSubWord = value; }
     }
 
     public static int unlockedLevel
@@ -38,24 +40,24 @@ public static class Prefs {
         {
             if (GameState.unlockedLevel == -1)
             {
-                int value = CPlayerPrefs.GetInt("unlocked_level");
+                int value = CPlayerPrefs.GetInt(progressKeys.Of("unlocked_level"));
                 GameState.unlockedLevel = value;
             }
             return GameState.unlockedLevel;
         }
-        set { CPlayerPrefs.SetInt("unlocked_level", value); GameState.unlockedLevel = value; }
+        set { CPlayerPrefs.SetInt(progressKeys.Of("unlocked_level"), value); GameState.unlockedLevel = value; }
     }
 
     public static List<int> GetPanWordIndexes(int world, int subWorld, int level)
     {
-        string data = PlayerPrefs.GetString("pan_word_indexes_v2_" + world + "_" + subWorld + "_" + level);
+        string data = PlayerPrefs.GetString(progressKeys.Of("pan_word_indexes_v2_") + world + "_" + subWorld + "_" + level);
         return CUtils.BuildListFromString<int>(data);
     }
 
     public static void SetPanWordIndexes(int world, int subWorld, int level, int[] indexes)
     {
         string data = CUtils.BuildStringFromCollection(indexes);
-        PlayerPrefs.SetString("pan_word_indexes_v2_" + world + "_" + subWorld + "_" + level, data);
+        PlayerPrefs.SetString(progressKeys.Of("pan_word_indexes_v2_") + world + "_" + subWorld + "_" + level, data);
     }
 
     public static bool IsLastLevel()
@@ -69,36 +71,36 @@ public static class Prefs {
 
     public static void SetExtraWords(int world, int subWorld, int level, string[] extraWords)
     {
-        CryptoPlayerPrefsX.SetStringArray("extra_words_" + world + "_" + subWorld + "_" + level, extraWords);
+        CryptoPlayerPrefsX.SetStringArray(progressKeys.Of("extra_words_") + world + "_" + subWorld + "_" + level, extraWords);
     }
 
     public static string[] GetExtraWords(int world, int subWorld, int level)
     {
-        return CryptoPlayerPrefsX.GetStringArray("extra_words_" + world + "_" + subWorld + "_" + level);
+        return CryptoPlayerPrefsX.GetStringArray(progressKeys.Of("extra_words_") + world + "_" + subWorld + "_" + level);
     }
 
     public static int extraProgress
     {
-        get { return CPlayerPrefs.GetInt("extra_progress", 0); }
-        set { CPlayerPrefs.SetInt("extra_progress", value); }
+        get { return CPlayerPrefs.GetInt(progressKeys.Of("extra_progress"), 0); }
+        set { CPlayerPrefs.SetInt(progressKeys.Of("extra_progress"), value); }
     }
 
     public static int extraTarget
     {
-        get { return CPlayerPrefs.GetInt("extra_target", 5); }
-        set { CPlayerPrefs.SetInt("extra_target", value); }
+        get { return CPlayerPrefs.GetInt(progressKeys.Of("extra_target"), 5); }
+        set { CPlayerPrefs.SetInt(progressKeys.Of("extra_target"), value); }
     }
 
     public static int totalExtraAdded
     {
-        get { return CPlayerPrefs.GetInt("total_extra_added", 0); }
-        set { CPlayerPrefs.SetInt("total_extra_added", value); }
+        get { return CPlayerPrefs.GetInt(progressKeys.Of("total_extra_added"), 0); }
+        set { CPlayerPrefs.SetInt(progressKeys.Of("total_extra_added"), value); }
     }
 
     public static string[] levelProgress
     {
-        get { return CryptoPlayerPrefsX.GetStringArray("level_progress"); }
-        set { CryptoPlayerPrefsX.SetStringArray("level_progress", value); }
+        get { return CryptoPlayerPrefsX.GetStringArray(progressKeys.Of("level_progress")); }
+        set { CryptoPlayerPrefsX.SetStringArray(progressKeys.Of("level_progress"), value); }
     }
 
     public static bool isNoti1Enabled
@@ -146,11 +148,11 @@ public static class Prefs {
     public static void AddToNumHint(int world, int subWorld, int level)
     {
         int numHint = GetNumHint(world, subWorld, level);
-        PlayerPrefs.SetInt("numhint_used_" + world + "_" + subWorld + "_" + level, numHint + 1);
+        PlayerPrefs.SetInt(progressKeys.Of("numhint_used_") + world + "_" + subWorld + "_" + level, numHint + 1);
     }
 
     public static int GetNumHint(int world, int subWorld, int level)
     {
-        return PlayerPrefs.GetInt("numhint_used_" + world + "_" + subWorld + "_" + level);
+        return PlayerPrefs.GetInt(progressKeys.Of("numhint_used_") + world + "_" + subWorld + "_" + level);
     }
 }
