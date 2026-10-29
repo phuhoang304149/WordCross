@@ -75,21 +75,36 @@ public class WinDialog : Dialog {
             CurrencyController.CreditBalance(reward);
         }
 
-        GameState.currentLevel = (level + 1) % numLevels;
-        if (level == numLevels - 1)
+        // Level cuối của world cuối: hết nội dung, không tăng currentWorld quá giới hạn (Load sẽ trả null).
+        bool isGameEnd = world == Superpow.Utils.NUM_WORLDS - 1 && subWorld == Const.NUM_SUBWORLD - 1 && level == numLevels - 1;
+        if (!isGameEnd)
         {
-            GameState.currentSubWorld = (subWorld + 1) % Const.NUM_SUBWORLD;
-            if (subWorld == Const.NUM_SUBWORLD - 1)
+            GameState.currentLevel = (level + 1) % numLevels;
+            if (level == numLevels - 1)
             {
-                GameState.currentWorld++;
+                GameState.currentSubWorld = (subWorld + 1) % Const.NUM_SUBWORLD;
+                if (subWorld == Const.NUM_SUBWORLD - 1)
+                {
+                    GameState.currentWorld++;
+                }
             }
         }
 
         if (isLastLevel)
         {
-            Prefs.unlockedWorld = GameState.currentWorld;
-            Prefs.unlockedSubWorld = GameState.currentSubWorld;
-            Prefs.unlockedLevel = GameState.currentLevel;
+            if (isGameEnd)
+            {
+                // Đánh dấu đã hoàn thành tất cả (world = NUM_WORLDS); GameState.current* giữ ở level cuối.
+                Prefs.unlockedWorld = Superpow.Utils.NUM_WORLDS;
+                Prefs.unlockedSubWorld = 0;
+                Prefs.unlockedLevel = 0;
+            }
+            else
+            {
+                Prefs.unlockedWorld = GameState.currentWorld;
+                Prefs.unlockedSubWorld = GameState.currentSubWorld;
+                Prefs.unlockedLevel = GameState.currentLevel;
+            }
 
             int score = Superpow.Utils.GetLeaderboardScore();
             GPGSController.instance.ReportScore(score);
