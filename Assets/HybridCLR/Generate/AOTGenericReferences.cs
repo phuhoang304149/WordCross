@@ -733,6 +733,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.Linq.Enumerable.WhereSelectListIterator<object,float>
     // System.Linq.Enumerable.WhereSelectListIterator<object,object>
     // System.Nullable<System.DateTime>
+    // System.Nullable<UnityEngine.Color>
     // System.Nullable<UnityEngine.Vector3>
     // System.Nullable<int>
     // System.Nullable<ushort>
