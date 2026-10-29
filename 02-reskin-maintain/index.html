@@ -889,6 +889,20 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "note": "Chưa làm; hiện vẫn icon cũ.\n[2026-10-29 11:15 (GMT+7)] Sau merge 36fc20d: sound/music vẫn CHƯA xong (chờ asset).\n[2026-10-29 11:39 (GMT+7)] USER chọn bỏ toggle sound/music ở Home và giữ ở Pause (thay mục tiêu icon theo design). Đang làm, chưa có kết quả.\n[2026-10-29 11:45 (GMT+7)] Code + OTA xong, CHƯA đạt tiêu chí: chưa xem Home bằng mắt, chưa tương tác toggle ở Pause → giữ Đang làm (verify ở T012/T030). Không tính xác minh UI từ compile/tải bundle.\n[2026-10-29 11:49 (GMT+7)] OTA merge 4e3b0b1 xong: 13/13 hash khớp, ADB không có dòng E Unity. CHƯA xem UI Home bằng mắt, CHƯA kiểm toggle ở Pause → giữ Đang làm.\n[2026-10-29 11:53 (GMT+7)] QA đọc-only commit cf0dd08 (chỉ đọc source/asset, KHÔNG bấm nút, KHÔNG nhìn UI): refs Home hợp lệ; Home không còn toggle sound/music, Pause vẫn có toggle; callback Play/Shop/Rate được nối; các GUID Facebook đã xóa không còn tham chiếu sót. Catalog public e94c4967, CLR 478a017d; log thiết bị 0 dòng E / 0 missing script. QA KHÔNG tìm thấy log chứng minh bundle b25bd7d8 đã được tải/cache. KHÔNG phải manual pass. Trạng thái giữ nguyên.\n[2026-10-29 22:15 (GMT+7)] ĐÃ XÁC MINH."
     },
     {
+      "id": "T129",
+      "title": "Home: nút HÀNG NGÀY (vi) xuống 2 dòng, lệch design",
+      "type": "ui",
+      "status": "doing",
+      "screen": "Màn Home",
+      "goal": "Nhãn 1 dòng như design",
+      "scope": "Home Daily button label (co chữ theo từ dài nhất, T040 fr QUOTIDIEN)",
+      "owner": "CLAUDE (dev)",
+      "deps": "",
+      "criteria": "5 ngôn ngữ nhãn Daily 1 dòng, không ngắt từ, khớp design",
+      "evidence": "",
+      "note": "[2026-10-30] Thấy trên ảnh ota4-final-home.png (OTA live 1.0.0)."
+    },
+    {
       "id": "T018",
       "title": "Font Baloo theo design",
       "type": "runtime",
@@ -1323,11 +1337,11 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "note": "[2026-10-30] Phát hiện khi làm T110: chỉ ShopDialog nghe onItemPurchased; OnPendingPurchase gọi ConfirmPurchase dù không ai cộng thưởng → mất tiền người chơi. OTA CLR.\n[2026-10-30] Luồng store thật → OnPendingPurchase kiểm cùng T007. Toast (b) chưa có ảnh. Chờ USER: cho-duyet iap-noads, iap-unknown."
     },
     {
-      "type": "code",
-      "status": "doing",
+      "type": "runtime",
+      "status": "done",
       "owner": "CLAUDE (dev)",
       "deps": "",
-      "evidence": "",
+      "evidence": "[2026-10-30] IAPItem.removeAds cho item4/item5/word.noads; item1 ruby 16→66 buy_item=False banner còn; item4 66→516 buy_item=True; noads ruby giữ, banner ẩn sau kill app; người chơi cũ buy_item=True giữ (59d1aa7). Ảnh ota4-t120-*. OTA 1.0.0 CLR 25eadd65 (curl khớp) + AA catalog 9245578b, 9/9 sha256; cold start 540 asset 4,70s; merge f7eb535.",
       "note": "[2026-10-30 USER duyệt] USER: chỉ gói tắt quảng cáo riêng (cần thêm sản phẩm trên Play) và 2 gói ruby cao nhất. OTA CLR(+AA nếu sửa prefab Shop).\n[2026-10-30] Đang làm (worker ota4, tuần tự T117→T118→T119→T120).",
       "id": "T120",
       "title": "Tắt ads chỉ khi mua gói tắt ads riêng + 2 gói ruby cao nhất (item4, item5)",
@@ -1335,6 +1349,20 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "goal": "Gói ruby thường không tắt ads",
       "scope": "Purchaser.ProcessPurchase/GrantNoAds, WordCrossConfig removeAdsProduct, thêm sản phẩm word.noads; ghi chú Shop",
       "criteria": "Mô phỏng item1-3 không tắt ads; item4/5/noads tắt ads + ẩn banner"
+    },
+    {
+      "id": "T130",
+      "title": "Sản phẩm word.noads thiếu trên Play không được làm hỏng khởi tạo Shop/IAP",
+      "type": "code",
+      "status": "doing",
+      "screen": "Ads · IAP",
+      "goal": "Thiếu 1 sản phẩm thì các gói khác vẫn mua được",
+      "scope": "PurchaseService OnProductsFetchFailed/_isInitialized (submodule), Purchaser",
+      "criteria": "Khi Play thiếu word.noads: store vẫn init, 5 gói ruby fetch được (log)",
+      "evidence": "",
+      "owner": "CLAUDE (dev)",
+      "deps": "T120",
+      "note": "[2026-10-30] Worker ota4 báo rủi ro: OnProductsFetchFailed có thể đặt _isInitialized=false. Bản nội bộ hiện có word.noads trong catalog mà Play chưa có → kiểm ngay trên máy."
     },
     {
       "type": "content",
@@ -1365,11 +1393,11 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "note": "Chưa xác minh.\n[2026-10-29 18:40 (GMT+7)] QA thiết bị OTA d7f8ee2 (ảnh ota1-*): SelectWorld/SelectLevel/Pause/Shop-mở/Back OK (Title không chồng, thẻ khoá .55, Pause toggle OK, Back có hiệu ứng nhấn); lỗi P0 T082 (Main trống) + lệch T083–T086. Pause thiếu nút LANGUAGE (T075).\n[2026-10-30 00:30 (GMT+7)] ĐÃ XÁC MINH trên ZY22LHV7PJ. Chơi thật bằng adb swipe: 1-1-1 tự mở How to play; HE, THE điền đúng; Hint 10→8 ruby; Shuffle đổi chỗ, ruby giữ; thắng Win +3 (8→11); Next vào 1-2; Menu đúng."
     },
     {
-      "type": "ui",
-      "status": "doing",
+      "type": "runtime",
+      "status": "done",
       "owner": "CLAUDE (dev)",
       "deps": "",
-      "evidence": "",
+      "evidence": "[2026-10-30] Pan.cs bỏ offset +2,9/+1,2 css; đo ảnh adb: glyph so với vị trí dx 0,08 css dy 0,26 css, bán kính 84,0 css, đĩa chọn −0,3 css (066b56e). OTA 1.0.0 CLR 25eadd65 (curl khớp) + AA catalog 9245578b, 9/9 sha256; cold start 540 asset 4,70s; merge f7eb535.",
       "note": "[2026-10-30 USER duyệt] USER: Đặt chữ đúng tâm hình học.\n[2026-10-30] Đang làm (worker ota4, tuần tự T117→T118→T119→T120).",
       "id": "T119",
       "title": "Chữ trên vòng chữ đặt đúng tâm hình học",
@@ -1687,11 +1715,11 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "note": "Chưa chốt scope với user; chưa làm.\n[2026-10-29 11:15 (GMT+7)] Sau merge 36fc20d: localization vẫn CHƯA xong.\n[2026-10-29 20:45 (GMT+7)] Dev Sonnet đang làm (worktree l10n): LocalizationController + LocalizedText + dữ liệu vi/en/fr/es/pt từ design i18n.js (qua Addressables) + áp dụng vào các màn đã reskin; kiểm glyph font RockoUltraFLF; chưa làm màn chọn ngôn ngữ (T044/T075).\n[2026-10-29 21:40 (GMT+7)] CODE XONG, CHƯA XÁC MINH (chưa play mode, DontDestroyOnLoad xuyên scene chưa thử). LocalizationController (Locator, PlayerPrefs ui_language, defaultLanguage=vi), LocalizedText, LocalizationData qua ClrContent (GameData content root). 275 key từ design (16 key thiếu fr/es/pt dùng en) + 4 key thêm (shop.adIn, shop.adsNote, rv.s/d.playingReal — bản dịch 5 ngôn ngữ do dev viết, cần người rà). CẦN USER DUYỆT FONT: RockoUltraFLF thiếu glyph tiếng Việt (70 ký tự: ă đ ơ ư và dấu...) → dev đặt fallback Roboto-Medium (.meta của 2 font Rocko; không Baloo2/Bagel); chữ có dấu sẽ khác kiểu Rocko. Chưa chuyển: \"World {n}\"/swipe (scene SelectWorld chưa có UI), toast coming soon, purchase successful, Promote dialogs. Chuỗi tạo bằng code chỉ cập nhật khi mở lại popup. Cần OTA CLR+AA (LocalizationData có vào bundle chưa — kiểm khi build).\n[2026-10-29 19:47 (GMT+7)] Bảng rà dịch cho người: 02-reskin-maintain/l10n-review.md (25 key × 5 ngôn ngữ, ngữ cảnh, độ dài). Lưu ý key ngăn \"|\" (daily.months/weekdays) giữ đủ mục; ký tự ¡ (es) cần kiểm glyph font mới.\n[2026-10-30 (GMT+7)] Bản dịch nghi cần bản ngữ (win.streak số ít fr/es/pt) → design/cho-duyet.html mục l10n-plural."
     },
     {
-      "type": "content",
-      "status": "doing",
+      "type": "runtime",
+      "status": "done",
       "owner": "CLAUDE (dev)",
       "deps": "",
-      "evidence": "",
+      "evidence": "[2026-10-30] win.streak.one: Win n=1 fr/es/pt \"Série de 1 jour\"/\"Racha de 1 día\"/\"Sequência de 1 dia\", n=2 \"2 dias\"; nút VOIR LE CALENDRIER/VER CALENDARIO không tràn (d64753c). Ảnh qa-shots/ota4-t117-*. OTA 1.0.0 CLR 25eadd65 (curl khớp) + AA catalog 9245578b, 9/9 sha256; cold start 540 asset 4,70s; merge f7eb535.",
       "note": "[2026-10-30 USER duyệt] OTA AA+CLR.\n[2026-10-30] Đang làm (worker ota4, tuần tự T117→T118→T119→T120).",
       "id": "T117",
       "title": "Key số ít win.streak.one (n = 1) cho 5 ngôn ngữ",
@@ -1701,11 +1729,11 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "criteria": "Win streak n=1 đúng số ít fr/es/pt/en/vi"
     },
     {
-      "type": "content",
-      "status": "doing",
+      "type": "runtime",
+      "status": "done",
       "owner": "CODEX → CLAUDE áp dụng",
       "deps": "",
-      "evidence": "[2026-10-30] Codex 969657b: 02-reskin-maintain/l10n-review-codex.md — 18 ô sửa (vi2 en5 fr5 es3 pt3) + 5 ô win.streak.one. Chờ áp vào LocalizationData cùng đợt OTA T117. Lưu ý shop.adsNote phải đổi theo quy tắc tắt ads mới (T120).",
+      "evidence": "[2026-10-30] Áp 17 ô Codex + 5 ô win.streak.one vào LocalizationData (d64753c); shop.adsNote viết lại theo quy tắc T120; Shop fr/vi adsNote 2 dòng trong dialog. Ảnh ota4-t117-*. OTA 1.0.0 CLR 25eadd65 (curl khớp) + AA catalog 9245578b, 9/9 sha256; cold start 540 asset 4,70s; merge f7eb535.",
       "note": "[2026-10-30 USER duyệt] USER: giao Codex làm.\n[2026-10-30] Đang làm (worker ota4, tuần tự T117→T118→T119→T120).",
       "id": "T127",
       "title": "Codex rà 25 chuỗi dịch mới (l10n-review.md)",
@@ -1771,11 +1799,11 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "note": "[2026-10-29 20:10 (GMT+7)] Codex thêm data commit 927c20e (đã push lên origin/feature/unity-6.3): vi/fr/es/pt mỗi bộ 534 level, README design/GD/data/README.md, validate CLI PASS. CHƯA native-review/playtest. Lưu ý: nguồn vi Viet74K GPL-2.0 → cần USER cân nhắc giấy phép trước khi phát hành; vi chỉ từ đơn âm tiết; fr/es/pt có thể lẫn viết tắt/từ ngoại.\n[2026-10-29 20:12 (GMT+7)] USER: khi làm thì RÀ LUÔN data (bản ngữ/chất lượng từ): lọc viết tắt, tên riêng, từ ngoại, từ hiếm/phương ngữ/thán từ (vi), chạy validate.py sau khi lọc; ghi danh sách từ bị loại.\n[2026-10-29 21:00 (GMT+7)] USER: cứ làm, USER sẽ tự xin giấy phép (Viet74K GPL-2.0) trước khi phát hành để tránh vi phạm.\n[2026-10-30] Còn: Daily fr/es/pt chưa thử riêng (cùng đường Utils.Load). Chờ USER: cho-duyet leveldata, leveldata-review, old-spelling, daily-lang; giấy phép GPL vi."
     },
     {
-      "type": "content",
-      "status": "doing",
+      "type": "runtime",
+      "status": "done",
       "owner": "CLAUDE (dev)",
       "deps": "",
-      "evidence": "",
+      "evidence": "[2026-10-30] Blocklist chính tả cũ fr 11 + pt 36 từ, validate.py PASS 534/locale, review-removed.md cập nhật, Pack fr/pt tạo lại (65fea7b); thắng fr/pt level 1 + World 2-4 trên máy. Ảnh ota4-t118-*. OTA 1.0.0 CLR 25eadd65 (curl khớp) + AA catalog 9245578b, 9/9 sha256; cold start 540 asset 4,70s; merge f7eb535.",
       "note": "[2026-10-30 USER duyệt] USER: Loại khỏi level. Lọc từ T111 USER đồng ý. Daily tách theo ngôn ngữ: giữ.\n[2026-10-30] Đang làm (worker ota4, tuần tự T117→T118→T119→T120).",
       "id": "T118",
       "title": "Loại chính tả cũ khỏi level fr/pt (coeur/oeil/soeur, actor/acção/óptimo…)",
