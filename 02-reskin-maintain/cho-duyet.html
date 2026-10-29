@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WordCross · Chờ duyệt</title>
+<style>
+:root{--bg:#f4f8f8;--card:#fff;--ink:#16323a;--muted:#5b7479;--line:#d9e6e6;--teal:#12b5a6;--coral:#ff6b5e;--amber:#f2b21b;--chip:#e8f5f3}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1c1f;--card:#16272b;--ink:#e6f1f1;--muted:#9bb3b6;--line:#26393d;--chip:#1d3236}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+main{max-width:920px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:24px;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 20px}
+h2{font-size:17px;margin:28px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+.item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.item h3{font-size:15px;margin:0 0 6px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.tag{font-size:12px;font-weight:600;padding:1px 8px;border-radius:99px;background:var(--chip);color:var(--muted)}
+.tag.hi{background:#ffe3e0;color:#b23a2f}
+.tag.apk{background:#fff3d6;color:#8a6100}
+p{margin:6px 0}
+ul{margin:6px 0;padding-left:20px}
+.opt{display:block;margin:4px 0}
+.opt input{margin-right:6px}
+textarea{width:100%;min-height:54px;margin-top:8px;padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+code{background:var(--chip);padding:0 5px;border-radius:5px;font-size:13px}
+a{color:var(--teal)}
+.rec{color:var(--muted);font-size:13px}
+.bar{display:flex;gap:10px;align-items:center;margin:16px 0}
+button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 14px;font:inherit;cursor:pointer}
+.small{font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<h1>WordCross · Các mục chờ duyệt</h1>
+<p class="sub">Tổng hợp 2026-10-29 23:15 (GMT+7). Chọn phương án và ghi chú ngay trên trang (tự lưu trong trình duyệt); bấm “Copy kết quả” rồi dán cho Claude để làm tiếp. Chi tiết từng task trong <a href="index.html">tracker</a>.</p>
+<div class="bar"><button type="button" id="copy">Copy kết quả</button><span class="small" id="msg"></span></div>
+
+<h2>1. Quyết định gameplay &amp; UI</h2>
+
+<div class="item" data-id="bot">
+<h3>Cách chơi Đấu Bot <span class="tag hi">T042 · chặn tính năng</span></h3>
+<p>Design mới có 3 phương án trong <a href="../design/GD/bot-gameplay.html">design/GD/bot-gameplay.html</a> (mục 90 giây ghi CẦN DUYỆT). Nhánh <code>wordcross/bot</code> đã có 3 commit (trận Bot trong Main, đồng hồ 90s, HUD) nhưng chưa merge.</p>
+<label class="opt"><input type="radio" name="bot" value="90s">Đấu 90 giây</label>
+<label class="opt"><input type="radio" name="bot" value="theo-luot">Theo lượt</label>
+<label class="opt"><input type="radio" name="bot" value="dua-toc-do">Đua tốc độ</label>
+<textarea placeholder="Ghi chú (mức Dễ/Vừa/Khó, thưởng ruby, trần/ngày…)"></textarea>
+</div>
+
+<div class="item" data-id="canvas">
+<h3>Co giãn giao diện trên máy khác tỉ lệ <span class="tag">ảnh hưởng mọi màn</span></h3>
+<p>Canvas đang co giãn theo cả ngang và dọc (CanvasScaler 720×1280, match 0,5). Số đo “khớp design” hiện chỉ đúng với tỉ lệ máy test (Motorola 1220×2712). Máy tỉ lệ khác sẽ lệch nhẹ.</p>
+<label class="opt"><input type="radio" name="canvas" value="match-width">Đổi sang co giãn theo chiều ngang (giống design web) rồi đo lại mọi màn</label>
+<label class="opt"><input type="radio" name="canvas" value="giu">Giữ như hiện tại</label>
+<p class="rec">Gợi ý: đổi theo chiều ngang, vì design viết theo bề ngang 390px.</p>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
+<div class="item" data-id="blackscreen">
+<h3>Màn đen ~8,7 giây lúc mở app <span class="tag apk">cần APK</span></h3>
+<p>Sau khi bỏ hết splash (T090/T108), lần mở đầu tiên là màn đen trong lúc tải CLR + preload. Có thể đặt màu nền teal cho cửa sổ khởi động Android (không có logo).</p>
+<label class="opt"><input type="radio" name="black" value="teal">Đặt nền teal #12b5a6, không logo</label>
+<label class="opt"><input type="radio" name="black" value="giu">Giữ màn đen</label>
+<label class="opt"><input type="radio" name="black" value="logo">Hiện lại logo game</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
+<div class="item" data-id="spacing">
+<h3>Khoảng cách chữ (letter-spacing) <span class="tag">lệch nhỏ</span></h3>
+<p>Design dùng letter-spacing 0,02–0,08em; UI Text của Unity không hỗ trợ, nên chữ nút/tiêu đề hẹp hơn design 1–2px. Muốn khớp tuyệt đối phải chuyển chữ sang TextMeshPro, mà TMP không hiện chữ trên APK cũ → chỉ làm được với APK mới.</p>
+<label class="opt"><input type="radio" name="spacing" value="chap-nhan">Chấp nhận lệch</label>
+<label class="opt"><input type="radio" name="spacing" value="tmp">Chuyển TextMeshPro ở bản APK kế tiếp</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
+<div class="item" data-id="worldcolor">
+<h3>Màu số World 1/2/3 trên SelectWorld</h3>
+<p>Game: teal / coral / vàng. Design (do cách đếm <code>nth-child</code> trong CSS lệch 1) ra coral / vàng / teal. Dev nghi đây là lỗi của design.</p>
+<label class="opt"><input type="radio" name="worldcolor" value="design">Theo design (coral/vàng/teal)</label>
+<label class="opt"><input type="radio" name="worldcolor" value="game">Giữ teal/coral/vàng</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
+<div class="item" data-id="rewardplaying">
+<h3>Rewarded lúc đang phát quảng cáo</h3>
+<p>Design có nút “ĐÓNG QUẢNG CÁO” (mô phỏng). Game dùng quảng cáo thật toàn màn hình nên không có nút này.</p>
+<label class="opt"><input type="radio" name="rewardplaying" value="ok">Chấp nhận (đúng hành vi quảng cáo thật)</label>
+<label class="opt"><input type="radio" name="rewardplaying" value="khac">Muốn khác (ghi rõ)</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
+<div class="item" data-id="price">
+<h3>Định dạng giá trong Shop</h3>
+<p>Hiện “0,99$” (chuỗi Google Play theo vùng); design “0.99 $”. Khi phát hành thật giá lấy từ store theo tiền tệ người chơi.</p>
+<label class="opt"><input type="radio" name="price" value="store">Dùng chuỗi giá của store (khuyến nghị)</label>
+<label class="opt"><input type="radio" name="price" value="design">Ép theo định dạng design</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
+<div class="item" data-id="font">
+<h3>Font tile chữ cái Bagel Fat One</h3>
+<p>Design dùng Bagel Fat One cho ô chữ; chưa có file font nên đang dùng Baloo 2 ExtraBold (fallback đúng chuỗi của design).</p>
+<label class="opt"><input type="radio" name="font" value="cap">Sẽ cấp Bagel Fat One</label>
+<label class="opt"><input type="radio" name="font" value="baloo">Giữ Baloo 2 ExtraBold</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
+<h2>2. Nội dung &amp; dịch</h2>
+
+<div class="item" data-id="l10n">
+<h3>Rà 25 chuỗi dịch mới (vi/en/fr/es/pt) <span class="tag">cần người bản ngữ</span></h3>
+<p>Bảng đầy đủ: <a href="l10n-review.md">l10n-review.md</a> (key, 5 ngôn ngữ, màn dùng, độ dài). Key ngăn bằng <code>|</code> (tháng, thứ) phải giữ đủ số mục.</p>
+<textarea placeholder="Ai rà, khi nào; key cần sửa"></textarea>
+</div>
+
+<div class="item" data-id="leveldata">
+<h3>Dữ liệu level vi/fr/es/pt <span class="tag hi">T111 · giấy phép</span></h3>
+<ul>
+<li>534 level mỗi ngôn ngữ (Codex, <code>design/GD/data/</code>), validate PASS, chưa rà bản ngữ, chưa playtest.</li>
+<li>Tiếng Việt chỉ có từ đơn một âm tiết; fr/es/pt có thể lẫn viết tắt, tên riêng, từ ngoại — sẽ lọc khi nhập.</li>
+<li>Nguồn tiếng Việt Viet74K giấy phép GPL-2.0: bạn đã nói sẽ xin phép trước khi phát hành.</li>
+</ul>
+<textarea placeholder="Tình trạng giấy phép; ngôn ngữ nào mở trước"></textarea>
+</div>
+
+<h2>3. Phát hành &amp; tài khoản</h2>
+
+<div class="item" data-id="keystore">
+<h3>Mật khẩu keystore release <span class="tag hi">T048 · chặn phát hành</span></h3>
+<p>APK 1.0.0 hiện ký debug key, không nộp Play được. Cần mật khẩu <code>wordCross.keystore</code> — nhập trực tiếp vào máy/SetupTool, không gửi qua chat.</p>
+<textarea placeholder="Đã cung cấp / cách cung cấp"></textarea>
+</div>
+
+<div class="item" data-id="removed">
+<h3>Trạng thái “Removed by Google” trên Play Console <span class="tag hi">T052 · chặn phát hành</span></h3>
+<p>App <code>com.PHltd.wordcrossy</code> bị gỡ (lần cập nhật Jan 3 2020). Cần xem thông báo Policy status và chọn hướng xử lý. versionCode mới: 202001035, versionName 1.0.0.</p>
+<textarea placeholder="Lý do Google gỡ; hướng xử lý"></textarea>
+</div>
+
+<div class="item" data-id="iaptest">
+<h3>Test mua thật (IAP) <span class="tag">T007</span></h3>
+<p>Store khởi tạo và lấy đủ 5 gói; nút mua đã gọi Google Play. Giao dịch thật chỉ test được qua Internal testing track + tài khoản license tester (sau T048/T052).</p>
+<textarea placeholder="Tài khoản license tester, thời điểm"></textarea>
+</div>
+
+<div class="item" data-id="ios">
+<h3>iOS: AdMob iOS và bundle id <span class="tag">T049 · T056</span></h3>
+<p>AdMob iOS App ID / ad unit chưa có; bundle id iOS đang là <code>com.superpow.wordchef</code> (chưa rõ có đúng của game không).</p>
+<textarea placeholder="ID AdMob iOS; bundle id đúng"></textarea>
+</div>
+
+<div class="item" data-id="rc">
+<h3>Remote Control bị tắt bởi chính sách tổ chức</h3>
+<p>Cần admin tổ chức bật nếu muốn điều khiển phiên từ máy khác.</p>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
+<h2>4. Thông tin (không cần quyết)</h2>
+<div class="item">
+<ul>
+<li>Bản nội bộ <b>1.0.0</b> (code 202001035) đã chạy trên máy test; OTA ở <code>wordcross/1.0.0/clr</code> và <code>wordcross/1.0.0/data</code>. Bản live 0.3 không đổi.</li>
+<li>Đã xong + xác minh trên máy: bỏ splash, Notifications B, font Baloo 2, Ads (test ID), nút mua Shop, Home và các popup từ Home khớp design theo số đo.</li>
+<li>Đang làm: SelectWorld → SelectLevel; sau đó Main (gồm banner), popup trong game, localization, đề xuất mới.</li>
+<li>Nhánh chưa merge: <code>wordcross/bot</code> (chờ duyệt cách chơi), <code>wordcross/banner</code> (làm ở nhóm Main).</li>
+</ul>
+</div>
+</main>
+<script>
+(function(){
+  var KEY='wordcross-cho-duyet-v1', state={};
+  try{ state=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ state={}; }
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
+  document.querySelectorAll('.item[data-id]').forEach(function(item){
+    var id=item.dataset.id, s=state[id]||{}, ta=item.querySelector('textarea');
+    item.querySelectorAll('input[type=radio]').forEach(function(r){
+      if(s.choice===r.value) r.checked=true;
+      r.addEventListener('change',function(){ (state[id]=state[id]||{}).choice=r.value; save(); });
+    });
+    if(ta){ ta.value=s.note||''; ta.addEventListener('input',function(){ (state[id]=state[id]||{}).note=ta.value; save(); }); }
+  });
+  document.getElementById('copy').addEventListener('click',function(){
+    var lines=['Kết quả duyệt WordCross:'];
+    document.querySelectorAll('.item[data-id]').forEach(function(item){
+      var id=item.dataset.id, s=state[id]||{}, title=item.querySelector('h3').firstChild.textContent.trim();
+      if(!s.choice && !(s.note||'').trim()) return;
+      var label=''; item.querySelectorAll('input[type=radio]').forEach(function(r){ if(r.value===s.choice) label=r.parentNode.textContent.trim(); });
+      lines.push('- '+title+': '+(label||'(không chọn)')+((s.note||'').trim()?' — '+s.note.trim():''));
+    });
+    var text=lines.join('\n'), msg=document.getElementById('msg');
+    if(navigator.clipboard){ navigator.clipboard.writeText(text).then(function(){ msg.textContent='Đã copy.'; },function(){ msg.textContent=text; }); }
+    else { msg.textContent=text; }
+  });
+})();
+</script>
+</body>
+</html>
