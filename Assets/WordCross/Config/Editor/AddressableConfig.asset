@@ -42,6 +42,10 @@ MonoBehaviour:
     asset: {fileID: 11400000, guid: 745ede4e20c3459092eb505abfe86c88, type: 2}
     address: PopupDatabase/com.phltd.wordcrossy
     label: 
+  - path: Assets/WordCross/Config/GameData/Localization/LocalizationData.asset
+    asset: {fileID: 11400000, guid: 3e8b2d4f6a1c4b7d9e0f2a4c6b8d1e35, type: 2}
+    address: Assets/WordCross/Config/GameData/Localization/LocalizationData.asset
+    label: 
   - path: Assets/WordCross/Config/GameData/ProductData.asset
     asset: {fileID: 11400000, guid: 96bdd2140e6c40e08373d6e2bf09b2c0, type: 2}
     address: Assets/WordCross/Config/GameData/ProductData.asset

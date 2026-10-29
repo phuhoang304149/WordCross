@@ -14,6 +14,9 @@ namespace WordCross.Gameplay
         public void Initialize(GameObject host)
         {
             LogBootstrapVersions();
+#if GAME_DEBUG || DEVELOPMENT_BUILD
+            new GameObject("DebugOpener").AddComponent<DebugOpener>();
+#endif
             SceneManager.sceneLoaded += OnSceneLoaded;
             Debug.Log("[Scene] load " + FirstScene + " t=" + Time.realtimeSinceStartup.ToString("F2"));
             Addressables.LoadSceneAsync(FirstScene, LoadSceneMode.Single).Completed += handle =>

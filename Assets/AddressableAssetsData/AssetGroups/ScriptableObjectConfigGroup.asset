@@ -795,6 +795,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - preload_3
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e8b2d4f6a1c4b7d9e0f2a4c6b8d1e35
+    m_Address: Assets/WordCross/Config/GameData/Localization/LocalizationData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - preload_3
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 408fa65660f84a2468187d84f92af5cb
     m_Address: Assets/WordCross/Config/GameData/Levels/World_4/SubWorld_2/Level_17.asset
     m_ReadOnly: 0
