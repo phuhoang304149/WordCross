@@ -8,7 +8,7 @@ using Util.Editor;
 
 namespace WordCross.Editor
 {
-    // Tạo/cập nhật asset GameLevel cho vi/fr/es/pt từ design/GD/data/<mã>.json (534 level mỗi mã) và đưa vào AddressableConfig.
+    // Tạo/cập nhật MỘT LocaleLevelPack cho mỗi vi/fr/es/pt từ design/GD/data/<mã>.json (534 level mỗi mã) và đưa vào AddressableConfig.
     // Hàm static chỉ là điểm vào cho Unity (-executeMethod), phần việc nằm ở hàm instance.
     public class LocaleLevelImporter
     {
@@ -51,54 +51,63 @@ namespace WordCross.Editor
             }
 
             var projectRoot = Directory.GetParent(Application.dataPath).FullName;
-            var created = 0;
-            var updated = 0;
             var wanted = new List<string>();
-            AssetDatabase.StartAssetEditing();
+            var differences = 0;
+            var compared = 0;
             foreach (var locale in Locales)
             {
                 var file = JsonUtility.FromJson<LocaleFile>(File.ReadAllText(Path.Combine(projectRoot, DataFolder, locale + ".json"), Encoding.UTF8));
-                foreach (var row in file.levels)
-                {
-                    var folder = LevelRoot + "/" + locale + "/World_" + (row.world - 1) + "/SubWorld_" + (row.subworld - 1);
-                    var path = folder + "/Level_" + (row.level - 1) + ".asset";
-                    wanted.Add(path);
-                    var asset = AssetDatabase.LoadAssetAtPath<GameLevel>(path);
-                    var isNew = asset == null;
-                    if (isNew)
-                    {
-                        Directory.CreateDirectory(Path.Combine(projectRoot, folder));
-                        asset = ScriptableObject.CreateInstance<GameLevel>();
-                    }
+                var path = LevelRoot + "/" + locale + "/Pack.asset";
+                wanted.Add(path);
+                var pack = AssetDatabase.LoadAssetAtPath<LocaleLevelPack>(path);
+                var isNew = pack == null;
+                if (isNew) pack = ScriptableObject.CreateInstance<LocaleLevelPack>();
 
+                var entries = new LocaleLevelPack.Entry[file.levels.Length];
+                for (var i = 0; i < entries.Length; i++)
+                {
+                    var row = file.levels[i];
                     // Cùng định dạng level en: answers kết thúc bằng '|', validWords gồm cả answers.
-                    var answers = string.Join("|", row.answers) + "|";
-                    var validWords = string.Join("|", row.validWords);
-                    if (!isNew && asset.word == row.word && asset.answers == answers && asset.validWords == validWords) continue;
-                    asset.word = row.word;
-                    asset.answers = answers;
-                    asset.validWords = validWords;
-                    if (isNew)
+                    entries[i] = new LocaleLevelPack.Entry
                     {
-                        AssetDatabase.CreateAsset(asset, path);
-                        created++;
-                    }
-                    else
-                    {
-                        EditorUtility.SetDirty(asset);
-                        updated++;
-                    }
+                        world = row.world - 1,
+                        subWorld = row.subworld - 1,
+                        level = row.level - 1,
+                        word = row.word,
+                        answers = string.Join("|", row.answers) + "|",
+                        validWords = string.Join("|", row.validWords)
+                    };
+                }
+                pack.entries = entries;
+                if (isNew)
+                {
+                    AssetDatabase.CreateAsset(pack, path);
+                }
+                else
+                {
+                    EditorUtility.SetDirty(pack);
+                }
+
+                // So với asset level riêng lẻ của T111 (nếu còn) trước khi xoá chúng: phải 0 khác biệt.
+                foreach (var entry in entries)
+                {
+                    var oldPath = LevelRoot + "/" + locale + "/World_" + entry.world + "/SubWorld_" + entry.subWorld + "/Level_" + entry.level + ".asset";
+                    var old = AssetDatabase.LoadAssetAtPath<GameLevel>(oldPath);
+                    if (old == null) continue;
+                    compared++;
+                    if (old.word == entry.word && old.answers == entry.answers && old.validWords == entry.validWords) continue;
+                    differences++;
+                    Debug.LogError("[LocaleLevelImporter] DIFF " + oldPath);
                 }
             }
-            AssetDatabase.StopAssetEditing();
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
 
             var registered = RegisterInConfig(config, wanted);
-            Debug.Log("[LocaleLevelImporter] created=" + created + " updated=" + updated + " total=" + wanted.Count + " newConfigEntries=" + registered);
+            Debug.Log("[LocaleLevelImporter] packs=" + wanted.Count + " compared=" + compared + " differences=" + differences + " newConfigEntries=" + registered);
         }
 
-        // Giữ entry của level en, thay toàn bộ entry level theo mã bằng danh sách mới (address = đường dẫn đầy đủ như level en).
+        // Giữ entry của level en, thay toàn bộ entry level theo mã bằng đúng 4 pack (address = đường dẫn đầy đủ như level en).
         private int RegisterInConfig(AddressableConfig config, List<string> wanted)
         {
             var known = new HashSet<string>();

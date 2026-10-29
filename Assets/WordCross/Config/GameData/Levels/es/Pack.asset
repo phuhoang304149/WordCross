@@ -1,0 +1,3219 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338080847efd14361a821ed65d03012e, type: 3}
+  m_Name: Pack
+  m_EditorClassIdentifier: WordCross.Gameplay.HotUpdate::LocaleLevelPack
+  entries:
+  - world: 0
+    subWorld: 0
+    level: 0
+    word: con
+    answers: no|con|
+    validWords: no|con
+  - world: 0
+    subWorld: 0
+    level: 1
+    word: fue
+    answers: fe|fue|
+    validWords: fe|fue
+  - world: 0
+    subWorld: 0
+    level: 2
+    word: dos
+    answers: os|dos|
+    validWords: os|dos
+  - world: 0
+    subWorld: 0
+    level: 3
+    word: una
+    answers: un|una|aun|
+    validWords: un|una|aun
+  - world: 0
+    subWorld: 0
+    level: 4
+    word: han
+    answers: ha|ah|han|
+    validWords: ha|ah|han
+  - world: 0
+    subWorld: 0
+    level: 5
+    word: ser
+    answers: se|es|ser|
+    validWords: se|es|ser
+  - world: 0
+    subWorld: 0
+    level: 6
+    word: sin
+    answers: si|ni|sin|
+    validWords: si|ni|sin
+  - world: 0
+    subWorld: 0
+    level: 7
+    word: los
+    answers: lo|os|los|sol|
+    validWords: lo|os|los|sol
+  - world: 0
+    subWorld: 0
+    level: 8
+    word: son
+    answers: no|os|son|nos|
+    validWords: no|os|son|nos
+  - world: 0
+    subWorld: 0
+    level: 9
+    word: del
+    answers: de|el|le|del|
+    validWords: de|el|le|del
+  - world: 0
+    subWorld: 0
+    level: 10
+    word: las
+    answers: la|al|as|las|sal|
+    validWords: la|al|as|las|sal
+  - world: 0
+    subWorld: 0
+    level: 11
+    word: sus
+    answers: su|sus|
+    validWords: su|sus
+  - world: 0
+    subWorld: 1
+    level: 0
+    word: tras
+    answers: as|tras|
+    validWords: as|tras
+  - world: 0
+    subWorld: 1
+    level: 1
+    word: dijo
+    answers: dio|ido|dijo|
+    validWords: dio|ido|dijo
+  - world: 0
+    subWorld: 1
+    level: 2
+    word: pero
+    answers: por|pero|peor|
+    validWords: por|pero|peor
+  - world: 0
+    subWorld: 1
+    level: 3
+    word: casi
+    answers: si|as|casi|
+    validWords: si|as|casi
+  - world: 0
+    subWorld: 1
+    level: 4
+    word: bien
+    answers: en|ni|bien|
+    validWords: en|ni|bien
+  - world: 0
+    subWorld: 1
+    level: 5
+    word: "est\xE1"
+    answers: "se|es|te|est\xE1|"
+    validWords: "se|es|te|est\xE1"
+  - world: 0
+    subWorld: 1
+    level: 6
+    word: cual
+    answers: la|al|cal|cual|
+    validWords: la|al|cal|cual
+  - world: 0
+    subWorld: 1
+    level: 7
+    word: "a\xF1os"
+    answers: "os|as|a\xF1o|a\xF1os|"
+    validWords: "os|as|a\xF1o|a\xF1os"
+  - world: 0
+    subWorld: 1
+    level: 8
+    word: otra
+    answers: to|otra|rato|rota|
+    validWords: to|otra|rato|rota
+  - world: 0
+    subWorld: 1
+    level: 9
+    word: "ser\xE1"
+    answers: "se|es|ser|ser\xE1|"
+    validWords: "se|es|ser|ser\xE1"
+  - world: 0
+    subWorld: 1
+    level: 10
+    word: toda
+    answers: da|to|toda|dato|
+    validWords: da|to|toda|dato
+  - world: 0
+    subWorld: 1
+    level: 11
+    word: "pa\xEDs"
+    answers: "s\xED|as|as\xED|pa\xEDs|"
+    validWords: "s\xED|as|as\xED|pa\xEDs"
+  - world: 0
+    subWorld: 1
+    level: 12
+    word: tres
+    answers: se|es|te|ser|tres|
+    validWords: se|es|te|ser|tres
+  - world: 0
+    subWorld: 1
+    level: 13
+    word: "s\xF3lo"
+    answers: "lo|os|los|sol|s\xF3lo|"
+    validWords: "lo|os|los|sol|s\xF3lo"
+  - world: 0
+    subWorld: 1
+    level: 14
+    word: vida
+    answers: va|da|vi|ida|vida|
+    validWords: va|da|vi|ida|vida
+  - world: 0
+    subWorld: 1
+    level: 15
+    word: ante
+    answers: en|te|tan|eta|ante|
+    validWords: en|te|tan|eta|ante
+  - world: 0
+    subWorld: 1
+    level: 16
+    word: ayer
+    answers: ya|ay|era|rey|ayer|
+    validWords: ya|ay|era|rey|ayer
+  - world: 0
+    subWorld: 1
+    level: 17
+    word: todo
+    answers: to|todo|
+    validWords: to|todo
+  - world: 0
+    subWorld: 2
+    level: 0
+    word: pues
+    answers: se|su|es|pues|supe|puse|
+    validWords: se|su|es|pues|supe|puse
+  - world: 0
+    subWorld: 2
+    level: 1
+    word: cada
+    answers: da|cada|
+    validWords: da|cada
+  - world: 0
+    subWorld: 2
+    level: 2
+    word: para
+    answers: par|para|
+    validWords: par|para
+  - world: 0
+    subWorld: 2
+    level: 3
+    word: debe
+    answers: de|debe|
+    validWords: de|debe
+  - world: 0
+    subWorld: 2
+    level: 4
+    word: hace
+    answers: ha|he|ah|eh|cae|hace|echa|
+    validWords: ha|he|ah|eh|cae|hace|echa
+  - world: 0
+    subWorld: 2
+    level: 5
+    word: sido
+    answers: si|os|dos|dio|ido|sido|dios|
+    validWords: si|os|dos|dio|ido|sido|dios
+  - world: 0
+    subWorld: 2
+    level: 6
+    word: casa
+    answers: as|casa|saca|
+    validWords: as|casa|saca
+  - world: 0
+    subWorld: 2
+    level: 7
+    word: caso
+    answers: os|as|caso|cosa|caos|saco|asco|
+    validWords: os|as|caso|cosa|caos|saco|asco
+  - world: 0
+    subWorld: 2
+    level: 8
+    word: algo
+    answers: la|al|lo|gol|ola|algo|lago|
+    validWords: la|al|lo|gol|ola|algo|lago
+  - world: 0
+    subWorld: 2
+    level: 9
+    word: "d\xEDas"
+    answers: "s\xED|da|as|as\xED|d\xEDa|das|d\xEDas|"
+    validWords: "s\xED|da|as|as\xED|d\xEDa|das|d\xEDas"
+  - world: 0
+    subWorld: 2
+    level: 10
+    word: esta
+    answers: se|es|te|as|esa|sea|eta|esta|
+    validWords: se|es|te|as|esa|sea|eta|esta
+  - world: 0
+    subWorld: 2
+    level: 11
+    word: sino
+    answers: no|si|ni|os|sin|son|nos|sino|
+    validWords: no|si|ni|os|sin|son|nos|sino
+  - world: 0
+    subWorld: 2
+    level: 12
+    word: nada
+    answers: da|dan|nada|anda|
+    validWords: da|dan|nada|anda
+  - world: 0
+    subWorld: 2
+    level: 13
+    word: esto
+    answers: se|es|te|os|to|eso|tos|esto|
+    validWords: se|es|te|os|to|eso|tos|esto
+  - world: 0
+    subWorld: 2
+    level: 14
+    word: este
+    answers: se|es|te|ese|este|
+    validWords: se|es|te|ese|este
+  - world: 0
+    subWorld: 2
+    level: 15
+    word: unos
+    answers: un|no|su|os|son|nos|uno|uso|unos|
+    validWords: un|no|su|os|son|nos|uno|uso|unos
+  - world: 0
+    subWorld: 2
+    level: 16
+    word: otro
+    answers: to|oro|otro|toro|roto|
+    validWords: to|oro|otro|toro|roto
+  - world: 0
+    subWorld: 2
+    level: 17
+    word: ella
+    answers: la|el|al|le|ella|leal|
+    validWords: la|el|al|le|ella|leal
+  - world: 0
+    subWorld: 3
+    level: 0
+    word: juego
+    answers: jugo|juego|
+    validWords: jugo|juego
+  - world: 0
+    subWorld: 3
+    level: 1
+    word: mujer
+    answers: me|mujer|
+    validWords: me|mujer
+  - world: 0
+    subWorld: 3
+    level: 2
+    word: julio
+    answers: lo|lujo|julio|
+    validWords: lo|lujo|julio
+  - world: 0
+    subWorld: 3
+    level: 3
+    word: mucho
+    answers: oh|humo|mucho|
+    validWords: oh|humo|mucho
+  - world: 0
+    subWorld: 3
+    level: 4
+    word: grupo
+    answers: por|puro|grupo|
+    validWords: por|puro|grupo
+  - world: 0
+    subWorld: 3
+    level: 5
+    word: lugar
+    answers: la|al|lugar|
+    validWords: la|al|lugar
+  - world: 0
+    subWorld: 3
+    level: 6
+    word: "\xE9poca"
+    answers: "copa|poca|\xE9poca|"
+    validWords: "copa|poca|\xE9poca"
+  - world: 0
+    subWorld: 3
+    level: 7
+    word: mejor
+    answers: me|mero|mejor|
+    validWords: me|mero|mejor
+  - world: 0
+    subWorld: 3
+    level: 8
+    word: "com\xFAn"
+    answers: "no|con|com\xFAn|"
+    validWords: "no|con|com\xFAn"
+  - world: 0
+    subWorld: 3
+    level: 9
+    word: fuera
+    answers: fe|fue|era|fuera|
+    validWords: fe|fue|era|fuera
+  - world: 0
+    subWorld: 3
+    level: 10
+    word: libro
+    answers: lo|ir|rol|libro|
+    validWords: lo|ir|rol|libro
+  - world: 0
+    subWorld: 3
+    level: 11
+    word: igual
+    answers: la|al|liga|igual|
+    validWords: la|al|liga|igual
+  - world: 0
+    subWorld: 3
+    level: 12
+    word: libre
+    answers: el|le|ir|libre|
+    validWords: el|le|ir|libre
+  - world: 0
+    subWorld: 3
+    level: 13
+    word: queda
+    answers: de|da|que|queda|
+    validWords: de|da|que|queda
+  - world: 0
+    subWorld: 3
+    level: 14
+    word: dicho
+    answers: oh|dio|ido|dicho|
+    validWords: oh|dio|ido|dicho
+  - world: 0
+    subWorld: 3
+    level: 15
+    word: "alg\xFAn"
+    answers: "la|al|a\xFAn|alg\xFAn|"
+    validWords: "la|al|a\xFAn|alg\xFAn"
+  - world: 0
+    subWorld: 3
+    level: 16
+    word: "\xFAnico"
+    answers: "no|ni|con|\xFAnico|"
+    validWords: "no|ni|con|\xFAnico"
+  - world: 0
+    subWorld: 3
+    level: 17
+    word: "qui\xE9n"
+    answers: "un|ni|qu\xE9|qui\xE9n|"
+    validWords: "un|ni|qu\xE9|qui\xE9n"
+  - world: 0
+    subWorld: 4
+    level: 0
+    word: "seg\xFAn"
+    answers: "en|se|es|gen|seg\xFAn|"
+    validWords: "en|se|es|gen|seg\xFAn"
+  - world: 0
+    subWorld: 4
+    level: 1
+    word: sigue
+    answers: se|su|es|si|sigue|
+    validWords: se|su|es|si|sigue
+  - world: 0
+    subWorld: 4
+    level: 2
+    word: hijos
+    answers: si|os|oh|hijo|hijos|
+    validWords: si|os|oh|hijo|hijos
+  - world: 0
+    subWorld: 4
+    level: 3
+    word: ambos
+    answers: os|as|mas|amo|ambos|
+    validWords: os|as|mas|amo|ambos
+  - world: 0
+    subWorld: 4
+    level: 4
+    word: campo
+    answers: amo|copa|poca|coma|campo|
+    validWords: amo|copa|poca|coma|campo
+  - world: 0
+    subWorld: 4
+    level: 5
+    word: luego
+    answers: el|lo|le|gol|leo|luego|
+    validWords: el|lo|le|gol|leo|luego
+  - world: 0
+    subWorld: 4
+    level: 6
+    word: "pod\xEDa"
+    answers: "da|o\xED|d\xEDa|o\xEDa|p\xEDo|pod\xEDa|"
+    validWords: "da|o\xED|d\xEDa|o\xEDa|p\xEDo|pod\xEDa"
+  - world: 0
+    subWorld: 4
+    level: 7
+    word: joven
+    answers: en|no|ve|ven|veo|joven|
+    validWords: en|no|ve|ven|veo|joven
+  - world: 0
+    subWorld: 4
+    level: 8
+    word: "est\xE1n"
+    answers: "en|se|es|te|est\xE1|est\xE1n|"
+    validWords: "en|se|es|te|est\xE1|est\xE1n"
+  - world: 0
+    subWorld: 4
+    level: 9
+    word: forma
+    answers: mar|amo|amor|mora|ramo|forma|
+    validWords: mar|amo|amor|mora|ramo|forma
+  - world: 0
+    subWorld: 4
+    level: 10
+    word: banco
+    answers: no|con|cabo|boca|cano|banco|
+    validWords: no|con|cabo|boca|cano|banco
+  - world: 0
+    subWorld: 4
+    level: 11
+    word: decir
+    answers: de|ir|red|der|dice|decir|
+    validWords: de|ir|red|der|dice|decir
+  - world: 0
+    subWorld: 4
+    level: 12
+    word: "se\xF1or"
+    answers: "se|es|os|ser|eso|se\xF1or|"
+    validWords: "se|es|os|ser|eso|se\xF1or"
+  - world: 0
+    subWorld: 4
+    level: 13
+    word: menor
+    answers: en|no|me|ron|mero|menor|
+    validWords: en|no|me|ron|mero|menor
+  - world: 0
+    subWorld: 4
+    level: 14
+    word: junto
+    answers: un|no|tu|to|uno|junto|
+    validWords: un|no|tu|to|uno|junto
+  - world: 0
+    subWorld: 4
+    level: 15
+    word: civil
+    answers: vi|civil|
+    validWords: vi|civil
+  - world: 0
+    subWorld: 4
+    level: 16
+    word: quien
+    answers: en|un|ni|que|une|quien|
+    validWords: en|un|ni|que|une|quien
+  - world: 0
+    subWorld: 4
+    level: 17
+    word: punto
+    answers: un|no|tu|to|uno|punto|
+    validWords: un|no|tu|to|uno|punto
+  - world: 1
+    subWorld: 0
+    level: 0
+    word: aquel
+    answers: la|el|al|le|que|aquel|
+    validWords: la|el|al|le|que|aquel
+  - world: 1
+    subWorld: 0
+    level: 1
+    word: tengo
+    answers: en|no|te|to|gen|tengo|
+    validWords: en|no|te|to|gen|tengo
+  - world: 1
+    subWorld: 0
+    level: 2
+    word: fondo
+    answers: no|don|fondo|
+    validWords: no|don|fondo
+  - world: 1
+    subWorld: 0
+    level: 3
+    word: puede
+    answers: de|pude|puede|
+    validWords: de|pude|puede
+  - world: 1
+    subWorld: 0
+    level: 4
+    word: parte
+    answers: te|era|par|eta|arte|trae|parte|
+    validWords: te|era|par|eta|arte|trae|parte
+  - world: 1
+    subWorld: 0
+    level: 5
+    word: mundo
+    answers: un|no|uno|don|nudo|mudo|mundo|
+    validWords: un|no|uno|don|nudo|mudo|mundo
+  - world: 1
+    subWorld: 0
+    level: 6
+    word: sobre
+    answers: se|es|os|ser|eso|beso|sobre|
+    validWords: se|es|os|ser|eso|beso|sobre
+  - world: 1
+    subWorld: 0
+    level: 7
+    word: vista
+    answers: si|va|ti|vi|as|vas|vista|
+    validWords: si|va|ti|vi|as|vas|vista
+  - world: 1
+    subWorld: 0
+    level: 8
+    word: poder
+    answers: de|por|red|der|pero|peor|poder|
+    validWords: de|por|red|der|pero|peor|poder
+  - world: 1
+    subWorld: 0
+    level: 9
+    word: final
+    answers: la|al|ni|fin|fina|fila|final|
+    validWords: la|al|ni|fin|fina|fila|final
+  - world: 1
+    subWorld: 0
+    level: 10
+    word: "ten\xEDa"
+    answers: "en|te|tan|eta|t\xEDa|ante|ten\xEDa|"
+    validWords: "en|te|tan|eta|t\xEDa|ante|ten\xEDa"
+  - world: 1
+    subWorld: 0
+    level: 11
+    word: "lleg\xF3"
+    answers: "el|le|lleg\xF3|"
+    validWords: "el|le|lleg\xF3"
+  - world: 1
+    subWorld: 0
+    level: 12
+    word: hacia
+    answers: ha|ah|hacia|
+    validWords: ha|ah|hacia
+  - world: 1
+    subWorld: 0
+    level: 13
+    word: haber
+    answers: ha|he|ah|eh|era|bar|abre|haber|
+    validWords: ha|he|ah|eh|era|bar|abre|haber
+  - world: 1
+    subWorld: 0
+    level: 14
+    word: nivel
+    answers: el|en|le|ni|ve|vi|ven|nivel|
+    validWords: el|en|le|ni|ve|vi|ven|nivel
+  - world: 1
+    subWorld: 0
+    level: 15
+    word: bueno
+    answers: en|un|no|uno|une|buen|nube|bueno|
+    validWords: en|un|no|uno|une|buen|nube|bueno
+  - world: 1
+    subWorld: 0
+    level: 16
+    word: apoyo
+    answers: ya|yo|ay|apoyo|
+    validWords: ya|yo|ay|apoyo
+  - world: 1
+    subWorld: 0
+    level: 17
+    word: "dem\xE1s"
+    answers: "de|se|es|me|m\xE1s|mes|sed|dem\xE1s|"
+    validWords: "de|se|es|me|m\xE1s|mes|sed|dem\xE1s"
+  - world: 1
+    subWorld: 1
+    level: 0
+    word: buena
+    answers: en|un|una|aun|une|buen|nube|buena|
+    validWords: en|un|una|aun|une|buen|nube|buena
+  - world: 1
+    subWorld: 1
+    level: 1
+    word: siglo
+    answers: lo|si|os|los|sol|gol|sigo|siglo|
+    validWords: lo|si|os|los|sol|gol|sigo|siglo
+  - world: 1
+    subWorld: 1
+    level: 2
+    word: cinco
+    answers: no|ni|con|cinco|
+    validWords: no|ni|con|cinco
+  - world: 1
+    subWorld: 1
+    level: 3
+    word: obras
+    answers: os|as|bar|obra|rosa|obras|sabor|sobra|
+    validWords: os|as|bar|obra|rosa|obras|sabor|sobra
+  - world: 1
+    subWorld: 1
+    level: 4
+    word: dejar
+    answers: de|da|era|dar|red|der|deja|dejar|
+    validWords: de|da|era|dar|red|der|deja|dejar
+  - world: 1
+    subWorld: 1
+    level: 5
+    word: deben
+    answers: de|en|den|debe|deben|
+    validWords: de|en|den|debe|deben
+  - world: 1
+    subWorld: 1
+    level: 6
+    word: padre
+    answers: de|da|era|dar|par|red|der|padre|pared|
+    validWords: de|da|era|dar|par|red|der|padre|pared
+  - world: 1
+    subWorld: 1
+    level: 7
+    word: pasar
+    answers: as|par|para|pasa|pasar|
+    validWords: as|par|para|pasa|pasar
+  - world: 1
+    subWorld: 1
+    level: 8
+    word: valor
+    answers: la|al|lo|va|rol|ola|oral|valor|volar|
+    validWords: la|al|lo|va|rol|ola|oral|valor|volar
+  - world: 1
+    subWorld: 1
+    level: 9
+    word: hecho
+    answers: he|oh|eh|eco|hecho|
+    validWords: he|oh|eh|eco|hecho
+  - world: 1
+    subWorld: 1
+    level: 10
+    word: ahora
+    answers: ha|ah|oh|hora|ahora|
+    validWords: ha|ah|oh|hora|ahora
+  - world: 1
+    subWorld: 1
+    level: 11
+    word: nuevo
+    answers: en|un|no|ve|uno|ven|veo|une|nuevo|
+    validWords: en|un|no|ve|uno|ven|veo|une|nuevo
+  - world: 1
+    subWorld: 1
+    level: 12
+    word: usted
+    answers: de|se|su|es|te|tu|tus|sed|usted|
+    validWords: de|se|su|es|te|tu|tus|sed|usted
+  - world: 1
+    subWorld: 1
+    level: 13
+    word: horas
+    answers: ha|os|ah|oh|as|has|hora|rosa|horas|
+    validWords: ha|os|ah|oh|as|has|hora|rosa|horas
+  - world: 1
+    subWorld: 1
+    level: 14
+    word: orden
+    answers: de|en|no|don|red|den|ron|der|orden|
+    validWords: de|en|no|don|red|den|ron|der|orden
+  - world: 1
+    subWorld: 1
+    level: 15
+    word: nadie
+    answers: de|en|ni|da|dan|den|ida|idea|nadie|
+    validWords: de|en|ni|da|dan|den|ida|idea|nadie
+  - world: 1
+    subWorld: 1
+    level: 16
+    word: gente
+    answers: en|te|gen|ente|gente|
+    validWords: en|te|gen|ente|gente
+  - world: 1
+    subWorld: 1
+    level: 17
+    word: mismo
+    answers: si|mi|os|mis|mismo|
+    validWords: si|mi|os|mis|mismo
+  - world: 1
+    subWorld: 2
+    level: 0
+    word: medio
+    answers: de|me|mi|dio|ido|mide|dime|medio|miedo|
+    validWords: de|me|mi|dio|ido|mide|dime|medio|miedo
+  - world: 1
+    subWorld: 2
+    level: 1
+    word: papel
+    answers: la|el|al|le|papel|
+    validWords: la|el|al|le|papel
+  - world: 1
+    subWorld: 2
+    level: 2
+    word: vamos
+    answers: va|os|as|vas|mas|vos|amo|vaso|vamos|
+    validWords: va|os|as|vas|mas|vos|amo|vaso|vamos
+  - world: 1
+    subWorld: 2
+    level: 3
+    word: "hac\xEDa"
+    answers: "ha|ah|ah\xED|ca\xEDa|hac\xEDa|"
+    validWords: "ha|ah|ah\xED|ca\xEDa|hac\xEDa"
+  - world: 1
+    subWorld: 2
+    level: 4
+    word: "hab\xEDa"
+    answers: "ha|ah|ah\xED|hab\xEDa|bah\xEDa|"
+    validWords: "ha|ah|ah\xED|hab\xEDa|bah\xEDa"
+  - world: 1
+    subWorld: 2
+    level: 5
+    word: visto
+    answers: si|ti|vi|os|to|vio|vos|tos|visto|
+    validWords: si|ti|vi|os|to|vio|vos|tos|visto
+  - world: 1
+    subWorld: 2
+    level: 6
+    word: noche
+    answers: en|no|he|oh|eh|con|eco|once|noche|
+    validWords: en|no|he|oh|eh|con|eco|once|noche
+  - world: 1
+    subWorld: 2
+    level: 7
+    word: nunca
+    answers: un|una|aun|nuca|cuna|nunca|
+    validWords: un|una|aun|nuca|cuna|nunca
+  - world: 1
+    subWorld: 2
+    level: 8
+    word: salud
+    answers: la|su|al|da|as|las|sal|usa|das|salud|
+    validWords: la|su|al|da|as|las|sal|usa|das|salud
+  - world: 1
+    subWorld: 2
+    level: 9
+    word: hemos
+    answers: se|es|me|he|os|oh|eh|eso|mes|hemos|
+    validWords: se|es|me|he|os|oh|eh|eso|mes|hemos
+  - world: 1
+    subWorld: 2
+    level: 10
+    word: tiene
+    answers: en|ni|te|ti|ente|tiene|
+    validWords: en|ni|te|ti|ente|tiene
+  - world: 1
+    subWorld: 2
+    level: 11
+    word: manos
+    answers: no|os|as|son|nos|mas|amo|mano|sano|manos|
+    validWords: no|os|as|son|nos|mas|amo|mano|sano|manos
+  - world: 1
+    subWorld: 2
+    level: 12
+    word: tanto
+    answers: no|to|tan|nota|tanto|tonta|
+    validWords: no|to|tan|nota|tanto|tonta
+  - world: 1
+    subWorld: 2
+    level: 13
+    word: hasta
+    answers: ha|ah|as|has|tasa|hasta|
+    validWords: ha|ah|as|has|tasa|hasta
+  - world: 1
+    subWorld: 2
+    level: 14
+    word: "ni\xF1os"
+    answers: "no|si|ni|os|sin|son|nos|sino|ni\xF1o|ni\xF1os|"
+    validWords: "no|si|ni|os|sin|son|nos|sino|ni\xF1o|ni\xF1os"
+  - world: 1
+    subWorld: 2
+    level: 15
+    word: media
+    answers: de|me|mi|da|ida|idea|mide|dime|dame|media|
+    validWords: de|me|mi|da|ida|idea|mide|dime|dame|media
+  - world: 1
+    subWorld: 2
+    level: 16
+    word: entre
+    answers: en|te|tren|ente|entre|tener|
+    validWords: en|te|tren|ente|entre|tener
+  - world: 1
+    subWorld: 2
+    level: 17
+    word: cerca
+    answers: era|cae|caer|crea|arce|cera|cerca|
+    validWords: era|cae|caer|crea|arce|cera|cerca
+  - world: 1
+    subWorld: 3
+    level: 0
+    word: largo
+    answers: la|al|lo|gol|rol|ola|algo|lago|oral|largo|logra|
+    validWords: la|al|lo|gol|rol|ola|algo|lago|oral|largo|logra
+  - world: 1
+    subWorld: 3
+    level: 1
+    word: otras
+    answers: os|as|to|tos|otra|tras|rosa|rato|rota|otras|ratos|
+    validWords: os|as|to|tos|otra|tras|rosa|rato|rota|otras|ratos
+  - world: 1
+    subWorld: 3
+    level: 2
+    word: misma
+    answers: si|mi|as|mis|mas|misa|misma|
+    validWords: si|mi|as|mis|mas|misa|misma
+  - world: 1
+    subWorld: 3
+    level: 3
+    word: causa
+    answers: su|as|usa|casa|saca|causa|acusa|
+    validWords: su|as|usa|casa|saca|causa|acusa
+  - world: 1
+    subWorld: 3
+    level: 4
+    word: tarde
+    answers: de|te|da|era|dar|red|eta|der|arte|trae|tarde|
+    validWords: de|te|da|era|dar|red|eta|der|arte|trae|tarde
+  - world: 1
+    subWorld: 3
+    level: 5
+    word: donde
+    answers: de|en|no|don|den|dedo|donde|
+    validWords: de|en|no|don|den|dedo|donde
+  - world: 1
+    subWorld: 3
+    level: 6
+    word: todos
+    answers: os|to|dos|oso|tos|todo|todos|
+    validWords: os|to|dos|oso|tos|todo|todos
+  - world: 1
+    subWorld: 3
+    level: 7
+    word: todas
+    answers: da|os|as|to|dos|das|tos|toda|dato|todas|datos|
+    validWords: da|os|as|to|dos|das|tos|toda|dato|todas|datos
+  - world: 1
+    subWorld: 3
+    level: 8
+    word: veces
+    answers: se|es|ve|ese|ves|cese|veces|
+    validWords: se|es|ve|ese|ves|cese|veces
+  - world: 1
+    subWorld: 3
+    level: 9
+    word: mayor
+    answers: ya|yo|ay|mar|amo|amor|mayo|rayo|mora|ramo|mayor|
+    validWords: ya|yo|ay|mar|amo|amor|mayo|rayo|mora|ramo|mayor
+  - world: 1
+    subWorld: 3
+    level: 10
+    word: madre
+    answers: de|me|da|era|dar|mar|red|der|mera|dame|madre|darme|
+    validWords: de|me|da|era|dar|mar|red|der|mera|dame|madre|darme
+  - world: 1
+    subWorld: 3
+    level: 11
+    word: menos
+    answers: en|se|no|es|me|os|son|nos|eso|mes|seno|menos|
+    validWords: en|se|no|es|me|os|son|nos|eso|mes|seno|menos
+  - world: 1
+    subWorld: 3
+    level: 12
+    word: total
+    answers: la|al|lo|to|tal|ola|alto|total|
+    validWords: la|al|lo|to|tal|ola|alto|total
+  - world: 1
+    subWorld: 3
+    level: 13
+    word: salir
+    answers: la|al|si|ir|as|las|sal|ira|isla|risa|lisa|salir|
+    validWords: la|al|si|ir|as|las|sal|ira|isla|risa|lisa|salir
+  - world: 1
+    subWorld: 3
+    level: 14
+    word: resto
+    answers: se|es|te|os|to|ser|eso|tos|tres|esto|reto|resto|
+    validWords: se|es|te|os|to|ser|eso|tos|tres|esto|reto|resto
+  - world: 1
+    subWorld: 3
+    level: 15
+    word: "ser\xEDa"
+    answers: "se|es|s\xED|as|ser|era|as\xED|esa|sea|r\xEDe|eras|ser\xEDa|"
+    validWords: "se|es|s\xED|as|ser|era|as\xED|esa|sea|r\xEDe|eras|ser\xEDa"
+  - world: 1
+    subWorld: 3
+    level: 16
+    word: estoy
+    answers: se|es|yo|te|os|to|eso|soy|oye|tos|esto|estoy|
+    validWords: se|es|yo|te|os|to|eso|soy|oye|tos|esto|estoy
+  - world: 1
+    subWorld: 3
+    level: 17
+    word: hacen
+    answers: en|ha|he|ah|eh|han|cae|hace|cena|nace|echa|caen|hacen|
+    validWords: en|ha|he|ah|eh|han|cae|hace|cena|nace|echa|caen|hacen
+  - world: 1
+    subWorld: 4
+    level: 0
+    word: serie
+    answers: se|es|si|ir|ser|ese|eres|irse|serie|
+    validWords: se|es|si|ir|ser|ese|eres|irse|serie
+  - world: 1
+    subWorld: 4
+    level: 1
+    word: calle
+    answers: la|el|al|le|cae|cal|ella|leal|calle|
+    validWords: la|el|al|le|cae|cal|ella|leal|calle
+  - world: 1
+    subWorld: 4
+    level: 2
+    word: falta
+    answers: la|al|tal|ala|alta|lata|alfa|falta|fatal|
+    validWords: la|al|tal|ala|alta|lata|alfa|falta|fatal
+  - world: 1
+    subWorld: 4
+    level: 3
+    word: antes
+    answers: en|se|es|te|as|esa|tan|sea|eta|esta|ante|sean|antes|
+    validWords: en|se|es|te|as|esa|tan|sea|eta|esta|ante|sean|antes
+  - world: 1
+    subWorld: 4
+    level: 4
+    word: saber
+    answers: se|es|as|ser|era|esa|sea|bar|sabe|base|abre|eras|saber|bares|
+    validWords: se|es|as|ser|era|esa|sea|bar|sabe|base|abre|eras|saber|bares
+  - world: 1
+    subWorld: 4
+    level: 5
+    word: meses
+    answers: se|es|me|ese|mes|meses|
+    validWords: se|es|me|ese|mes|meses
+  - world: 1
+    subWorld: 4
+    level: 6
+    word: estos
+    answers: se|es|te|os|to|eso|tos|esto|esos|estos|
+    validWords: se|es|te|os|to|eso|tos|esto|esos|estos
+  - world: 1
+    subWorld: 4
+    level: 7
+    word: hacer
+    answers: ha|he|ah|eh|era|cae|hace|caer|crea|echa|arce|cera|hacer|echar|
+    validWords: ha|he|ah|eh|era|cae|hace|caer|crea|echa|arce|cera|hacer|echar
+  - world: 1
+    subWorld: 4
+    level: 8
+    word: cosas
+    answers: os|as|caso|cosa|caos|saco|asco|sosa|cosas|casos|
+    validWords: os|as|caso|cosa|caos|saco|asco|sosa|cosas|casos
+  - world: 1
+    subWorld: 4
+    level: 9
+    word: otros
+    answers: os|to|oro|oso|tos|otro|toro|roto|otros|toros|
+    validWords: os|to|oro|oso|tos|otro|toro|roto|otros|toros
+  - world: 1
+    subWorld: 4
+    level: 10
+    word: desde
+    answers: de|se|es|ese|sed|sede|desde|
+    validWords: de|se|es|ese|sed|sede|desde
+  - world: 1
+    subWorld: 4
+    level: 11
+    word: nueva
+    answers: en|un|va|ve|una|van|aun|ven|une|vea|ave|uva|nave|vean|nueva|
+    validWords: en|un|va|ve|una|van|aun|ven|une|vea|ave|uva|nave|vean|nueva
+  - world: 1
+    subWorld: 4
+    level: 12
+    word: pesar
+    answers: se|es|as|ser|era|esa|sea|par|pase|sepa|pesa|eras|pesar|presa|pares|
+    validWords: se|es|as|ser|era|esa|sea|par|pase|sepa|pesa|eras|pesar|presa|pares
+  - world: 1
+    subWorld: 4
+    level: 13
+    word: estas
+    answers: se|es|te|as|esa|sea|eta|esta|esas|seas|estas|
+    validWords: se|es|te|as|esa|sea|eta|esta|esas|seas|estas
+  - world: 1
+    subWorld: 4
+    level: 14
+    word: claro
+    answers: la|al|lo|rol|ola|cal|cola|roca|arco|loca|oral|caro|claro|calor|coral|
+    validWords: la|al|lo|rol|ola|cal|cola|roca|arco|loca|oral|caro|claro|calor|coral|col
+  - world: 1
+    subWorld: 4
+    level: 15
+    word: estar
+    answers: se|es|te|ser|era|esa|sea|eta|esta|tres|tras|arte|trae|estar|artes|
+    validWords: se|es|te|ser|era|esa|sea|eta|esta|tres|tras|arte|trae|estar|artes|as|eras|resta
+  - world: 1
+    subWorld: 4
+    level: 16
+    word: ellos
+    answers: el|se|es|lo|le|os|los|eso|les|sol|leo|ello|ellos|sello|
+    validWords: el|se|es|lo|le|os|los|eso|les|sol|leo|ello|ellos|sello
+  - world: 1
+    subWorld: 4
+    level: 17
+    word: ellas
+    answers: la|el|se|es|al|le|as|las|esa|les|sea|sal|ella|sale|ellas|
+    validWords: la|el|se|es|al|le|as|las|esa|les|sea|sal|ella|sale|ellas|leal
+  - world: 2
+    subWorld: 0
+    level: 0
+    word: "m\xE9xico"
+    answers: "mi|m\xE9xico|"
+    validWords: "mi|m\xE9xico"
+  - world: 2
+    subWorld: 0
+    level: 1
+    word: equipo
+    answers: que|pie|equipo|
+    validWords: que|pie|equipo
+  - world: 2
+    subWorld: 0
+    level: 2
+    word: quiero
+    answers: ir|que|euro|quiero|
+    validWords: ir|que|euro|quiero
+  - world: 2
+    subWorld: 0
+    level: 3
+    word: "f\xFAtbol"
+    answers: "lo|t\xFA|to|f\xFAtbol|"
+    validWords: "lo|t\xFA|to|f\xFAtbol"
+  - world: 2
+    subWorld: 0
+    level: 4
+    word: "m\xE9dico"
+    answers: "mi|d\xE9|dio|ido|m\xE9dico|"
+    validWords: "mi|d\xE9|dio|ido|m\xE9dico"
+  - world: 2
+    subWorld: 0
+    level: 5
+    word: fuerza
+    answers: fe|fue|era|fuera|fuerza|
+    validWords: fe|fue|era|fuera|fuerza
+  - world: 2
+    subWorld: 0
+    level: 6
+    word: "quer\xEDa"
+    answers: "que|era|r\xEDe|aqu\xED|quer\xEDa|"
+    validWords: "que|era|r\xEDe|aqu\xED|quer\xEDa"
+  - world: 2
+    subWorld: 0
+    level: 7
+    word: pueblo
+    answers: el|lo|le|leo|pelo|pueblo|
+    validWords: el|lo|le|leo|pelo|pueblo
+  - world: 2
+    subWorld: 0
+    level: 8
+    word: prueba
+    answers: era|par|bar|abre|pura|prueba|
+    validWords: era|par|bar|abre|pura|prueba
+  - world: 2
+    subWorld: 0
+    level: 9
+    word: hombre
+    answers: me|he|oh|eh|mero|hombre|
+    validWords: me|he|oh|eh|mero|hombre
+  - world: 2
+    subWorld: 0
+    level: 10
+    word: "m\xE1ximo"
+    answers: "mi|m\xE1ximo|"
+    validWords: "mi|m\xE1ximo"
+  - world: 2
+    subWorld: 0
+    level: 11
+    word: figura
+    answers: ir|fui|ira|gira|fuga|furia|figura|
+    validWords: ir|fui|ira|gira|fuga|furia|figura
+  - world: 2
+    subWorld: 0
+    level: 12
+    word: quiere
+    answers: ir|que|quiere|
+    validWords: ir|que|quiere
+  - world: 2
+    subWorld: 0
+    level: 13
+    word: "regi\xF3n"
+    answers: "en|ni|ir|gen|neg\xF3|rige|regi\xF3n|"
+    validWords: "en|ni|ir|gen|neg\xF3|rige|regi\xF3n"
+  - world: 2
+    subWorld: 0
+    level: 14
+    word: nombre
+    answers: en|no|me|ron|mero|menor|nombre|
+    validWords: en|no|me|ron|mero|menor|nombre
+  - world: 2
+    subWorld: 0
+    level: 15
+    word: guerra
+    answers: era|auge|guerra|
+    validWords: era|auge|guerra
+  - world: 2
+    subWorld: 0
+    level: 16
+    word: porque
+    answers: que|por|pero|peor|puro|euro|porque|
+    validWords: que|por|pero|peor|puro|euro|porque
+  - world: 2
+    subWorld: 0
+    level: 17
+    word: "naci\xF3n"
+    answers: "ni|naci\xF3|naci\xF3n|"
+    validWords: "ni|naci\xF3|naci\xF3n"
+  - world: 2
+    subWorld: 1
+    level: 0
+    word: "acci\xF3n"
+    answers: "ni|naci\xF3|acci\xF3n|"
+    validWords: "ni|naci\xF3|acci\xF3n"
+  - world: 2
+    subWorld: 1
+    level: 1
+    word: "tendr\xE1"
+    answers: "de|en|te|red|den|der|tren|tendr\xE1|"
+    validWords: "de|en|te|red|den|der|tren|tendr\xE1"
+  - world: 2
+    subWorld: 1
+    level: 2
+    word: imagen
+    answers: en|me|mi|ni|gen|mina|niega|imagen|
+    validWords: en|me|mi|ni|gen|mina|niega|imagen
+  - world: 2
+    subWorld: 1
+    level: 3
+    word: "n\xFAmero"
+    answers: "en|no|me|ron|men\xFA|mero|menor|n\xFAmero|"
+    validWords: "en|no|me|ron|men\xFA|mero|menor|n\xFAmero"
+  - world: 2
+    subWorld: 1
+    level: 4
+    word: ciudad
+    answers: da|ida|duda|ciudad|
+    validWords: da|ida|duda|ciudad
+  - world: 2
+    subWorld: 1
+    level: 5
+    word: cambio
+    answers: mi|iba|amo|cabo|boca|cima|coma|cambio|
+    validWords: mi|iba|amo|cabo|boca|cima|coma|cambio
+  - world: 2
+    subWorld: 1
+    level: 6
+    word: cabeza
+    answers: cae|cabe|caza|cabeza|
+    validWords: cae|cabe|caza|cabeza
+  - world: 2
+    subWorld: 1
+    level: 7
+    word: objeto
+    answers: te|to|ojo|objeto|
+    validWords: te|to|ojo|objeto
+  - world: 2
+    subWorld: 1
+    level: 8
+    word: futuro
+    answers: tu|to|fruto|futuro|
+    validWords: tu|to|fruto|futuro
+  - world: 2
+    subWorld: 1
+    level: 9
+    word: muchos
+    answers: su|os|oh|uso|humo|sumo|mucho|muchos|
+    validWords: su|os|oh|uso|humo|sumo|mucho|muchos
+  - world: 2
+    subWorld: 1
+    level: 10
+    word: "volvi\xF3"
+    answers: "lo|vi|vio|vivo|volvi\xF3|"
+    validWords: "lo|vi|vio|vivo|volvi\xF3"
+  - world: 2
+    subWorld: 1
+    level: 11
+    word: "trav\xE9s"
+    answers: "va|s\xE9|t\xE9|as|vas|\xE9sa|tras|\xE9sta|trav\xE9s|"
+    validWords: "va|s\xE9|t\xE9|as|vas|\xE9sa|tras|\xE9sta|trav\xE9s"
+  - world: 2
+    subWorld: 1
+    level: 12
+    word: "\xFAltimo"
+    answers: "lo|mi|t\xFA|ti|to|mil|\xFAtil|mito|\xFAltimo|"
+    validWords: "lo|mi|t\xFA|ti|to|mil|\xFAtil|mito|\xFAltimo"
+  - world: 2
+    subWorld: 1
+    level: 13
+    word: "m\xFAsica"
+    answers: "si|mi|as|mis|mas|casi|misa|cima|m\xFAsica|"
+    validWords: "si|mi|as|mis|mas|casi|misa|cima|m\xFAsica"
+  - world: 2
+    subWorld: 1
+    level: 14
+    word: fuerte
+    answers: te|tu|fe|fue|fuerte|
+    validWords: te|tu|fe|fue|fuerte
+  - world: 2
+    subWorld: 1
+    level: 15
+    word: "afirm\xF3"
+    answers: "mi|ir|mar|ira|mira|mir\xF3|firma|firm\xF3|afirm\xF3|"
+    validWords: "mi|ir|mar|ira|mira|mir\xF3|firma|firm\xF3|afirm\xF3"
+  - world: 2
+    subWorld: 1
+    level: 16
+    word: "visi\xF3n"
+    answers: "si|ni|vi|sin|visi\xF3n|"
+    validWords: "si|ni|vi|sin|visi\xF3n"
+  - world: 2
+    subWorld: 1
+    level: 17
+    word: libros
+    answers: lo|si|ir|os|los|sol|rol|libro|libros|
+    validWords: lo|si|ir|os|los|sol|rol|libro|libros
+  - world: 2
+    subWorld: 2
+    level: 0
+    word: cuadro
+    answers: da|dar|duro|dura|cura|roca|arco|caro|crudo|cuadro|
+    validWords: da|dar|duro|dura|cura|roca|arco|caro|crudo|cuadro
+  - world: 2
+    subWorld: 2
+    level: 1
+    word: muchas
+    answers: su|ha|ah|as|has|mas|usa|suma|mucha|muchas|
+    validWords: su|ha|ah|as|has|mas|usa|suma|mucha|muchas
+  - world: 2
+    subWorld: 2
+    level: 2
+    word: cuerpo
+    answers: por|eco|pero|creo|peor|puro|cero|euro|cuero|cuerpo|
+    validWords: por|eco|pero|creo|peor|puro|cero|euro|cuero|cuerpo
+  - world: 2
+    subWorld: 2
+    level: 3
+    word: "ma\xF1ana"
+    answers: "ama|ma\xF1ana|"
+    validWords: "ama|ma\xF1ana"
+  - world: 2
+    subWorld: 2
+    level: 4
+    word: debido
+    answers: de|dio|ido|debo|dedo|debido|
+    validWords: de|dio|ido|debo|dedo|debido
+  - world: 2
+    subWorld: 2
+    level: 5
+    word: "ning\xFAn"
+    answers: "ni|ning\xFAn|"
+    validWords: "ni|ning\xFAn"
+  - world: 2
+    subWorld: 2
+    level: 6
+    word: puerta
+    answers: te|tu|era|par|eta|arte|pura|ruta|trae|parte|puerta|
+    validWords: te|tu|era|par|eta|arte|pura|ruta|trae|parte|puerta
+  - world: 2
+    subWorld: 2
+    level: 7
+    word: precio
+    answers: ir|por|pie|eco|pero|creo|peor|rico|cero|pico|precio|
+    validWords: ir|por|pie|eco|pero|creo|peor|rico|cero|pico|precio
+  - world: 2
+    subWorld: 2
+    level: 8
+    word: "\xFAltima"
+    answers: "la|al|mi|t\xFA|ti|tal|mal|mil|lima|\xFAtil|\xFAltima|"
+    validWords: "la|al|mi|t\xFA|ti|tal|mal|mil|lima|\xFAtil|\xFAltima"
+  - world: 2
+    subWorld: 2
+    level: 9
+    word: camino
+    answers: no|mi|ni|con|amo|mano|mina|cano|cima|coma|camino|
+    validWords: no|mi|ni|con|amo|mano|mina|cano|cima|coma|camino
+  - world: 2
+    subWorld: 2
+    level: 10
+    word: primer
+    answers: me|mi|ir|pie|mire|irme|primer|
+    validWords: me|mi|ir|pie|mire|irme|primer
+  - world: 2
+    subWorld: 2
+    level: 11
+    word: partir
+    answers: ir|ti|par|ira|tira|tirar|partir|
+    validWords: ir|ti|par|ira|tira|tirar|partir
+  - world: 2
+    subWorld: 2
+    level: 12
+    word: "hab\xEDan"
+    answers: "ha|ah|han|ah\xED|hab\xEDa|bah\xEDa|hab\xEDan|"
+    validWords: "ha|ah|han|ah\xED|hab\xEDa|bah\xEDa|hab\xEDan"
+  - world: 2
+    subWorld: 2
+    level: 13
+    word: "t\xEDtulo"
+    answers: "lo|tu|o\xED|to|t\xEDo|l\xEDo|t\xEDtulo|"
+    validWords: "lo|tu|o\xED|to|t\xEDo|l\xEDo|t\xEDtulo"
+  - world: 2
+    subWorld: 2
+    level: 14
+    word: buscar
+    answers: su|as|sur|usa|bar|usar|cura|rusa|busca|curas|buscar|
+    validWords: su|as|sur|usa|bar|usar|cura|rusa|busca|curas|buscar
+  - world: 2
+    subWorld: 2
+    level: 15
+    word: aunque
+    answers: en|un|que|una|aun|une|aunque|
+    validWords: en|un|que|una|aun|une|aunque
+  - world: 2
+    subWorld: 2
+    level: 16
+    word: efecto
+    answers: te|fe|to|eco|feo|feto|efecto|
+    validWords: te|fe|to|eco|feo|feto|efecto
+  - world: 2
+    subWorld: 2
+    level: 17
+    word: empleo
+    answers: el|lo|le|me|lee|leo|pelo|empleo|
+    validWords: el|lo|le|me|lee|leo|pelo|empleo
+  - world: 2
+    subWorld: 3
+    level: 0
+    word: ocurre
+    answers: eco|creo|cero|euro|corre|cuero|cerro|ocurre|
+    validWords: eco|creo|cero|euro|corre|cuero|cerro|ocurre
+  - world: 2
+    subWorld: 3
+    level: 1
+    word: propia
+    answers: ir|por|par|ira|ropa|paro|pipa|propia|
+    validWords: ir|por|par|ira|ropa|paro|pipa|propia
+  - world: 2
+    subWorld: 3
+    level: 2
+    word: grupos
+    answers: su|os|por|uso|sur|puso|supo|puro|ruso|grupo|puros|grupos|
+    validWords: su|os|por|uso|sur|puso|supo|puro|ruso|grupo|puros|grupos
+  - world: 2
+    subWorld: 3
+    level: 3
+    word: crisis
+    answers: si|ir|iris|crisis|
+    validWords: si|ir|iris|crisis
+  - world: 2
+    subWorld: 3
+    level: 4
+    word: visita
+    answers: si|va|ti|vi|as|vas|vista|visita|
+    validWords: si|va|ti|vi|as|vas|vista|visita
+  - world: 2
+    subWorld: 3
+    level: 5
+    word: propio
+    answers: ir|por|oro|propio|
+    validWords: ir|por|oro|propio
+  - world: 2
+    subWorld: 3
+    level: 6
+    word: fueron
+    answers: en|un|no|fe|fue|uno|une|feo|ron|euro|freno|fueron|
+    validWords: en|un|no|fe|fue|uno|une|feo|ron|euro|freno|fueron
+  - world: 2
+    subWorld: 3
+    level: 7
+    word: "ten\xEDan"
+    answers: "en|te|tan|eta|t\xEDa|ante|ten\xEDa|ten\xEDan|"
+    validWords: "en|te|tan|eta|t\xEDa|ante|ten\xEDa|ten\xEDan"
+  - world: 2
+    subWorld: 3
+    level: 8
+    word: tiempo
+    answers: me|mi|te|ti|to|pie|tipo|mito|tome|temo|tope|tiempo|
+    validWords: me|mi|te|ti|to|pie|tipo|mito|tome|temo|tope|tiempo
+  - world: 2
+    subWorld: 3
+    level: 9
+    word: pueden
+    answers: de|en|un|une|den|pude|puede|pueden|
+    validWords: de|en|un|une|den|pude|puede|pueden
+  - world: 2
+    subWorld: 3
+    level: 10
+    word: "detr\xE1s"
+    answers: "de|se|es|te|ser|red|sed|der|est\xE1|tres|ser\xE1|detr\xE1s|"
+    validWords: "de|se|es|te|ser|red|sed|der|est\xE1|tres|ser\xE1|detr\xE1s"
+  - world: 2
+    subWorld: 3
+    level: 11
+    word: formas
+    answers: os|as|mar|mas|amo|amor|rosa|mora|ramo|forma|ramos|formas|
+    validWords: os|as|mar|mas|amo|amor|rosa|mora|ramo|forma|ramos|formas
+  - world: 2
+    subWorld: 3
+    level: 12
+    word: humana
+    answers: un|ha|ah|una|han|aun|ama|humana|
+    validWords: un|ha|ah|una|han|aun|ama|humana
+  - world: 2
+    subWorld: 3
+    level: 13
+    word: puerto
+    answers: te|tu|to|por|pero|peor|puro|reto|euro|tope|torpe|puerto|
+    validWords: te|tu|to|por|pero|peor|puro|reto|euro|tope|torpe|puerto
+  - world: 2
+    subWorld: 3
+    level: 14
+    word: europa
+    answers: por|era|par|pero|peor|ropa|paro|pura|puro|euro|opera|europa|
+    validWords: por|era|par|pero|peor|ropa|paro|pura|puro|euro|opera|europa
+  - world: 2
+    subWorld: 3
+    level: 15
+    word: frente
+    answers: en|te|fe|tren|ente|entre|tener|frente|
+    validWords: en|te|fe|tren|ente|entre|tener|frente
+  - world: 2
+    subWorld: 3
+    level: 16
+    word: parece
+    answers: era|par|cae|cree|caer|crea|arce|cera|parece|
+    validWords: era|par|cae|cree|caer|crea|arce|cera|parece
+  - world: 2
+    subWorld: 3
+    level: 17
+    word: "habr\xEDa"
+    answers: "ha|ah|ah\xED|bar|hab\xEDa|har\xEDa|bah\xEDa|abr\xEDa|habr\xEDa|"
+    validWords: "ha|ah|ah\xED|bar|hab\xEDa|har\xEDa|bah\xEDa|abr\xEDa|habr\xEDa"
+  - world: 2
+    subWorld: 4
+    level: 0
+    word: origen
+    answers: en|no|ni|ir|gen|ron|giro|rige|negro|reino|genio|riego|origen|
+    validWords: en|no|ni|ir|gen|ron|giro|rige|negro|reino|genio|riego|origen
+  - world: 2
+    subWorld: 4
+    level: 1
+    word: seguir
+    answers: se|su|es|si|ir|ser|sur|gris|irse|rige|sigue|surge|seguir|
+    validWords: se|su|es|si|ir|ser|sur|gris|irse|rige|sigue|surge|seguir
+  - world: 2
+    subWorld: 4
+    level: 2
+    word: diario
+    answers: da|ir|dar|dio|ido|ira|ida|radio|diario|
+    validWords: da|ir|dar|dio|ido|ira|ida|radio|diario
+  - world: 2
+    subWorld: 4
+    level: 3
+    word: humano
+    answers: un|no|ha|ah|oh|una|han|uno|aun|amo|mano|humo|humano|
+    validWords: un|no|ha|ah|oh|una|han|uno|aun|amo|mano|humo|humano
+  - world: 2
+    subWorld: 4
+    level: 4
+    word: encima
+    answers: en|me|mi|ni|cae|cine|cien|cena|nace|mina|caen|cima|encima|
+    validWords: en|me|mi|ni|cae|cine|cien|cena|nace|mina|caen|cima|encima
+  - world: 2
+    subWorld: 4
+    level: 5
+    word: podido
+    answers: dio|ido|odio|pido|podido|
+    validWords: dio|ido|odio|pido|podido
+  - world: 2
+    subWorld: 4
+    level: 6
+    word: ciento
+    answers: en|no|ni|te|ti|to|con|eco|cine|cien|once|nieto|ciento|
+    validWords: en|no|ni|te|ti|to|con|eco|cine|cien|once|nieto|ciento
+  - world: 2
+    subWorld: 4
+    level: 7
+    word: fiscal
+    answers: la|al|si|as|las|sal|cal|casi|isla|fila|lisa|filas|fiscal|
+    validWords: la|al|si|as|las|sal|cal|casi|isla|fila|lisa|filas|fiscal
+  - world: 2
+    subWorld: 4
+    level: 8
+    word: existe
+    answers: se|es|si|te|ti|ese|este|siete|existe|
+    validWords: se|es|si|te|ti|ese|este|siete|existe
+  - world: 2
+    subWorld: 4
+    level: 9
+    word: fuente
+    answers: en|un|te|tu|fe|fue|une|ente|fuente|
+    validWords: en|un|te|tu|fe|fue|une|ente|fuente
+  - world: 2
+    subWorld: 4
+    level: 10
+    word: muerte
+    answers: me|te|tu|teme|mete|muere|meter|temer|muerte|
+    validWords: me|te|tu|teme|mete|muere|meter|temer|muerte
+  - world: 2
+    subWorld: 4
+    level: 11
+    word: lengua
+    answers: la|el|en|un|al|le|una|aun|une|gen|luna|auge|lengua|
+    validWords: la|el|en|un|al|le|una|aun|une|gen|luna|auge|lengua
+  - world: 2
+    subWorld: 4
+    level: 12
+    word: tenido
+    answers: de|en|no|ni|te|ti|to|don|dio|ido|den|nieto|tenido|
+    validWords: de|en|no|ni|te|ti|to|don|dio|ido|den|nieto|tenido
+  - world: 2
+    subWorld: 4
+    level: 13
+    word: tercer
+    answers: te|cree|creer|trece|tercer|
+    validWords: te|cree|creer|trece|tercer
+  - world: 2
+    subWorld: 4
+    level: 14
+    word: pasado
+    answers: da|os|as|dos|das|paso|pasa|sopa|pasado|posada|
+    validWords: da|os|as|dos|das|paso|pasa|sopa|pasado|posada
+  - world: 2
+    subWorld: 4
+    level: 15
+    word: hablar
+    answers: la|al|ha|ah|bar|ala|alba|bala|habla|hablar|
+    validWords: la|al|ha|ah|bar|ala|alba|bala|habla|hablar
+  - world: 2
+    subWorld: 4
+    level: 16
+    word: doctor
+    answers: to|oro|todo|otro|toro|coro|roto|codo|corto|doctor|
+    validWords: to|oro|todo|otro|toro|coro|roto|codo|corto|doctor
+  - world: 2
+    subWorld: 4
+    level: 17
+    word: vuelve
+    answers: el|le|ve|lee|leve|vuelve|
+    validWords: el|le|ve|lee|leve|vuelve
+  - world: 3
+    subWorld: 0
+    level: 0
+    word: unidad
+    answers: un|ni|da|una|aun|dan|ida|duda|unida|unidad|
+    validWords: un|ni|da|una|aun|dan|ida|duda|unida|unidad
+  - world: 3
+    subWorld: 0
+    level: 1
+    word: varias
+    answers: si|va|ir|vi|as|vas|ira|risa|sirva|varias|
+    validWords: si|va|ir|vi|as|vas|ira|risa|sirva|varias
+  - world: 3
+    subWorld: 0
+    level: 2
+    word: blanca
+    answers: la|al|ala|cal|alba|lana|bala|canal|banca|blanca|
+    validWords: la|al|ala|cal|alba|lana|bala|canal|banca|blanca
+  - world: 3
+    subWorld: 0
+    level: 3
+    word: motivo
+    answers: mi|ti|vi|to|vio|voto|mito|tomo|moto|motivo|
+    validWords: mi|ti|vi|to|vio|voto|mito|tomo|moto|motivo
+  - world: 3
+    subWorld: 0
+    level: 4
+    word: "espa\xF1a"
+    answers: "se|es|as|esa|sea|pasa|pase|sepa|pesa|espa\xF1a|"
+    validWords: "se|es|as|esa|sea|pasa|pase|sepa|pesa|espa\xF1a"
+  - world: 3
+    subWorld: 0
+    level: 5
+    word: muerto
+    answers: me|te|tu|to|muro|reto|mero|tome|euro|temo|temor|metro|tumor|muerto|
+    validWords: me|te|tu|to|muro|reto|mero|tome|euro|temo|temor|metro|tumor|muerto
+  - world: 3
+    subWorld: 0
+    level: 6
+    word: premio
+    answers: me|mi|ir|por|pie|pero|peor|mire|mero|miro|irme|primo|rompe|premio|
+    validWords: me|mi|ir|por|pie|pero|peor|mire|mero|miro|irme|primo|rompe|premio
+  - world: 3
+    subWorld: 0
+    level: 7
+    word: "c\xE1mara"
+    answers: "mar|ac\xE1|ama|cara|cama|arma|rama|amar|marca|c\xE1mara|"
+    validWords: "mar|ac\xE1|ama|cara|cama|arma|rama|amar|marca|c\xE1mara"
+  - world: 3
+    subWorld: 0
+    level: 8
+    word: medios
+    answers: de|se|es|me|si|mi|dos|eso|mis|dio|mes|sido|dios|medio|medios|
+    validWords: de|se|es|me|si|mi|dos|eso|mis|dio|mes|sido|dios|medio|medios|os|ido|sed|dime|mide|miedo
+  - world: 3
+    subWorld: 0
+    level: 9
+    word: blanco
+    answers: la|no|al|lo|con|ola|cal|cabo|boca|cola|loca|bola|cano|banco|blanco|
+    validWords: la|no|al|lo|con|ola|cal|cabo|boca|cola|loca|bola|cano|banco|blanco|col
+  - world: 3
+    subWorld: 0
+    level: 10
+    word: marcha
+    answers: ha|ah|mar|ama|cara|cama|arma|rama|amar|marca|marcha|
+    validWords: ha|ah|mar|ama|cara|cama|arma|rama|amar|marca|marcha
+  - world: 3
+    subWorld: 0
+    level: 11
+    word: "podr\xEDa"
+    answers: "da|o\xED|por|d\xEDa|dar|r\xEDo|par|o\xEDr|o\xEDa|ropa|paro|pod\xEDa|prado|pardo|podr\xEDa|"
+    validWords: "da|o\xED|por|d\xEDa|dar|r\xEDo|par|o\xEDr|o\xEDa|ropa|paro|pod\xEDa|prado|pardo|podr\xEDa|p\xEDo"
+  - world: 3
+    subWorld: 0
+    level: 12
+    word: social
+    answers: la|al|lo|si|os|los|las|sol|sal|caso|casi|cosa|sola|isla|social|
+    validWords: la|al|lo|si|os|los|las|sol|sal|caso|casi|cosa|sola|isla|social|as|cal|ola|caos|cola|loca|olas|saco|asilo
+  - world: 3
+    subWorld: 0
+    level: 13
+    word: simple
+    answers: el|se|es|le|me|si|mi|les|mis|mil|mes|pie|piel|pies|simple|
+    validWords: el|se|es|le|me|si|mi|les|mis|mil|mes|pie|piel|pies|simple|miel|miles
+  - world: 3
+    subWorld: 0
+    level: 14
+    word: nuevas
+    answers: en|se|un|su|es|va|ve|una|esa|sea|van|unas|sean|nueva|nuevas|
+    validWords: en|se|un|su|es|va|ve|una|esa|sea|van|unas|sean|nueva|nuevas|aun|une|usa|vas|ven|ves|aves|suave|suena
+  - world: 3
+    subWorld: 0
+    level: 15
+    word: puesto
+    answers: se|su|es|te|tu|os|eso|uso|tus|esto|pues|peso|puso|supo|puesto|
+    validWords: se|su|es|te|tu|os|eso|uso|tus|esto|pues|peso|puso|supo|puesto|to|tos|puse|supe|tope
+  - world: 3
+    subWorld: 0
+    level: 16
+    word: cuanto
+    answers: un|no|tu|con|una|uno|tan|aun|acto|nota|auto|toca|canto|cuota|cuanto|
+    validWords: un|no|tu|con|una|uno|tan|aun|acto|nota|auto|toca|canto|cuota|cuanto|to|cano|cuna|nuca
+  - world: 3
+    subWorld: 0
+    level: 17
+    word: padres
+    answers: de|se|es|da|ser|era|esa|sea|dar|par|red|padre|pesar|darse|padres|
+    validWords: de|se|es|da|ser|era|esa|sea|dar|par|red|padre|pesar|darse|padres|as|das|sed|pase|seda|sepa|pared|pares|presa
+  - world: 3
+    subWorld: 1
+    level: 0
+    word: dinero
+    answers: de|en|no|ni|ir|don|dio|ido|red|den|ron|orden|reino|dinero|dieron|
+    validWords: de|en|no|ni|ir|don|dio|ido|red|den|ron|orden|reino|dinero|dieron|der|riendo
+  - world: 3
+    subWorld: 1
+    level: 1
+    word: flores
+    answers: el|se|es|lo|le|fe|os|los|ser|eso|les|sol|flor|serlo|flores|
+    validWords: el|se|es|lo|le|fe|os|los|ser|eso|les|sol|flor|serlo|flores|feo|leo|rol
+  - world: 3
+    subWorld: 1
+    level: 2
+    word: riesgo
+    answers: se|es|si|ir|os|ser|eso|gris|irse|giro|sigo|rige|serio|riego|riesgo|
+    validWords: se|es|si|ir|os|ser|eso|gris|irse|giro|sigo|rige|serio|riego|riesgo
+  - world: 3
+    subWorld: 1
+    level: 3
+    word: "teor\xEDa"
+    answers: "te|era|r\xEDo|t\xEDo|eta|t\xEDa|o\xEDr|r\xEDe|o\xEDa|otra|arte|rato|trae|reto|teor\xEDa|"
+    validWords: "te|era|r\xEDo|t\xEDo|eta|t\xEDa|o\xEDr|r\xEDe|o\xEDa|otra|arte|rato|trae|reto|teor\xEDa|o\xED|to|rota|tr\xEDo"
+  - world: 3
+    subWorld: 1
+    level: 4
+    word: estado
+    answers: de|se|es|te|da|dos|esa|eso|sea|esta|esto|toda|todas|datos|estado|
+    validWords: de|se|es|te|da|dos|esa|eso|sea|esta|esto|toda|todas|datos|estado|as|os|to|das|eta|sed|tos|dato|seda
+  - world: 3
+    subWorld: 1
+    level: 5
+    word: grande
+    answers: de|en|da|era|dar|dan|red|den|gen|der|gran|eran|negra|negar|grande|
+    validWords: de|en|da|era|dar|dan|red|den|gen|der|gran|eran|negra|negar|grande
+  - world: 3
+    subWorld: 1
+    level: 6
+    word: sangre
+    answers: en|se|es|ser|era|esa|sea|gas|gran|eran|sean|negra|negar|sangre|negras|
+    validWords: en|se|es|ser|era|esa|sea|gas|gran|eran|sean|negra|negar|sangre|negras|as|gen|eras
+  - world: 3
+    subWorld: 1
+    level: 7
+    word: vuelta
+    answers: la|el|al|le|te|va|tu|ve|tal|eta|vea|tuve|vale|tela|vuelta|
+    validWords: la|el|al|le|te|va|tu|ve|tal|eta|vea|tuve|vale|tela|vuelta|ave|uva|vela
+  - world: 3
+    subWorld: 1
+    level: 8
+    word: evitar
+    answers: te|va|ir|ve|ti|vi|era|ver|eta|vea|arte|aire|trae|evita|evitar|
+    validWords: te|va|ir|ve|ti|vi|era|ver|eta|vea|arte|aire|trae|evita|evitar|ave|ira|tira|viera
+  - world: 3
+    subWorld: 1
+    level: 9
+    word: amigos
+    answers: si|mi|os|as|mis|mas|gas|amo|misa|siga|sigo|goma|oiga|amigo|amigos|
+    validWords: si|mi|os|as|mis|mas|gas|amo|misa|siga|sigo|goma|oiga|amigo|amigos|mago
+  - world: 3
+    subWorld: 1
+    level: 10
+    word: cierta
+    answers: te|ir|ti|era|eta|cae|arte|aire|caer|cita|rica|crea|trae|recta|cierta|
+    validWords: te|ir|ti|era|eta|cae|arte|aire|caer|cita|rica|crea|trae|recta|cierta|ira|arce|cera|tira|citar
+  - world: 3
+    subWorld: 1
+    level: 11
+    word: volver
+    answers: el|lo|le|ve|ver|veo|rol|leo|velo|verlo|volver|
+    validWords: el|lo|le|ve|ver|veo|rol|leo|velo|verlo|volver
+  - world: 3
+    subWorld: 1
+    level: 12
+    word: centro
+    answers: en|no|te|to|con|eco|creo|once|tren|cero|reto|norte|corte|tenor|centro|
+    validWords: en|no|te|to|con|eco|creo|once|tren|cero|reto|norte|corte|tenor|centro|ron|recto
+  - world: 3
+    subWorld: 1
+    level: 13
+    word: tienen
+    answers: en|ni|te|ti|ente|tiene|tienen|
+    validWords: en|ni|te|ti|ente|tiene|tienen
+  - world: 3
+    subWorld: 1
+    level: 14
+    word: mismos
+    answers: si|mi|os|mis|sois|mismo|mismos|
+    validWords: si|mi|os|mis|sois|mismo|mismos
+  - world: 3
+    subWorld: 1
+    level: 15
+    word: puntos
+    answers: un|no|su|tu|os|son|nos|uno|uso|tus|unos|puso|supo|punto|puntos|
+    validWords: un|no|su|tu|os|son|nos|uno|uso|tus|unos|puso|supo|punto|puntos|to|tos
+  - world: 3
+    subWorld: 1
+    level: 16
+    word: partes
+    answers: se|es|te|ser|era|esa|sea|esta|tres|tras|arte|parte|estar|pesar|partes|
+    validWords: se|es|te|ser|era|esa|sea|esta|tres|tras|arte|parte|estar|pesar|partes|as|eta|par|pase|sepa|trae|artes|presa|presta
+  - world: 3
+    subWorld: 1
+    level: 17
+    word: varios
+    answers: si|va|ir|vi|os|as|vio|vas|vos|ira|rosa|vaso|risa|aviso|varios|
+    validWords: si|va|ir|vi|os|as|vio|vas|vos|ira|rosa|vaso|risa|aviso|varios|sirva
+  - world: 3
+    subWorld: 2
+    level: 0
+    word: novela
+    answers: la|el|en|no|al|lo|le|va|ve|van|ven|veo|vea|vale|novela|
+    validWords: la|el|en|no|al|lo|le|va|ve|van|ven|veo|vea|vale|novela|ave|leo|ola|nave|vano|vean|vela|velo
+  - world: 3
+    subWorld: 2
+    level: 1
+    word: prensa
+    answers: en|se|es|ser|era|esa|sea|par|pan|eran|sean|pena|pesar|prensa|pensar|
+    validWords: en|se|es|ser|era|esa|sea|par|pan|eran|sean|pena|pesar|prensa|pensar|as|eras|pase|pesa|sepa|pares|penas|presa
+  - world: 3
+    subWorld: 2
+    level: 2
+    word: cuando
+    answers: un|no|da|con|una|uno|don|aun|dan|onda|nuca|cuna|cano|nudo|cuando|
+    validWords: un|no|da|con|una|uno|don|aun|dan|onda|nuca|cuna|cano|nudo|cuando
+  - world: 3
+    subWorld: 2
+    level: 3
+    word: estilo
+    answers: el|se|es|lo|le|si|te|ti|os|los|eso|les|sol|esto|estilo|
+    validWords: el|se|es|lo|le|si|te|ti|os|los|eso|les|sol|esto|estilo|to|leo|tos|listo
+  - world: 3
+    subWorld: 2
+    level: 4
+    word: verano
+    answers: en|no|va|ve|era|ver|van|ven|veo|vea|ave|eran|nave|vano|verano|
+    validWords: en|no|va|ve|era|ver|van|ven|veo|vea|ave|eran|nave|vano|verano|ron|vean
+  - world: 3
+    subWorld: 2
+    level: 5
+    word: buenos
+    answers: en|se|un|no|su|es|son|nos|uno|eso|uso|unos|buen|bueno|buenos|
+    validWords: en|se|un|no|su|es|son|nos|uno|eso|uso|unos|buen|bueno|buenos|os|une|beso|nube|seno|sube|nubes
+  - world: 3
+    subWorld: 2
+    level: 6
+    word: siendo
+    answers: de|en|se|no|es|si|ni|sin|son|dos|nos|eso|sido|sino|siendo|
+    validWords: de|en|se|no|es|si|ni|sin|son|dos|nos|eso|sido|sino|siendo|os|den|dio|don|ido|sed|dios|seno
+  - world: 3
+    subWorld: 2
+    level: 7
+    word: cuatro
+    answers: tu|otra|acto|rato|auto|ruta|cura|toca|roca|autor|actor|corta|tocar|cuatro|cuarto|
+    validWords: tu|otra|acto|rato|auto|ruta|cura|toca|roca|autor|actor|corta|tocar|cuatro|cuarto|to|arco|caro|rota|cuota|turco
+  - world: 3
+    subWorld: 2
+    level: 8
+    word: estuvo
+    answers: se|su|es|te|tu|ve|os|eso|uso|tus|veo|esto|tuvo|tuve|estuvo|
+    validWords: se|su|es|te|tu|ve|os|eso|uso|tus|veo|esto|tuvo|tuve|estuvo|to|tos|ves|vos
+  - world: 3
+    subWorld: 2
+    level: 9
+    word: altura
+    answers: la|al|tu|tal|ala|alta|ruta|aula|lata|altar|altura|
+    validWords: la|al|tu|tal|ala|alta|ruta|aula|lata|altar|altura
+  - world: 3
+    subWorld: 2
+    level: 10
+    word: dentro
+    answers: de|en|no|te|to|don|red|den|ron|tren|reto|orden|norte|tenor|dentro|
+    validWords: de|en|no|te|to|don|red|den|ron|tren|reto|orden|norte|tenor|dentro|der
+  - world: 3
+    subWorld: 2
+    level: 11
+    word: sector
+    answers: se|es|te|os|ser|eso|tres|esto|creo|seco|cero|resto|corte|sector|cortes|
+    validWords: se|es|te|os|ser|eso|tres|esto|creo|seco|cero|resto|corte|sector|cortes|to|eco|tos|reto|coste|recto
+  - world: 3
+    subWorld: 2
+    level: 12
+    word: nuevos
+    answers: en|se|un|no|su|es|ve|son|nos|uno|eso|uso|unos|nuevo|nuevos|
+    validWords: en|se|un|no|su|es|ve|son|nos|uno|eso|uso|unos|nuevo|nuevos|os|une|ven|veo|ves|vos|seno
+  - world: 3
+    subWorld: 2
+    level: 13
+    word: metros
+    answers: se|es|me|te|os|ser|eso|mes|tres|esto|reto|resto|temor|metro|metros|
+    validWords: se|es|me|te|os|ser|eso|mes|tres|esto|reto|resto|temor|metro|metros|to|tos|mero|temo|tome
+  - world: 3
+    subWorld: 2
+    level: 14
+    word: "se\xF1al\xF3"
+    answers: "la|el|se|es|al|le|as|las|esa|les|sea|sal|sale|se\xF1al|se\xF1al\xF3|"
+    validWords: "la|el|se|es|al|le|as|las|esa|les|sea|sal|sale|se\xF1al|se\xF1al\xF3|le\xF1a"
+  - world: 3
+    subWorld: 2
+    level: 15
+    word: modelo
+    answers: de|el|lo|le|me|del|leo|modo|lomo|molde|modelo|
+    validWords: de|el|lo|le|me|del|leo|modo|lomo|molde|modelo
+  - world: 3
+    subWorld: 2
+    level: 16
+    word: cuenta
+    answers: en|un|te|tu|una|tan|aun|eta|cae|une|ante|cena|nace|caen|cuenta|
+    validWords: en|un|te|tu|una|tan|aun|eta|cae|une|ante|cena|nace|caen|cuenta|cuna|nuca
+  - world: 3
+    subWorld: 2
+    level: 17
+    word: "se\xF1ora"
+    answers: "se|es|os|as|ser|era|esa|eso|a\xF1o|sea|a\xF1os|rosa|se\xF1or|so\xF1ar|se\xF1ora|"
+    validWords: "se|es|os|as|ser|era|esa|eso|a\xF1o|sea|a\xF1os|rosa|se\xF1or|so\xF1ar|se\xF1ora|eras"
+  - world: 3
+    subWorld: 3
+    level: 0
+    word: "adem\xE1s"
+    answers: "de|se|es|me|da|m\xE1s|esa|sea|mes|mas|das|mesa|seda|dem\xE1s|adem\xE1s|"
+    validWords: "de|se|es|me|da|m\xE1s|esa|sea|mes|mas|das|mesa|seda|dem\xE1s|adem\xE1s|as|sed|dame"
+  - world: 3
+    subWorld: 3
+    level: 1
+    word: hechos
+    answers: se|es|he|os|oh|eh|eso|eco|seco|hecho|hechos|
+    validWords: se|es|he|os|oh|eh|eso|eco|seco|hecho|hechos
+  - world: 3
+    subWorld: 3
+    level: 2
+    word: cierto
+    answers: te|ir|ti|to|eco|creo|rico|tiro|cero|reto|rito|corte|recto|cierto|tercio|
+    validWords: te|ir|ti|to|eco|creo|rico|tiro|cero|reto|rito|corte|recto|cierto|tercio
+  - world: 3
+    subWorld: 3
+    level: 3
+    word: unidos
+    answers: un|no|su|si|ni|sin|son|dos|nos|uno|don|sido|sino|unos|unidos|
+    validWords: un|no|su|si|ni|sin|son|dos|nos|uno|don|sido|sino|unos|unidos|os|dio|ido|uso|dios|nudo|unido
+  - world: 3
+    subWorld: 3
+    level: 4
+    word: seguro
+    answers: se|su|es|os|ser|eso|uso|sur|ruso|euro|surge|euros|ruego|seguro|grueso|
+    validWords: se|su|es|os|ser|eso|uso|sur|ruso|euro|surge|euros|ruego|seguro|grueso
+  - world: 3
+    subWorld: 3
+    level: 5
+    word: asunto
+    answers: un|no|su|tu|una|son|nos|uno|tan|uso|aun|tus|unos|unas|asunto|
+    validWords: un|no|su|tu|una|son|nos|uno|tan|uso|aun|tus|unos|unas|asunto|as|os|usa|auto|nota|sano|usan|notas|santo
+  - world: 3
+    subWorld: 3
+    level: 6
+    word: contra
+    answers: no|con|tan|otra|acto|nota|rato|toca|roca|actor|corta|tocar|canto|contra|contar|
+    validWords: no|con|tan|otra|acto|nota|rato|toca|roca|actor|corta|tocar|canto|contra|contar|to|ron|arco|cano|caro|rota|notar
+  - world: 3
+    subWorld: 3
+    level: 7
+    word: cuales
+    answers: la|el|se|su|es|al|le|las|esa|les|sea|sal|cual|clase|cuales|
+    validWords: la|el|se|su|es|al|le|las|esa|les|sea|sal|cual|clase|cuales|as|cae|cal|usa|sale|seca|luces
+  - world: 3
+    subWorld: 3
+    level: 8
+    word: pronto
+    answers: no|to|por|oro|ron|otro|tono|toro|roto|torno|trono|pronto|
+    validWords: no|to|por|oro|ron|otro|tono|toro|roto|torno|trono|pronto
+  - world: 3
+    subWorld: 3
+    level: 9
+    word: actual
+    answers: la|al|tu|tal|ala|cal|cual|alta|acta|aula|lata|actual|
+    validWords: la|al|tu|tal|ala|cal|cual|alta|acta|aula|lata|actual
+  - world: 3
+    subWorld: 3
+    level: 10
+    word: agosto
+    answers: os|as|to|gas|oso|tos|gato|gota|gasto|gotas|gatos|agosto|
+    validWords: os|as|to|gas|oso|tos|gato|gota|gasto|gotas|gatos|agosto
+  - world: 3
+    subWorld: 3
+    level: 11
+    word: mismas
+    answers: si|mi|as|mis|mas|misa|misma|mismas|
+    validWords: si|mi|as|mis|mas|misa|misma|mismas
+  - world: 3
+    subWorld: 3
+    level: 12
+    word: llegar
+    answers: la|el|al|le|era|ella|real|leal|llega|legal|regla|llegar|
+    validWords: la|el|al|le|era|ella|real|leal|llega|legal|regla|llegar
+  - world: 3
+    subWorld: 3
+    level: 13
+    word: medida
+    answers: de|me|mi|da|ida|idea|edad|mide|dime|dame|media|medida|
+    validWords: de|me|mi|da|ida|idea|edad|mide|dime|dame|media|medida
+  - world: 3
+    subWorld: 3
+    level: 14
+    word: lograr
+    answers: la|al|lo|gol|rol|ola|algo|raro|lago|oral|largo|logra|lograr|
+    validWords: la|al|lo|gol|rol|ola|algo|raro|lago|oral|largo|logra|lograr
+  - world: 3
+    subWorld: 3
+    level: 15
+    word: suerte
+    answers: se|su|es|te|tu|ser|ese|sur|tus|este|tres|eres|suerte|
+    validWords: se|su|es|te|tu|ser|ese|sur|tus|este|tres|eres|suerte
+  - world: 3
+    subWorld: 3
+    level: 16
+    word: veinte
+    answers: en|ni|te|ve|ti|vi|ven|ente|vete|tiene|viene|nieve|veinte|
+    validWords: en|ni|te|ve|ti|vi|ven|ente|vete|tiene|viene|nieve|veinte
+  - world: 3
+    subWorld: 3
+    level: 17
+    word: arriba
+    answers: ir|iba|bar|ira|rara|abrir|barra|rabia|arriba|
+    validWords: ir|iba|bar|ira|rara|abrir|barra|rabia|arriba
+  - world: 3
+    subWorld: 4
+    level: 0
+    word: verdad
+    answers: de|va|da|ve|era|ver|dar|red|vea|ave|der|edad|verdad|
+    validWords: de|va|da|ve|era|ver|dar|red|vea|ave|der|edad|verdad
+  - world: 3
+    subWorld: 4
+    level: 1
+    word: manera
+    answers: en|me|era|mar|ama|eran|arma|rama|mera|amar|arena|marea|manera|
+    validWords: en|me|era|mar|ama|eran|arma|rama|mera|amar|arena|marea|manera
+  - world: 3
+    subWorld: 4
+    level: 2
+    word: teatro
+    answers: te|to|era|eta|otra|arte|rato|trae|reto|rota|trato|trate|teatro|
+    validWords: te|to|era|eta|otra|arte|rato|trae|reto|rota|trato|trate|teatro
+  - world: 3
+    subWorld: 4
+    level: 3
+    word: "pa\xEDses"
+    answers: "se|es|s\xED|as|as\xED|esa|sea|pa\xEDs|esas|pase|sepa|seas|pesa|pa\xEDses|"
+    validWords: "se|es|s\xED|as|as\xED|esa|sea|pa\xEDs|esas|pase|sepa|seas|pesa|pa\xEDses"
+  - world: 3
+    subWorld: 4
+    level: 4
+    word: acerca
+    answers: era|cae|cara|caer|crea|arce|cera|cerca|acera|acerca|
+    validWords: era|cae|cara|caer|crea|arce|cera|cerca|acera|acerca
+  - world: 3
+    subWorld: 4
+    level: 5
+    word: tierra
+    answers: te|ir|ti|era|eta|ira|arte|aire|trae|tira|traer|tirar|tierra|retira|
+    validWords: te|ir|ti|era|eta|ira|arte|aire|trae|tira|traer|tirar|tierra|retira
+  - world: 3
+    subWorld: 4
+    level: 6
+    word: alguna
+    answers: la|un|al|una|aun|ala|agua|luna|gana|gala|lana|aula|anual|alguna|laguna|
+    validWords: la|un|al|una|aun|ala|agua|luna|gana|gala|lana|aula|anual|alguna|laguna
+  - world: 3
+    subWorld: 4
+    level: 7
+    word: salida
+    answers: la|al|si|da|as|las|sal|das|ida|ala|sala|isla|alas|lisa|salida|
+    validWords: la|al|si|da|as|las|sal|das|ida|ala|sala|isla|alas|lisa|salida
+  - world: 3
+    subWorld: 4
+    level: 8
+    word: llevar
+    answers: la|el|al|le|va|ve|era|ver|vea|ella|real|vale|lleva|valle|llevar|
+    validWords: la|el|al|le|va|ve|era|ver|vea|ella|real|vale|lleva|valle|llevar|ave|leal|vela|llave|verla
+  - world: 3
+    subWorld: 4
+    level: 9
+    word: entrar
+    answers: en|te|era|tan|eta|ante|eran|arte|tren|trae|entra|renta|traer|traen|entrar|
+    validWords: en|te|era|tan|eta|ante|eran|arte|tren|trae|entra|renta|traer|traen|entrar
+  - world: 3
+    subWorld: 4
+    level: 10
+    word: mirada
+    answers: mi|da|ir|dar|mar|ama|ira|ida|mira|arma|dama|rama|amar|drama|mirada|
+    validWords: mi|da|ir|dar|mar|ama|ira|ida|mira|arma|dama|rama|amar|drama|mirada
+  - world: 3
+    subWorld: 4
+    level: 11
+    word: apenas
+    answers: en|se|es|as|esa|sea|pan|pasa|sean|pena|pase|sepa|pasan|penas|apenas|
+    validWords: en|se|es|as|esa|sea|pan|pasa|sean|pena|pase|sepa|pasan|penas|apenas|pesa|sana
+  - world: 3
+    subWorld: 4
+    level: 12
+    word: estaba
+    answers: se|es|te|as|esa|sea|eta|esta|sabe|base|tasa|basa|bata|basta|estaba|
+    validWords: se|es|te|as|esa|sea|eta|esta|sabe|base|tasa|basa|bata|basta|estaba
+  - world: 3
+    subWorld: 4
+    level: 13
+    word: calles
+    answers: la|el|se|es|al|le|las|esa|les|sea|ella|ellas|calle|clase|calles|
+    validWords: la|el|se|es|al|le|las|esa|les|sea|ella|ellas|calle|clase|calles|as|cae|cal|sal|leal|sale|seca
+  - world: 3
+    subWorld: 4
+    level: 14
+    word: acceso
+    answers: se|es|os|esa|eso|sea|cae|eco|caso|cosa|seco|seca|caos|coca|acceso|
+    validWords: se|es|os|esa|eso|sea|cae|eco|caso|cosa|seco|seca|caos|coca|acceso|as|asco|saco|casco
+  - world: 3
+    subWorld: 4
+    level: 15
+    word: rostro
+    answers: os|to|oro|oso|tos|otro|toro|roto|otros|toros|rostro|
+    validWords: os|to|oro|oso|tos|otro|toro|roto|otros|toros|rostro
+  - world: 3
+    subWorld: 4
+    level: 16
+    word: semana
+    answers: en|se|es|me|as|esa|sea|mes|mas|ama|mesa|sean|masa|sana|semana|
+    validWords: en|se|es|me|as|esa|sea|mes|mas|ama|mesa|sean|masa|sana|semana|asma
+  - world: 3
+    subWorld: 4
+    level: 17
+    word: espera
+    answers: se|es|ser|era|ese|esa|sea|par|pese|eres|pase|sepa|pesar|presa|espera|
+    validWords: se|es|ser|era|ese|esa|sea|par|pese|eres|pase|sepa|pesar|presa|espera|as|eras|pesa|pares
+  - world: 4
+    subWorld: 0
+    level: 0
+    word: "p\xFAblico"
+    answers: "lo|col|pico|p\xFAblico|"
+    validWords: "lo|col|pico|p\xFAblico"
+  - world: 4
+    subWorld: 0
+    level: 1
+    word: "explic\xF3"
+    answers: "el|le|pie|piel|explic\xF3|"
+    validWords: "el|le|pie|piel|explic\xF3"
+  - world: 4
+    subWorld: 0
+    level: 2
+    word: "franc\xE9s"
+    answers: "s\xE9|as|\xE9sa|caf\xE9|franc\xE9s|"
+    validWords: "s\xE9|as|\xE9sa|caf\xE9|franc\xE9s"
+  - world: 4
+    subWorld: 0
+    level: 3
+    word: "p\xFAblica"
+    answers: "la|al|iba|cal|p\xFAblica|"
+    validWords: "la|al|iba|cal|p\xFAblica"
+  - world: 4
+    subWorld: 0
+    level: 4
+    word: "peque\xF1a"
+    answers: "que|peque\xF1a|"
+    validWords: "que|peque\xF1a"
+  - world: 4
+    subWorld: 0
+    level: 5
+    word: "peque\xF1o"
+    answers: "que|pu\xF1o|peque\xF1o|"
+    validWords: "que|pu\xF1o|peque\xF1o"
+  - world: 4
+    subWorld: 0
+    level: 6
+    word: "pr\xF3ximo"
+    answers: "mi|ir|por|mir\xF3|miro|primo|rompi\xF3|pr\xF3ximo|"
+    validWords: "mi|ir|por|mir\xF3|miro|primo|rompi\xF3|pr\xF3ximo"
+  - world: 4
+    subWorld: 0
+    level: 7
+    word: "comenz\xF3"
+    answers: "en|no|me|con|eco|c\xF3mo|once|come|comen|comenz\xF3|"
+    validWords: "en|no|me|con|eco|c\xF3mo|once|come|comen|comenz\xF3"
+  - world: 4
+    subWorld: 0
+    level: 8
+    word: actitud
+    answers: tu|da|ti|ida|cita|actitud|
+    validWords: tu|da|ti|ida|cita|actitud
+  - world: 4
+    subWorld: 0
+    level: 9
+    word: "p\xE1ginas"
+    answers: "si|ni|as|sin|pan|gas|siga|sigan|p\xE1gina|p\xE1ginas|"
+    validWords: "si|ni|as|sin|pan|gas|siga|sigan|p\xE1gina|p\xE1ginas"
+  - world: 4
+    subWorld: 0
+    level: 10
+    word: "tambi\xE9n"
+    answers: "mi|ni|ti|t\xE9|tan|iba|iban|mina|am\xE9n|tambi\xE9n|"
+    validWords: "mi|ni|ti|t\xE9|tan|iba|iban|mina|am\xE9n|tambi\xE9n"
+  - world: 4
+    subWorld: 0
+    level: 11
+    word: "coraz\xF3n"
+    answers: "no|con|ron|zona|roca|arco|caro|cano|raz\xF3n|coraz\xF3n|"
+    validWords: "no|con|ron|zona|roca|arco|caro|cano|raz\xF3n|coraz\xF3n"
+  - world: 4
+    subWorld: 0
+    level: 12
+    word: "funci\xF3n"
+    answers: "un|ni|fin|fui|uni\xF3|uni\xF3n|funci\xF3n|"
+    validWords: "un|ni|fin|fui|uni\xF3|uni\xF3n|funci\xF3n"
+  - world: 4
+    subWorld: 0
+    level: 13
+    word: febrero
+    answers: fe|feo|febrero|
+    validWords: fe|feo|febrero
+  - world: 4
+    subWorld: 0
+    level: 14
+    word: "r\xE9gimen"
+    answers: "en|me|mi|ni|ir|gen|mire|irme|mir\xE9|rige|r\xE9gimen|"
+    validWords: "en|me|mi|ni|ir|gen|mire|irme|mir\xE9|rige|r\xE9gimen"
+  - world: 4
+    subWorld: 0
+    level: 15
+    word: "t\xE9cnica"
+    answers: "ni|ti|t\xE9|tan|cita|\xE9tica|cinta|t\xE9cnica|"
+    validWords: "ni|ti|t\xE9|tan|cita|\xE9tica|cinta|t\xE9cnica"
+  - world: 4
+    subWorld: 0
+    level: 16
+    word: "di\xE1logo"
+    answers: "lo|dio|ido|gol|digo|odio|oigo|di\xE1logo|"
+    validWords: "lo|dio|ido|gol|digo|odio|oigo|di\xE1logo"
+  - world: 4
+    subWorld: 0
+    level: 17
+    word: "opini\xF3n"
+    answers: "no|ni|pino|opin\xF3|opini\xF3n|"
+    validWords: "no|ni|pino|opin\xF3|opini\xF3n"
+  - world: 4
+    subWorld: 1
+    level: 0
+    word: "gesti\xF3n"
+    answers: "en|se|es|si|ni|te|ti|sin|gen|neg\xF3|tenis|sent\xF3|gesti\xF3n|"
+    validWords: "en|se|es|si|ni|te|ti|sin|gen|neg\xF3|tenis|sent\xF3|gesti\xF3n"
+  - world: 4
+    subWorld: 1
+    level: 1
+    word: "t\xE9cnico"
+    answers: "no|ni|ti|t\xE9|to|con|cinco|\xE9tico|t\xE9cnico|"
+    validWords: "no|ni|ti|t\xE9|to|con|cinco|\xE9tico|t\xE9cnico"
+  - world: 4
+    subWorld: 1
+    level: 2
+    word: "presi\xF3n"
+    answers: "en|se|es|si|ni|ir|sin|ser|pie|pies|irse|pens\xF3|presi\xF3n|"
+    validWords: "en|se|es|si|ni|ir|sin|ser|pie|pies|irse|pens\xF3|presi\xF3n"
+  - world: 4
+    subWorld: 1
+    level: 3
+    word: ninguna
+    answers: un|ni|una|aun|ninguna|
+    validWords: un|ni|una|aun|ninguna
+  - world: 4
+    subWorld: 1
+    level: 4
+    word: cultura
+    answers: la|al|tu|tal|cal|cual|ruta|cura|cultura|
+    validWords: la|al|tu|tal|cal|cual|ruta|cura|cultura
+  - world: 4
+    subWorld: 1
+    level: 5
+    word: "j\xF3venes"
+    answers: "en|se|es|ve|ese|ven|eje|ves|ejes|j\xF3venes|"
+    validWords: "en|se|es|ve|ese|ven|eje|ves|ejes|j\xF3venes"
+  - world: 4
+    subWorld: 1
+    level: 6
+    word: "energ\xEDa"
+    answers: "en|era|r\xEDe|gen|gran|eran|negra|negar|genera|energ\xEDa|"
+    validWords: "en|era|r\xEDe|gen|gran|eran|negra|negar|genera|energ\xEDa"
+  - world: 4
+    subWorld: 1
+    level: 7
+    word: "campa\xF1a"
+    answers: "ama|cama|capa|mapa|ca\xF1a|campa\xF1a|"
+    validWords: "ama|cama|capa|mapa|ca\xF1a|campa\xF1a"
+  - world: 4
+    subWorld: 1
+    level: 8
+    word: ejemplo
+    answers: el|lo|le|me|eje|lee|leo|pelo|empleo|ejemplo|
+    validWords: el|lo|le|me|eje|lee|leo|pelo|empleo|ejemplo
+  - world: 4
+    subWorld: 1
+    level: 9
+    word: "m\xE9dicos"
+    answers: "si|mi|s\xE9|os|d\xE9|dos|mis|dio|ido|sido|dios|disco|m\xE9dico|m\xE9dicos|"
+    validWords: "si|mi|s\xE9|os|d\xE9|dos|mis|dio|ido|sido|dios|disco|m\xE9dico|m\xE9dicos"
+  - world: 4
+    subWorld: 1
+    level: 10
+    word: acuerdo
+    answers: de|da|era|dar|red|creo|doce|caer|duro|dura|crea|rueda|cuadro|creado|acuerdo|
+    validWords: de|da|era|dar|red|creo|doce|caer|duro|dura|crea|rueda|cuadro|creado|acuerdo|cae|eco|arco|caro|cero|cura|roca|acero|cuerda
+  - world: 4
+    subWorld: 1
+    level: 11
+    word: hombres
+    answers: se|es|me|he|os|oh|eh|ser|eso|mes|beso|sobre|hemos|hombre|hombres|
+    validWords: se|es|me|he|os|oh|eh|ser|eso|mes|beso|sobre|hemos|hombre|hombres|mero
+  - world: 4
+    subWorld: 1
+    level: 12
+    word: posible
+    answers: el|se|es|lo|le|si|los|eso|les|sol|pie|peso|piel|pies|posible|
+    validWords: el|se|es|lo|le|si|los|eso|les|sol|pie|peso|piel|pies|posible|os|leo|beso|pelo|piso|pelos
+  - world: 4
+    subWorld: 1
+    level: 13
+    word: persona
+    answers: en|se|no|es|por|ser|son|era|nos|esa|eso|sea|pero|eran|persona|
+    validWords: en|se|no|es|por|ser|son|era|nos|esa|eso|sea|pero|eran|persona|paso|peso|pone|rosa|sean|pesar|poner|pensar|prensa
+  - world: 4
+    subWorld: 1
+    level: 14
+    word: central
+    answers: la|el|en|al|le|te|era|tan|tal|ante|eran|real|arte|carne|central|
+    validWords: la|el|en|al|le|te|era|tan|tal|ante|eran|real|arte|carne|central|cae|eta|caer|cena|crea|tren|entra|letra|renta
+  - world: 4
+    subWorld: 1
+    level: 15
+    word: partido
+    answers: da|ir|ti|por|dar|dio|par|ido|otra|toda|tipo|rato|ropa|radio|partido|
+    validWords: da|ir|ti|por|dar|dio|par|ido|otra|toda|tipo|rato|ropa|radio|partido|ira|dato|paro|tira|tiro|pardo|parto|patio|prado
+  - world: 4
+    subWorld: 1
+    level: 16
+    word: cambios
+    answers: si|mi|os|mis|iba|mas|caso|casi|cosa|cabo|boca|misa|ambos|cambio|cambios|
+    validWords: si|mi|os|mis|iba|mas|caso|casi|cosa|cabo|boca|misa|ambos|cambio|cambios|as|amo|asco|caos|cima|coma|saco|sabio|abismo
+  - world: 4
+    subWorld: 1
+    level: 17
+    word: alguien
+    answers: la|el|en|un|al|le|ni|una|aun|luna|liga|igual|niega|lengua|alguien|
+    validWords: la|el|en|un|al|le|ni|una|aun|luna|liga|igual|niega|lengua|alguien|gen|une|auge|genial
+  - world: 4
+    subWorld: 2
+    level: 0
+    word: "\xFAltimos"
+    answers: "lo|si|mi|t\xFA|ti|os|los|mis|mil|sol|\xFAtil|mito|listo|\xFAltimo|\xFAltimos|"
+    validWords: "lo|si|mi|t\xFA|ti|os|los|mis|mil|sol|\xFAtil|mito|listo|\xFAltimo|\xFAltimos|to|tos|mitos"
+  - world: 4
+    subWorld: 2
+    level: 1
+    word: nuestro
+    answers: en|se|un|no|su|es|te|ser|son|nos|uno|eso|tres|unos|nuestro|
+    validWords: en|se|un|no|su|es|te|ser|son|nos|uno|eso|tres|unos|nuestro|os|tu|sur|tus|uso|esto|tren|norte|resto
+  - world: 4
+    subWorld: 2
+    level: 2
+    word: incluso
+    answers: un|no|su|lo|si|ni|los|con|sin|son|nos|uno|sino|unos|incluso|
+    validWords: un|no|su|lo|si|ni|los|con|sin|son|nos|uno|sino|unos|incluso|os|col|sol|uso|sucio
+  - world: 4
+    subWorld: 2
+    level: 3
+    word: embargo
+    answers: me|era|mar|bar|amo|obra|amor|abre|mera|mero|mora|goma|ramo|broma|embargo|
+    validWords: me|era|mar|bar|amo|obra|amor|abre|mera|mero|mora|goma|ramo|broma|embargo|mago
+  - world: 4
+    subWorld: 2
+    level: 4
+    word: produce
+    answers: de|por|red|pero|creo|pudo|peor|doce|duro|puro|pude|poder|puedo|cuerpo|produce|
+    validWords: de|por|red|pero|creo|pudo|peor|doce|duro|puro|pude|poder|puedo|cuerpo|produce|der|eco|cero|euro|cerdo|crudo|cuero|ruedo
+  - world: 4
+    subWorld: 2
+    level: 5
+    word: nuestra
+    answers: en|se|un|su|es|te|una|ser|era|esa|tan|esta|tres|antes|nuestra|
+    validWords: en|se|un|su|es|te|una|ser|era|esa|tan|esta|tres|antes|nuestra|tu|sea|sur|ante|arte|eran|tras|unas|estar
+  - world: 4
+    subWorld: 2
+    level: 6
+    word: sentido
+    answers: de|en|se|no|es|si|ni|te|sin|son|dos|nos|eso|sido|sentido|
+    validWords: de|en|se|no|es|si|ni|te|sin|son|dos|nos|eso|sido|sentido|ti|dio|don|dios|esto|sino|siendo|tenido|destino
+  - world: 4
+    subWorld: 2
+    level: 7
+    word: aspecto
+    answers: se|es|te|esa|eso|sea|esta|caso|esto|cosa|paso|acto|peso|costa|aspecto|
+    validWords: se|es|te|esa|eso|sea|esta|caso|esto|cosa|paso|acto|peso|costa|aspecto|os|eta|copa|pase|poca|actos|pacto|pocas|poeta
+  - world: 4
+    subWorld: 2
+    level: 8
+    word: "t\xE9rmino"
+    answers: "no|mi|ni|ir|ti|t\xE9|to|tiro|mito|tom\xE9|rito|miro|ritmo|m\xE9rito|t\xE9rmino|"
+    validWords: "no|mi|ni|ir|ti|t\xE9|to|tiro|mito|tom\xE9|rito|miro|ritmo|m\xE9rito|t\xE9rmino|ron|mir\xE9"
+  - world: 4
+    subWorld: 2
+    level: 9
+    word: vecinos
+    answers: en|se|no|es|si|ni|ve|con|sin|son|nos|eso|sino|cine|vecinos|
+    validWords: en|se|no|es|si|ni|ve|con|sin|son|nos|eso|sino|cine|vecinos|os|vi|ven|veo|vio|cien|once|vino|voces
+  - world: 4
+    subWorld: 2
+    level: 10
+    word: humanos
+    answers: un|no|su|ha|una|son|han|nos|uno|uso|unos|mano|unas|manos|humanos|
+    validWords: un|no|su|ha|una|son|han|nos|uno|uso|unos|mano|unas|manos|humanos|ah|os|aun|has|mas|usa|humo|suma|humano
+  - world: 4
+    subWorld: 2
+    level: 11
+    word: mayores
+    answers: se|es|me|ya|yo|ser|era|esa|eso|sea|mes|ayer|amor|mayor|mayores|
+    validWords: se|es|me|ya|yo|ser|era|esa|eso|sea|mes|ayer|amor|mayor|mayores|ay|os|mar|mas|rey|soy|mayo|mesa|rosa
+  - world: 4
+    subWorld: 2
+    level: 12
+    word: pruebas
+    answers: se|su|es|ser|era|esa|sea|sur|pues|sabe|base|pesar|saber|prueba|pruebas|
+    validWords: se|su|es|ser|era|esa|sea|sur|pues|sabe|base|pesar|saber|prueba|pruebas|bar|par|usa|abre|pase|pura|sepa|sube|usar
+  - world: 4
+    subWorld: 2
+    level: 13
+    word: minutos
+    answers: un|no|su|si|mi|ni|tu|sin|son|nos|uno|mis|sino|unos|minutos|
+    validWords: un|no|su|si|mi|ni|tu|sin|son|nos|uno|mis|sino|unos|minutos|os|ti|to|tus|uso|mito|sumo|mitos|minuto
+  - world: 4
+    subWorld: 2
+    level: 14
+    word: "cr\xEDtica"
+    answers: "ir|ti|t\xEDa|ira|cita|rica|tira|ir\xEDa|cr\xEDa|citar|cr\xEDtica|"
+    validWords: "ir|ti|t\xEDa|ira|cita|rica|tira|ir\xEDa|cr\xEDa|citar|cr\xEDtica"
+  - world: 4
+    subWorld: 2
+    level: 15
+    word: espacio
+    answers: se|es|si|esa|eso|sea|pie|caso|casi|cosa|paso|peso|pies|copa|espacio|
+    validWords: se|es|si|esa|eso|sea|pie|caso|casi|cosa|paso|peso|pies|copa|espacio|os|cae|eco|pase|piso|poca|seco|paseo|pocas
+  - world: 4
+    subWorld: 2
+    level: 16
+    word: lugares
+    answers: la|el|se|su|es|al|le|las|ser|era|esa|les|sea|lugar|lugares|
+    validWords: la|el|se|su|es|al|le|las|ser|era|esa|les|sea|lugar|lugares|gas|sal|sur|usa|real|sale|usar|reglas|segura
+  - world: 4
+    subWorld: 2
+    level: 17
+    word: resulta
+    answers: la|el|se|su|es|al|le|te|las|ser|era|esa|esta|tres|resulta|
+    validWords: la|el|se|su|es|al|le|te|las|ser|era|esa|esta|tres|resulta|tu|les|sea|sur|tal|arte|real|tras|estar
+  - world: 4
+    subWorld: 3
+    level: 0
+    word: "podr\xEDan"
+    answers: "no|da|por|d\xEDa|dar|don|r\xEDo|dan|par|pan|ropa|pod\xEDa|podr\xEDa|pod\xEDan|podr\xEDan|"
+    validWords: "no|da|por|d\xEDa|dar|don|r\xEDo|dan|par|pan|ropa|pod\xEDa|podr\xEDa|pod\xEDan|podr\xEDan|o\xED|o\xEDa|o\xEDr|onda|paro|pardo|pon\xEDa|prado|ronda"
+  - world: 4
+    subWorld: 3
+    level: 1
+    word: peligro
+    answers: el|lo|le|ir|por|pie|gol|rol|pero|peor|piel|pelo|giro|golpe|peligro|
+    validWords: el|lo|le|ir|por|pie|gol|rol|pero|peor|piel|pelo|giro|golpe|peligro|leo|rige|riego|ligero
+  - world: 4
+    subWorld: 3
+    level: 2
+    word: "d\xF3lares"
+    answers: "de|la|el|se|es|al|le|del|las|ser|era|esa|les|sea|d\xF3lares|"
+    validWords: "de|la|el|se|es|al|le|del|las|ser|era|esa|les|sea|d\xF3lares|da|dar|red|sal|real|sale|darle|darse|d\xF3lar"
+  - world: 4
+    subWorld: 3
+    level: 3
+    word: segunda
+    answers: de|en|se|un|su|es|da|una|esa|sea|aun|dan|unas|sean|segunda|
+    validWords: de|en|se|un|su|es|da|una|esa|sea|aun|dan|unas|sean|segunda|as|das|den|gas|une|usa|seda|usan|suena
+  - world: 4
+    subWorld: 3
+    level: 4
+    word: hermano
+    answers: en|no|ha|me|he|ah|era|han|mar|mano|eran|hora|amor|menor|hermano|
+    validWords: en|no|ha|me|he|ah|era|han|mar|mano|eran|hora|amor|menor|hermano|eh|oh|amo|ron|mera|mero|mora|ramo|norma
+  - world: 4
+    subWorld: 3
+    level: 5
+    word: hacerlo
+    answers: la|el|al|lo|le|ha|he|era|hace|hora|real|creo|hacer|claro|hacerlo|
+    validWords: la|el|al|lo|le|ha|he|era|hace|hora|real|creo|hacer|claro|hacerlo|ah|cae|arco|caer|cero|cola|crea|roca|calor
+  - world: 4
+    subWorld: 3
+    level: 6
+    word: equipos
+    answers: se|su|es|si|que|eso|uso|pie|pues|peso|puso|pies|quiso|equipo|equipos|
+    validWords: se|su|es|si|que|eso|uso|pie|pues|peso|puso|pies|quiso|equipo|equipos|os|piso|puse|supe|supo|queso|quise
+  - world: 4
+    subWorld: 3
+    level: 7
+    word: revista
+    answers: se|es|si|te|va|ser|era|esa|sea|ver|esta|tres|tras|estar|revista|
+    validWords: se|es|si|te|va|ser|era|esa|sea|ver|esta|tres|tras|estar|revista|ir|ti|ve|vi|aire|arte|aires|vista|evitar
+  - world: 4
+    subWorld: 3
+    level: 8
+    word: "\xFAltimas"
+    answers: "la|al|si|mi|t\xFA|ti|las|tal|mis|mal|mil|isla|lista|\xFAltima|\xFAltimas|"
+    validWords: "la|al|si|mi|t\xFA|ti|las|tal|mis|mal|mil|isla|lista|\xFAltima|\xFAltimas|as|mas|sal|lima|lisa|misa|\xFAtil|sit\xFAa"
+  - world: 4
+    subWorld: 3
+    level: 9
+    word: mercado
+    answers: de|me|da|era|dar|mar|red|creo|amor|doce|caer|madre|marco|comer|mercado|
+    validWords: de|me|da|era|dar|mar|red|creo|amor|doce|caer|madre|marco|comer|mercado|cae|eco|arco|cero|crea|moda|roca|crema|creado
+  - world: 4
+    subWorld: 3
+    level: 10
+    word: valores
+    answers: la|el|se|es|al|lo|le|los|las|ser|era|esa|eso|les|valores|
+    validWords: la|el|se|es|al|lo|le|los|las|ser|era|esa|eso|les|valores|va|ve|sea|sol|ver|real|rosa|sola|valor
+  - world: 4
+    subWorld: 3
+    level: 11
+    word: grandes
+    answers: de|en|se|es|da|ser|era|esa|sea|dar|gran|eran|sangre|grande|grandes|
+    validWords: de|en|se|es|da|ser|era|esa|sea|dar|gran|eran|sangre|grande|grandes|dan|den|gas|red|sean|darse|negar|negra|negras
+  - world: 4
+    subWorld: 3
+    level: 12
+    word: fuerzas
+    answers: se|su|es|fe|ser|fue|era|esa|sea|sur|fase|fuera|frase|fuerza|fuerzas|
+    validWords: se|su|es|fe|ser|fue|era|esa|sea|sur|fase|fuera|frase|fuerza|fuerzas|as|usa|eras|rusa|usar|sufre
+  - world: 4
+    subWorld: 3
+    level: 13
+    word: hubiera
+    answers: ha|he|ir|ah|eh|era|iba|bar|ira|aire|abre|huir|haber|rubia|hubiera|
+    validWords: ha|he|ir|ah|eh|era|iba|bar|ira|aire|abre|huir|haber|rubia|hubiera|hierba
+  - world: 4
+    subWorld: 3
+    level: 14
+    word: autores
+    answers: se|su|es|te|ser|era|esa|eso|sea|esta|otra|tres|esto|otras|autores|
+    validWords: se|su|es|te|ser|era|esa|eso|sea|esta|otra|tres|esto|otras|autores|tu|sur|uso|arte|rosa|tras|autor|estar|resto
+  - world: 4
+    subWorld: 3
+    level: 15
+    word: informe
+    answers: en|no|me|mi|ni|ir|fe|fin|mire|mero|fino|menor|reino|firme|informe|
+    validWords: en|no|me|mi|ni|ir|fe|fin|mire|mero|fino|menor|reino|firme|informe|feo|ron|irme|miro|freno|merino
+  - world: 4
+    subWorld: 3
+    level: 16
+    word: razones
+    answers: en|se|no|es|ser|son|era|nos|esa|eso|sea|eran|zona|sean|razones|
+    validWords: en|se|no|es|ser|son|era|nos|esa|eso|sea|eran|zona|sean|razones|as|os|ron|eras|rosa|sano|seno|sonar|zonas
+  - world: 4
+    subWorld: 3
+    level: 17
+    word: estudio
+    answers: de|se|su|es|si|te|tu|dos|eso|dio|sido|esto|dios|usted|estudio|
+    validWords: de|se|su|es|si|te|tu|dos|eso|dio|sido|esto|dios|usted|estudio|os|ti|to|ido|sed|tos|tus|uso
+  - world: 4
+    subWorld: 4
+    level: 0
+    word: "polic\xEDa"
+    answers: "la|al|lo|o\xED|ola|o\xEDa|p\xEDo|copa|poca|cola|pico|loca|palo|copia|polic\xEDa|"
+    validWords: "la|al|lo|o\xED|ola|o\xEDa|p\xEDo|copa|poca|cola|pico|loca|palo|copia|polic\xEDa|cal|col|l\xEDo"
+  - world: 4
+    subWorld: 4
+    level: 1
+    word: mundial
+    answers: la|un|al|mi|ni|da|una|mal|mil|aun|dan|luna|lima|unida|mundial|
+    validWords: la|un|al|mi|ni|da|una|mal|mil|aun|dan|luna|lima|unida|mundial|ida|mina|linda
+  - world: 4
+    subWorld: 4
+    level: 2
+    word: centros
+    answers: en|se|no|es|te|con|ser|son|nos|eso|tres|esto|creo|centro|centros|
+    validWords: en|se|no|es|te|con|ser|son|nos|eso|tres|esto|creo|centro|centros|os|once|seno|tren|corte|norte|resto|cortes|sector
+  - world: 4
+    subWorld: 4
+    level: 3
+    word: pueblos
+    answers: el|se|su|es|lo|le|los|eso|les|uso|sol|pues|suelo|pueblo|pueblos|
+    validWords: el|se|su|es|lo|le|los|eso|les|uso|sol|pues|suelo|pueblo|pueblos|os|beso|pelo|peso|puse|puso|sube|supe|supo
+  - world: 4
+    subWorld: 4
+    level: 4
+    word: "espa\xF1ol"
+    answers: "la|el|se|es|al|lo|le|los|las|esa|eso|a\xF1o|les|a\xF1os|espa\xF1ol|"
+    validWords: "la|el|se|es|al|lo|le|los|las|esa|eso|a\xF1o|les|a\xF1os|espa\xF1ol|os|sal|sea|sol|paso|pelo|peso|sale|sola"
+  - world: 4
+    subWorld: 4
+    level: 5
+    word: nombres
+    answers: en|se|no|es|me|ser|son|nos|eso|mes|sobre|menos|menor|nombre|nombres|
+    validWords: en|se|no|es|me|ser|son|nos|eso|mes|sobre|menos|menor|nombre|nombres|os|ron|beso|mero|seno
+  - world: 4
+    subWorld: 4
+    level: 6
+    word: "ocasi\xF3n"
+    answers: "no|si|ni|os|con|sin|son|nos|sino|caso|casi|cosa|sac\xF3|naci\xF3|ocasi\xF3n|"
+    validWords: "no|si|ni|os|con|sin|son|nos|sino|caso|casi|cosa|sac\xF3|naci\xF3|ocasi\xF3n|as|asco|cano|caos|cas\xF3|saco|sano|son\xF3|casino"
+  - world: 4
+    subWorld: 4
+    level: 7
+    word: segundo
+    answers: de|en|se|un|no|su|es|son|dos|nos|uno|eso|don|unos|segundo|
+    validWords: de|en|se|un|no|su|es|son|dos|nos|uno|eso|don|unos|segundo|os|den|gen|sed|une|uso|nudo|seno
+  - world: 4
+    subWorld: 4
+    level: 8
+    word: maestro
+    answers: se|es|me|te|ser|era|esa|eso|sea|esta|otra|tres|esto|otras|maestro|
+    validWords: se|es|me|te|ser|era|esa|eso|sea|esta|otra|tres|esto|otras|maestro|mar|mes|amor|arte|mesa|tema|tras|estar|resto
+  - world: 4
+    subWorld: 4
+    level: 9
+    word: durante
+    answers: de|en|un|te|tu|da|una|era|tan|dar|ante|eran|arte|tarde|durante|
+    validWords: de|en|un|te|tu|da|una|era|tan|dar|ante|eran|arte|tarde|durante|aun|dan|eta|red|dura|ruta|tren|entra|rueda
+  - world: 4
+    subWorld: 4
+    level: 10
+    word: "asegur\xF3"
+    answers: "se|su|es|as|ser|era|esa|sea|sur|gas|usa|usar|surge|segura|asegur\xF3|"
+    validWords: "se|su|es|as|ser|era|esa|sea|sur|gas|usa|usar|surge|segura|asegur\xF3|auge|eras|rusa|gruesa"
+  - world: 4
+    subWorld: 4
+    level: 11
+    word: "reuni\xF3n"
+    answers: "en|un|ni|ir|une|uni\xF3|unen|unir|uni\xF3n|reuni\xF3|reuni\xF3n|"
+    validWords: "en|un|ni|ir|une|uni\xF3|unen|unir|uni\xF3n|reuni\xF3|reuni\xF3n"
+  - world: 4
+    subWorld: 4
+    level: 12
+    word: finales
+    answers: la|el|en|se|es|al|le|si|ni|las|sin|esa|les|sea|finales|
+    validWords: la|el|en|se|es|al|le|si|ni|las|sin|esa|les|sea|finales|fe|fin|sal|fase|isla|sale|sean|final|fines
+  - world: 4
+    subWorld: 4
+    level: 13
+    word: "inter\xE9s"
+    answers: "en|se|es|si|ni|te|s\xE9|ir|ti|sin|ser|tres|\xE9ste|est\xE9|inter\xE9s|"
+    validWords: "en|se|es|si|ni|te|s\xE9|ir|ti|sin|ser|tres|\xE9ste|est\xE9|inter\xE9s|t\xE9|\xE9se|irse|ser\xE9|tren|entr\xE9|est\xE9n|tenis|sentir"
+  - world: 4
+    subWorld: 4
+    level: 14
+    word: octubre
+    answers: te|tu|to|eco|creo|cero|reto|tubo|euro|corte|cobre|cuero|cubre|bruto|octubre|
+    validWords: te|tu|to|eco|creo|cero|reto|tubo|euro|corte|cobre|cuero|cubre|bruto|octubre|recto|turco
+  - world: 4
+    subWorld: 4
+    level: 15
+    word: pintura
+    answers: un|ni|tu|ir|ti|una|tan|aun|par|pan|ira|pura|ruta|punta|pintura|
+    validWords: un|ni|tu|ir|ti|una|tan|aun|par|pan|ira|pura|ruta|punta|pintura|tira|unir|pinta|ruina|pintar|rutina
+  - world: 4
+    subWorld: 4
+    level: 16
+    word: algunos
+    answers: la|un|no|su|al|lo|los|las|una|son|nos|uno|unos|algo|algunos|
+    validWords: la|un|no|su|al|lo|los|las|una|son|nos|uno|unos|algo|algunos|os|aun|sal|sol|uso|luna|sola|unas|alguno
+  - world: 4
+    subWorld: 4
+    level: 17
+    word: muestra
+    answers: se|su|es|me|te|tu|ser|era|esa|sea|esta|tres|tras|estar|muestra|
+    validWords: se|su|es|me|te|tu|ser|era|esa|sea|esta|tres|tras|estar|muestra|mar|mes|sur|tus|arte|mesa|tema|temas|martes
+  - world: 5
+    subWorld: 0
+    level: 0
+    word: aumento
+    answers: en|un|no|me|te|tu|una|uno|tan|aun|ante|mano|tema|toma|aumento|
+    validWords: en|un|no|me|te|tu|una|uno|tan|aun|ante|mano|tema|toma|aumento|amo|eta|une|auto|meta|nota|tome|monte|toman
+  - world: 5
+    subWorld: 0
+    level: 1
+    word: tiempos
+    answers: se|es|me|si|mi|te|eso|mis|mes|pie|esto|tipo|peso|tiempo|tiempos|
+    validWords: se|es|me|si|mi|te|eso|mis|mes|pie|esto|tipo|peso|tiempo|tiempos|os|ti|mito|pies|piso|temo|tome|mitos|tipos
+  - world: 5
+    subWorld: 0
+    level: 2
+    word: escrito
+    answers: se|es|si|te|ir|ser|eso|tres|esto|creo|resto|corte|cierto|sector|escrito|
+    validWords: se|es|si|te|ir|ser|eso|tres|esto|creo|resto|corte|cierto|sector|escrito|os|ti|rico|seco|tiro|ricos|serio|cortes|ciertos
+  - world: 5
+    subWorld: 0
+    level: 3
+    word: precios
+    answers: se|es|si|ir|por|ser|eso|pie|pero|creo|peso|peor|pies|precio|precios|
+    validWords: se|es|si|ir|por|ser|eso|pie|pero|creo|peso|peor|pies|precio|precios|os|cero|irse|piso|rico|seco|ricos|serio|preciso
+  - world: 5
+    subWorld: 0
+    level: 4
+    word: guardia
+    answers: da|ir|dar|ira|ida|agua|dura|diga|gira|aguda|guarda|guardia|
+    validWords: da|ir|dar|ira|ida|agua|dura|diga|gira|aguda|guarda|guardia
+  - world: 5
+    subWorld: 0
+    level: 5
+    word: oficial
+    answers: la|al|lo|ola|cal|col|cola|loca|fila|filo|flaco|oficial|
+    validWords: la|al|lo|ola|cal|col|cola|loca|fila|filo|flaco|oficial
+  - world: 5
+    subWorld: 0
+    level: 6
+    word: palabra
+    answers: la|al|par|bar|ala|para|alba|bala|palabra|
+    validWords: la|al|par|bar|ala|para|alba|bala|palabra
+  - world: 5
+    subWorld: 0
+    level: 7
+    word: calidad
+    answers: la|al|da|ida|ala|cal|cada|dada|calidad|
+    validWords: la|al|da|ida|ala|cal|cada|dada|calidad
+  - world: 5
+    subWorld: 0
+    level: 8
+    word: propios
+    answers: si|ir|os|por|oro|oso|piso|propio|propios|
+    validWords: si|ir|os|por|oro|oso|piso|propio|propios
+  - world: 5
+    subWorld: 0
+    level: 9
+    word: ciencia
+    answers: en|ni|cae|cine|cien|cena|nace|caen|ciencia|
+    validWords: en|ni|cae|cine|cien|cena|nace|caen|ciencia
+  - world: 5
+    subWorld: 0
+    level: 10
+    word: europea
+    answers: por|era|par|pero|peor|ropa|paro|pura|puro|euro|opera|europa|europea|
+    validWords: por|era|par|pero|peor|ropa|paro|pura|puro|euro|opera|europa|europea
+  - world: 5
+    subWorld: 0
+    level: 11
+    word: domingo
+    answers: no|mi|ni|don|dio|ido|modo|digo|odio|mono|oigo|digno|domingo|
+    validWords: no|mi|ni|don|dio|ido|modo|digo|odio|mono|oigo|digno|domingo
+  - world: 5
+    subWorld: 0
+    level: 12
+    word: "todav\xEDa"
+    answers: "va|da|o\xED|to|d\xEDa|v\xEDa|t\xEDo|t\xEDa|o\xEDa|toda|dato|data|todav\xEDa|"
+    validWords: "va|da|o\xED|to|d\xEDa|v\xEDa|t\xEDo|t\xEDa|o\xEDa|toda|dato|data|todav\xEDa"
+  - world: 5
+    subWorld: 0
+    level: 13
+    word: podemos
+    answers: de|se|es|me|os|dos|eso|mes|sed|oso|modo|peso|modos|podemos|
+    validWords: de|se|es|me|os|dos|eso|mes|sed|oso|modo|peso|modos|podemos
+  - world: 5
+    subWorld: 0
+    level: 14
+    word: derecho
+    answers: de|he|oh|eh|red|eco|der|creo|cree|doce|cero|cerdo|ceder|derecho|
+    validWords: de|he|oh|eh|red|eco|der|creo|cree|doce|cero|cerdo|ceder|derecho
+  - world: 5
+    subWorld: 0
+    level: 15
+    word: aquello
+    answers: la|el|al|lo|le|que|ola|leo|ella|ello|leal|olla|aquel|aquello|
+    validWords: la|el|al|lo|le|que|ola|leo|ella|ello|leal|olla|aquel|aquello
+  - world: 5
+    subWorld: 0
+    level: 16
+    word: quienes
+    answers: en|se|un|su|es|si|ni|que|sin|ese|une|quien|quise|quienes|
+    validWords: en|se|un|su|es|si|ni|que|sin|ese|une|quien|quise|quienes
+  - world: 5
+    subWorld: 0
+    level: 17
+    word: mejores
+    answers: se|es|me|os|ser|ese|eso|mes|eje|eres|mero|ejes|mejor|mejores|
+    validWords: se|es|me|os|ser|ese|eso|mes|eje|eres|mero|ejes|mejor|mejores
+  - world: 5
+    subWorld: 1
+    level: 0
+    word: "despu\xE9s"
+    answers: "de|se|su|es|s\xE9|d\xE9|sus|\xE9se|sed|pues|pude|supe|puse|despu\xE9s|"
+    validWords: "de|se|su|es|s\xE9|d\xE9|sus|\xE9se|sed|pues|pude|supe|puse|despu\xE9s"
+  - world: 5
+    subWorld: 1
+    level: 1
+    word: popular
+    answers: la|al|lo|por|par|rol|ola|ropa|paro|pura|puro|oral|palo|popular|
+    validWords: la|al|lo|por|par|rol|ola|ropa|paro|pura|puro|oral|palo|popular
+  - world: 5
+    subWorld: 1
+    level: 2
+    word: especie
+    answers: se|es|si|ese|pie|pese|pies|cese|peces|especie|
+    validWords: se|es|si|ese|pie|pese|pies|cese|peces|especie
+  - world: 5
+    subWorld: 1
+    level: 3
+    word: jornada
+    answers: no|da|dar|don|dan|ajo|ron|nada|roja|anda|onda|andar|ronda|jornada|
+    validWords: no|da|dar|don|dan|ajo|ron|nada|roja|anda|onda|andar|ronda|jornada
+  - world: 5
+    subWorld: 1
+    level: 4
+    word: reforma
+    answers: me|fe|era|mar|amo|feo|amor|raro|mera|mero|mora|ramo|forma|formar|reforma|
+    validWords: me|fe|era|mar|amo|feo|amor|raro|mera|mero|mora|ramo|forma|formar|reforma
+  - world: 5
+    subWorld: 1
+    level: 5
+    word: perdido
+    answers: de|ir|por|dio|pie|ido|red|pero|peor|pide|dedo|poder|pedir|pedido|perdido|
+    validWords: de|ir|por|dio|pie|ido|red|pero|peor|pide|dedo|poder|pedir|pedido|perdido|der|pido
+  - world: 5
+    subWorld: 1
+    level: 6
+    word: niveles
+    answers: el|en|se|es|le|si|ni|ve|vi|sin|ese|les|nivel|viene|niveles|
+    validWords: el|en|se|es|le|si|ni|ve|vi|sin|ese|les|nivel|viene|niveles|lee|ven|ves|leve|leves|nieve|nieves
+  - world: 5
+    subWorld: 1
+    level: 7
+    word: trabajo
+    answers: to|bar|ajo|otra|bajo|obra|baja|rato|roja|bata|abajo|bajar|trajo|barato|trabajo|
+    validWords: to|bar|ajo|otra|bajo|obra|baja|rato|roja|bata|abajo|bajar|trajo|barato|trabajo|rota
+  - world: 5
+    subWorld: 1
+    level: 8
+    word: treinta
+    answers: en|ni|te|ir|ti|era|tan|eta|ante|eran|arte|aire|reina|entra|treinta|
+    validWords: en|ni|te|ir|ti|era|tan|eta|ante|eran|arte|aire|reina|entra|treinta|ira|tira|trae|tren|renta|tinta|traen|trate
+  - world: 5
+    subWorld: 1
+    level: 9
+    word: mujeres
+    answers: se|su|es|me|ser|ese|mes|sur|eje|eres|ejes|mujer|muere|resume|mujeres|
+    validWords: se|su|es|me|ser|ese|mes|sur|eje|eres|ejes|mujer|muere|resume|mujeres
+  - world: 5
+    subWorld: 1
+    level: 10
+    word: natural
+    answers: la|un|al|tu|una|tan|tal|aun|alta|luna|ruta|anual|natal|altura|natural|
+    validWords: la|un|al|tu|una|tan|tal|aun|alta|luna|ruta|anual|natal|altura|natural|ala|aula|lana|lata|altar|lunar
+  - world: 5
+    subWorld: 1
+    level: 11
+    word: militar
+    answers: la|al|mi|ir|ti|tal|mal|mil|mar|ira|mira|lima|tira|limita|militar|
+    validWords: la|al|mi|ir|ti|tal|mal|mil|mar|ira|mira|lima|tira|limita|militar|limitar
+  - world: 5
+    subWorld: 1
+    level: 12
+    word: "parec\xEDa"
+    answers: "era|par|cae|r\xEDe|para|cara|caer|crea|capa|cre\xED|ca\xEDa|arce|cre\xEDa|acera|parec\xEDa|"
+    validWords: "era|par|cae|r\xEDe|para|cara|caer|crea|capa|cre\xED|ca\xEDa|arce|cre\xEDa|acera|parec\xEDa|cera|cr\xEDa"
+  - world: 5
+    subWorld: 1
+    level: 13
+    word: consumo
+    answers: un|no|su|os|con|son|nos|uno|uso|oso|como|unos|sumo|mono|consumo|
+    validWords: un|no|su|os|con|son|nos|uno|uso|oso|como|unos|sumo|mono|consumo
+  - world: 5
+    subWorld: 1
+    level: 14
+    word: palacio
+    answers: la|al|lo|ola|copa|poca|cola|capa|pico|loca|palo|copia|placa|aplica|palacio|
+    validWords: la|al|lo|ola|copa|poca|cola|capa|pico|loca|palo|copia|placa|aplica|palacio|ala|cal|col
+  - world: 5
+    subWorld: 1
+    level: 15
+    word: obtener
+    answers: en|no|te|to|tren|reto|ente|entre|tener|norte|enero|tenor|entero|eterno|obtener|
+    validWords: en|no|te|to|tren|reto|ente|entre|tener|norte|enero|tenor|entero|eterno|obtener|ron
+  - world: 5
+    subWorld: 1
+    level: 16
+    word: estados
+    answers: de|se|es|te|dos|esa|eso|esta|esto|toda|estos|todas|estas|estado|estados|
+    validWords: de|se|es|te|dos|esa|eso|esta|esto|toda|estos|todas|estas|estado|estados|da|os|das|eta|sea|dato|esas|esos|datos
+  - world: 5
+    subWorld: 1
+    level: 17
+    word: control
+    answers: no|lo|con|oro|otro|tono|toro|olor|loco|coro|roto|color|torno|corto|control|
+    validWords: no|lo|con|oro|otro|tono|toro|olor|loco|coro|roto|color|torno|corto|control|to|col|rol|ron|trono|tronco
+  - world: 5
+    subWorld: 2
+    level: 0
+    word: sistema
+    answers: se|es|me|si|mi|te|esa|sea|mis|esta|esas|tema|seis|estas|sistema|
+    validWords: se|es|me|si|mi|te|esa|sea|mis|esta|esas|tema|seis|estas|sistema|ti|eta|mas|mes|mesa|meta|temas|tesis|estima
+  - world: 5
+    subWorld: 2
+    level: 1
+    word: primero
+    answers: me|mi|ir|por|pie|pero|peor|mire|morir|perro|primo|primer|premio|romper|primero|
+    validWords: me|mi|ir|por|pie|pero|peor|mire|morir|perro|primo|primer|premio|romper|primero|irme|mero|miro|rompe
+  - world: 5
+    subWorld: 2
+    level: 2
+    word: "mayor\xEDa"
+    answers: "ya|yo|m\xED|ay|mar|r\xEDo|m\xEDo|m\xEDa|o\xEDr|ama|amor|mayo|arma|mayor|mayor\xEDa|"
+    validWords: "ya|yo|m\xED|ay|mar|r\xEDo|m\xEDo|m\xEDa|o\xEDr|ama|amor|mayo|arma|mayor|mayor\xEDa|o\xED|amo|o\xEDa|amar|mora|rama|ramo|rayo|aroma"
+  - world: 5
+    subWorld: 2
+    level: 3
+    word: derecha
+    answers: de|ha|he|da|ah|era|dar|red|cae|hace|cree|caer|crea|hacer|derecha|
+    validWords: de|ha|he|da|ah|era|dar|red|cae|hace|cree|caer|crea|hacer|derecha|eh|der|arce|cera|echa|ceder|echar
+  - world: 5
+    subWorld: 2
+    level: 4
+    word: permite
+    answers: me|mi|te|ir|ti|pie|mire|teme|mete|irme|meter|emite|temer|repite|permite|
+    validWords: me|mi|te|ir|ti|pie|mire|teme|mete|irme|meter|emite|temer|repite|permite
+  - world: 5
+    subWorld: 2
+    level: 5
+    word: capital
+    answers: la|al|ti|tal|ala|alta|cita|capa|acta|tapa|pata|plata|placa|aplica|capital|
+    validWords: la|al|ti|tal|ala|alta|cita|capa|acta|tapa|pata|plata|placa|aplica|capital|cal|lata
+  - world: 5
+    subWorld: 2
+    level: 6
+    word: cambiar
+    answers: mi|ir|iba|mar|bar|ama|cara|mira|cama|rica|arma|marca|miraba|cambia|cambiar|
+    validWords: mi|ir|iba|mar|bar|ama|cara|mira|cama|rica|arma|marca|miraba|cambia|cambiar|ira|amar|cima|rama|rabia
+  - world: 5
+    subWorld: 2
+    level: 7
+    word: proceso
+    answers: se|es|os|por|ser|eso|oro|pero|poco|creo|peso|peor|seco|pocos|proceso|
+    validWords: se|es|os|por|ser|eso|oro|pero|poco|creo|peso|peor|seco|pocos|proceso|eco|oso|cero|coro|preso|crespo|reposo
+  - world: 5
+    subWorld: 2
+    level: 8
+    word: escuela
+    answers: la|el|se|su|es|al|le|las|ese|esa|les|sea|cual|cuales|escuela|
+    validWords: la|el|se|su|es|al|le|las|ese|esa|les|sea|cual|cuales|escuela|cae|lee|sal|usa|sale|seca|clase|luces|suele
+  - world: 5
+    subWorld: 2
+    level: 9
+    word: estaban
+    answers: en|se|es|te|esa|tan|sea|esta|ante|sabe|base|antes|santa|estaba|estaban|
+    validWords: en|se|es|te|esa|tan|sea|esta|ante|sabe|base|antes|santa|estaba|estaban|as|eta|basa|sana|sean|tasa|basta|saben|atenas
+  - world: 5
+    subWorld: 2
+    level: 10
+    word: memoria
+    answers: me|mi|ir|era|mar|amo|ira|amor|aire|mira|mire|mera|mero|mora|memoria|
+    validWords: me|mi|ir|era|mar|amo|ira|amor|aire|mira|mire|mera|mero|mora|memoria|irme|miro|ramo
+  - world: 5
+    subWorld: 2
+    level: 11
+    word: existen
+    answers: en|se|es|si|ni|te|ti|sin|ese|este|tiene|siete|existe|tienes|existen|
+    validWords: en|se|es|si|ni|te|ti|sin|ese|este|tiene|siete|existe|tienes|existen|ente|tenis|siente
+  - world: 5
+    subWorld: 2
+    level: 12
+    word: estamos
+    answers: se|es|me|te|esa|eso|sea|esta|esto|esos|esas|tema|estos|estas|estamos|
+    validWords: se|es|me|te|esa|eso|sea|esta|esto|esos|esas|tema|estos|estas|estamos|os|eta|mas|mes|mesa|meta|toma|mesas|temas
+  - world: 5
+    subWorld: 2
+    level: 13
+    word: efectos
+    answers: se|es|te|fe|os|ese|eso|eco|este|esto|seco|oeste|coste|efecto|efectos|
+    validWords: se|es|te|fe|os|ese|eso|eco|este|esto|seco|oeste|coste|efecto|efectos|to|feo|tos|cese|feto
+  - world: 5
+    subWorld: 2
+    level: 14
+    word: locales
+    answers: la|el|se|es|al|lo|le|los|las|esa|eso|les|ella|caso|locales|
+    validWords: la|el|se|es|al|lo|le|los|las|esa|eso|les|ella|caso|locales|sea|sol|cosa|ello|sola|calle|clase|ellas|ellos
+  - world: 5
+    subWorld: 2
+    level: 15
+    word: fuentes
+    answers: en|se|un|su|es|te|tu|fe|fue|ese|tus|este|fuese|fuente|fuentes|
+    validWords: en|se|un|su|es|te|tu|fe|fue|ese|tus|este|fuese|fuente|fuentes|une|ente|fuesen
+  - world: 5
+    subWorld: 2
+    level: 16
+    word: empresa
+    answers: se|es|me|ser|era|ese|esa|sea|mes|mar|mesa|pese|pesar|espera|empresa|
+    validWords: se|es|me|ser|era|ese|esa|sea|mes|mar|mesa|pese|pesar|espera|empresa|as|mas|par|eres|mera|pase|sepa|pares|presa
+  - world: 5
+    subWorld: 2
+    level: 17
+    word: medidas
+    answers: de|se|es|me|si|mi|da|esa|sea|mis|idea|edad|media|medida|medidas|
+    validWords: de|se|es|me|si|mi|da|esa|sea|mis|idea|edad|media|medida|medidas|as|das|mas|mes|mesa|misa|seda|ideas|medias
+  - world: 5
+    subWorld: 3
+    level: 0
+    word: tenemos
+    answers: en|se|no|es|me|te|son|nos|ese|eso|mes|este|esto|menos|tenemos|
+    validWords: en|se|no|es|me|te|son|nos|ese|eso|mes|este|esto|menos|tenemos|os|ente|seno|teme|tome|mente|monte|oeste|montes
+  - world: 5
+    subWorld: 3
+    level: 1
+    word: gracias
+    answers: si|ir|gas|casa|casi|cara|rica|gira|gris|risa|saca|carga|sacar|gracia|gracias|
+    validWords: si|ir|gas|casa|casi|cara|rica|gira|gris|risa|saca|carga|sacar|gracia|gracias|as|ira|siga|caras|grasa|ricas|cargas
+  - world: 5
+    subWorld: 3
+    level: 2
+    word: asuntos
+    answers: un|no|su|tu|una|sus|son|nos|uno|tan|uso|unos|unas|asunto|asuntos|
+    validWords: un|no|su|tu|una|sus|son|nos|uno|tan|uso|unos|unas|asunto|asuntos|os|aun|tus|usa|auto|nota|notas|santo|santos
+  - world: 5
+    subWorld: 3
+    level: 3
+    word: entrada
+    answers: de|en|te|da|era|tan|dar|dan|red|nada|ante|eran|arte|tarde|entrada|
+    validWords: de|en|te|da|era|tan|dar|dan|red|nada|ante|eran|arte|tarde|entrada|eta|anda|trae|tren|andar|arena|entra|renta|tarea
+  - world: 5
+    subWorld: 3
+    level: 4
+    word: primera
+    answers: me|mi|ir|era|mar|pie|par|ira|aire|mira|mire|mirar|prima|primer|primera|
+    validWords: me|mi|ir|era|mar|pie|par|ira|aire|mira|mire|mirar|prima|primer|primera|irme|mera
+  - world: 5
+    subWorld: 3
+    level: 5
+    word: "per\xEDodo"
+    answers: "de|o\xED|por|r\xEDo|oro|red|o\xEDr|r\xEDe|p\xEDo|pero|peor|o\xEDdo|ped\xED|poder|per\xEDodo|"
+    validWords: "de|o\xED|por|r\xEDo|oro|red|o\xEDr|r\xEDe|p\xEDo|pero|peor|o\xEDdo|ped\xED|poder|per\xEDodo|der"
+  - world: 5
+    subWorld: 3
+    level: 6
+    word: siempre
+    answers: se|es|me|si|mi|ir|ser|ese|mis|mes|pie|pese|pies|serie|siempre|
+    validWords: se|es|me|si|mi|ir|ser|ese|mis|mes|pie|pese|pies|serie|siempre|eres|irme|irse|mire
+  - world: 5
+    subWorld: 3
+    level: 7
+    word: aquella
+    answers: la|el|al|le|que|ala|ella|aula|leal|aquel|aquella|
+    validWords: la|el|al|le|que|ala|ella|aula|leal|aquel|aquella
+  - world: 5
+    subWorld: 3
+    level: 8
+    word: defensa
+    answers: de|en|se|es|da|fe|ese|esa|sea|dan|sean|fase|sede|desea|defensa|
+    validWords: de|en|se|es|da|fe|ese|esa|sea|dan|sean|fase|sede|desea|defensa|as|das|den|sed|seda|andes|senda|desean
+  - world: 5
+    subWorld: 3
+    level: 9
+    word: consejo
+    answers: en|se|no|es|os|con|son|nos|eso|ojo|ojos|once|seno|seco|consejo|
+    validWords: en|se|no|es|os|con|son|nos|eso|ojo|ojos|once|seno|seco|consejo|eco|oso|censo|conejo
+  - world: 5
+    subWorld: 3
+    level: 10
+    word: general
+    answers: la|el|en|al|le|era|lee|gran|eran|real|leer|negra|regla|alegre|general|
+    validWords: la|el|en|al|le|era|lee|gran|eran|real|leer|negra|regla|alegre|general|gen|negar|genera
+  - world: 5
+    subWorld: 3
+    level: 11
+    word: federal
+    answers: de|la|el|al|le|da|fe|del|era|dar|red|real|leer|darle|federal|
+    validWords: de|la|el|al|le|da|fe|del|era|dar|red|real|leer|darle|federal|der|lee
+  - world: 5
+    subWorld: 3
+    level: 12
+    word: "deber\xEDa"
+    answers: "de|da|era|d\xEDa|dar|red|bar|r\xEDe|der|debe|abre|deba|deb\xEDa|deber|deber\xEDa|"
+    validWords: "de|da|era|d\xEDa|dar|red|bar|r\xEDe|der|debe|abre|deba|deb\xEDa|deber|deber\xEDa"
+  - world: 5
+    subWorld: 3
+    level: 13
+    word: iglesia
+    answers: la|el|se|es|al|le|si|las|esa|les|sea|sal|isla|sale|iglesia|
+    validWords: la|el|se|es|al|le|si|las|esa|les|sea|sal|isla|sale|iglesia|as|gas|liga|lisa|siga|ligas
+  - world: 5
+    subWorld: 3
+    level: 14
+    word: algunas
+    answers: la|un|su|al|las|una|aun|sal|agua|unas|sala|luna|aguas|alguna|algunas|
+    validWords: la|un|su|al|las|una|aun|sal|agua|unas|sala|luna|aguas|alguna|algunas|as|gas|usa|alas|gala|gana|usan|anual|ganas
+  - world: 5
+    subWorld: 3
+    level: 15
+    word: llegado
+    answers: de|la|el|al|lo|le|da|del|ella|algo|ello|lado|llega|legal|llegado|
+    validWords: de|la|el|al|lo|le|da|del|ella|algo|ello|lado|llega|legal|llegado|gol|leo|ola|lago|leal|olla|gallo|legado
+  - world: 5
+    subWorld: 3
+    level: 16
+    word: materia
+    answers: me|mi|te|ir|ti|era|mar|eta|tema|arte|aire|mira|tarea|matar|materia|
+    validWords: me|mi|te|ir|ti|era|mar|eta|tema|arte|aire|mira|tarea|matar|materia|ama|ira|arma|mata|meta|mire|rama|trae|trama
+  - world: 5
+    subWorld: 3
+    level: 17
+    word: respeto
+    answers: se|es|te|por|ser|ese|eso|pero|este|tres|esto|peso|pese|resto|respeto|
+    validWords: se|es|te|por|ser|ese|eso|pero|este|tres|esto|peso|pese|resto|respeto|os|eres|peor|reto|oeste|posee|preso|espero|postre
+  - world: 5
+    subWorld: 4
+    level: 0
+    word: tampoco
+    answers: to|amo|como|poco|acto|toma|copa|poca|toca|tomo|coma|moto|campo|pacto|tampoco|
+    validWords: to|amo|como|poco|acto|toma|copa|poca|toca|tomo|coma|moto|campo|pacto|tampoco
+  - world: 5
+    subWorld: 4
+    level: 1
+    word: viernes
+    answers: en|se|es|si|ni|ir|ve|sin|ser|ese|ver|eres|serie|viene|viernes|
+    validWords: en|se|es|si|ni|ir|ve|sin|ser|ese|ver|eres|serie|viene|viernes|vi|ven|ves|irse|nieve|sirve|venir|verse|sirven
+  - world: 5
+    subWorld: 4
+    level: 2
+    word: tratado
+    answers: da|to|dar|otra|toda|rato|dato|data|rota|trata|trato|tratado|
+    validWords: da|to|dar|otra|toda|rato|dato|data|rota|trata|trato|tratado
+  - world: 5
+    subWorld: 4
+    level: 3
+    word: aparece
+    answers: era|par|cae|para|cara|cree|caer|crea|capa|arce|cera|acera|parece|aparece|
+    validWords: era|par|cae|para|cara|cree|caer|crea|capa|arce|cera|acera|parece|aparece
+  - world: 5
+    subWorld: 4
+    level: 4
+    word: llevaba
+    answers: la|el|al|le|va|ve|vea|ella|vale|alba|lleva|valle|bella|llave|llevaba|
+    validWords: la|el|al|le|va|ve|vea|ella|vale|alba|lleva|valle|bella|llave|llevaba|ala|ave|bala|leal|vela
+  - world: 5
+    subWorld: 4
+    level: 5
+    word: pesetas
+    answers: se|es|te|ese|esa|sea|eta|este|esta|esas|pese|pase|sepa|estas|pesetas|
+    validWords: se|es|te|ese|esa|sea|eta|este|esta|esas|pese|pase|sepa|estas|pesetas|as|pesa|seas|peste|espesa|peseta
+  - world: 5
+    subWorld: 4
+    level: 6
+    word: momento
+    answers: en|no|me|te|to|tono|tome|tomo|mono|temo|moto|monte|monto|tomen|momento|
+    validWords: en|no|me|te|to|tono|tome|tomo|mono|temo|moto|monte|monto|tomen|momento
+  - world: 5
+    subWorld: 4
+    level: 7
+    word: familia
+    answers: la|al|mi|mal|mil|ama|ala|alma|mala|lima|fama|film|fila|alfa|familia|
+    validWords: la|al|mi|mal|mil|ama|ala|alma|mala|lima|fama|film|fila|alfa|familia|mafia
+  - world: 5
+    subWorld: 4
+    level: 8
+    word: esperar
+    answers: se|es|ser|era|ese|esa|sea|par|pese|eres|pase|sepa|pesar|espera|esperar|
+    validWords: se|es|ser|era|ese|esa|sea|par|pese|eres|pase|sepa|pesar|espera|esperar|as|eras|pesa|pares|presa
+  - world: 5
+    subWorld: 4
+    level: 9
+    word: llamado
+    answers: la|al|lo|da|mal|ama|amo|lado|alma|mala|moda|malo|dama|llama|llamado|
+    validWords: la|al|lo|da|mal|ama|amo|lado|alma|mala|moda|malo|dama|llama|llamado|ala|ola|olla|amado|llamo
+  - world: 5
+    subWorld: 4
+    level: 10
+    word: tercera
+    answers: te|era|eta|cae|arte|cree|caer|crea|trae|crear|creer|trece|recta|tercer|tercera|
+    validWords: te|era|eta|cae|arte|cree|caer|crea|trae|crear|creer|trece|recta|tercer|tercera|arce|cera|traer|receta
+  - world: 5
+    subWorld: 4
+    level: 11
+    word: conocer
+    answers: en|no|con|oro|eco|ron|creo|once|cero|coro|coco|cerco|cocer|conoce|conocer|
+    validWords: en|no|con|oro|eco|ron|creo|once|cero|coro|coco|cerco|cocer|conoce|conocer
+  - world: 5
+    subWorld: 4
+    level: 12
+    word: demanda
+    answers: de|en|me|da|dan|ama|den|nada|edad|dada|anda|dama|dame|manda|demanda|
+    validWords: de|en|me|da|dan|ama|den|nada|edad|dada|anda|dama|dame|manda|demanda
+  - world: 5
+    subWorld: 4
+    level: 13
+    word: alcalde
+    answers: de|la|el|al|le|da|del|cae|ala|cada|ella|calle|celda|aldea|alcalde|
+    validWords: de|la|el|al|le|da|del|cae|ala|cada|ella|calle|celda|aldea|alcalde|cal|leal|calla
+  - world: 5
+    subWorld: 4
+    level: 14
+    word: semanas
+    answers: en|se|es|me|esa|sea|mes|mas|esas|mesa|sean|masa|masas|semana|semanas|
+    validWords: en|se|es|me|esa|sea|mes|mas|esas|mesa|sean|masa|masas|semana|semanas|as|ama|asma|sana|seas|mesas
+  - world: 5
+    subWorld: 4
+    level: 15
+    word: terreno
+    answers: en|no|te|tren|reto|ente|entre|tener|norte|enero|torre|tenor|entero|eterno|terreno|
+    validWords: en|no|te|tren|reto|ente|entre|tener|norte|enero|torre|tenor|entero|eterno|terreno|to|ron
+  - world: 5
+    subWorld: 4
+    level: 16
+    word: carrera
+    answers: era|cae|cara|caer|crea|rara|arce|cera|crear|acera|cerrar|carrera|
+    validWords: era|cae|cara|caer|crea|rara|arce|cera|crear|acera|cerrar|carrera
+  - world: 5
+    subWorld: 4
+    level: 17
+    word: llamada
+    answers: la|al|da|mal|ama|ala|alma|mala|dama|llama|amada|llamada|
+    validWords: la|al|da|mal|ama|ala|alma|mala|dama|llama|amada|llamada

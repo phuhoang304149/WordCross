@@ -39,12 +39,41 @@ namespace Superpow
             return score;
         }
 
+        // Locale khác ngôn ngữ chơi mặc định: pack theo locale và GameLevel dựng runtime, cache để mỗi (locale, world, sub, level) luôn cùng một instance.
+        private static readonly Dictionary<string, LocaleLevelPack> packs = new Dictionary<string, LocaleLevelPack>();
+        private static readonly Dictionary<string, GameLevel> packLevels = new Dictionary<string, GameLevel>();
+
         public static GameLevel Load(int world, int subWorld, int level)
         {
             if (level < 0 || level >= GetNumLevels(world, subWorld)) return null;
             var loc = Script.Utils.Locator<WordCross.Gameplay.LocalizationController>.Instance;
-            var folder = loc == null ? "Levels" : loc.LevelFolder;
-            return CatGaming.Clr.ClrContent.Instance.Load<GameLevel>(folder + "/World_" + world + "/SubWorld_" + subWorld + "/Level_" + level);
+            if (loc == null || loc.GameLanguage == loc.DefaultGameLanguage)
+                return CatGaming.Clr.ClrContent.Instance.Load<GameLevel>("Levels/World_" + world + "/SubWorld_" + subWorld + "/Level_" + level);
+
+            var lang = loc.GameLanguage;
+            var key = lang + "/" + world + "/" + subWorld + "/" + level;
+            GameLevel gameLevel;
+            if (packLevels.TryGetValue(key, out gameLevel)) return gameLevel;
+
+            LocaleLevelPack pack;
+            if (!packs.TryGetValue(lang, out pack))
+            {
+                pack = CatGaming.Clr.ClrContent.Instance.Load<LocaleLevelPack>(loc.LevelFolder + "/Pack");
+                packs[lang] = pack;
+            }
+            if (pack == null) return null;
+
+            foreach (var entry in pack.entries)
+            {
+                if (entry.world != world || entry.subWorld != subWorld || entry.level != level) continue;
+                gameLevel = ScriptableObject.CreateInstance<GameLevel>();
+                gameLevel.word = entry.word;
+                gameLevel.answers = entry.answers;
+                gameLevel.validWords = entry.validWords;
+                packLevels[key] = gameLevel;
+                return gameLevel;
+            }
+            return null;
         }
     }
 }
