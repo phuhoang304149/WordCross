@@ -174,6 +174,28 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 <textarea placeholder="Tình trạng giấy phép; ngôn ngữ nào mở trước"></textarea>
 </div>
 
+<div class="item" data-id="leveldata-review">
+<h3>Kết quả lọc từ level vi/fr/es/pt <span class="tag">T111 · bản ngữ</span></h3>
+<p>Đã loại: vi 865, fr 40, es 175, pt 135 từ (viết tắt, tên riêng, từ ngoại, tục, âm tiết không đứng một mình…). Bảng đầy đủ: <a href="GD/data/review-removed.md">GD/data/review-removed.md</a>; blocklist ở <code>GD/data/blocklist/</code>. vi vẫn giữ hơn 1600 âm tiết để đủ 534 level (chỉ 1 seed 7 chữ, 67 seed 6 chữ) — cần người bản ngữ xem, vd “tao”, “tận”.</p>
+<textarea placeholder="Từ cần loại thêm / khôi phục"></textarea>
+</div>
+
+<div class="item" data-id="old-spelling">
+<h3>Chính tả cũ trong level fr/pt <span class="tag">T111</span></h3>
+<p>fr đang có “coeur/oeil/soeur” (viết oe thay cho œ); pt có “actor/acção/óptimo” (chính tả trước cải cách 1990).</p>
+<label class="opt"><input type="radio" name="old-spelling" value="giu">Giữ</label>
+<label class="opt"><input type="radio" name="old-spelling" value="loai">Loại khỏi level</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
+<div class="item" data-id="daily-lang">
+<h3>Daily và tiến độ Daily tách theo ngôn ngữ chơi <span class="tag">T111</span></h3>
+<p>Đang làm: mỗi ngôn ngữ chơi có bàn Daily và trạng thái “đã xong” riêng. Nếu dùng chung, người chơi vi/fr sẽ thấy “đã xong” dù chưa chơi ở ngôn ngữ đó.</p>
+<label class="opt"><input type="radio" name="daily-lang" value="rieng">Tách theo ngôn ngữ (hiện tại)</label>
+<label class="opt"><input type="radio" name="daily-lang" value="chung">Dùng chung</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
 <h2>3. Phát hành &amp; tài khoản</h2>
 
 <div class="item" data-id="keystore">
