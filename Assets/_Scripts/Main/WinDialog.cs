@@ -26,7 +26,6 @@ public class WinDialog : Dialog {
     public int videoCooldown = 120;
 
     private const string VIDEO_ACTION = "rewarded_video";
-    private const float VIDEO_PENDING_TIMEOUT = 120f;
 
     private LocalizationController Loc { get { return Locator<LocalizationController>.Instance; } }
 
@@ -35,7 +34,7 @@ public class WinDialog : Dialog {
     private int world, subWorld, level;
     private int reward;
     private bool bonusClaimed, bonusPending;
-    private float bonusPendingUntil;
+    private bool started, navigating;
 
     protected override void Start()
     {
@@ -44,13 +43,41 @@ public class WinDialog : Dialog {
         CheckUnlock();
         ShowRewardInfo();
 
-        if (AdmobController.instance != null) AdmobController.instance.onRewardedVideoRewarded += OnRewardedVideoRewarded;
+        if (AdmobController.instance != null)
+        {
+            AdmobController.instance.onRewardedVideoRewarded += OnRewardedVideoRewarded;
+            AdmobController.instance.onRewardedVideoClosed += OnRewardedVideoEnded;
+            AdmobController.instance.onRewardedVideoFailed += OnRewardedVideoEnded;
+        }
         if (reward > 0) InvokeRepeating("RefreshDoubleReward", 0f, 1f);
+        started = true;
+    }
+
+    // Dialog bị STACK (Success của video) rồi hiện lại: Invoke bị huỷ khi tắt và animator về trạng thái đầu.
+    private void OnEnable()
+    {
+        if (!started) return;
+        ShowTitle();
+        if (reward > 0) InvokeRepeating("RefreshDoubleReward", 0f, 1f);
+    }
+
+    // Hiện lại từ STACK không bật lại interstitial (người chơi vừa xem xong quảng cáo thưởng).
+    public override void Show()
+    {
+        bool ad = enableAd;
+        if (started) enableAd = false;
+        base.Show();
+        enableAd = ad;
     }
 
     private void OnDestroy()
     {
-        if (AdmobController.instance != null) AdmobController.instance.onRewardedVideoRewarded -= OnRewardedVideoRewarded;
+        if (AdmobController.instance != null)
+        {
+            AdmobController.instance.onRewardedVideoRewarded -= OnRewardedVideoRewarded;
+            AdmobController.instance.onRewardedVideoClosed -= OnRewardedVideoEnded;
+            AdmobController.instance.onRewardedVideoFailed -= OnRewardedVideoEnded;
+        }
     }
 
     private void ShowTitle()
@@ -72,7 +99,6 @@ public class WinDialog : Dialog {
         {
             bool isTutorial = world == 0 && subWorld == 0 && level == 0;
             reward = isTutorial ? firstClearTutorialReward : firstClearReward;
-            CurrencyController.CreditBalance(reward);
         }
 
         GameState.currentLevel = (level + 1) % numLevels;
@@ -90,9 +116,15 @@ public class WinDialog : Dialog {
             Prefs.unlockedWorld = GameState.currentWorld;
             Prefs.unlockedSubWorld = GameState.currentSubWorld;
             Prefs.unlockedLevel = GameState.currentLevel;
+            // Lưu tiến độ trước khi cộng thưởng để thưởng không bị nhận lại nếu app chết giữa chừng.
+            CPlayerPrefs.Save();
+            CurrencyController.CreditBalance(reward);
 
-            int score = Superpow.Utils.GetLeaderboardScore();
-            GPGSController.instance.ReportScore(score);
+            if (GPGSController.instance != null)
+            {
+                int score = Superpow.Utils.GetLeaderboardScore();
+                GPGSController.instance.ReportScore(score);
+            }
         }
     }
 
@@ -152,8 +184,6 @@ public class WinDialog : Dialog {
             return;
         }
 
-        if (bonusPending && Time.unscaledTime > bonusPendingUntil) bonusPending = false;
-
         if (IsVideoCooldown())
         {
             int remain = Mathf.Max(0, (int)(GetVideoPeriod() - CUtils.GetActionDeltaTime(VIDEO_ACTION)));
@@ -177,7 +207,6 @@ public class WinDialog : Dialog {
         if (reward <= 0 || bonusClaimed || bonusPending || IsVideoCooldown() || !IsVideoLoaded()) return;
 
         bonusPending = true;
-        bonusPendingUntil = Time.unscaledTime + VIDEO_PENDING_TIMEOUT;
         doubleRewardButton.interactable = false;
         Sound.instance.PlayButton();
         AdmobController.instance.ShowRewardBasedVideo();
@@ -195,8 +224,18 @@ public class WinDialog : Dialog {
         RefreshDoubleReward();
     }
 
+    // Video đóng sớm hoặc lỗi (không có thưởng): mở khoá lại nút x2.
+    private void OnRewardedVideoEnded()
+    {
+        if (!bonusPending) return;
+        bonusPending = false;
+        RefreshDoubleReward();
+    }
+
     public void NextClick()
     {
+        if (navigating) return;
+        navigating = true;
         Close();
         Sound.instance.PlayButton();
 
@@ -205,6 +244,8 @@ public class WinDialog : Dialog {
 
     public void MenuClick()
     {
+        if (navigating) return;
+        navigating = true;
         Close();
         Sound.instance.PlayButton();
         CUtils.LoadScene(level == numLevels - 1 ? 1 : 2, true);
