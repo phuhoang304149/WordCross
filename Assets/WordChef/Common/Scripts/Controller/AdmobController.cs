@@ -16,6 +16,15 @@ public class AdmobController : MonoBehaviour
     // Gọi khi người chơi xem xong rewarded video.
     public event Action onRewardedVideoRewarded;
 
+    // Gọi khi người chơi đóng rewarded video sớm (không thưởng) hoặc video không phát được.
+    public event Action onRewardedVideoClosed;
+    public event Action onRewardedVideoFailed;
+
+    private const string REWARDED_ACTION = "rewarded_video";
+
+    // true trong lúc gọi CatGamingAds.ShowRewarded: callback(false) đến ngay trong lệnh gọi nghĩa là không phát được, không phải đóng sớm.
+    private bool isShowingRewarded;
+
     // Chỉ true sau khi consent + MobileAds.Initialize xong; mọi request ads trước đó bị bỏ qua
     // để AdmobService không tự Initialize sớm (trước consent/GameDatabase) và đọc ad unit ID rỗng.
     private bool isAdsReady;
@@ -116,23 +125,41 @@ public class AdmobController : MonoBehaviour
 #endif
     }
 
+    public bool IsOnline()
+    {
+        return Application.internetReachability != NetworkReachability.NotReachable;
+    }
+
+    // Số giây còn lại của cooldown giữa hai lần xem rewarded video (0 = xem được).
+    public int GetRewardedCooldownRemain()
+    {
+        if (!CPlayerPrefs.HasKey(REWARDED_ACTION + "_time")) return 0;
+        int remain = (int)(ConfigController.Config.rewardedVideoPeriod - CUtils.GetActionDeltaTime(REWARDED_ACTION));
+        return Mathf.Max(0, remain);
+    }
+
     public void ShowRewardBasedVideo()
     {
         if (!IsRewardedVideoLoaded())
         {
             print("Reward based video ad is not ready yet");
             RequestRewardBasedVideo();
+            if (onRewardedVideoFailed != null) onRewardedVideoFailed();
             return;
         }
 
 #if CATGAMING_ADS && CATGAMING_ADMOB
-        CatGamingAds.ShowRewarded(OnRewardedCompleted);
+        isShowingRewarded = true;
+        bool started = CatGamingAds.ShowRewarded(OnRewardedCompleted);
+        isShowingRewarded = false;
+        if (!started && onRewardedVideoFailed != null) onRewardedVideoFailed();
 #endif
     }
 
     private void OnRewardedCompleted(bool rewarded)
     {
         if (rewarded) HandleRewardBasedVideoRewarded();
+        else if (!isShowingRewarded && onRewardedVideoClosed != null) onRewardedVideoClosed();
     }
 
     public void HandleRewardBasedVideoRewarded()
