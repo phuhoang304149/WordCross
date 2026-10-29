@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 222633152739484344}
   - component: {fileID: 114044223406103680}
   - component: {fileID: 114594320241609986}
+  - component: {fileID: 1287924335}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -60,6 +61,7 @@ GameObject:
   - component: {fileID: 222525261005972790}
   - component: {fileID: 114719923787711190}
   - component: {fileID: 114928953360148812}
+  - component: {fileID: 1548023487}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -151,6 +153,7 @@ GameObject:
   - component: {fileID: 222219395265826306}
   - component: {fileID: 114908364896955066}
   - component: {fileID: 114682762693744248}
+  - component: {fileID: 2075398496}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1135,6 +1138,7 @@ GameObject:
   - component: {fileID: 7400000000000031}
   - component: {fileID: 7400000000000032}
   - component: {fileID: 7400000000000033}
+  - component: {fileID: 1778699985}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -1199,3 +1203,55 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: ENJOYING THE GAME?
+--- !u!114 &2075398496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918918093215438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: rate.later
+  args: []
+--- !u!114 &1287924335
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1201675175967156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: rate.yes
+  args: []
+--- !u!114 &1548023487
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1244900769839486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: rate.desc
+  args: []
+--- !u!114 &1778699985
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 7400000000000030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: rate.title
+  args: []

@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 222397156420768926}
   - component: {fileID: 114203877500616894}
   - component: {fileID: 114453297828794046}
+  - component: {fileID: 1433911124}
   m_Layer: 5
   m_Name: Text (2)
   m_TagString: Untagged
@@ -165,6 +166,7 @@ GameObject:
   - component: {fileID: 222518210862718662}
   - component: {fileID: 114676877311238994}
   - component: {fileID: 114246384403361114}
+  - component: {fileID: 2086571732}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -218,6 +220,7 @@ GameObject:
   - component: {fileID: 222476118141866074}
   - component: {fileID: 114997709815910202}
   - component: {fileID: 114455864639844308}
+  - component: {fileID: 1419572126}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -305,6 +308,7 @@ GameObject:
   - component: {fileID: 224065340863659150}
   - component: {fileID: 222256071214487908}
   - component: {fileID: 7500000000000101}
+  - component: {fileID: 1224487154}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -409,6 +413,7 @@ GameObject:
   - component: {fileID: 222490228797597416}
   - component: {fileID: 114865553922598642}
   - component: {fileID: 114164463338879278}
+  - component: {fileID: 1944294787}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -588,6 +593,7 @@ GameObject:
   - component: {fileID: 222055154717631538}
   - component: {fileID: 114390485805925270}
   - component: {fileID: 114176086067495466}
+  - component: {fileID: 1426864890}
   m_Layer: 5
   m_Name: Text (3)
   m_TagString: Untagged
@@ -678,6 +684,7 @@ GameObject:
   - component: {fileID: 222673551966274254}
   - component: {fileID: 114501544315903588}
   - component: {fileID: 114246353175151342}
+  - component: {fileID: 2123455014}
   m_Layer: 5
   m_Name: Text (3)
   m_TagString: Untagged
@@ -714,6 +721,7 @@ GameObject:
   - component: {fileID: 222281044799115782}
   - component: {fileID: 114762727146033790}
   - component: {fileID: 114811842012413928}
+  - component: {fileID: 1850863377}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -2463,6 +2471,7 @@ MonoBehaviour:
   content: {fileID: 1452198758208436}
   adAvailableTextHolder: {fileID: 1723681978521308}
   timerText: {fileID: 114573056548458534}
+  readyText: {fileID: 1181744537}
 --- !u!114 &114972589743663446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3807,6 +3816,7 @@ GameObject:
   - component: {fileID: 7500000000000111}
   - component: {fileID: 7500000000000112}
   - component: {fileID: 7500000000000113}
+  - component: {fileID: 1524831919}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -3881,6 +3891,7 @@ GameObject:
   - component: {fileID: 7500000000000115}
   - component: {fileID: 7500000000000116}
   - component: {fileID: 7500000000000117}
+  - component: {fileID: 1181744537}
   m_Layer: 5
   m_Name: Sub
   m_TagString: Untagged
@@ -4041,6 +4052,7 @@ GameObject:
   - component: {fileID: 7500000000000124}
   - component: {fileID: 7500000000000125}
   - component: {fileID: 7500000000000126}
+  - component: {fileID: 1671325977}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4255,6 +4267,7 @@ GameObject:
   - component: {fileID: 7500000000000136}
   - component: {fileID: 7500000000000137}
   - component: {fileID: 7500000000000138}
+  - component: {fileID: 1601396479}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -4739,3 +4752,171 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 0.408
+--- !u!114 &1224487154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1303517773693158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: shop.title
+  args: []
+--- !u!114 &1524831919
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 7500000000000110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: shop.free
+  args: []
+--- !u!114 &1181744537
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 7500000000000114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: shop.ready
+  args:
+  - name: n
+    value: "2"
+--- !u!114 &1671325977
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 7500000000000123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: shop.watch
+  args: []
+--- !u!114 &1601396479
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 7500000000000135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: shop.free
+  args: []
+--- !u!114 &1419572126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1156710530429532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: shop.adIn
+  args: []
+--- !u!114 &1944294787
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1505566475228322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: shop.pack
+  args:
+  - name: n
+    value: "50"
+--- !u!114 &1850863377
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989779220732856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: shop.pack
+  args:
+  - name: n
+    value: "110"
+--- !u!114 &1433911124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120577876886284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: shop.pack
+  args:
+  - name: n
+    value: "250"
+--- !u!114 &1426864890
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808867864289624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: shop.pack
+  args:
+  - name: n
+    value: "450"
+--- !u!114 &2123455014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918917793678160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: shop.pack
+  args:
+  - name: n
+    value: "1100"
+--- !u!114 &2086571732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123443921224916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: shop.adsNote
+  args: []

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Script.Utils;
+using WordCross.Gameplay;
 
 // Trạng thái popup rewarded video (design: popups.rewarded / WC.rv).
 public enum RewardedVideoState
@@ -40,28 +42,7 @@ public class RewardedVideoDialog : Dialog {
     // Thời gian chờ video tải trước khi coi là hết quảng cáo.
     public float loadTimeout = 8f;
 
-    private const string TEXT_READY_TITLE = "WATCH A VIDEO";
-    private const string TEXT_READY_DESC = "Watch the whole video to get";
-    private const string TEXT_LOADING = "Loading video...";
-    private const string TEXT_LOADING_DESC = "You can keep playing while it loads.";
-    private const string TEXT_COOLDOWN = "Next video in {0}";
-    private const string TEXT_COOLDOWN_DESC = "Nothing lost. Come back soon.";
-    private const string TEXT_NOFILL = "No video available right now";
-    private const string TEXT_NOFILL_DESC = "No rubies charged, no reward. Try later.";
-    private const string TEXT_OFFLINE = "You're offline";
-    private const string TEXT_OFFLINE_DESC = "Video rubies need internet. Play continues normally.";
-    private const string TEXT_PLAYING = "VIDEO PLAYING";
-    private const string TEXT_PLAYING_DESC = "Watch to the end to get {0} rubies.";
-    private const string TEXT_SUCCESS = "REWARD EARNED!";
-    private const string TEXT_SUCCESS_DESC = "{0} rubies added.";
-    private const string TEXT_CANCEL = "Closed early";
-    private const string TEXT_CANCEL_DESC = "No reward and no rubies charged.";
-    private const string TEXT_ERROR = "Video failed to play";
-    private const string TEXT_BTN_WATCH = "WATCH VIDEO";
-    private const string TEXT_BTN_NO = "NO, THANKS";
-    private const string TEXT_BTN_RETRY = "TRY AGAIN";
-    private const string TEXT_BTN_OK = "OK";
-    private const string TEXT_BTN_CONTINUE = "CONTINUE";
+    private LocalizationController Loc { get { return Locator<LocalizationController>.Instance; } }
 
     private static readonly Color TEAL = new Color(0.071f, 0.710f, 0.651f, 1f);
     private static readonly Color TEAL_DEEP = new Color(0.043f, 0.549f, 0.502f, 1f);
@@ -243,40 +224,40 @@ public class RewardedVideoDialog : Dialog {
         switch (state)
         {
             case RewardedVideoState.Ready:
-                title = TEXT_READY_TITLE; desc = TEXT_READY_DESC; showAmount = true;
-                primary = TEXT_BTN_WATCH; primaryCoral = true; secondary = TEXT_BTN_NO;
+                title = Loc.Get("rv.title"); desc = Loc.Get("rv.value"); showAmount = true;
+                primary = Loc.Get("rv.watch"); primaryCoral = true; secondary = Loc.Get("rv.no");
                 break;
             case RewardedVideoState.Loading:
-                title = TEXT_LOADING; desc = TEXT_LOADING_DESC; showSpinner = true;
-                primary = TEXT_BTN_OK;
+                title = Loc.Get("rv.s.loading"); desc = Loc.Get("rv.d.loading"); showSpinner = true;
+                primary = Loc.Get("common.ok");
                 break;
             case RewardedVideoState.Cooldown:
                 int remain = AdmobController.instance != null ? AdmobController.instance.GetRewardedCooldownRemain() : 0;
-                title = string.Format(TEXT_COOLDOWN, string.Format("{0:00}:{1:00}", remain / 60, remain % 60)); desc = TEXT_COOLDOWN_DESC;
-                primary = TEXT_BTN_OK;
+                title = Loc.Get("rv.s.cooldown", "t", string.Format("{0:00}:{1:00}", remain / 60, remain % 60)); desc = Loc.Get("rv.d.cooldown");
+                primary = Loc.Get("common.ok");
                 break;
             case RewardedVideoState.NoFill:
-                title = TEXT_NOFILL; desc = TEXT_NOFILL_DESC;
-                primary = TEXT_BTN_OK;
+                title = Loc.Get("rv.s.nofill"); desc = Loc.Get("rv.d.nofill");
+                primary = Loc.Get("common.ok");
                 break;
             case RewardedVideoState.Offline:
-                title = TEXT_OFFLINE; desc = TEXT_OFFLINE_DESC;
-                primary = TEXT_BTN_OK;
+                title = Loc.Get("rv.s.offline"); desc = Loc.Get("rv.d.offline");
+                primary = Loc.Get("common.ok");
                 break;
             case RewardedVideoState.Playing:
-                title = TEXT_PLAYING; desc = string.Format(TEXT_PLAYING_DESC, amount); showAdBox = true;
+                title = Loc.Get("rv.s.playingReal"); desc = Loc.Get("rv.d.playingReal", "n", amount); showAdBox = true;
                 break;
             case RewardedVideoState.Success:
-                title = TEXT_SUCCESS; desc = string.Format(TEXT_SUCCESS_DESC, amount); showAmount = true;
-                primary = TEXT_BTN_CONTINUE;
+                title = Loc.Get("rv.s.success"); desc = Loc.Get("rv.d.success", "n", amount); showAmount = true;
+                primary = Loc.Get("common.continue");
                 break;
             case RewardedVideoState.Cancel:
-                title = TEXT_CANCEL; desc = TEXT_CANCEL_DESC;
-                primary = TEXT_BTN_RETRY; primaryCoral = true; secondary = TEXT_BTN_OK;
+                title = Loc.Get("rv.s.cancel"); desc = Loc.Get("rv.d.cancel");
+                primary = Loc.Get("common.retry"); primaryCoral = true; secondary = Loc.Get("common.ok");
                 break;
             case RewardedVideoState.Error:
-                title = TEXT_ERROR; desc = TEXT_CANCEL_DESC;
-                primary = TEXT_BTN_RETRY; primaryCoral = true; secondary = TEXT_BTN_OK;
+                title = Loc.Get("rv.s.error"); desc = Loc.Get("rv.d.error");
+                primary = Loc.Get("common.retry"); primaryCoral = true; secondary = Loc.Get("common.ok");
                 break;
         }
 
@@ -285,7 +266,7 @@ public class RewardedVideoDialog : Dialog {
         amountHolder.gameObject.SetActive(showAmount);
         spinner.gameObject.SetActive(showSpinner);
         adBox.gameObject.SetActive(showAdBox);
-        adBoxText.text = TEXT_PLAYING;
+        adBoxText.text = Loc.Get("rv.s.playingReal");
 
         primaryButton.gameObject.SetActive(primary != null);
         if (primary != null)

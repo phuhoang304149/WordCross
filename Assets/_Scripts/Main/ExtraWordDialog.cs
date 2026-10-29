@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Script.Utils;
+using WordCross.Gameplay;
 
 public class ExtraWordDialog : Dialog
 {
@@ -12,6 +14,7 @@ public class ExtraWordDialog : Dialog
     public Text claimText;
 
     private int numWords, claimQuantity;
+    private LocalizationController Loc { get { return Locator<LocalizationController>.Instance; } }
 
     protected override void Start()
     {
@@ -69,7 +72,7 @@ public class ExtraWordDialog : Dialog
         claimButton.GetComponent<Button>().interactable = ready;
         claimButton.GetComponent<Image>().color = ready ? new Color(0.0706f, 0.7098f, 0.651f) : new Color(0.8118f, 0.8627f, 0.8627f);
         claimButton.GetComponent<Shadow>().effectColor = ready ? new Color(0.0431f, 0.549f, 0.502f) : new Color(0.7098f, 0.7725f, 0.7725f);
-        claimText.text = "CLAIM +" + GetClaimQuantity() + " RUBIES";
+        claimText.text = Loc.Get("extra.claim", "n", GetClaimQuantity());
         progressText.text = extraProgress.current + "/" + extraProgress.target;
     }
 

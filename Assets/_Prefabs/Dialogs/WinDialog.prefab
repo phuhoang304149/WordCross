@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 222874751667662990}
   - component: {fileID: 114051923984004092}
   - component: {fileID: 95635368815019988}
+  - component: {fileID: 1261907702}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -2011,6 +2012,7 @@ GameObject:
   - component: {fileID: 7600000000066}
   - component: {fileID: 7600000000067}
   - component: {fileID: 7600000000068}
+  - component: {fileID: 1216418944}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2169,6 +2171,7 @@ GameObject:
   - component: {fileID: 7600000000074}
   - component: {fileID: 7600000000075}
   - component: {fileID: 7600000000076}
+  - component: {fileID: 1400378756}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2402,3 +2405,42 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1261907702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1351504690762236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: win.title
+  args: []
+--- !u!114 &1216418944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 7600000000064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: win.next
+  args: []
+--- !u!114 &1400378756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 7600000000072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: win.menu
+  args: []

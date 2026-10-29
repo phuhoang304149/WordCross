@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Script.Utils;
+using WordCross.Gameplay;
 
 public class WinDialog : Dialog {
     public Animator titleAnim;
@@ -26,17 +28,7 @@ public class WinDialog : Dialog {
     private const string VIDEO_ACTION = "rewarded_video";
     private const float VIDEO_PENDING_TIMEOUT = 120f;
 
-    // TODO l10n: chuỗi tiếng Anh theo design i18n.js (win.*, rv.*)
-    private const string TEXT_FIRST = "First clear: +{0} rubies";
-    private const string TEXT_REPLAY = "Replay is practice: no extra rubies";
-    private const string TEXT_X2 = "WATCH VIDEO: +{0} more rubies";
-    private const string TEXT_X2_DONE = "Bonus collected";
-    private const string TEXT_X2_COOLDOWN = "Next video in {0}";
-    private const string TEXT_X2_NOFILL = "No video available right now";
-    private const string TEXT_GOAL = "Next: Level {0} - {1} more levels to unlock the next Subworld";
-    private const string TEXT_GOAL_LAST = "Subworld complete! Next: Subworld {0}";
-    private const string TEXT_EXTRA_READY = "Extra words {0}/{1}: ready to claim";
-    private const string TEXT_EXTRA_NOT = "Extra words {0}/{1}";
+    private LocalizationController Loc { get { return Locator<LocalizationController>.Instance; } }
 
     private int numLevels;
     private bool isLastLevel;
@@ -110,22 +102,22 @@ public class WinDialog : Dialog {
         rewardHolder.SetActive(first);
         rewardAmountText.text = "+" + reward;
         rewardText.gameObject.SetActive(true);
-        rewardText.text = first ? string.Format(TEXT_FIRST, reward) : TEXT_REPLAY;
+        rewardText.text = first ? Loc.Get("win.first", "n", reward) : Loc.Get("win.replay");
         doubleRewardButton.gameObject.SetActive(first);
 
         int left = numLevels - level - 1;
         if (left == 0)
         {
-            goalText.text = string.Format(TEXT_GOAL_LAST, (subWorld + 1) % Const.NUM_SUBWORLD + 1);
+            goalText.text = Loc.Get("win.goalLast", "s", (subWorld + 1) % Const.NUM_SUBWORLD + 1);
         }
         else
         {
-            goalText.text = string.Format(TEXT_GOAL, level + 2, left);
+            goalText.text = Loc.Get("win.goal", "l", level + 2, "n", left);
         }
         goalText.gameObject.SetActive(true);
 
         int extraProgress = Prefs.extraProgress, extraTarget = Prefs.extraTarget;
-        extraWordsText.text = string.Format(extraProgress >= extraTarget ? TEXT_EXTRA_READY : TEXT_EXTRA_NOT, extraProgress, extraTarget);
+        extraWordsText.text = Loc.Get(extraProgress >= extraTarget ? "win.extraReady" : "win.extraNot", "a", extraProgress, "b", extraTarget);
         extraWordsText.gameObject.SetActive(true);
     }
 
@@ -154,7 +146,7 @@ public class WinDialog : Dialog {
     {
         if (bonusClaimed)
         {
-            doubleRewardText.text = TEXT_X2_DONE;
+            doubleRewardText.text = Loc.Get("win.x2done");
             doubleRewardButton.interactable = false;
             CancelInvoke("RefreshDoubleReward");
             return;
@@ -165,17 +157,17 @@ public class WinDialog : Dialog {
         if (IsVideoCooldown())
         {
             int remain = Mathf.Max(0, (int)(GetVideoPeriod() - CUtils.GetActionDeltaTime(VIDEO_ACTION)));
-            doubleRewardText.text = string.Format(TEXT_X2_COOLDOWN, string.Format("{0}:{1:00}", remain / 60, remain % 60));
+            doubleRewardText.text = Loc.Get("rv.s.cooldown", "t", string.Format("{0}:{1:00}", remain / 60, remain % 60));
             doubleRewardButton.interactable = false;
         }
         else if (!IsVideoLoaded())
         {
-            doubleRewardText.text = TEXT_X2_NOFILL;
+            doubleRewardText.text = Loc.Get("rv.s.nofill");
             doubleRewardButton.interactable = false;
         }
         else
         {
-            doubleRewardText.text = string.Format(TEXT_X2, reward);
+            doubleRewardText.text = Loc.Get("win.x2", "n", reward);
             doubleRewardButton.interactable = !bonusPending;
         }
     }

@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WordCross.Gameplay;
 
 public class RewardedButton : MonoBehaviour
 {
     public GameObject content;
     public GameObject adAvailableTextHolder;
     public TimerText timerText;
+    // Dòng phụ "Video ngắn: +{n} ruby" (design shop.ready), n lấy từ cấu hình.
+    public LocalizedText readyText;
 
     private const string ACTION_NAME = "rewarded_video";
     private bool isEventAttached;
 
     private void Start()
     {
+        if (readyText != null) readyText.SetArg("n", ConfigController.Config.rewardedVideoAmount);
         if (timerText != null) timerText.onCountDownComplete += OnCountDownComplete;
 
 #if UNITY_ANDROID || UNITY_IOS

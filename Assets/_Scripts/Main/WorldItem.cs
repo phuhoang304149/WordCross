@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Script.Utils;
+using WordCross.Gameplay;
 
 public class WorldItem : MonoBehaviour {
     public MaskableGraphic itemName, itemNumber, itemNumberBack;
@@ -25,8 +27,7 @@ public class WorldItem : MonoBehaviour {
         world = transform.parent.parent.GetSiblingIndex();
         subWorld = transform.GetSiblingIndex();
         int numLevels = Superpow.Utils.GetNumLevels(world, subWorld);
-        // TODO l10n: design key 'world.sub'
-        titleText.text = "Subworld " + (subWorld + 1);
+        titleText.text = Locator<LocalizationController>.Instance.Get("world.sub", "n", subWorld + 1);
 
         int unlockedWorld = Prefs.unlockedWorld;
         int unlockedSubWorld = Prefs.unlockedSubWorld;

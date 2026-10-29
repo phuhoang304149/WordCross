@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
+using Script.Utils;
+using WordCross.Gameplay;
 
 public class ExtraWord : MonoBehaviour {
     public List<string> extraWords = new List<string>();
@@ -70,6 +72,7 @@ public class ExtraWord : MonoBehaviour {
 
     private void ShowMessage(string message)
     {
+        existMessage.GetComponentInChildren<Text>(true).text = Locator<LocalizationController>.Instance.Get("game.extraAgain");
         existMessage.SetActive(true);
         existMessageCG.alpha = 0;
         iTween.ValueTo(gameObject, iTween.Hash("from", 0, "to", 1, "time", 0.3f, "OnUpdate", "OnMessageUpdate", "oncomplete", "OnMessageShowComplete"));

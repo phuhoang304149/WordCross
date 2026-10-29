@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Script.Utils;
+using WordCross.Gameplay;
 
 public class SelectLevelController : BaseController {
     public RectTransform mainUI, scrollContent;
@@ -33,8 +35,7 @@ public class SelectLevelController : BaseController {
 
     private void UpdateTitle()
     {
-        // TODO l10n: design key 'lvl.title'
-        titleText.text = "Subworld " + (GameState.currentSubWorld + 1);
+        titleText.text = Locator<LocalizationController>.Instance.Get("lvl.title", "n", GameState.currentSubWorld + 1);
     }
 
     // Square cells (aspect-ratio 1 + shadow step) filling the columns like the design grid

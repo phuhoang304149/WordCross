@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Superpow;
+using Script.Utils;
+using WordCross.Gameplay;
 
 public class MainController : BaseController {
     public Text levelNameText, levelSubText;
@@ -39,7 +41,7 @@ public class MainController : BaseController {
         }
 
         levelNameText.text = GameState.currentSubWorldName + " - " + (level + 1);
-        levelSubText.text = "Level " + (level + 1);
+        levelSubText.text = Locator<LocalizationController>.Instance.Get("common.level", "n", level + 1);
     }
 
     public void OnComplete()

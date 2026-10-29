@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 222179201603182154}
   - component: {fileID: 114410106784022596}
   - component: {fileID: 114370591917306806}
+  - component: {fileID: 1950941979}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1375,6 +1376,7 @@ GameObject:
   - component: {fileID: 77000000000000101}
   - component: {fileID: 77000000000000102}
   - component: {fileID: 77000000000000103}
+  - component: {fileID: 2146016165}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1449,6 +1451,7 @@ GameObject:
   - component: {fileID: 77000000000000111}
   - component: {fileID: 77000000000000112}
   - component: {fileID: 77000000000000113}
+  - component: {fileID: 1484446404}
   m_Layer: 5
   m_Name: Note
   m_TagString: Untagged
@@ -1527,3 +1530,42 @@ MonoBehaviour:
   m_EffectColor: {r: 0.0431, g: 0.549, b: 0.502, a: 1}
   m_EffectDistance: {x: 0, y: -7}
   m_UseGraphicAlpha: 1
+--- !u!114 &2146016165
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 77000000000000100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: extra.title
+  args: []
+--- !u!114 &1950941979
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1415554631995434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: extra.desc
+  args: []
+--- !u!114 &1484446404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 77000000000000110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2db6d6555b647fe8a8ad142d5afaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: extra.note
+  args: []
