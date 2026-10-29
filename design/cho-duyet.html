@@ -34,14 +34,14 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 <body>
 <main>
 <h1>WordCross · Các mục chờ duyệt</h1>
-<p class="sub">Tổng hợp 2026-10-29 23:15 (GMT+7). Chọn phương án và ghi chú ngay trên trang (tự lưu trong trình duyệt); bấm “Copy kết quả” rồi dán cho Claude để làm tiếp. Chi tiết từng task trong <a href="index.html">tracker</a>.</p>
+<p class="sub">Tổng hợp 2026-10-29 23:15 (GMT+7). Chọn phương án và ghi chú ngay trên trang (tự lưu trong trình duyệt); bấm “Copy kết quả” rồi dán cho Claude để làm tiếp. Chi tiết từng task trong <a href="../02-reskin-maintain/index.html">tracker</a>.</p>
 <div class="bar"><button type="button" id="copy">Copy kết quả</button><span class="small" id="msg"></span></div>
 
 <h2>1. Quyết định gameplay &amp; UI</h2>
 
 <div class="item" data-id="bot">
 <h3>Cách chơi Đấu Bot <span class="tag hi">T042 · chặn tính năng</span></h3>
-<p>Design mới có 3 phương án trong <a href="../design/GD/bot-gameplay.html">design/GD/bot-gameplay.html</a> (mục 90 giây ghi CẦN DUYỆT). Nhánh <code>wordcross/bot</code> đã có 3 commit (trận Bot trong Main, đồng hồ 90s, HUD) nhưng chưa merge.</p>
+<p>Design mới có 3 phương án trong <a href="GD/bot-gameplay.html">design/GD/bot-gameplay.html</a> (mục 90 giây ghi CẦN DUYỆT). Nhánh <code>wordcross/bot</code> đã có 3 commit (trận Bot trong Main, đồng hồ 90s, HUD) nhưng chưa merge.</p>
 <label class="opt"><input type="radio" name="bot" value="90s">Đấu 90 giây</label>
 <label class="opt"><input type="radio" name="bot" value="theo-luot">Theo lượt</label>
 <label class="opt"><input type="radio" name="bot" value="dua-toc-do">Đua tốc độ</label>
@@ -110,7 +110,7 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 
 <div class="item" data-id="l10n">
 <h3>Rà 25 chuỗi dịch mới (vi/en/fr/es/pt) <span class="tag">cần người bản ngữ</span></h3>
-<p>Bảng đầy đủ: <a href="l10n-review.md">l10n-review.md</a> (key, 5 ngôn ngữ, màn dùng, độ dài). Key ngăn bằng <code>|</code> (tháng, thứ) phải giữ đủ số mục.</p>
+<p>Bảng đầy đủ: <a href="../02-reskin-maintain/l10n-review.md">l10n-review.md</a> (key, 5 ngôn ngữ, màn dùng, độ dài). Key ngăn bằng <code>|</code> (tháng, thứ) phải giữ đủ số mục.</p>
 <textarea placeholder="Ai rà, khi nào; key cần sửa"></textarea>
 </div>
 
