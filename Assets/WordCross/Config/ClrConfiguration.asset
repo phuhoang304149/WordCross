@@ -22,13 +22,16 @@ MonoBehaviour:
   hotUpdateAssemblies:
     _serializedList:
     - Key: CatGaming.Module
-      Value: {fileID: 5897886265953266890, guid: a9a76d15823564a30ad27eff9720d172, type: 3}
+      Value: {fileID: 5897886265953266890, guid: a9a76d15823564a30ad27eff9720d172,
+        type: 3}
     - Key: WordCross.Gameplay.HotUpdate
-      Value: {fileID: 5897886265953266890, guid: c7bea111757d4650be43d8182bba8cf5, type: 3}
+      Value: {fileID: 5897886265953266890, guid: c7bea111757d4650be43d8182bba8cf5,
+        type: 3}
   aotMetadataAssemblies:
     _serializedList:
     - Key: CatGaming.Clr.Runtime
-      Value: {fileID: 5897886265953266890, guid: fb1f084b8ee64dafa4baff6838b755a5, type: 3}
+      Value: {fileID: 5897886265953266890, guid: fb1f084b8ee64dafa4baff6838b755a5,
+        type: 3}
     - Key: mscorlib
       Value: {fileID: 0}
     - Key: System
@@ -46,7 +49,8 @@ MonoBehaviour:
     - Key: Unity.ResourceManager
       Value: {fileID: 0}
     - Key: UniTask
-      Value: {fileID: 5897886265953266890, guid: f51ebe6a0ceec4240a699833d6309b23, type: 3}
+      Value: {fileID: 5897886265953266890, guid: f51ebe6a0ceec4240a699833d6309b23,
+        type: 3}
     - Key: AYellowpaper.SerializedCollections
       Value: {fileID: 0}
     - Key: DOTween
@@ -72,8 +76,14 @@ MonoBehaviour:
     - Key: GoogleMobileAds.Ump.Android
       Value: {fileID: 0}
   loadContentBundles: 0
-  contentRoots: []
-  gameplayScenes: []
+  contentRoots:
+  - Assets/WordCross/Config/GameData
+  - Assets/_Scenes
+  gameplayScenes:
+  - Assets/_Scenes/Home.unity
+  - Assets/_Scenes/SelectWorld.unity
+  - Assets/_Scenes/SelectLevel.unity
+  - Assets/_Scenes/Main.unity
   preloadAddressableLabels:
   - preload_1
   - preload_3

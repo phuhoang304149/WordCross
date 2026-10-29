@@ -42,6 +42,10 @@ MonoBehaviour:
     asset: {fileID: 11400000, guid: 745ede4e20c3459092eb505abfe86c88, type: 2}
     address: PopupDatabase/com.phltd.wordcrossy
     label: 
+  - path: Assets/WordCross/Config/GameData/ProductData.asset
+    asset: {fileID: 11400000, guid: 96bdd2140e6c40e08373d6e2bf09b2c0, type: 2}
+    address: Assets/WordCross/Config/GameData/ProductData.asset
+    label: 
   noLoadGroupLabel: no_load
   noLoadScriptableObjects: []
   assetGroupLabel: preload_4

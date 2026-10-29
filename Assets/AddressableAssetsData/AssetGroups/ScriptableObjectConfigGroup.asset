@@ -27,6 +27,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - preload_3
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96bdd2140e6c40e08373d6e2bf09b2c0
+    m_Address: Assets/WordCross/Config/GameData/ProductData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - preload_3
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 07c88aaa1219342c1b685fa6409c9e6a, type: 2}
   m_SchemaSet:
