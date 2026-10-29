@@ -16,10 +16,7 @@ public class LevelButton : MonoBehaviour {
     public Image shadow;
     public Color[] backColors, shadowColors, textColors;
 
-    private List<Vector3> letterLocalPositions = new List<Vector3>();
-    private List<Text> letterTexts = new List<Text>();
     private GameLevel gameLevel;
-    private const float RADIUS = 40f;
 
     public void Start()
     {
@@ -69,34 +66,9 @@ public class LevelButton : MonoBehaviour {
 
     public void Load()
     {
+        // The pan disk preview is not part of the design: only keep the saved letter order data
         int numLetters = gameLevel.word.Trim().Length;
         if (numLetters == 0) return;
-
-        float delta = 360f / numLetters;
-
-        float angle = 90;
-        for (int i = 0; i < numLetters; i++)
-        {
-            float angleRadian = angle * Mathf.PI / 180f;
-            float x = Mathf.Cos(angleRadian);
-            float y = Mathf.Sin(angleRadian);
-            Vector3 position = RADIUS * new Vector3(x, y, 0);
-
-            letterLocalPositions.Add(position);
-
-            angle += delta;
-        }
-
-        for (int i = 0; i < numLetters; i++)
-        {
-            Text letter = Instantiate(MonoUtils.instance.letter);
-            letter.transform.SetParent(centerPoint);
-            letter.transform.localScale = Vector3.one;
-            letter.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(-15, 15)));
-            letter.text = gameLevel.word[i].ToString().ToUpper();
-            letter.fontSize = ConfigController.Config.fontSizeInDiskSelectLevel;
-            letterTexts.Add(letter);
-        }
 
         List<int> indexes = Prefs.GetPanWordIndexes(world, subWorld, level).ToList();
         if (indexes.Count != numLetters)
@@ -104,11 +76,6 @@ public class LevelButton : MonoBehaviour {
             indexes = Enumerable.Range(0, numLetters).ToList();
             indexes.Shuffle(level);
             Prefs.SetPanWordIndexes(world, subWorld, level, indexes.ToArray());
-        }
-
-        for (int i = 0; i < numLetters; i++)
-        {
-            letterTexts[i].transform.localPosition = letterLocalPositions[indexes.IndexOf(i)];
         }
     }
 
