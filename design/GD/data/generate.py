@@ -35,6 +35,19 @@ def vi_ok(w):
     return all(c in VI_ALPHA for c in base) and VI_SYL.match(base) is not None
 
 
+def load_blocklist(loc):
+    """blocklist/<locale>.txt: mỗi dòng 'từ<TAB>lý do'; từ bị loại khỏi corpus (answers/validWords/seed)."""
+    p = os.path.join(DATA, "blocklist", loc + ".txt")
+    if not os.path.exists(p):
+        return {}
+    out = {}
+    for ln in open(p, encoding="utf-8").read().split("\n"):
+        if ln.strip():
+            w, _, why = ln.partition("\t")
+            out[nfc(w)] = why
+    return out
+
+
 def load(loc):
     a = os.path.join(ROOT, "Assets")
     if loc == "vi":
@@ -46,10 +59,13 @@ def load(loc):
                 "pt": ("5000 Portuguese Words", "5000 common portuguese words.txt")}[loc]
         files = [os.path.join(a, d, n)]
         lines = read_lines(files[0], "latin-1")
+    block = load_blocklist(loc)
     words, seen, rej = [], set(), Counter()
     for ln in lines:
         w = nfc(ln)
-        if not w or w != ln.strip():
+        if w in block:
+            rej["blocklist"] += 1
+        elif not w or w != ln.strip():
             rej["empty"] += 1
         elif w != w.lower():
             rej["uppercase/proper"] += 1

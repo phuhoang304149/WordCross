@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88afd11c802cdf6449faf33ed6e4e3bd, type: 3}
+  m_Name: Level_17
+  m_EditorClassIdentifier: WordCross.Gameplay.HotUpdate::GameLevel
+  word: "ch\xF3ng"
+  answers: "n\xF3|c\xF3|\xF3c|g\xF3c|h\xF3c|ng\xF3|\xF3ng|n\xF3c|ch\xF3|h\xF3ng|nh\xF3c|ng\xF3c|ch\xF3ng|"
+  validWords: "n\xF3|c\xF3|\xF3c|g\xF3c|h\xF3c|ng\xF3|\xF3ng|n\xF3c|ch\xF3|h\xF3ng|nh\xF3c|ng\xF3c|ch\xF3ng"

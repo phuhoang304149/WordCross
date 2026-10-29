@@ -23,6 +23,7 @@ public class HomeController : BaseController {
         UpdateDailyDot();
         Invoke("FitDailyLabel", 0f);
         Locator<LocalizationController>.Instance.onLanguageChanged += OnLanguageChanged;
+        Locator<LocalizationController>.Instance.onGameLanguageChanged += OnGameLanguageChanged;
         if (GameState.openDailyOnHome)
         {
             GameState.openDailyOnHome = false;
@@ -53,6 +54,15 @@ public class HomeController : BaseController {
     {
         if (Locator<LocalizationController>.Instance != null)
             Locator<LocalizationController>.Instance.onLanguageChanged -= OnLanguageChanged;
+        if (Locator<LocalizationController>.Instance != null)
+            Locator<LocalizationController>.Instance.onGameLanguageChanged -= OnGameLanguageChanged;
+    }
+
+    // Tiến độ và Daily theo ngôn ngữ chơi: làm mới nhãn "Tiếp tục" và chấm đỏ Daily ngay khi đổi.
+    private void OnGameLanguageChanged(string code)
+    {
+        UpdateResume();
+        UpdateDailyDot();
     }
 
     private void OnLanguageChanged(string code)

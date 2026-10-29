@@ -152,11 +152,11 @@
   };
   views.language = function () {
     var ui = WC.locales.map(function (l) { return '<button class="opt' + (WC.lang === l ? ' on' : '') + '" data-ui="' + l + '"><b>' + t('lang.ui.' + l) + '</b></button>'; }).join('');
-    var rows = [['en', 'lang.playable', true], ['fr', 'lang.soon'], ['es', 'lang.soon'], ['pt', 'lang.soon'], ['vi', 'lang.soonVi']].map(function (r) {
-      return '<div class="opt game' + (r[2] ? ' on' : ' dis') + '"><b>' + t('lang.' + r[0]) + '</b><small>' + t(r[1]) + '</small></div>';
+    var rows = [['en', 'lang.playable', true], ['fr', 'lang.playable'], ['es', 'lang.playable'], ['pt', 'lang.playable'], ['vi', 'lang.playable']].map(function (r) {
+      return '<div class="opt game' + (r[2] ? ' on' : '') + '"><b>' + t('lang.' + r[0]) + '</b><small>' + t(r[1]) + '</small></div>';
     }).join('');
     return bar(t('lang.title'), 'home') + '<div class="scroll-body"><h4>' + t('lang.ui') + '</h4><p class="lead">' + t('lang.uiDesc') + '</p><div class="opts two wrap">' + ui + '</div><div class="note ok" data-saved></div>' +
-      '<h4>' + t('lang.game') + '</h4><p class="lead">' + t('lang.gameDesc') + '</p><div class="opts">' + rows + '</div><div class="note">' + t('lang.noteSoon') + '</div></div>';
+      '<h4>' + t('lang.game') + '</h4><p class="lead">' + t('lang.gameDesc') + '</p><div class="opts">' + rows + '</div></div>';
   };
 
   /* ---------- popups ---------- */

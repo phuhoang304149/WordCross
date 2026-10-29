@@ -20,7 +20,7 @@ public class LanguageDialog : Dialog
     private readonly Color32 captionColor = new Color32(93, 110, 128, 255);
     private readonly Color32 disabledFace = new Color32(238, 243, 243, 255);
 
-    // Thứ tự theo design: en chơi được, fr/es/pt sắp có, vi đề xuất.
+    // Thứ tự theo design (en, fr, es, pt, vi); ngôn ngữ chưa có level hiển thị "sắp có"/"đề xuất".
     private readonly string[] gameCodes = { "en", "fr", "es", "pt", "vi" };
     private readonly List<string> gameRowCodes = new List<string>();
     private readonly List<Image> gameBorders = new List<Image>();
@@ -67,9 +67,11 @@ public class LanguageDialog : Dialog
         AddLabel(content, font, "lang.uiDesc", 449, 66, 24, FontStyle.Normal, captionColor);
         AddLabel(content, font, "lang.game", 34, 34, 27, FontStyle.Bold, headingColor);
         AddLabel(content, font, "lang.gameDesc", -20, 33, 24, FontStyle.Normal, captionColor);
-        AddLabel(content, font, "lang.noteSoon", -694, 25, 20, FontStyle.Normal, captionColor, TextAnchor.MiddleCenter);
-
         var loc = Locator<LocalizationController>.Instance;
+        var allPlayable = true;
+        foreach (var gameCode in gameCodes) allPlayable &= loc.IsGamePlayable(gameCode);
+        if (!allPlayable) AddLabel(content, font, "lang.noteSoon", -694, 25, 20, FontStyle.Normal, captionColor, TextAnchor.MiddleCenter);
+
         for (var i = 0; i < gameCodes.Length; i++)
         {
             var code = gameCodes[i];
