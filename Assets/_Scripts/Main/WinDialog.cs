@@ -181,8 +181,9 @@ public class WinDialog : Dialog {
         if (dailyResult.milestone > 0) streak += "\n" + Loc.Get("win.milestone", "d", dailyResult.milestoneDays, "n", dailyResult.milestone);
         goalText.text = streak;
         goalText.gameObject.SetActive(true);
+        // Lần đầu đã có khối thưởng + nút nhân đôi, bỏ dòng nhắc ngày mai để nút MENU không tràn khỏi màn hình.
         extraWordsText.text = Loc.Get("win.dailyNext");
-        extraWordsText.gameObject.SetActive(true);
+        extraWordsText.gameObject.SetActive(!first);
     }
 
     private void ShowRewardInfo()
