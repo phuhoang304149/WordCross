@@ -22,7 +22,9 @@ public class AdmobController : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        // GameMaster nằm trong mọi scene; bản trùng chỉ bị DonotDestroyOnLoad Destroy trễ (cuối frame),
+        // nên không để nó ghi đè instance đang sống (isAdsReady đã true) rồi để lại tham chiếu đã hủy.
+        if (instance == null) instance = this;
     }
 
     private IEnumerator Start()
