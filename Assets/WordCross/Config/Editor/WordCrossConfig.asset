@@ -21,8 +21,8 @@ MonoBehaviour:
   defiineSymbol_prod: CATGAMING_ADDRESSABLES;CATGAMING_ADMOB;CATGAMING_ADS;CATGAMING_CLR;CATGAMING_IAP;DOTWEEN;PRODUCTION;UMP_AVAILABLE;UNITASK_DOTWEEN_SUPPORT
   packagenameIos: com.PHltd.wordcrossy
   packagenameAndroid: com.PHltd.wordcrossy
-  version: 0.4
-  addressableVersion: 0.4
+  version: 1.0.0
+  addressableVersion: 1.0.0
   bundlecode: 6
   clrUrl: https://data.catgaming.asia/wordcross/clr
   addressableUrl: https://data.catgaming.asia/wordcross/data
