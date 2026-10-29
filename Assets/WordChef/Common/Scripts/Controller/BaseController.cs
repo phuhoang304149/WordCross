@@ -18,6 +18,8 @@ public class BaseController : MonoBehaviour {
         numofEnterScene = CUtils.IncreaseNumofEnterScene(sceneName);
     }
 
+    protected virtual bool ShowsBanner { get { return false; } }
+
     protected virtual void Start()
     {
         CPlayerPrefs.Save();
@@ -31,7 +33,9 @@ public class BaseController : MonoBehaviour {
 #endif
         Music.instance.Play(music);
 
-        CUtils.ShowBannerAd();
+        // Banner chỉ ở màn Main (design); các màn khác ẩn banner đang có.
+        if (ShowsBanner) CUtils.ShowBannerAd();
+        else CUtils.CloseBannerAd();
     }
 
     public virtual void OnApplicationPause(bool pause)

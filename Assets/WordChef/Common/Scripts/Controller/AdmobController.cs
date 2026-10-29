@@ -67,6 +67,8 @@ public class AdmobController : MonoBehaviour
 #if CATGAMING_ADS && CATGAMING_ADMOB
         if (!isAdsReady) return;
         if (CUtils.IsBuyItem() || CUtils.IsAdsRemoved()) return;
+        // Banner chỉ ở màn Main: init xong khi đang ở Home/World/Level thì không request.
+        if (MainController.instance == null) return;
         CatGamingAds.ShowBanner();
 #endif
     }

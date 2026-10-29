@@ -15,6 +15,8 @@ public class MainController : BaseController {
 
     public static MainController instance;
 
+    protected override bool ShowsBanner { get { return true; } }
+
     protected override void Awake()
     {
         base.Awake();

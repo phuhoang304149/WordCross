@@ -10,7 +10,9 @@ public class Pan : MonoBehaviour
     private int numLetters;
     private string word, panWord;
     private GameLevel gameLevel;
-    private const float RADIUS = 100;
+    private const float DesignWidth = 390f, RadiusCss = 84f, RadiusManyCss = 90f;
+    // Design đặt chữ theo hệ toạ độ của lòng vòng (lệch viền 3 css) nên tâm chữ nằm (+3, +3) so với tâm vòng; đo trên máy: (+2,9, +1,2 sau bù Pan).
+    private const float OffsetRightCss = 2.9f, OffsetDownCss = 1.2f;
     private List<Vector3> letterPositions = new List<Vector3>();
     private List<Vector3> letterLocalPositions = new List<Vector3>();
     private List<Text> letterTexts = new List<Text>();
@@ -29,6 +31,15 @@ public class Pan : MonoBehaviour
         instance = this;
     }
 
+    // Cụm vòng chữ có thể bị dời (banner bật/tắt) sau Load: giữ toạ độ chạm của LineDrawer khớp vị trí chữ.
+    private void LateUpdate()
+    {
+        for (int i = 0; i < letterPositions.Count; i++)
+        {
+            letterPositions[i] = centerPoint.TransformPoint(letterLocalPositions[i]);
+        }
+    }
+
     public void Load(GameLevel gameLevel)
     {
         // Gán tại đây thay vì Start để không phụ thuộc thứ tự Start với MainController.
@@ -39,6 +50,11 @@ public class Pan : MonoBehaviour
         this.gameLevel = gameLevel;
         numLetters = gameLevel.word.Trim().Length;
 
+        // Bán kính vòng chữ theo design (.wheel: 84 css, trên 6 chữ 90 css), đổi ra đơn vị cục bộ của centerPoint.
+        RectTransform canvasRt = (RectTransform)centerPoint.GetComponentInParent<Canvas>().rootCanvas.transform;
+        float localPerCss = canvasRt.rect.width / DesignWidth * canvasRt.lossyScale.x / centerPoint.lossyScale.x;
+        float radius = (numLetters > 6 ? RadiusManyCss : RadiusCss) * localPerCss;
+
         float delta = 360f / numLetters;
 
         float angle = 90;
@@ -47,7 +63,7 @@ public class Pan : MonoBehaviour
             float angleRadian = angle * Mathf.PI / 180f;
             float x = Mathf.Cos(angleRadian);
             float y = Mathf.Sin(angleRadian);
-            Vector3 position = RADIUS * new Vector3(x, y, 0);
+            Vector3 position = radius * new Vector3(x, y, 0) + new Vector3(OffsetRightCss, -OffsetDownCss, 0) * localPerCss;
 
             letterLocalPositions.Add(position);
             letterPositions.Add(centerPoint.TransformPoint(position));

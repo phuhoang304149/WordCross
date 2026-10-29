@@ -6,6 +6,7 @@ public class LineWord : MonoBehaviour {
 
     public string answer;
     public float cellSize;
+    public float cellGap;
     public List<Cell> cells = new List<Cell>();
     public int numLetters;
     public float lineWidth;
@@ -15,8 +16,6 @@ public class LineWord : MonoBehaviour {
     public void Build()
     {
         numLetters = answer.Length;
-        float cellGap = cellSize * Const.CELL_GAP_COEF;
-
         for(int i = 0; i < numLetters; i++)
         {
             Cell cell = Instantiate(MonoUtils.instance.cell);
@@ -40,7 +39,7 @@ public class LineWord : MonoBehaviour {
     {
         int numLetters = answer.Length;
         var rt = GetComponent<RectTransform>();
-        lineWidth = numLetters * cellSize + (numLetters - 1) * cellSize * Const.CELL_GAP_COEF;
+        lineWidth = numLetters * cellSize + (numLetters - 1) * cellGap;
         rt.sizeDelta = new Vector2(lineWidth, cellSize);
     }
 
