@@ -29,7 +29,10 @@ case "${1:-list}" in
     live=$(adb devices -l | awk 'NR>1 && $2=="device"{print $1"|"$0}')
     while IFS='|' read -r s rest; do
       [ -n "$s" ] || continue
-      grep -q "^$s|" "$STATE" && continue
+      if grep -q "^$s|" "$STATE"; then
+        grep -q "^$s|[^|]*|offline|" "$STATE" && set_status "$s" finish ""
+        continue
+      fi
       m=$(printf '%s' "$rest" | sed -n 's/.*model:\([^ ]*\).*/\1/p')
       printf '%s|%s|finish|\n' "$s" "$m" >> "$STATE"
     done <<< "$live"
