@@ -43,13 +43,13 @@ public class HomeController : BaseController {
                 CUtils.LoadScene(1);
                 break;
             case DAILY:
-                Toast.instance.ShowMessage("Daily challenge is coming soon");
+                Toast.instance.ShowMessage(Locator<LocalizationController>.Instance.Get("home.toast.daily"));
                 break;
             case BOT:
-                Toast.instance.ShowMessage("VS Bot is coming soon");
+                Toast.instance.ShowMessage(Locator<LocalizationController>.Instance.Get("home.toast.bot"));
                 break;
             case AI:
-                Toast.instance.ShowMessage("VS AI is coming soon");
+                Toast.instance.ShowMessage(Locator<LocalizationController>.Instance.Get("home.toast.ai"));
                 break;
             case LANGUAGE:
                 DialogController.instance.ShowDialog(DialogType.Language);

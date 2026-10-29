@@ -22,12 +22,29 @@ public class WorldItem : MonoBehaviour {
 
     public int world, subWorld;
 
+    private void OnDestroy()
+    {
+        if (Locator<LocalizationController>.Instance != null)
+            Locator<LocalizationController>.Instance.onLanguageChanged -= OnLanguageChanged;
+    }
+
+    private void OnLanguageChanged(string code)
+    {
+        UpdateTitle();
+    }
+
+    private void UpdateTitle()
+    {
+        titleText.text = Locator<LocalizationController>.Instance.Get("world.sub", "n", subWorld + 1);
+    }
+
 	private void Start()
     {
         world = transform.parent.parent.GetSiblingIndex();
         subWorld = transform.GetSiblingIndex();
         int numLevels = Superpow.Utils.GetNumLevels(world, subWorld);
-        titleText.text = Locator<LocalizationController>.Instance.Get("world.sub", "n", subWorld + 1);
+        UpdateTitle();
+        Locator<LocalizationController>.Instance.onLanguageChanged += OnLanguageChanged;
 
         int unlockedWorld = Prefs.unlockedWorld;
         int unlockedSubWorld = Prefs.unlockedSubWorld;

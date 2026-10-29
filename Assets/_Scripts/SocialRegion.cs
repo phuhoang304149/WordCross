@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using EasyMobile;
+using Script.Utils;
+using WordCross.Gameplay;
 
 public class SocialRegion : MonoBehaviour {
     public GameObject overlay, panel, bottomBanner;
@@ -41,7 +43,7 @@ public class SocialRegion : MonoBehaviour {
 #if (UNITY_IOS || UNITY_ANDROID) && !UNITY_EDITOR
         StartCoroutine(CROneStepSharing());
 #else
-        Toast.instance.ShowMessage("This function only works on Android and iOS");
+        Toast.instance.ShowMessage(Locator<LocalizationController>.Instance.Get("common.deviceOnly"));
 #endif
     }
 

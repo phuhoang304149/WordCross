@@ -19,6 +19,7 @@ public class SelectLevelController : BaseController {
         base.Start();
 
         UpdateTitle();
+        Locator<LocalizationController>.Instance.onLanguageChanged += OnLanguageChanged;
         UpdateCellSize();
 
         int numLevels = Superpow.Utils.GetNumLevels(GameState.currentWorld, GameState.currentSubWorld);
@@ -31,6 +32,17 @@ public class SelectLevelController : BaseController {
         }
 
 		StartCoroutine(UpdateGrid());
+    }
+
+    private void OnDestroy()
+    {
+        if (Locator<LocalizationController>.Instance != null)
+            Locator<LocalizationController>.Instance.onLanguageChanged -= OnLanguageChanged;
+    }
+
+    private void OnLanguageChanged(string code)
+    {
+        UpdateTitle();
     }
 
     private void UpdateTitle()
