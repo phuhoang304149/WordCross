@@ -55,11 +55,13 @@ public class LineDrawer : MonoBehaviour {
                 {
                     currentIndexes.RemoveAt(currentIndexes.Count - 1);
                     textPreview.SetIndexes(currentIndexes);
+                    Pan.instance.SetSelectedPositions(currentIndexes);
                 }
                 else if (!currentIndexes.Contains(nearest))
                 {
                     currentIndexes.Add(nearest);
                     textPreview.SetIndexes(currentIndexes);
+                    Pan.instance.SetSelectedPositions(currentIndexes);
                 }
             }
 
@@ -69,6 +71,7 @@ public class LineDrawer : MonoBehaviour {
         {
             isDragging = false;
             currentIndexes.Clear();
+            Pan.instance.SetSelectedPositions(currentIndexes);
 #if UNITY_5_5
             lineRenderer.numPositions = 0;
 #else
