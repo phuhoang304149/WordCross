@@ -65,7 +65,6 @@ public class Pan : MonoBehaviour
             letter.transform.localScale = Vector3.one;
             letter.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(-10, 10)));
             letter.text = gameLevel.word[i].ToString().ToUpper();
-            letter.fontSize = ConfigController.Config.fontSizeInDiskMainScene;
             letterTexts.Add(letter);
         }
 

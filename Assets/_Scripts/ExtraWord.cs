@@ -56,7 +56,7 @@ public class ExtraWord : MonoBehaviour {
 
             flyText = Instantiate(MonoUtils.instance.letter);
             flyText.text = word;
-            flyText.fontSize = 12;
+            flyText.fontSize = TextPreview.instance.text.fontSize;
             flyText.transform.position = beginPoint.position;
             flyText.transform.SetParent(MonoUtils.instance.textFlyTransform);
             flyText.transform.localScale = TextPreview.instance.text.transform.localScale;

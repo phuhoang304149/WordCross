@@ -22,7 +22,6 @@ public class LineWord : MonoBehaviour {
             Cell cell = Instantiate(MonoUtils.instance.cell);
             cell.letter = answer[i].ToString();
             cell.letterText.transform.localScale = Vector3.one * (cellSize / 80f);
-            cell.letterText.fontSize = ConfigController.Config.fontSizeInCellMainScene;
 
             RectTransform cellTransform = cell.GetComponent<RectTransform>();
             cellTransform.SetParent(transform);
@@ -54,7 +53,7 @@ public class LineWord : MonoBehaviour {
             if (progress[i] == '1')
             {
                 cell.isShown = true;
-                cell.letterText.text = cell.letter;
+                cell.ShowText();
             }
             else
             {

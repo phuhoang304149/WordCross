@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Cell : MonoBehaviour
 {
     public Text letterText;
+    public Image background, fill;
+    public Color shownColor, hintColor, hintTextColor;
     public string letter;
     public bool isShown;
 
@@ -42,11 +44,20 @@ public class Cell : MonoBehaviour
         isShown = true;
         originLetterScale = letterText.transform.localScale;
         ShowText();
+        SetShownStyle(true);
         OnMoveToComplete();
     }
 
     public void ShowText()
     {
         letterText.text = letter;
+        SetShownStyle(false);
+    }
+
+    private void SetShownStyle(bool isHint)
+    {
+        fill.enabled = false;
+        background.color = isHint ? hintColor : shownColor;
+        letterText.color = isHint ? hintTextColor : Color.white;
     }
 }
