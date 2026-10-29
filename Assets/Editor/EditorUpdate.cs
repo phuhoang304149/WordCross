@@ -27,13 +27,5 @@ class EditorUpdate
         
         EditorUserBuildSettings.androidBuildSystem = AndroidBuildSystem.Internal;
 #endif
-
-        if (!Directory.Exists("Assets/Plugins/UnityPurchasing/Bin"))
-        {
-            IAPChecker.CheckItNow();
-            return;
-        }
-
-        IAPChecker.CheckItNow();
     }
 }

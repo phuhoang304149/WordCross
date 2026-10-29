@@ -1,5 +1,4 @@
-﻿using GoogleMobileAds.Api;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RewardedVideoCallBack : MonoBehaviour {
 
@@ -11,15 +10,12 @@ public class RewardedVideoCallBack : MonoBehaviour {
     private void AddEvents()
     {
 #if UNITY_ANDROID || UNITY_IOS
-        if (AdmobController.instance.rewardBasedVideo != null)
-        {
-            AdmobController.instance.rewardBasedVideo.OnAdRewarded += HandleRewardBasedVideoRewarded;
-        }
+        AdmobController.instance.onRewardedVideoRewarded += HandleRewardBasedVideoRewarded;
 #endif
     }
 
     private const string ACTION_NAME = "rewarded_video";
-    public void HandleRewardBasedVideoRewarded(object sender, Reward args)
+    public void HandleRewardBasedVideoRewarded()
     {
         var dialog = (RewardedVideoDialog)DialogController.instance.GetDialog(DialogType.RewardedVideo);
         dialog.SetAmount(ConfigController.Config.rewardedVideoAmount);
@@ -31,10 +27,7 @@ public class RewardedVideoCallBack : MonoBehaviour {
     private void OnDestroy()
     {
 #if UNITY_ANDROID || UNITY_IPHONE
-        if (AdmobController.instance.rewardBasedVideo != null)
-        {
-            AdmobController.instance.rewardBasedVideo.OnAdRewarded -= HandleRewardBasedVideoRewarded;
-        }
+        AdmobController.instance.onRewardedVideoRewarded -= HandleRewardBasedVideoRewarded;
 #endif
     }
 }

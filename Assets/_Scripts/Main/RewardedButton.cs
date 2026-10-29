@@ -1,5 +1,4 @@
-﻿using GoogleMobileAds.Api;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -37,10 +36,7 @@ public class RewardedButton : MonoBehaviour
 
     private void AddEvents()
     {
-        if (AdmobController.instance.rewardBasedVideo != null)
-        {
-            AdmobController.instance.rewardBasedVideo.OnAdRewarded += HandleRewardBasedVideoRewarded;
-        }
+        AdmobController.instance.onRewardedVideoRewarded += HandleRewardBasedVideoRewarded;
     }
 
     private void IUpdate()
@@ -64,7 +60,7 @@ public class RewardedButton : MonoBehaviour
         }
     }
 
-    public void HandleRewardBasedVideoRewarded(object sender, Reward args)
+    public void HandleRewardBasedVideoRewarded()
     {
         content.SetActive(false);
         ShowTimerText(ConfigController.Config.rewardedVideoPeriod);
@@ -91,18 +87,13 @@ public class RewardedButton : MonoBehaviour
 
     private bool IsAdAvailable()
     {
-        if (AdmobController.instance.rewardBasedVideo == null) return false;
-        bool isLoaded = AdmobController.instance.rewardBasedVideo.IsLoaded();
-        return isLoaded;
+        return AdmobController.instance.IsRewardedVideoLoaded();
     }
 
     private void OnDestroy()
     {
 #if UNITY_ANDROID || UNITY_IOS
-        if (AdmobController.instance.rewardBasedVideo != null)
-        {
-            AdmobController.instance.rewardBasedVideo.OnAdRewarded -= HandleRewardBasedVideoRewarded;
-        }
+        AdmobController.instance.onRewardedVideoRewarded -= HandleRewardBasedVideoRewarded;
 #endif
     }
 
