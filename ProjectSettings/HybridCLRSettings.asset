@@ -19,6 +19,7 @@ MonoBehaviour:
   hotUpdateAssemblyDefinitions: []
   hotUpdateAssemblies:
   - CatGaming.Module
+  - WordCross.Gameplay.HotUpdate
   preserveHotUpdateAssemblies: []
   externalHotUpdateAssembliyDirs: []
   linkPreserveLevel: 0
