@@ -621,6 +621,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - preload_3
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31ba3328272b4436cb7c68881d846d61
+    m_Address: Assets/WordCross/Config/GameData/Levels/pt/Pack.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - preload_3
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 31c61a3d3943a794cb69704950d97db3
     m_Address: Assets/WordCross/Config/GameData/Levels/World_0/SubWorld_4/Level_2.asset
     m_ReadOnly: 0
@@ -2187,6 +2193,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - preload_3
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aaa0f576d14194e6eab8dc8baf3e7173
+    m_Address: Assets/WordCross/Config/GameData/Levels/es/Pack.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - preload_3
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ab963ddf9cf3f964ab7438ed45e5c0bd
     m_Address: Assets/WordCross/Config/GameData/Levels/World_4/SubWorld_0/Level_13.asset
     m_ReadOnly: 0
@@ -2399,6 +2411,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ba171dce97f7bb640bcd4aa20bb38229
     m_Address: Assets/WordCross/Config/GameData/Levels/World_1/SubWorld_1/Level_10.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - preload_3
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb53cc6e6052e478a8cbdfa6c36e6f8c
+    m_Address: Assets/WordCross/Config/GameData/Levels/fr/Pack.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - preload_3
@@ -2663,6 +2681,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d3b9fb5eb41fc7e45bd57bf4e4f13d1d
     m_Address: Assets/WordCross/Config/GameData/Levels/World_4/SubWorld_1/Level_12.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - preload_3
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d3c23fcae31c449c8a045c573bf09066
+    m_Address: Assets/WordCross/Config/GameData/Levels/vi/Pack.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - preload_3
