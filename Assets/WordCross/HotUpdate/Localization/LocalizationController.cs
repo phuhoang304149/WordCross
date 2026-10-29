@@ -36,8 +36,6 @@ namespace WordCross.Gameplay
             }
 
             Locator<LocalizationController>.Set(this);
-            transform.SetParent(null);
-            DontDestroyOnLoad(gameObject);
 
             var data = ClrContent.Instance.Load<LocalizationData>(dataKey);
             if (data == null)
@@ -52,6 +50,9 @@ namespace WordCross.Gameplay
 
             var saved = PlayerPrefs.GetString(PrefKey, "");
             language = IndexOf(saved) >= 0 ? saved : defaultLanguage;
+
+            transform.SetParent(null);
+            DontDestroyOnLoad(gameObject);
         }
 
         private void OnDestroy()
