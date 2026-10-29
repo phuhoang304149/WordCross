@@ -302,7 +302,7 @@ public class WordRegion : MonoBehaviour {
         }
         else
         {
-            DialogController.instance.ShowDialog(DialogType.Shop);
+            DialogController.instance.ShowDialog(DialogType.LowRuby);
         }
         Sound.instance.PlayButton();
     }

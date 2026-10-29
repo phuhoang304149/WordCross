@@ -123,6 +123,7 @@ namespace WordCross.Gameplay
                 case "howto":
                 case "extra":
                 case "win":
+                case "lowruby":
                     yield return OpenInMain(name, arg, level);
                     break;
                 case "shop":
@@ -290,6 +291,7 @@ namespace WordCross.Gameplay
             if (name == "howto") type = DialogType.HowtoPlay;
             else if (name == "extra") type = DialogType.ExtraWord;
             else if (name == "win") type = DialogType.Win;
+            else if (name == "lowruby") type = DialogType.LowRuby;
             DialogController.instance.ShowDialog(type);
 
             // Win/Extra ghi tiến độ vào prefs khi mở; trả lại sau khi dialog đã đọc xong dữ liệu.
