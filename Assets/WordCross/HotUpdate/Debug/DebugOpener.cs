@@ -129,6 +129,9 @@ namespace WordCross.Gameplay
                 case "shop":
                     DialogController.instance.ShowDialog(DialogType.Shop);
                     break;
+                case "aisoon":
+                    DialogController.instance.ShowDialog(DialogType.AiSoon);
+                    break;
                 case "rate":
                     DialogController.instance.ShowDialog(DialogType.RateGame);
                     break;

@@ -26,6 +26,9 @@ public class WinDialog : Dialog {
     public int videoCooldown = 120;
 
     private const string VIDEO_ACTION = "rewarded_video";
+    private const int BUTTON_FONT = 29;
+    private const int BUTTON_MIN_FONT = 14;
+    private const float BUTTON_PADDING = 26f;
 
     private LocalizationController Loc { get { return Locator<LocalizationController>.Instance; } }
 
@@ -184,6 +187,7 @@ public class WinDialog : Dialog {
         extraWordsText.text = Loc.Get("win.dailyNext");
         extraWordsText.gameObject.SetActive(true);
         ApplyDailyLayout();
+        FitGoal(dailyResult.milestone > 0 ? 2 : 1);
     }
 
     // Design popups.win biến thể Daily: không có hàng sao và nút MENU, ruby cỡ lớn, dòng chuỗi nằm trước nút video, nút về Daily cao 88.
@@ -208,6 +212,21 @@ public class WinDialog : Dialog {
         next.GetComponent<Image>().pixelsPerUnitMultiplier = 128f / 88f;
         next.GetComponent<Shadow>().effectDistance = new Vector2(0, -6.8f);
         next.GetComponentInChildren<Text>().fontSize = 29;
+    }
+
+    // Dòng mục tiêu có khung cao cố định, chữ tràn căn giữa: chữ dài (fr/es/pt) xuống thêm dòng thì nới khung và card để không đè dòng dưới.
+    private void FitGoal(int baseLines)
+    {
+        TextGenerator generator = goalText.cachedTextGeneratorForLayout;
+        generator.Populate(goalText.text, goalText.GetGenerationSettings(new Vector2(goalText.rectTransform.rect.width, 0f)));
+        int lines = Mathf.Max(1, generator.lineCount);
+        if (lines <= baseLines) return;
+
+        float extra = goalText.preferredHeight / lines * (lines - baseLines);
+        goalText.rectTransform.sizeDelta += new Vector2(0f, extra);
+        RectTransform bg = (RectTransform)transform.Find("Content/BG");
+        bg.sizeDelta += new Vector2(0f, extra);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(bg);
     }
 
     private void ShowRewardInfo()
@@ -239,6 +258,7 @@ public class WinDialog : Dialog {
         int extraProgress = Prefs.extraProgress, extraTarget = Prefs.extraTarget;
         extraWordsText.text = Loc.Get(extraProgress >= extraTarget ? "win.extraReady" : "win.extraNot", "a", extraProgress, "b", extraTarget);
         extraWordsText.gameObject.SetActive(true);
+        FitGoal(1);
     }
 
     private int GetVideoPeriod()
@@ -269,6 +289,7 @@ public class WinDialog : Dialog {
             doubleRewardText.text = Loc.Get("win.x2done");
             doubleRewardButton.interactable = false;
             CancelInvoke("RefreshDoubleReward");
+            FitSingleLine(doubleRewardText, (RectTransform)doubleRewardButton.transform);
             return;
         }
 
@@ -288,6 +309,24 @@ public class WinDialog : Dialog {
             doubleRewardText.text = Loc.Get("win.x2", "n", reward);
             doubleRewardButton.interactable = !bonusPending;
         }
+        FitSingleLine(doubleRewardText, (RectTransform)doubleRewardButton.transform);
+    }
+
+    // Nút một dòng: chuỗi dài (fr/es/pt) giảm cỡ chữ từ cỡ gốc xuống tối thiểu 14 cho vừa bề ngang nút (khung chữ trên prefab hẹp hơn nút nên đo theo nút).
+    private void FitSingleLine(Text text, RectTransform area)
+    {
+        TextGenerator generator = text.cachedTextGeneratorForLayout;
+        TextGenerationSettings settings = text.GetGenerationSettings(Vector2.zero);
+        settings.resizeTextForBestFit = false;
+        settings.horizontalOverflow = HorizontalWrapMode.Overflow;
+        int size = BUTTON_FONT;
+        settings.fontSize = size;
+        while (size > BUTTON_MIN_FONT && generator.GetPreferredWidth(text.text, settings) / text.pixelsPerUnit > area.rect.width - 2 * BUTTON_PADDING)
+        {
+            size--;
+            settings.fontSize = size;
+        }
+        text.fontSize = size;
     }
 
     public void DoubleRewardClick()
