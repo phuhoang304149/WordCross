@@ -531,6 +531,17 @@ MonoBehaviour:
   enableAd: 1
   enableEscape: 0
   titleAnim: {fileID: 95635368815019988}
+  rewardHolder: {fileID: 7600000000015}
+  rewardAmountText: {fileID: 7600000000060}
+  rewardText: {fileID: 7600000000021}
+  doubleRewardButton: {fileID: 7600000000026}
+  doubleRewardText: {fileID: 7600000000032}
+  goalText: {fileID: 7600000000036}
+  extraWordsText: {fileID: 7600000000040}
+  firstClearReward: 2
+  firstClearTutorialReward: 3
+  videoReward: 2
+  videoCooldown: 120
 --- !u!114 &114558687004065058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1680,7 +1691,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7600000000025}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114547224457905462}
+        m_MethodName: DoubleRewardClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!95 &7600000000027
