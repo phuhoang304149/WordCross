@@ -14,7 +14,7 @@
     close: svg('<path d="M6 6l12 12M18 6 6 18"/>'), globe: svg('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>')
   };
   var go = function (id) { return page ? '../' + id + '/index.html' : 'screens/' + id + '/index.html'; };
-  var nav = function (id) { location.href = go(id) + (WC.lang === 'en' && WC.embed ? '?lang=en' : ''); };
+  var nav = function (id) { location.href = go(id) + (WC.embed ? '?embed=1&lang=' + WC.lang : ''); };
   var find = function (id) { return screens.filter(function (s) { return s.id === id; })[0]; };
   var ruby = function (big) { return '<span class="ruby' + (big ? ' lg' : '') + '"></span>'; };
   var rubyPill = function () { return '<a class="ruby-pill" aria-label="' + t('common.balance') + '" href="' + go('shop') + '">' + ruby() + '<span data-bal>' + S.rubies + '</span><span class="plus" aria-label="' + t('common.addRubies') + '">+</span></a>'; };
@@ -22,9 +22,7 @@
     return '<div class="hdr"><a class="icon-btn" aria-label="' + t('common.back') + '" href="' + go(backTo) + '">' + ic.back + '</a><div class="title">' + title + '</div>' + rubyPill() + '</div>';
   };
   var tag = function (k) { return '<span class="tagx">' + t(k) + '</span>'; };
-  var MONTHS = {vi: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'], en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']};
-  var WD = {vi: ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'], en: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']};
-  var fmtShort = function (d) { var p = d.split('-'); return WC.lang === 'en' ? MONTHS.en[+p[1] - 1].slice(0, 3) + ' ' + (+p[2]) : (+p[2]) + '/' + (+p[1]); };
+  var fmtShort = WC.shortDate;
 
   /* level hiện tại của màn game: level thường hoặc Daily */
   var ctxLevel = function () {
@@ -129,8 +127,8 @@
     return bar(t('daily.title'), 'home') + '<div class="scroll-body">' +
       '<div class="daily-hero"><div><small>' + t('daily.today', {d: fmtShort(D.today)}) + ' · ' + tag('tag.demo') + '</small><b>#' + WC.dailyNo(sel) + ' · ' + fmtShort(sel) + '</b><span>' + t('daily.goal', {n: words}) + '</span></div></div>' +
       '<div class="streak ' + ss + '"><b>' + t('daily.streak', {n: str}) + '</b><span>' + t('daily.best', {n: D.best}) + '</span>' + (nm ? '<small>' + t('daily.nextMilestone', {d: nm.d, n: nm.n}) + '</small>' : '') + (msg ? '<p>' + msg + '</p>' : '') + '</div>' +
-      '<div class="month-nav"><button class="icon-btn" aria-label="' + t('daily.prev') + '" data-month="' + ptxt + '">' + ic.back + '</button><b>' + t('daily.month', {m: MONTHS[WC.lang === 'en' ? 'en' : 'vi'][m - 1], y: y}) + '</b><button class="icon-btn flip" aria-label="' + t('daily.next') + '" data-month="' + ntxt + '"' + (ntxt > D.today.slice(0, 7) ? ' disabled' : '') + '>' + ic.back + '</button></div>' +
-      '<div class="cal">' + WD[WC.lang === 'en' ? 'en' : 'vi'].map(function (x) { return '<i>' + x + '</i>'; }).join('') + cells + '</div>' +
+      '<div class="month-nav"><button class="icon-btn" aria-label="' + t('daily.prev') + '" data-month="' + ptxt + '">' + ic.back + '</button><b>' + t('daily.month', {m: WC.monthName(m), y: y}) + '</b><button class="icon-btn flip" aria-label="' + t('daily.next') + '" data-month="' + ntxt + '"' + (ntxt > D.today.slice(0, 7) ? ' disabled' : '') + '>' + ic.back + '</button></div>' +
+      '<div class="cal">' + WC.weekdays().map(function (x) { return '<i>' + x + '</i>'; }).join('') + cells + '</div>' +
       '<div class="note">' + t('daily.legend') + '</div><div class="reward-line">' + ruby() + rewardLine + '</div>' +
       '<a class="btn coral block" data-play-daily="' + sel + '" href="#">' + label + '</a><div class="note">' + t('daily.tz') + '</div>' +
       '<div class="demo-row"><span>' + tag('tag.demo') + ' ' + t('daily.demoClock', {d: D.today}) + '</span><button class="btn ghost sm" data-advance>' + t('daily.advance') + '</button><button class="btn ghost sm" data-resetdemo>' + t('daily.resetDemo') + '</button></div><div class="note">' + t('daily.sample') + '</div></div>';
@@ -153,11 +151,11 @@
       '<div class="tools solo"><div class="tool"><button class="icon-btn" aria-label="' + t('game.shuffle') + '" data-shuffle>' + ic.shuffle + '</button>' + t('game.shuffle') + '</div></div>' + wheelHTML(ord);
   };
   views.language = function () {
-    var ui = ['vi', 'en'].map(function (l) { return '<button class="opt' + (WC.lang === l ? ' on' : '') + '" data-ui="' + l + '"><b>' + t('lang.ui.' + l) + '</b></button>'; }).join('');
+    var ui = WC.locales.map(function (l) { return '<button class="opt' + (WC.lang === l ? ' on' : '') + '" data-ui="' + l + '"><b>' + t('lang.ui.' + l) + '</b></button>'; }).join('');
     var rows = [['en', 'lang.playable', true], ['fr', 'lang.soon'], ['es', 'lang.soon'], ['pt', 'lang.soon'], ['vi', 'lang.soonVi']].map(function (r) {
       return '<div class="opt game' + (r[2] ? ' on' : ' dis') + '"><b>' + t('lang.' + r[0]) + '</b><small>' + t(r[1]) + '</small></div>';
     }).join('');
-    return bar(t('lang.title'), 'home') + '<div class="scroll-body"><h4>' + t('lang.ui') + '</h4><p class="lead">' + t('lang.uiDesc') + '</p><div class="opts two">' + ui + '</div><div class="note ok" data-saved></div>' +
+    return bar(t('lang.title'), 'home') + '<div class="scroll-body"><h4>' + t('lang.ui') + '</h4><p class="lead">' + t('lang.uiDesc') + '</p><div class="opts two wrap">' + ui + '</div><div class="note ok" data-saved></div>' +
       '<h4>' + t('lang.game') + '</h4><p class="lead">' + t('lang.gameDesc') + '</p><div class="opts">' + rows + '</div><div class="note">' + t('lang.noteSoon') + '</div></div>';
   };
 
@@ -244,7 +242,7 @@
   });
 
   /* ---- shop / ads ---- */
-  on('[data-buy]', 'click', function () { var m = $('[data-msg]'); if (m) m.textContent = WC.lang === 'en' ? 'DEMO: no real checkout, IAP not verified.' : 'DEMO: chưa có thanh toán thật, chưa xác minh IAP.'; });
+  on('[data-buy]', 'click', function () { var m = $('[data-msg]'); if (m) m.textContent = t('shop.noCheckout'); });
   on('[data-ad]', 'click', function (a) {
     var p = a.dataset.ad.split(','); S.ads.ctx = {placement: p[0], amount: +p[1], back: p[2]}; WC.save(); nav('rewarded-video');
   });

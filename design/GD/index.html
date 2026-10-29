@@ -67,7 +67,7 @@
 <tr><td>Pháp / Tây Ban Nha / Bồ Đào Nha</td><td>Có thư mục từ điển (10000/10000/5000 từ, tách theo 3–7 chữ), mã hoá <b>ISO-8859 (không phải UTF-8)</b>; <b>không có level asset</b>, không code nào tham chiếu</td><td><b>Coming soon</b>, không hiển thị là chơi được</td></tr>
 <tr><td>Tiếng Việt</td><td>Không có từ điển hay level</td><td><b>Đề xuất</b> (xem lưu ý)</td></tr></table></div>
 <ul>
-<li><b>Giả định (user chưa chỉ định locale):</b> UI hỗ trợ vi + en, mặc định vi. Ngôn ngữ chơi mặc định tiếng Anh vì đó là bộ level hợp lệ duy nhất.</li>
+<li><b>Giả định (user chưa chỉ định locale):</b> UI hỗ trợ vi/en/fr/es/pt (5 locale, khớp các bộ từ điển Anh/Pháp/Tây Ban Nha/Bồ Đào Nha + vi), mặc định vi; UI locale tách hẳn ngôn ngữ chơi. Ngôn ngữ chơi mặc định tiếng Anh vì đó là bộ level hợp lệ duy nhất.</li>
 <li>Không dịch trực tiếp đáp án. Mỗi ngôn ngữ cần bộ level riêng được kiểm bằng validation ở mục 3.</li>
 <li><b>Chuẩn hoá (đề xuất):</b> so khớp bằng <code>NFD, bỏ dấu kết hợp, chữ thường</code>; vòng chữ hiển thị chữ cái gốc không dấu; dòng đáp án hiển thị từ có dấu sau khi tìm đúng. Pháp/Bồ: bỏ dấu (ç→c). Tây Ban Nha: ñ giữ là chữ riêng. Cần chuyển các file ISO-8859 sang UTF-8 trước khi dùng.</li>
 <li>Tiếng Việt cần khác: đơn vị là âm tiết (từ ghép nhiều âm tiết) nên quy tắc “ghép chữ cái thành từ” không áp dụng nguyên; chỉ đề xuất, chưa thiết kế vòng chữ.</li>
@@ -148,11 +148,12 @@
 <li><b>Trạng thái ads trong prototype</b> (popup Rewarded video, khung DEMO): loading, ready, cooldown, no-fill, offline, playing (quảng cáo mô phỏng 3s, không phải quảng cáo thật), success, cancel, error; chọn kết quả (xong/đóng sớm/lỗi) để xem từng nhánh.</li>
 </ul>
 
-<h2 id="loc">9. Localization UI (vi/en)</h2>
+<h2 id="loc">9. Localization UI (vi/en/fr/es/pt)</h2>
 <ul>
-<li><b>Cơ chế:</b> <code>design/Ui/global/js/i18n.js</code> chứa <code>WC_ROWS</code> (key → [vi, en], ~270 key) cho mọi chữ trong phone, aria-label, thông báo; catalogue và portal cũng dùng cùng từ điển. Chọn ngôn ngữ: màn Language (hoặc chip ở catalogue/portal); lưu <code>localStorage</code> (không có thì <code>window.name</code>); tham số <code>?lang=</code> dùng cho preview iframe.</li>
+<li><b>Cơ chế:</b> <code>design/Ui/global/js/i18n.js</code> chứa <code>WC_ROWS</code> (key → [vi, en, fr, es, pt], 275 key; fr/es/pt nằm trong <code>WC_ROWS_X</code> và được ghép lúc tải) cho mọi chữ trong phone, aria-label, thông báo; catalogue và portal cũng dùng cùng từ điển. Chọn ngôn ngữ: màn Language (hoặc chip ở catalogue/portal); lưu <code>localStorage</code> (không có thì <code>window.name</code>); tham số <code>?lang=</code> dùng cho preview iframe.</li>
 <li><b>Preview iframe</b> (<code>?embed=1</code>) không đọc/ghi dữ liệu, không tự claim, không ảnh hưởng demo chính.</li>
-<li>Ngôn ngữ UI không đổi chữ trong level (đó là ngôn ngữ chơi).</li>
+<li>Ngôn ngữ UI không đổi chữ trong level (đó là ngôn ngữ chơi). Thêm UI fr/es/pt <b>không</b> mở khoá ngôn ngữ chơi tương ứng: game chỉ có 534 level tiếng Anh, fr/es/pt vẫn Coming soon, không đổi đáp án, seed Daily/Bot, tiến độ hay ruby.</li>
+<li>Ngày/tháng/thứ theo locale thật (vi dùng số, các locale khác dùng <code>Intl</code>); quy tắc ngày Daily và reset không đổi. Tên “ruby” dịch theo ngôn ngữ (rubis / rubíes / rubis); tên dự án WordCross giữ nguyên.</li>
 </ul>
 <h3>Chữ gốc (HIỆN CÓ) → key</h3>
 <div class="tb"><table><tr><th>Chữ gốc (prefab/scene)</th><th>Key</th><th>vi (đề xuất)</th></tr>
@@ -183,7 +184,7 @@
 
 <h2 id="open">12. Giả định &amp; chưa xác minh</h2>
 <ul>
-<li>Giả định: locale vi/en (user chưa chỉ định); tên Subworld; ghép cặp gói ruby ↔ giá Shop; mốc đếm ngày Daily; toàn bộ số ruby/bot/ads ở mục 5–8 là <b>proposed tuning</b>; ngày demo 2026-10-29.</li>
+<li>Giả định: UI locale vi/en/fr/es/pt (user yêu cầu thêm các ngôn ngữ dùng để chơi); tên Subworld; ghép cặp gói ruby ↔ giá Shop; mốc đếm ngày Daily; toàn bộ số ruby/bot/ads ở mục 5–8 là <b>proposed tuning</b>; ngày demo 2026-10-29.</li>
 <li>Chưa xác minh: pixel/chữ của các sprite ngoài 4 ảnh đã đọc; bố cục cột Unity với số từ lẻ; hành vi thật của AdMob/CatGamingAds; IAP/giá; cân bằng thật (cần playtest); chất lượng từ điển Pháp/Tây Ban Nha/Bồ Đào Nha cho level; không chạy Unity, không QA trên trình duyệt hay ảnh chụp.</li>
 <li>Prototype: Daily/Bot/ads là mô phỏng, không gọi mạng hay quảng cáo thật; dữ liệu lưu cục bộ trong trình duyệt.</li>
 </ul>
