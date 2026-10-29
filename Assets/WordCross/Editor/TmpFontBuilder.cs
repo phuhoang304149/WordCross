@@ -19,7 +19,8 @@ namespace WordCross.Editor
         private const string LegacyAssetPath = FontRoot + "/Legacy/RockoUltraFLF SDF.asset";
         private const int SamplingSize = 48;
         private const int Padding = 5;
-        private const int AtlasSize = 1024;
+        private const int AtlasSize = 2048;
+        private const string DefaultFontPath = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset";
 
         private static readonly string[][] Sources =
         {
@@ -94,7 +95,7 @@ namespace WordCross.Editor
             foreach (var source in Sources)
             {
                 var sdfPath = FontRoot + "/" + source[0] + " SDF.asset";
-                BuildAsset(FontRoot + "/" + source[0] + ".ttf", sdfPath, characters, AtlasPopulationMode.Static);
+                BuildAsset(FontRoot + "/" + source[0] + ".ttf", sdfPath, characters, AtlasPopulationMode.Dynamic);
             }
 
             // chuỗi fallback: Baloo2 -> CookieRun cùng độ đậm -> font cũ; CookieRun thiếu glyph Việt nên rơi về fallback toàn cục (Baloo2 Bold)
@@ -120,6 +121,10 @@ namespace WordCross.Editor
             string missing;
             asset.TryAddCharacters(characters, out missing, false);
             asset.atlasPopulationMode = finalMode;
+            // giữ glyph đã dựng sẵn khi build (không xoá atlas) để máy không phải dựng lại lúc chạy
+            var serializedAsset = new SerializedObject(asset);
+            serializedAsset.FindProperty("m_ClearDynamicDataOnBuild").boolValue = false;
+            serializedAsset.ApplyModifiedPropertiesWithoutUndo();
             asset.material.name = asset.name + " Material";
             for (var i = 0; i < asset.atlasTextures.Length; i++)
                 asset.atlasTextures[i].name = asset.name + " Atlas" + (i == 0 ? "" : " " + i);
@@ -149,13 +154,13 @@ namespace WordCross.Editor
         {
             var settings = AssetDatabase.LoadAssetAtPath<TMP_Settings>(SettingsPath);
             var serialized = new SerializedObject(settings);
-            serialized.FindProperty("m_defaultFontAsset").objectReferenceValue =
-                AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(FontRoot + "/Baloo2/static/Baloo2-Bold SDF.asset");
+            // font Baloo2/CookieRun nằm ở Addressables; TMP Settings (Resources) chỉ trỏ font mặc định của Unity để không nhân đôi vào APK
+            var defaultFont = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(DefaultFontPath);
+            serialized.FindProperty("m_defaultFontAsset").objectReferenceValue = defaultFont;
             var fallbacks = serialized.FindProperty("m_fallbackFontAssets");
             fallbacks.ClearArray();
             fallbacks.InsertArrayElementAtIndex(0);
-            fallbacks.GetArrayElementAtIndex(0).objectReferenceValue =
-                AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(FontRoot + "/Baloo2/static/Baloo2-Bold SDF.asset");
+            fallbacks.GetArrayElementAtIndex(0).objectReferenceValue = defaultFont;
             serialized.FindProperty("m_warningsDisabled").boolValue = false;
             serialized.ApplyModifiedPropertiesWithoutUndo();
             AssetDatabase.SaveAssets();

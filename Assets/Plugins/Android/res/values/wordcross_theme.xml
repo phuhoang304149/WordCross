@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="wordcross_launch_background">#12b5a6</color>
+    <style name="WordCrossTheme" parent="UnityThemeSelector">
+        <item name="android:windowBackground">@color/wordcross_launch_background</item>
+    </style>
+</resources>

@@ -153,24 +153,7 @@
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.SceneInstance" preserve="all" />
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.SceneReleaseMode" preserve="all" />
   </assembly>
-  <assembly fullname="Unity.TextMeshPro">
-    <type fullname="TMPro.FontStyles" preserve="all" />
-    <type fullname="TMPro.FontWeight" preserve="all" />
-    <type fullname="TMPro.ShaderUtilities" preserve="all" />
-    <type fullname="TMPro.TMP_Asset" preserve="all" />
-    <type fullname="TMPro.TMP_CharacterInfo" preserve="all" />
-    <type fullname="TMPro.TMP_FontAsset" preserve="all" />
-    <type fullname="TMPro.TMP_MeshInfo" preserve="all" />
-    <type fullname="TMPro.TMP_SpriteAsset" preserve="all" />
-    <type fullname="TMPro.TMP_StyleSheet" preserve="all" />
-    <type fullname="TMPro.TMP_Text" preserve="all" />
-    <type fullname="TMPro.TMP_TextElementType" preserve="all" />
-    <type fullname="TMPro.TMP_TextInfo" preserve="all" />
-    <type fullname="TMPro.TextAlignmentOptions" preserve="all" />
-    <type fullname="TMPro.TextMeshPro" preserve="all" />
-    <type fullname="TMPro.TextMeshProUGUI" preserve="all" />
-    <type fullname="TMPro.TextOverflowModes" preserve="all" />
-  </assembly>
+  <assembly fullname="Unity.TextMeshPro" preserve="all" />
   <assembly fullname="UnityEngine.AndroidJNIModule">
     <type fullname="UnityEngine.AndroidJavaClass" preserve="all" />
     <type fullname="UnityEngine.AndroidJavaObject" preserve="all" />

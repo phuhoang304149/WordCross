@@ -49,7 +49,7 @@ MonoBehaviour:
   onLoaded:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &2000
+--- !u!1 &3000
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,22 +57,105 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2001}
-  - component: {fileID: 2002}
+  - component: {fileID: 3001}
+  - component: {fileID: 3002}
   m_Layer: 0
-  m_Name: CLR Splash
+  m_Name: Launch Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2001
+  m_IsActive: 1
+--- !u!4 &3001
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000}
+  m_GameObject: {fileID: 3000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &3002
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.07058824, g: 0.70980394, b: 0.65098041, a: 1}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -100
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!1 &4000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4001}
+  - component: {fileID: 4002}
+  m_Layer: 0
+  m_Name: Launch Splash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4000}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -81,27 +164,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2002
+--- !u!114 &4002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000}
+  m_GameObject: {fileID: 4000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0e67fc3ffb047029395df6858b58f7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c1e4a9b3d2f4e6a8b5c0d1e2f3a4b5c, type: 3}
   m_Name:
-  m_EditorClassIdentifier: WordCross.Player::WordCross.Player.WordCrossClrSplash
-  bootstrap: {fileID: 1002}
-  clip: {fileID: 32900000, guid: 07bf188d375a420a8c1967b049249f1e, type: 3}
-  firstFrame: {fileID: 2800000, guid: 95e780145bc74f2ea32baa02ecbf5214, type: 3}
-  backgroundColor: {r: 0.14902, g: 0.21961, b: 0.28627, a: 1}
-  prepareTimeoutSeconds: 3
-  errorMessage: Unable to load the game. Please restart and try again.
+  m_EditorClassIdentifier: WordCross.Player::WordCross.Player.WordCrossLaunchSplash
+  logo: {fileID: 21300000, guid: b3a1c2d4e5f64a7b8c9d0e1f2a3b4c5d, type: 3}
+  backgroundColor: {r: 0.07058824, g: 0.70980394, b: 0.65098041, a: 1}
+  logoWidthFraction: 0.797
+  holdAfterSceneSeconds: 0.6
+  maxSeconds: 60
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1001}
-  - {fileID: 2001}
+  - {fileID: 3001}
+  - {fileID: 4001}

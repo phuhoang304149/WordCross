@@ -2202,6 +2202,38 @@ MonoBehaviour:
     asset: {fileID: 11400000, guid: 31ba3328272b4436cb7c68881d846d61, type: 2}
     address: Assets/WordCross/Config/GameData/Levels/pt/Pack.asset
     label: 
+  - path: Assets/WordCross/Fonts/Baloo2/static/Baloo2-Regular SDF.asset
+    asset: {fileID: 11400000, guid: 33742684fc28a443b8d535b59b51e2a4, type: 2}
+    address: Assets/WordCross/Fonts/Baloo2/static/Baloo2-Regular SDF.asset
+    label: 
+  - path: Assets/WordCross/Fonts/Baloo2/static/Baloo2-Medium SDF.asset
+    asset: {fileID: 11400000, guid: 75013811abf3242a8bb637646817027d, type: 2}
+    address: Assets/WordCross/Fonts/Baloo2/static/Baloo2-Medium SDF.asset
+    label: 
+  - path: Assets/WordCross/Fonts/Baloo2/static/Baloo2-SemiBold SDF.asset
+    asset: {fileID: 11400000, guid: 71a16fc2344cb4a978f28852b7be4da5, type: 2}
+    address: Assets/WordCross/Fonts/Baloo2/static/Baloo2-SemiBold SDF.asset
+    label: 
+  - path: Assets/WordCross/Fonts/Baloo2/static/Baloo2-Bold SDF.asset
+    asset: {fileID: 11400000, guid: 466f726f4c6aa4e3197a4b8b76d9dcf6, type: 2}
+    address: Assets/WordCross/Fonts/Baloo2/static/Baloo2-Bold SDF.asset
+    label: 
+  - path: Assets/WordCross/Fonts/Baloo2/static/Baloo2-ExtraBold SDF.asset
+    asset: {fileID: 11400000, guid: 8e42f6fac57db44059270d45e1805281, type: 2}
+    address: Assets/WordCross/Fonts/Baloo2/static/Baloo2-ExtraBold SDF.asset
+    label: 
+  - path: Assets/WordCross/Fonts/CookieRun/CookieRun Regular SDF.asset
+    asset: {fileID: 11400000, guid: 7c6a1c8deca044368bccee9b2051e3be, type: 2}
+    address: Assets/WordCross/Fonts/CookieRun/CookieRun Regular SDF.asset
+    label: 
+  - path: Assets/WordCross/Fonts/CookieRun/CookieRun Bold SDF.asset
+    asset: {fileID: 11400000, guid: 7b2529c74bd11419ba98c60c622943b9, type: 2}
+    address: Assets/WordCross/Fonts/CookieRun/CookieRun Bold SDF.asset
+    label: 
+  - path: Assets/WordCross/Fonts/CookieRun/CookieRun Black SDF.asset
+    asset: {fileID: 11400000, guid: 3b642fa24566e482084e607f920c2256, type: 2}
+    address: Assets/WordCross/Fonts/CookieRun/CookieRun Black SDF.asset
+    label: 
   noLoadGroupLabel: no_load
   noLoadScriptableObjects: []
   assetGroupLabel: preload_4
