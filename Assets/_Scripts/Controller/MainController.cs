@@ -41,6 +41,23 @@ public class MainController : BaseController {
         }
 
         levelNameText.text = GameState.currentSubWorldName + " - " + (level + 1);
+        UpdateLevelSub();
+        Locator<LocalizationController>.Instance.onLanguageChanged += OnLanguageChanged;
+    }
+
+    private void OnDestroy()
+    {
+        if (Locator<LocalizationController>.Instance != null)
+            Locator<LocalizationController>.Instance.onLanguageChanged -= OnLanguageChanged;
+    }
+
+    private void OnLanguageChanged(string code)
+    {
+        UpdateLevelSub();
+    }
+
+    private void UpdateLevelSub()
+    {
         levelSubText.text = Locator<LocalizationController>.Instance.Get("common.level", "n", level + 1);
     }
 

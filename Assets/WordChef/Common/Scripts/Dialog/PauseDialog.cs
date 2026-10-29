@@ -38,4 +38,10 @@ public class PauseDialog : Dialog {
         Sound.instance.PlayButton();
         DialogController.instance.ShowDialog(DialogType.HowtoPlay);
     }
+
+    public void OnLanguageClick()
+    {
+        Sound.instance.PlayButton();
+        DialogController.instance.ShowDialog(DialogType.Language);
+    }
 }
