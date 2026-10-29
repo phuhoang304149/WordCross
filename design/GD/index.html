@@ -1,11 +1,75 @@
 <!doctype html>
-<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WordCross — GD</title><link rel="stylesheet" href="../Ui/global/css/theme.css"></head>
-<body class="cat"><div class="doc"><a href="../index.html">← Portal</a><h1>WordCross — GD</h1>
-<p>Một trang, có mục lục. Mỗi mục tách <b>HIỆN CÓ</b> (đọc trực tiếp từ source/asset, có đường dẫn) và <b>ĐỀ XUẤT</b> (thiết kế mới, chưa có trong Unity). Không có thay đổi runtime/level/build nào được thực hiện. Tiền tệ giữ nguyên là <b>ruby</b> (gốc dùng ruby; quyết định của user), không có coin và không có migration.</p>
-<nav><a href="#src">Nguồn đã đọc</a><a href="#flow">Luồng</a><a href="#levels">Level design</a><a href="#lang">Ngôn ngữ</a><a href="#ret">Giữ người chơi</a><a href="#daily">Daily</a><a href="#bot">Bot &amp; AI</a><a href="#eco">Ruby &amp; ads</a><a href="#loc">Localization UI</a><a href="#map">Mapping màn hình</a><a href="#style">Style</a><a href="#open">Giả định &amp; chưa xác minh</a></nav>
-
-<h2 id="src">1. Nguồn đã đọc</h2>
-<h3>WordCross (HIỆN CÓ)</h3>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WordCross — GD</title>
+<style>
+:root{--bg0:#0b0f17;--bg1:#121a27;--panel:#17212f;--stroke:#2c3b50;--teal:#3fd6c4;--mint:#b8f3e6;--gold:#ffd35c;--cream:#eef3f8;--dim:#98a9bd;--ok:#2fd37a;--warn:#ffb020;--bad:#ff6b6b;--blue:#6aa8ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg0);color:var(--cream);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--teal)}
+header,main,footer{max-width:1000px;margin:auto;padding:0 18px}
+header{padding-top:36px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 22px}
+.nav a{padding:6px 12px;border:1px solid var(--stroke);border-radius:10px;text-decoration:none;font-size:13px;background:var(--bg1)}
+.nav a:hover{border-color:var(--gold);color:var(--gold)}
+.eyebrow{color:var(--gold);letter-spacing:.18em;font-size:12px;text-transform:uppercase;font-weight:700}
+h1{font-size:clamp(28px,6vw,46px);line-height:1.15;margin:8px 0 10px}
+h2{font-size:23px;margin:0 0 12px;color:var(--mint)}
+h3{font-size:17px;margin:18px 0 6px;color:var(--gold)}
+section{background:var(--bg1);border:1px solid var(--stroke);border-radius:16px;padding:20px;margin:18px 0;scroll-margin-top:12px}
+p{margin:8px 0;color:#d3dde8}
+.lead{color:var(--dim);font-size:16px}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:99px;margin-right:6px;vertical-align:middle;letter-spacing:.03em}
+.t-ok{background:var(--ok);color:#06281a}
+.t-need{background:var(--gold);color:#3a2a00}
+.t-assume{background:var(--warn);color:#3a2000}
+.t-open{background:var(--bad);color:#3a0808}
+.t-exist{background:var(--blue);color:#06193a}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px;margin:14px 0;font-size:14px;color:var(--dim)}
+.legend div{background:var(--bg1);border:1px solid var(--stroke);border-radius:10px;padding:8px 10px}
+ul{padding-left:22px;margin:8px 0}li{margin:4px 0}
+code{background:#0a1320;padding:1px 6px;border-radius:6px;color:var(--mint);font-size:.9em;overflow-wrap:anywhere}
+.tbl{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{border:1px solid var(--stroke);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#0e1826;color:var(--gold)}
+.note{border-left:4px solid var(--warn);background:#241c08;border-radius:10px;padding:10px 14px;margin:12px 0}
+footer{padding:10px 18px 50px;color:var(--dim);font-size:13px}
+</style></head>
+<body>
+<header>
+<nav class="nav"><a href="../index.html">← Portal</a><a href="#ov">Tổng quan duyệt</a><a href="#src">1 Nguồn</a><a href="#flow">2 Luồng</a><a href="#levels">3 Level</a><a href="#lang">4 Ngôn ngữ</a><a href="#ret">5 Giữ người chơi</a><a href="#daily">6 Daily</a><a href="#bot">7 Bot &amp; AI</a><a href="#eco">8 Ruby &amp; ads</a><a href="#loc">9 Localization</a><a href="#map">10 Mapping</a><a href="#style">11 Style</a><a href="#open">12 Giả định</a></nav>
+<span class="eyebrow">Game Design · Word Puzzle</span>
+<h1>WordCross — GD</h1>
+<p class="lead">Một trang, có mục lục. Mỗi mục tách <b>HIỆN CÓ</b> (đọc trực tiếp từ source/asset, có đường dẫn) và <b>ĐỀ XUẤT</b> (thiết kế mới, chưa có trong Unity). Không có thay đổi runtime/level/build nào được thực hiện. Tiền tệ giữ nguyên là <b>ruby</b> (gốc dùng ruby; quyết định của user), không có coin và không có migration.</p>
+<div class="legend">
+<div><span class="tag t-ok">ĐÃ CHỐT</span>có bằng chứng user chốt</div>
+<div><span class="tag t-need">CẦN DUYỆT</span>đề xuất, chưa ai duyệt</div>
+<div><span class="tag t-assume">CHƯA CHỐT</span>giả định/tuning tạm</div>
+<div><span class="tag t-open">CHƯA XÁC MINH</span>chưa kiểm chứng</div>
+<div><span class="tag t-exist">HIỆN CÓ</span>có trong source/prototype — <b>không</b> đồng nghĩa đã được duyệt</div>
+</div>
+</header>
+<main>
+<section id="ov">
+<h2>Tổng quan những điểm cần duyệt</h2>
+<p>Trạng thái duyệt (ĐÃ CHỐT / CẦN DUYỆT / CHƯA CHỐT) tách khỏi trạng thái triển khai (HIỆN CÓ). Trang này chưa có nút duyệt; việc duyệt do user thực hiện ngoài tài liệu.</p>
+<div class="tbl"><table><tr><th>Quyết định</th><th>Trạng thái duyệt</th><th>Chi tiết</th></tr>
+<tr><td>Tiền tệ giữ là <b>ruby</b>, không coin, không migration</td><td><span class="tag t-ok">ĐÃ CHỐT</span></td><td><a href="#eco">8 Ruby &amp; ads</a></td></tr>
+<tr><td>Home thêm DAILY, ĐẤU BOT, ĐẤU AI (Coming soon), NGÔN NGỮ; popup thiếu ruby; Win có mục tiêu kế và thưởng lần đầu</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#flow">2 Luồng</a></td></tr>
+<tr><td>Quy tắc độ khó/nhịp và validation level mới (không sửa level Unity)</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#levels">3 Level design</a></td></tr>
+<tr><td>Ngôn ngữ chơi tách UI; chuẩn hoá bỏ dấu; Pháp/TBN/Bồ là Coming soon; tiến độ riêng theo locale</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#lang">4 Ngôn ngữ</a></td></tr>
+<tr><td>Onboarding, mục tiêu kế, streak không phạt nặng, chống farm</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#ret">5 Giữ người chơi</a></td></tr>
+<tr><td>Daily Challenge: lịch, seed theo ngày, thưởng, mốc chuỗi, reset</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#daily">6 Daily</a></td></tr>
+<tr><td>Chơi với Bot (luật, độ khó, thưởng) và nút AI “Coming soon”</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#bot">7 Bot &amp; AI</a></td></tr>
+<tr><td>Nguồn/sink ruby, rewarded tự chọn, interstitial chỉ sau thắng (đổi so với gốc), không paywall</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#eco">8 Ruby &amp; ads</a></td></tr>
+<tr><td>Cơ chế i18n UI vi/en/fr/es/pt</td><td><span class="tag t-need">CẦN DUYỆT</span></td><td><a href="#loc">9 Localization</a></td></tr>
+<tr><td>Danh sách locale UI, tên Subworld, ghép gói ruby↔giá, mốc đếm ngày Daily, mọi số ruby/bot/ads, ngày demo</td><td><span class="tag t-assume">CHƯA CHỐT</span></td><td><a href="#open">12 Giả định</a></td></tr>
+<tr><td>Sprite ngoài 4 ảnh đã đọc, cột Unity với số từ lẻ, AdMob/IAP thật, cân bằng, từ điển fr/es/pt</td><td><span class="tag t-open">CHƯA XÁC MINH</span></td><td><a href="#open">12 Giả định</a></td></tr>
+<tr><td>Dữ liệu source/level/ads/shop hiện tại (534 level, Hint 2 ruby, adPeriod 90…)</td><td><span class="tag t-exist">HIỆN CÓ</span> không phải quyết định đã duyệt</td><td><a href="#src">1 Nguồn</a>, <a href="#map">10 Mapping</a></td></tr>
+</table></div>
+</section>
+<section id="src"><h2><span class="tag t-exist">HIỆN CÓ / THAM KHẢO</span> 1. Nguồn đã đọc</h2>
+<h3><span class="tag t-exist">HIỆN CÓ</span>WordCross (HIỆN CÓ)</h3>
 <ul>
 <li><b>Scenes</b> <code>Assets/_Scenes/{Home,SelectWorld,SelectLevel,Main}.unity</code>: Home chỉ có m_Text <code>WORD CROSS</code> (tên dự án giữ là WordCross; ảnh <code>game_title.png</code> đọc trực tiếp lại ghi <b>WORD CHEF</b>, khác text trong Home.unity); các nhãn nút còn lại không có m_Text.</li>
 <li><b>Prefab dialog</b> <code>Assets/_Prefabs/Dialogs/*.prefab</code>, <code>Header</code>, <code>ShopItem</code>, <code>WorldItem</code>, <code>LevelButton</code>: chữ thật (m_Text) liệt kê ở mục 9. Nhãn dạng ảnh nằm trong <code>Assets/_Sprites/Main</code> (button_play, button_shop, button_hint, button_shuffle, button_next_level, button_menu, button_video, game_title, extra_word_dialog, how_play_preview00–02…). Đọc trực tiếp file gốc (không qua screenshot) chỉ 4 ảnh: <code>game_title.png</code> ghi WORD CHEF; <code>button_play.png</code> chỉ có icon tam giác xanh, <b>không chữ PLAY</b>; <code>button_hint.png</code> chỉ có icon bóng đèn cam, <b>không chữ HINT</b>; <code>how_play_preview00.png</code> minh hoạ đĩa vòng chữ W/O/R/D và bảng 3 dòng ô đáp án (không lưới giao nhau). Các sprite còn lại chỉ biết tên file, chưa xem pixel nên nội dung là suy luận từ tên.</li>
@@ -20,13 +84,15 @@
 <li><b>Wordle</b> <code>Assets/catgamingmodule/DailyChallenge/DailyChallengeService.cs</code>, <code>DailyChallengeView.cs</code>, <code>Assets/Wordle/HotUpdate/Core/WordleBot.cs</code>: lưu “đã giải” theo khoá ngày <code>yyyyMMdd</code>, chỉ chọn được ngày ≤ hôm nay, mặc định chọn ngày gần nhất chưa giải, giới hạn tháng; bot chỉ dựa trên phản hồi công khai, không biết đáp án/seed phiên. → Áp dụng: khoá theo ngày, chọn mặc định; bot WordCross dựng timeline độc lập với input người chơi.</li>
 </ul>
 
-<h2 id="flow">2. Luồng</h2>
-<p><b>HIỆN CÓ:</b> Home (Play) → SelectWorld → SelectLevel → Main. Thắng → WinDialog: Next (level cuối của subworld về SelectWorld) hoặc Menu. Hint tốn 2 ruby; thiếu ruby → mở Shop. Shop có video thưởng và 5 gói ruby. Level 1-1-1 tự mở How to play. Tiến độ mở khoá tuyến tính (<code>unlocked_world/sub_world/level</code>).</p>
-<p><b>ĐỀ XUẤT thêm:</b> Home có DAILY, ĐẤU BOT, ĐẤU AI (Coming soon), NGÔN NGỮ; popup thiếu ruby (thay vì ném thẳng vào Shop); Win có mục tiêu kế và thưởng lần đầu.</p>
+</section>
+<section id="flow"><h2><span class="tag t-exist">HIỆN CÓ</span><span class="tag t-need">CẦN DUYỆT</span> 2. Luồng</h2>
+<p><span class="tag t-exist">HIỆN CÓ</span> Home (Play) → SelectWorld → SelectLevel → Main. Thắng → WinDialog: Next (level cuối của subworld về SelectWorld) hoặc Menu. Hint tốn 2 ruby; thiếu ruby → mở Shop. Shop có video thưởng và 5 gói ruby. Level 1-1-1 tự mở How to play. Tiến độ mở khoá tuyến tính (<code>unlocked_world/sub_world/level</code>).</p>
+<p><span class="tag t-need">ĐỀ XUẤT · CẦN DUYỆT</span> Home có DAILY, ĐẤU BOT, ĐẤU AI (Coming soon), NGÔN NGỮ; popup thiếu ruby (thay vì ném thẳng vào Shop); Win có mục tiêu kế và thưởng lần đầu.</p>
 
-<h2 id="levels">3. Level design (bám dữ liệu thật)</h2>
-<h3>HIỆN CÓ — inventory</h3>
-<div class="tb"><table><tr><th>World</th><th>Số level</th><th>Chữ của level</th><th>Số đáp án (min–max, TB)</th><th>Từ thưởng TB</th></tr>
+</section>
+<section id="levels"><h2><span class="tag t-exist">HIỆN CÓ</span><span class="tag t-need">CẦN DUYỆT</span> 3. Level design (bám dữ liệu thật)</h2>
+<h3><span class="tag t-exist">HIỆN CÓ</span>HIỆN CÓ — inventory</h3>
+<div class="tbl"><table><tr><th>World</th><th>Số level</th><th>Chữ của level</th><th>Số đáp án (min–max, TB)</th><th>Từ thưởng TB</th></tr>
 <tr><td>1</td><td>84 (Sub1 = 12, còn lại 18)</td><td>3–5 (TB 4.3)</td><td>2–11 (6.1)</td><td>0.9</td></tr>
 <tr><td>2</td><td>90</td><td>5</td><td>4–15 (8.0)</td><td>2.2</td></tr>
 <tr><td>3</td><td>90</td><td>6</td><td>3–14 (7.1)</td><td>1.8</td></tr>
@@ -34,7 +100,7 @@
 <tr><td>5</td><td>90</td><td>7</td><td>1–4 (2.4)</td><td>2.0</td></tr>
 <tr><td>6</td><td>90</td><td>7</td><td>1–6 (2.5)</td><td>1.6</td></tr></table></div>
 <p>Tổng 534 level = 6 World × 5 Subworld; <code>Utils.GetNumLevels</code> khớp số file. Phân bố độ dài chữ: 3 chữ ×12, 4 ×36, 5 ×126, 6 ×180, 7 ×180. 257/534 level có chữ lặp. Toàn bộ <code>word</code> là ASCII chữ thường, chỉ tiếng Anh.</p>
-<h3>HIỆN CÓ — quy tắc dữ liệu (đã kiểm trên 534 level)</h3>
+<h3><span class="tag t-exist">HIỆN CÓ</span>HIỆN CÓ — quy tắc dữ liệu (đã kiểm trên 534 level)</h3>
 <ul>
 <li><code>answers</code> luôn xếp theo độ dài tăng dần và luôn chứa nguyên <code>word</code> (534/534); mọi đáp án ghép được từ chữ của <code>word</code> (0 vi phạm).</li>
 <li><code>validWords</code> gần như luôn chứa cả đáp án (533/534; 1 level thiếu, không ảnh hưởng vì CheckAnswer kiểm <code>answers</code> trước). <b>Từ thưởng = validWords trừ answers</b>: TB 1.7/level, tối đa 9, <b>162 level không có từ thưởng</b>.</li>
@@ -42,7 +108,7 @@
 <li>Hint mở 1 ô của dòng chưa xong đầu tiên (LineWord.ShowHint), không mở cả từ. Shuffle không tốn ruby.</li>
 </ul>
 <h3>Level mẫu thật (dùng trong prototype; solvable đã kiểm bằng script)</h3>
-<div class="tb"><table><tr><th>Vị trí</th><th>Chữ</th><th>answers</th><th>Từ thưởng</th></tr>
+<div class="tbl"><table><tr><th>Vị trí</th><th>Chữ</th><th>answers</th><th>Từ thưởng</th></tr>
 <tr><td>World 1 · Sub 1 · Level 1</td><td><code>THE</code> (3 chữ)</td><td>he, the</td><td>—</td></tr>
 <tr><td>World 1 · Sub 1 · Level 6</td><td><code>FOG</code> (3 chữ)</td><td>of, go, fog</td><td>—</td></tr>
 <tr><td>World 1 · Sub 3 · Level 4</td><td><code>LIKE</code> (4 chữ)</td><td>ilk, lie, lei, like</td><td>elk</td></tr>
@@ -52,7 +118,7 @@
 <tr><td>World 5 · Sub 4 · Level 10</td><td><code>GRAPHIC</code> (7 chữ)</td><td>graph, chair, graphic</td><td>chirp, cigar, parch</td></tr>
 <tr><td>World 6 · Sub 5 · Level 18</td><td><code>FOREVER</code> (7 chữ)</td><td>fever, refer, forever</td><td>fervor, freer, rover</td></tr>
 <tr><td>World 1 · Sub 1 · Level 2–12</td><td colspan="3">11 level thật còn lại của Subworld 1 nằm trong <code>levels-data.js</code> (the, and, for, say, but, fog, low, opt, arm, ash, rod, pat).</td></tr></table></div>
-<h3>ĐỀ XUẤT — độ khó &amp; nhịp (không sửa level Unity)</h3>
+<h3><span class="tag t-need">CẦN DUYỆT</span>ĐỀ XUẤT — độ khó &amp; nhịp (không sửa level Unity)</h3>
 <ul>
 <li><b>Tín hiệu độ khó</b> có sẵn trong dữ liệu: số chữ, số đáp án, chữ lặp. World 1 dạy cơ chế (3–5 chữ), World 2–4 tăng số đáp án, World 5–6 chuyển sang chữ 7 nhưng chỉ 1–4 đáp án (khó nhận ra từ dài, ít mục tiêu). Giữ nguyên dữ liệu; chỉ cân chỉnh phần thưởng và nhịp.</li>
 <li><b>Xen kẽ thử thách/hồi nhịp</b> đã có tự nhiên trong từng Subworld: World 2 · Sub 1 có chuỗi số đáp án 7,6,6,6,5,<b>11</b>,8,8,9,8,9,<b>4</b>,10,… (đỉnh ở level 6, hồi ở level 12); World 4 · Sub 3 có 7,6,<b>3</b>,8,5,<b>3</b>,10,… Quy tắc đề xuất: sau tối đa 3 level “nặng” (≥9 đáp án hoặc chữ lặp) cần 1 level nhẹ (≤5 đáp án); nếu người chơi thua/rời cùng một level 2 lần thì ưu tiên hiện gợi ý miễn phí về Shuffle và Từ thưởng, không giảm độ khó đáp án.</li>
@@ -61,8 +127,9 @@
 <li><b>Chưa xác minh</b>: thứ tự hiển thị cột khi số từ lẻ trong Unity; độ khó cảm nhận thực tế (cần telemetry/playtest).</li>
 </ul>
 
-<h2 id="lang">4. Ngôn ngữ chơi (tách khỏi ngôn ngữ UI)</h2>
-<div class="tb"><table><tr><th>Ngôn ngữ chơi</th><th>Bằng chứng</th><th>Trạng thái</th></tr>
+</section>
+<section id="lang"><h2><span class="tag t-exist">HIỆN CÓ</span><span class="tag t-need">CẦN DUYỆT</span> 4. Ngôn ngữ chơi (tách khỏi ngôn ngữ UI)</h2>
+<div class="tbl"><table><tr><th>Ngôn ngữ chơi</th><th>Bằng chứng</th><th>Trạng thái</th></tr>
 <tr><td>Tiếng Anh</td><td>534 level, dictionary <code>10000 English Words</code> (+ 3–7_letters.txt)</td><td><b>Chơi được</b> (HIỆN CÓ)</td></tr>
 <tr><td>Pháp / Tây Ban Nha / Bồ Đào Nha</td><td>Có thư mục từ điển (10000/10000/5000 từ, tách theo 3–7 chữ), mã hoá <b>ISO-8859 (không phải UTF-8)</b>; <b>không có level asset</b>, không code nào tham chiếu</td><td><b>Coming soon</b>, không hiển thị là chơi được</td></tr>
 <tr><td>Tiếng Việt</td><td>Không có từ điển hay level</td><td><b>Đề xuất</b> (xem lưu ý)</td></tr></table></div>
@@ -74,7 +141,8 @@
 <li><b>Tiến độ riêng theo locale</b>: khoá lưu <code>progress.&lt;gameLang&gt;</code> (unlocked, cleared, extra, daily, bot seed). Đổi ngôn ngữ chơi không xoá tiến độ ngôn ngữ khác. Prototype chỉ có tiếng Anh nên chỉ minh hoạ màn Language.</li>
 </ul>
 
-<h2 id="ret">5. Giữ người chơi (retention) — ĐỀ XUẤT trong phạm vi design</h2>
+</section>
+<section id="ret"><h2><span class="tag t-need">CẦN DUYỆT</span> 5. Giữ người chơi (retention) — ĐỀ XUẤT trong phạm vi design</h2>
 <ul>
 <li><b>Onboarding ngắn:</b> Level 1 là <code>THE</code> (2 từ: HE, THE) → thắng đầu tiên trong ~15–20 giây; How to play mở một lần (HIỆN CÓ); coach 2 dòng trong bàn; thưởng thắng đầu 3 ruby (đủ cho 1 hint ngay level sau, không phải mua). 11 level kế (And…Pat) chỉ 2–4 từ để thắng liên tục.</li>
 <li><b>Mục tiêu kế sau mỗi thắng:</b> popup Win luôn ghi “Level kế · còn N level để mở Subworld kế” và tiến độ Từ thưởng; Home hiện “Tiếp tục: Subworld · Level”.</li>
@@ -83,15 +151,15 @@
 <li><b>Ruby đều, tiêu có ý nghĩa:</b> kiếm ở mọi hoạt động, tiêu chính là hint; không có thứ gì bắt buộc phải trả ruby/xem ads để tiếp tục.</li>
 <li><b>Không farm:</b> thưởng thắng chỉ lần đầu; chơi lại 0 ruby; Từ thưởng chỉ tính 1 lần mỗi level; Bot có trần ruby/ngày; Daily thưởng 1 lần mỗi ngày.</li>
 </ul>
-<h3>Hai vòng phiên chơi mẫu (số PROPOSED, dùng thử để cân)</h3>
-<div class="tb"><table><tr><th>Bước</th><th>Phiên A (lần đầu, ~8 phút)</th><th>Ruby</th></tr>
+<h3><span class="tag t-need">CẦN DUYỆT</span>Hai vòng phiên chơi mẫu (số PROPOSED, dùng thử để cân)</h3>
+<div class="tbl"><table><tr><th>Bước</th><th>Phiên A (lần đầu, ~8 phút)</th><th>Ruby</th></tr>
 <tr><td>Bắt đầu</td><td>Ruby khởi đầu (HIỆN CÓ)</td><td>10</td></tr>
 <tr><td>Level 1 (tutorial) thắng lần đầu</td><td>+3</td><td>13</td></tr>
 <tr><td>Level 2–5 thắng lần đầu</td><td>4 × +2</td><td>21</td></tr>
 <tr><td>2 hint khi bí</td><td>2 × −2</td><td>17</td></tr>
 <tr><td>Daily hôm nay</td><td>+3</td><td><b>20</b></td></tr>
 <tr><td colspan="3">Level 1–5 trong levels-data.js không có từ thưởng nên phiên A không có bước nhận Từ thưởng. Tuỳ chọn: video x2 sau Daily +3 (ra 23). Không có bước nào bắt buộc xem ads.</td></tr></table></div>
-<div class="tb"><table><tr><th>Bước</th><th>Phiên B (ngày hôm sau, ~6 phút)</th><th>Ruby</th></tr>
+<div class="tbl"><table><tr><th>Bước</th><th>Phiên B (ngày hôm sau, ~6 phút)</th><th>Ruby</th></tr>
 <tr><td>Bắt đầu</td><td>Số dư cuối phiên A</td><td>20</td></tr>
 <tr><td>Daily (chuỗi 2 ngày, chưa tới mốc 3)</td><td>+3</td><td>23</td></tr>
 <tr><td>Level 6–9 lần đầu</td><td>4 × +2</td><td>31</td></tr>
@@ -101,7 +169,8 @@
 <h3>Chỉ số cần cân chỉnh sau phát hành (không phải cam kết retention)</h3>
 <ul><li>Tỷ lệ hoàn thành Level 1 và thời gian tới thắng đầu; D1/D7 quay lại.</li><li>Tỷ lệ level bị rời (quit) theo level; tỷ lệ dùng hint trên mỗi level; số dư ruby trung vị cuối phiên (quá cao → tăng chi phí/ giảm thưởng; quá thấp → tăng thưởng).</li><li>Tỷ lệ chơi Daily, tỷ lệ bù ngày, độ dài chuỗi trung vị.</li><li>Tỷ lệ bấm video tuỳ chọn và tỷ lệ hoàn thành; khiếu nại về quảng cáo.</li><li>Tỷ lệ thắng Bot theo độ khó (mục tiêu tham khảo: Dễ ~80%, Vừa ~55%, Khó ~30%).</li></ul>
 
-<h2 id="daily">6. Daily Challenge — ĐỀ XUẤT</h2>
+</section>
+<section id="daily"><h2><span class="tag t-need">CẦN DUYỆT</span> 6. Daily Challenge — ĐỀ XUẤT</h2>
 <ul>
 <li><b>Vào:</b> nút DAILY trên Home (chấm đỏ khi hôm nay chưa xong) → lịch tháng; chọn ngày ≤ hôm nay (mặc định hôm nay); ngày tương lai bị khoá (theo Wordle/TileConnect).</li>
 <li><b>Seed theo ngày/locale:</b> <code>bàn = pool[ hash(ngônNgữChơi | yyyy-mm-dd) mod |pool| ]</code>. Cùng ngôn ngữ + ngày → cùng bàn cho mọi người; không phụ thuộc tiến độ. Prototype dùng pool 6 level mẫu thật, bản chính dùng ngân hàng level của ngôn ngữ đó. Số thứ tự #N = số ngày từ 2026-01-01 (giả định mốc).</li>
@@ -113,7 +182,8 @@
 <li><b>Prototype:</b> ngày demo cố định 2026-10-29 với dữ liệu mẫu (đã xong 22–27/10, lỡ 28/10) để xem bù ngày; nút “DEMO: sang ngày kế” và “đặt lại dữ liệu”.</li>
 </ul>
 
-<h2 id="bot">7. Chơi với Bot &amp; Chơi với AI — ĐỀ XUẤT</h2>
+</section>
+<section id="bot"><h2><span class="tag t-need">CẦN DUYỆT</span> 7. Chơi với Bot &amp; Chơi với AI — ĐỀ XUẤT</h2>
 <h3>Bot (có trong prototype)</h3>
 <ul>
 <li><b>Luật:</b> người chơi và bot giải <b>cùng một bàn, cùng ngôn ngữ</b>, 90 giây. Điểm = số chữ của từ tìm được. Bên tìm đủ tất cả đáp án trước thắng; hết giờ so điểm, bằng nhau là hoà. Hint tắt, Shuffle miễn phí, từ thưởng không tính điểm.</li>
@@ -125,21 +195,22 @@
 <h3>AI (không có chức năng)</h3>
 <p>Nút <b>ĐẤU AI · SẮP CÓ</b> mở popup “Coming soon”: không ngày phát hành, <b>không ghép trận, không thanh toán, không quảng cáo, không đăng ký nhận tin</b>. Nút chính bị tắt, gợi ý chuyển sang Bot/Daily.</p>
 
-<h2 id="eco">8. Ruby &amp; Ads</h2>
-<h3>HIỆN CÓ</h3>
+</section>
+<section id="eco"><h2><span class="tag t-exist">HIỆN CÓ</span><span class="tag t-need">CẦN DUYỆT</span> 8. Ruby &amp; Ads</h2>
+<h3><span class="tag t-exist">HIỆN CÓ</span>HIỆN CÓ</h3>
 <ul>
 <li>Một tiền tệ <b>ruby</b>, khởi đầu 10 (Header.prefab hiển thị 12 chỉ là placeholder). Nguồn: video 2 ruby (chu kỳ 120s), Từ thưởng (target/5×2, target 5 → 10 khi tổng từ thưởng &gt;10), RubyFly +1, gói Shop 50/110/250/450/1100, thông báo/promote. Sink duy nhất: Hint 2 ruby.</li>
 <li>Interstitial: gọi khi mở dialog có <code>enableAd</code> (Extra, HowTo, Pause, Shop, Win) và khi app resume, cách nhau <code>adPeriod</code> 90s; mua bất kỳ gói → tắt ads (<code>IsBuyItem</code>/<code>IsAdsRemoved</code>). Banner dưới màn Main. Rewarded: nút chỉ hiện khi quảng cáo đã tải và qua <code>rewardedVideoPeriod</code>; ruby cộng khi đóng RewardedVideoDialog.</li>
 </ul>
-<h3>ĐỀ XUẤT</h3>
-<div class="tb"><table><tr><th>Nguồn ruby</th><th>Số</th><th>Giới hạn</th></tr>
+<h3><span class="tag t-need">CẦN DUYỆT</span>ĐỀ XUẤT</h3>
+<div class="tbl"><table><tr><th>Nguồn ruby</th><th>Số</th><th>Giới hạn</th></tr>
 <tr><td>Thắng lần đầu</td><td>+2 (Level 1: +3)</td><td>1 lần mỗi level; chơi lại 0</td></tr>
 <tr><td>Từ thưởng</td><td>2 mỗi 5 từ (sau đó 4 mỗi 10)</td><td>mỗi từ tính 1 lần/level (HIỆN CÓ)</td></tr>
 <tr><td>Daily</td><td>+3, bù +1, mốc chuỗi 2/5/8</td><td>1 lần mỗi ngày/mốc</td></tr>
 <tr><td>Bot</td><td>1/2/3 khi thắng, hoà +1</td><td>6 ruby/ngày, 1 lần/mã trận</td></tr>
 <tr><td>Video tuỳ chọn</td><td>+2 (Shop / thiếu ruby), x2 phần thắng đầu/Daily</td><td>chu kỳ 120s (HIỆN CÓ), mỗi vị trí 1 lần</td></tr>
 <tr><td>Mua gói</td><td>50–1100</td><td>giá demo, IAP chưa xác minh</td></tr></table></div>
-<div class="tb"><table><tr><th>Sink</th><th>Chi phí</th><th>Ghi chú</th></tr><tr><td>Hint (mở 1 ô)</td><td>2 ruby (HIỆN CÓ)</td><td>tuỳ chọn; bí thì Shuffle miễn phí</td></tr></table></div>
+<div class="tbl"><table><tr><th>Sink</th><th>Chi phí</th><th>Ghi chú</th></tr><tr><td>Hint (mở 1 ô)</td><td>2 ruby (HIỆN CÓ)</td><td>tuỳ chọn; bí thì Shuffle miễn phí</td></tr></table></div>
 <ul>
 <li><b>Không paywall:</b> chơi, thắng, Shuffle, Từ thưởng, Daily, Bot đều miễn phí. Hết ruby: popup “Cần 2 ruby” gồm <i>xem video +2 (tuỳ chọn)</i>, <i>Shop</i>, <b>Bỏ qua, chơi tiếp</b> (thay vì mở Shop thẳng như gốc).</li>
 <li><b>Rewarded tự chọn:</b> luôn hiện giá trị (“+2 ruby”) trước khi xem. Ruby chỉ cộng ở <b>callback hoàn thành</b> bằng <code>adComplete(sessionId)</code>, idempotent theo id; huỷ/lỗi/không có quảng cáo/offline: không thưởng, không trừ ruby. Daily/Win x2 khoá theo id nên không cộng dồn sai.</li>
@@ -148,15 +219,16 @@
 <li><b>Trạng thái ads trong prototype</b> (popup Rewarded video, khung DEMO): loading, ready, cooldown, no-fill, offline, playing (quảng cáo mô phỏng 3s, không phải quảng cáo thật), success, cancel, error; chọn kết quả (xong/đóng sớm/lỗi) để xem từng nhánh.</li>
 </ul>
 
-<h2 id="loc">9. Localization UI (vi/en/fr/es/pt)</h2>
+</section>
+<section id="loc"><h2><span class="tag t-exist">HIỆN CÓ</span><span class="tag t-need">CẦN DUYỆT</span> 9. Localization UI (vi/en/fr/es/pt)</h2>
 <ul>
 <li><b>Cơ chế:</b> <code>design/Ui/global/js/i18n.js</code> chứa <code>WC_ROWS</code> (key → [vi, en, fr, es, pt], 275 key; fr/es/pt nằm trong <code>WC_ROWS_X</code> và được ghép lúc tải) cho mọi chữ trong phone, aria-label, thông báo; catalogue và portal cũng dùng cùng từ điển. Chọn ngôn ngữ: màn Language (hoặc chip ở catalogue/portal); lưu <code>localStorage</code> (không có thì <code>window.name</code>); tham số <code>?lang=</code> dùng cho preview iframe.</li>
 <li><b>Preview iframe</b> (<code>?embed=1</code>) không đọc/ghi dữ liệu, không tự claim, không ảnh hưởng demo chính.</li>
 <li>Ngôn ngữ UI không đổi chữ trong level (đó là ngôn ngữ chơi). Thêm UI fr/es/pt <b>không</b> mở khoá ngôn ngữ chơi tương ứng: game chỉ có 534 level tiếng Anh, fr/es/pt vẫn Coming soon, không đổi đáp án, seed Daily/Bot, tiến độ hay ruby.</li>
 <li>Ngày/tháng/thứ theo locale thật (vi dùng số, các locale khác dùng <code>Intl</code>); quy tắc ngày Daily và reset không đổi. Tên “ruby” dịch theo ngôn ngữ (rubis / rubíes / rubis); tên dự án WordCross giữ nguyên.</li>
 </ul>
-<h3>Chữ gốc (HIỆN CÓ) → key</h3>
-<div class="tb"><table><tr><th>Chữ gốc (prefab/scene)</th><th>Key</th><th>vi (đề xuất)</th></tr>
+<h3><span class="tag t-exist">HIỆN CÓ</span>Chữ gốc (HIỆN CÓ) → key</h3>
+<div class="tbl"><table><tr><th>Chữ gốc (prefab/scene)</th><th>Key</th><th>vi (đề xuất)</th></tr>
 <tr><td>WORD CROSS (Home.unity)</td><td>logo</td><td>giữ nguyên</td></tr>
 <tr><td>Pause: Continue / To Menu / Quit</td><td>pause.*</td><td>TIẾP TỤC / VỀ MENU / THOÁT</td></tr>
 <tr><td>HOW TO PLAY ? · Swipe to build a valid word. · Use "Shuffle" or "Hint"…</td><td>how.*</td><td>CÁCH CHƠI ? …</td></tr>
@@ -168,8 +240,9 @@
 <tr><td>Nút ảnh: Play (icon tam giác, không chữ), Hint (icon bóng đèn, không chữ); Shop, Shuffle, Next, Menu, Video… (chưa xem pixel)</td><td>home.*, game.*, win.*</td><td>chữ dựng bằng HTML thay vì ảnh</td></tr></table></div>
 <p>Khác biệt có chủ đích: prototype hiển thị chữ in hoa trên nút theo prefab; Win “LEVEL COMPLETE!” và các dòng thưởng/mục tiêu là <b>mới</b> (prefab Win không có m_Text).</p>
 
-<h2 id="map">10. Mapping màn hình → source</h2>
-<div class="tb"><table><tr><th>Thiết kế</th><th>Loại</th><th>Source / tham khảo</th></tr>
+</section>
+<section id="map"><h2><span class="tag t-exist">HIỆN CÓ / THAM KHẢO</span> 10. Mapping màn hình → source</h2>
+<div class="tbl"><table><tr><th>Thiết kế</th><th>Loại</th><th>Source / tham khảo</th></tr>
 <tr><td>home</td><td>HIỆN CÓ + đề xuất nút</td><td><code>_Scenes/Home.unity</code>, HomeController</td></tr>
 <tr><td>select-world</td><td>HIỆN CÓ</td><td><code>SelectWorld.unity</code>, WorldItem, Const.NUM_SUBWORLD=5, 6 World</td></tr>
 <tr><td>select-level</td><td>HIỆN CÓ</td><td><code>SelectLevel.unity</code>, LevelButton, Utils.GetNumLevels (Sub1 = 12)</td></tr>
@@ -178,14 +251,19 @@
 <tr><td>rewarded-video</td><td>HIỆN CÓ + trạng thái đề xuất</td><td>RewardedVideoDialog, RewardedButton</td></tr>
 <tr><td>low-ruby, daily, bot-setup, bot-match, bot-result, language, ai-soon</td><td>ĐỀ XUẤT</td><td>mục 5–8; tham khảo 3 repo</td></tr></table></div>
 
-<h2 id="style">11. Nguồn style</h2>
+</section>
+<section id="style"><h2><span class="tag t-exist">HIỆN CÓ / THAM KHẢO</span> 11. Nguồn style</h2>
 <p><b>Quan sát có bằng chứng (YAML prefab):</b> breakfree-unity <code>GenericButton.prefab</code>: nhãn là ảnh sprite, ColorTint pressed 0.78. deuegambit <code>Slider_Level01_Green.prefab</code>: bóng đặc lệch (0,−5) alpha ~0.2, Sliced. YAML chỉ có GUID sprite nên không kết luận được hình dạng/màu sprite hay font.</p>
 <p><b>Lựa chọn thiết kế của WordCross (không phải quan sát):</b> phẳng, teal/coral/yellow, bo lớn, bóng đặc lệch 4px, không blur. Font hệ thống (không nhúng font ngoài, không sao chép asset từ repo khác); ruby vẽ bằng CSS.</p>
 
-<h2 id="open">12. Giả định &amp; chưa xác minh</h2>
+</section>
+<section id="open"><h2><span class="tag t-assume">CHƯA CHỐT</span><span class="tag t-open">CHƯA XÁC MINH</span> 12. Giả định &amp; chưa xác minh</h2>
 <ul>
 <li>Giả định: UI locale vi/en/fr/es/pt (user yêu cầu thêm các ngôn ngữ dùng để chơi); tên Subworld; ghép cặp gói ruby ↔ giá Shop; mốc đếm ngày Daily; toàn bộ số ruby/bot/ads ở mục 5–8 là <b>proposed tuning</b>; ngày demo 2026-10-29.</li>
 <li>Chưa xác minh: pixel/chữ của các sprite ngoài 4 ảnh đã đọc; bố cục cột Unity với số từ lẻ; hành vi thật của AdMob/CatGamingAds; IAP/giá; cân bằng thật (cần playtest); chất lượng từ điển Pháp/Tây Ban Nha/Bồ Đào Nha cho level; không chạy Unity, không QA trên trình duyệt hay ảnh chụp.</li>
 <li>Prototype: Daily/Bot/ads là mô phỏng, không gọi mạng hay quảng cáo thật; dữ liệu lưu cục bộ trong trình duyệt.</li>
-</ul>
-</div></body></html>
+</ul></section>
+
+</main>
+<footer>design/GD/index.html — trang tĩnh, font hệ thống, không CDN, CSS nội bộ.</footer>
+</body></html>
