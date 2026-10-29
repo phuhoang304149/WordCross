@@ -197,7 +197,7 @@ public class WinDialog : Dialog {
         holder.sizeDelta = new Vector2(504, 93);
         ((RectTransform)holder.Find("RubyIcon")).anchoredPosition = new Vector2(-49, 0);
         rewardAmountText.fontSize = 74;
-        rewardAmountText.rectTransform.anchoredPosition = new Vector2(44, 0);
+        rewardAmountText.rectTransform.anchoredPosition = new Vector2(38, 0);
         rewardAmountText.rectTransform.sizeDelta = new Vector2(130, 100);
 
         if (dailyResult.milestone > 0) goalText.rectTransform.sizeDelta = new Vector2(504, 41);
