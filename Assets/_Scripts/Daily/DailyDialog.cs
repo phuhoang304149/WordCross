@@ -35,6 +35,7 @@ public class DailyDialog : Dialog
     private readonly Color32 white = new Color32(255, 255, 255, 255);
     private readonly Color32 lostSoft = new Color32(238, 243, 243, 255);
 
+    private RectTransform selectionOuter, selectionInner;
     private DailyChallenge daily = new DailyChallenge();
     private string today;
     private string selected;
@@ -46,6 +47,8 @@ public class DailyDialog : Dialog
     protected override void Start()
     {
         base.Start();
+        selectionOuter = transform.Find("Content/Grid/SelOuter") as RectTransform;
+        selectionInner = transform.Find("Content/Grid/SelInner") as RectTransform;
         today = daily.Today();
         selected = today;
         viewMonth = today.Substring(0, 7);
@@ -164,6 +167,9 @@ public class DailyDialog : Dialog
         streakBackground.color = state == StreakState.Risk ? coralSoft : state == StreakState.Lost ? lostSoft : yellowSoft;
         streakTitleText.text = Loc.Get("daily.streak", "n", streak);
         streakBestText.text = Loc.Get("daily.best", "n", daily.best);
+        // Kỷ lục nằm ngay sau tiêu đề, cách 12 css px (20 canvas).
+        float titleLeft = streakTitleText.rectTransform.anchoredPosition.x;
+        streakBestText.rectTransform.anchoredPosition = new Vector2(titleLeft + streakTitleText.preferredWidth + 20f, streakBestText.rectTransform.anchoredPosition.y);
 
         int days, reward;
         bool hasNext = daily.NextMilestone(streak, out days, out reward);
@@ -180,7 +186,11 @@ public class DailyDialog : Dialog
         DateTime month = daily.Parse(viewMonth + "-01");
         string[] names = Loc.Get("daily.months").Split('|');
         monthText.text = Loc.Get("daily.month", "m", names[month.Month - 1], "y", month.Year);
-        nextButton.interactable = string.CompareOrdinal(viewMonth, today.Substring(0, 7)) < 0;
+        bool hasNext = string.CompareOrdinal(viewMonth, today.Substring(0, 7)) < 0;
+        nextButton.interactable = hasNext;
+        foreach (Graphic graphic in nextButton.GetComponentsInChildren<Graphic>()) graphic.canvasRenderer.SetAlpha(hasNext ? 1f : 0.35f);
+        selectionOuter.gameObject.SetActive(false);
+        selectionInner.gameObject.SetActive(false);
 
         string[] weekdays = Loc.Get("daily.weekdays").Split('|');
         for (int i = 0; i < weekdayTexts.Length; i++) weekdayTexts[i].text = weekdays[i];
@@ -198,7 +208,16 @@ public class DailyDialog : Dialog
             if (status == DayStatus.Done) { border = teal; face = teal; text = white; }
             else if (status == DayStatus.Miss) { border = coral; face = coralSoft; text = coralDeep; }
             else if (status == DayStatus.Today) { border = yellow; face = yellowSoft; }
-            if (date == selected) border = ink;
+            if (date == selected)
+            {
+                // Viền chọn nằm ngoài ô (outline 3px, cách 1px) nên vẽ vòng phía sau ô.
+                RectTransform grid = (RectTransform)selectionOuter.parent;
+                Vector2 center = new Vector2(-grid.rect.width / 2 + grid.rect.width / 7 * (i % 7 + 0.5f), grid.rect.height / 2 - 72f - 87f * (i / 7));
+                selectionOuter.anchoredPosition = center;
+                selectionInner.anchoredPosition = center;
+                selectionOuter.gameObject.SetActive(true);
+                selectionInner.gameObject.SetActive(true);
+            }
             float alpha = status == DayStatus.Future ? 0.35f : 1f;
             dayBorders[i].color = WithAlpha(border, alpha);
             dayFaces[i].color = WithAlpha(face, alpha);
@@ -226,5 +245,12 @@ public class DailyDialog : Dialog
             : Loc.Get("daily.playDay", "d", daily.ShortDate(selected));
         legendText.text = Loc.Get("daily.legend");
         timezoneText.text = Loc.Get("daily.tz");
+
+        // Dòng thưởng: icon + chữ căn giữa cả cụm (icon rộng 27, cách chữ 13,5 canvas).
+        RectTransform rewardIcon = transform.Find("Content/RewardIcon") as RectTransform;
+        float rewardY = rewardText.rectTransform.anchoredPosition.y;
+        float start = -(27f + 13.5f + rewardText.preferredWidth) / 2f;
+        rewardIcon.anchoredPosition = new Vector2(start + 13.5f, rewardY);
+        rewardText.rectTransform.anchoredPosition = new Vector2(start + 40.5f, rewardY);
     }
 }

@@ -17,7 +17,8 @@ public class LanguageDialog : Dialog
     private readonly Color32 normalBorder = new Color32(223, 233, 234, 255);
     private readonly Color32 normalFace = new Color32(255, 255, 255, 255);
     private readonly Color32 headingColor = new Color32(31, 45, 61, 255);
-    private readonly Color32 captionColor = new Color32(107, 122, 133, 255);
+    private readonly Color32 captionColor = new Color32(93, 110, 128, 255);
+    private readonly Color32 disabledFace = new Color32(238, 243, 243, 255);
 
     // Thứ tự theo design: en chơi được, fr/es/pt sắp có, vi đề xuất.
     private readonly string[] gameCodes = { "en", "fr", "es", "pt", "vi" };
@@ -61,11 +62,12 @@ public class LanguageDialog : Dialog
         var font = content.Find("Title").GetComponent<Text>().font;
         var template = content.Find("Option_en") as RectTransform;
 
-        AddLabel(content, font, "lang.ui", 445, 34, 30, FontStyle.Bold, headingColor);
-        AddLabel(content, font, "lang.uiDesc", 398, 58, 21, FontStyle.Normal, captionColor);
-        AddLabel(content, font, "lang.game", 45, 34, 30, FontStyle.Bold, headingColor);
-        AddLabel(content, font, "lang.gameDesc", -2, 58, 21, FontStyle.Normal, captionColor);
-        AddLabel(content, font, "lang.noteSoon", -470, 70, 21, FontStyle.Normal, captionColor);
+        // Vị trí và cỡ theo design (css px x 1,6914, gốc là tâm canvas 660x1397).
+        AddLabel(content, font, "lang.ui", 519, 34, 27, FontStyle.Bold, headingColor);
+        AddLabel(content, font, "lang.uiDesc", 449, 66, 24, FontStyle.Normal, captionColor);
+        AddLabel(content, font, "lang.game", 34, 34, 27, FontStyle.Bold, headingColor);
+        AddLabel(content, font, "lang.gameDesc", -20, 33, 24, FontStyle.Normal, captionColor);
+        AddLabel(content, font, "lang.noteSoon", -694, 25, 20, FontStyle.Normal, captionColor, TextAnchor.MiddleCenter);
 
         var loc = Locator<LocalizationController>.Instance;
         for (var i = 0; i < gameCodes.Length; i++)
@@ -75,24 +77,23 @@ public class LanguageDialog : Dialog
             var row = Instantiate(template.gameObject, content).GetComponent<RectTransform>();
             row.name = "GameOption_" + code;
             row.GetComponent<Button>().enabled = false;
-            row.anchoredPosition = new Vector2(0, -70 - 78 * i);
-            row.sizeDelta = new Vector2(540, 70);
+            row.anchoredPosition = new Vector2(0, -112 - 123.5f * i);
+            row.sizeDelta = new Vector2(599, 110);
 
             var name = row.Find("Text").GetComponent<RectTransform>();
-            name.anchorMin = new Vector2(0, 0.5f);
-            name.anchorMax = new Vector2(1, 1);
-            name.offsetMin = new Vector2(24, 0);
-            name.offsetMax = new Vector2(-24, -6);
-            name.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
-            name.GetComponent<Text>().fontSize = 28;
+            name.anchorMin = new Vector2(0.5f, 0.5f);
+            name.anchorMax = new Vector2(0.5f, 0.5f);
+            name.pivot = new Vector2(0, 0.5f);
+            name.sizeDelta = new Vector2(545, 34);
+            name.anchoredPosition = new Vector2(-272.5f, 14);
+            name.GetComponent<Text>().alignment = TextAnchor.MiddleLeft;
+            name.GetComponent<Text>().fontSize = 27;
             name.GetComponent<LocalizedText>().SetKey("lang." + code);
 
             var caption = Instantiate(name.gameObject, row).GetComponent<RectTransform>();
             caption.name = "Caption";
-            caption.anchorMin = new Vector2(0, 0);
-            caption.anchorMax = new Vector2(1, 0.5f);
-            caption.offsetMin = new Vector2(24, 8);
-            caption.offsetMax = new Vector2(-24, 0);
+            caption.sizeDelta = new Vector2(545, 25);
+            caption.anchoredPosition = new Vector2(-272.5f, -19);
             var captionText = caption.GetComponent<Text>();
             captionText.fontSize = 20;
             captionText.color = captionColor;
@@ -107,7 +108,7 @@ public class LanguageDialog : Dialog
             }
             else
             {
-                row.gameObject.AddComponent<CanvasGroup>().alpha = 0.55f;
+                row.gameObject.AddComponent<CanvasGroup>().alpha = 0.7f;
             }
 
             gameRowCodes.Add(code);
@@ -116,21 +117,22 @@ public class LanguageDialog : Dialog
         }
     }
 
-    private void AddLabel(RectTransform parent, Font font, string key, float y, float height, int size, FontStyle style, Color color)
+    private void AddLabel(RectTransform parent, Font font, string key, float y, float height, int size, FontStyle style, Color color, TextAnchor alignment = TextAnchor.MiddleLeft)
     {
         var go = new GameObject("Label_" + key, typeof(RectTransform));
         var rect = go.GetComponent<RectTransform>();
         rect.SetParent(parent, false);
         rect.anchoredPosition = new Vector2(0, y);
-        rect.sizeDelta = new Vector2(540, height);
+        rect.sizeDelta = new Vector2(599, height);
         var text = go.AddComponent<Text>();
         text.font = font;
         text.fontSize = size;
         text.fontStyle = style;
         text.color = color;
-        text.alignment = TextAnchor.MiddleLeft;
+        text.alignment = alignment;
         text.horizontalOverflow = HorizontalWrapMode.Wrap;
         text.verticalOverflow = VerticalWrapMode.Overflow;
+        text.lineSpacing = 0.92f;
         text.raycastTarget = false;
         go.AddComponent<LocalizedText>().SetKey(key);
     }
@@ -142,7 +144,7 @@ public class LanguageDialog : Dialog
         {
             var selected = gameRowCodes[i] == loc.GameLanguage && loc.IsGamePlayable(gameRowCodes[i]);
             gameBorders[i].color = selected ? selectedBorder : normalBorder;
-            gameFaces[i].color = selected ? selectedFace : normalFace;
+            gameFaces[i].color = selected ? selectedFace : (loc.IsGamePlayable(gameRowCodes[i]) ? normalFace : disabledFace);
         }
         var current = loc.Language;
         for (var i = 0; i < codes.Length; i++)
