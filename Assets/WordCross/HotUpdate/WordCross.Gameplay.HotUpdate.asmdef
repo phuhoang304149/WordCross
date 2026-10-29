@@ -2,7 +2,15 @@
   "name": "WordCross.Gameplay.HotUpdate",
   "rootNamespace": "WordCross.Gameplay",
   "references": [
-    "CatGaming.Clr.Runtime"
+    "CatGaming.Module",
+    "CatGaming.Clr.Runtime",
+    "UniTask",
+    "UnityEngine.UI",
+    "Unity.TextMeshPro",
+    "Unity.Purchasing",
+    "Unity.Addressables",
+    "Unity.ResourceManager",
+    "AYellowpaper.SerializedCollections"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],
