@@ -148,7 +148,8 @@ public static class CPlayerPrefs
 		
 		// Read storedPref
 		int storedPref;
-		if(_useRijndael) {
+		// Value saved by SetInt with Rijndael off is int-typed; GetString returns "" for it and decrypt would throw
+		if(_useRijndael && PlayerPrefs.GetString (cKey).Length > 0) {
 			storedPref = int.Parse (decrypt (cKey));
 		} else {
 			storedPref = PlayerPrefs.GetInt(cKey);
