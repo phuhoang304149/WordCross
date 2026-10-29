@@ -87,16 +87,6 @@ public class CUtils
 #endif
     }
 
-    public static void LikeFacebookPage(string faceID)
-    {
-#if UNITY_ANDROID && !UNITY_EDITOR
-		Application.OpenURL("fb://page/" + faceID);
-#else
-        Application.OpenURL("https://www.facebook.com/" + faceID);
-#endif
-        SetLikeFbPage(faceID);
-    }
-
     public static string ReadFileContent(string path)
     {
         TextAsset file = Resources.Load(path) as TextAsset;
@@ -280,11 +270,6 @@ public class CUtils
     public static bool IsGameRated()
     {
         return CPlayerPrefs.GetBool("rate_game", false);
-    }
-
-    public static void SetLikeFbPage(string id)
-    {
-        CPlayerPrefs.SetBool("like_page_" + id, true);
     }
 
     public static void SetInitGame()
