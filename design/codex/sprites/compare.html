@@ -1,0 +1,15 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><title>WordCross · CSS và sprite 4 px/css</title>
+<style>
+@font-face{font-family:Baloo;src:url('../../../Assets/WordCross/Fonts/Baloo2/static/Baloo2-ExtraBold.ttf')}
+*{box-sizing:border-box}body{margin:0;background:#f4fbfa;color:#1f2d3d;font:18px Arial,sans-serif;padding:40px}h1{font:800 34px Baloo,Arial;margin:0 0 12px;color:#0b8c80}p{margin:8px 0 22px}.grid{display:grid;grid-template-columns:220px 610px 610px;gap:18px;align-items:center}.head{font-weight:bold;color:#0b8c80}.cell{height:240px;display:flex;align-items:center;gap:30px;padding:20px;background:#d8f5f1;border-radius:16px}.shape{width:300px;height:112px;background:#fff}.sprite{background:none;border-style:solid;border-image-source:url('round-rm.png');border-image-slice:64 fill;border-image-width:64px;border-width:64px;width:300px;height:160px;transform:scale(.7);transform-origin:center;flex:none}.sample{width:300px;height:160px;border-radius:64px;transform:scale(.7);flex:none}.crop{width:180px;height:150px;overflow:hidden;flex:none;position:relative;background:#12b5a6}.crop .sample{position:absolute;left:10px;top:10px;transform:scale(2);transform-origin:top left}.crop .sprite{position:absolute;left:10px;top:10px;transform:scale(2);transform-origin:top left}.small{font-size:15px;line-height:1.5}.pillcss{width:300px;height:208px;border-radius:104px;transform:scale(.6);flex:none}.pillsprite{border-image-source:url('pill-52.png');border-image-slice:104 fill;border-width:104px;border-image-width:104px;border-style:solid;width:300px;height:208px;transform:scale(.6);flex:none}footer{margin-top:26px;border-top:1px solid #dfe9ea;padding-top:18px;font-size:16px;line-height:1.6}
+</style>
+<h1>Cạnh bo WordCross · CSS ↔ PNG 9-slice</h1>
+<p>PNG trắng RGBA, 4 px/css. So cùng bán kính vật lý, không thêm blur hoặc shadow.</p>
+<div class="grid">
+<div></div><div class="head">CSS thật — border-radius</div><div class="head">Sprite PNG — border-image (9-slice)</div>
+<div><b>r-m = 16 css px</b><p class="small">64 px tại mật độ 4×<br>Hình 300 × 160 px<br>Hiển thị thu nhỏ 70%</p></div><div class="cell"><div class="shape sample"></div></div><div class="cell"><div class="sprite"></div></div>
+<div><b>Góc trên trái ×2</b><p class="small">Cùng ảnh nguồn 4×<br>Cùng nền teal<br>Antialias nằm sát biên</p></div><div class="cell"><div class="crop"><div class="shape sample"></div></div></div><div class="cell"><div class="crop"><div class="sprite"></div></div></div>
+<div><b>Pill cao 52 css px</b><p class="small">Cao 208 px ở 4×<br>Bán kính 104 px<br>Hiển thị thu nhỏ 60%</p></div><div class="cell"><div class="shape pillcss"></div></div><div class="cell"><div class="pillsprite"></div></div>
+</div>
+<footer>Trái: CSS của trình duyệt bạn đang mở. Phải: CoreGraphics raster PNG, trình duyệt kéo 9-slice.<br>Đây là so sánh biên nguồn, không phải bằng chứng đã tích hợp hay QA Unity. Khi import: không compression, không mipmap, tránh atlas scale-down.</footer>
+</html>
