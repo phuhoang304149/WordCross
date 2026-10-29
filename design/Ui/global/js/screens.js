@@ -1,14 +1,22 @@
-/* Registry of every screen/popup. src = source file(s) the design is matched to. */
+/* Registry of every screen/popup. src = source file(s) the design is matched to; tên/ghi chú lấy từ i18n key scr.<id>.name/note.
+   origin: 'observed' = có trong Unity gốc; 'proposed' = đề xuất mới trong thiết kế. */
 window.WC_SCREENS = [
-  {id:'home', kind:'screen', name:'Home', note:'Nền, logo WORD CROSS, Play, Shop', src:'_Scenes/Home.unity · HomeController.cs'},
-  {id:'select-world', kind:'screen', name:'Chọn World', note:'Vuốt snap theo World 0–5, mỗi World 5 subworld, n/total', src:'_Scenes/SelectWorld.unity · WorldItem.prefab · WorldController.cs'},
-  {id:'select-level', kind:'screen', name:'Chọn Level', note:'Lưới LevelButton cuộn dọc, tới level đã mở khoá', src:'_Scenes/SelectLevel.unity · LevelButton.prefab · SelectLevelController.cs'},
-  {id:'game', kind:'screen', name:'Gameplay', note:'Lưới ô từ, vòng chữ vuốt, Hint/Shuffle/Ask friend, Extra words', src:'_Scenes/Main.unity · MainController.cs · WordRegion.cs · Pan.cs'},
-  {id:'pause', kind:'popup', base:'game', name:'Pause', note:'Continue · To Menu · Quit · How to play · nhạc/âm', src:'_Prefabs/Dialogs/PauseDialog.prefab'},
-  {id:'how-to-play', kind:'popup', base:'game', name:'How to play', note:'Hướng dẫn vuốt tạo từ, dùng Shuffle/Hint', src:'_Prefabs/Dialogs/HowToPlayDialog.prefab'},
-  {id:'win', kind:'popup', base:'game', name:'Win', note:'Hoàn thành level: Next · Menu', src:'_Prefabs/Dialogs/WinDialog.prefab · WinDialog.cs'},
-  {id:'extra-word', kind:'popup', base:'game', name:'Extra words', note:'Tiến độ 1/10 từ thưởng, Claim ruby', src:'_Prefabs/Dialogs/ExtraWordDialog.prefab'},
-  {id:'shop', kind:'popup', base:'home', name:'Shop', note:'5 gói ruby, xem video miễn phí, bỏ quảng cáo khi mua', src:'_Prefabs/Dialogs/ShopDialog.prefab · ShopItem.prefab'},
-  {id:'rewarded-video', kind:'popup', base:'home', name:'Rewarded video', note:'Nhận ruby miễn phí sau khi xem quảng cáo', src:'_Prefabs/Dialogs/RewardedVideoDialog.prefab'},
-  {id:'rate', kind:'popup', base:'home', name:'Rate', note:'YES / LATER đánh giá 5 sao', src:'_Prefabs/Dialogs/RateDialog.prefab'}
+  {id:'home', kind:'screen', origin:'observed', src:'_Scenes/Home.unity · HomeController.cs (Daily/Bot/AI/Language là đề xuất)'},
+  {id:'select-world', kind:'screen', origin:'observed', src:'_Scenes/SelectWorld.unity · WorldItem.prefab · WorldController.cs'},
+  {id:'select-level', kind:'screen', origin:'observed', src:'_Scenes/SelectLevel.unity · LevelButton.prefab · SelectLevelController.cs · Utils.GetNumLevels'},
+  {id:'game', kind:'screen', origin:'observed', src:'_Scenes/Main.unity · MainController.cs · WordRegion.cs · Pan.cs · LineWord.cs'},
+  {id:'daily', kind:'screen', origin:'proposed', src:'Tham khảo: Wordle DailyChallengeService/View, TileConnect-Onet daily.js'},
+  {id:'bot-setup', kind:'screen', origin:'proposed', src:'Tham khảo: BlastBattle bot-gameplay.html, bot-engine.js'},
+  {id:'bot-match', kind:'screen', origin:'proposed', src:'Tham khảo: BlastBattle bot-ui.js · Wordle WordleBot.cs'},
+  {id:'language', kind:'screen', origin:'proposed', src:'Level assets (World_*/SubWorld_*) chỉ tiếng Anh; 4 thư mục từ điển chưa được code tham chiếu'},
+  {id:'pause', kind:'popup', base:'game', origin:'observed', src:'_Prefabs/Dialogs/PauseDialog.prefab'},
+  {id:'how-to-play', kind:'popup', base:'game', origin:'observed', src:'_Prefabs/Dialogs/HowToPlayDialog.prefab'},
+  {id:'win', kind:'popup', base:'game', origin:'observed', src:'_Prefabs/Dialogs/WinDialog.prefab · WinDialog.cs (thưởng/x2/mục tiêu là đề xuất)'},
+  {id:'extra-word', kind:'popup', base:'game', origin:'observed', src:'_Prefabs/Dialogs/ExtraWordDialog.prefab · ExtraWordDialog.cs'},
+  {id:'low-ruby', kind:'popup', base:'game', origin:'proposed', src:'Gốc: HintClick mở Shop trực tiếp (WordRegion.cs)'},
+  {id:'shop', kind:'popup', base:'home', origin:'observed', src:'_Prefabs/Dialogs/ShopDialog.prefab · ShopItem.prefab · ShopDialog.cs'},
+  {id:'rewarded-video', kind:'popup', base:'home', origin:'observed', src:'_Prefabs/Dialogs/RewardedVideoDialog.prefab · RewardedButton.cs (các trạng thái là đề xuất)'},
+  {id:'rate', kind:'popup', base:'home', origin:'observed', src:'_Prefabs/Dialogs/RateDialog.prefab'},
+  {id:'bot-result', kind:'popup', base:'bot-match', origin:'proposed', src:'Tham khảo: BlastBattle GameOver (Chơi lại / Về Home)'},
+  {id:'ai-soon', kind:'popup', base:'home', origin:'proposed', src:'Chỉ Coming soon, không có nguồn gameplay'}
 ];

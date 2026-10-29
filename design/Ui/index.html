@@ -1,27 +1,36 @@
 <!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WordCross — UI Catalogue</title><link rel="stylesheet" href="global/css/theme.css"></head>
 <body class="cat">
-<div class="cat-top"><a class="back" href="../index.html">← Portal</a><h1>WordCross UI</h1><p>Phong cách phẳng, sáng, teal / coral / yellow. Mỗi thẻ mở màn hình thật; gameplay chơi được (vuốt vòng chữ). Đối chiếu source Unity ghi dưới từng thẻ.</p>
-<div class="chips"><a class="chip on" href="#screens">Màn hình</a><a class="chip" href="#popups">Popup</a><a class="chip" href="#tokens">Token</a><a class="chip" href="../GD/index.html">GD</a></div></div>
-<div class="cat-sec" id="screens"><h2>Màn hình</h2><div class="sub-t">Home → World → Level → Gameplay</div><div class="cards" data-list="screen"></div></div>
-<div class="cat-sec" id="popups"><h2>Popup</h2><div class="sub-t">Hiển thị trên nền Gameplay hoặc Home như trong game</div><div class="cards" data-list="popup"></div></div>
-<div class="cat-sec" id="tokens"><h2>Token dùng chung</h2><div class="sub-t">global/css/theme.css (:root)</div><div class="tok">
-<div class="sw" style="background:var(--teal)">Teal<small>--teal #12b5a6 · CTA chính</small></div>
-<div class="sw" style="background:var(--coral)">Coral<small>--coral #ff6b5e · Play / ruby</small></div>
-<div class="sw" style="background:var(--yellow);color:#5a4100">Yellow<small>--yellow #ffc93c · phụ / chữ chọn</small></div>
+<div class="cat-top"><a class="back" data-t="cat.portal" href="../index.html"></a><h1 data-t="cat.title"></h1><p data-t="cat.intro"></p>
+<div class="chips"><a class="chip on" href="#screens" data-t="cat.screens"></a><a class="chip" href="#popups" data-t="cat.popups"></a><a class="chip" href="#tokens" data-t="cat.tokens"></a><a class="chip" href="../GD/index.html" data-t="cat.gd"></a></div>
+<div class="lang-chips"><a class="chip" href="#" data-ui="vi">Tiếng Việt</a><a class="chip" href="#" data-ui="en">English</a><a class="chip" href="#" data-reset data-t="cat.resetData"></a></div></div>
+<div class="cat-sec" id="screens"><h2 data-t="cat.screens"></h2><div class="sub-t" data-t="cat.flow"></div><div class="cards" data-list="screen"></div></div>
+<div class="cat-sec" id="popups"><h2 data-t="cat.popups"></h2><div class="sub-t" data-t="cat.popSub"></div><div class="cards" data-list="popup"></div></div>
+<div class="cat-sec" id="tokens"><h2 data-t="cat.tokens"></h2><div class="sub-t" data-t="cat.tokenSub"></div><div class="tok">
+<div class="sw" style="background:var(--teal)">Teal<small>--teal #12b5a6</small></div>
+<div class="sw" style="background:var(--coral)">Coral<small>--coral #ff6b5e · ruby</small></div>
+<div class="sw" style="background:var(--yellow);color:#5a4100">Yellow<small>--yellow #ffc93c</small></div>
 <div class="sw l" style="background:var(--bg)">Bg<small>--bg #f4fbfa</small></div>
 <div class="sw" style="background:var(--ink)">Ink<small>--ink #1f2d3d</small></div>
-<div class="sw l" style="background:var(--card)">Radius &amp; depth<small>10/16/24/pill · offset 4px, không blur</small></div></div></div>
-<div class="proto">Prototype: Gameplay vuốt C-A-R-T (CART, CAT, TAR; ACT/RAT/ART là từ thưởng), Hint trừ 2 ruby (Const.HINT_COST), Shuffle xáo chữ, hoàn thành → Win. Dữ liệu level, tên subworld, số ruby (12), giá Shop và ghép cặp gói ↔ giá là <b>demo/giả định</b>. Chuyển popup từ Gameplay là chuyển trang nên không giữ tiến độ.</div>
+<div class="sw l" style="background:var(--card)">Radius &amp; depth<small>10/16/24/pill · 4px</small></div></div></div>
+<div class="proto" data-t="cat.proto"></div>
+<script src="global/js/i18n.js"></script>
 <script src="global/js/screens.js"></script>
 <script>
 (function(){
+  var WC = window.WC, t = WC.t;
+  [].forEach.call(document.querySelectorAll('[data-t]'), function(e){ e.innerHTML = t(e.dataset.t); });
+  [].forEach.call(document.querySelectorAll('[data-ui]'), function(a){
+    if (a.dataset.ui === WC.lang) a.classList.add('on');
+    a.addEventListener('click', function(e){ e.preventDefault(); WC.setLang(a.dataset.ui); location.reload(); });
+  });
+  document.querySelector('[data-reset]').addEventListener('click', function(e){ e.preventDefault(); var l = WC.state.uiLang; WC.reset(); WC.state.uiLang = l; WC.save(); location.reload(); });
   [].forEach.call(document.querySelectorAll('[data-list]'), function(box){
     box.innerHTML = window.WC_SCREENS.filter(function(s){ return s.kind === box.dataset.list; }).map(function(s){
-      return '<a class="card" href="screens/'+s.id+'/index.html"><div class="thumb"><iframe loading="lazy" tabindex="-1" src="screens/'+s.id+'/index.html?embed=1"></iframe></div><b>'+s.name+'</b><small>'+s.note+'</small><span class="src">'+s.src+'</span></a>';
+      return '<a class="card" href="screens/'+s.id+'/index.html"><div class="thumb"><iframe loading="lazy" tabindex="-1" title="'+t('scr.'+s.id+'.name')+'" src="screens/'+s.id+'/index.html?embed=1&lang='+WC.lang+'"></iframe></div><b>'+t('scr.'+s.id+'.name')+'<span class="origin '+s.origin+'">'+(s.origin === 'observed' ? 'OBSERVED' : 'PROPOSED')+'</span></b><small>'+t('scr.'+s.id+'.note')+'</small><span class="src">'+s.src+'</span></a>';
     }).join('');
   });
-  var fit = function(){ [].forEach.call(document.querySelectorAll('.thumb'), function(t){ t.firstChild.style.transform = 'scale('+(t.clientWidth/390)+')'; }); };
+  var fit = function(){ [].forEach.call(document.querySelectorAll('.thumb'), function(x){ x.firstChild.style.transform = 'scale('+(x.clientWidth/390)+')'; }); };
   fit(); window.addEventListener('resize', fit);
 })();
 </script></body></html>
