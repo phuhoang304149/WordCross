@@ -13,6 +13,7 @@ until mkdir "$GUARD" 2>/dev/null; do
 done
 trap 'rmdir "$GUARD"' EXIT
 render() {
+  local s m st o
   { printf '{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0 Menlo;}}\\f0\\fs22\n'
     printf 'Android devices (updated %s)\\line\n' "$(date '+%F %T')"
     printf 'serial | model | status | owner\\line\n'
@@ -20,6 +21,7 @@ render() {
     printf '}\n'; } > "$RTF"
 }
 set_status() { # serial status owner
+  local m
   grep -v "^$1|" "$STATE" > "$STATE.tmp" || true
   m=$(grep "^$1|" "$STATE" | cut -d'|' -f2 || true)
   printf '%s|%s|%s|%s\n' "$1" "${m:-?}" "$2" "$3" >> "$STATE.tmp"; mv "$STATE.tmp" "$STATE"
