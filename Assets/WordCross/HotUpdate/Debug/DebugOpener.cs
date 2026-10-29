@@ -20,6 +20,8 @@ namespace WordCross.Gameplay
     //   daily[:fresh|risk|safe|lost]  dialog Daily ở Home với dữ liệu chuỗi giả (lưu thật, trả lại bằng reset)
     //   dailymain[:fresh|risk|safe|lost]  Main với bàn Daily hôm nay
     //   dailywin[:fresh|risk|safe|lost]   Win biến thể Daily (thắng bàn hôm nay; ruby/dữ liệu Daily trả lại sau 1 giây)
+    //   Hậu tố ;glang=vi|en|fr|es|pt đổi ngôn ngữ chơi (lưu thật; trả lại bằng ;glang=en).
+    //   Hậu tố ;solve=K (cho main) tự nhập mọi đáp án trừ K từ cuối, in toạ độ màn hình của các chữ trong vòng ("letters") để adb swipe nốt.
     //   reset (trả số ruby và dữ liệu Daily về giá trị trước khi ghi đè)
     public sealed class DebugOpener : MonoBehaviour
     {
@@ -78,6 +80,7 @@ namespace WordCross.Gameplay
             string name = head[0].Trim().ToLowerInvariant();
             string arg = head.Length > 1 ? head[1].Trim().ToLowerInvariant() : "";
             int[] level = null;
+            int solveKeep = -1;
             for (int i = 1; i < parts.Length; i++)
             {
                 string[] pair = parts[i].Split(new[] { '=' }, 2);
@@ -88,6 +91,8 @@ namespace WordCross.Gameplay
                 else if (key == "extra") Prefs.extraProgress = int.Parse(pair[1]);
                 else if (key == "unlock") ApplyUnlock(ParseLevel(pair[1]));
                 else if (key == "lang") Locator<LocalizationController>.Instance.SetLanguage(pair[1]);
+                else if (key == "glang") Locator<LocalizationController>.Instance.SetGameLanguage(pair[1].Trim().ToLowerInvariant());
+                else if (key == "solve") solveKeep = int.Parse(pair[1]);
             }
 
             switch (name)
@@ -118,6 +123,7 @@ namespace WordCross.Gameplay
                     SetCurrentLevel(ParseLevel(arg));
                     CUtils.LoadScene(3);
                     yield return WaitScene("Main");
+                    if (solveKeep >= 0) yield return SolveLevel(solveKeep);
                     break;
                 case "pause":
                 case "howto":
@@ -147,7 +153,31 @@ namespace WordCross.Gameplay
                     Debug.LogError("[DebugOpener] unknown command: " + command);
                     break;
             }
-            Debug.Log("[DebugOpener] opened " + command);
+            Debug.Log("[DebugOpener] opened " + command + " glang=" + Locator<LocalizationController>.Instance.GameLanguage +
+                " unlocked=" + Prefs.unlockedWorld + "-" + Prefs.unlockedSubWorld + "-" + Prefs.unlockedLevel + " ruby=" + CurrencyController.GetBalance());
+        }
+
+        // Nhập đáp án qua WordRegion.CheckAnswer (chuỗi chữ hoa như vuốt vòng chữ), chừa lại `keep` từ cuối; in toạ độ chữ để vuốt tay.
+        private IEnumerator SolveLevel(int keep)
+        {
+            yield return new WaitForSecondsRealtime(1.0f);
+            GameLevel gameLevel = Superpow.Utils.Load(GameState.currentWorld, GameState.currentSubWorld, GameState.currentLevel);
+            var words = CUtils.BuildListFromString<string>(gameLevel.answers);
+            for (int i = 0; i < words.Count - keep; i++)
+            {
+                WordRegion.instance.CheckAnswer(words[i].ToUpper());
+                yield return new WaitForSecondsRealtime(0.5f);
+            }
+            var report = new System.Text.StringBuilder("[DebugOpener] letters:");
+            Canvas canvas = Pan.instance.centerPoint.GetComponentInParent<Canvas>().rootCanvas;
+            Camera camera = canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;
+            foreach (UnityEngine.UI.Text text in Pan.instance.centerPoint.GetComponentsInChildren<UnityEngine.UI.Text>())
+            {
+                Vector2 point = RectTransformUtility.WorldToScreenPoint(camera, text.transform.position);
+                report.Append(' ').Append(text.text).Append('@').Append(Mathf.RoundToInt(point.x)).Append(',').Append(Mathf.RoundToInt(Screen.height - point.y));
+            }
+            Debug.Log(report.ToString());
+            Debug.Log("[DebugOpener] remaining: " + string.Join("|", words.GetRange(words.Count - keep, keep)) + " word=" + gameLevel.word + " screen=" + Screen.width + "x" + Screen.height);
         }
 
         private IEnumerator WaitScene(string sceneName)
