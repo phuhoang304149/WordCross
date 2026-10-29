@@ -9,6 +9,8 @@ public class SelectLevelController : BaseController {
     public Text titleText;
     public GridLayoutGroup grid;
     public float cellShadow = 7f;
+    // Design screen is 390 wide: grid padding 20 and gap 12 scale with the canvas width
+    public float designWidth = 390f, designPadding = 20f, designGap = 12f;
 
     protected override void Start()
     {
@@ -38,6 +40,12 @@ public class SelectLevelController : BaseController {
     // Square cells (aspect-ratio 1 + shadow step) filling the columns like the design grid
     private void UpdateCellSize()
     {
+        float unit = scrollRect.viewport.rect.width / designWidth;
+        int padding = Mathf.RoundToInt(designPadding * unit);
+        grid.padding.left = padding;
+        grid.padding.right = padding;
+        grid.spacing = new Vector2(designGap * unit, designGap * unit);
+
         int columns = grid.constraintCount;
         float width = scrollRect.viewport.rect.width - grid.padding.left - grid.padding.right - grid.spacing.x * (columns - 1);
         float cell = Mathf.Floor(width / columns);
