@@ -1591,16 +1591,16 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T111",
       "title": "Nhập dữ liệu level vi/fr/es/pt (design/GD/data, 534 level/locale) vào runtime cho \"ngôn ngữ chơi\"",
-      "type": "code",
-      "status": "doing",
+      "type": "runtime",
+      "status": "done",
       "screen": "Đề xuất mới trong design (chưa có trong Unity)",
       "goal": "Ngôn ngữ chơi vi/fr/es/pt chơi được, tiến độ riêng theo locale",
       "scope": "Asset GameLevel theo locale qua Addressables (không Resources), playableGameLanguages, nạp level theo gameLang; Daily/Bot seed theo gameLang",
       "owner": "CLAUDE (dev)",
       "deps": "T044",
       "criteria": "Đổi ngôn ngữ chơi → level đúng locale, vòng chữ hiển thị đúng dấu (font Baloo2/CookieRun), tiến độ không lẫn; validate.py PASS; data đã rà (danh sách từ loại + lý do), validate.py PASS sau lọc",
-      "evidence": "",
-      "note": "[2026-10-29 20:10 (GMT+7)] Codex thêm data commit 927c20e (đã push lên origin/feature/unity-6.3): vi/fr/es/pt mỗi bộ 534 level, README design/GD/data/README.md, validate CLI PASS. CHƯA native-review/playtest. Lưu ý: nguồn vi Viet74K GPL-2.0 → cần USER cân nhắc giấy phép trước khi phát hành; vi chỉ từ đơn âm tiết; fr/es/pt có thể lẫn viết tắt/từ ngoại.\n[2026-10-29 20:12 (GMT+7)] USER: khi làm thì RÀ LUÔN data (bản ngữ/chất lượng từ): lọc viết tắt, tên riêng, từ ngoại, từ hiếm/phương ngữ/thán từ (vi), chạy validate.py sau khi lọc; ghi danh sách từ bị loại.\n[2026-10-29 21:00 (GMT+7)] USER: cứ làm, USER sẽ tự xin giấy phép (Viet74K GPL-2.0) trước khi phát hành để tránh vi phạm."
+      "evidence": "[2026-10-30] Rà data: blocklist design/GD/data/blocklist/*.txt, loại vi 865/fr 40/es 175/pt 135 từ (review-removed.md), validate.py PASS 534 level/locale. Runtime: 4 LocaleLevelPack (Levels/<mã>/Pack) qua Addressables, Utils.Load theo gameLang, tiến độ ProgressKeys.Of riêng, Daily theo gameLang. Máy ZY22LHV7PJ: vi/fr/es/pt thắng W1S1L1 + W4S3L6 (vuốt thật từ cuối), dấu đúng, en tiến độ không đổi, Daily vi OK. Merge e82df13 + bf1c0fa/ae5ac1c. OTA 1.0.0: CLR 16d912ec (curl khớp), catalog 2eb5336f; cold start preload 540 asset 4,76s (hồi quy 22,5s của bản đầu đã sửa ở T111b). Ảnh qa-shots/t111-*, t111b-*. Chỉ OTA CLR+AA.",
+      "note": "[2026-10-29 20:10 (GMT+7)] Codex thêm data commit 927c20e (đã push lên origin/feature/unity-6.3): vi/fr/es/pt mỗi bộ 534 level, README design/GD/data/README.md, validate CLI PASS. CHƯA native-review/playtest. Lưu ý: nguồn vi Viet74K GPL-2.0 → cần USER cân nhắc giấy phép trước khi phát hành; vi chỉ từ đơn âm tiết; fr/es/pt có thể lẫn viết tắt/từ ngoại.\n[2026-10-29 20:12 (GMT+7)] USER: khi làm thì RÀ LUÔN data (bản ngữ/chất lượng từ): lọc viết tắt, tên riêng, từ ngoại, từ hiếm/phương ngữ/thán từ (vi), chạy validate.py sau khi lọc; ghi danh sách từ bị loại.\n[2026-10-29 21:00 (GMT+7)] USER: cứ làm, USER sẽ tự xin giấy phép (Viet74K GPL-2.0) trước khi phát hành để tránh vi phạm.\n[2026-10-30] Còn: Daily fr/es/pt chưa thử riêng (cùng đường Utils.Load). Chờ USER: cho-duyet leveldata, leveldata-review, old-spelling, daily-lang; giấy phép GPL vi."
     },
     {
       "id": "T041",
