@@ -14,6 +14,7 @@ public class Pan : MonoBehaviour
     private List<Vector3> letterPositions = new List<Vector3>();
     private List<Vector3> letterLocalPositions = new List<Vector3>();
     private List<Text> letterTexts = new List<Text>();
+    private List<LetterText> letterViews = new List<LetterText>();
     private List<int> indexes = new List<int>();
 
     private int world, subWorld, level;
@@ -66,6 +67,7 @@ public class Pan : MonoBehaviour
             letter.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, Random.Range(-10, 10)));
             letter.text = gameLevel.word[i].ToString().ToUpper();
             letterTexts.Add(letter);
+            letterViews.Add(letter.GetComponent<LetterText>());
         }
 
         indexes = Prefs.GetPanWordIndexes(world, subWorld, level).ToList();
@@ -108,6 +110,14 @@ public class Pan : MonoBehaviour
         }
         panWord = sb.ToString();
         textPreview.word = panWord.ToUpper();
+    }
+
+    public void SetSelectedPositions(List<int> positions)
+    {
+        for (int i = 0; i < numLetters; i++)
+        {
+            letterViews[i].SetSelected(positions.Contains(indexes.IndexOf(i)));
+        }
     }
 
     public void Shuffle()
