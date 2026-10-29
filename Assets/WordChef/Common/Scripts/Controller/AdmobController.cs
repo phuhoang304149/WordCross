@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections;
 #if CATGAMING_ADS && CATGAMING_ADMOB
 using catgamingmodule.Monetization;
+using catgamingmodule.Tool.Database;
 using Script.Utils;
 #endif
 
@@ -19,11 +21,18 @@ public class AdmobController : MonoBehaviour
         instance = this;
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
 #if CATGAMING_ADS && CATGAMING_ADMOB
+        // Purchaser nạp GameDatabase bất đồng bộ; chờ để AdmobService đọc được AdmobConfig thay vì ad unit ID rỗng.
+        if (Locator<GameDatabase>.Instance == null)
+        {
+            Debug.Log("AdmobController: waiting for GameDatabase before initializing ads.");
+            yield return new WaitUntil(() => Locator<GameDatabase>.Instance != null);
+        }
         CatGamingAds.Initialize(OnAdsInitialized);
 #endif
+        yield break;
     }
 
 #if CATGAMING_ADS && CATGAMING_ADMOB
