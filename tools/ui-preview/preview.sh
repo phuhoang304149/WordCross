@@ -24,9 +24,9 @@ WTNAME=$(basename "$WT")
 EXP=$WT/Export; PV=$EXP/preview; mkdir -p "$PV"
 HEADNAME=${SPEC%%[:;]*}; HEADNAME=$(printf '%s' "$HEADNAME" | tr 'A-Z' 'a-z')
 case "$HEADNAME" in
-  home|shop|rate|language|rewarded|reset) SCENE=Home ;;
+  home|shop|rate|language|rewarded|reset|daily) SCENE=Home ;;
   selectworld) SCENE=SelectWorld ;; selectlevel) SCENE=SelectLevel ;;
-  main|pause|win|extra|howto) SCENE=Main ;;
+  main|pause|win|extra|howto|dailymain|dailywin) SCENE=Main ;;
   *) die "unknown screen '$SPEC'" ;;
 esac
 [ -n "$NAME" ] || NAME=$(printf '%s' "$SPEC" | tr ':;=' '-__' | tr -c 'A-Za-z0-9_.-' '_')
