@@ -1,0 +1,40 @@
+ad	viết tắt/ký hiệu
+av	viết tắt/ký hiệu
+com	viết tắt/ký hiệu
+etc	viết tắt/ký hiệu
+min	viết tắt/ký hiệu
+tél	viết tắt/ký hiệu
+trim	viết tắt/ký hiệu
+éd	viết tắt/ký hiệu
+ha	viết tắt/ký hiệu
+sida	viết tắt/ký hiệu
+and	từ tiếng Anh/ngoại lai
+center	từ tiếng Anh/ngoại lai
+del	từ tiếng Anh/ngoại lai
+den	từ tiếng Anh/ngoại lai
+der	từ tiếng Anh/ngoại lai
+di	từ tiếng Anh/ngoại lai
+for	từ tiếng Anh/ngoại lai
+in	từ tiếng Anh/ngoại lai
+made	từ tiếng Anh/ngoại lai
+money	từ tiếng Anh/ngoại lai
+of	từ tiếng Anh/ngoại lai
+out	từ tiếng Anh/ngoại lai
+quo	từ tiếng Anh/ngoại lai
+the	từ tiếng Anh/ngoại lai
+to	từ tiếng Anh/ngoại lai
+van	từ tiếng Anh/ngoại lai
+von	từ tiếng Anh/ngoại lai
+voor	từ tiếng Anh/ngoại lai
+home	từ tiếng Anh/ngoại lai
+manager	từ tiếng Anh/ngoại lai
+soft	từ tiếng Anh/ngoại lai
+rating	từ tiếng Anh/ngoại lai
+cash	từ tiếng Anh/ngoại lai
+warrant	từ tiếng Anh/ngoại lai
+holding	từ tiếng Anh/ngoại lai
+hoc	từ tiếng Anh/ngoại lai
+fur	từ tiếng Anh/ngoại lai
+sus	từ tiếng Anh/ngoại lai
+hutu	tên riêng viết thường
+sexe	nhạy cảm

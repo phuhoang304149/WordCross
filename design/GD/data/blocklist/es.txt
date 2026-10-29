@@ -1,0 +1,175 @@
+aa	viết tắt/ký hiệu
+abc	viết tắt/ký hiệu
+ad	viết tắt/ký hiệu
+adn	viết tắt/ký hiệu
+ap	viết tắt/ký hiệu
+art	viết tắt/ký hiệu
+boe	viết tắt/ký hiệu
+cap	viết tắt/ký hiệu
+ce	viết tắt/ký hiệu
+cee	viết tắt/ký hiệu
+che	viết tắt/ký hiệu
+cia	viết tắt/ký hiệu
+ciu	viết tắt/ký hiệu
+co	viết tắt/ký hiệu
+com	viết tắt/ký hiệu
+des	viết tắt/ký hiệu
+di	viết tắt/ký hiệu
+do	viết tắt/ký hiệu
+du	viết tắt/ký hiệu
+ebro	viết tắt/ký hiệu
+ee	viết tắt/ký hiệu
+efe	viết tắt/ký hiệu
+ej	viết tắt/ký hiệu
+et	viết tắt/ký hiệu
+etc	viết tắt/ký hiệu
+farc	viết tắt/ký hiệu
+fig	viết tắt/ký hiệu
+fmi	viết tắt/ký hiệu
+for	viết tắt/ký hiệu
+gal	viết tắt/ký hiệu
+ii	viết tắt/ký hiệu
+in	viết tắt/ký hiệu
+ing	viết tắt/ký hiệu
+iu	viết tắt/ký hiệu
+iv	viết tắt/ký hiệu
+iva	viết tắt/ký hiệu
+ix	viết tắt/ký hiệu
+ja	viết tắt/ký hiệu
+min	viết tắt/ký hiệu
+mir	viết tắt/ký hiệu
+oms	viết tắt/ký hiệu
+on	viết tắt/ký hiệu
+onu	viết tắt/ký hiệu
+oo	viết tắt/ký hiệu
+otan	viết tắt/ký hiệu
+pa	viết tắt/ký hiệu
+pce	viết tắt/ký hiệu
+per	viết tắt/ký hiệu
+pib	viết tắt/ký hiệu
+pri	viết tắt/ký hiệu
+psoe	viết tắt/ký hiệu
+ptas	viết tắt/ký hiệu
+pág	viết tắt/ký hiệu
+sa	viết tắt/ký hiệu
+sor	viết tắt/ký hiệu
+sos	viết tắt/ký hiệu
+sub	viết tắt/ký hiệu
+tel	viết tắt/ký hiệu
+tve	viết tắt/ký hiệu
+ucd	viết tắt/ký hiệu
+ud	viết tắt/ký hiệu
+ue	viết tắt/ký hiệu
+us	viết tắt/ký hiệu
+uu	viết tắt/ký hiệu
+vii	viết tắt/ký hiệu
+xi	viết tắt/ký hiệu
+ex	viết tắt/ký hiệu
+abel	tên riêng viết thường
+javier	tên riêng viết thường
+joan	tên riêng viết thường
+josé	tên riêng viết thường
+louis	tên riêng viết thường
+lucio	tên riêng viết thường
+mateo	tên riêng viết thường
+rtve	tên riêng viết thường
+samper	tên riêng viết thường
+times	tên riêng viết thường
+venus	tên riêng viết thường
+frei	tên riêng viết thường
+alberto	tên riêng viết thường
+africa	tên riêng viết thường
+américa	tên riêng viết thường
+asia	tên riêng viết thường
+ana	tên riêng viết thường
+angel	tên riêng viết thường
+antonio	tên riêng viết thường
+arias	tên riêng viết thường
+ben	tên riêng viết thường
+cali	tên riêng viết thường
+camp	tên riêng viết thường
+carlos	tên riêng viết thường
+carter	tên riêng viết thường
+césar	tên riêng viết thường
+cristo	tên riêng viết thường
+cuba	tên riêng viết thường
+darío	tên riêng viết thường
+ecuador	tên riêng viết thường
+elena	tên riêng viết thường
+enrique	tên riêng viết thường
+eva	tên riêng viết thường
+felipe	tên riêng viết thường
+francia	tên riêng viết thường
+garcía	tên riêng viết thường
+gil	tên riêng viết thường
+grand	tên riêng viết thường
+ibarra	tên riêng viết thường
+inés	tên riêng viết thường
+irene	tên riêng viết thường
+joe	tên riêng viết thường
+jones	tên riêng viết thường
+jose	tên riêng viết thường
+lara	tên riêng viết thường
+laura	tên riêng viết thường
+lola	tên riêng viết thường
+lope	tên riêng viết thường
+lorca	tên riêng viết thường
+lucas	tên riêng viết thường
+luis	tên riêng viết thường
+madrid	tên riêng viết thường
+manuel	tên riêng viết thường
+mari	tên riêng viết thường
+maria	tên riêng viết thường
+mario	tên riêng viết thường
+marta	tên riêng viết thường
+martí	tên riêng viết thường
+martín	tên riêng viết thường
+mary	tên riêng viết thường
+maría	tên riêng viết thường
+marín	tên riêng viết thường
+miguel	tên riêng viết thường
+olga	tên riêng viết thường
+omar	tên riêng viết thường
+oscar	tên riêng viết thường
+paco	tên riêng viết thường
+paul	tên riêng viết thường
+paulo	tên riêng viết thường
+pedro	tên riêng viết thường
+perón	tên riêng viết thường
+peter	tên riêng viết thường
+peña	tên riêng viết thường
+rafa	tên riêng viết thường
+rafael	tên riêng viết thường
+renfe	tên riêng viết thường
+rené	tên riêng viết thường
+rivas	tên riêng viết thường
+roma	tên riêng viết thường
+roque	tên riêng viết thường
+san	tên riêng viết thường
+sanz	tên riêng viết thường
+sant	tên riêng viết thường
+sara	tên riêng viết thường
+sergio	tên riêng viết thường
+serra	tên riêng viết thường
+soria	tên riêng viết thường
+soto	tên riêng viết thường
+sáenz	tên riêng viết thường
+sánchez	tên riêng viết thường
+tom	tên riêng viết thường
+vera	tên riêng viết thường
+von	tên riêng viết thường
+and	từ tiếng Anh/ngoại lai/tiền tố
+of	từ tiếng Anh/ngoại lai/tiền tố
+bacon	từ tiếng Anh/ngoại lai/tiền tố
+miss	từ tiếng Anh/ngoại lai/tiền tố
+pop	từ tiếng Anh/ngoại lai/tiền tố
+set	từ tiếng Anh/ngoại lai/tiền tố
+tour	từ tiếng Anh/ngoại lai/tiền tố
+anti	từ tiếng Anh/ngoại lai/tiền tố
+pre	từ tiếng Anh/ngoại lai/tiền tố
+pro	từ tiếng Anh/ngoại lai/tiền tố
+post	từ tiếng Anh/ngoại lai/tiền tố
+ende	từ tiếng Anh/ngoại lai/tiền tố
+puta	nhạy cảm/tục
+sida	nhạy cảm/tục
+culo	nhạy cảm/tục

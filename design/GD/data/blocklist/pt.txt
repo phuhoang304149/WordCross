@@ -1,0 +1,135 @@
+adn	viết tắt/ký hiệu
+cia	viết tắt/ký hiệu
+co	viết tắt/ký hiệu
+dna	viết tắt/ký hiệu
+doc	viết tắt/ký hiệu
+dra	viết tắt/ký hiệu
+eua	viết tắt/ký hiệu
+sra	viết tắt/ký hiệu
+srta	viết tắt/ký hiệu
+ex	viết tắt/ký hiệu
+chloe	tên riêng viết thường
+paris	tên riêng viết thường
+shane	tên riêng viết thường
+marte	tên riêng viết thường
+times	tên riêng viết thường
+adam	tên riêng viết thường
+alan	tên riêng viết thường
+alice	tên riêng viết thường
+américa	tên riêng viết thường
+ana	tên riêng viết thường
+angel	tên riêng viết thường
+ann	tên riêng viết thường
+anne	tên riêng viết thường
+annie	tên riêng viết thường
+ari	tên riêng viết thường
+caleb	tên riêng viết thường
+carl	tên riêng viết thường
+carol	tên riêng viết thường
+china	tên riêng viết thường
+coca	tên riêng viết thường
+dana	tên riêng viết thường
+dean	tên riêng viết thường
+doug	tên riêng viết thường
+earl	tên riêng viết thường
+eie	tên riêng viết thường
+ena	tên riêng viết thường
+elena	tên riêng viết thường
+emma	tên riêng viết thường
+ethan	tên riêng viết thường
+eva	tên riêng viết thường
+evan	tên riêng viết thường
+george	tên riêng viết thường
+gina	tên riêng viết thường
+grace	tên riêng viết thường
+green	tên riêng viết thường
+greg	tên riêng viết thường
+homer	tên riêng viết thường
+ian	tên riêng viết thường
+lana	tên riêng viết thường
+lane	tên riêng viết thường
+laura	tên riêng viết thường
+lee	tên riêng viết thường
+leo	tên riêng viết thường
+lex	tên riêng viết thường
+liz	tên riêng viết thường
+lois	tên riêng viết thường
+lou	tên riêng viết thường
+mac	tên riêng viết thường
+maria	tên riêng viết thường
+nate	tên riêng viết thường
+ned	tên riêng viết thường
+neil	tên riêng viết thường
+nina	tên riêng viết thường
+pam	tên riêng viết thường
+pedro	tên riêng viết thường
+rita	tên riêng viết thường
+rob	tên riêng viết thường
+roma	tên riêng viết thường
+ron	tên riêng viết thường
+ronnie	tên riêng viết thường
+rose	tên riêng viết thường
+ross	tên riêng viết thường
+sam	tên riêng viết thường
+sara	tên riêng viết thường
+sean	tên riêng viết thường
+seth	tên riêng viết thường
+sid	tên riêng viết thường
+stan	tên riêng viết thường
+steve	tên riêng viết thường
+stu	tên riêng viết thường
+ted	tên riêng viết thường
+tess	tên riêng viết thường
+tim	tên riêng viết thường
+tina	tên riêng viết thường
+zoe	tên riêng viết thường
+iorque	tên riêng viết thường
+iraque	tên riêng viết thường
+man	tên riêng viết thường
+dom	tên riêng viết thường
+don	tên riêng viết thường
+and	từ tiếng Anh/ngoại lai/tiền tố
+der	từ tiếng Anh/ngoại lai/tiền tố
+in	từ tiếng Anh/ngoại lai/tiền tố
+it	từ tiếng Anh/ngoại lai/tiền tố
+of	từ tiếng Anh/ngoại lai/tiền tố
+on	từ tiếng Anh/ngoại lai/tiền tố
+pro	từ tiếng Anh/ngoại lai/tiền tố
+red	từ tiếng Anh/ngoại lai/tiền tố
+reed	từ tiếng Anh/ngoại lai/tiền tố
+rips	từ tiếng Anh/ngoại lai/tiền tố
+sir	từ tiếng Anh/ngoại lai/tiền tố
+so	từ tiếng Anh/ngoại lai/tiền tố
+the	từ tiếng Anh/ngoại lai/tiền tố
+time	từ tiếng Anh/ngoại lai/tiền tố
+van	từ tiếng Anh/ngoại lai/tiền tố
+von	từ tiếng Anh/ngoại lai/tiền tố
+mail	từ tiếng Anh/ngoại lai/tiền tố
+net	từ tiếng Anh/ngoại lai/tiền tố
+anti	từ tiếng Anh/ngoại lai/tiền tố
+los	từ tiếng Anh/ngoại lai/tiền tố
+las	từ tiếng Anh/ngoại lai/tiền tố
+dale	khẩu ngữ/không chuẩn/gõ sai
+pra	khẩu ngữ/không chuẩn/gõ sai
+ta	khẩu ngữ/không chuẩn/gõ sai
+tá	khẩu ngữ/không chuẩn/gõ sai
+tás	khẩu ngữ/không chuẩn/gõ sai
+né	khẩu ngữ/không chuẩn/gõ sai
+vamo	khẩu ngữ/không chuẩn/gõ sai
+vemo	khẩu ngữ/không chuẩn/gõ sai
+nao	khẩu ngữ/không chuẩn/gõ sai
+lsso	khẩu ngữ/không chuẩn/gõ sai
+ha	khẩu ngữ/không chuẩn/gõ sai
+iá	khẩu ngữ/không chuẩn/gõ sai
+mo	khẩu ngữ/không chuẩn/gõ sai
+ias	khẩu ngữ/không chuẩn/gõ sai
+ihes	khẩu ngữ/không chuẩn/gõ sai
+io	khẩu ngữ/không chuẩn/gõ sai
+cu	nhạy cảm/tục
+foda	nhạy cảm/tục
+merda	nhạy cảm/tục
+porra	nhạy cảm/tục
+puto	nhạy cảm/tục
+sue	mảnh vô nghĩa
+ho	mảnh vô nghĩa
+ão	mảnh vô nghĩa

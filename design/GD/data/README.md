@@ -14,6 +14,9 @@ Mỗi file `<locale>.json` có 534 level (6 World × 5 Subworld; W1·Sub1 = 12, 
 - Độ khó tăng dần theo độ dài seed → chữ lặp → số đáp án. Quota độ dài mặc định theo Anh (3×12, 4×36, 5×126, 6×180, 7×180); thiếu thì dồn sang độ dài kề (vi: âm tiết đơn rất ít từ 6–7 chữ nên chỉ có 3×12, 4×36, 5×384, 6×101, 7×1 — số thật trong `manifest.json`).
 - **vi**: chỉ tiếng đơn/âm tiết (Viet74K lọc mục không khoảng trắng/dấu nối, kiểm cấu trúc âm tiết). Đây là policy bộ data để tích hợp vòng chữ hiện tại, **chưa phải** hỗ trợ từ ghép nhiều tiếng.
 
+## Rà data (T111)
+`blocklist/<locale>.txt` (`từ<TAB>lý do`) do `generate.py` đọc và loại khỏi corpus (viết tắt, tên riêng viết thường, ngoại lai, tục/nhạy cảm, mảnh vô nghĩa; vi thêm từ hiếm/phương ngữ/thán từ/âm tiết không đứng một mình). Danh sách + lý do: `review-removed.md`. Chưa native-review.
+
 ## Chưa xác minh
 Chưa native-review, chưa playtest. fr/es/pt là danh sách từ phổ biến trong `Assets/` (có thể lẫn viết tắt, tên riêng viết thường, từ chia, từ nước ngoài như "aa"/"ee"); vi là wordlist rộng nên có từ hiếm/phương ngữ/thán từ. Nguồn vi theo GPL-2.0: cần cân nhắc khi phát hành data phái sinh.
 

@@ -23,27 +23,28 @@
  "locales": {
   "vi": {
    "corpusLines": 73902,
-   "usableWords": 6056,
+   "usableWords": 5191,
    "rejected": {
     "length": 206,
     "uppercase/proper": 5012,
     "space/hyphen/punct/digit": 61569,
     "not-vietnamese-syllable": 790,
-    "duplicate": 268,
+    "blocklist": 871,
+    "duplicate": 262,
     "empty": 1
    },
    "seedCandidatesByLen": {
-    "3": 2112,
-    "4": 1837,
-    "5": 643,
-    "6": 101,
+    "3": 1840,
+    "4": 1617,
+    "5": 385,
+    "6": 67,
     "7": 1
    },
    "quotaUsedByLen": {
     "3": 12,
-    "4": 36,
-    "5": 384,
-    "6": 101,
+    "4": 69,
+    "5": 385,
+    "6": 67,
     "7": 1
    },
    "levelsShortfall": 0,
@@ -54,25 +55,26 @@
     }
    ],
    "levels": 534,
-   "sha256": "d6262f50dad4d5e43e6ecbfce922ed4a285a8dc62a14168c16270256c7219b44"
+   "sha256": "5c106556502a3526dc3726fba31d88a8f3a1fc899e02c3224ff4d465d8999319"
   },
   "fr": {
    "corpusLines": 10001,
-   "usableWords": 3710,
+   "usableWords": 3670,
    "rejected": {
     "length": 3758,
     "uppercase/proper": 1658,
     "space/hyphen/punct/digit": 862,
+    "blocklist": 40,
     "duplicate": 1,
     "no-vowel": 11,
     "empty": 1
    },
    "seedCandidatesByLen": {
-    "3": 107,
-    "4": 359,
-    "5": 685,
-    "6": 1050,
-    "7": 1211
+    "3": 89,
+    "4": 338,
+    "5": 679,
+    "6": 1047,
+    "7": 1208
    },
    "quotaUsedByLen": {
     "3": 12,
@@ -89,22 +91,23 @@
     }
    ],
    "levels": 534,
-   "sha256": "c3a5303adb56adcb5278a63a378316c61bd18d373b109aaeab850c70d24b6dcb"
+   "sha256": "466ac649dae3163089465cd44f4fd04ada6ebf9bdaf8acf4661ec166a4a658c0"
   },
   "es": {
    "corpusLines": 10001,
-   "usableWords": 5270,
+   "usableWords": 5095,
    "rejected": {
     "length": 4707,
+    "blocklist": 175,
     "no-vowel": 23,
     "empty": 1
    },
    "seedCandidatesByLen": {
-    "3": 146,
-    "4": 482,
-    "5": 1130,
-    "6": 1425,
-    "7": 1615
+    "3": 96,
+    "4": 396,
+    "5": 1082,
+    "6": 1408,
+    "7": 1607
    },
    "quotaUsedByLen": {
     "3": 12,
@@ -121,22 +124,23 @@
     }
    ],
    "levels": 534,
-   "sha256": "6037f3b23f3cc7125a79ac81295ae404ad2e343a05894aca2afe04e323c1ad1f"
+   "sha256": "1730e70784a1ea7ff478794f74d1c3ae9981c10f0437f8f431b59b860255c64c"
   },
   "pt": {
    "corpusLines": 4928,
-   "usableWords": 3583,
+   "usableWords": 3448,
    "rejected": {
     "length": 1333,
     "no-vowel": 11,
+    "blocklist": 135,
     "empty": 1
    },
    "seedCandidatesByLen": {
-    "3": 167,
-    "4": 440,
-    "5": 878,
-    "6": 903,
-    "7": 810
+    "3": 123,
+    "4": 395,
+    "5": 861,
+    "6": 900,
+    "7": 809
    },
    "quotaUsedByLen": {
     "3": 12,
@@ -153,7 +157,7 @@
     }
    ],
    "levels": 534,
-   "sha256": "a100bec19b83716a254ac7e8a55f5ec9ad6cb06c3f3a10011ccc93003a9d762f"
+   "sha256": "6377e3f18605772bb4804005e69ad9a93d66d7168fee7e7cc5bed92a9dce6cc3"
   }
  },
  "outputs": {}
