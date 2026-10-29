@@ -12,6 +12,8 @@ using UnityEditorInternal;
 using System.Reflection;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class CUtils
 {
@@ -479,8 +481,14 @@ public class CUtils
         return list;
     }
 
-    // WordCrossBootstrap chiếm build index 0, chỉ số scene gameplay legacy lệch thêm 1.
-    private const int GameplaySceneBuildOffset = 1;
+    // Scene gameplay nằm trong Addressables (SceneConfigGroup); chỉ số legacy tra theo thứ tự này.
+    private static readonly string[] GameplaySceneAddresses =
+    {
+        "Assets/_Scenes/Home.unity",
+        "Assets/_Scenes/SelectWorld.unity",
+        "Assets/_Scenes/SelectLevel.unity",
+        "Assets/_Scenes/Main.unity",
+    };
 
     public static void LoadScene(int sceneIndex, bool useScreenFader = false)
     {
@@ -490,13 +498,19 @@ public class CUtils
         }
         else
         {
-            SceneManager.LoadScene(sceneIndex + GameplaySceneBuildOffset);
+            string address = GameplaySceneAddresses[sceneIndex];
+            Addressables.LoadSceneAsync(address, LoadSceneMode.Single).Completed += handle =>
+            {
+                if (handle.Status != AsyncOperationStatus.Succeeded)
+                    Debug.LogError("[Scene] Addressables scene load failed: " + address + " " + handle.OperationException);
+            };
         }
     }
 
     public static void ReloadScene(bool useScreenFader = false)
     {
-        int currentIndex = SceneManager.GetActiveScene().buildIndex - GameplaySceneBuildOffset;
+        string activeName = SceneManager.GetActiveScene().name;
+        int currentIndex = Array.FindIndex(GameplaySceneAddresses, address => Path.GetFileNameWithoutExtension(address) == activeName);
         LoadScene(currentIndex, useScreenFader);
     }
 
