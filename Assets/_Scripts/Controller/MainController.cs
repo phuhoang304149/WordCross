@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using Superpow;
 
 public class MainController : BaseController {
-    public Text levelNameText;
+    public Text levelNameText, levelSubText;
 
     private int world, subWorld, level;
     private bool isGameComplete;
@@ -39,6 +39,7 @@ public class MainController : BaseController {
         }
 
         levelNameText.text = GameState.currentSubWorldName + " - " + (level + 1);
+        levelSubText.text = "Level " + (level + 1);
     }
 
     public void OnComplete()
