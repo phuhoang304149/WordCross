@@ -364,11 +364,11 @@ MonoBehaviour:
     - "Meta de hoje: encontrar as {n} palavras."
   - key: "game.dailyName"
     values:
-    - "Thử thách {d}"
+    - "Ngày {d}"
     - "Daily {d}"
-    - "Défi du {d}"
-    - "Reto del {d}"
-    - "Desafio de {d}"
+    - "Défi {d}"
+    - "Reto {d}"
+    - "Desafio {d}"
   - key: "game.words"
     values:
     - "{a}/{b} từ"
