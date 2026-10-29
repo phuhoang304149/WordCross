@@ -22,7 +22,8 @@ public class WorldController : BaseController {
 
     private void UpdateUI()
     {
+        // Each page is stretched to the screen width by the layout group so cards keep the design side padding
         scrollContent.sizeDelta = new Vector2(mainUI.rect.width * scrollContent.childCount, scrollContent.sizeDelta.y);
-        contentLayoutGroup.spacing = mainUI.rect.width;
+        contentLayoutGroup.spacing = 0;
     }
 }

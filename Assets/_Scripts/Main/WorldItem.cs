@@ -9,6 +9,9 @@ public class WorldItem : MonoBehaviour {
     public Button button;
     public Sprite playUnactive;
     public Text processText, subWorldName;
+    public Text titleText;
+    public CanvasGroup canvasGroup;
+    public float lockedAlpha = 0.55f;
     public Image indexBack;
     public RectTransform progressFill;
     public Color lockedIndexColor = new Color(0.7216f, 0.7843f, 0.7843f, 1f);
@@ -20,6 +23,8 @@ public class WorldItem : MonoBehaviour {
         world = transform.parent.parent.GetSiblingIndex();
         subWorld = transform.GetSiblingIndex();
         int numLevels = Superpow.Utils.GetNumLevels(world, subWorld);
+        // TODO l10n: design key 'world.sub'
+        titleText.text = "Subworld " + (subWorld + 1);
 
         int unlockedWorld = Prefs.unlockedWorld;
         int unlockedSubWorld = Prefs.unlockedSubWorld;
@@ -27,9 +32,7 @@ public class WorldItem : MonoBehaviour {
 
         if (world > unlockedWorld || (world == unlockedWorld && subWorld > unlockedSubWorld))
         {
-            SetColorAlpha(itemName, 0.5f);
-            SetColorAlpha(itemNumber, 0.5f);
-            SetColorAlpha(itemNumberBack, 0.5f);
+            canvasGroup.alpha = lockedAlpha;
             button.interactable = false;
             play.sprite = playUnactive;
             indexBack.color = lockedIndexColor;
@@ -56,11 +59,6 @@ public class WorldItem : MonoBehaviour {
         float ratio = total > 0 ? Mathf.Clamp01((float)done / total) : 0f;
         progressFill.anchorMax = new Vector2(ratio, 1f);
         progressFill.gameObject.SetActive(ratio > 0f);
-    }
-
-    private void SetColorAlpha(MaskableGraphic graphic, float alpha)
-    {
-        graphic.color = new Color(graphic.color.r, graphic.color.g, graphic.color.b, alpha);
     }
 
     private void OnButtonClick()
