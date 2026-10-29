@@ -1,0 +1,140 @@
+{
+    "projectType": "pikachu",
+    "hotUpdateBaseUrl": "",
+    "allowDevelopmentHttp": false,
+    "editorSource": 0,
+    "editorLocalUrl": "Export/CLR",
+    "editorMainUrl": "",
+    "streamingAssetsFolder": "clr",
+    "hotUpdateAssemblies": [
+        "CatGaming.Module"
+    ],
+    "aotMetadataAssemblies": [
+        "CatGaming.Clr.Runtime",
+        "mscorlib",
+        "System",
+        "System.Core",
+        "UnityEngine.CoreModule",
+        "UnityEngine.JSONSerializeModule",
+        "UnityEngine.UIElementsModule",
+        "Unity.Addressables",
+        "Unity.ResourceManager",
+        "UniTask",
+        "AYellowpaper.SerializedCollections",
+        "DOTween",
+        "Newtonsoft.Json",
+        "UniTask.Addressables",
+        "UnityEngine.AndroidJNIModule",
+        "Unity.Purchasing",
+        "GoogleMobileAds",
+        "GoogleMobileAds.Core",
+        "GoogleMobileAds.Common",
+        "GoogleMobileAds.Android",
+        "GoogleMobileAds.Ump",
+        "GoogleMobileAds.Ump.Android"
+    ],
+    "hotUpdateAssemblyAssets": [
+        {
+            "assembly": "CatGaming.Module",
+            "assetGuid": "a9a76d15823564a30ad27eff9720d172"
+        }
+    ],
+    "aotMetadataAssemblyAssets": [
+        {
+            "assembly": "CatGaming.Clr.Runtime",
+            "assetGuid": "fb1f084b8ee64dafa4baff6838b755a5"
+        },
+        {
+            "assembly": "mscorlib",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "System",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "System.Core",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "UnityEngine.CoreModule",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "UnityEngine.JSONSerializeModule",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "UnityEngine.UIElementsModule",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "Unity.Addressables",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "Unity.ResourceManager",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "UniTask",
+            "assetGuid": "f51ebe6a0ceec4240a699833d6309b23"
+        },
+        {
+            "assembly": "AYellowpaper.SerializedCollections",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "DOTween",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "Newtonsoft.Json",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "UniTask.Addressables",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "UnityEngine.AndroidJNIModule",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "Unity.Purchasing",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "GoogleMobileAds",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "GoogleMobileAds.Core",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "GoogleMobileAds.Common",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "GoogleMobileAds.Android",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "GoogleMobileAds.Ump",
+            "assetGuid": ""
+        },
+        {
+            "assembly": "GoogleMobileAds.Ump.Android",
+            "assetGuid": ""
+        }
+    ],
+    "loadContentBundles": false,
+    "contentRoots": [],
+    "gameplayScenes": [],
+    "preloadAddressableLabels": [
+        "preload_1",
+        "preload_3"
+    ],
+    "entryPoints": []
+}

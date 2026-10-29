@@ -1,0 +1,28 @@
+{
+  "contentFolder": "Assets/WordCross/Config/GameData",
+  "admob": {
+    "androidAppId": "",
+    "iosAppId": "",
+    "androidBannerId": "ca-app-pub-5916994690017637/8327033343",
+    "androidInterstitialId": "ca-app-pub-5916994690017637/7800242125",
+    "androidRewardedId": "ca-app-pub-5916994690017637/3074706665",
+    "androidRewardInterstitialId": "",
+    "iosBannerId": "",
+    "iosInterstitialId": "",
+    "iosRewardedId": "",
+    "iosRewardInterstitialId": ""
+  },
+  "levelPlay": {
+    "androidAppKey": "",
+    "iosAppKey": "",
+    "androidBannerId": "",
+    "androidInterstitialId": "",
+    "androidRewardedId": "",
+    "iosBannerId": "",
+    "iosInterstitialId": "",
+    "iosRewardedId": "",
+    "admobAndroidAppId": "",
+    "admobIosAppId": ""
+  },
+  "requiredKeys": []
+}

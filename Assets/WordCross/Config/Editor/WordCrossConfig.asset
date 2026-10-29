@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716369849f97f4572b34425c7c7a56ba, type: 3}
+  m_Name: WordCrossConfig
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::Util.Editor.BuildConfig
+  configName: WordCross
+  defiineSymbol_dev: CATGAMING_ADDRESSABLES;CATGAMING_ADMOB;CATGAMING_ADS;CATGAMING_CLR;CATGAMING_IAP;DEVELOPMENT;DOTWEEN;GAME_DEBUG;UMP_AVAILABLE;UNITASK_DOTWEEN_SUPPORT
+  defiineSymbol_dev_no_log: CATGAMING_ADDRESSABLES;CATGAMING_ADMOB;CATGAMING_ADS;CATGAMING_CLR;CATGAMING_IAP;DEVELOPMENT;DOTWEEN;UMP_AVAILABLE;UNITASK_DOTWEEN_SUPPORT
+  defiineSymbol_dev_local: CATGAMING_ADDRESSABLES;CATGAMING_ADMOB;CATGAMING_ADS;CATGAMING_CLR;CATGAMING_IAP;DEVELOPMENT;DOTWEEN;GAME_DEBUG;UMP_AVAILABLE;UNITASK_DOTWEEN_SUPPORT
+  defiineSymbol_staging_dev: CATGAMING_ADDRESSABLES;CATGAMING_ADMOB;CATGAMING_ADS;CATGAMING_CLR;CATGAMING_IAP;DEVELOPMENT;DOTWEEN;GAME_DEBUG;UMP_AVAILABLE;UNITASK_DOTWEEN_SUPPORT
+  defiineSymbol_prod_log: CATGAMING_ADDRESSABLES;CATGAMING_ADMOB;CATGAMING_ADS;CATGAMING_CLR;CATGAMING_IAP;DEVELOPMENT;DOTWEEN;GAME_DEBUG;UMP_AVAILABLE;UNITASK_DOTWEEN_SUPPORT
+  defiineSymbol_prod: CATGAMING_ADDRESSABLES;CATGAMING_ADMOB;CATGAMING_ADS;CATGAMING_CLR;CATGAMING_IAP;DOTWEEN;PRODUCTION;UMP_AVAILABLE;UNITASK_DOTWEEN_SUPPORT
+  packagenameIos: com.PHltd.wordcrossy
+  packagenameAndroid: com.PHltd.wordcrossy
+  version: 0.3
+  addressableVersion: 0.3
+  bundlecode: 6
+  clrUrl: 
+  addressableUrl: 
+  addressableConfig: {fileID: 0}
+  buildCount: 1
+  IL2CppBuild: 1
+  up: 1
+  down: 0
+  left: 0
+  right: 0
+  portraitReferenceResolution: {x: 1125, y: 2436}
+  landscapeReferenceResolution: {x: 2436, y: 1125}
+  packagename: com.PHltd.wordcrossy
+  company: PHltd
+  productName: wordcrossy
+  keystorePath: /../wordCross.keystore
+  iosBuildOptionPath:
+  keystore: wordCross
+  aliasname: wordcross
+  keystorePwd: 
+  aliasPwd: 
+  iconGame: {fileID: 2800000, guid: c3d2924ee55a38a46ab7c3d070d8e276, type: 3}
+  adsId: 
+  bannerId: ca-app-pub-5916994690017637/8327033343
+  interId: ca-app-pub-5916994690017637/7800242125
+  videoId: ca-app-pub-5916994690017637/3074706665
+  rewardInterID:
+  openAdsId:
+  leaderboardIds: []
+  appleDeveloperTeamID:
+  appleManualProvisioningProfileID:
+  appleAdHocProvisioningProfileID:
+  appleEnableAutomaticSigning: 0
+  ios_adsId:
+  ios_bannerId:
+  ios_interId:
+  ios_videoId:
+  products:
+    _serializedList:
+    - Key: word.item1
+      Value:
+        storeId: word.item1
+        price: 
+        numCoins: 50
+        discount: 0
+        mostPopular: 0
+        bestValue: 0
+        productType: 0
+        removeAdsProduct: 0
+        removeAdsDays: 0
+    - Key: word.item2
+      Value:
+        storeId: word.item2
+        price: 
+        numCoins: 110
+        discount: 0
+        mostPopular: 0
+        bestValue: 0
+        productType: 0
+        removeAdsProduct: 0
+        removeAdsDays: 0
+    - Key: word.item3
+      Value:
+        storeId: word.item3
+        price: 
+        numCoins: 250
+        discount: 0
+        mostPopular: 0
+        bestValue: 0
+        productType: 0
+        removeAdsProduct: 0
+        removeAdsDays: 0
+    - Key: word.item4
+      Value:
+        storeId: word.item4
+        price: 
+        numCoins: 450
+        discount: 0
+        mostPopular: 0
+        bestValue: 0
+        productType: 0
+        removeAdsProduct: 0
+        removeAdsDays: 0
+    - Key: word.item5
+      Value:
+        storeId: word.item5
+        price: 
+        numCoins: 1100
+        discount: 0
+        mostPopular: 0
+        bestValue: 0
+        productType: 0
+        removeAdsProduct: 0
+        removeAdsDays: 0

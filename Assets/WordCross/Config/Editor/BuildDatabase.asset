@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922fcab570555412b9c7bc510884d653, type: 3}
+  m_Name: BuildDatabase
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::Util.Editor.BuildDatabase
+  currentConfigId: WordCross
+  packageNameAndroid: com.PHltd.wordcrossy
+  packageNameIos: com.PHltd.wordcrossy
+  clrConfiguration: {fileID: 11400000, guid: b5b30f79ac6a42038f856a5881ac9a54, type: 2}
+  configs:
+  - {fileID: 11400000, guid: 50a643dbd74647f4ae179d1ee24764bd, type: 2}
+  gameDefines: []
+  tags: []

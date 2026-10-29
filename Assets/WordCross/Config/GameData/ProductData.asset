@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec70722549c840108dcfce22aad1ca4, type: 3}
+  m_Name: ProductData
+  m_EditorClassIdentifier: CatGaming.Module::catgamingmodule.Purchase.ProductData
+  products:
+    _serializedList:
+    - Key: word.item1
+      Value:
+        storeId: word.item1
+        price: 
+        numCoins: 50
+        discount: 0
+        mostPopular: 0
+        bestValue: 0
+        productType: 0
+        removeAdsProduct: 0
+        removeAdsDays: 0
+    - Key: word.item2
+      Value:
+        storeId: word.item2
+        price: 
+        numCoins: 110
+        discount: 0
+        mostPopular: 0
+        bestValue: 0
+        productType: 0
+        removeAdsProduct: 0
+        removeAdsDays: 0
+    - Key: word.item3
+      Value:
+        storeId: word.item3
+        price: 
+        numCoins: 250
+        discount: 0
+        mostPopular: 0
+        bestValue: 0
+        productType: 0
+        removeAdsProduct: 0
+        removeAdsDays: 0
+    - Key: word.item4
+      Value:
+        storeId: word.item4
+        price: 
+        numCoins: 450
+        discount: 0
+        mostPopular: 0
+        bestValue: 0
+        productType: 0
+        removeAdsProduct: 0
+        removeAdsDays: 0
+    - Key: word.item5
+      Value:
+        storeId: word.item5
+        price: 
+        numCoins: 1100
+        discount: 0
+        mostPopular: 0
+        bestValue: 0
+        productType: 0
+        removeAdsProduct: 0
+        removeAdsDays: 0
