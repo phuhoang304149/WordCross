@@ -9,6 +9,7 @@ public class ExtraWordDialog : Dialog
     public ExtraProgress extraProgress;
     public GameObject claimButton;
     public Text progressText;
+    public Text claimText;
 
     private int numWords, claimQuantity;
 
@@ -23,7 +24,7 @@ public class ExtraWordDialog : Dialog
 
     public void Claim()
     {
-        claimQuantity = (int)extraProgress.target / 5 * 2;
+        claimQuantity = GetClaimQuantity();
         
         extraProgress.current -= (int)extraProgress.target;
         Prefs.extraProgress = (int)extraProgress.current;
@@ -43,8 +44,11 @@ public class ExtraWordDialog : Dialog
     private IEnumerator ClaimEffect()
     {
         Transform rubyBalance = GameObject.FindWithTag("RubyBalance").transform;
-        var middlePoint = CUtils.GetMiddlePoint(claimTr.position, rubyBalance.position, -0.4f);
-        Vector3[] waypoints = { claimTr.position, middlePoint, rubyBalance.position };
+        // Pivot của RubyBalance nằm ở mép phải pill nên bay về icon ruby con (nếu có) thay vì pivot
+        Transform rubyIcon = rubyBalance.Find("Ruby");
+        Vector3 targetPosition = rubyIcon != null ? rubyIcon.position : rubyBalance.position;
+        var middlePoint = CUtils.GetMiddlePoint(claimTr.position, targetPosition, -0.4f);
+        Vector3[] waypoints = { claimTr.position, middlePoint, targetPosition };
 
         for (int i = 0; i < claimQuantity; i++)
         {
@@ -60,7 +64,17 @@ public class ExtraWordDialog : Dialog
 
     private void UpdateUI()
     {
-        claimButton.SetActive(extraProgress.current >= extraProgress.target);
+        // Theo design: nút luôn hiện, xám khi chưa đủ từ thưởng
+        bool ready = extraProgress.current >= extraProgress.target;
+        claimButton.GetComponent<Button>().interactable = ready;
+        claimButton.GetComponent<Image>().color = ready ? new Color(0.0706f, 0.7098f, 0.651f) : new Color(0.8118f, 0.8627f, 0.8627f);
+        claimButton.GetComponent<Shadow>().effectColor = ready ? new Color(0.0431f, 0.549f, 0.502f) : new Color(0.7098f, 0.7725f, 0.7725f);
+        claimText.text = "CLAIM +" + GetClaimQuantity() + " RUBIES";
         progressText.text = extraProgress.current + "/" + extraProgress.target;
+    }
+
+    private int GetClaimQuantity()
+    {
+        return (int)extraProgress.target / 5 * 2;
     }
 }
