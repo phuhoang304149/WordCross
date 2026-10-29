@@ -1,4 +1,6 @@
 ﻿using UnityEngine.UI;
+using Script.Utils;
+using WordCross.Gameplay;
 
 public class HomeController : BaseController {
     private const int PLAY = 0;
@@ -12,8 +14,25 @@ public class HomeController : BaseController {
     protected override void Start()
     {
         base.Start();
+        UpdateResume();
+        Locator<LocalizationController>.Instance.onLanguageChanged += OnLanguageChanged;
+    }
+
+    private void OnDestroy()
+    {
+        if (Locator<LocalizationController>.Instance != null)
+            Locator<LocalizationController>.Instance.onLanguageChanged -= OnLanguageChanged;
+    }
+
+    private void OnLanguageChanged(string code)
+    {
+        UpdateResume();
+    }
+
+    private void UpdateResume()
+    {
         if (resumeText != null)
-            resumeText.text = string.Format("Resume: Subworld {0} - {1}", Prefs.unlockedSubWorld + 1, Prefs.unlockedLevel + 1);
+            resumeText.text = Locator<LocalizationController>.Instance.Get("home.resume", "s", Prefs.unlockedSubWorld + 1, "l", Prefs.unlockedLevel + 1);
     }
 
     public void OnClick(int index)
