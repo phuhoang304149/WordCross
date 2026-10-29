@@ -22,6 +22,8 @@ namespace WordCross.Gameplay
     //   dailywin[:fresh|risk|safe|lost]   Win biến thể Daily (thắng bàn hôm nay; ruby/dữ liệu Daily trả lại sau 1 giây)
     //   Hậu tố ;glang=vi|en|fr|es|pt đổi ngôn ngữ chơi (lưu thật; trả lại bằng ;glang=en).
     //   Hậu tố ;solve=K (cho main) tự nhập mọi đáp án trừ K từ cuối, in toạ độ màn hình của các chữ trong vòng ("letters") để adb swipe nốt.
+    //   Hậu tố ;noads=N giả lập mua gói tắt quảng cáo thành công sau N giây (gọi Purchaser.GrantNoAds, cùng đường OnNoAdsRestored; không qua Google Play).
+    //   noads | noads:off   giả lập mua ngay / xoá cờ buy_item + remove_ads để chụp lại trạng thái có banner.
     //   reset (trả số ruby và dữ liệu Daily về giá trị trước khi ghi đè)
     public sealed class DebugOpener : MonoBehaviour
     {
@@ -81,6 +83,7 @@ namespace WordCross.Gameplay
             string arg = head.Length > 1 ? head[1].Trim().ToLowerInvariant() : "";
             int[] level = null;
             int solveKeep = -1;
+            float noAdsDelay = -1f;
             for (int i = 1; i < parts.Length; i++)
             {
                 string[] pair = parts[i].Split(new[] { '=' }, 2);
@@ -93,7 +96,9 @@ namespace WordCross.Gameplay
                 else if (key == "lang") Locator<LocalizationController>.Instance.SetLanguage(pair[1]);
                 else if (key == "glang") Locator<LocalizationController>.Instance.SetGameLanguage(pair[1].Trim().ToLowerInvariant());
                 else if (key == "solve") solveKeep = int.Parse(pair[1]);
+                else if (key == "noads") noAdsDelay = float.Parse(pair[1]);
             }
+            if (noAdsDelay >= 0) StartCoroutine(GrantNoAdsAfter(noAdsDelay));
 
             switch (name)
             {
@@ -147,6 +152,10 @@ namespace WordCross.Gameplay
                 case "rewarded":
                     yield return OpenRewarded(arg);
                     break;
+                case "noads":
+                    if (arg == "off") ClearNoAds();
+                    else Purchaser.instance.GrantNoAds();
+                    break;
                 case "home":
                     break;
                 default:
@@ -178,6 +187,21 @@ namespace WordCross.Gameplay
             }
             Debug.Log(report.ToString());
             Debug.Log("[DebugOpener] remaining: " + string.Join("|", words.GetRange(words.Count - keep, keep)) + " word=" + gameLevel.word + " screen=" + Screen.width + "x" + Screen.height);
+        }
+
+        private IEnumerator GrantNoAdsAfter(float seconds)
+        {
+            yield return new WaitForSecondsRealtime(seconds);
+            Purchaser.instance.GrantNoAds();
+            Debug.Log("[DebugOpener] noads granted buy_item=" + CUtils.IsBuyItem() + " remove_ads=" + CUtils.IsAdsRemoved());
+        }
+
+        private void ClearNoAds()
+        {
+            CPlayerPrefs.SetBool("buy_item", false);
+            CUtils.SetRemoveAds(false);
+            CPlayerPrefs.Save();
+            Debug.Log("[DebugOpener] noads cleared");
         }
 
         private IEnumerator WaitScene(string sceneName)

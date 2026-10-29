@@ -56,7 +56,7 @@ public class PromoteController : MonoBehaviour
         if (promotes == null) return;
 
         var apps = promotes.FindAll(x => CUtils.IsAppInstalled(x.package) && x.rewardType == RewardType.RemoveAds);
-        if (apps.Count == 0) CUtils.SetRemoveAds(false);
+        if (apps.Count == 0 && !CUtils.IsBuyItem()) CUtils.SetRemoveAds(false);
 
         apps = promotes.FindAll(x => !CUtils.IsAppInstalled(x.package) && x.rewardType == RewardType.RemoveAds && IsRewarded(x.package));
         foreach (var promote in apps)
