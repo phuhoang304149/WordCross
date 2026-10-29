@@ -22,6 +22,5 @@ public class DDOLCameraUI : MonoBehaviour {
     private void SetCamera()
     {
         GetComponent<Canvas>().worldCamera = Camera.main;
-        GTil.Init(this);
     }
 }
