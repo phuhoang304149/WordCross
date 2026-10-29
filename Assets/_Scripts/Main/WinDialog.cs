@@ -183,6 +183,31 @@ public class WinDialog : Dialog {
         goalText.gameObject.SetActive(true);
         extraWordsText.text = Loc.Get("win.dailyNext");
         extraWordsText.gameObject.SetActive(true);
+        ApplyDailyLayout();
+    }
+
+    // Design popups.win biến thể Daily: không có hàng sao và nút MENU, ruby cỡ lớn, dòng chuỗi nằm trước nút video, nút về Daily cao 88.
+    private void ApplyDailyLayout()
+    {
+        Transform bg = transform.Find("Content/BG");
+        bg.Find("Stars").gameObject.SetActive(false);
+        bg.Find("Menu").gameObject.SetActive(false);
+
+        RectTransform holder = rewardHolder.GetComponent<RectTransform>();
+        holder.sizeDelta = new Vector2(504, 93);
+        ((RectTransform)holder.Find("RubyIcon")).anchoredPosition = new Vector2(-49, 0);
+        rewardAmountText.fontSize = 74;
+        rewardAmountText.rectTransform.anchoredPosition = new Vector2(44, 0);
+        rewardAmountText.rectTransform.sizeDelta = new Vector2(130, 100);
+
+        if (dailyResult.milestone > 0) goalText.rectTransform.sizeDelta = new Vector2(504, 41);
+        doubleRewardButton.transform.SetSiblingIndex(extraWordsText.transform.GetSiblingIndex());
+
+        Transform next = bg.Find("Next");
+        ((RectTransform)next).sizeDelta = new Vector2(504, 88);
+        next.GetComponent<Image>().pixelsPerUnitMultiplier = 128f / 88f;
+        next.GetComponent<Shadow>().effectDistance = new Vector2(0, -6.8f);
+        next.GetComponentInChildren<Text>().fontSize = 29;
     }
 
     private void ShowRewardInfo()
