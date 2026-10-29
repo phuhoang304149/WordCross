@@ -84,9 +84,16 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 
 <div class="item" data-id="sprite">
 <h3>Cạnh thẻ / nút hơi mềm so với design <span class="tag">cần Codex nếu làm</span></h3>
-<p>Thẻ, pill, nút dùng sprite bo góc <code>ui_round</code> 128px kéo 9-slice nên cạnh mềm hơn CSS một chút (thấy rõ khi phóng to ảnh). Muốn sắc như design phải vẽ lại sprite độ phân giải cao hơn.</p>
+<p>Thẻ, pill, nút dùng sprite bo góc <code>ui_round</code> 128px kéo 9-slice nên cạnh mềm hơn CSS một chút (thấy rõ khi phóng to ảnh). Muốn sắc như design phải vẽ lại sprite độ phân giải cao hơn. Ở màn Main, ô chữ preview (T H E) cũng bo tròn hơn design (design bo 10px) vì chưa có sprite bo nhỏ — <a href="../Build/remote-r2-0.3/qa-shots/mainscr-final-7-main-select.png">ảnh</a>.</p>
 <label class="opt"><input type="radio" name="sprite" value="codex">Cho Codex vẽ lại sprite bo góc sắc hơn</label>
 <label class="opt"><input type="radio" name="sprite" value="giu">Chấp nhận như hiện tại</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+<div class="item" data-id="wheeloffset">
+<h3>Vị trí chữ trên vòng chữ (Main)</h3>
+<p>Để đĩa chọn trùng số đo design, chữ được dịch +2,9px sang phải và +1,2px xuống (bắt chước viền 3px của design). Nếu muốn chữ nằm đúng tâm hình học thì bỏ phần dịch này. <a href="../Build/remote-r2-0.3/qa-shots/mainscr-final-7-main-select.png">Ảnh</a>.</p>
+<label class="opt"><input type="radio" name="wheeloffset" value="design">Giữ khớp số đo design (hiện tại)</label>
+<label class="opt"><input type="radio" name="wheeloffset" value="tam">Đặt chữ đúng tâm hình học</label>
 <textarea placeholder="Ghi chú"></textarea>
 </div>
 <div class="item" data-id="rewardplaying">
@@ -169,7 +176,8 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 <li>Bản nội bộ <b>1.0.0</b> (code 202001035) đã chạy trên máy test; OTA ở <code>wordcross/1.0.0/clr</code> và <code>wordcross/1.0.0/data</code>. Bản live 0.3 không đổi.</li>
 <li>Đã xong + xác minh trên máy: bỏ splash, Notifications B, font Baloo 2, Ads (test ID), nút mua Shop, Home và các popup từ Home khớp design theo số đo.</li>
 <li>Đã xong thêm: SelectWorld, SelectLevel, Header dùng chung (khớp design theo số đo, OTA 1.0.0).</li>
-<li>Đang làm: Main (gồm banner); sau đó popup trong game, localization, đề xuất mới.</li>
+<li>Đã xong thêm: màn Main (bàn chơi, vòng chữ, banner chỉ ở Main, coach level 1), gameplay chơi thật: hint 2 ruby, shuffle, thắng +3, Next.</li>
+<li>Đang làm: popup trong game (Win, Pause, Extra, HowTo, Rewarded trong game…); sau đó localization, đề xuất mới.</li>
 <li>Nhánh chưa merge: <code>wordcross/bot</code> (chờ duyệt cách chơi), <code>wordcross/banner</code> (làm ở nhóm Main).</li>
 </ul>
 </div>
