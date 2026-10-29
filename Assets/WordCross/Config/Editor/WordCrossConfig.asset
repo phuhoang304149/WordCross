@@ -24,8 +24,8 @@ MonoBehaviour:
   version: 0.3
   addressableVersion: 0.3
   bundlecode: 6
-  clrUrl: 
-  addressableUrl: 
+  clrUrl: https://data.catgaming.asia/wordcross/clr
+  addressableUrl: https://data.catgaming.asia/wordcross/data
   addressableConfig: {fileID: 11400000, guid: 45af3449872a45639ffadda92cc64b43, type: 2}
   buildCount: 1
   IL2CppBuild: 1
