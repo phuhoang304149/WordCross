@@ -119,6 +119,34 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "note": "[2026-10-29 20:20 (GMT+7)] Ưu tiên thấp (code chết, không gây lỗi). Thay đổi trong Resources cần APK mới → gộp vào đợt build APK sau (cùng Notifications B T066). HOLD.\n[2026-10-29 19:47 (GMT+7)] Giữ code EM Notification (còn tham chiếu EM_PrefabManager trong GameMaster.prefab, SocialRegion, EM_Manager editor). CanvasScalerRuntimeConfig.asset KHÔNG xoá được (nằm trong submodule catgamingmodule — cấm sửa). Lưu ý: mở Unity Editor tương tác có thể tạo lại EM_Settings.asset. Chỉ có hiệu lực ở APK mới.\n[2026-10-29 20:24 (GMT+7)] Phần trong repo đã xong (EM_Settings.asset xoá, merge 588c52e, có trong APK nosplash2). Còn lại: Tool/Resources/CanvasScalerRuntimeConfig.asset nằm trong submodule catgamingmodule → chặn bởi T002 (submodule chưa push/cấm sửa). Cần APK.\n[2026-10-29 20:32 (GMT+7)] USER cho tạo nhánh game/wordcross trong submodule để sửa. Còn: gộp vào APK kế tiếp + kiểm APK không còn 2 asset. Submodule commit chỉ local (chưa push, T002).\n[2026-10-29 21:25 (GMT+7)] ĐÃ XÁC MINH qua APK 1.0.0."
     },
     {
+      "type": "ui",
+      "status": "waiting",
+      "owner": "CLAUDE (dev)",
+      "deps": "",
+      "evidence": "",
+      "note": "[2026-10-30 USER duyệt] USER: Hiện lại logo game, nền #12b5a6, icon do Codex design lại và thay luôn vào Player Settings. CẦN APK.",
+      "id": "T122",
+      "title": "Màn mở app: logo game trên nền teal #12b5a6 (thay màn đen ~8,7s) + icon mới do Codex",
+      "screen": "Bootstrap · Splash",
+      "goal": "Không màn đen lúc mở app",
+      "scope": "ProjectSettings splash/background + icon app (Codex vẽ lại icon, thay vào Player Settings)",
+      "criteria": "Mở app thấy nền teal + logo ngay; icon mới trên launcher"
+    },
+    {
+      "type": "ui",
+      "status": "waiting",
+      "owner": "CLAUDE (dev)",
+      "deps": "",
+      "evidence": "",
+      "note": "[2026-10-30 USER duyệt] USER: chuyển TMP ở bản APK kế tiếp. CẦN APK.",
+      "id": "T123",
+      "title": "Chuyển chữ UI sang TextMeshPro (letter-spacing theo design)",
+      "screen": "Nền tảng · Unity / HybridCLR / Addressables",
+      "goal": "Khoảng cách chữ đúng design",
+      "scope": "TMP + font asset Baloo2 (Resources TMP Settings → APK)",
+      "criteria": "Letter-spacing khớp design; không vỡ dấu"
+    },
+    {
       "id": "T106",
       "title": "Đồng bộ font theo design: Baloo 2 → CookieRun cho toàn bộ chữ (UGUI Text, tránh phụ thuộc TMP)",
       "type": "runtime",
@@ -472,7 +500,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "id": "T048",
       "title": "Mật khẩu keystore release",
       "type": "manual",
-      "status": "blocked",
+      "status": "waiting",
       "screen": "Build · thiết bị Android",
       "goal": "Ký được bản release",
       "scope": "Keystore Android (không ghi password vào HTML/JSON/commit)",
@@ -480,13 +508,27 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "deps": "",
       "criteria": "USER nhập trực tiếp lúc build, build release ký được",
       "evidence": "",
-      "note": "[2026-10-29 10:59 (GMT+7)] Chưa có mật khẩu keystore. Cần USER cung cấp ngoài tracker."
+      "note": "[2026-10-29 10:59 (GMT+7)] Chưa có mật khẩu keystore. Cần USER cung cấp ngoài tracker.\n[2026-10-30 USER duyệt] Đã có mật khẩu (USER cung cấp trong chat, KHÔNG ghi vào repo/tracker). Build release ký wordCross.keystore."
+    },
+    {
+      "type": "build",
+      "status": "waiting",
+      "owner": "CLAUDE (dev)",
+      "deps": "",
+      "evidence": "",
+      "note": "[2026-10-30 USER duyệt] Gom các việc cần APK.",
+      "id": "T124",
+      "title": "Build APK/AAB release 1.0.0 (202001035) ký keystore thật, không GAME_DEBUG",
+      "screen": "Build · thiết bị Android",
+      "goal": "Bản để USER upload Play",
+      "scope": "gom T122, T123, T125",
+      "criteria": "AAB/APK release ký đúng, cài máy chạy OTA 1.0.0"
     },
     {
       "id": "T052",
       "title": "Xử lý trạng thái app Removed by Google trước phát hành",
       "type": "manual",
-      "status": "blocked",
+      "status": "na",
       "screen": "Build · thiết bị Android",
       "goal": "Làm rõ và xử lý trạng thái Removed by Google của com.PHltd.wordcrossy trước khi upload/gửi review bản mới",
       "scope": "Play Console app com.PHltd.wordcrossy (record hiện hữu, không tạo app mới)",
@@ -494,7 +536,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "deps": "T015",
       "criteria": "USER xác định lý do gỡ từ thông báo/Policy status trên Console và có hướng xử lý được chấp nhận trước khi phát hành",
       "evidence": "",
-      "note": "[2026-10-29 11:11 (GMT+7)] Console ghi App status: Removed by Google, lần update Jan 3 2020. Chưa xác định nguyên nhân (không suy đoán). Cần USER: đọc thông báo/Policy status trên Console, chốt hướng xử lý. Chặn release; build/QA độc lập vẫn làm tiếp."
+      "note": "[2026-10-29 11:11 (GMT+7)] Console ghi App status: Removed by Google, lần update Jan 3 2020. Chưa xác định nguyên nhân (không suy đoán). Cần USER: đọc thông báo/Policy status trên Console, chốt hướng xử lý. Chặn release; build/QA độc lập vẫn làm tiếp.\n[2026-10-30 USER duyệt] App chưa submit — không cần xử lý Removed; build versionCode 202001035, versionName 1.0.0."
     },
     {
       "id": "T015",
@@ -570,7 +612,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "id": "T007",
       "title": "Xác minh Ads/IAP thật trên thiết bị",
       "type": "ads-iap-ota",
-      "status": "doing",
+      "status": "waiting",
       "screen": "Ads · IAP",
       "goal": "Reward callback thật, giao dịch IAP thật",
       "scope": "Android",
@@ -578,7 +620,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "deps": "T006, T009, T060, T063",
       "criteria": "Log/ADB chứng minh callback + giao dịch",
       "evidence": "ADB sau merge 45e0fe5: GameDatabase ready, IAP khởi tạo, không có lỗi Missing preloaded. ADB sau merge b47c636 (2 lần khởi động): GameDatabase ready, IAP khởi tạo. 1.0.0 (bản chẩn đoán GAME_DEBUG): [IAP] BuildCatalog word.item1..5, Products fetched: 5 (Consumable), Purchases fetched (0). Log Build/remote-r2-1.0.0/ads-test-launch.log, ads-iap-cold.log.",
-      "note": "[2026-10-29 10:59 (GMT+7)] Chưa mua thật, chưa xác minh reward callback Ads. SetupAndroidDev xóa AdMob ID chưa sửa (T047). AdMob iOS chưa có ID (T049).\n[2026-10-29 11:06 (GMT+7)] Vẫn chưa mua thật, chưa xác minh Ads. T047 đang xử lý.\n[2026-10-29 11:15 (GMT+7)] Ads runtime chưa có bằng chứng; IAP store init/mua chưa xác minh. Race Locator/GameDatabase chỉ là giả thuyết, chưa có chứng cứ → không ghi thành lỗi runtime.\n[2026-10-29 11:23 (GMT+7)] Sau OTA 9b08545: IAP GameDatabase ready trên SM-A515F. Không thực hiện giao dịch nào; Ads chưa xác minh.\n[2026-10-29 11:53 (GMT+7)] QA IAP đối chiếu tĩnh: 5 product id word.item1..word.item5 khớp giữa ProductData, WordCrossConfig, GameMaster (50/110/250/450/1100 coins). CHƯA đối chiếu Play Console (không có tab Console). CHƯA có bằng chứng store init / product fetch, chưa giao dịch → task vẫn CHƯA xác minh, giữ Đang làm. Ads init race: xem T060.\n[2026-10-29 12:03 (GMT+7)] Ads bị chặn: QA FAIL f9c59cb (T060) — AdmobController.instance có thể trỏ object đã hủy sau chuyển scene → Ads không hiện. Chờ T063; KHÔNG OTA code Ads trước khi sửa.\n[2026-10-29 12:08 (GMT+7)] Ads vẫn bị chặn bởi T060/T063 (dev đang sửa singleton), chưa OTA.\n[2026-10-29 21:45 (GMT+7)] Store init + product fetch ĐẠT. Phát hiện lỗi: nút mua không gọi Purchaser (T114, đã sửa 2f7eddf, đang OTA 1.0.0 để xác minh). Giao dịch thật chưa test được: cần bản Internal testing + license tester (phụ thuộc T048 keystore, T052 Removed by Google). Giá Shop đang cố định trong prefab, chưa lấy từ store."
+      "note": "[2026-10-29 10:59 (GMT+7)] Chưa mua thật, chưa xác minh reward callback Ads. SetupAndroidDev xóa AdMob ID chưa sửa (T047). AdMob iOS chưa có ID (T049).\n[2026-10-29 11:06 (GMT+7)] Vẫn chưa mua thật, chưa xác minh Ads. T047 đang xử lý.\n[2026-10-29 11:15 (GMT+7)] Ads runtime chưa có bằng chứng; IAP store init/mua chưa xác minh. Race Locator/GameDatabase chỉ là giả thuyết, chưa có chứng cứ → không ghi thành lỗi runtime.\n[2026-10-29 11:23 (GMT+7)] Sau OTA 9b08545: IAP GameDatabase ready trên SM-A515F. Không thực hiện giao dịch nào; Ads chưa xác minh.\n[2026-10-29 11:53 (GMT+7)] QA IAP đối chiếu tĩnh: 5 product id word.item1..word.item5 khớp giữa ProductData, WordCrossConfig, GameMaster (50/110/250/450/1100 coins). CHƯA đối chiếu Play Console (không có tab Console). CHƯA có bằng chứng store init / product fetch, chưa giao dịch → task vẫn CHƯA xác minh, giữ Đang làm. Ads init race: xem T060.\n[2026-10-29 12:03 (GMT+7)] Ads bị chặn: QA FAIL f9c59cb (T060) — AdmobController.instance có thể trỏ object đã hủy sau chuyển scene → Ads không hiện. Chờ T063; KHÔNG OTA code Ads trước khi sửa.\n[2026-10-29 12:08 (GMT+7)] Ads vẫn bị chặn bởi T060/T063 (dev đang sửa singleton), chưa OTA.\n[2026-10-29 21:45 (GMT+7)] Store init + product fetch ĐẠT. Phát hiện lỗi: nút mua không gọi Purchaser (T114, đã sửa 2f7eddf, đang OTA 1.0.0 để xác minh). Giao dịch thật chưa test được: cần bản Internal testing + license tester (phụ thuộc T048 keystore, T052 Removed by Google). Giá Shop đang cố định trong prefab, chưa lấy từ store.\n[2026-10-30 USER duyệt] USER sẽ tự upload + test mua thật."
     },
     {
       "id": "T114",
@@ -634,7 +676,21 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "deps": "",
       "criteria": "USER xác nhận bundle id iOS thuộc game hoặc cung cấp bundle id đúng",
       "evidence": "",
-      "note": "[2026-10-29 11:15 (GMT+7)] iOS bundle id hiện com.superpow.wordchef, chưa xác minh là của game. AdMob iOS trống (T049)."
+      "note": "[2026-10-29 11:15 (GMT+7)] iOS bundle id hiện com.superpow.wordchef, chưa xác minh là của game. AdMob iOS trống (T049).\n[2026-10-30 USER duyệt] iOS bundle id đặt TRÙNG Android: com.PHltd.wordcrossy."
+    },
+    {
+      "type": "build",
+      "status": "waiting",
+      "owner": "CLAUDE (dev)",
+      "deps": "",
+      "evidence": "",
+      "note": "[2026-10-30 USER duyệt]",
+      "id": "T125",
+      "title": "iOS bundle id = com.PHltd.wordcrossy",
+      "screen": "Ads · IAP",
+      "goal": "Trùng Android",
+      "scope": "PlayerSettings iOS applicationIdentifier",
+      "criteria": "ProjectSettings iOS id đúng"
     },
     {
       "id": "T049",
@@ -648,7 +704,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "deps": "",
       "criteria": "Có ID công khai iOS và cấu hình vào source",
       "evidence": "",
-      "note": "[2026-10-29 10:59 (GMT+7)] Chưa có AdMob iOS. Cần USER cung cấp ID.\n[2026-10-29 11:15 (GMT+7)] AdMob iOS vẫn trống. iOS bundle id chưa xác minh (T056)."
+      "note": "[2026-10-29 10:59 (GMT+7)] Chưa có AdMob iOS. Cần USER cung cấp ID.\n[2026-10-29 11:15 (GMT+7)] AdMob iOS vẫn trống. iOS bundle id chưa xác minh (T056).\n[2026-10-30 USER duyệt] iOS dùng chung cấu hình Android; AdMob iOS vẫn cần app iOS riêng trên AdMob (ID Android không dùng được cho iOS) → ghi cho-duyet."
     },
     {
       "id": "T006",
@@ -1253,6 +1309,34 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "note": "[2026-10-30] Phát hiện khi làm T110: chỉ ShopDialog nghe onItemPurchased; OnPendingPurchase gọi ConfirmPurchase dù không ai cộng thưởng → mất tiền người chơi. OTA CLR.\n[2026-10-30] Luồng store thật → OnPendingPurchase kiểm cùng T007. Toast (b) chưa có ảnh. Chờ USER: cho-duyet iap-noads, iap-unknown."
     },
     {
+      "type": "code",
+      "status": "waiting",
+      "owner": "CLAUDE (dev)",
+      "deps": "",
+      "evidence": "",
+      "note": "[2026-10-30 USER duyệt] USER: chỉ gói tắt quảng cáo riêng (cần thêm sản phẩm trên Play) và 2 gói ruby cao nhất. OTA CLR(+AA nếu sửa prefab Shop).",
+      "id": "T120",
+      "title": "Tắt ads chỉ khi mua gói tắt ads riêng + 2 gói ruby cao nhất (item4, item5)",
+      "screen": "Ads · IAP",
+      "goal": "Gói ruby thường không tắt ads",
+      "scope": "Purchaser.ProcessPurchase/GrantNoAds, WordCrossConfig removeAdsProduct, thêm sản phẩm word.noads; ghi chú Shop",
+      "criteria": "Mô phỏng item1-3 không tắt ads; item4/5/noads tắt ads + ẩn banner"
+    },
+    {
+      "type": "content",
+      "status": "waiting",
+      "owner": "CLAUDE (dev)",
+      "deps": "",
+      "evidence": "",
+      "note": "[2026-10-30 USER duyệt] USER: lên playstore check, thiếu thì thêm; không làm được thì ghi toàn bộ product id vào design/index.html phần GD để USER check. Đơn mã lạ: giữ như hiện tại.",
+      "id": "T121",
+      "title": "Đối chiếu product ID với Play Console; thiếu thì thêm; ghi toàn bộ product ID vào design/index.html phần GD",
+      "screen": "Ads · IAP",
+      "goal": "Product ID trong game = trên Play",
+      "scope": "word.item1..5 + word.noads",
+      "criteria": "Danh sách product ID trong design/index.html GD; Play có đủ (hoặc USER tự thêm)"
+    },
+    {
       "id": "T025",
       "title": "Xác minh gameplay sau reskin",
       "type": "runtime",
@@ -1265,6 +1349,20 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "criteria": "Hint mở 1 ô tốn 2 ruby; Shuffle miễn phí; Level 1-1-1 tự mở How to play; thắng mở Win",
       "evidence": "Merge 86439d6 (68e89c2, 1600849 banner): Main đo theo design (390×826 css): ô 40×40 y139,4, cột x131,1/174,9, coach 264×50,8, 4 nút y414,6 tròn 51,8, vòng chữ 259,6 y493,9, đĩa chọn 58,2×57,9 dưới chữ/trên nét, preview mỗi chữ 1 ô 32×38, pause 34,2/48,6. OTA 1.0.0 CLR 66c06478…, catalog b1b5f1b4… (điều phối curl khớp; 9/9 sha256). Cold start pm clear 0 lỗi Unity. Ảnh qa-shots/mainscr-final-{1..9}-*.png (điều phối xem main-select, win); log Build/remote-r2-1.0.0/mainscr-*.log; rollback mainscr-prev-{catalog,clr}/.",
       "note": "Chưa xác minh.\n[2026-10-29 18:40 (GMT+7)] QA thiết bị OTA d7f8ee2 (ảnh ota1-*): SelectWorld/SelectLevel/Pause/Shop-mở/Back OK (Title không chồng, thẻ khoá .55, Pause toggle OK, Back có hiệu ứng nhấn); lỗi P0 T082 (Main trống) + lệch T083–T086. Pause thiếu nút LANGUAGE (T075).\n[2026-10-30 00:30 (GMT+7)] ĐÃ XÁC MINH trên ZY22LHV7PJ. Chơi thật bằng adb swipe: 1-1-1 tự mở How to play; HE, THE điền đúng; Hint 10→8 ruby; Shuffle đổi chỗ, ruby giữ; thắng Win +3 (8→11); Next vào 1-2; Menu đúng."
+    },
+    {
+      "type": "ui",
+      "status": "waiting",
+      "owner": "CLAUDE (dev)",
+      "deps": "",
+      "evidence": "",
+      "note": "[2026-10-30 USER duyệt] USER: Đặt chữ đúng tâm hình học.",
+      "id": "T119",
+      "title": "Chữ trên vòng chữ đặt đúng tâm hình học",
+      "screen": "Màn Game (Main)",
+      "goal": "Chữ cân giữa tâm ô chữ trên vòng",
+      "scope": "Main vòng chữ (prefab/Text pivot)",
+      "criteria": "Ảnh adb: tâm glyph trùng tâm hình học vị trí chữ"
     },
     {
       "id": "T073",
@@ -1463,6 +1561,20 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "note": "Chưa xác minh.\n[2026-10-30 01:05 (GMT+7)] ĐÃ XÁC MINH trên ZY22LHV7PJ. Ảnh cuối từ OTA thật."
     },
     {
+      "type": "ui",
+      "status": "waiting",
+      "owner": "CODEX",
+      "deps": "",
+      "evidence": "",
+      "note": "[2026-10-30 USER duyệt] USER: Cho Codex vẽ lại sprite bo góc sắc hơn. OTA AA.",
+      "id": "T126",
+      "title": "Codex vẽ lại sprite thẻ/nút bo góc sắc hơn theo design",
+      "screen": "Popup trong Game",
+      "goal": "Bo góc khớp design",
+      "scope": "sprite pill/card dùng chung",
+      "criteria": "Bo góc trên máy khớp design"
+    },
+    {
       "id": "T075",
       "title": "Pause: thêm tính năng đổi ngôn ngữ (nút LANGUAGE theo design)",
       "type": "code",
@@ -1561,10 +1673,38 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "note": "Chưa chốt scope với user; chưa làm.\n[2026-10-29 11:15 (GMT+7)] Sau merge 36fc20d: localization vẫn CHƯA xong.\n[2026-10-29 20:45 (GMT+7)] Dev Sonnet đang làm (worktree l10n): LocalizationController + LocalizedText + dữ liệu vi/en/fr/es/pt từ design i18n.js (qua Addressables) + áp dụng vào các màn đã reskin; kiểm glyph font RockoUltraFLF; chưa làm màn chọn ngôn ngữ (T044/T075).\n[2026-10-29 21:40 (GMT+7)] CODE XONG, CHƯA XÁC MINH (chưa play mode, DontDestroyOnLoad xuyên scene chưa thử). LocalizationController (Locator, PlayerPrefs ui_language, defaultLanguage=vi), LocalizedText, LocalizationData qua ClrContent (GameData content root). 275 key từ design (16 key thiếu fr/es/pt dùng en) + 4 key thêm (shop.adIn, shop.adsNote, rv.s/d.playingReal — bản dịch 5 ngôn ngữ do dev viết, cần người rà). CẦN USER DUYỆT FONT: RockoUltraFLF thiếu glyph tiếng Việt (70 ký tự: ă đ ơ ư và dấu...) → dev đặt fallback Roboto-Medium (.meta của 2 font Rocko; không Baloo2/Bagel); chữ có dấu sẽ khác kiểu Rocko. Chưa chuyển: \"World {n}\"/swipe (scene SelectWorld chưa có UI), toast coming soon, purchase successful, Promote dialogs. Chuỗi tạo bằng code chỉ cập nhật khi mở lại popup. Cần OTA CLR+AA (LocalizationData có vào bundle chưa — kiểm khi build).\n[2026-10-29 19:47 (GMT+7)] Bảng rà dịch cho người: 02-reskin-maintain/l10n-review.md (25 key × 5 ngôn ngữ, ngữ cảnh, độ dài). Lưu ý key ngăn \"|\" (daily.months/weekdays) giữ đủ mục; ký tự ¡ (es) cần kiểm glyph font mới.\n[2026-10-30 (GMT+7)] Bản dịch nghi cần bản ngữ (win.streak số ít fr/es/pt) → design/cho-duyet.html mục l10n-plural."
     },
     {
+      "type": "content",
+      "status": "waiting",
+      "owner": "CLAUDE (dev)",
+      "deps": "",
+      "evidence": "",
+      "note": "[2026-10-30 USER duyệt] OTA AA+CLR.",
+      "id": "T117",
+      "title": "Key số ít win.streak.one (n = 1) cho 5 ngôn ngữ",
+      "screen": "Localization UI",
+      "goal": "Không còn '1 jours/1 días/1 dias'",
+      "scope": "LocalizationData + WinDialog chọn key theo n",
+      "criteria": "Win streak n=1 đúng số ít fr/es/pt/en/vi"
+    },
+    {
+      "type": "content",
+      "status": "waiting",
+      "owner": "CODEX",
+      "deps": "",
+      "evidence": "",
+      "note": "[2026-10-30 USER duyệt] USER: giao Codex làm.",
+      "id": "T127",
+      "title": "Codex rà 25 chuỗi dịch mới (l10n-review.md)",
+      "screen": "Localization UI",
+      "goal": "Bản dịch đúng",
+      "scope": "02-reskin-maintain/l10n-review.md",
+      "criteria": "Danh sách sửa + áp dụng"
+    },
+    {
       "id": "T042",
       "title": "Đấu Bot (setup, trận, kết quả)",
       "type": "code",
-      "status": "doing",
+      "status": "waiting",
       "screen": "Đề xuất mới trong design (chưa có trong Unity)",
       "goal": "Theo GD §7",
       "scope": "design/Ui/screens/bot-setup, bot-match, bot-result",
@@ -1572,7 +1712,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "deps": "",
       "criteria": "Theo GD §7",
       "evidence": "",
-      "note": "ĐỀ XUẤT (origin proposed trong design/Ui/global/js/screens.js), Unity gốc không có. Chờ user chốt có đưa vào scope không; chưa làm.\n[2026-10-29 15:00 (GMT+7)] USER: bám sát design — design có mà game thiếu thì làm thêm → chuyển HOLD → Chờ (Home thiếu nút DAILY chấm đỏ, VS BOT, VS AI + SOON, Language). Cần phân rã sau T077 (làm nút trước, tính năng sau).\n[2026-10-29 19:47 (GMT+7)] Dev Sonnet đang làm cùng T043 (worktree bot). USER chốt đưa vào scope.\n[2026-10-29 23:10 (GMT+7)] Design GD mới (commit 60d23b9, 8eec81a): design/GD/bot-gameplay.html thiết kế 3 cách chơi Bot (90s, theo lượt, đua tốc độ), 90s ghi CẦN DUYỆT → cần USER duyệt cách chơi trước khi hoàn thiện nhánh bot (3 commit chưa merge)."
+      "note": "ĐỀ XUẤT (origin proposed trong design/Ui/global/js/screens.js), Unity gốc không có. Chờ user chốt có đưa vào scope không; chưa làm.\n[2026-10-29 15:00 (GMT+7)] USER: bám sát design — design có mà game thiếu thì làm thêm → chuyển HOLD → Chờ (Home thiếu nút DAILY chấm đỏ, VS BOT, VS AI + SOON, Language). Cần phân rã sau T077 (làm nút trước, tính năng sau).\n[2026-10-29 19:47 (GMT+7)] Dev Sonnet đang làm cùng T043 (worktree bot). USER chốt đưa vào scope.\n[2026-10-29 23:10 (GMT+7)] Design GD mới (commit 60d23b9, 8eec81a): design/GD/bot-gameplay.html thiết kế 3 cách chơi Bot (90s, theo lượt, đua tốc độ), 90s ghi CẦN DUYỆT → cần USER duyệt cách chơi trước khi hoàn thiện nhánh bot (3 commit chưa merge).\n[2026-10-30 USER duyệt] Làm CẢ 3 chế độ: Đấu 90 giây, Theo lượt, Đua tốc độ (design/GD/bot-gameplay.html). Nút ĐẤU BOT trong ai-soon giữ toast tới khi có màn Bot rồi nối lại."
     },
     {
       "id": "T043",
@@ -1615,6 +1755,20 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "criteria": "Đổi ngôn ngữ chơi → level đúng locale, vòng chữ hiển thị đúng dấu (font Baloo2/CookieRun), tiến độ không lẫn; validate.py PASS; data đã rà (danh sách từ loại + lý do), validate.py PASS sau lọc",
       "evidence": "[2026-10-30] Rà data: blocklist design/GD/data/blocklist/*.txt, loại vi 865/fr 40/es 175/pt 135 từ (review-removed.md), validate.py PASS 534 level/locale. Runtime: 4 LocaleLevelPack (Levels/<mã>/Pack) qua Addressables, Utils.Load theo gameLang, tiến độ ProgressKeys.Of riêng, Daily theo gameLang. Máy ZY22LHV7PJ: vi/fr/es/pt thắng W1S1L1 + W4S3L6 (vuốt thật từ cuối), dấu đúng, en tiến độ không đổi, Daily vi OK. Merge e82df13 + bf1c0fa/ae5ac1c. OTA 1.0.0: CLR 16d912ec (curl khớp), catalog 2eb5336f; cold start preload 540 asset 4,76s (hồi quy 22,5s của bản đầu đã sửa ở T111b). Ảnh qa-shots/t111-*, t111b-*. Chỉ OTA CLR+AA.",
       "note": "[2026-10-29 20:10 (GMT+7)] Codex thêm data commit 927c20e (đã push lên origin/feature/unity-6.3): vi/fr/es/pt mỗi bộ 534 level, README design/GD/data/README.md, validate CLI PASS. CHƯA native-review/playtest. Lưu ý: nguồn vi Viet74K GPL-2.0 → cần USER cân nhắc giấy phép trước khi phát hành; vi chỉ từ đơn âm tiết; fr/es/pt có thể lẫn viết tắt/từ ngoại.\n[2026-10-29 20:12 (GMT+7)] USER: khi làm thì RÀ LUÔN data (bản ngữ/chất lượng từ): lọc viết tắt, tên riêng, từ ngoại, từ hiếm/phương ngữ/thán từ (vi), chạy validate.py sau khi lọc; ghi danh sách từ bị loại.\n[2026-10-29 21:00 (GMT+7)] USER: cứ làm, USER sẽ tự xin giấy phép (Viet74K GPL-2.0) trước khi phát hành để tránh vi phạm.\n[2026-10-30] Còn: Daily fr/es/pt chưa thử riêng (cùng đường Utils.Load). Chờ USER: cho-duyet leveldata, leveldata-review, old-spelling, daily-lang; giấy phép GPL vi."
+    },
+    {
+      "type": "content",
+      "status": "waiting",
+      "owner": "CLAUDE (dev)",
+      "deps": "",
+      "evidence": "",
+      "note": "[2026-10-30 USER duyệt] USER: Loại khỏi level. Lọc từ T111 USER đồng ý. Daily tách theo ngôn ngữ: giữ.",
+      "id": "T118",
+      "title": "Loại chính tả cũ khỏi level fr/pt (coeur/oeil/soeur, actor/acção/óptimo…)",
+      "screen": "Đề xuất mới trong design (chưa có trong Unity)",
+      "goal": "Chỉ chính tả hiện hành",
+      "scope": "design/GD/data/blocklist/fr,pt + generate/validate + LocaleLevelPack",
+      "criteria": "validate PASS; không còn từ chính tả cũ; OTA AA"
     },
     {
       "id": "T041",
