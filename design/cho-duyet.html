@@ -111,6 +111,18 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 <label class="opt"><input type="radio" name="dailymenu" value="menu">Bật lại nút MENU</label>
 <textarea placeholder="Ghi chú"></textarea>
 </div>
+<div class="item" data-id="lowruby">
+<h3>Popup thiếu ruby (mới làm theo design) <span class="tag">T115</span></h3>
+<p>Bấm Gợi ý khi không đủ ruby giờ hiện “CẦN 2 RUBY” (Xem video / Cửa hàng / Bỏ qua) — <a href="../Build/remote-r2-0.3/qa-shots/lowruby-final-3-lowruby.png">ảnh</a>. Design không nói rõ 3 điểm sau, dev đã chọn mặc định:</p>
+<ul>
+<li>Nhãn nút bỏ qua: “BỎ QUA, CHƠI TIẾP” (đúng chuỗi design).</li>
+<li>Xem video xong đủ ruby → popup tự đóng để bấm Gợi ý lại ngay.</li>
+<li>Bấm Cửa hàng → thay popup bằng Shop; đóng Shop thì về màn chơi (không quay lại popup).</li>
+</ul>
+<label class="opt"><input type="radio" name="lowruby" value="ok">Đồng ý cả 3 mặc định</label>
+<label class="opt"><input type="radio" name="lowruby" value="khac">Muốn đổi (ghi rõ điểm nào)</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
 <div class="item" data-id="price">
 <h3>Định dạng giá trong Shop</h3>
 <p>Hiện “0,99$” (chuỗi Google Play theo vùng); design “0.99 $”. Khi phát hành thật giá lấy từ store theo tiền tệ người chơi.</p>
@@ -185,7 +197,8 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 <li>Đã xong thêm: SelectWorld, SelectLevel, Header dùng chung (khớp design theo số đo, OTA 1.0.0).</li>
 <li>Đã xong thêm: màn Main (bàn chơi, vòng chữ, banner chỉ ở Main, coach level 1), gameplay chơi thật: hint 2 ruby, shuffle, thắng +3, Next.</li>
 <li>Đã xong thêm: popup trong game (Pause, Cách chơi, Win lần đầu/chơi lại/Daily, Từ thưởng) khớp design.</li>
-<li>Đang làm: popup thiếu ruby (design có, game chưa có); sau đó localization, đề xuất mới.</li>
+<li>Đã xong thêm: popup thiếu ruby (design có, game chưa có).</li>
+<li>Đang làm: localization; sau đó đề xuất mới (Đấu Bot chờ duyệt, dữ liệu level ngôn ngữ).</li>
 <li>Nhánh chưa merge: <code>wordcross/bot</code> (chờ duyệt cách chơi), <code>wordcross/banner</code> (làm ở nhóm Main).</li>
 </ul>
 </div>
