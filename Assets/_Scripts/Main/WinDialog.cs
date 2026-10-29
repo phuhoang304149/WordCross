@@ -188,6 +188,7 @@ public class WinDialog : Dialog {
         extraWordsText.gameObject.SetActive(true);
         ApplyDailyLayout();
         FitGoal(dailyResult.milestone > 0 ? 2 : 1);
+        FitSingleLine(extraWordsText, extraWordsText.rectTransform, extraWordsText.fontSize);
     }
 
     // Design popups.win biến thể Daily: không có hàng sao và nút MENU, ruby cỡ lớn, dòng chuỗi nằm trước nút video, nút về Daily cao 88.
@@ -289,7 +290,7 @@ public class WinDialog : Dialog {
             doubleRewardText.text = Loc.Get("win.x2done");
             doubleRewardButton.interactable = false;
             CancelInvoke("RefreshDoubleReward");
-            FitSingleLine(doubleRewardText, (RectTransform)doubleRewardButton.transform);
+            FitSingleLine(doubleRewardText, (RectTransform)doubleRewardButton.transform, BUTTON_FONT);
             return;
         }
 
@@ -309,17 +310,17 @@ public class WinDialog : Dialog {
             doubleRewardText.text = Loc.Get("win.x2", "n", reward);
             doubleRewardButton.interactable = !bonusPending;
         }
-        FitSingleLine(doubleRewardText, (RectTransform)doubleRewardButton.transform);
+        FitSingleLine(doubleRewardText, (RectTransform)doubleRewardButton.transform, BUTTON_FONT);
     }
 
     // Nút một dòng: chuỗi dài (fr/es/pt) giảm cỡ chữ từ cỡ gốc xuống tối thiểu 14 cho vừa bề ngang nút (khung chữ trên prefab hẹp hơn nút nên đo theo nút).
-    private void FitSingleLine(Text text, RectTransform area)
+    private void FitSingleLine(Text text, RectTransform area, int maxSize)
     {
         TextGenerator generator = text.cachedTextGeneratorForLayout;
         TextGenerationSettings settings = text.GetGenerationSettings(Vector2.zero);
         settings.resizeTextForBestFit = false;
         settings.horizontalOverflow = HorizontalWrapMode.Overflow;
-        int size = BUTTON_FONT;
+        int size = maxSize;
         settings.fontSize = size;
         while (size > BUTTON_MIN_FONT && generator.GetPreferredWidth(text.text, settings) / text.pixelsPerUnit > area.rect.width - 2 * BUTTON_PADDING)
         {
