@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using Script.Utils;
+using WordCross.Gameplay;
 
 public class ShopDialog : Dialog
 {
@@ -13,7 +15,7 @@ public class ShopDialog : Dialog
 
         for(int i = 0; i < numRubyTexts.Length; i++)
         {
-            numRubyTexts[i].text = Purchaser.instance.iapItems[i].value + " rubies";
+            numRubyTexts[i].text = Locator<LocalizationController>.Instance.Get("shop.pack", "n", Purchaser.instance.iapItems[i].value);
             priceTexts[i].text = Purchaser.instance.iapItems[i].price + "$";
         }
 #endif
