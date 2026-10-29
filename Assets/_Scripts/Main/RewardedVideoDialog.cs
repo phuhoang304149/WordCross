@@ -51,6 +51,7 @@ public class RewardedVideoDialog : Dialog {
     private static readonly Color WHITE = Color.white;
     private static readonly Color LINE = new Color(0.875f, 0.914f, 0.918f, 1f);
 
+    private const float PLAYING_TIMEOUT = 180f;
     private const float PADDING = 36f;
     private const float SPACING = 18f;
     private const float TITLE_HEIGHT = 60f;
@@ -60,8 +61,7 @@ public class RewardedVideoDialog : Dialog {
 
     private RewardedVideoState state;
     private int amount;
-    private bool credited;
-    private float loadStart;
+    private float loadStart, playStart;
 
     public RewardedVideoState State { get { return state; } }
 
@@ -78,8 +78,10 @@ public class RewardedVideoDialog : Dialog {
         InvokeRepeating("Evaluate", 1f, 1f);
     }
 
+    // Update private này che Update của Dialog nên phải tự xử lý Escape (prefab bật enableEscape).
     private void Update()
     {
+        if (enableEscape && Input.GetKeyDown(KeyCode.Escape)) Close();
         if (spinner.gameObject.activeSelf) spinnerArc.Rotate(0f, 0f, -360f * Time.unscaledDeltaTime);
     }
 
@@ -105,6 +107,8 @@ public class RewardedVideoDialog : Dialog {
     // Chỉ cập nhật các trạng thái chờ; Playing/Success/Cancel/Error do sự kiện quảng cáo điều khiển.
     private void Evaluate()
     {
+        // Lưới an toàn: Closed/Failed bị bỏ lỡ (dialog bị ẩn lúc đang phát) thì không kẹt Playing mãi.
+        if (state == RewardedVideoState.Playing && Time.unscaledTime - playStart > PLAYING_TIMEOUT) ShowError();
         if (state == RewardedVideoState.Playing || state == RewardedVideoState.Success) return;
         if (state == RewardedVideoState.Cancel || state == RewardedVideoState.Error) return;
         SetState(GetAvailabilityState());
@@ -135,6 +139,8 @@ public class RewardedVideoDialog : Dialog {
     private void OnEnable()
     {
         AttachEvents();
+        // Invoke bị huỷ khi dialog bị ẩn (STACK); dựng lại khi hiện lại (lần bật đầu do Start lo).
+        if (state != RewardedVideoState.None) InvokeRepeating("Evaluate", 1f, 1f);
     }
 
     private void OnDisable()
@@ -185,6 +191,12 @@ public class RewardedVideoDialog : Dialog {
     public void Watch()
     {
         Sound.instance.PlayButton();
+        // Thử lại sau Cancel/Error: service đang tải lại video, tính lại thời gian chờ thay vì báo NoFill ngay.
+        if ((state == RewardedVideoState.Cancel || state == RewardedVideoState.Error) && AdmobController.instance != null && !AdmobController.instance.IsRewardedVideoLoaded())
+        {
+            loadStart = Time.unscaledTime;
+            AdmobController.instance.RequestRewardBasedVideo();
+        }
         RewardedVideoState available = GetAvailabilityState();
         if (available != RewardedVideoState.Ready)
         {
@@ -193,6 +205,7 @@ public class RewardedVideoDialog : Dialog {
         }
 
         SetState(RewardedVideoState.Playing);
+        playStart = Time.unscaledTime;
         AdmobController.instance.ShowRewardBasedVideo();
     }
 
@@ -207,11 +220,6 @@ public class RewardedVideoDialog : Dialog {
         // Đang phát video thì không cho đóng dialog (quảng cáo toàn màn hình sẽ trả kết quả).
         if (state == RewardedVideoState.Playing) return;
         base.Close ();
-        if (state == RewardedVideoState.Success && !credited)
-        {
-            credited = true;
-            CurrencyController.CreditBalance(int.Parse(amountText.text));
-        }
     }
 
     private void Refresh()
