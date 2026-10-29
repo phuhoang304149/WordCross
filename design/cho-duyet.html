@@ -147,6 +147,23 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 <textarea placeholder="Ai rà, khi nào; key cần sửa"></textarea>
 </div>
 
+<div class="item" data-id="l10n-plural">
+<h3>Số ít “1 jours / 1 días / 1 dias” ở chuỗi Win streak <span class="tag">T040 · bản ngữ</span></h3>
+<p>Key <code>win.streak</code>: khi n = 1, fr/es/pt ra “Série de 1 jours”, “Racha de 1 días”, “Sequência de 1 dias” (sai số ít). Chưa sửa vì chưa sửa bản dịch khi chưa có người duyệt.</p>
+<label><input type="radio" name="l10n-plural" value="a"> A. Thêm key số ít riêng (win.streak.one) cho n = 1</label><br>
+<label><input type="radio" name="l10n-plural" value="b"> B. Đổi câu không phụ thuộc số ít/nhiều (vd “Série : 1”)</label><br>
+<label><input type="radio" name="l10n-plural" value="c"> C. Giữ nguyên</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
+<div class="item" data-id="aisoon-bot">
+<h3>Nút ĐẤU BOT trong popup “Đấu AI sắp ra mắt” <span class="tag">T043</span></h3>
+<p>Design nối nút này tới màn <code>bot-setup</code>, nhưng màn Bot chưa có (chờ bạn chọn cách chơi ở mục Bot). Hiện tại: đóng popup + toast “Chế độ đấu Bot sắp ra mắt”, giống nút VS BOT ở Home. Từ mượn “VS BOT/VS IA”, “Subworld/World/Level” (vi) giữ theo design.</p>
+<label><input type="radio" name="aisoon-bot" value="a"> A. Giữ toast tới khi có màn Bot, rồi nối lại</label><br>
+<label><input type="radio" name="aisoon-bot" value="b"> B. Ẩn nút ĐẤU BOT tới khi có màn Bot</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
 <div class="item" data-id="leveldata">
 <h3>Dữ liệu level vi/fr/es/pt <span class="tag hi">T111 · giấy phép</span></h3>
 <ul>
@@ -198,6 +215,7 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 <li>Đã xong thêm: màn Main (bàn chơi, vòng chữ, banner chỉ ở Main, coach level 1), gameplay chơi thật: hint 2 ruby, shuffle, thắng +3, Next.</li>
 <li>Đã xong thêm: popup trong game (Pause, Cách chơi, Win lần đầu/chơi lại/Daily, Từ thưởng) khớp design.</li>
 <li>Đã xong thêm: popup thiếu ruby (design có, game chưa có).</li>
+<li>Đã xong thêm: 5 ngôn ngữ UI đổi trên máy thật, sửa 7 lỗi tràn/ngắt chữ fr/es/pt; popup Đấu AI sắp ra mắt.</li>
 <li>Đang làm: localization; sau đó đề xuất mới (Đấu Bot chờ duyệt, dữ liệu level ngôn ngữ).</li>
 <li>Nhánh chưa merge: <code>wordcross/bot</code> (chờ duyệt cách chơi), <code>wordcross/banner</code> (làm ở nhóm Main).</li>
 </ul>
