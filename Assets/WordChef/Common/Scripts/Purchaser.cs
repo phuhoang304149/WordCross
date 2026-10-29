@@ -143,11 +143,19 @@ public class Purchaser : MonoBehaviour
 
     private void OnNoAdsRestored(ConfirmedOrder order)
     {
+        GrantNoAds();
+    }
+#endif
+
+    // Đường xử lý chung sau khi mua gói tắt quảng cáo: ghi cờ buy_item (PromoteController không xoá được), ẩn banner ngay.
+    public void GrantNoAds()
+    {
+        CUtils.SetBuyItem();
 #if CATGAMING_ADS && CATGAMING_ADMOB
         CatGamingAds.RemoveAds(true);
 #endif
+        CUtils.CloseBannerAd();
     }
-#endif
 
     public void ProcessPurchase(string productID)
     {
