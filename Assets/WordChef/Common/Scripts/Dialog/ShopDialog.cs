@@ -44,25 +44,11 @@ public class ShopDialog : Dialog
     }
 
 #if CATGAMING_IAP
+    // Thưởng đã được Purchaser.ProcessPurchase cộng; Shop chỉ báo toast cho gói tiêu thụ.
     private void OnItemPurchased(IAPItem item, int index)
     {
-        // A consumable product has been purchased by this user.
         if (item.productType == PType.Consumable)
-        {
-            CurrencyController.CreditBalance(item.value);
             Toast.instance.ShowMessage(Locator<LocalizationController>.Instance.Get("shop.success"));
-            CUtils.SetBuyItem();
-        }
-        // Or ... a non-consumable product has been purchased by this user.
-        else if (item.productType == PType.NonConsumable)
-        {
-            // TODO: The non-consumable item has been successfully purchased, grant this item to the player.
-        }
-        // Or ... a subscription product has been purchased by this user.
-        else if (item.productType == PType.Subscription)
-        {
-            // TODO: The subscription item has been successfully purchased, grant this to the player.
-        }
     }
 #endif
 

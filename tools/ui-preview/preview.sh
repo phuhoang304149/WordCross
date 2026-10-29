@@ -26,7 +26,7 @@ VER=$(sed -n 's/^  bundleVersion: //p' "$WT/ProjectSettings/ProjectSettings.asse
 [ -n "$VER" ] || die "cannot read bundleVersion from $WT/ProjectSettings/ProjectSettings.asset"
 HEADNAME=${SPEC%%[:;]*}; HEADNAME=$(printf '%s' "$HEADNAME" | tr 'A-Z' 'a-z')
 case "$HEADNAME" in
-  home|aisoon|shop|rate|language|rewarded|reset|daily|noads) SCENE=Home ;;
+  home|aisoon|shop|rate|language|rewarded|reset|daily|noads|iap) SCENE=Home ;;
   selectworld) SCENE=SelectWorld ;; selectlevel) SCENE=SelectLevel ;;
   main|pause|win|extra|howto|lowruby|dailymain|dailywin) SCENE=Main ;;
   *) die "unknown screen '$SPEC'" ;;

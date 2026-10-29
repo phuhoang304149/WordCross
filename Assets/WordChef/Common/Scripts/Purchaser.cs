@@ -174,6 +174,23 @@ public class Purchaser : MonoBehaviour
             return;
         }
 
+        // Cấp thưởng ở đây (không phụ thuộc Shop đang mở) để đơn giao lại lúc khởi động hay đơn chậm vẫn được cộng.
+        if (item.productType == PType.Consumable)
+        {
+            CurrencyController.CreditBalance(item.value);
+            GrantNoAds();
+        }
+        // Or ... a non-consumable product has been purchased by this user.
+        else if (item.productType == PType.NonConsumable)
+        {
+            // TODO: The non-consumable item has been successfully purchased, grant this item to the player.
+        }
+        // Or ... a subscription product has been purchased by this user.
+        else if (item.productType == PType.Subscription)
+        {
+            // TODO: The subscription item has been successfully purchased, grant this to the player.
+        }
+
         if (onItemPurchased != null) onItemPurchased(item, Array.IndexOf(iapItems, item));
     }
 }
