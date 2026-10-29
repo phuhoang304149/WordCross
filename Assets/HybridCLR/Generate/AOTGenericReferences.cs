@@ -41,6 +41,34 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Popup.PopupCommand.<HideAndClearDictionaryAsync>d__21>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Popup.PopupCommand.<Show>d__13>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Popup.PopupCommand.<ShowOverlay>d__14>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.AlphaIn.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.AlphaIn.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.AlphaOut.<Execute>d__15>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.AlphaOut.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.BottomToCenter.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.BottomToCenter.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.CenterToBottom.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.CenterToBottom.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.CenterToLeft.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.CenterToLeft.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.CenterToRight.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.CenterToRight.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.CenterToTop.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.CenterToTop.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.DefaultOut.<Execute>d__13>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.DefaultOut.<Execute>d__14>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.LeftToCenter.<Execute>d__15>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.LeftToCenter.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.PopIn.<Execute>d__15>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.PopIn.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.PopOut.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.PopOut.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.RightToCenter.<Execute>d__15>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.RightToCenter.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.TopToCenter.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.TopToCenter.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.TweenPosition.<Hide>d__15>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Core.Scripts.Ultil.TweenPosition.<Show>d__14>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<MainModule.<FirstLoad>d__12>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Script.Util.Addressloader.<CheckUpdateAddressables>d__2>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<Script.Util.Addressloader.<DebugServerHash>d__4>
@@ -57,11 +85,41 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<catgamingmodule.Tool.ImageExtention.<GetTextAsync>d__9,object>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<catgamingmodule.Tool.ImageExtention.<_downloadImage>d__2>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<catgamingmodule.Tool.Popup.PopupDatabase.<GetAsync>d__8<object>,object>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<catgamingmodule.Tool.Popup.PopupItem.<Hide>d__8>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<catgamingmodule.Tool.Popup.PopupItem.<Show>d__7>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Popup.PopupCommand.<CreateInternal>d__19,object>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Popup.PopupCommand.<HideAll>d__20>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Popup.PopupCommand.<HideAndClearDictionaryAsync>d__21>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Popup.PopupCommand.<Show>d__13>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Popup.PopupCommand.<ShowOverlay>d__14>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.AlphaIn.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.AlphaIn.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.AlphaOut.<Execute>d__15>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.AlphaOut.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.BottomToCenter.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.BottomToCenter.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.CenterToBottom.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.CenterToBottom.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.CenterToLeft.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.CenterToLeft.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.CenterToRight.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.CenterToRight.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.CenterToTop.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.CenterToTop.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.DefaultOut.<Execute>d__13>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.DefaultOut.<Execute>d__14>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.LeftToCenter.<Execute>d__15>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.LeftToCenter.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.PopIn.<Execute>d__15>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.PopIn.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.PopOut.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.PopOut.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.RightToCenter.<Execute>d__15>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.RightToCenter.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.TopToCenter.<Execute>d__16>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.TopToCenter.<Execute>d__17>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.TweenPosition.<Hide>d__15>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Core.Scripts.Ultil.TweenPosition.<Show>d__14>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<MainModule.<FirstLoad>d__12>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Script.Util.Addressloader.<CheckUpdateAddressables>d__2>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<Script.Util.Addressloader.<DebugServerHash>d__4>
@@ -78,6 +136,8 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<catgamingmodule.Tool.ImageExtention.<GetTextAsync>d__9,object>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<catgamingmodule.Tool.ImageExtention.<_downloadImage>d__2>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<catgamingmodule.Tool.Popup.PopupDatabase.<GetAsync>d__8<object>,object>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<catgamingmodule.Tool.Popup.PopupItem.<Hide>d__8>
+    // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<catgamingmodule.Tool.Popup.PopupItem.<Show>d__7>
     // Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder<object>
     // Cysharp.Threading.Tasks.CompilerServices.IStateMachineRunnerPromise<object>
     // Cysharp.Threading.Tasks.ITaskPoolNode<object>
@@ -452,6 +512,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.Collections.Generic.IList<int>
     // System.Collections.Generic.IList<object>
     // System.Collections.Generic.IReadOnlyCollection<catgamingmodule.DailyChallenge.DailyChallengeService.Day>
+    // System.Collections.Generic.IReadOnlyCollection<object>
     // System.Collections.Generic.IReadOnlyList<catgamingmodule.DailyChallenge.DailyChallengeService.Day>
     // System.Collections.Generic.KeyValuePair<int,object>
     // System.Collections.Generic.KeyValuePair<object,int>
@@ -579,6 +640,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
     // System.Comparison<int>
     // System.Comparison<long>
     // System.Comparison<object>
+    // System.Func<Cysharp.Threading.Tasks.UniTask>
     // System.Func<System.Collections.Generic.KeyValuePair<object,object>,byte>
     // System.Func<System.DateTime,byte>
     // System.Func<System.Threading.Tasks.VoidTaskResult>
@@ -998,10 +1060,45 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
         // Cysharp.Threading.Tasks.UniTask.Awaiter<object> Cysharp.Threading.Tasks.AddressablesAsyncExtensions.GetAwaiter<object>(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>)
         // Cysharp.Threading.Tasks.UniTask<long> Cysharp.Threading.Tasks.AddressablesAsyncExtensions.ToUniTask<long>(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<long>,System.IProgress<float>,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken,bool,bool)
         // Cysharp.Threading.Tasks.UniTask<object> Cysharp.Threading.Tasks.AddressablesAsyncExtensions.ToUniTask<object>(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>,System.IProgress<float>,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken,bool,bool)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.AlphaIn.<Execute>d__16>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.AlphaIn.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.AlphaIn.<Execute>d__17>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.AlphaIn.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.AlphaOut.<Execute>d__15>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.AlphaOut.<Execute>d__15&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.AlphaOut.<Execute>d__16>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.AlphaOut.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.BottomToCenter.<Execute>d__16>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.BottomToCenter.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.BottomToCenter.<Execute>d__17>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.BottomToCenter.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.CenterToBottom.<Execute>d__16>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.CenterToBottom.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.CenterToBottom.<Execute>d__17>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.CenterToBottom.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.CenterToLeft.<Execute>d__16>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.CenterToLeft.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.CenterToLeft.<Execute>d__17>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.CenterToLeft.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.CenterToRight.<Execute>d__16>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.CenterToRight.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.CenterToRight.<Execute>d__17>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.CenterToRight.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.CenterToTop.<Execute>d__16>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.CenterToTop.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.CenterToTop.<Execute>d__17>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.CenterToTop.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.LeftToCenter.<Execute>d__15>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.LeftToCenter.<Execute>d__15&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.LeftToCenter.<Execute>d__16>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.LeftToCenter.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.PopIn.<Execute>d__15>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.PopIn.<Execute>d__15&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.PopIn.<Execute>d__16>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.PopIn.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.PopOut.<Execute>d__16>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.PopOut.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.PopOut.<Execute>d__17>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.PopOut.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.RightToCenter.<Execute>d__15>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.RightToCenter.<Execute>d__15&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.RightToCenter.<Execute>d__16>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.RightToCenter.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.TopToCenter.<Execute>d__16>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.TopToCenter.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter,Core.Scripts.Ultil.TopToCenter.<Execute>d__17>(Cysharp.Threading.Tasks.DOTweenAsyncExtensions.TweenAwaiter&,Core.Scripts.Ultil.TopToCenter.<Execute>d__17&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Popup.PopupCommand.<HideAll>d__20>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Popup.PopupCommand.<HideAll>d__20&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Popup.PopupCommand.<HideAndClearDictionaryAsync>d__21>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Popup.PopupCommand.<HideAndClearDictionaryAsync>d__21&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Popup.PopupCommand.<Show>d__13>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Popup.PopupCommand.<Show>d__13&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Popup.PopupCommand.<ShowOverlay>d__14>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Popup.PopupCommand.<ShowOverlay>d__14&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Scripts.Ultil.BottomToCenter.<Execute>d__16>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Scripts.Ultil.BottomToCenter.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Scripts.Ultil.CenterToBottom.<Execute>d__16>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Scripts.Ultil.CenterToBottom.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Scripts.Ultil.CenterToLeft.<Execute>d__16>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Scripts.Ultil.CenterToLeft.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Scripts.Ultil.CenterToRight.<Execute>d__16>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Scripts.Ultil.CenterToRight.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Scripts.Ultil.CenterToTop.<Execute>d__16>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Scripts.Ultil.CenterToTop.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Scripts.Ultil.DefaultOut.<Execute>d__13>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Scripts.Ultil.DefaultOut.<Execute>d__13&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Scripts.Ultil.DefaultOut.<Execute>d__14>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Scripts.Ultil.DefaultOut.<Execute>d__14&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Scripts.Ultil.PopOut.<Execute>d__16>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Scripts.Ultil.PopOut.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Scripts.Ultil.TopToCenter.<Execute>d__16>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Scripts.Ultil.TopToCenter.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Scripts.Ultil.TweenPosition.<Hide>d__15>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Scripts.Ultil.TweenPosition.<Hide>d__15&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Core.Scripts.Ultil.TweenPosition.<Show>d__14>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Core.Scripts.Ultil.TweenPosition.<Show>d__14&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Script.Util.Addressloader.<CheckUpdateAddressables>d__2>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Script.Util.Addressloader.<CheckUpdateAddressables>d__2&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,Script.Util.Addressloader.<DownloadByLabel>d__10>(Cysharp.Threading.Tasks.UniTask.Awaiter&,Script.Util.Addressloader.<DownloadByLabel>d__10&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,catgamingmodule.DailyChallenge.DailyChallengeView.<Show>d__40>(Cysharp.Threading.Tasks.UniTask.Awaiter&,catgamingmodule.DailyChallenge.DailyChallengeView.<Show>d__40&)
@@ -1009,6 +1106,8 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,catgamingmodule.Tool.IOSAudioSessionHandler.<ReapplyAfterFocus>d__3>(Cysharp.Threading.Tasks.UniTask.Awaiter&,catgamingmodule.Tool.IOSAudioSessionHandler.<ReapplyAfterFocus>d__3&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,catgamingmodule.Tool.ImageExtention.<DownloadImage>d__0>(Cysharp.Threading.Tasks.UniTask.Awaiter&,catgamingmodule.Tool.ImageExtention.<DownloadImage>d__0&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,catgamingmodule.Tool.ImageExtention.<_downloadImage>d__2>(Cysharp.Threading.Tasks.UniTask.Awaiter&,catgamingmodule.Tool.ImageExtention.<_downloadImage>d__2&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,catgamingmodule.Tool.Popup.PopupItem.<Hide>d__8>(Cysharp.Threading.Tasks.UniTask.Awaiter&,catgamingmodule.Tool.Popup.PopupItem.<Hide>d__8&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,catgamingmodule.Tool.Popup.PopupItem.<Show>d__7>(Cysharp.Threading.Tasks.UniTask.Awaiter&,catgamingmodule.Tool.Popup.PopupItem.<Show>d__7&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<long>,Script.Util.Addressloader.<DownloadByLabel>d__10>(Cysharp.Threading.Tasks.UniTask.Awaiter<long>&,Script.Util.Addressloader.<DownloadByLabel>d__10&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,Core.Popup.PopupCommand.<Show>d__13>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,Core.Popup.PopupCommand.<Show>d__13&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,Core.Popup.PopupCommand.<ShowOverlay>d__14>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,Core.Popup.PopupCommand.<ShowOverlay>d__14&)
@@ -1030,6 +1129,36 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Popup.PopupCommand.<HideAndClearDictionaryAsync>d__21>(Core.Popup.PopupCommand.<HideAndClearDictionaryAsync>d__21&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Popup.PopupCommand.<Show>d__13>(Core.Popup.PopupCommand.<Show>d__13&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Popup.PopupCommand.<ShowOverlay>d__14>(Core.Popup.PopupCommand.<ShowOverlay>d__14&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.AlphaIn.<Execute>d__16>(Core.Scripts.Ultil.AlphaIn.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.AlphaIn.<Execute>d__17>(Core.Scripts.Ultil.AlphaIn.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.AlphaOut.<Execute>d__15>(Core.Scripts.Ultil.AlphaOut.<Execute>d__15&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.AlphaOut.<Execute>d__16>(Core.Scripts.Ultil.AlphaOut.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.BottomToCenter.<Execute>d__16>(Core.Scripts.Ultil.BottomToCenter.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.BottomToCenter.<Execute>d__17>(Core.Scripts.Ultil.BottomToCenter.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.CenterToBottom.<Execute>d__16>(Core.Scripts.Ultil.CenterToBottom.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.CenterToBottom.<Execute>d__17>(Core.Scripts.Ultil.CenterToBottom.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.CenterToLeft.<Execute>d__16>(Core.Scripts.Ultil.CenterToLeft.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.CenterToLeft.<Execute>d__17>(Core.Scripts.Ultil.CenterToLeft.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.CenterToRight.<Execute>d__16>(Core.Scripts.Ultil.CenterToRight.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.CenterToRight.<Execute>d__17>(Core.Scripts.Ultil.CenterToRight.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.CenterToTop.<Execute>d__16>(Core.Scripts.Ultil.CenterToTop.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.CenterToTop.<Execute>d__17>(Core.Scripts.Ultil.CenterToTop.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.DefaultIn.<Execute>d__13>(Core.Scripts.Ultil.DefaultIn.<Execute>d__13&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.DefaultIn.<Execute>d__14>(Core.Scripts.Ultil.DefaultIn.<Execute>d__14&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.DefaultOut.<Execute>d__13>(Core.Scripts.Ultil.DefaultOut.<Execute>d__13&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.DefaultOut.<Execute>d__14>(Core.Scripts.Ultil.DefaultOut.<Execute>d__14&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.LeftToCenter.<Execute>d__15>(Core.Scripts.Ultil.LeftToCenter.<Execute>d__15&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.LeftToCenter.<Execute>d__16>(Core.Scripts.Ultil.LeftToCenter.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.PopIn.<Execute>d__15>(Core.Scripts.Ultil.PopIn.<Execute>d__15&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.PopIn.<Execute>d__16>(Core.Scripts.Ultil.PopIn.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.PopOut.<Execute>d__16>(Core.Scripts.Ultil.PopOut.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.PopOut.<Execute>d__17>(Core.Scripts.Ultil.PopOut.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.RightToCenter.<Execute>d__15>(Core.Scripts.Ultil.RightToCenter.<Execute>d__15&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.RightToCenter.<Execute>d__16>(Core.Scripts.Ultil.RightToCenter.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.TopToCenter.<Execute>d__16>(Core.Scripts.Ultil.TopToCenter.<Execute>d__16&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.TopToCenter.<Execute>d__17>(Core.Scripts.Ultil.TopToCenter.<Execute>d__17&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.TweenPosition.<Hide>d__15>(Core.Scripts.Ultil.TweenPosition.<Hide>d__15&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Core.Scripts.Ultil.TweenPosition.<Show>d__14>(Core.Scripts.Ultil.TweenPosition.<Show>d__14&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<MainModule.<FirstLoad>d__12>(MainModule.<FirstLoad>d__12&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Script.Util.Addressloader.<CheckUpdateAddressables>d__2>(Script.Util.Addressloader.<CheckUpdateAddressables>d__2&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<Script.Util.Addressloader.<DebugServerHash>d__4>(Script.Util.Addressloader.<DebugServerHash>d__4&)
@@ -1040,8 +1169,8 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<catgamingmodule.Tool.IOSAudioSessionHandler.<ReapplyAfterFocus>d__3>(catgamingmodule.Tool.IOSAudioSessionHandler.<ReapplyAfterFocus>d__3&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<catgamingmodule.Tool.ImageExtention.<DownloadImage>d__0>(catgamingmodule.Tool.ImageExtention.<DownloadImage>d__0&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<catgamingmodule.Tool.ImageExtention.<_downloadImage>d__2>(catgamingmodule.Tool.ImageExtention.<_downloadImage>d__2&)
-        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<catgamingmodule.Tool.Popup.PopupItem.<Hide>d__5>(catgamingmodule.Tool.Popup.PopupItem.<Hide>d__5&)
-        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<catgamingmodule.Tool.Popup.PopupItem.<Show>d__4>(catgamingmodule.Tool.Popup.PopupItem.<Show>d__4&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<catgamingmodule.Tool.Popup.PopupItem.<Hide>d__8>(catgamingmodule.Tool.Popup.PopupItem.<Hide>d__8&)
+        // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<catgamingmodule.Tool.Popup.PopupItem.<Show>d__7>(catgamingmodule.Tool.Popup.PopupItem.<Show>d__7&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder<object>.Start<Core.Popup.PopupCommand.<CreateInternal>d__19>(Core.Popup.PopupCommand.<CreateInternal>d__19&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder<object>.Start<Script.Util.Addressloader.<Load>d__1<object>>(Script.Util.Addressloader.<Load>d__1<object>&)
         // System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder<object>.Start<catgamingmodule.DailyChallenge.DailyChallengeService.<Show>d__4>(catgamingmodule.DailyChallenge.DailyChallengeService.<Show>d__4&)
@@ -1141,7 +1270,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
         // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start<DG.Tweening.DOTweenModuleUnityVersion.<AsyncWaitForStart>d__15>(DG.Tweening.DOTweenModuleUnityVersion.<AsyncWaitForStart>d__15&)
         // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,MainModule.<Start>d__25>(Cysharp.Threading.Tasks.UniTask.Awaiter&,MainModule.<Start>d__25&)
         // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,UniTaskExtension.<WrapErrors>d__2>(Cysharp.Threading.Tasks.UniTask.Awaiter&,UniTaskExtension.<WrapErrors>d__2&)
-        // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,catgamingmodule.Tool.Popup.PopupItem.<HideTest>d__6>(Cysharp.Threading.Tasks.UniTask.Awaiter&,catgamingmodule.Tool.Popup.PopupItem.<HideTest>d__6&)
         // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,UniTaskExtension.<WrapErrors>d__3<object>>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,UniTaskExtension.<WrapErrors>d__3<object>&)
         // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UniTaskExtension.<WrapErrors>d__4>(System.Runtime.CompilerServices.TaskAwaiter&,UniTaskExtension.<WrapErrors>d__4&)
         // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UniTaskExtension.<WrapErrors>d__5<object>>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UniTaskExtension.<WrapErrors>d__5<object>&)
@@ -1151,7 +1279,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
         // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<UniTaskExtension.<WrapErrors>d__3<object>>(UniTaskExtension.<WrapErrors>d__3<object>&)
         // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<UniTaskExtension.<WrapErrors>d__4>(UniTaskExtension.<WrapErrors>d__4&)
         // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<UniTaskExtension.<WrapErrors>d__5<object>>(UniTaskExtension.<WrapErrors>d__5<object>&)
-        // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<catgamingmodule.Tool.Popup.PopupItem.<HideTest>d__6>(catgamingmodule.Tool.Popup.PopupItem.<HideTest>d__6&)
+        // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<catgamingmodule.Tool.Popup.PopupItem.<HideTest>d__9>(catgamingmodule.Tool.Popup.PopupItem.<HideTest>d__9&)
         // object& System.Runtime.CompilerServices.Unsafe.As<object,object>(object&)
         // System.Void* System.Runtime.CompilerServices.Unsafe.AsPointer<object>(object&)
         // UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object> UnityEngine.AddressableAssets.Addressables.LoadAssetAsync<object>(object)

@@ -1,10 +1,10 @@
 {
     "projectType": "pikachu",
-    "hotUpdateBaseUrl": "",
+    "hotUpdateBaseUrl": "https://data.catgaming.asia/wordcross/clr/0.3",
     "allowDevelopmentHttp": false,
     "editorSource": 0,
     "editorLocalUrl": "Export/CLR",
-    "editorMainUrl": "",
+    "editorMainUrl": "https://data.catgaming.asia/wordcross/clr/0.3",
     "streamingAssetsFolder": "clr",
     "hotUpdateAssemblies": [
         "CatGaming.Module",
@@ -135,8 +135,16 @@
         }
     ],
     "loadContentBundles": false,
-    "contentRoots": [],
-    "gameplayScenes": [],
+    "contentRoots": [
+        "Assets/WordCross/Config/GameData",
+        "Assets/_Scenes"
+    ],
+    "gameplayScenes": [
+        "Assets/_Scenes/Home.unity",
+        "Assets/_Scenes/SelectWorld.unity",
+        "Assets/_Scenes/SelectLevel.unity",
+        "Assets/_Scenes/Main.unity"
+    ],
     "preloadAddressableLabels": [
         "preload_1",
         "preload_3"

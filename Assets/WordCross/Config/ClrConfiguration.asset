@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: ClrConfiguration
   m_EditorClassIdentifier: 
   projectType: 0
-  hotUpdateBaseUrl: 
+  hotUpdateBaseUrl: https://data.catgaming.asia/wordcross/clr/0.3
   allowDevelopmentHttp: 0
   editorSource: 0
   editorLocalUrl: Export/CLR
-  editorMainUrl: 
+  editorMainUrl: https://data.catgaming.asia/wordcross/clr/0.3
   streamingAssetsFolder: clr
   hotUpdateAssemblies:
     _serializedList:
