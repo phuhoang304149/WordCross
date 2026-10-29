@@ -1,5 +1,13 @@
 <!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WordCross — Design</title><link rel="stylesheet" href="Ui/global/css/theme.css"></head>
-<body class="cat"><div class="portal"><h1>WordCross Design</h1>
-<a class="tile-link" href="Ui/index.html">UI Catalogue<small>11 màn hình/popup mở offline, gameplay prototype</small></a>
-<a class="tile-link" href="GD/index.html">GD<small>Luồng màn hình và mapping source</small></a></div></body></html>
+<body class="cat"><div class="portal"><h1 data-t="portal.title"></h1>
+<a class="tile-link" href="Ui/index.html"><span data-t="portal.ui"></span><small data-t="portal.uiSub"></small></a>
+<a class="tile-link" href="GD/index.html"><span data-t="portal.gd"></span><small data-t="portal.gdSub"></small></a>
+<div class="lang-chips"><a class="chip on" href="#" data-ui="vi">Tiếng Việt</a><a class="chip on" href="#" data-ui="en">English</a></div></div>
+<script src="Ui/global/js/i18n.js"></script>
+<script>
+(function(){ var WC = window.WC;
+  [].forEach.call(document.querySelectorAll('[data-t]'), function(e){ e.innerHTML = WC.t(e.dataset.t); });
+  [].forEach.call(document.querySelectorAll('[data-ui]'), function(a){ a.classList.toggle('on', a.dataset.ui === WC.lang); a.style.background = a.dataset.ui === WC.lang ? '' : 'var(--teal-soft)'; a.addEventListener('click', function(e){ e.preventDefault(); WC.setLang(a.dataset.ui); location.reload(); }); });
+})();
+</script></body></html>
