@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.SimpleAndroidNotifications;
 using System;
 using Superpow;
 using System.Text;
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+
+using Unity.Notifications.Android;
+
+#endif
 
 public class NotificationController : MonoBehaviour {
 
@@ -16,12 +21,40 @@ public class NotificationController : MonoBehaviour {
     private const double NOTI_DELAY_6 = 15 * 24;
     private const double NOTI_DELAY_7 = 30 * 24;
 
+    private const float PERMISSION_REQUEST_DELAY = 10f;
+
     private bool ingame = false;
 
     private void Start()
     {
         InGame();
+#if UNITY_ANDROID && !UNITY_EDITOR
+        StartCoroutine(SetupAndroidNotification());
+#endif
     }
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+    private IEnumerator SetupAndroidNotification()
+    {
+        var channel = new AndroidNotificationChannel
+        {
+            Id = NotificationManager.ChannelId,
+            Name = "Default",
+            Description = "Game notifications",
+            Importance = Importance.Default,
+            EnableVibration = true,
+            EnableLights = true
+        };
+        AndroidNotificationCenter.RegisterNotificationChannel(channel);
+
+        yield return new WaitForSeconds(PERMISSION_REQUEST_DELAY);
+
+        if (AndroidNotificationCenter.UserPermissionToPost == PermissionStatus.NotRequested)
+        {
+            new PermissionRequest();
+        }
+    }
+#endif
 
     private void OnApplicationPause(bool pause)
     {
@@ -215,7 +248,7 @@ public class NotificationController : MonoBehaviour {
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
         string message = "We unlocked a letter " + letter + " for you. Open the game and continue :)";
-        NotificationManager.SendWithAppIcon(TimeSpan.FromHours(delay), "Unlock letter", message, new Color(0, 0.6f, 1), NotificationIcon.Message);
+        NotificationManager.SendWithAppIcon(TimeSpan.FromHours(delay), "Unlock letter", message, new Color(0, 0.6f, 1));
 #endif
     }
 
@@ -224,7 +257,7 @@ public class NotificationController : MonoBehaviour {
         int num = UnityEngine.Random.Range(5, 8);
 #if UNITY_ANDROID && !UNITY_EDITOR
         string message = "You got " + num + " free rubies. Let's play and challenge yourself";
-        NotificationManager.SendWithAppIcon(TimeSpan.FromHours(delay), "Ruby gift", message, new Color(0, 0.6f, 1), NotificationIcon.Message);
+        NotificationManager.SendWithAppIcon(TimeSpan.FromHours(delay), "Ruby gift", message, new Color(0, 0.6f, 1));
 #endif
         return num;
     }

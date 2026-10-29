@@ -10,7 +10,8 @@
     "Unity.Purchasing",
     "Unity.Addressables",
     "Unity.ResourceManager",
-    "AYellowpaper.SerializedCollections"
+    "AYellowpaper.SerializedCollections",
+    "Unity.Notifications.Android"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],
