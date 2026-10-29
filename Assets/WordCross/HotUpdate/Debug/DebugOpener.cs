@@ -24,6 +24,7 @@ namespace WordCross.Gameplay
     //   Hậu tố ;solve=K (cho main) tự nhập mọi đáp án trừ K từ cuối, in toạ độ màn hình của các chữ trong vòng ("letters") để adb swipe nốt.
     //   Hậu tố ;noads=N giả lập mua gói tắt quảng cáo thành công sau N giây (gọi Purchaser.GrantNoAds, cùng đường OnNoAdsRestored; không qua Google Play).
     //   noads | noads:off   giả lập mua ngay / xoá cờ buy_item + remove_ads để chụp lại trạng thái có banner.
+    //   Hậu tố ;iap=<productId> (hoặc lệnh iap:<productId> ở Home) giả lập đơn IAP về (gọi Purchaser.ProcessPurchase như tầng sau store, không qua Google Play; cộng ruby thật, trả lại bằng ;ruby/reset).
     //   reset (trả số ruby và dữ liệu Daily về giá trị trước khi ghi đè)
     public sealed class DebugOpener : MonoBehaviour
     {
@@ -84,6 +85,7 @@ namespace WordCross.Gameplay
             int[] level = null;
             int solveKeep = -1;
             float noAdsDelay = -1f;
+            string iapProduct = null;
             for (int i = 1; i < parts.Length; i++)
             {
                 string[] pair = parts[i].Split(new[] { '=' }, 2);
@@ -97,6 +99,7 @@ namespace WordCross.Gameplay
                 else if (key == "glang") Locator<LocalizationController>.Instance.SetGameLanguage(pair[1].Trim().ToLowerInvariant());
                 else if (key == "solve") solveKeep = int.Parse(pair[1]);
                 else if (key == "noads") noAdsDelay = float.Parse(pair[1]);
+                else if (key == "iap") iapProduct = pair[1].Trim();
             }
             if (noAdsDelay >= 0) StartCoroutine(GrantNoAdsAfter(noAdsDelay));
 
@@ -156,11 +159,22 @@ namespace WordCross.Gameplay
                     if (arg == "off") ClearNoAds();
                     else Purchaser.instance.GrantNoAds();
                     break;
+                case "iap":
+                    iapProduct = head[1].Trim();
+                    break;
                 case "home":
                     break;
                 default:
                     Debug.LogError("[DebugOpener] unknown command: " + command);
                     break;
+            }
+            if (iapProduct != null)
+            {
+                // Chờ dialog mở xong rồi mới giả lập đơn về, để thấy cả toast của Shop.
+                yield return new WaitForSecondsRealtime(1.0f);
+                int rubyBefore = CurrencyController.GetBalance();
+                Purchaser.instance.ProcessPurchase(iapProduct);
+                Debug.Log("[DebugOpener] iap " + iapProduct + " ruby " + rubyBefore + "->" + CurrencyController.GetBalance() + " buy_item=" + CUtils.IsBuyItem());
             }
             Debug.Log("[DebugOpener] opened " + command + " glang=" + Locator<LocalizationController>.Instance.GameLanguage +
                 " unlocked=" + Prefs.unlockedWorld + "-" + Prefs.unlockedSubWorld + "-" + Prefs.unlockedLevel + " ruby=" + CurrencyController.GetBalance());
