@@ -11,20 +11,29 @@ namespace WordCross.Gameplay
     public class LocalizationController : MonoBehaviour
     {
         private const string PrefKey = "ui_language";
+        private const string GamePrefKey = "game_language";
 
         [Tooltip("Ngôn ngữ khi người chơi chưa chọn (design: vi).")]
         [SerializeField] private string defaultLanguage = "vi";
         [Tooltip("Ngôn ngữ dự phòng khi thiếu chuỗi.")]
         [SerializeField] private string fallbackLanguage = "en";
         [SerializeField] private string dataKey = "Localization/LocalizationData";
+        [Tooltip("Ngôn ngữ chơi mặc định: tiến độ giữ khoá cũ (không tiền tố progress.<lang>.).")]
+        [SerializeField] private string defaultGameLanguage = "en";
+        [Tooltip("Ngôn ngữ chơi đã có bộ level. Ngôn ngữ khác hiển thị 'sắp có'.")]
+        [SerializeField] private string[] playableGameLanguages = { "en" };
 
         public event Action<string> onLanguageChanged;
+        public event Action<string> onGameLanguageChanged;
 
         private readonly Dictionary<string, string[]> table = new Dictionary<string, string[]>();
         private string[] languages = new string[0];
         private string language;
+        private string gameLanguage;
 
         public string Language => language;
+        public string GameLanguage => gameLanguage;
+        public string DefaultGameLanguage => defaultGameLanguage;
         public string[] Languages => languages;
 
         private void Awake()
@@ -51,6 +60,9 @@ namespace WordCross.Gameplay
             var saved = PlayerPrefs.GetString(PrefKey, "");
             language = IndexOf(saved) >= 0 ? saved : defaultLanguage;
 
+            var savedGame = PlayerPrefs.GetString(GamePrefKey, "");
+            gameLanguage = IsGamePlayable(savedGame) ? savedGame : defaultGameLanguage;
+
             transform.SetParent(null);
             DontDestroyOnLoad(gameObject);
         }
@@ -72,6 +84,21 @@ namespace WordCross.Gameplay
             language = code;
             PlayerPrefs.SetString(PrefKey, code);
             onLanguageChanged?.Invoke(code);
+        }
+
+        public bool IsGamePlayable(string code)
+        {
+            return !string.IsNullOrEmpty(code) && Array.IndexOf(playableGameLanguages, code) >= 0;
+        }
+
+        // Đổi ngôn ngữ chơi (tách khỏi ngôn ngữ UI). Chỉ nhận ngôn ngữ đã có level; tiến độ ngôn ngữ cũ giữ nguyên trong khoá riêng.
+        public void SetGameLanguage(string code)
+        {
+            if (!IsGamePlayable(code) || code == gameLanguage) return;
+            gameLanguage = code;
+            PlayerPrefs.SetString(GamePrefKey, code);
+            GameState.unlockedWorld = GameState.unlockedSubWord = GameState.unlockedLevel = -1;
+            onGameLanguageChanged?.Invoke(code);
         }
 
         // Get("win.first", "n", 2): tham số là cặp tên/giá trị thay cho {tên}. Thiếu ngôn ngữ -> fallback -> chính key.
