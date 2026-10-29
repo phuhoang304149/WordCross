@@ -384,22 +384,32 @@ MonoBehaviour:
     productType: 0
     price: 0.99
     value: 50
+    removeAds: 0
   - productID: word.item2
     productType: 0
     price: 1.99
     value: 110
+    removeAds: 0
   - productID: word.item3
     productType: 0
     price: 3.99
     value: 250
+    removeAds: 0
   - productID: word.item4
     productType: 0
     price: 5.99
     value: 450
+    removeAds: 1
   - productID: word.item5
     productType: 0
     price: 11.99
     value: 1100
+    removeAds: 1
+  - productID: word.noads
+    productType: 1
+    price: 2.99
+    value: 0
+    removeAds: 1
 --- !u!1 &140880
 GameObject:
   m_ObjectHideFlags: 0

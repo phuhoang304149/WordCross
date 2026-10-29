@@ -23,6 +23,7 @@ public class IAPItem
     public PType productType;
     public float price;
     public int value;
+    public bool removeAds;
 }
 
 // Nối luồng mua với PurchaseService của catgamingmodule (Unity IAP 5, không cần Nakama).
@@ -147,7 +148,7 @@ public class Purchaser : MonoBehaviour
     }
 #endif
 
-    // Đường xử lý chung sau khi mua gói tắt quảng cáo: ghi cờ buy_item (PromoteController không xoá được), ẩn banner ngay.
+    // Đường xử lý chung sau khi mua gói tắt quảng cáo (hoặc khôi phục): ghi cờ buy_item = cờ tắt quảng cáo duy nhất (người chơi cũ đã có cờ này vẫn được giữ; PromoteController không xoá được), ẩn banner ngay.
     public void GrantNoAds()
     {
         CUtils.SetBuyItem();
@@ -178,18 +179,15 @@ public class Purchaser : MonoBehaviour
         if (item.productType == PType.Consumable)
         {
             CurrencyController.CreditBalance(item.value);
-            GrantNoAds();
-        }
-        // Or ... a non-consumable product has been purchased by this user.
-        else if (item.productType == PType.NonConsumable)
-        {
-            // TODO: The non-consumable item has been successfully purchased, grant this item to the player.
         }
         // Or ... a subscription product has been purchased by this user.
         else if (item.productType == PType.Subscription)
         {
             // TODO: The subscription item has been successfully purchased, grant this to the player.
         }
+
+        // Cờ tắt quảng cáo (buy_item) chỉ bật khi gói có removeAds: word.noads, word.item4, word.item5. Gói item1–3 chỉ cộng ruby.
+        if (item.removeAds) GrantNoAds();
 
         if (onItemPurchased != null) onItemPurchased(item, Array.IndexOf(iapItems, item));
     }

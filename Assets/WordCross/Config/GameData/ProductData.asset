@@ -69,3 +69,14 @@ MonoBehaviour:
         productType: 0
         removeAdsProduct: 0
         removeAdsDays: 0
+    - Key: word.noads
+      Value:
+        storeId: word.noads
+        price: 
+        numCoins: 0
+        discount: 0
+        mostPopular: 0
+        bestValue: 0
+        productType: 1
+        removeAdsProduct: 1
+        removeAdsDays: 0
