@@ -457,6 +457,7 @@ public class CUtils
         else
         {
             string address = GameplaySceneAddresses[sceneIndex];
+            Debug.Log("[Scene] load " + address + " t=" + Time.realtimeSinceStartup.ToString("F2"));
             Addressables.LoadSceneAsync(address, LoadSceneMode.Single).Completed += handle =>
             {
                 if (handle.Status != AsyncOperationStatus.Succeeded)
