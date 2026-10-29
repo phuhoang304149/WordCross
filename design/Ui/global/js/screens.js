@@ -1,6 +1,6 @@
 /* Registry of every screen/popup. src = source file(s) the design is matched to. */
 window.WC_SCREENS = [
-  {id:'home', kind:'screen', name:'Home', note:'Nền, logo WORD CROSS, Play, Shop, Facebook', src:'_Scenes/Home.unity · HomeController.cs'},
+  {id:'home', kind:'screen', name:'Home', note:'Nền, logo WORD CROSS, Play, Shop', src:'_Scenes/Home.unity · HomeController.cs'},
   {id:'select-world', kind:'screen', name:'Chọn World', note:'Vuốt snap theo World 0–5, mỗi World 5 subworld, n/total', src:'_Scenes/SelectWorld.unity · WorldItem.prefab · WorldController.cs'},
   {id:'select-level', kind:'screen', name:'Chọn Level', note:'Lưới LevelButton cuộn dọc, tới level đã mở khoá', src:'_Scenes/SelectLevel.unity · LevelButton.prefab · SelectLevelController.cs'},
   {id:'game', kind:'screen', name:'Gameplay', note:'Lưới ô từ, vòng chữ vuốt, Hint/Shuffle/Ask friend, Extra words', src:'_Scenes/Main.unity · MainController.cs · WordRegion.cs · Pan.cs'},

@@ -7,7 +7,7 @@
   --bg:#f4fbfa; --card:#ffffff; --dim:rgba(31,45,61,.55);
   --r-s:10px; --r-m:16px; --r-l:24px; --r-pill:999px;
   --step:4px; /* flat depth: solid offset, no blur */
-  --font:"Avenir Next Rounded","SF Pro Rounded","Nunito","Baloo 2",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font:"Baloo 2","CookieRun","Avenir Next Rounded","SF Pro Rounded","Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{height:100%}
@@ -56,7 +56,7 @@ body.embed .phone{border-radius:0}
 .home:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:var(--yellow);bottom:-150px;left:-120px;opacity:.9}
 .logo{position:relative;z-index:1;text-align:center;color:#fff}
 .logo .tiles{display:flex;gap:6px;justify-content:center;margin-bottom:14px}
-.tile{width:46px;height:46px;border-radius:12px;background:#fff;color:var(--teal-deep);font-weight:900;font-size:26px;display:grid;place-items:center;box-shadow:0 4px 0 rgba(0,0,0,.14)}
+.tile{font-family:"Bagel Fat One","Baloo 2",var(--font);width:46px;height:46px;border-radius:12px;background:#fff;color:var(--teal-deep);font-weight:900;font-size:26px;display:grid;place-items:center;box-shadow:0 4px 0 rgba(0,0,0,.14)}
 .tile.c{background:var(--yellow);color:#5a4100}.tile.k{background:var(--coral);color:#fff}
 .logo h1{font-size:46px;line-height:.95;font-weight:900;letter-spacing:.02em}
 .home .actions{position:relative;z-index:1;width:100%;display:flex;flex-direction:column;gap:14px;align-items:center}
