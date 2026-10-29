@@ -204,7 +204,7 @@ RectTransform:
   - {fileID: 22427566}
   - {fileID: 22469868}
   m_Father: {fileID: 499218}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -320,7 +320,6 @@ Transform:
   - {fileID: 451828}
   - {fileID: 4107862916478198}
   - {fileID: 4120072707556424}
-  - {fileID: 4645922956288248}
   - {fileID: 430276}
   - {fileID: 4999267856939306}
   - {fileID: 22414322}
@@ -365,8 +364,6 @@ MonoBehaviour:
     androidPackageID: com.PHltd.wordcrossy
     iosAppID: 
     macAppID: 
-    facebookPageID: 
-    enableFacebookFeatures: 0
     fontSizeInDiskSelectLevel: 8
     fontSizeInDiskMainScene: 14
     fontSizeInCellMainScene: 12
@@ -1199,7 +1196,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 114567766845643718, guid: ed41f897a980cb4418530412c5e65428, type: 3}
-  - {fileID: 114902399139878912, guid: e98611956a9822e41b60766c97b4410d, type: 3}
+  - {fileID: 0}
   - {fileID: 114694642563561728, guid: 40f1210044850e442bc8d59292ea89dd, type: 3}
   - {fileID: 114494705831966960, guid: 35253622ec0c9d84aa4838a36d30da79, type: 3}
   - {fileID: 114547224457905462, guid: 12965b3cdb667b94aae2ec9dadd9cec4, type: 3}
@@ -1544,7 +1541,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 499218}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11425640
 MonoBehaviour:
@@ -1800,7 +1797,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 499218}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114560575351531008
 MonoBehaviour:
@@ -1814,50 +1811,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07ddfcdf1e4b94c54b1db6394f7ee5f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1897384165565498
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4645922956288248}
-  - component: {fileID: 114990789368012760}
-  m_Layer: 0
-  m_Name: FacebookController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4645922956288248
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897384165565498}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 499218}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114990789368012760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897384165565498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a7fe4ce66e5bd04296e4a94c1c3bd7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasInviteFriend: 1
-  DirectRequestTitle: Word Chef
-  DirectRequestMessage: The most interesting word search. Let's play
-  linkToShare: http://wordchef.tk/word_chef/web/index.html

@@ -33,10 +33,7 @@ public class SocialRegion : MonoBehaviour {
 
     public void OnSocialClick()
     {
-        if (ConfigController.Config.enableFacebookFeatures)
-            ShowPanel();
-        else
-            OnAskFriendClick();
+        OnAskFriendClick();
     }
 
     public void OnAskFriendClick()
