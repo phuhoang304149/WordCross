@@ -1227,16 +1227,30 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T110",
       "title": "Banner màn Main theo design (dưới vòng chữ, không đè vùng chơi, ẩn khi tắt ads, placeholder như design)",
-      "type": "ui",
-      "status": "doing",
+      "type": "runtime",
+      "status": "done",
       "screen": "Màn Game (Main)",
       "goal": "Banner đúng vị trí/kích thước như design; chỉ ở Main; ẩn khi mua gói tắt ads",
       "scope": "Main prefab/scene vùng banner, ShowBanner gọi ở BaseController/CUtils/AdmobController (không sửa submodule)",
       "owner": "CLAUDE (dev)",
       "deps": "T065",
       "criteria": "Ảnh Main khớp design/Ui app.js+theme.css .banner; banner không hiện ở màn khác",
-      "evidence": "Merge 86439d6 (68e89c2, 1600849 banner): Main đo theo design (390×826 css): ô 40×40 y139,4, cột x131,1/174,9, coach 264×50,8, 4 nút y414,6 tròn 51,8, vòng chữ 259,6 y493,9, đĩa chọn 58,2×57,9 dưới chữ/trên nét, preview mỗi chữ 1 ô 32×38, pause 34,2/48,6. OTA 1.0.0 CLR 66c06478…, catalog b1b5f1b4… (điều phối curl khớp; 9/9 sha256). Cold start pm clear 0 lỗi Unity. Ảnh qa-shots/mainscr-final-{1..9}-*.png (điều phối xem main-select, win); log Build/remote-r2-1.0.0/mainscr-*.log; rollback mainscr-prev-{catalog,clr}/. Banner chỉ ở Main, vòng chữ + nút đẩy lên 62 css khi có banner; placeholder .banner ở bản debug.",
-      "note": "[2026-10-29 19:58 (GMT+7)] Banner đã có trong design từ trước (app.js ~110, theme.css .banner, GD mục Ads), USER xác nhận ảnh GD. Dev Sonnet đang làm (worktree banner).\n[2026-10-30 00:30 (GMT+7)] Đạt phần layout/chỉ-ở-Main. CHƯA kiểm: ẩn banner + nhả vùng chừa sau khi mua gói tắt ads (mới đọc code BannerSpace.Release / AdmobController) và banner thật (ID thật NO_FILL) → kiểm khi có Internal testing (T007). Nhánh wordcross/banner đã gộp và xoá."
+      "evidence": "Merge 86439d6 (68e89c2, 1600849 banner): Main đo theo design (390×826 css): ô 40×40 y139,4, cột x131,1/174,9, coach 264×50,8, 4 nút y414,6 tròn 51,8, vòng chữ 259,6 y493,9, đĩa chọn 58,2×57,9 dưới chữ/trên nét, preview mỗi chữ 1 ô 32×38, pause 34,2/48,6. OTA 1.0.0 CLR 66c06478…, catalog b1b5f1b4… (điều phối curl khớp; 9/9 sha256). Cold start pm clear 0 lỗi Unity. Ảnh qa-shots/mainscr-final-{1..9}-*.png (điều phối xem main-select, win); log Build/remote-r2-1.0.0/mainscr-*.log; rollback mainscr-prev-{catalog,clr}/. Banner chỉ ở Main, vòng chữ + nút đẩy lên 62 css khi có banner; placeholder .banner ở bản debug. | [2026-10-30] Mua tắt ads: Purchaser.GrantNoAds (buy_item + RemoveAds + CloseBanner), PromoteController không reset khi đã mua (5560a4b, merge 5a61849). Máy: mô phỏng GrantNoAds ở Main → banner ẩn, vòng chữ/nút tụt ~193px (=62css), kill app mở lại vẫn không banner, xoá cờ → banner lại; Shop không banner. OTA CLR 2243efef (curl khớp), cold start 540 asset 4,73s. Ảnh qa-shots/t110b-*.",
+      "note": "[2026-10-29 19:58 (GMT+7)] Banner đã có trong design từ trước (app.js ~110, theme.css .banner, GD mục Ads), USER xác nhận ảnh GD. Dev Sonnet đang làm (worktree banner).\n[2026-10-30 00:30 (GMT+7)] Đạt phần layout/chỉ-ở-Main. CHƯA kiểm: ẩn banner + nhả vùng chừa sau khi mua gói tắt ads (mới đọc code BannerSpace.Release / AdmobController) và banner thật (ID thật NO_FILL) → kiểm khi có Internal testing (T007). Nhánh wordcross/banner đã gộp và xoá.\n[2026-10-30] Sự kiện NoAdsRestored từ store thật + banner thật (no-fill) kiểm cùng T007 khi có Internal testing."
+    },
+    {
+      "id": "T116",
+      "title": "Đơn IAP về khi Shop đóng (mở lại app/pending) không cộng ruby nhưng vẫn xác nhận store",
+      "type": "code",
+      "status": "doing",
+      "screen": "Ads · IAP",
+      "goal": "Mọi đơn hợp lệ đều cộng ruby + buy_item, kể cả khi Shop không mở",
+      "scope": "Purchaser.ProcessPurchase cộng thưởng; ShopDialog chỉ hiện toast",
+      "owner": "CLAUDE (dev)",
+      "deps": "T114",
+      "criteria": "Mô phỏng ProcessPurchase khi Shop đóng → ruby cộng đúng, buy_item set, banner ẩn; mua trong Shop không cộng đôi",
+      "evidence": "",
+      "note": "[2026-10-30] Phát hiện khi làm T110: chỉ ShopDialog nghe onItemPurchased; OnPendingPurchase gọi ConfirmPurchase dù không ai cộng thưởng → mất tiền người chơi. OTA CLR."
     },
     {
       "id": "T025",
