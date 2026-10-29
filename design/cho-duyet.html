@@ -98,12 +98,19 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 </div>
 <div class="item" data-id="rewardplaying">
 <h3>Rewarded lúc đang phát quảng cáo</h3>
-<p>Design có nút “ĐÓNG QUẢNG CÁO” (mô phỏng). Game dùng quảng cáo thật toàn màn hình nên không có nút này.</p>
+<p>Design có nút “ĐÓNG QUẢNG CÁO” (mô phỏng). Game dùng quảng cáo thật toàn màn hình nên không có nút này; chữ trong popup là “Đang phát video” thay cho “quảng cáo mô phỏng”.</p>
 <label class="opt"><input type="radio" name="rewardplaying" value="ok">Chấp nhận (đúng hành vi quảng cáo thật)</label>
 <label class="opt"><input type="radio" name="rewardplaying" value="khac">Muốn khác (ghi rõ)</label>
 <textarea placeholder="Ghi chú"></textarea>
 </div>
 
+<div class="item" data-id="dailymenu">
+<h3>Win của Daily không có nút MENU</h3>
+<p>Theo design, màn thắng Daily không có sao và không có nút MENU (chỉ có nút về Hàng ngày). Đã làm theo design (ẩn nút, giữ code).</p>
+<label class="opt"><input type="radio" name="dailymenu" value="design">Giữ theo design (không MENU)</label>
+<label class="opt"><input type="radio" name="dailymenu" value="menu">Bật lại nút MENU</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
 <div class="item" data-id="price">
 <h3>Định dạng giá trong Shop</h3>
 <p>Hiện “0,99$” (chuỗi Google Play theo vùng); design “0.99 $”. Khi phát hành thật giá lấy từ store theo tiền tệ người chơi.</p>
@@ -177,7 +184,8 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 <li>Đã xong + xác minh trên máy: bỏ splash, Notifications B, font Baloo 2, Ads (test ID), nút mua Shop, Home và các popup từ Home khớp design theo số đo.</li>
 <li>Đã xong thêm: SelectWorld, SelectLevel, Header dùng chung (khớp design theo số đo, OTA 1.0.0).</li>
 <li>Đã xong thêm: màn Main (bàn chơi, vòng chữ, banner chỉ ở Main, coach level 1), gameplay chơi thật: hint 2 ruby, shuffle, thắng +3, Next.</li>
-<li>Đang làm: popup trong game (Win, Pause, Extra, HowTo, Rewarded trong game…); sau đó localization, đề xuất mới.</li>
+<li>Đã xong thêm: popup trong game (Pause, Cách chơi, Win lần đầu/chơi lại/Daily, Từ thưởng) khớp design.</li>
+<li>Đang làm: popup thiếu ruby (design có, game chưa có); sau đó localization, đề xuất mới.</li>
 <li>Nhánh chưa merge: <code>wordcross/bot</code> (chờ duyệt cách chơi), <code>wordcross/banner</code> (làm ở nhóm Main).</li>
 </ul>
 </div>
