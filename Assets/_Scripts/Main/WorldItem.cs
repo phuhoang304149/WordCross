@@ -13,8 +13,10 @@ public class WorldItem : MonoBehaviour {
     public CanvasGroup canvasGroup;
     public float lockedAlpha = 0.55f;
     public Image indexBack;
+    public Text indexText;
     public RectTransform progressFill;
     public Color lockedIndexColor = new Color(0.7216f, 0.7843f, 0.7843f, 1f);
+    public Color lockedIndexTextColor = Color.white;
 
     public int world, subWorld;
 
@@ -36,6 +38,7 @@ public class WorldItem : MonoBehaviour {
             button.interactable = false;
             play.sprite = playUnactive;
             indexBack.color = lockedIndexColor;
+            indexText.color = lockedIndexTextColor;
 
             processText.text = "0" + "/" + numLevels;
             SetProgress(0, numLevels);
