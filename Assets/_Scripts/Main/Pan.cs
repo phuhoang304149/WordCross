@@ -11,8 +11,6 @@ public class Pan : MonoBehaviour
     private string word, panWord;
     private GameLevel gameLevel;
     private const float DesignWidth = 390f, RadiusCss = 84f, RadiusManyCss = 90f;
-    // Design đặt chữ theo hệ toạ độ của lòng vòng (lệch viền 3 css) nên tâm chữ nằm (+3, +3) so với tâm vòng; đo trên máy: (+2,9, +1,2 sau bù Pan).
-    private const float OffsetRightCss = 2.9f, OffsetDownCss = 1.2f;
     private List<Vector3> letterPositions = new List<Vector3>();
     private List<Vector3> letterLocalPositions = new List<Vector3>();
     private List<Text> letterTexts = new List<Text>();
@@ -63,7 +61,7 @@ public class Pan : MonoBehaviour
             float angleRadian = angle * Mathf.PI / 180f;
             float x = Mathf.Cos(angleRadian);
             float y = Mathf.Sin(angleRadian);
-            Vector3 position = radius * new Vector3(x, y, 0) + new Vector3(OffsetRightCss, -OffsetDownCss, 0) * localPerCss;
+            Vector3 position = radius * new Vector3(x, y, 0);
 
             letterLocalPositions.Add(position);
             letterPositions.Add(centerPoint.TransformPoint(position));
