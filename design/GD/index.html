@@ -229,9 +229,20 @@ footer{padding:10px 18px 50px;color:var(--dim);font-size:13px}
 <li><b>Không paywall:</b> chơi, thắng, Shuffle, Từ thưởng, Daily, Bot đều miễn phí. Hết ruby: popup “Cần 2 ruby” gồm <i>xem video +2 (tuỳ chọn)</i>, <i>Shop</i>, <b>Bỏ qua, chơi tiếp</b> (thay vì mở Shop thẳng như gốc).</li>
 <li><b>Rewarded tự chọn:</b> luôn hiện giá trị (“+2 ruby”) trước khi xem. Ruby chỉ cộng ở <b>callback hoàn thành</b> bằng <code>adComplete(sessionId)</code>, idempotent theo id; huỷ/lỗi/không có quảng cáo/offline: không thưởng, không trừ ruby. Daily/Win x2 khoá theo id nên không cộng dồn sai.</li>
 <li><b>Interstitial:</b> chỉ ở khoảng nghỉ <b>sau thắng</b>; bỏ ở Pause/Shop/HowTo/Extra (thay đổi so với gốc); grace: 5 level đầu không có; cách nhau ≥ 90s; tối đa 6/ngày; không ngay sau rewarded; không bao giờ giữa lúc vuốt chữ hay chồng lên rewarded. Hàm mô phỏng <code>interstitialAllowed</code>. Banner đặt dưới vòng chữ, không đè bàn/vùng vuốt.</li>
-<li><b>Remove ads:</b> giữ cơ chế gốc (mua bất kỳ gói → tắt interstitial/banner); rewarded tuỳ chọn vẫn còn. Giá hiển thị là demo, nút mua chỉ hiện thông báo, không giả thanh toán.</li>
+<li><b>Remove ads (USER chốt 2026-10-30):</b> chỉ gói tắt quảng cáo riêng <code>word.noads</code> và 2 gói ruby cao nhất (<code>word.item4</code>, <code>word.item5</code>) tắt interstitial/banner; gói item1–3 không tắt; rewarded tuỳ chọn vẫn còn. Giá hiển thị là demo, nút mua chỉ hiện thông báo, không giả thanh toán.</li>
 <li><b>Trạng thái ads trong prototype</b> (popup Rewarded video, khung DEMO): loading, ready, cooldown, no-fill, offline, playing (quảng cáo mô phỏng 3s, không phải quảng cáo thật), success, cancel, error; chọn kết quả (xong/đóng sớm/lỗi) để xem từng nhánh.</li>
 </ul>
+
+<h3 id="iap-products"><span class="tag t-need">CẦN USER KIỂM PLAY CONSOLE</span>Danh sách product ID (Google Play, app com.PHltd.wordcrossy)</h3>
+<p>Nguồn: <code>Assets/WordChef/Common/Prefabs/GameMaster.prefab</code> (giá, số ruby) và <code>Assets/WordCross/Config/Editor/WordCrossConfig.asset</code> (storeId). Chưa đối chiếu được Play Console (trình duyệt chưa đăng nhập) → USER kiểm: mỗi ID phải tồn tại, <b>Active</b>, đúng loại; thiếu thì tạo đúng ID.</p>
+<div class="tbl"><table><tr><th>Product ID</th><th>Loại trên Play</th><th>Ruby</th><th>Giá trong game (USD)</th><th>Tắt quảng cáo</th><th>Trạng thái</th></tr>
+<tr><td><code>word.item1</code></td><td>In-app (tiêu thụ)</td><td>50</td><td>0.99</td><td>Không</td><td>HIỆN CÓ trong game</td></tr>
+<tr><td><code>word.item2</code></td><td>In-app (tiêu thụ)</td><td>110</td><td>1.99</td><td>Không</td><td>HIỆN CÓ trong game</td></tr>
+<tr><td><code>word.item3</code></td><td>In-app (tiêu thụ)</td><td>250</td><td>3.99</td><td>Không</td><td>HIỆN CÓ trong game</td></tr>
+<tr><td><code>word.item4</code></td><td>In-app (tiêu thụ)</td><td>450</td><td>5.99</td><td>Có</td><td>HIỆN CÓ trong game</td></tr>
+<tr><td><code>word.item5</code></td><td>In-app (tiêu thụ)</td><td>1100</td><td>11.99</td><td>Có</td><td>HIỆN CÓ trong game</td></tr>
+<tr><td><code>word.noads</code></td><td>In-app (không tiêu thụ)</td><td>0</td><td>đề xuất 2.99</td><td>Có (vĩnh viễn)</td><td><b>MỚI — cần tạo trên Play</b> (ID đề xuất, đổi được trước khi phát hành)</td></tr></table></div>
+<p>Đơn có product ID ngoài danh sách: giữ như hiện tại (xác nhận với store, không cộng gì).</p>
 
 </section>
 <section id="loc"><h2><span class="tag t-exist">HIỆN CÓ</span><span class="tag t-need">CẦN DUYỆT</span> 9. Localization UI (vi/en/fr/es/pt)</h2>
