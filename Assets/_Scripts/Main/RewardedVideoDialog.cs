@@ -52,12 +52,14 @@ public class RewardedVideoDialog : Dialog {
     private static readonly Color LINE = new Color(0.875f, 0.914f, 0.918f, 1f);
 
     private const float PLAYING_TIMEOUT = 180f;
-    private const float PADDING = 36f;
-    private const float SPACING = 18f;
-    private const float TITLE_HEIGHT = 60f;
-    private const float VISUAL_HEIGHT = 90f;
-    private const float MESSAGE_HEIGHT = 84f;
-    private const float BUTTON_HEIGHT = 94f;
+    // Khoảng cách và cỡ theo design (css px x 1,6914 trên canvas 660x1397): padding trên 28, dưới/hai bên 22, gap 16, dòng title 32,5, dòng mô tả 22,4, nút 52.
+    private const float PADDING_TOP = 47f;
+    private const float PADDING_BOTTOM = 37f;
+    private const float SPACING = 27f;
+    private const float TITLE_LINE = 55f;
+    private const float MESSAGE_LINE = 38f;
+    private const float BUTTON_HEIGHT = 88f;
+    private const float CLOSE_INSET = 10.3f;
 
     private RewardedVideoState state;
     private int amount;
@@ -290,23 +292,33 @@ public class RewardedVideoDialog : Dialog {
         Layout(showAmount || showSpinner || showAdBox, showAdBox ? adBox : (showSpinner ? spinner : amountHolder), primary != null, secondary != null);
     }
 
-    // Xếp các phần tử đang bật theo chiều dọc rồi co giãn card cho vừa.
+    // Xếp các phần tử đang bật theo chiều dọc rồi co giãn card cho vừa; title/mô tả cao theo số dòng.
     private void Layout(bool hasVisual, RectTransform visual, bool hasPrimary, bool hasSecondary)
     {
-        float visualHeight = hasVisual ? Mathf.Max(VISUAL_HEIGHT, visual.sizeDelta.y) : 0f;
-        float total = PADDING * 2 + TITLE_HEIGHT + SPACING + MESSAGE_HEIGHT;
+        float titleHeight = TITLE_LINE * LineCount(titleText);
+        float messageHeight = MESSAGE_LINE * LineCount(messageText);
+        float visualHeight = hasVisual ? visual.sizeDelta.y : 0f;
+        float total = PADDING_TOP + PADDING_BOTTOM + titleHeight + SPACING + messageHeight;
         if (hasVisual) total += SPACING + visualHeight;
         if (hasPrimary) total += SPACING + BUTTON_HEIGHT;
         if (hasSecondary) total += SPACING + BUTTON_HEIGHT;
 
         card.sizeDelta = new Vector2(card.sizeDelta.x, total);
-        float y = total / 2 - PADDING;
-        y = Place(titleText.rectTransform, y, TITLE_HEIGHT);
+        float y = total / 2 - PADDING_TOP;
+        y = Place(titleText.rectTransform, y, titleHeight);
         if (hasVisual) y = Place(visual, y - SPACING, visualHeight);
-        y = Place(messageText.rectTransform, y - SPACING, MESSAGE_HEIGHT);
+        y = Place(messageText.rectTransform, y - SPACING, messageHeight);
         if (hasPrimary) y = Place((RectTransform)primaryButton.transform, y - SPACING, BUTTON_HEIGHT);
         if (hasSecondary) y = Place((RectTransform)secondaryButton.transform, y - SPACING, BUTTON_HEIGHT);
-        closeX.anchoredPosition = new Vector2(closeX.anchoredPosition.x, total / 2 - 11f);
+        closeX.anchoredPosition = new Vector2(closeX.anchoredPosition.x, total / 2 - CLOSE_INSET);
+    }
+
+    // Số dòng chữ sau khi xuống dòng theo bề rộng khung hiện tại.
+    private int LineCount(Text text)
+    {
+        TextGenerator generator = text.cachedTextGeneratorForLayout;
+        generator.Populate(text.text, text.GetGenerationSettings(new Vector2(text.rectTransform.rect.width, 0f)));
+        return Mathf.Max(1, generator.lineCount);
     }
 
     // Đặt phần tử có mép trên tại top, trả về mép dưới.
