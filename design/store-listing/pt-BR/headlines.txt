@@ -1,0 +1,6 @@
+Tagline: Deslize as letras. Preencha a cruzadinha.
+Home: Deslize, resolva, repita
+SelectWorld: Escolha um mundo para explorar
+Gameplay: Deslize pelas letras para preencher o tabuleiro
+Daily: Um desafio novo todo dia
+Win: Fase vencida! Ganhe rubis
