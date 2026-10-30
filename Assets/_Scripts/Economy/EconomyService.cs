@@ -34,7 +34,7 @@ namespace WordCross.Gameplay
         public const string SINK_HINT_WORD = "sk_hint_word";
         public const string SINK_STREAK_REPAIR = "sk_streak_repair";
 
-        private const string MIGRATE_KEY = "migrate:ruby_v1";
+        private const string INIT_KEY = "init:balance_v1";
         private const string LIFE_PREFIX = "claim:life:";
         private const string FIRST_WIN_KEY = "claim:life:win:first";
         private const string AD_PREFIX = "ad:";
@@ -82,7 +82,7 @@ namespace WordCross.Gameplay
             progress.Clear();
             for (int i = 0; i < state.progressKeys.Count && i < state.progressValues.Count; i++) progress[state.progressKeys[i]] = state.progressValues[i];
             today = Mathf.Max(0, state.maxSeenDay);
-            Migrate();
+            InitBalance();
             Tick();
         }
 
@@ -99,15 +99,15 @@ namespace WordCross.Gameplay
             if (onChanged != null) onChanged();
         }
 
-        // Ruby → coin một lần: người cũ ruby × rubyToCoin, người mới startBalance.
-        private void Migrate()
+        // Ruby là tiền tệ duy nhất: người cũ giữ nguyên số dư, chưa có ví thì nhận startBalance của GD (một lần).
+        private void InitBalance()
         {
-            if (claims.Contains(MIGRATE_KEY)) return;
-            claims.Add(MIGRATE_KEY);
+            if (claims.Contains(INIT_KEY)) return;
+            claims.Add(INIT_KEY);
             state.initialized = true;
-            int balance = store.HasLegacyBalance() ? store.GetBalance() * data.rubyToCoin : data.startBalance;
+            bool hasWallet = store.HasLegacyBalance();
             Save();
-            store.SetBalance(balance);
+            if (!hasWallet) store.SetBalance(data.startBalance);
         }
 
         // ---------- thời gian ----------
@@ -184,13 +184,13 @@ namespace WordCross.Gameplay
             return "claim:" + Prefix(scope) + refId;
         }
 
-        // Giữ khoá trọn đời, khoá migrate, khoá claim/tiến độ của kỳ hiện tại và phiên quảng cáo hôm nay.
+        // Giữ khoá trọn đời, khoá khởi tạo ví, khoá claim/tiến độ của kỳ hiện tại và phiên quảng cáo hôm nay.
         private void Prune()
         {
             var keep = new List<string>();
             foreach (var scope in new[] { SCOPE_DAILY, SCOPE_WEEKLY, SCOPE_MONTHLY, SCOPE_EVENT, SCOPE_LOGIN, SCOPE_STREAK }) keep.Add(Prefix(scope));
             string adToday = AD_PREFIX + today + ":";
-            claims.RemoveWhere(key => !(key.StartsWith(LIFE_PREFIX) || key == MIGRATE_KEY || key.StartsWith(adToday) || StartsWithAny("claim:" , key, keep)));
+            claims.RemoveWhere(key => !(key.StartsWith(LIFE_PREFIX) || key == INIT_KEY || key.StartsWith(adToday) || StartsWithAny("claim:" , key, keep)));
             var stale = new List<string>();
             foreach (var key in progress.Keys)
                 if (!StartsWithAny("", key, keep)) stale.Add(key);

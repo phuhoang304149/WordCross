@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: EconomyData
   m_EditorClassIdentifier: WordCross.Gameplay.HotUpdate::WordCross.Gameplay.EconomyData
   startBalance: 100
-  rubyToCoin: 10
   firstWinCoin: 10
   firstEverWinBonusCoin: 20
   replayWinCoin: 0
@@ -478,7 +477,7 @@ MonoBehaviour:
     coin: 30
     locKey: quest.eq_daily
   dailyAllClearCoin: 10
-  anchorUtcDate: 2026-10-26
+  anchorUtcDate: 2026-01-01
   lengthDays: 365
   loginRewards:
   - id: lr_base

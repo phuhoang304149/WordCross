@@ -27,7 +27,7 @@ namespace WordCross.Gameplay
             };
         }
 
-        // Kinh tế coin (T134): dữ liệu Addressables đã được ClrBootstrap nạp trước entry; migrate ruby→coin chạy trước khi UI đọc số dư.
+        // Kinh tế coin (T134): dữ liệu Addressables đã được ClrBootstrap nạp trước entry; khởi tạo ví ruby chạy trước khi UI đọc số dư.
         private void StartEconomy()
         {
             var data = ClrContent.Instance.Load<EconomyData>("Economy/EconomyData");

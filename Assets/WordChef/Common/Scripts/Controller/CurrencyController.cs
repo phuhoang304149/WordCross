@@ -4,9 +4,8 @@ using System;
 
 public class CurrencyController
 {
-	public const string CURRENCY = "coin";
-	// Số dư khởi đầu coin (T134); người cũ được EconomyService migrate ruby×10 một lần.
-	public const int DEFAULT_CURRENCY = 100;
+	public const string CURRENCY = "ruby";
+	public const int DEFAULT_CURRENCY = 10;
     public static Action onBalanceChanged;
     public static Action<int> onBallanceIncreased;
 

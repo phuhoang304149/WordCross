@@ -98,25 +98,25 @@ MonoBehaviour:
     - PULAR, CONTINUAR JOGANDO
   - key: common.rubies
     values:
-    - coin
-    - coins
-    - "pi\xE8ces"
-    - monedas
-    - moedas
+    - ruby
+    - rubies
+    - rubis
+    - "rub\xEDes"
+    - rubis
   - key: common.balance
     values:
-    - "S\u1ED1 coin"
-    - Coin balance
-    - "Solde de pi\xE8ces"
-    - Saldo de monedas
-    - Saldo de moedas
+    - "S\u1ED1 ruby"
+    - Ruby balance
+    - Solde de rubis
+    - "Saldo de rub\xEDes"
+    - Saldo de rubis
   - key: common.addRubies
     values:
-    - "Th\xEAm coin"
-    - Get coins
-    - "Obtenir des pi\xE8ces"
-    - Conseguir monedas
-    - Ganhar moedas
+    - "Th\xEAm ruby"
+    - Get rubies
+    - Obtenir des rubis
+    - "Conseguir rub\xEDes"
+    - Ganhar rubis
   - key: common.soon
     values:
     - "S\u1EAEP C\xD3"
@@ -351,11 +351,11 @@ MonoBehaviour:
   - key: game.coach2
     values:
     - "T\xECm \u0111\u1EE7 c\xE1c t\u1EEB \u0111\u1EC3 th\u1EAFng. Kh\xF4ng c\u1EA7n
-      coin."
-    - Find every word to win. No coins needed.
+      ruby."
+    - Find every word to win. No rubies needed.
     - "Trouvez tous les mots pour gagner. Aucune pi\xE8ce requise."
-    - Encuentra todas las palabras para ganar. No hacen falta monedas.
-    - "Encontre todas as palavras para vencer. N\xE3o precisa de moedas."
+    - "Encuentra todas las palabras para ganar. No hacen falta rub\xEDes."
+    - "Encontre todas as palavras para vencer. N\xE3o precisa de rubis."
   - key: game.coachDaily
     values:
     - "M\u1EE5c ti\xEAu h\xF4m nay: t\xECm \u0111\u1EE7 {n} t\u1EEB."
@@ -468,13 +468,13 @@ MonoBehaviour:
       uma captura de tela e pedir ajuda aos amigos."
   - key: how.3
     values:
-    - "X\xE1o ch\u1EEF mi\u1EC5n ph\xED. G\u1EE3i \xFD t\u1ED1n coin nh\u01B0ng kh\xF4ng
+    - "X\xE1o ch\u1EEF mi\u1EC5n ph\xED. G\u1EE3i \xFD t\u1ED1n ruby nh\u01B0ng kh\xF4ng
       b\u1EAFt bu\u1ED9c."
-    - Shuffle is free. Hints cost coins but are never required.
-    - "M\xE9langer est gratuit. Les indices co\xFBtent des pi\xE8ces mais ne sont
-      jamais obligatoires."
-    - Mezclar es gratis. Las pistas cuestan monedas, pero nunca son obligatorias.
-    - "Embaralhar \xE9 gr\xE1tis. As dicas custam moedas, mas nunca s\xE3o obrigat\xF3rias."
+    - Shuffle is free. Hints cost rubies but are never required.
+    - "M\xE9langer est gratuit. Les indices co\xFBtent des rubis mais ne sont jamais
+      obligatoires."
+    - "Mezclar es gratis. Las pistas cuestan rub\xEDes, pero nunca son obligatorias."
+    - "Embaralhar \xE9 gr\xE1tis. As dicas custam rubis, mas nunca s\xE3o obrigat\xF3rias."
   - key: win.title
     values:
     - "HO\xC0N TH\xC0NH LEVEL!"
@@ -498,25 +498,25 @@ MonoBehaviour:
     - MENU
   - key: win.first
     values:
-    - "L\u1EA7n \u0111\u1EA7u th\u1EAFng: +{n} coin"
-    - 'First clear: +{n} coins'
-    - "Premi\xE8re victoire : +{n} pi\xE8ces"
-    - 'Primera victoria: +{n} monedas'
-    - "Primeira vit\xF3ria: +{n} moedas"
+    - "L\u1EA7n \u0111\u1EA7u th\u1EAFng: +{n} ruby"
+    - 'First clear: +{n} rubies'
+    - "Premi\xE8re victoire : +{n} rubis"
+    - "Primera victoria: +{n} rub\xEDes"
+    - "Primeira vit\xF3ria: +{n} rubis"
   - key: win.replay
     values:
-    - "Ch\u01A1i l\u1EA1i \u0111\u1EC3 luy\u1EC7n t\u1EADp: kh\xF4ng th\xEAm coin"
-    - 'Replay is practice: no extra coins'
-    - "Rejouer sert \xE0 s'entra\xEEner : pas de pi\xE8ces en plus"
-    - "Repetir es pr\xE1ctica: sin monedas extra"
-    - "Jogar de novo \xE9 treino: sem moedas extras"
+    - "Ch\u01A1i l\u1EA1i \u0111\u1EC3 luy\u1EC7n t\u1EADp: kh\xF4ng th\xEAm ruby"
+    - 'Replay is practice: no extra rubies'
+    - "Rejouer sert \xE0 s'entra\xEEner : pas de rubis en plus"
+    - "Repetir es pr\xE1ctica: sin rub\xEDes extra"
+    - "Jogar de novo \xE9 treino: sem rubis extras"
   - key: win.x2
     values:
-    - "XEM VIDEO: +{n} coin n\u1EEFa"
-    - 'WATCH VIDEO: +{n} more coins'
-    - "VID\xC9O : +{n} pi\xE8ces de plus"
-    - "VER V\xCDDEO: +{n} monedas m\xE1s"
-    - "ASSISTIR V\xCDDEO: +{n} moedas a mais"
+    - "XEM VIDEO: +{n} ruby n\u1EEFa"
+    - 'WATCH VIDEO: +{n} more rubies'
+    - "VID\xC9O : +{n} rubis de plus"
+    - "VER V\xCDDEO: +{n} rub\xEDes m\xE1s"
+    - "ASSISTIR V\xCDDEO: +{n} rubis a mais"
   - key: win.x2done
     values:
     - "\u0110\xE3 nh\u1EADn th\u01B0\u1EDFng th\xEAm"
@@ -565,11 +565,11 @@ MonoBehaviour:
     - "DESAFIO CONCLU\xCDDO!"
   - key: win.dailyReward
     values:
-    - "Th\u01B0\u1EDFng h\xF4m nay: +{n} coin"
-    - 'Today''s reward: +{n} coins'
-    - "R\xE9compense du jour : +{n} pi\xE8ces"
-    - 'Recompensa de hoy: +{n} monedas'
-    - 'Recompensa de hoje: +{n} moedas'
+    - "Th\u01B0\u1EDFng h\xF4m nay: +{n} ruby"
+    - 'Today''s reward: +{n} rubies'
+    - "R\xE9compense du jour : +{n} rubis"
+    - "Recompensa de hoy: +{n} rub\xEDes"
+    - 'Recompensa de hoje: +{n} rubis'
   - key: win.streak
     values:
     - "Chu\u1ED7i {n} ng\xE0y"
@@ -586,11 +586,11 @@ MonoBehaviour:
     - "Sequ\xEAncia de {n} dia"
   - key: win.milestone
     values:
-    - "M\u1ED1c chu\u1ED7i {d} ng\xE0y: +{n} coin"
-    - '{d}-day streak bonus: +{n} coins'
-    - "Bonus pour {d} jours de suite : +{n} pi\xE8ces"
-    - "Bono por {d} d\xEDas seguidos: +{n} monedas"
-    - "B\xF4nus por {d} dias seguidos: +{n} moedas"
+    - "M\u1ED1c chu\u1ED7i {d} ng\xE0y: +{n} ruby"
+    - '{d}-day streak bonus: +{n} rubies'
+    - 'Bonus pour {d} jours de suite : +{n} rubis'
+    - "Bono por {d} d\xEDas seguidos: +{n} rub\xEDes"
+    - "B\xF4nus por {d} dias seguidos: +{n} rubis"
   - key: win.dailyNext
     values:
     - "Mai c\xF3 th\u1EED th\xE1ch m\u1EDBi. Gi\u1EEF chu\u1ED7i nh\xE9!"
@@ -614,25 +614,25 @@ MonoBehaviour:
     - PALAVRAS EXTRAS
   - key: extra.desc
     values:
-    - "T\xECm th\xEAm t\u1EEB m\u1EDBi \u0111\u1EC3 nh\u1EADn coin"
-    - Find more and more new words to collect coins
-    - "Trouvez de nouveaux mots pour gagner des pi\xE8ces"
-    - "Encuentra m\xE1s palabras nuevas para conseguir monedas"
-    - Encontre mais palavras novas para ganhar moedas
+    - "T\xECm th\xEAm t\u1EEB m\u1EDBi \u0111\u1EC3 nh\u1EADn ruby"
+    - Find more and more new words to collect rubies
+    - Trouvez de nouveaux mots pour gagner des rubis
+    - "Encuentra m\xE1s palabras nuevas para conseguir rub\xEDes"
+    - Encontre mais palavras novas para ganhar rubis
   - key: extra.claim
     values:
-    - "NH\u1EACN +{n} COIN"
-    - CLAIM +{n} COINS
-    - "R\xC9CUP\xC9RER +{n} PI\xC8CES"
-    - RECOGER +{n} MONEDAS
-    - RESGATAR +{n} MOEDAS
+    - "NH\u1EACN +{n} RUBY"
+    - CLAIM +{n} RUBIES
+    - "R\xC9CUP\xC9RER +{n} RUBIS"
+    - "RECOGER +{n} RUB\xCDES"
+    - RESGATAR +{n} RUBIS
   - key: extra.claimed
     values:
-    - "\u0110\xE3 nh\u1EADn +{n} coin"
-    - Claimed +{n} coins
-    - "+{n} pi\xE8ces r\xE9cup\xE9r\xE9es"
-    - Recogidas +{n} monedas
-    - +{n} moedas resgatadas
+    - "\u0110\xE3 nh\u1EADn +{n} ruby"
+    - Claimed +{n} rubies
+    - "+{n} rubis r\xE9cup\xE9r\xE9es"
+    - "Recogidas +{n} rub\xEDes"
+    - +{n} rubis resgatadas
   - key: extra.note
     values:
     - "T\u1EEB th\u01B0\u1EDFng ch\u1EC9 t\xEDnh m\u1ED9t l\u1EA7n cho m\u1ED7i level."
@@ -649,11 +649,11 @@ MonoBehaviour:
     - LOJA
   - key: shop.free
     values:
-    - "COIN MI\u1EC4N PH\xCD"
-    - FREE COINS
-    - "PI\xC8CES GRATUITES"
-    - MONEDAS GRATIS
-    - "MOEDAS GR\xC1TIS"
+    - "RUBY MI\u1EC4N PH\xCD"
+    - FREE RUBIES
+    - RUBIS GRATUITES
+    - "RUB\xCDES GRATIS"
+    - "RUBIS GR\xC1TIS"
   - key: shop.watch
     values:
     - XEM
@@ -663,11 +663,11 @@ MonoBehaviour:
     - VER
   - key: shop.ready
     values:
-    - "Xem video ng\u1EAFn: +{n} coin"
-    - 'Short video: +{n} coins'
-    - "Courte vid\xE9o : +{n} pi\xE8ces"
-    - "V\xEDdeo corto: +{n} monedas"
-    - "V\xEDdeo curto: +{n} moedas"
+    - "Xem video ng\u1EAFn: +{n} ruby"
+    - 'Short video: +{n} rubies'
+    - "Courte vid\xE9o : +{n} rubis"
+    - "V\xEDdeo corto: +{n} rub\xEDes"
+    - "V\xEDdeo curto: +{n} rubis"
   - key: shop.cool
     values:
     - "Video s\u1EB5n s\xE0ng sau {t}"
@@ -677,11 +677,11 @@ MonoBehaviour:
     - "V\xEDdeo dispon\xEDvel em {t}"
   - key: shop.pack
     values:
-    - '{n} coin'
-    - '{n} coins'
-    - "{n} pi\xE8ces"
-    - '{n} monedas'
-    - '{n} moedas'
+    - '{n} ruby'
+    - '{n} rubies'
+    - '{n} rubis'
+    - "{n} rub\xEDes"
+    - '{n} rubis'
   - key: shop.note
     values:
     - "Mua b\u1EA5t k\u1EF3 g\xF3i n\xE0o s\u1EBD t\u1EAFt qu\u1EA3ng c\xE1o (kh\xF4ng
@@ -779,11 +779,11 @@ MonoBehaviour:
     - "Nenhum v\xEDdeo dispon\xEDvel agora"
   - key: rv.d.nofill
     values:
-    - "Kh\xF4ng tr\u1EEB coin, kh\xF4ng c\xF3 th\u01B0\u1EDFng. Th\u1EED l\u1EA1i
+    - "Kh\xF4ng tr\u1EEB ruby, kh\xF4ng c\xF3 th\u01B0\u1EDFng. Th\u1EED l\u1EA1i
       sau."
-    - No coins charged, no reward. Try later.
+    - No rubies charged, no reward. Try later.
     - "Aucune pi\xE8ce d\xE9bit\xE9e, aucune r\xE9compense. R\xE9essayez plus tard."
-    - "No se cobran monedas ni hay recompensa. Int\xE9ntalo m\xE1s tarde."
+    - "No se cobran rub\xEDes ni hay recompensa. Int\xE9ntalo m\xE1s tarde."
     - Nenhuma moeda cobrada e nenhuma recompensa. Tente mais tarde.
   - key: rv.s.offline
     values:
@@ -794,11 +794,11 @@ MonoBehaviour:
     - "Voc\xEA est\xE1 offline"
   - key: rv.d.offline
     values:
-    - "Coin t\u1EEB video c\u1EA7n m\u1EA1ng. Ch\u01A1i v\u1EABn b\xECnh th\u01B0\u1EDDng."
-    - Video coins need internet. Play continues normally.
-    - "Les pi\xE8ces vid\xE9o n\xE9cessitent Internet. Le jeu continue normalement."
-    - "Las monedas del v\xEDdeo necesitan internet. El juego sigue con normalidad."
-    - "As moedas do v\xEDdeo precisam de internet. O jogo continua normalmente."
+    - "Ruby t\u1EEB video c\u1EA7n m\u1EA1ng. Ch\u01A1i v\u1EABn b\xECnh th\u01B0\u1EDDng."
+    - Video rubies need internet. Play continues normally.
+    - "Les rubis vid\xE9o n\xE9cessitent Internet. Le jeu continue normalement."
+    - "Las rub\xEDes del v\xEDdeo necesitan internet. El juego sigue con normalidad."
+    - "As rubis do v\xEDdeo precisam de internet. O jogo continua normalmente."
   - key: rv.s.playing
     values:
     - "QU\u1EA2NG C\xC1O M\xD4 PH\u1ECENG"
@@ -829,11 +829,11 @@ MonoBehaviour:
     - RECOMPENSA GANHA!
   - key: rv.d.success
     values:
-    - "\u0110\xE3 c\u1ED9ng {n} coin."
-    - '{n} coins added.'
-    - "{n} pi\xE8ces ajout\xE9es."
-    - "Se a\xF1adieron {n} monedas."
-    - '{n} moedas adicionadas.'
+    - "\u0110\xE3 c\u1ED9ng {n} ruby."
+    - '{n} rubies added.'
+    - "{n} rubis ajout\xE9es."
+    - "Se a\xF1adieron {n} rub\xEDes."
+    - '{n} rubis adicionadas.'
   - key: rv.s.cancel
     values:
     - "\u0110\xE3 \u0111\xF3ng s\u1EDBm"
@@ -843,11 +843,11 @@ MonoBehaviour:
     - Fechado antes do fim
   - key: rv.d.cancel
     values:
-    - "Kh\xF4ng c\xF3 th\u01B0\u1EDFng v\xE0 kh\xF4ng b\u1ECB tr\u1EEB coin."
-    - No reward and no coins charged.
+    - "Kh\xF4ng c\xF3 th\u01B0\u1EDFng v\xE0 kh\xF4ng b\u1ECB tr\u1EEB ruby."
+    - No reward and no rubies charged.
     - "Aucune r\xE9compense et aucune pi\xE8ce d\xE9bit\xE9e."
-    - Sin recompensa y sin cobro de monedas.
-    - "Sem recompensa e sem cobran\xE7a de moedas."
+    - "Sin recompensa y sin cobro de rub\xEDes."
+    - "Sem recompensa e sem cobran\xE7a de rubis."
   - key: rv.s.error
     values:
     - "C\xF3 l\u1ED7i khi ph\xE1t video"
@@ -857,11 +857,11 @@ MonoBehaviour:
     - "Falha ao reproduzir o v\xEDdeo"
   - key: rv.d.error
     values:
-    - "Kh\xF4ng c\xF3 th\u01B0\u1EDFng v\xE0 kh\xF4ng b\u1ECB tr\u1EEB coin."
-    - No reward and no coins charged.
+    - "Kh\xF4ng c\xF3 th\u01B0\u1EDFng v\xE0 kh\xF4ng b\u1ECB tr\u1EEB ruby."
+    - No reward and no rubies charged.
     - "Aucune r\xE9compense et aucune pi\xE8ce d\xE9bit\xE9e."
-    - Sin recompensa y sin cobro de monedas.
-    - "Sem recompensa e sem cobran\xE7a de moedas."
+    - "Sin recompensa y sin cobro de rub\xEDes."
+    - "Sem recompensa e sem cobran\xE7a de rubis."
   - key: rv.demo
     values:
     - "DEMO \xB7 ch\u1ECDn tr\u1EA1ng th\xE1i qu\u1EA3ng c\xE1o \u0111\u1EC3 xem"
@@ -934,28 +934,28 @@ MonoBehaviour:
     - erro
   - key: low.title
     values:
-    - "C\u1EA6N {n} COIN"
-    - NEED {n} COINS
-    - "IL FAUT {n} PI\xC8CES"
-    - HACEN FALTA {n} MONEDAS
-    - PRECISA DE {n} MOEDAS
+    - "C\u1EA6N {n} RUBY"
+    - NEED {n} RUBIES
+    - IL FAUT {n} RUBIS
+    - "HACEN FALTA {n} RUB\xCDES"
+    - PRECISA DE {n} RUBIS
   - key: low.desc
     values:
-    - "B\u1EA1n c\xF3 {a} coin. G\u1EE3i \xFD l\xE0 tu\u1EF3 ch\u1ECDn, b\u1EA1n
+    - "B\u1EA1n c\xF3 {a} ruby. G\u1EE3i \xFD l\xE0 tu\u1EF3 ch\u1ECDn, b\u1EA1n
       v\u1EABn ch\u01A1i ti\u1EBFp \u0111\u01B0\u1EE3c mi\u1EC5n ph\xED."
-    - You have {a} coins. Hints are optional; you can keep playing for free.
-    - "Vous avez {a} pi\xE8ces. Les indices sont facultatifs, vous pouvez continuer
-      \xE0 jouer gratuitement."
-    - Tienes {a} monedas. Las pistas son opcionales; puedes seguir jugando gratis.
-    - "Voc\xEA tem {a} moedas. As dicas s\xE3o opcionais; voc\xEA pode continuar
-      jogando de gra\xE7a."
+    - You have {a} rubies. Hints are optional; you can keep playing for free.
+    - "Vous avez {a} rubis. Les indices sont facultatifs, vous pouvez continuer \xE0
+      jouer gratuitement."
+    - "Tienes {a} rub\xEDes. Las pistas son opcionales; puedes seguir jugando gratis."
+    - "Voc\xEA tem {a} rubis. As dicas s\xE3o opcionais; voc\xEA pode continuar jogando
+      de gra\xE7a."
   - key: low.watch
     values:
-    - "XEM VIDEO +{n} COIN (tu\u1EF3 ch\u1ECDn)"
-    - WATCH VIDEO +{n} COINS (optional)
-    - "VID\xC9O +{n} PI\xC8CES (facultatif)"
-    - "VER V\xCDDEO +{n} MONEDAS (opcional)"
-    - "V\xCDDEO +{n} MOEDAS (opcional)"
+    - "XEM VIDEO +{n} RUBY (tu\u1EF3 ch\u1ECDn)"
+    - WATCH VIDEO +{n} RUBIES (optional)
+    - "VID\xC9O +{n} RUBIS (facultatif)"
+    - "VER V\xCDDEO +{n} RUB\xCDES (opcional)"
+    - "V\xCDDEO +{n} RUBIS (opcional)"
   - key: low.shop
     values:
     - "C\u1EECA H\xC0NG"
@@ -1190,11 +1190,11 @@ MonoBehaviour:
     - JOGAR {d}
   - key: daily.reward
     values:
-    - "Th\u01B0\u1EDFng: +{n} coin, nh\u1EADn m\u1ED9t l\u1EA7n"
-    - 'Reward: +{n} coins, claimed once'
-    - "R\xE9compense : +{n} pi\xE8ces, une seule fois"
-    - 'Recompensa: +{n} monedas, una sola vez'
-    - 'Recompensa: +{n} moedas, resgatada uma vez'
+    - "Th\u01B0\u1EDFng: +{n} ruby, nh\u1EADn m\u1ED9t l\u1EA7n"
+    - 'Reward: +{n} rubies, claimed once'
+    - "R\xE9compense : +{n} rubis, une seule fois"
+    - "Recompensa: +{n} rub\xEDes, una sola vez"
+    - 'Recompensa: +{n} rubis, resgatada uma vez'
   - key: daily.rewardDone
     values:
     - "\u0110\xE3 nh\u1EADn th\u01B0\u1EDFng ng\xE0y n\xE0y"
@@ -1204,11 +1204,11 @@ MonoBehaviour:
     - "Recompensa j\xE1 resgatada"
   - key: daily.backfill
     values:
-    - "B\xF9 ng\xE0y b\u1ECB l\u1EE1: +{n} coin, gi\u1EEF chu\u1ED7i"
-    - 'Make-up day: +{n} coins, keeps your streak'
-    - "Jour de rattrapage : +{n} pi\xE8ces, s\xE9rie conserv\xE9e"
-    - "D\xEDa de recuperaci\xF3n: +{n} monedas, mantiene tu racha"
-    - "Dia de reposi\xE7\xE3o: +{n} moedas, mant\xE9m sua sequ\xEAncia"
+    - "B\xF9 ng\xE0y b\u1ECB l\u1EE1: +{n} ruby, gi\u1EEF chu\u1ED7i"
+    - 'Make-up day: +{n} rubies, keeps your streak'
+    - "Jour de rattrapage : +{n} rubis, s\xE9rie conserv\xE9e"
+    - "D\xEDa de recuperaci\xF3n: +{n} rub\xEDes, mantiene tu racha"
+    - "Dia de reposi\xE7\xE3o: +{n} rubis, mant\xE9m sua sequ\xEAncia"
   - key: daily.noReward
     values:
     - "Ng\xE0y n\xE0y kh\xF4ng c\xF2n th\u01B0\u1EDFng"
@@ -1248,11 +1248,11 @@ MonoBehaviour:
     - "Sequ\xEAncia pausada. Seu recorde de {n} foi mantido; recomece hoje."
   - key: daily.nextMilestone
     values:
-    - "M\u1ED1c k\u1EBF: {d} ng\xE0y \u2192 +{n} coin"
-    - "Next bonus: {d} days \u2192 +{n} coins"
-    - "Prochain bonus : {d} jours \u2192 +{n} pi\xE8ces"
-    - "Pr\xF3ximo bonus: {d} d\xEDas \u2192 +{n} monedas"
-    - "Pr\xF3ximo b\xF4nus: {d} dias \u2192 +{n} moedas"
+    - "M\u1ED1c k\u1EBF: {d} ng\xE0y \u2192 +{n} ruby"
+    - "Next bonus: {d} days \u2192 +{n} rubies"
+    - "Prochain bonus : {d} jours \u2192 +{n} rubis"
+    - "Pr\xF3ximo bonus: {d} d\xEDas \u2192 +{n} rub\xEDes"
+    - "Pr\xF3ximo b\xF4nus: {d} dias \u2192 +{n} rubis"
   - key: daily.legend
     values:
     - "Xanh: \u0111\xE3 xong \xB7 Cam: b\xF9 \u0111\u01B0\u1EE3c \xB7 M\u1EDD: ch\u01B0a
@@ -1431,25 +1431,25 @@ MonoBehaviour:
     - Bot Zap
   - key: bot.d.easy
     values:
-    - "Ch\u1EADm, hay b\u1ECF s\xF3t t\u1EEB. Th\u1EAFng +{n} coin"
-    - Slow, often misses words. Win +{n} coins
-    - "Lent, rate souvent des mots. Victoire +{n} pi\xE8ces"
-    - Lento, suele dejarse palabras. Victoria +{n} monedas
-    - "Lento, costuma perder palavras. Vit\xF3ria +{n} moedas"
+    - "Ch\u1EADm, hay b\u1ECF s\xF3t t\u1EEB. Th\u1EAFng +{n} ruby"
+    - Slow, often misses words. Win +{n} rubies
+    - Lent, rate souvent des mots. Victoire +{n} rubis
+    - "Lento, suele dejarse palabras. Victoria +{n} rub\xEDes"
+    - "Lento, costuma perder palavras. Vit\xF3ria +{n} rubis"
   - key: bot.d.normal
     values:
-    - "T\u1ED1c \u0111\u1ED9 v\u1EEBa ph\u1EA3i. Th\u1EAFng +{n} coin"
-    - Steady pace. Win +{n} coins
-    - "Rythme r\xE9gulier. Victoire +{n} pi\xE8ces"
-    - Ritmo constante. Victoria +{n} monedas
-    - "Ritmo constante. Vit\xF3ria +{n} moedas"
+    - "T\u1ED1c \u0111\u1ED9 v\u1EEBa ph\u1EA3i. Th\u1EAFng +{n} ruby"
+    - Steady pace. Win +{n} rubies
+    - "Rythme r\xE9gulier. Victoire +{n} rubis"
+    - "Ritmo constante. Victoria +{n} rub\xEDes"
+    - "Ritmo constante. Vit\xF3ria +{n} rubis"
   - key: bot.d.hard
     values:
-    - "Nhanh, \xEDt b\u1ECF s\xF3t. Th\u1EAFng +{n} coin"
-    - Fast, rarely misses. Win +{n} coins
-    - "Rapide, rate rarement. Victoire +{n} pi\xE8ces"
-    - "R\xE1pido, rara vez falla. Victoria +{n} monedas"
-    - "R\xE1pido, raramente perde palavras. Vit\xF3ria +{n} moedas"
+    - "Nhanh, \xEDt b\u1ECF s\xF3t. Th\u1EAFng +{n} ruby"
+    - Fast, rarely misses. Win +{n} rubies
+    - Rapide, rate rarement. Victoire +{n} rubis
+    - "R\xE1pido, rara vez falla. Victoria +{n} rub\xEDes"
+    - "R\xE1pido, raramente perde palavras. Vit\xF3ria +{n} rubis"
   - key: bot.fair
     values:
     - "Bot l\xE0 ch\u01B0\u01A1ng tr\xECnh t\xEDnh s\u1EB5n, kh\xF4ng ph\u1EA3i ng\u01B0\u1EDDi
@@ -1481,11 +1481,11 @@ MonoBehaviour:
     - "COME\xC7AR"
   - key: bot.cap
     values:
-    - "Th\u01B0\u1EDFng bot h\xF4m nay: {a}/{b} coin"
-    - 'Bot rewards today: {a}/{b} coins'
-    - "R\xE9compenses du bot aujourd'hui : {a}/{b} pi\xE8ces"
-    - 'Recompensas del bot hoy: {a}/{b} monedas'
-    - 'Recompensas do bot hoje: {a}/{b} moedas'
+    - "Th\u01B0\u1EDFng bot h\xF4m nay: {a}/{b} ruby"
+    - 'Bot rewards today: {a}/{b} rubies'
+    - "R\xE9compenses du bot aujourd'hui : {a}/{b} rubis"
+    - "Recompensas del bot hoy: {a}/{b} rub\xEDes"
+    - 'Recompensas do bot hoje: {a}/{b} rubis'
   - key: bot.you
     values:
     - "B\u1EA1n"
@@ -1537,11 +1537,11 @@ MonoBehaviour:
     - EMPATE
   - key: bot.reward
     values:
-    - "Th\u01B0\u1EDFng: +{n} coin"
-    - 'Reward: +{n} coins'
-    - "R\xE9compense : +{n} pi\xE8ces"
-    - 'Recompensa: +{n} monedas'
-    - 'Recompensa: +{n} moedas'
+    - "Th\u01B0\u1EDFng: +{n} ruby"
+    - 'Reward: +{n} rubies'
+    - "R\xE9compense : +{n} rubis"
+    - "Recompensa: +{n} rub\xEDes"
+    - 'Recompensa: +{n} rubis'
   - key: bot.noReward
     values:
     - "Kh\xF4ng th\u01B0\u1EDFng th\xEAm (tr\u1EADn ch\u01A1i l\u1EA1i ho\u1EB7c
@@ -2074,11 +2074,11 @@ MonoBehaviour:
     - "V\xCDDEO EM REPRODU\xC7\xC3O"
   - key: rv.d.playingReal
     values:
-    - "Xem \u0111\u1EBFn cu\u1ED1i \u0111\u1EC3 nh\u1EADn {n} coin."
-    - Watch to the end to get {n} coins.
-    - "Regardez jusqu'\xE0 la fin pour obtenir {n} pi\xE8ces."
-    - Mira hasta el final para obtener {n} monedas.
-    - "Assista at\xE9 o fim para ganhar {n} moedas."
+    - "Xem \u0111\u1EBFn cu\u1ED1i \u0111\u1EC3 nh\u1EADn {n} ruby."
+    - Watch to the end to get {n} rubies.
+    - "Regardez jusqu'\xE0 la fin pour obtenir {n} rubis."
+    - "Mira hasta el final para obtener {n} rub\xEDes."
+    - "Assista at\xE9 o fim para ganhar {n} rubis."
   - key: home.toast.daily
     values:
     - "Th\u1EED th\xE1ch h\xE0ng ng\xE0y s\u1EAFp ra m\u1EAFt"
@@ -2117,11 +2117,11 @@ MonoBehaviour:
     - "Sua compra foi conclu\xEDda com sucesso"
   - key: noti.toast
     values:
-    - "B\u1EA1n nh\u1EADn \u0111\u01B0\u1EE3c {n} coin mi\u1EC5n ph\xED"
-    - You got {n} free coins
-    - "Vous avez re\xE7u {n} pi\xE8ces gratuites"
-    - Has conseguido {n} monedas gratis
-    - "Voc\xEA ganhou {n} moedas gr\xE1tis"
+    - "B\u1EA1n nh\u1EADn \u0111\u01B0\u1EE3c {n} ruby mi\u1EC5n ph\xED"
+    - You got {n} free rubies
+    - "Vous avez re\xE7u {n} rubis gratuites"
+    - "Has conseguido {n} rub\xEDes gratis"
+    - "Voc\xEA ganhou {n} rubis gr\xE1tis"
   - key: noti.letterTitle
     values:
     - "\u0110\xE3 m\u1EDF kho\xE1 ch\u1EEF"
@@ -2140,19 +2140,19 @@ MonoBehaviour:
     - "Desbloqueamos a letra {c} para voc\xEA. Abra o jogo e continue jogando :)"
   - key: noti.rubyTitle
     values:
-    - "Qu\xE0 coin"
-    - Coin gift
-    - "Cadeau de pi\xE8ces"
-    - Regalo de monedas
-    - Presente de moedas
+    - "Qu\xE0 ruby"
+    - Ruby gift
+    - Cadeau de rubis
+    - "Regalo de rub\xEDes"
+    - Presente de rubis
   - key: noti.ruby
     values:
-    - "B\u1EA1n nh\u1EADn \u0111\u01B0\u1EE3c {n} coin mi\u1EC5n ph\xED. V\xE0o ch\u01A1i
+    - "B\u1EA1n nh\u1EADn \u0111\u01B0\u1EE3c {n} ruby mi\u1EC5n ph\xED. V\xE0o ch\u01A1i
       v\xE0 th\u1EED th\xE1ch b\u1EA3n th\xE2n nh\xE9"
-    - You got {n} free coins. Play and challenge yourself!
-    - "Vous avez re\xE7u {n} pi\xE8ces gratuites. Jouez et relevez le d\xE9fi !"
-    - "Has conseguido {n} monedas gratis. \xA1Juega y ponte a prueba!"
-    - "Voc\xEA ganhou {n} moedas gr\xE1tis. Jogue e desafie-se!"
+    - You got {n} free rubies. Play and challenge yourself!
+    - "Vous avez re\xE7u {n} rubis gratuites. Jouez et relevez le d\xE9fi !"
+    - "Has conseguido {n} rub\xEDes gratis. \xA1Juega y ponte a prueba!"
+    - "Voc\xEA ganhou {n} rubis gr\xE1tis. Jogue e desafie-se!"
   - key: daily.months
     values:
     - 1|2|3|4|5|6|7|8|9|10|11|12
@@ -2183,11 +2183,11 @@ MonoBehaviour:
     - "Seg|Ter|Qua|Qui|Sex|S\xE1b|Dom"
   - key: currency.coin
     values:
-    - Coin
-    - Coins
-    - "Pi\xE8ces"
-    - Monedas
-    - Moedas
+    - Ruby
+    - Rubies
+    - Rubis
+    - "Rub\xEDes"
+    - Rubis
   - key: quest.dq_win_3
     values:
     - "Th\u1EAFng 3 level"
@@ -2645,39 +2645,39 @@ MonoBehaviour:
     - "Salvar sequ\xEAncia"
   - key: shop.pk_1
     values:
-    - "G\xF3i 500 coin"
-    - 500 coins pack
-    - "Pack de 500 pi\xE8ces"
-    - Paquete de 500 monedas
-    - Pacote de 500 moedas
+    - "G\xF3i 500 ruby"
+    - 500 rubies pack
+    - Pack de 500 rubis
+    - "Paquete de 500 rub\xEDes"
+    - Pacote de 500 rubis
   - key: shop.pk_2
     values:
-    - "G\xF3i 1100 coin"
-    - 1100 coins pack
-    - "Pack de 1100 pi\xE8ces"
-    - Paquete de 1100 monedas
-    - Pacote de 1100 moedas
+    - "G\xF3i 1100 ruby"
+    - 1100 rubies pack
+    - Pack de 1100 rubis
+    - "Paquete de 1100 rub\xEDes"
+    - Pacote de 1100 rubis
   - key: shop.pk_3
     values:
-    - "G\xF3i 2500 coin"
-    - 2500 coins pack
-    - "Pack de 2500 pi\xE8ces"
-    - Paquete de 2500 monedas
-    - Pacote de 2500 moedas
+    - "G\xF3i 2500 ruby"
+    - 2500 rubies pack
+    - Pack de 2500 rubis
+    - "Paquete de 2500 rub\xEDes"
+    - Pacote de 2500 rubis
   - key: shop.pk_4
     values:
-    - "G\xF3i 4500 coin"
-    - 4500 coins pack
-    - "Pack de 4500 pi\xE8ces"
-    - Paquete de 4500 monedas
-    - Pacote de 4500 moedas
+    - "G\xF3i 4500 ruby"
+    - 4500 rubies pack
+    - Pack de 4500 rubis
+    - "Paquete de 4500 rub\xEDes"
+    - Pacote de 4500 rubis
   - key: shop.pk_5
     values:
-    - "G\xF3i 11000 coin"
-    - 11000 coins pack
-    - "Pack de 11000 pi\xE8ces"
-    - Paquete de 11000 monedas
-    - Pacote de 11000 moedas
+    - "G\xF3i 11000 ruby"
+    - 11000 rubies pack
+    - Pack de 11000 rubis
+    - "Paquete de 11000 rub\xEDes"
+    - Pacote de 11000 rubis
   - key: shop.pk_noads
     values:
     - "T\u1EAFt qu\u1EA3ng c\xE1o"
@@ -2736,10 +2736,10 @@ MonoBehaviour:
     - "Fechado cedo, sem pr\xEAmio"
   - key: ad.error
     values:
-    - "L\u1ED7i qu\u1EA3ng c\xE1o, kh\xF4ng m\u1EA5t coin"
-    - Ad error, no coins lost
+    - "L\u1ED7i qu\u1EA3ng c\xE1o, kh\xF4ng m\u1EA5t ruby"
+    - Ad error, no rubies lost
     - "Erreur de pub, aucune pi\xE8ce perdue"
-    - Error de anuncio, sin perder monedas
+    - "Error de anuncio, sin perder rub\xEDes"
     - "Erro no an\xFAncio, nenhuma moeda perdida"
   - key: ad.success
     values:
@@ -2806,11 +2806,11 @@ MonoBehaviour:
     - "Dia {d} \xB7 Semana {w}"
   - key: econ.extraToast
     values:
-    - "T\u1EEB th\u01B0\u1EDFng: +{n} coin"
-    - 'Bonus word: +{n} coins'
-    - "Mot bonus : +{n} pi\xE8ces"
-    - 'Palabra extra: +{n} monedas'
-    - 'Palavra extra: +{n} moedas'
+    - "T\u1EEB th\u01B0\u1EDFng: +{n} ruby"
+    - 'Bonus word: +{n} rubies'
+    - 'Mot bonus : +{n} rubis'
+    - "Palabra extra: +{n} rub\xEDes"
+    - 'Palavra extra: +{n} rubis'
   - key: econ.free
     values:
     - "Nhi\u1EC7m v\u1EE5 kh\xF4ng c\u1EA7n mua hay xem qu\u1EA3ng c\xE1o"
@@ -2870,11 +2870,11 @@ MonoBehaviour:
     - "{p} \xB7 dias {a}\u2013{b}"
   - key: econ.progress
     values:
-    - "{a}/{b} \xB7 +{n} coin"
-    - "{a}/{b} \xB7 +{n} coins"
-    - "{a}/{b} \xB7 +{n} pi\xE8ces"
-    - "{a}/{b} \xB7 +{n} monedas"
-    - "{a}/{b} \xB7 +{n} moedas"
+    - "{a}/{b} \xB7 +{n} ruby"
+    - "{a}/{b} \xB7 +{n} rubies"
+    - "{a}/{b} \xB7 +{n} rubis"
+    - "{a}/{b} \xB7 +{n} rub\xEDes"
+    - "{a}/{b} \xB7 +{n} rubis"
   - key: econ.quests
     values:
     - "Nhi\u1EC7m v\u1EE5: {q}"
@@ -2891,11 +2891,11 @@ MonoBehaviour:
     - "Salvar sequ\xEAncia (1 dia perdido)"
   - key: econ.reward
     values:
-    - +{n} coin
-    - +{n} coins
-    - "+{n} pi\xE8ces"
-    - +{n} monedas
-    - +{n} moedas
+    - +{n} ruby
+    - +{n} rubies
+    - +{n} rubis
+    - "+{n} rub\xEDes"
+    - +{n} rubis
   - key: econ.soon
     values:
     - "S\u1EAFp c\xF3"

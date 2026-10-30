@@ -11,7 +11,7 @@ using WordCross.Gameplay;
 namespace WordCross.Editor
 {
     // Nạp design/GD/economy-year-data/{economy-config,quest-templates,calendar-365,loc-keys}.json vào EconomyData.asset (Addressables, OTA AA)
-    // và gộp chuỗi vào LocalizationData (vi/en từ loc-keys.json; fr/es/pt + khoá UI econ.* + chuỗi đổi ruby→coin từ tools/econ/economy-loc.json).
+    // và gộp chuỗi vào LocalizationData (vi/en từ loc-keys.json; fr/es/pt + khoá UI econ.* + chuỗi game từ tools/econ/economy-loc.json).
     // Hàm static chỉ là điểm vào cho Unity (-executeMethod), phần việc nằm ở hàm instance.
     public class EconomyImporter
     {
@@ -20,9 +20,6 @@ namespace WordCross.Editor
         private const string AssetPath = "Assets/WordCross/Config/GameData/Economy/EconomyData.asset";
         private const string LocalizationPath = "Assets/WordCross/Config/GameData/Localization/LocalizationData.asset";
         private const string ConfigPath = "Assets/WordCross/Config/Editor/AddressableConfig.asset";
-        // Quyết định T134: neo 2026-10-26 (2027-01-01 của GD nằm ở tương lai → dayNumber âm). Ghi đè calendar.cycle.anchorUtcDate.
-        private const string AnchorOverride = "2026-10-26";
-        private const int RubyToCoin = 10;
 
         public static void ImportAll()
         {
@@ -62,7 +59,6 @@ namespace WordCross.Editor
             if (isNew) data = ScriptableObject.CreateInstance<EconomyData>();
 
             data.startBalance = config["currency"]["startBalance"].AsInt;
-            data.rubyToCoin = RubyToCoin;
             var earn = config["earn"];
             data.firstWinCoin = earn["firstWinCoin"].AsInt;
             data.firstEverWinBonusCoin = earn["firstEverWinBonusCoin"].AsInt;
@@ -111,7 +107,7 @@ namespace WordCross.Editor
             data.quests = quests.ToArray();
             data.dailyAllClearCoin = questFile["dailyAllClearCoin"].AsInt;
 
-            data.anchorUtcDate = AnchorOverride;
+            data.anchorUtcDate = Str(calendar["cycle"]["anchorUtcDate"]);
             data.lengthDays = calendar["cycle"]["lengthDays"].AsInt;
             var logins = new List<EconomyData.LoginReward>();
             foreach (JSONNode n in calendar["loginRewards"].Childs)
@@ -209,6 +205,24 @@ namespace WordCross.Editor
             return changed;
         }
 
+        // GD viết "coin"; game giữ ruby làm tiền tệ duy nhất nên chữ hiển thị đổi về từ ruby của từng ngôn ngữ (số nhiều trước số ít).
+        private readonly Dictionary<string, string[]> CurrencyWords = new Dictionary<string, string[]>
+        {
+            { "vi", new[] { "COIN", "RUBY", "Coin", "Ruby", "coin", "ruby" } },
+            { "en", new[] { "COINS", "RUBIES", "Coins", "Rubies", "coins", "rubies", "COIN", "RUBY", "Coin", "Ruby", "coin", "ruby" } },
+            { "fr", new[] { "PIÈCES", "RUBIS", "Pièces", "Rubis", "pièces", "rubis" } },
+            { "es", new[] { "MONEDAS", "RUBÍES", "Monedas", "Rubíes", "monedas", "rubíes" } },
+            { "pt", new[] { "MOEDAS", "RUBIS", "Moedas", "Rubis", "moedas", "rubis" } },
+        };
+
+        private string Currency(string language, string value)
+        {
+            string[] pairs;
+            if (!CurrencyWords.TryGetValue(language, out pairs)) return value;
+            for (int i = 0; i + 1 < pairs.Length; i += 2) value = value.Replace(pairs[i], pairs[i + 1]);
+            return value;
+        }
+
         private void Fill(Dictionary<string, string[]> values, string key, JSONNode node, string[] languages)
         {
             string[] row;
@@ -216,7 +230,7 @@ namespace WordCross.Editor
             for (int i = 0; i < languages.Length; i++)
             {
                 string value = Str(node[languages[i]]);
-                if (value.Length > 0) row[i] = value;
+                if (value.Length > 0) row[i] = Currency(languages[i], value);
             }
         }
 

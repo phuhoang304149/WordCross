@@ -101,8 +101,6 @@ namespace WordCross.Gameplay
 
         [Header("Currency")]
         public int startBalance = 100;
-        // Người chơi cũ: số ruby × hệ số này, một lần (khoá ledger migrate:ruby_v1).
-        public int rubyToCoin = 10;
 
         [Header("Earn")]
         public int firstWinCoin;
