@@ -903,6 +903,20 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "note": "[2026-10-30] Thấy trên ảnh ota4-final-home.png (OTA live 1.0.0).\n[2026-10-30] Design Chrome cũng wrap vi 2 dòng (thiếu ~5 css); đã chọn 1 dòng co chữ → cho-duyet."
     },
     {
+      "id": "T131",
+      "title": "Nút Daily tiếng Việt đổi nhãn \"HÔM NAY\" (thay HÀNG NGÀY) + giá dự phòng word.noads 4.99",
+      "type": "content",
+      "status": "waiting",
+      "screen": "Màn Home",
+      "goal": "Nhãn vi ngắn, 1 dòng cỡ design; giá noads đúng quyết định",
+      "scope": "LocalizationData home.daily vi, design i18n.js; Purchaser iapItems word.noads price 4.99; design/GD iap-products",
+      "owner": "CLAUDE (dev)",
+      "deps": "T123",
+      "criteria": "Home vi hiện HÔM NAY 1 dòng đúng cỡ chữ design; giá noads 4.99 trong game + GD",
+      "evidence": "",
+      "note": "[2026-10-30 USER duyệt] Chạy sau khi worker TMP (T123) merge để tránh xung đột prefab/LocalizationData. OTA AA+CLR."
+    },
+    {
       "id": "T018",
       "title": "Font Baloo theo design",
       "type": "runtime",
@@ -1370,7 +1384,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "USER",
       "deps": "",
       "evidence": "[2026-10-30] Codex đọc Play Console 05:21: word.item1..5 đều có, Active, 174 quốc gia, giá Hoa Kỳ khớp game; item4 tên Play \"Buy 460 coin\" (game 450). word.noads CHƯA có — tạo dở bị chặn vì màn hình Mac khoá, chưa lưu. Bảng ở design/GD/index.html#iap-products.",
-      "note": "[2026-10-30 USER duyệt] USER: lên playstore check, thiếu thì thêm; không làm được thì ghi toàn bộ product id vào design/index.html phần GD để USER check. Đơn mã lạ: giữ như hiện tại.\n[2026-10-30] Chờ USER kiểm/tạo trên Play Console.\n[2026-10-30] Còn: tạo word.noads (non-consumable, giá đề xuất USD 4.99) trên Play.",
+      "note": "[2026-10-30 USER duyệt] USER: lên playstore check, thiếu thì thêm; không làm được thì ghi toàn bộ product id vào design/index.html phần GD để USER check. Đơn mã lạ: giữ như hiện tại.\n[2026-10-30] Chờ USER kiểm/tạo trên Play Console.\n[2026-10-30] Còn: tạo word.noads (non-consumable, giá đề xuất USD 4.99) trên Play.\n[2026-10-30 USER duyệt] word.noads giá USD 4.99; KHÔNG thêm ô bán trong Shop. Còn: tạo sản phẩm trên Play (USER/Codex).",
       "id": "T121",
       "title": "Đối chiếu product ID với Play Console; thiếu thì thêm; ghi toàn bộ product ID vào design/index.html phần GD",
       "screen": "Ads · IAP",
