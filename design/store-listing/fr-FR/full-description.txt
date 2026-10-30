@@ -1,4 +1,4 @@
-Word Crossy est un jeu de mots qui mêle lettres à relier du doigt et grille de mots croisés. Glissez sur les lettres de la roue pour former un mot et regardez-le se placer sur la grille. Remplissez toutes les cases pour terminer le niveau et passer au suivant.
+Word Crossy: Mots Croisés est un jeu de mots qui mêle lettres à relier du doigt et grille de mots croisés. Glissez sur les lettres de la roue pour former un mot et regardez-le se placer sur la grille. Remplissez toutes les cases pour terminer le niveau et passer au suivant.
 
 COMMENT JOUER
 • Glissez sur les lettres de la roue pour former des mots

@@ -1,4 +1,4 @@
-Word Crossy is a word puzzle that mixes letter-swiping with crossword grids. Swipe across the letters in the wheel to spell a word, and watch it drop into place on the board. Fill every blank to clear the level and move on to the next.
+Word Crossy: Word Connect is a word puzzle that mixes letter-swiping with crossword grids. Swipe across the letters in the wheel to spell a word, and watch it drop into place on the board. Fill every blank to clear the level and move on to the next.
 
 HOW IT PLAYS
 • Swipe across the letters in the wheel to form words

@@ -1,4 +1,4 @@
-Word Crossy es un juego de palabras que combina deslizar sobre letras con un crucigrama. Desliza el dedo por las letras de la rueda para formar una palabra y mira cómo se coloca en el tablero. Rellena todas las casillas para superar el nivel y pasar al siguiente.
+Word Crossy: Conecta Palabras es un juego de palabras que combina deslizar sobre letras con un crucigrama. Desliza el dedo por las letras de la rueda para formar una palabra y mira cómo se coloca en el tablero. Rellena todas las casillas para superar el nivel y pasar al siguiente.
 
 CÓMO SE JUEGA
 • Desliza sobre las letras de la rueda para formar palabras

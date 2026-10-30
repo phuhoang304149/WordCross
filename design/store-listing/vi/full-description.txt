@@ -1,4 +1,4 @@
-Word Crossy là trò chơi giải đố chữ kết hợp vuốt nối chữ cái với ô chữ. Bạn vuốt qua các chữ cái trên vòng tròn để ghép thành từ, rồi xem từ đó điền vào đúng vị trí trên bảng. Điền đủ các ô trống để qua màn và chơi tiếp màn sau.
+Word Crossy: Nối Chữ là trò chơi giải đố chữ kết hợp vuốt nối chữ cái với ô chữ. Bạn vuốt qua các chữ cái trên vòng tròn để ghép thành từ, rồi xem từ đó điền vào đúng vị trí trên bảng. Điền đủ các ô trống để qua màn và chơi tiếp màn sau.
 
 CÁCH CHƠI
 • Vuốt qua các chữ cái trên vòng tròn để ghép từ

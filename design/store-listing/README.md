@@ -1,6 +1,6 @@
 # Store listing Google Play — Word Crossy
 
-Chỉ là nội dung chữ (copy). Chưa upload/submit; hình do Codex làm riêng. Tên app trên Play giữ **Word Crossy** (không đổi theo locale).
+Chỉ là nội dung chữ (copy). Chưa upload/submit; hình do Codex làm riêng. Tên app Play theo từng locale nằm trong `app-name.txt` (≤30 ký tự), giữ thương hiệu Word Crossy kèm cụm nêu thể loại. Chi tiết hình: xem `IMAGE-ASSETS.md`.
 
 ## Mapping locale
 
@@ -12,7 +12,7 @@ Chỉ là nội dung chữ (copy). Chưa upload/submit; hình do Codex làm riê
 | `es-ES/` | es-ES | UI game chỉ có `es`; map sang es-ES của Store |
 | `pt-BR/` | pt-BR | UI game có `pt`; Store dùng pt-BR |
 
-Không thêm locale khác. Mỗi thư mục: `short-description.txt` (≤80 ký tự), `full-description.txt` (≤4000), `headlines.txt`.
+Không thêm locale khác. Mỗi thư mục: `app-name.txt`, `short-description.txt` (≤80 ký tự), `full-description.txt` (≤4000), `headlines.txt`.
 
 Số ký tự (kiểm 1 lần): short en 79, vi 73, fr 80, es 76, pt 77; full 1307–1606 mỗi ngôn ngữ.
 
@@ -44,3 +44,19 @@ Số ký tự (kiểm 1 lần): short en 79, vi 73, fr 80, es 76, pt 77; full 13
 - `Assets/_Scripts/Controller/HomeController.cs` (nút Daily, DailyDialog).
 - `02-reskin-maintain/index.html`: T041 (Daily), T040 (l10n), T120/T130 (IAP/noads).
 - Không có `AGENTS.md` trong repo tại thời điểm làm; áp dụng ràng buộc từ yêu cầu task.
+
+## Tên app (app-name.txt)
+
+| Locale | Tên | Ký tự |
+|---|---|---|
+| en-US (mặc định) | Word Crossy: Word Connect | 25 |
+| vi | Word Crossy: Nối Chữ | 20 |
+| fr-FR | Word Crossy: Mots Croisés | 25 |
+| es-ES | Word Crossy: Conecta Palabras | 29 |
+| pt-BR | Word Crossy: Conecte Palavras | 29 |
+
+Tên chỉ để người chơi nhận ra thể loại; không hứa thứ hạng, không nhồi từ khóa. `full-description.txt` dùng tên mới đúng 1 lần ở câu mở đầu, phần còn lại giữ thương hiệu Word Crossy.
+
+## Hình
+
+Xem `IMAGE-ASSETS.md`. Đã có 5 feature graphic (mỗi locale 1) và app icon 512. 25 `screenshot-draft-*` chỉ là bản nháp: phải thay bằng ảnh runtime sạch của build hiện tại trước khi upload. Chưa upload Console/AAB.
