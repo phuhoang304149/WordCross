@@ -1903,6 +1903,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
 <section class="card" id="rules"><h2>Quy tắc thực thi</h2>
 <div class="cols">
 <div class="box"><h3>Công cụ</h3><ul class="tight">
+<li><b>Build ưu tiên công cụ BuildDatabase (USER 2026-10-30):</b> AAB production = <code>BuildDatabase.SetupAndroidPrd</code> + <code>BuildAndroid.BuildAAB</code> (entry <code>Assets/Editor/ProductionAabBatch.cs</code> chỉ nạp mật khẩu từ env <code>WC_KEYSTORE_PASS</code>); CLR <code>BuildDatabase.BuildAndroid -batchFullClr|-batchIncrementalClr</code>; AA <code>BuildOrUpdateAddressable</code>. Chạy batchmode trong project chính, không worktree/export riêng để build.</li>
 <li><b>Sau publish AAB 1.0.0 (USER 2026-10-30): mọi chỉnh sửa CHỈ qua OTA</b> (CLR/AA đường wordcross/clr|data/1.0.0/android). Không build APK/AAB mới; việc cần APK → ghi cho-duyet.</li>
 <li>Viết tiếng Việt. Code: không static function, không try/catch.</li>
 <li>CẤM MCP và Unity Editor tương tác. Dùng CLI / Unity batch; ADB (Android) và xcrun/simctl (iOS/simulator) được dùng để kiểm khi cần, theo phạm vi user đã duyệt.</li>
