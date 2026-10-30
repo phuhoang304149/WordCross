@@ -101,7 +101,7 @@ class Builder:
                            "questRefs": [monthly[(m - 1 + i) % 4]["id"] for i in range(3)], "allClearCoin": 100, "locKey": "month.%02d" % m})
         calendar = {
             "schemaVersion": SCHEMA_VERSION, "kind": "calendar",
-            "cycle": {"lengthDays": 365, "anchorUtcDate": "2027-01-01", "idFormat": "C{n}", "dayIndexBase": 1, "weeksInCycle": 52, "bridgeDay": 365, "designMonthDays": MONTH_DAYS},
+            "cycle": {"lengthDays": 365, "anchorUtcDate": "2026-01-01", "idFormat": "C{n}", "dayIndexBase": 1, "weeksInCycle": 52, "bridgeDay": 365, "designMonthDays": MONTH_DAYS},
             "loginRewards": logins, "days": days, "weeks": weeks, "months": months, "events": events,
         }
         quests = {"schemaVersion": SCHEMA_VERSION, "kind": "quests", "templates": daily + weekly + monthly + eq,
