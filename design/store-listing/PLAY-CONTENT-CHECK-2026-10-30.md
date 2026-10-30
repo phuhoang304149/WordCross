@@ -155,3 +155,10 @@ Còn lại thật sự cần quyết/cung cấp:
 
 **Remaining:** (a) xem Content Rating chuyển sang in review hay phát sinh lỗi sau quick checks; (b) certificate ID chưa hiện; (c) USER quyết giữ/bỏ từ nhạy cảm trong word list nếu muốn rating thấp hơn; (d) screenshot sạch (Codex); (e) appeal chỉ cân nhắc nếu review từ chối.
 
+
+## Cập nhật cuối (Claude, Browser tích hợp, 2026-10-30)
+
+- **Đã PUBLISH** (Publishing overview: "Last published on October 30, 2026"): Privacy policy URL, Data safety, Health apps. Managed publishing vẫn ON. App vẫn "Removed by Google"; chưa phát hành bản app/reskin nào.
+- **Chưa gửi**: Content Rating (questionnaire mới) nằm ở "Changes not yet submitted for review". Giữ lại chưa Submit vì điểm IARC textual sexual references (porn/whore) chưa được xác minh theo định nghĩa.
+- **Screenshot (draft listing, đọc bằng DOM)**: en-US 5, fr-FR 5, pt-BR 5, vi 5, es-ES 4 (thiếu 1). Chưa xác nhận thứ tự/nội dung từng ảnh và chưa bấm Save/Publish listing.
+- **Chặn upload**: Browser tích hợp không có tool chọn file; fetch/img từ localhost bị CSP chặn; osascript không có quyền assistive access. Cần USER cấp quyền Accessibility cho osascript hoặc upload tay ảnh còn thiếu của es-ES.
