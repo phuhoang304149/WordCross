@@ -515,6 +515,18 @@ public class CUtils
         if (IsBuyItem()) return;
         if (IsAdsRemoved()) return;
 
+        // Luật interstitial T134 (bỏ 5 level đầu, cách ≥90s, ≤6/ngày, không trong 30s sau rewarded) thay cho adPeriod cũ.
+        var economy = Script.Utils.Locator<WordCross.Gameplay.EconomyService>.Instance;
+        if (economy != null)
+        {
+            if (!economy.CanShowInterstitial(Superpow.Utils.GetLeaderboardScore(), false)) return;
+#if UNITY_ANDROID || UNITY_IPHONE
+            if (AdmobController.instance.ShowInterstitial()) economy.OnInterstitialShown();
+            else AdmobController.instance.RequestInterstitial();
+#endif
+            return;
+        }
+
         if (IsActionAvailable("show_ads", ConfigController.Config.adPeriod))
         {
 #if UNITY_ANDROID || UNITY_IPHONE

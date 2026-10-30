@@ -4,7 +4,7 @@ using Script.Utils;
 using WordCross.Gameplay;
 using TMPro;
 
-// Popup thiếu ruby (design: popups['low-ruby']): xem video +ruby (luồng RewardedVideoDialog), mở Shop, hoặc bỏ qua.
+// Popup thiếu coin (design: popups['low-ruby'], GD economy-year: video tuỳ chọn ad_low_coin, Shop, Bỏ qua): xem video +coin (luồng RewardedVideoDialog), mở Shop, hoặc bỏ qua.
 public class LowRubyDialog : Dialog {
     public RectTransform card;
     public RectTransform closeX;
@@ -18,6 +18,18 @@ public class LowRubyDialog : Dialog {
     public TMP_Text skipText;
 
     private LocalizationController Loc { get { return Locator<LocalizationController>.Instance; } }
+    private EconomyService Econ { get { return Locator<EconomyService>.Instance; } }
+
+    private int HintCost { get { return Econ != null ? Econ.SinkCost(EconomyService.SINK_HINT_CELL) : Const.HINT_COST; } }
+
+    private int VideoCoin
+    {
+        get
+        {
+            var ad = Econ == null ? null : Econ.RewardedFor(EconomyService.AD_LOW_COIN);
+            return ad == null ? ConfigController.Config.rewardedVideoAmount : ad.coin;
+        }
+    }
 
     // Khoảng cách và cỡ theo design (css px x 1,6914 trên canvas 660x1397): padding trên 28, dưới/hai bên 22, gap 16, dòng title 32,5, dòng mô tả 22,4, nút 52.
     private const float PADDING_TOP = 47f;
@@ -34,10 +46,11 @@ public class LowRubyDialog : Dialog {
         Refresh();
     }
 
-    // Quay lại từ popup video: đã đủ ruby thì đóng.
+    // Quay lại từ popup video: đã đủ coin thì đóng, chưa đủ thì cập nhật số dư và lượt video còn lại.
     private void OnEnable()
     {
-        if (CurrencyController.GetBalance() >= Const.HINT_COST) Invoke("CloseWhenEnough", 0.1f);
+        if (CurrencyController.GetBalance() >= HintCost) Invoke("CloseWhenEnough", 0.1f);
+        else if (titleText != null && Loc != null) Refresh();
     }
 
     private void CloseWhenEnough()
@@ -49,7 +62,7 @@ public class LowRubyDialog : Dialog {
     {
         Sound.instance.PlayButton();
         var dialog = (RewardedVideoDialog)DialogController.instance.GetDialog(DialogType.RewardedVideo);
-        dialog.SetAmount(ConfigController.Config.rewardedVideoAmount);
+        dialog.SetPlacement(EconomyService.AD_LOW_COIN);
         DialogController.instance.ShowDialog(dialog, DialogShow.STACK);
     }
 
@@ -67,9 +80,13 @@ public class LowRubyDialog : Dialog {
 
     private void Refresh()
     {
-        titleText.text = Loc.Get("low.title", "n", Const.HINT_COST);
+        titleText.text = Loc.Get("low.title", "n", HintCost);
         messageText.text = Loc.Get("low.desc", "a", CurrencyController.GetBalance());
-        watchText.text = Loc.Get("low.watch", "n", ConfigController.Config.rewardedVideoAmount);
+        // Hết lượt video hôm nay: nút xám, không chặn Shop/Bỏ qua.
+        bool capped = Econ != null && Econ.GetAdState(EconomyService.AD_LOW_COIN) == EconomyAdState.CapReached;
+        watchText.text = capped ? Loc.Get("rv.s.cap") : Loc.Get("low.watch", "n", VideoCoin);
+        var watch = watchButton.GetComponent<Button>();
+        if (watch != null) watch.interactable = !capped;
         shopText.text = Loc.Get("low.shop");
         skipText.text = Loc.Get("common.skip");
         Layout();

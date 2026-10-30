@@ -17,6 +17,7 @@ namespace WordCross.Gameplay
 #if GAME_DEBUG || DEVELOPMENT_BUILD
             new GameObject("DebugOpener").AddComponent<DebugOpener>();
 #endif
+            StartEconomy();
             SceneManager.sceneLoaded += OnSceneLoaded;
             Debug.Log("[Scene] load " + FirstScene + " t=" + Time.realtimeSinceStartup.ToString("F2"));
             Addressables.LoadSceneAsync(FirstScene, LoadSceneMode.Single).Completed += handle =>
@@ -24,6 +25,23 @@ namespace WordCross.Gameplay
                 if (handle.Status != AsyncOperationStatus.Succeeded)
                     Debug.LogError("[WordCross] Home scene load failed from Addressables: " + handle.OperationException, host);
             };
+        }
+
+        // Kinh tế coin (T134): dữ liệu Addressables đã được ClrBootstrap nạp trước entry; migrate ruby→coin chạy trước khi UI đọc số dư.
+        private void StartEconomy()
+        {
+            var data = ClrContent.Instance.Load<EconomyData>("Economy/EconomyData");
+            if (data == null)
+            {
+                Debug.LogError("[Econ] EconomyData missing from Addressables; coin economy disabled.");
+                return;
+            }
+            // Cùng chế độ mã hoá với BaseController.Awake (chưa chạy lúc này) để đọc đúng số dư/ledger đã lưu.
+            CPlayerPrefs.useRijndael(CommonConst.ENCRYPTION_PREFS);
+            var economy = new EconomyService(data, new PrefsEconomyStore(), new SystemEconomyClock());
+            economy.Initialize();
+            Script.Utils.Locator<EconomyService>.Set(economy);
+            Debug.Log("[Econ] ready day=" + economy.DayIndex + " cycle=" + economy.CycleId + " balance=" + economy.Balance);
         }
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)

@@ -48,7 +48,8 @@ public class Dialog : MonoBehaviour
             onDialogOpened(this);
         }
 
-        if (enableAd)
+        // Interstitial chỉ ở khoảng nghỉ sau thắng (GD economy-year: after_win; cấm ở Pause/Shop/How to play/Extra...).
+        if (enableAd && dialogType == DialogType.Win)
         {
             Timer.Schedule(this, 0.3f, () =>
             {

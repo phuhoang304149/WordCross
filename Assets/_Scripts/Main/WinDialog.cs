@@ -32,6 +32,10 @@ public class WinDialog : Dialog {
     private const float BUTTON_PADDING = 26f;
 
     private LocalizationController Loc { get { return Locator<LocalizationController>.Instance; } }
+    private EconomyService Econ { get { return Locator<EconomyService>.Instance; } }
+
+    // Vị trí rewarded của nút x2 (economy-config ads.rewarded): thắng level ad_win_x2, Daily ad_daily_x2.
+    private string DoublePlacement { get { return isDaily ? EconomyService.AD_DAILY_X2 : EconomyService.AD_WIN_X2; } }
 
     private int numLevels;
     private bool isLastLevel;
@@ -106,9 +110,9 @@ public class WinDialog : Dialog {
         isLastLevel = Prefs.IsLastLevel();
 
         // Lần đầu thắng = level đang là level mở khoá mới nhất; sau khi thắng tiến độ nhảy sang level kế nên chỉ thưởng 1 lần.
+        bool isTutorial = world == 0 && subWorld == 0 && level == 0;
         if (isLastLevel)
         {
-            bool isTutorial = world == 0 && subWorld == 0 && level == 0;
             reward = isTutorial ? firstClearTutorialReward : firstClearReward;
         }
 
@@ -144,13 +148,20 @@ public class WinDialog : Dialog {
             }
             // Lưu tiến độ trước khi cộng thưởng để thưởng không bị nhận lại nếu app chết giữa chừng.
             CPlayerPrefs.Save();
-            CurrencyController.CreditBalance(reward);
+            // Coin (T134): thắng lần đầu firstWinCoin, level đầu tiên của tài khoản thêm firstEverWinBonusCoin (khoá ledger trọn đời).
+            if (Econ != null) reward = Econ.OnLevelWon(true, isTutorial);
+            else CurrencyController.CreditBalance(reward);
 
             if (GPGSController.instance != null)
             {
                 int score = Superpow.Utils.GetLeaderboardScore();
                 GPGSController.instance.ReportScore(score);
             }
+        }
+        else if (Econ != null)
+        {
+            // Chơi lại: chỉ tính tiến độ nhiệm vụ "thắng level", replayWinCoin = 0.
+            reward = Econ.OnLevelWon(false, false);
         }
     }
 
@@ -164,6 +175,7 @@ public class WinDialog : Dialog {
         level = GameState.currentLevel;
         dailyResult = new DailyChallenge().Complete(GameState.dailyDate);
         reward = dailyResult.reward;
+        if (dailyResult.first && Econ != null) Econ.OnDailyChallengeDone();
     }
 
     private void ShowDailyInfo()
@@ -272,6 +284,13 @@ public class WinDialog : Dialog {
         return ConfigController.instance != null ? ConfigController.Config.rewardedVideoAmount : videoReward;
     }
 
+    // Coin thêm của nút x2 = coin của vị trí rewarded (ad_win_x2 = thưởng thắng lần đầu, ad_daily_x2 = thưởng Daily).
+    private int GetDoubleAmount()
+    {
+        var ad = Econ == null ? null : Econ.RewardedFor(DoublePlacement);
+        return ad == null ? reward : ad.coin;
+    }
+
     private bool IsVideoLoaded()
     {
         return AdmobController.instance != null && AdmobController.instance.IsRewardedVideoLoaded();
@@ -279,7 +298,14 @@ public class WinDialog : Dialog {
 
     private bool IsVideoCooldown()
     {
+        if (Econ != null) return Econ.CooldownRemain(DoublePlacement) > 0;
         return !CUtils.IsActionAvailable(VIDEO_ACTION, GetVideoPeriod());
+    }
+
+    private int VideoCooldownRemain()
+    {
+        if (Econ != null) return Econ.CooldownRemain(DoublePlacement);
+        return Mathf.Max(0, (int)(GetVideoPeriod() - CUtils.GetActionDeltaTime(VIDEO_ACTION)));
     }
 
     // Nút x2 theo trạng thái: đã nhận / sẵn sàng / cooldown / không có video.
@@ -294,9 +320,14 @@ public class WinDialog : Dialog {
             return;
         }
 
-        if (IsVideoCooldown())
+        if (Econ != null && Econ.GetAdState(DoublePlacement) == EconomyAdState.CapReached)
         {
-            int remain = Mathf.Max(0, (int)(GetVideoPeriod() - CUtils.GetActionDeltaTime(VIDEO_ACTION)));
+            doubleRewardText.text = Loc.Get("rv.s.cap");
+            doubleRewardButton.interactable = false;
+        }
+        else if (IsVideoCooldown())
+        {
+            int remain = VideoCooldownRemain();
             doubleRewardText.text = Loc.Get("rv.s.cooldown", "t", string.Format("{0}:{1:00}", remain / 60, remain % 60));
             doubleRewardButton.interactable = false;
         }
@@ -307,7 +338,7 @@ public class WinDialog : Dialog {
         }
         else
         {
-            doubleRewardText.text = Loc.Get("win.x2", "n", reward);
+            doubleRewardText.text = Loc.Get("win.x2", "n", GetDoubleAmount());
             doubleRewardButton.interactable = !bonusPending;
         }
         FitSingleLine(doubleRewardText, (RectTransform)doubleRewardButton.transform, BUTTON_FONT);
@@ -333,6 +364,12 @@ public class WinDialog : Dialog {
         Debug.Log("[Win] x2 click reward=" + reward + " claimed=" + bonusClaimed + " pending=" + bonusPending + " cooldown=" + IsVideoCooldown() + " loaded=" + IsVideoLoaded());
 #endif
         if (reward <= 0 || bonusClaimed || bonusPending || IsVideoCooldown() || !IsVideoLoaded()) return;
+        // Phiên thưởng của vị trí x2; hết lượt/cooldown thì không mở video.
+        if (Econ != null && Econ.BeginRewarded(DoublePlacement) == null)
+        {
+            RefreshDoubleReward();
+            return;
+        }
 
         bonusPending = true;
         doubleRewardButton.interactable = false;
@@ -340,7 +377,8 @@ public class WinDialog : Dialog {
         AdmobController.instance.ShowRewardBasedVideo();
     }
 
-    // Luồng rewarded video chung đã cộng GetVideoPaidAmount() ruby và hiện RewardedVideoDialog; ở đây bù phần còn thiếu để tổng = reward.
+    // Luồng rewarded video chung (RewardedVideoCallBack) đã cộng coin của phiên x2 và hiện RewardedVideoDialog; ở đây chỉ khoá nút.
+    // Không có EconomyService: bù phần còn thiếu như cũ để tổng = reward.
     private void OnRewardedVideoRewarded()
     {
         if (!bonusPending || bonusClaimed) return;
@@ -348,7 +386,7 @@ public class WinDialog : Dialog {
         bonusClaimed = true;
         bonusPending = false;
         int topUp = reward - GetVideoPaidAmount();
-        if (topUp > 0) CurrencyController.CreditBalance(topUp);
+        if (Econ == null && topUp > 0) CurrencyController.CreditBalance(topUp);
         RefreshDoubleReward();
     }
 
@@ -357,6 +395,7 @@ public class WinDialog : Dialog {
     {
         if (!bonusPending) return;
         bonusPending = false;
+        if (Econ != null) Econ.CancelRewarded();
         RefreshDoubleReward();
     }
 
