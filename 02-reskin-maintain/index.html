@@ -516,7 +516,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "CLAUDE (dev)",
       "deps": "",
       "evidence": "[2026-10-30] Release: không GAME_DEBUG/DEVELOPER_LOG, không debuggable, IL2CPP arm64, ký wordCross.keystore alias wordcross (mật khẩu từ env lúc build, không lưu). Cài máy sau uninstall: cold start OTA thật, 0 exception, 0 missing script; Shop mở bảng Play (BACK). APK release wordcrossy_1.0.0_202001035_RELEASE.apk (sha256 fd2cd4e1…) + .aab (d203e0da…), cert SHA-256 2d0988af…e1189106, Build/remote-r2-1.0.0/release/. OTA 1.0.0 CLR 47eb9dc2 (curl khớp), 15/15 sha256. Merge e549d2c.",
-      "note": "[2026-10-30 USER duyệt] Gom các việc cần APK.\n[2026-10-30] Đang làm: worker APK release (prompt .git/task-hotupdate/dev-apk-release.txt). T123 đợt này chỉ phần nền TMP cần APK; chuyển UI Text→TMP làm sau bằng OTA.",
+      "note": "[2026-10-30 USER duyệt] Gom các việc cần APK.\n[2026-10-30] Đang làm: worker APK release (prompt .git/task-hotupdate/dev-apk-release.txt). T123 đợt này chỉ phần nền TMP cần APK; chuyển UI Text→TMP làm sau bằng OTA.\n[2026-10-30 USER] Publish bản AAB T133 (wordcrossy_1.0.0_202001035_RELEASE.aab sha256 095e6241…). SAU ĐÓ mọi chỉnh sửa chỉ qua OTA 1.0.0, không build APK/AAB mới.",
       "id": "T124",
       "title": "Build APK/AAB release 1.0.0 (202001035) ký keystore thật, không GAME_DEBUG",
       "screen": "Build · thiết bị Android",
@@ -1903,6 +1903,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
 <section class="card" id="rules"><h2>Quy tắc thực thi</h2>
 <div class="cols">
 <div class="box"><h3>Công cụ</h3><ul class="tight">
+<li><b>Sau publish AAB 1.0.0 (USER 2026-10-30): mọi chỉnh sửa CHỈ qua OTA</b> (CLR/AA đường wordcross/clr|data/1.0.0/android). Không build APK/AAB mới; việc cần APK → ghi cho-duyet.</li>
 <li>Viết tiếng Việt. Code: không static function, không try/catch.</li>
 <li>CẤM MCP và Unity Editor tương tác. Dùng CLI / Unity batch; ADB (Android) và xcrun/simctl (iOS/simulator) được dùng để kiểm khi cần, theo phạm vi user đã duyệt.</li>
 <li>QA mặc định: smoke CLI tối thiểu; agent tự smoke test. Smoke runtime bằng ADB/xcrun trong phạm vi đã duyệt được phép, không cần xin thêm. Test UI/ảnh, QA kỹ, screenshot/thu ảnh UI (ADB screencap, simctl io screenshot) CHỈ khi user đã yêu cầu hoặc cho phép theo quy tắc; chưa được → USER trực tiếp manual test UI. Task UI: dev tự xác minh trên thiết bị theo mục “Điều phối 4 luồng” khi user đã cho phép ảnh. Báo evidence + phần chưa xác minh. Quyền user ghi trong task ưu tiên hơn mặc định quy trình. (Chrome vẫn theo quy tắc riêng bên dưới.)</li>
