@@ -26,9 +26,11 @@ public class DailyChallenge
     // Kinh tế (THAY ĐỔI KINH TẾ, số đề xuất theo design ECON): chỉnh tại đây.
     // thưởng thắng bàn của hôm nay, một lần: dailyChallengeCoin của EconomyData (30); 3 chỉ là dự phòng khi chưa có EconomyService.
     public int baseReward { get { var econ = Locator<EconomyService>.Instance; return econ == null ? 3 : econ.Data.dailyChallengeCoin; } }
-    public int backfillReward = 1;      // thưởng bù bàn của hôm qua, một lần
-    public int[] milestoneDays = { 3, 7, 14 };
-    public int[] milestoneRewards = { 2, 5, 8 };
+    // USER duyệt 2026-10-31 (econ-daily-old): chỉ còn số GD, bỏ thưởng bù hôm qua và mốc chuỗi Daily cũ (2/5/8).
+    // Bàn hôm qua vẫn chơi bù được để giữ chuỗi, chỉ không có ruby; mảng mốc rỗng nên dòng "mốc kế" tự ẩn.
+    public int backfillReward = 0;
+    public int[] milestoneDays = { };
+    public int[] milestoneRewards = { };
 
     // 12 level đầu (sub-world hướng dẫn) không vào pool Daily.
     private const int POOL_SKIP = 12;
