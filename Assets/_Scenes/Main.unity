@@ -581,6 +581,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1697259730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1697259731}
+  m_Layer: 5
+  m_Name: ToolsTop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1697259731
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697259730}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 597355497}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.1231, y: 0}
+  m_AnchorMax: {x: 0.1231, y: 0}
+  m_AnchoredPosition: {x: 0, y: 659.9}
+  m_SizeDelta: {x: 81.82, y: 81.82}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &172302889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,6 +1336,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 172302890}
+    - targetCorrespondingSourceObject: {fileID: 22404956, guid: dd1beb674d717c14b92640e4d64aaf0f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1697259731}
     - targetCorrespondingSourceObject: {fileID: 22404956, guid: dd1beb674d717c14b92640e4d64aaf0f,
         type: 3}
       insertIndex: -1
@@ -3697,7 +3736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textPreview: {fileID: 1179100840}
   compliment: {fileID: 1371627532}
-  toolsTop: {fileID: 0}
+  toolsTop: {fileID: 1697259731}
   hintCostText: {fileID: 59435870}
 --- !u!1 &1559180006 stripped
 GameObject:
