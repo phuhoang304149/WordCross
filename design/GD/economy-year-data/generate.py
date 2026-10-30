@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sinh dữ liệu kinh tế coin/chu kỳ 365 ngày. Số liệu là ĐỀ XUẤT tuning (proposal), chưa user duyệt, giá IAP chưa live.
+"""Sinh dữ liệu kinh tế ruby (khóa kỹ thuật coin)/chu kỳ 365 ngày. Số liệu là ĐỀ XUẤT tuning (proposal), chưa user duyệt, giá IAP chưa live.
 Chạy: python3 generate.py  -> ghi 4 file JSON + bundle.js cạnh script."""
 import json
 from pathlib import Path
@@ -101,7 +101,7 @@ class Builder:
                            "questRefs": [monthly[(m - 1 + i) % 4]["id"] for i in range(3)], "allClearCoin": 100, "locKey": "month.%02d" % m})
         calendar = {
             "schemaVersion": SCHEMA_VERSION, "kind": "calendar",
-            "cycle": {"lengthDays": 365, "anchorUtcDate": "2027-01-01", "idFormat": "C{n}", "dayIndexBase": 1, "weeksInCycle": 52, "bridgeDay": 365, "designMonthDays": MONTH_DAYS},
+            "cycle": {"lengthDays": 365, "anchorUtcDate": "2026-01-01", "idFormat": "C{n}", "dayIndexBase": 1, "weeksInCycle": 52, "bridgeDay": 365, "designMonthDays": MONTH_DAYS},
             "loginRewards": logins, "days": days, "weeks": weeks, "months": months, "events": events,
         }
         quests = {"schemaVersion": SCHEMA_VERSION, "kind": "quests", "templates": daily + weekly + monthly + eq,
@@ -143,7 +143,8 @@ class Builder:
             "schemaVersion": SCHEMA_VERSION, "kind": "economy",
             "status": "PROPOSAL_TUNING_NOT_APPROVED",
             "currency": {"id": "coin", "displayLocKey": "currency.coin", "startBalance": 100, "secondCurrency": None,
-                         "designNote": "Coin là thiết kế mới theo yêu cầu user; GD/runtime hiện tại vẫn là ruby (CurrencyController, 10 ruby khởi đầu). Không migration/runtime ở task này."},
+                         "displayName": "ruby", "runtimeCurrency": "ruby",
+                         "designNote": "USER chốt GIỮ RUBY: không đổi tên tiền tệ runtime, không migration, không chuyển đổi số dư; mọi giá trị kinh tế trong dữ liệu này áp dụng trực tiếp cho ruby. Khóa kỹ thuật coin, *Coin, id currency 'coin' và mọi ID/path giữ nguyên để tương thích consumer/runtime; mọi 'coin' trong khóa/trường = lượng ruby, không phải currency coin khác. Upload OTA R2 chỉ sau smoke test pass khi triển khai runtime; không git push; task design này không build/upload."},
             "earn": {"firstWinCoin": 10, "firstEverWinBonusCoin": 20, "replayWinCoin": 0, "dailyChallengeCoin": 30, "botWinCoinByDifficulty": {"easy": 5, "medium": 10, "hard": 15}, "botDrawCoin": 5, "botDailyCap": 60, "extraWordCoin": 5, "extraWordCapPerLevel": 1},
             "sinks": [
                 {"id": "sk_hint_cell", "coin": 20, "locKey": "sink.hint_cell", "optional": True},
@@ -159,7 +160,7 @@ class Builder:
                         {"id": "no_fill", "coinDelta": 0, "locKey": "ad.nofill"}, {"id": "offline", "coinDelta": 0, "locKey": "ad.offline"},
                         {"id": "cancelled", "coinDelta": 0, "locKey": "ad.cancel"}, {"id": "error", "coinDelta": 0, "locKey": "ad.error"},
                         {"id": "success", "coinDelta": "placement.coin", "locKey": "ad.success"}],
-                    "rules": ["Thưởng chỉ cộng ở callback hoàn thành, idempotent theo sessionId.", "no_fill/offline/error/cancelled/cap/cooldown: không thưởng, không trừ coin, không chặn chơi.", "Nhiệm vụ không bao giờ requiresAd/requiresPurchase.", "Mua bất kỳ gói removesAds tắt interstitial/banner; rewarded vẫn tuỳ chọn."],
+                    "rules": ["Thưởng chỉ cộng ở callback hoàn thành, idempotent theo sessionId.", "no_fill/offline/error/cancelled/cap/cooldown: không thưởng, không trừ ruby, không chặn chơi.", "Nhiệm vụ không bao giờ requiresAd/requiresPurchase.", "Mua bất kỳ gói removesAds tắt interstitial/banner; rewarded vẫn tuỳ chọn."],
                     "maxRewardedCoinPerDay": 5 * 20 + 5 * 10 + 30},
             "login": {"source": "calendar.loginRewards", "claimOncePerUtcDay": True},
             "streak": {"milestones": streak, "countingRule": "ngày UTC liên tiếp có claim login", "keepBestOnBreak": True, "milestoneClaimScope": "per_cycle"},
@@ -170,7 +171,7 @@ class Builder:
                          "casualDay": {"wins": 3, "winCoin": 30, "login": 14, "quest": 25, "earn": 69, "hintsUsed": 3, "spend": 60, "net": 9},
                          "engagedDay": {"wins": 5, "winCoin": 50, "dailyChallenge": 30, "login": 14, "quest": 46, "earn": 140, "hintsUsed": 4, "spend": 80, "net": 60},
                          "adsExcluded": True,
-                         "note": "Free player (không IAP, không ads) hoà vốn ở mức casual và dư ~60/ngày khi chơi nhiều; ads chỉ cộng thêm, tối đa maxRewardedCoinPerDay."},
+                         "note": "Free player (không IAP, không ads; đơn vị ruby) hoà vốn ở mức casual và dư ~60/ngày khi chơi nhiều; ads chỉ cộng thêm, tối đa maxRewardedCoinPerDay."},
             "rules": {
                 "timeBasis": "UTC", "resetUtcHour": 0, "dayNumber": "floor((utcMidnight(now)-anchorUtcDate)/86400000)",
                 "dayIndex": "dayNumber % 365 + 1", "cycleId": "'C' + (floor(dayNumber/365)+1)",
@@ -180,7 +181,7 @@ class Builder:
                 "clockGuard": "Lưu maxSeenUtcDay; không lùi. Nhảy tiến nhiều ngày: không bù phần thưởng quá khứ, kỳ nhiệm vụ cũ hết hạn, streak chỉ sửa được khi lỡ đúng 1 ngày bằng sk_streak_repair.",
                 "offline": "Tiến độ và claim ghi ledger cục bộ; ads/IAP cần mạng; đồng bộ server (nếu có sau này) dựa trên claimKey, bản ghi trùng key bị bỏ.",
                 "expiry": "Nhiệm vụ daily hết hạn 00:00 UTC kế tiếp; weekly hết hạn khi sang tuần; monthly khi sang tháng thiết kế; event hết hạn sau endDay. Chưa claim thì mất.",
-                "cycleRollover": "Sang C{n+1}: reset tiến độ nhiệm vụ/sự kiện/milestone per_cycle; giữ coin, streak, best streak, levelMilestones, mua hàng.",
+                "cycleRollover": "Sang C{n+1}: reset tiến độ nhiệm vụ/sự kiện/milestone per_cycle; giữ ruby (khóa coin), streak, best streak, levelMilestones, mua hàng.",
             },
         }
         return cfg
@@ -189,7 +190,7 @@ class Builder:
         L = {}
         def add(k, vi, en):
             L[k] = {"vi": vi, "en": en, "fr": None, "es": None, "pt": None}
-        add("currency.coin", "Coin", "Coins")
+        add("currency.coin", "Ruby", "Rubies")
         names = {"dq_win_3": ("Thắng 3 level", "Win 3 levels"), "dq_words_20": ("Tìm 20 từ", "Find 20 words"), "dq_daily": ("Hoàn thành Daily", "Finish the Daily"),
                  "dq_bot_1": ("Chơi 1 trận Bot", "Play 1 Bot match"), "dq_extra_1": ("Tìm 1 từ thưởng", "Find 1 bonus word"),
                  "wq_win_20": ("Thắng 20 level", "Win 20 levels"), "wq_words_150": ("Tìm 150 từ", "Find 150 words"), "wq_daily_5": ("Hoàn thành Daily 5 lần", "Finish the Daily 5 times"),
@@ -215,11 +216,11 @@ class Builder:
         for k, (vi, en) in sinks.items():
             add(k, vi, en)
         for p in cfg["shop"]["packs"]:
-            add(p["locKey"], "Gói %s coin" % p["coin"] if p["coin"] else "Tắt quảng cáo", "%s coins pack" % p["coin"] if p["coin"] else "Remove ads")
+            add(p["locKey"], "Gói %s ruby" % p["coin"] if p["coin"] else "Tắt quảng cáo", "%s rubies pack" % p["coin"] if p["coin"] else "Remove ads")
         ad = {"ad.loading": ("Đang tải quảng cáo…", "Loading ad…"), "ad.ready": ("Sẵn sàng", "Ready"), "ad.cooldown": ("Chờ hồi chiêu", "On cooldown"),
               "ad.cap": ("Hết lượt hôm nay", "Daily limit reached"), "ad.nofill": ("Chưa có quảng cáo, thử lại sau", "No ad available, try later"),
               "ad.offline": ("Không có mạng", "You are offline"), "ad.cancel": ("Đóng sớm, không có thưởng", "Closed early, no reward"),
-              "ad.error": ("Lỗi quảng cáo, không mất coin", "Ad error, no coins lost"), "ad.success": ("Nhận thưởng", "Reward granted")}
+              "ad.error": ("Lỗi quảng cáo, không mất ruby", "Ad error, no rubies lost"), "ad.success": ("Nhận thưởng", "Reward granted")}
         for k, (vi, en) in ad.items():
             add(k, vi, en)
         return {"schemaVersion": SCHEMA_VERSION, "kind": "loc", "languages": ["vi", "en", "fr", "es", "pt"], "pendingLanguages": ["fr", "es", "pt"], "keys": L}

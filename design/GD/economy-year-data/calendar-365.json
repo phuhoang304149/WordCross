@@ -3,7 +3,7 @@
  "kind": "calendar",
  "cycle": {
   "lengthDays": 365,
-  "anchorUtcDate": "2027-01-01",
+  "anchorUtcDate": "2026-01-01",
   "idFormat": "C{n}",
   "dayIndexBase": 1,
   "weeksInCycle": 52,

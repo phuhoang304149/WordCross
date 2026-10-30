@@ -1,16 +1,16 @@
-/* Demo mô phỏng coin/shop/ads/nhiệm vụ/chu kỳ 365. Không thanh toán thật, không gọi SDK quảng cáo, không mạng. Số liệu từ GD/economy-year-data (ĐỀ XUẤT tuning). */
+/* Demo mô phỏng ruby (khóa kỹ thuật vẫn là coin)/shop/ads/nhiệm vụ/chu kỳ 365. Không thanh toán thật, không gọi SDK quảng cáo, không mạng. Số liệu từ GD/economy-year-data (ĐỀ XUẤT tuning). */
 (function () {
   var TX = {
-    vi: { title: 'Coin & Năm 365', sim: 'MÔ PHỎNG — không thanh toán thật, không quảng cáo thật', shop: 'Shop', ads: 'Quảng cáo', rew: 'Thưởng', quest: 'Nhiệm vụ', year: 'Năm',
-      buy: 'Mua (mô phỏng)', spend: 'Tiêu coin', get: 'Nhận', got: 'Đã nhận', claim: 'Nhận', prog: '+ tiến độ', notEnough: 'Thiếu coin', needCoin: 'Cần %n coin. Xem video là tuỳ chọn.', watch: 'Xem video +%n (mô phỏng)', skip: 'Bỏ qua, chơi tiếp', toShop: 'Mở Shop',
+    vi: { title: 'Ruby & Năm 365', sim: 'MÔ PHỎNG — không thanh toán thật, không quảng cáo thật', shop: 'Shop', ads: 'Quảng cáo', rew: 'Thưởng', quest: 'Nhiệm vụ', year: 'Năm',
+      buy: 'Mua (mô phỏng)', spend: 'Tiêu ruby', get: 'Nhận', got: 'Đã nhận', claim: 'Nhận', prog: '+ tiến độ', notEnough: 'Thiếu ruby', needCoin: 'Cần %n ruby. Xem video là tuỳ chọn.', watch: 'Xem video +%n (mô phỏng)', skip: 'Bỏ qua, chơi tiếp', toShop: 'Mở Shop',
       placement: 'Vị trí', outcome: 'Kết quả giả lập', play: 'Xem quảng cáo (mô phỏng)', winLevel: 'Thắng level mới (mô phỏng)', time: 'Thời gian giả lập', plus30: '+30 giây', nextDay: 'Sang ngày kế (00:00 UTC)', day: 'Ngày', cycle: 'Chu kỳ', login: 'Đăng nhập hôm nay', streak: 'Chuỗi', repair: 'Cứu chuỗi', best: 'Kỷ lục',
       noads: 'Đã tắt quảng cáo xen kẽ', inter: 'Quảng cáo xen kẽ (mô phỏng)', interNo: 'Không hiện xen kẽ', daily: 'Ngày', weekly: 'Tuần', monthly: 'Tháng', event: 'Sự kiện', allClear: 'Thưởng hoàn thành hết', noQuest: 'Không có sự kiện hôm nay', free: 'Nhiệm vụ không cần mua hay xem quảng cáo',
-      month: 'Tháng', setToday: 'Đặt làm hôm nay', week: 'Tuần', bridge: 'Ngày cầu nối', today: 'Hôm nay', dl: 'Tải JSON/schema', milestones: 'Mốc chuỗi', baseline: 'Free-player: casual %c, chơi nhiều %e coin/ngày (không ads)', closed: 'Đóng', balance: 'Số dư', capLeft: 'Còn %n lượt', cdLeft: 'Chờ %n giây' },
-    en: { title: 'Coins & Year 365', sim: 'SIMULATED — no real payment, no real ads', shop: 'Shop', ads: 'Ads', rew: 'Rewards', quest: 'Quests', year: 'Year',
-      buy: 'Buy (simulated)', spend: 'Spend coins', get: 'Claim', got: 'Claimed', claim: 'Claim', prog: '+ progress', notEnough: 'Not enough coins', needCoin: 'Need %n coins. Watching a video is optional.', watch: 'Watch video +%n (simulated)', skip: 'Skip, keep playing', toShop: 'Open Shop',
+      month: 'Tháng', setToday: 'Đặt làm hôm nay', week: 'Tuần', bridge: 'Ngày cầu nối', today: 'Hôm nay', dl: 'Tải JSON/schema', milestones: 'Mốc chuỗi', baseline: 'Free-player: casual %c, chơi nhiều %e ruby/ngày (không ads)', closed: 'Đóng', balance: 'Số dư', capLeft: 'Còn %n lượt', cdLeft: 'Chờ %n giây' },
+    en: { title: 'Rubies & Year 365', sim: 'SIMULATED — no real payment, no real ads', shop: 'Shop', ads: 'Ads', rew: 'Rewards', quest: 'Quests', year: 'Year',
+      buy: 'Buy (simulated)', spend: 'Spend rubies', get: 'Claim', got: 'Claimed', claim: 'Claim', prog: '+ progress', notEnough: 'Not enough rubies', needCoin: 'Need %n rubies. Watching a video is optional.', watch: 'Watch video +%n (simulated)', skip: 'Skip, keep playing', toShop: 'Open Shop',
       placement: 'Placement', outcome: 'Simulated outcome', play: 'Watch ad (simulated)', winLevel: 'Win a new level (simulated)', time: 'Simulated time', plus30: '+30 seconds', nextDay: 'Next day (00:00 UTC)', day: 'Day', cycle: 'Cycle', login: 'Today login', streak: 'Streak', repair: 'Streak repair', best: 'Best',
       noads: 'Interstitials removed', inter: 'Interstitial (simulated)', interNo: 'No interstitial shown', daily: 'Daily', weekly: 'Weekly', monthly: 'Monthly', event: 'Event', allClear: 'Clear-all bonus', noQuest: 'No event today', free: 'Quests never require purchase or ads',
-      month: 'Month', setToday: 'Set as today', week: 'Week', bridge: 'Bridge day', today: 'Today', dl: 'Download JSON/schema', milestones: 'Streak milestones', baseline: 'Free player: casual %c, engaged %e coins/day (no ads)', closed: 'Close', balance: 'Balance', capLeft: '%n left', cdLeft: 'Wait %n s' }
+      month: 'Month', setToday: 'Set as today', week: 'Week', bridge: 'Bridge day', today: 'Today', dl: 'Download JSON/schema', milestones: 'Streak milestones', baseline: 'Free player: casual %c, engaged %e rubies/day (no ads)', closed: 'Close', balance: 'Balance', capLeft: '%n left', cdLeft: 'Wait %n s' }
   };
   var FILES = ['economy-config.json', 'quest-templates.json', 'calendar-365.json', 'loc-keys.json', 'economy-year.schema.json'];
   var OUTCOMES = ['success', 'cancelled', 'no_fill', 'offline', 'error'];
@@ -23,13 +23,16 @@
       this.LR = {}; this.cal.loginRewards.forEach(function (x) { this.LR[x.id] = x; }, this);
       this.ads = {}; this.cfg.ads.rewarded.forEach(function (a) { this.ads[a.id] = a; }, this);
       this.s = { coin: this.cfg.currency.startBalance, day: 1, cycle: 1, t: 0, tab: 'shop', scope: 'daily', month: 1, sel: 1, claimed: {}, prog: {}, used: {}, cdUntil: {}, level: 0, streak: 0, best: 0, lastLogin: -9, noAds: false, log: [], interToday: 0, lastInter: -9999, lastRew: -9999, placement: 'ad_shop_free', outcome: 'success', popup: null, rewardsDay: {} };
+      var now = new Date(), n = Math.max(0, Math.floor((Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()) - Date.parse(this.cal.cycle.anchorUtcDate)) / 86400000));
+      this.s.cycle = Math.floor(n / 365) + 1; this.s.day = n % 365 + 1; this.s.sel = this.s.day; this.s.month = this.dayRow().month;
       this.render();
     }
+    dateStr() { return new Date(Date.parse(this.cal.cycle.anchorUtcDate) + (this.abs() - 1) * 86400000).toISOString().slice(0, 10); }
     tr(k, p) { var s = this.T[k] || k; Object.keys(p || {}).forEach(function (x) { s = s.replace('%' + x, p[x]); }); return s; }
     lk(k) { var e = this.D.loc.keys[k]; return e ? (e[this.lang] || e.en) : k; }
     abs() { return (this.s.cycle - 1) * 365 + this.s.day; }
     log(m) { this.s.log.unshift('[C' + this.s.cycle + ' d' + this.s.day + ' t' + this.s.t + 's] ' + m); this.s.log = this.s.log.slice(0, 12); }
-    add(n, why) { this.s.coin += n; this.log('+' + n + ' coin · ' + why); }
+    add(n, why) { this.s.coin += n; this.log('+' + n + ' ruby · ' + why); }
     key(scope, period, ref) { return 'claim:C' + this.s.cycle + ':' + scope + ':' + period + ':' + ref; }
     claimOnce(k, coin, why) {
       if (this.s.claimed[k]) { this.log('duplicate claim ignored · ' + k); return false; }
@@ -39,7 +42,7 @@
     spend(id) {
       var c = this.cfg.sinks.filter(function (x) { return x.id === id; })[0];
       if (this.s.coin < c.coin) { this.s.popup = { need: c.coin }; return; }
-      this.s.coin -= c.coin; this.log('-' + c.coin + ' coin · ' + id);
+      this.s.coin -= c.coin; this.log('-' + c.coin + ' ruby · ' + id);
       if (id === 'sk_streak_repair') { this.s.streak += 1; this.s.lastLogin = this.abs() - 1; }
     }
     period(scope) {
@@ -86,7 +89,7 @@
         this.s.used[a.sharedCapGroup + ':' + this.abs()] = (this.s.used[a.sharedCapGroup + ':' + this.abs()] || 0) + 1;
         if (id === 'ad_daily_x2') this.s.used['x2d:' + this.abs()] = 1;
         this.s.cdUntil[id] = this.s.t + a.cooldownSec; this.s.lastRew = this.s.t; this.add(a.coin, id);
-      } else { this.log('0 coin · ' + id + ' · ' + this.lk(this.cfg.ads.states.filter(function (x) { return x.id === st; })[0].locKey)); }
+      } else { this.log('0 ruby · ' + id + ' · ' + this.lk(this.cfg.ads.states.filter(function (x) { return x.id === st; })[0].locKey)); }
     }
     winLevel() {
       this.s.level += 1; var first = this.s.level === 1 ? this.cfg.earn.firstEverWinBonusCoin : 0;
@@ -119,7 +122,7 @@
       h += '<div class="eco-h">' + this.T.spend + '</div>';
       this.cfg.sinks.forEach(function (x) {
         var off = x.id === 'sk_streak_repair' && !this.repairable();
-        h += this.card(this.lk(x.locKey), x.coin + ' coin', this.btn(x.coin, 'spend', x.id, 'coral', off));
+        h += this.card(this.lk(x.locKey), x.coin + ' ruby', this.btn(x.coin, 'spend', x.id, 'coral', off));
       }, this);
       return h + '<div class="eco-h">' + this.T.free + '</div>';
     }
@@ -136,7 +139,7 @@
     tabRew() {
       var s = this.s, d = this.dayRow(), done = s.claimed[this.key('login', this.period('daily'), d.loginRef)];
       var h = this.card(this.T.login + ' · ' + d.loginRef, '+' + this.LR[d.loginRef].coin + ' · ' + this.T.streak + ' ' + s.streak + ' · ' + this.T.best + ' ' + s.best, this.btn(done ? this.T.got : this.T.get, 'login', '', '', done));
-      if (this.repairable()) h += this.card(this.T.repair, this.cfg.sinks[2].coin + ' coin', this.btn(this.T.repair, 'spend', 'sk_streak_repair', 'coral'));
+      if (this.repairable()) h += this.card(this.T.repair, this.cfg.sinks[2].coin + ' ruby', this.btn(this.T.repair, 'spend', 'sk_streak_repair', 'coral'));
       h += '<div class="eco-h">' + this.T.milestones + '</div>';
       this.cfg.streak.milestones.forEach(function (m) {
         var k = this.key('streak', 'cycle', m.id), ok = s.streak >= m.streakDays, got = s.claimed[k];
@@ -154,7 +157,7 @@
       if (!refs.length) h += '<div class="eco-card">' + this.T.noQuest + '</div>';
       refs.forEach(function (r) {
         var q = this.Q[r], k = this.key(s.scope, per, r), p = s.prog[k] || 0, ok = p >= q.target, got = s.claimed[k]; if (!got) all = false;
-        h += '<div class="eco-card"><div class="grow"><b>' + this.lk(q.locKey) + '</b><small>' + p + '/' + q.target + ' · +' + q.coin + ' coin</small><div class="eco-bar"><i style="width:' + Math.round(100 * p / q.target) + '%"></i></div></div>' + (ok ? this.btn(got ? this.T.got : this.T.claim, 'qclaim', r, '', got) : this.btn(this.T.prog, 'qbump', r, 'ghost')) + '</div>';
+        h += '<div class="eco-card"><div class="grow"><b>' + this.lk(q.locKey) + '</b><small>' + p + '/' + q.target + ' · +' + q.coin + ' ruby</small><div class="eco-bar"><i style="width:' + Math.round(100 * p / q.target) + '%"></i></div></div>' + (ok ? this.btn(got ? this.T.got : this.T.claim, 'qclaim', r, '', got) : this.btn(this.T.prog, 'qbump', r, 'ghost')) + '</div>';
       }, this);
       var ac = this.allClear(s.scope);
       if (ac && refs.length) { var ak = this.key(s.scope, per, 'allclear'); h += this.card(this.T.allClear, '+' + ac.coin, this.btn(s.claimed[ak] ? this.T.got : this.T.claim, 'qall', '', 'yellow', s.claimed[ak] || !all)); }
@@ -181,7 +184,7 @@
       var s = this.s, tabs = ['shop', 'ads', 'rew', 'quest', 'year'];
       var body = { shop: this.tabShop, ads: this.tabAds, rew: this.tabRew, quest: this.tabQuest, year: this.tabYear }[s.tab].call(this);
       this.root.innerHTML = '<div class="demo-tag">DEMO</div><div class="hdr"><a class="icon-btn" href="../../index.html" aria-label="back">←</a><div class="title">' + this.T.title + '</div>' + this.coinPill() + '</div>' +
-        '<div class="eco-sim">' + this.T.sim + '</div><div class="eco-row" style="padding:0 14px"><span>' + this.T.cycle + ' <b>C' + s.cycle + '</b> · ' + this.T.day + ' <b>' + s.day + '/365</b></span>' + this.btn(this.T.nextDay, 'next', '', 'ghost') + '</div>' +
+        '<div class="eco-sim">' + this.T.sim + '</div><div class="eco-row" style="padding:0 14px"><span>' + this.T.cycle + ' <b>C' + s.cycle + '</b> · ' + this.T.day + ' <b>' + s.day + '/365</b> · ' + this.dateStr() + ' UTC</span>' + this.btn(this.T.nextDay, 'next', '', 'ghost') + '</div>' +
         '<div class="eco-tabs">' + tabs.map(function (t) { return '<button class="chip2' + (t === s.tab ? ' on' : '') + '" data-act="tab" data-arg="' + t + '">' + this.T[t] + '</button>'; }, this).join('') + '</div>' +
         '<div class="eco-body">' + body + '<div class="eco-log">' + (s.log.join('<br>') || '—') + '</div></div>' + this.popup();
       this.bind();

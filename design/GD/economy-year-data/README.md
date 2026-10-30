@@ -1,6 +1,10 @@
-# economy-year-data — coin, shop, ads, nhiệm vụ, chu kỳ 365 ngày
+# economy-year-data — ruby (khóa kỹ thuật coin), shop, ads, nhiệm vụ, chu kỳ 365 ngày
 
-Dữ liệu **trung lập** (JSON, UTF-8), schemaVersion `1.0.0`. Mọi số là **đề xuất tuning chưa user duyệt**; giá `proposedUsd` không phải giá live. Coin là thiết kế mới; GD/runtime hiện tại vẫn là ruby, không migration trong task này.
+Dữ liệu **trung lập** (JSON, UTF-8), schemaVersion `1.0.0`. Mọi số là **đề xuất tuning chưa user duyệt**; giá `proposedUsd` không phải giá live. **Quyết định USER: GIỮ RUBY.** Không đổi tên tiền tệ runtime, không migration, không chuyển đổi số dư; các giá trị trong dữ liệu này áp dụng trực tiếp cho ruby. Khóa kỹ thuật `coin`, `*Coin`, `currency.id = "coin"` và ID/path giữ nguyên để tương thích consumer/runtime — mọi "coin" trong khóa/trường nghĩa là **lượng ruby**, không phải một currency coin khác. Hiển thị/localization dùng "ruby" (`loc currency.coin` = Ruby/Rubies).
+
+**Anchor:** `anchorUtcDate = 2026-01-01` (C1 = 01/01/2026–31/12/2026; C2 bắt đầu 01/01/2027). 2026-10-30 là ngày 303 của C1.
+
+**Chính sách triển khai:** không `git push`; được upload OTA R2 sau khi smoke test pass khi triển khai runtime. Task sửa design này không build/upload.
 
 **Chưa có importer Unity cho economy.** `Assets/WordCross/Editor/LocaleLevelImporter.cs` chỉ nhập `design/GD/data/<mã>.json` thành `LocaleLevelPack` (534 level) — không đọc các file này. Cần viết importer/runtime riêng.
 
@@ -29,7 +33,7 @@ Dữ liệu **trung lập** (JSON, UTF-8), schemaVersion `1.0.0`. Mọi số là
 5. Chạy `python3 validate.py` trước và sau import; so tổng `totals` với dữ liệu đã nạp.
 
 ## Mapping cần bổ sung (chưa tồn tại trong Unity)
-`CurrencyController` ruby→coin (hoặc alias), `Const.HINT_COST` → `sinks.sk_hint_cell`, Shop SO/prefab → `shop.packs`, `AdmobController` placements → `ads`, kho ledger claim (`claimKey`), bộ lập lịch UTC (`rules`), localization 5 ngôn ngữ.
+`CurrencyController` giữ ruby (không đổi tên; trường `coin` = lượng ruby), `Const.HINT_COST` → `sinks.sk_hint_cell`, Shop SO/prefab → `shop.packs`, `AdmobController` placements → `ads`, kho ledger claim (`claimKey`), bộ lập lịch UTC (`rules`), localization 5 ngôn ngữ.
 
 ## Quy tắc thời gian & claim (chi tiết ở `economy-config.json#rules`)
 `dayNumber = floor((utcMidnight(now) − anchorUtcDate)/86400000)`; `dayIndex = dayNumber % 365 + 1`; `cycleId = "C" + (floor(dayNumber/365)+1)`. Ngày 365 là ngày cầu nối (không thuộc tuần), sau đó là ngày 1 của `C{n+1}`. Năm nhuận: không có ngày riêng cho 29/02. Claim idempotent theo `claim:{cycleId}:{scope}:{periodId}:{refId}`; `maxSeenUtcDay` không lùi; offline dùng ledger cục bộ.
