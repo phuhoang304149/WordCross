@@ -1,35 +1,34 @@
-# Image assets — 2026-10-30
+# Hình Google Play — Word Crossy — 2026-10-30
 
-Default: en-US. UI locales: en, vi, fr, es, pt; Store mappings fr-FR/es-ES/pt-BR.
+Ngôn ngữ mặc định: en-US. Đủ en-US, vi, fr-FR, es-ES, pt-BR.
 
-Feature graphics: 1024×500, opaque RGB PNG; native artwork derived from existing brand tiles, palette and Baloo 2. App icon: 512×512 from current 1024×1024 artwork, shared across locales. No AI-generated gameplay.
+## Nguồn và trạng thái
 
-**Screenshot layouts are DRAFTS, not ready to upload.** 1080×1920; each contains a full, unmodified runtime QA capture fitted proportionally, plus localized promotional caption. Source images include status bar/floating gamepad and some older UGUI/debug-preview states. They do not certify the latest TMP/release build. Replace capture panels with clean current-runtime screenshots in matching UI locale before upload. Never claim translated puzzle dictionaries from translated UI. Keep this source list; original QA captures remain in their existing location. No new device session/build/upload was run.
+Theo yêu cầu USER ngày 30/10: **dùng design làm screenshot, không chờ thiết bị; AAB chỉ build khi USER yêu cầu sau**.
 
-| Locale | Screen | Source |
+25 ảnh `screenshot-01-home.png` đến `screenshot-05-win.png` được render trực tiếp từ HTML tại `design/Ui/screens/` bằng WebKit qua Swift CLI, rồi ghép caption bản địa hóa. Đây là ảnh thiết kế, **không phải ảnh chụp runtime hay bằng chứng QA bản APK/AAB**. Không dùng Chrome screenshot, MCP hoặc thiết bị.
+
+| Thứ tự | File | Design nguồn |
 |---|---|---|
-| en-US | home | `Build/remote-r2-0.3/qa-shots/t129-final-home-en.png` |
-| en-US | worlds | `Build/remote-r2-0.3/qa-shots/l10n-final-14-selectworld-en.png` |
-| en-US | gameplay | `Build/remote-r2-0.3/qa-shots/l10n-final-17-main-en.png` |
-| en-US | daily | `Build/remote-r2-0.3/qa-shots/preview-l10n-after-daily-en-20261030-014705.png` |
-| en-US | win | `Build/remote-r2-0.3/qa-shots/preview-l10n-after-win-en-20261030-014730.png` |
-| vi | home | `Build/remote-r2-0.3/qa-shots/t129-final-home-vi.png` |
-| vi | worlds | `Build/remote-r2-0.3/qa-shots/l10n-final-14-selectworld-vi.png` |
-| vi | gameplay | `Build/remote-r2-0.3/qa-shots/l10n-final-17-main-vi.png` |
-| vi | daily | `Build/remote-r2-0.3/qa-shots/preview-l10n-after-daily-vi-20261030-014340.png` |
-| vi | win | `Build/remote-r2-0.3/qa-shots/preview-l10n-after-win-vi-20261030-014405.png` |
-| fr-FR | home | `Build/remote-r2-0.3/qa-shots/t129-final-home-fr.png` |
-| fr-FR | worlds | `Build/remote-r2-0.3/qa-shots/l10n-final-14-selectworld-fr.png` |
-| fr-FR | gameplay | `Build/remote-r2-0.3/qa-shots/l10n-final-17-main-fr.png` |
-| fr-FR | daily | `Build/remote-r2-0.3/qa-shots/preview-l10n-after-daily-fr-20261030-015028.png` |
-| fr-FR | win | `Build/remote-r2-0.3/qa-shots/preview-l10n-after-win-fr-20261030-015053.png` |
-| es-ES | home | `Build/remote-r2-0.3/qa-shots/t129-final-home-es.png` |
-| es-ES | worlds | `Build/remote-r2-0.3/qa-shots/l10n-final-14-selectworld-es.png` |
-| es-ES | gameplay | `Build/remote-r2-0.3/qa-shots/l10n-final-17-main-es.png` |
-| es-ES | daily | `Build/remote-r2-0.3/qa-shots/preview-l10n-after-daily-es-20261030-015351.png` |
-| es-ES | win | `Build/remote-r2-0.3/qa-shots/preview-l10n-after-win-es-20261030-015417.png` |
-| pt-BR | home | `Build/remote-r2-0.3/qa-shots/t129-final-home-pt.png` |
-| pt-BR | worlds | `Build/remote-r2-0.3/qa-shots/l10n-final-14-selectworld-pt.png` |
-| pt-BR | gameplay | `Build/remote-r2-0.3/qa-shots/l10n-final-17-main-pt.png` |
-| pt-BR | daily | `Build/remote-r2-0.3/qa-shots/preview-l10n-after-daily-pt-20261030-015717.png` |
-| pt-BR | win | `Build/remote-r2-0.3/qa-shots/preview-l10n-after-win-pt-20261030-015742.png` |
+| 01 | screenshot-01-home.png | design/Ui/screens/home/index.html |
+| 02 | screenshot-02-worlds.png | design/Ui/screens/select-world/index.html |
+| 03 | screenshot-03-gameplay.png | design/Ui/screens/game/index.html |
+| 04 | screenshot-04-daily.png | design/Ui/screens/daily/index.html |
+| 05 | screenshot-05-win.png | design/Ui/screens/win/index.html |
+
+Mỗi hàng có đủ 5 ngôn ngữ UI. Từ trong bàn chơi vẫn tiếng Anh; không quảng bá bộ câu đố đa ngôn ngữ.
+
+## Export
+
+- PNG RGB không alpha, 1080×1920 (9:16), mỗi file dưới 8 MB.
+- Panel design 390×844 CSS px; font Baloo 2 từ project, render lên ảnh bằng WebKit, nền/caption bằng CoreGraphics/CoreText.
+- Chỉ trong phiên export: ẩn nhãn DEMO và nút điều khiển prototype, dùng trạng thái đã tắt ads để không có banner placeholder; xếp các dòng hero Daily đúng khối. Không sửa HTML/CSS design gốc.
+- Dữ liệu minh họa có chủ đích: 18 ruby; World 1 đã hoàn thành; bàn PARTY từ level thật `1-0-0` (đã tìm PART/TRAY và đang nối PARTY); Daily ngày 30/10/2026 với chuỗi 6 ngày; Win +2 ruby. Không dùng dữ liệu người chơi/thiết bị.
+- Không quảng bá Bot/AI như tính năng đã hoạt động; Home giữ các nút đúng design nhưng caption không giới thiệu các chế độ này.
+- 25 ảnh QA nháp cũ đã bỏ để không upload nhầm. Các capture QA nguồn ở Build giữ nguyên.
+
+5 `feature-graphic.png` (1024×500), `app-icon-512.png` (512×512) giữ nguyên bộ brand đã chuẩn bị. `preview-all-locales.png` là ảnh tổng hợp để duyệt, không upload làm screenshot.
+
+## Tái xuất bằng CLI macOS
+
+Chạy HTTP server ở root project: `python3 -m http.server 18670 --bind 127.0.0.1`, rồi `swift design/store-listing/render-design.swift` cũng từ root. Script dùng WKWebView không hiển thị trên màn hình, không thay đổi tab Chrome. Dừng server sau khi xong.

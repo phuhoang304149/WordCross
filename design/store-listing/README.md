@@ -59,4 +59,4 @@ Tên chỉ để người chơi nhận ra thể loại; không hứa thứ hạn
 
 ## Hình
 
-Xem `IMAGE-ASSETS.md`. Đã có 5 feature graphic (mỗi locale 1) và app icon 512. 25 `screenshot-draft-*` chỉ là bản nháp: phải thay bằng ảnh runtime sạch của build hiện tại trước khi upload. Chưa upload Console/AAB.
+Xem `IMAGE-ASSETS.md`. Có 5 feature graphic, icon dùng chung và **25 screenshot từ design** (5 ảnh mỗi ngôn ngữ), USER đã yêu cầu dùng thay ảnh runtime và không chờ thiết bị. Ảnh render từ design, không phải bằng chứng QA APK/AAB. `preview-all-locales.png` để duyệt cả bộ. Trạng thái đã upload/lưu trên Play xem `PLAY-CONTENT-CHECK-2026-10-30.md`.
