@@ -1,0 +1,6 @@
+Tagline: Desliza las letras. Rellena el crucigrama.
+Home: Desliza, resuelve, repite
+SelectWorld: Elige un mundo que explorar
+Gameplay: Desliza sobre las letras para rellenar el tablero
+Daily: Un reto nuevo cada día
+Win: ¡Nivel superado! Gana rubíes

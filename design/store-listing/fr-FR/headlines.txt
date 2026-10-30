@@ -1,0 +1,6 @@
+Tagline: Glissez les lettres. Remplissez la grille.
+Home: Glissez, résolvez, rejouez
+SelectWorld: Choisissez un monde à explorer
+Gameplay: Glissez sur les lettres pour remplir la grille
+Daily: Une nouvelle grille chaque jour
+Win: Niveau réussi ! Gagnez des rubis
