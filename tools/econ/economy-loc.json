@@ -431,6 +431,27 @@
   "pt": "Encontre todas as palavras para vencer. Não precisa de moedas.",
   "vi": "Tìm đủ các từ để thắng. Không cần coin."
  },
+ "hint.pick.cell": {
+  "en": "Reveal 1 letter · {n} rubies",
+  "es": "Pista: 1 casilla · {n} rubíes",
+  "fr": "Indice : 1 case · {n} rubis",
+  "pt": "Dica: 1 casa · {n} rubis",
+  "vi": "Gợi ý 1 ô · {n} ruby"
+ },
+ "hint.pick.title": {
+  "en": "Choose a hint",
+  "es": "Elige una pista",
+  "fr": "Choisir un indice",
+  "pt": "Escolha uma dica",
+  "vi": "Chọn kiểu gợi ý"
+ },
+ "hint.pick.word": {
+  "en": "Reveal whole word · {n} rubies",
+  "es": "Pista: palabra entera · {n} rubíes",
+  "fr": "Indice : mot entier · {n} rubis",
+  "pt": "Dica: palavra inteira · {n} rubis",
+  "vi": "Gợi ý cả từ · {n} ruby"
+ },
  "how.3": {
   "en": "Shuffle is free. Hints cost coins but are never required.",
   "es": "Mezclar es gratis. Las pistas cuestan monedas, pero nunca son obligatorias.",

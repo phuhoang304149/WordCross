@@ -23,7 +23,8 @@ public enum DialogType
     Daily,
     LowRuby,
     AiSoon,
-    Quests
+    Quests,
+    HintPick
 };
 
 public enum DialogShow

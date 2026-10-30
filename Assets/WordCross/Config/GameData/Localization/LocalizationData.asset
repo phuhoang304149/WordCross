@@ -3018,3 +3018,24 @@ MonoBehaviour:
     - "Boutique indisponible. R\xE9essayez plus tard."
     - "Tienda no disponible. Int\xE9ntalo m\xE1s tarde."
     - "Loja indispon\xEDvel. Tente mais tarde."
+  - key: hint.pick.cell
+    values:
+    - "G\u1EE3i \xFD 1 \xF4 \xB7 {n} ruby"
+    - "Reveal 1 letter \xB7 {n} rubies"
+    - "Indice : 1 case \xB7 {n} rubis"
+    - "Pista: 1 casilla \xB7 {n} rub\xEDes"
+    - "Dica: 1 casa \xB7 {n} rubis"
+  - key: hint.pick.title
+    values:
+    - "Ch\u1ECDn ki\u1EC3u g\u1EE3i \xFD"
+    - Choose a hint
+    - Choisir un indice
+    - Elige una pista
+    - Escolha uma dica
+  - key: hint.pick.word
+    values:
+    - "G\u1EE3i \xFD c\u1EA3 t\u1EEB \xB7 {n} ruby"
+    - "Reveal whole word \xB7 {n} rubies"
+    - "Indice : mot entier \xB7 {n} rubis"
+    - "Pista: palabra entera \xB7 {n} rub\xEDes"
+    - "Dica: palavra inteira \xB7 {n} rubis"

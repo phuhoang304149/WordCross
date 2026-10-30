@@ -144,5 +144,10 @@ put("shop.error", "Giao dịch lỗi, chưa cộng ruby. Thử lại sau.", "Pur
 put("shop.storeNotReady", "Cửa hàng chưa sẵn sàng, thử lại sau.", "Store not ready. Try again later.", "Boutique indisponible. Réessayez plus tard.", "Tienda no disponible. Inténtalo más tarde.", "Loja indisponível. Tente mais tarde.")
 put("shop.readyLeft", "Video ngắn: +{n} ruby · còn {l} lượt", "Short video: +{n} rubies · {l} left today", "Courte vidéo : +{n} rubis · {l} restantes", "Vídeo corto: +{n} rubíes · quedan {l}", "Vídeo curto: +{n} rubis · restam {l}")
 
+# ---- popup chọn kiểu Hint (nút Hint mở popup: 1 ô / cả từ) ----
+put("hint.pick.title", "Chọn kiểu gợi ý", "Choose a hint", "Choisir un indice", "Elige una pista", "Escolha uma dica")
+put("hint.pick.cell", "Gợi ý 1 ô · {n} ruby", "Reveal 1 letter · {n} rubies", "Indice : 1 case · {n} rubis", "Pista: 1 casilla · {n} rubíes", "Dica: 1 casa · {n} rubis")
+put("hint.pick.word", "Gợi ý cả từ · {n} ruby", "Reveal whole word · {n} rubies", "Indice : mot entier · {n} rubis", "Pista: palabra entera · {n} rubíes", "Dica: palavra inteira · {n} rubis")
+
 json.dump(T, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "economy-loc.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1, sort_keys=True)
 print(len(T))

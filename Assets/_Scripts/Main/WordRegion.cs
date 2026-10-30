@@ -15,7 +15,6 @@ public class WordRegion : MonoBehaviour {
     public Compliment compliment;
     public RectTransform toolsTop;
     public TMP_Text hintCostText;
-    public TMP_Text hintWordCostText;
 
     private const float DesignWidth = 390f;
     private const float RegionTop = 90f, RegionBottomPad = 6f;
@@ -340,6 +339,20 @@ public class WordRegion : MonoBehaviour {
         }
     }
 
+    // Nút Hint trong scene: mở popup chọn gợi ý 1 ô / cả từ.
+    public void OpenHintPick()
+    {
+        Sound.instance.PlayButton();
+        var dialog = (HintPickDialog)DialogController.instance.GetDialog(DialogType.HintPick);
+        dialog.Setup(this);
+        DialogController.instance.ShowDialog(dialog);
+    }
+
+    public bool HasHiddenLine()
+    {
+        return lines.Find(x => !x.isShown) != null;
+    }
+
     public void HintClick()
     {
         var line = lines.Find(x => !x.isShown);
@@ -385,7 +398,6 @@ public class WordRegion : MonoBehaviour {
     {
         var econ = Locator<EconomyService>.Instance;
         if (hintCostText != null) hintCostText.text = (econ == null ? Const.HINT_COST : econ.SinkCost(EconomyService.SINK_HINT_CELL)).ToString();
-        if (hintWordCostText != null) hintWordCostText.text = (econ == null ? Const.HINT_WORD_COST : econ.SinkCost(EconomyService.SINK_HINT_WORD)).ToString();
     }
 
     public void SaveLevelProgress()
