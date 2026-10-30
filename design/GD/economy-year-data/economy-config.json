@@ -1,0 +1,400 @@
+{
+ "schemaVersion": "1.0.0",
+ "kind": "economy",
+ "status": "PROPOSAL_TUNING_NOT_APPROVED",
+ "currency": {
+  "id": "coin",
+  "displayLocKey": "currency.coin",
+  "startBalance": 100,
+  "secondCurrency": null,
+  "designNote": "Coin là thiết kế mới theo yêu cầu user; GD/runtime hiện tại vẫn là ruby (CurrencyController, 10 ruby khởi đầu). Không migration/runtime ở task này."
+ },
+ "earn": {
+  "firstWinCoin": 10,
+  "firstEverWinBonusCoin": 20,
+  "replayWinCoin": 0,
+  "dailyChallengeCoin": 30,
+  "botWinCoinByDifficulty": {
+   "easy": 5,
+   "medium": 10,
+   "hard": 15
+  },
+  "botDrawCoin": 5,
+  "botDailyCap": 60,
+  "extraWordCoin": 5,
+  "extraWordCapPerLevel": 1
+ },
+ "sinks": [
+  {
+   "id": "sk_hint_cell",
+   "coin": 20,
+   "locKey": "sink.hint_cell",
+   "optional": true
+  },
+  {
+   "id": "sk_hint_word",
+   "coin": 60,
+   "locKey": "sink.hint_word",
+   "optional": true
+  },
+  {
+   "id": "sk_streak_repair",
+   "coin": 50,
+   "locKey": "sink.streak_repair",
+   "optional": true,
+   "maxMissedDays": 1
+  }
+ ],
+ "freeActions": [
+  "play",
+  "win",
+  "shuffle",
+  "extra_word",
+  "daily_challenge",
+  "bot_match",
+  "claim_quest"
+ ],
+ "shop": {
+  "packs": [
+   {
+    "id": "pk_1",
+    "productId": "word.item1",
+    "coin": 500,
+    "priceTier": 1,
+    "proposedUsd": 0.99,
+    "removesAds": false,
+    "locKey": "shop.pk_1"
+   },
+   {
+    "id": "pk_2",
+    "productId": "word.item2",
+    "coin": 1100,
+    "priceTier": 2,
+    "proposedUsd": 1.99,
+    "removesAds": false,
+    "locKey": "shop.pk_2"
+   },
+   {
+    "id": "pk_3",
+    "productId": "word.item3",
+    "coin": 2500,
+    "priceTier": 5,
+    "proposedUsd": 4.99,
+    "removesAds": false,
+    "locKey": "shop.pk_3"
+   },
+   {
+    "id": "pk_4",
+    "productId": "word.item4",
+    "coin": 4500,
+    "priceTier": 9,
+    "proposedUsd": 8.99,
+    "removesAds": true,
+    "locKey": "shop.pk_4"
+   },
+   {
+    "id": "pk_5",
+    "productId": "word.item5",
+    "coin": 11000,
+    "priceTier": 20,
+    "proposedUsd": 19.99,
+    "removesAds": true,
+    "locKey": "shop.pk_5"
+   },
+   {
+    "id": "pk_noads",
+    "productId": "word.noads",
+    "coin": 0,
+    "priceTier": 5,
+    "proposedUsd": 4.99,
+    "removesAds": true,
+    "locKey": "shop.pk_noads"
+   }
+  ],
+  "noAdsProductId": "word.noads",
+  "paymentSimulatedInDesign": true,
+  "priceNote": "proposedUsd/priceTier là đề xuất, chưa phải giá live Google Play/App Store"
+ },
+ "ads": {
+  "rewarded": [
+   {
+    "id": "ad_shop_free",
+    "type": "rewarded",
+    "placement": "shop",
+    "coin": 20,
+    "cooldownSec": 120,
+    "dailyCap": 5,
+    "sharedCapGroup": "rw_coin",
+    "optional": true
+   },
+   {
+    "id": "ad_low_coin",
+    "type": "rewarded",
+    "placement": "low_coin_popup",
+    "coin": 20,
+    "cooldownSec": 120,
+    "dailyCap": 5,
+    "sharedCapGroup": "rw_coin",
+    "optional": true
+   },
+   {
+    "id": "ad_win_x2",
+    "type": "rewarded",
+    "placement": "win_dialog",
+    "coin": 10,
+    "cooldownSec": 120,
+    "dailyCap": 5,
+    "sharedCapGroup": "rw_x2",
+    "optional": true,
+    "note": "cộng thêm bằng phần thưởng thắng lần đầu (x2)"
+   },
+   {
+    "id": "ad_daily_x2",
+    "type": "rewarded",
+    "placement": "daily_challenge",
+    "coin": 30,
+    "cooldownSec": 120,
+    "dailyCap": 1,
+    "sharedCapGroup": "rw_x2",
+    "optional": true,
+    "note": "cộng thêm bằng thưởng Daily (x2)"
+   }
+  ],
+  "interstitial": {
+   "id": "ad_inter_win",
+   "type": "interstitial",
+   "placement": "after_win",
+   "graceLevels": 5,
+   "minGapSec": 90,
+   "dailyCap": 6,
+   "blockedAfterRewardedSec": 30,
+   "disabledBy": [
+    "word.noads",
+    "word.item4",
+    "word.item5"
+   ],
+   "forbiddenPlacements": [
+    "pause",
+    "shop",
+    "how_to_play",
+    "extra_word",
+    "mid_swipe",
+    "over_rewarded"
+   ]
+  },
+  "states": [
+   {
+    "id": "loading",
+    "coinDelta": 0,
+    "locKey": "ad.loading"
+   },
+   {
+    "id": "ready",
+    "coinDelta": 0,
+    "locKey": "ad.ready"
+   },
+   {
+    "id": "cooldown",
+    "coinDelta": 0,
+    "locKey": "ad.cooldown"
+   },
+   {
+    "id": "cap_reached",
+    "coinDelta": 0,
+    "locKey": "ad.cap"
+   },
+   {
+    "id": "no_fill",
+    "coinDelta": 0,
+    "locKey": "ad.nofill"
+   },
+   {
+    "id": "offline",
+    "coinDelta": 0,
+    "locKey": "ad.offline"
+   },
+   {
+    "id": "cancelled",
+    "coinDelta": 0,
+    "locKey": "ad.cancel"
+   },
+   {
+    "id": "error",
+    "coinDelta": 0,
+    "locKey": "ad.error"
+   },
+   {
+    "id": "success",
+    "coinDelta": "placement.coin",
+    "locKey": "ad.success"
+   }
+  ],
+  "rules": [
+   "Thưởng chỉ cộng ở callback hoàn thành, idempotent theo sessionId.",
+   "no_fill/offline/error/cancelled/cap/cooldown: không thưởng, không trừ coin, không chặn chơi.",
+   "Nhiệm vụ không bao giờ requiresAd/requiresPurchase.",
+   "Mua bất kỳ gói removesAds tắt interstitial/banner; rewarded vẫn tuỳ chọn."
+  ],
+  "maxRewardedCoinPerDay": 180
+ },
+ "login": {
+  "source": "calendar.loginRewards",
+  "claimOncePerUtcDay": true
+ },
+ "streak": {
+  "milestones": [
+   {
+    "id": "st_3",
+    "streakDays": 3,
+    "coin": 20,
+    "locKey": "streak.3"
+   },
+   {
+    "id": "st_7",
+    "streakDays": 7,
+    "coin": 40,
+    "locKey": "streak.7"
+   },
+   {
+    "id": "st_14",
+    "streakDays": 14,
+    "coin": 70,
+    "locKey": "streak.14"
+   },
+   {
+    "id": "st_30",
+    "streakDays": 30,
+    "coin": 150,
+    "locKey": "streak.30"
+   },
+   {
+    "id": "st_60",
+    "streakDays": 60,
+    "coin": 250,
+    "locKey": "streak.60"
+   },
+   {
+    "id": "st_100",
+    "streakDays": 100,
+    "coin": 400,
+    "locKey": "streak.100"
+   },
+   {
+    "id": "st_180",
+    "streakDays": 180,
+    "coin": 700,
+    "locKey": "streak.180"
+   },
+   {
+    "id": "st_365",
+    "streakDays": 365,
+    "coin": 1500,
+    "locKey": "streak.365"
+   }
+  ],
+  "countingRule": "ngày UTC liên tiếp có claim login",
+  "keepBestOnBreak": true,
+  "milestoneClaimScope": "per_cycle"
+ },
+ "levelMilestones": [
+  {
+   "id": "lm_10",
+   "levelsCleared": 10,
+   "coin": 20,
+   "locKey": "milestone.lm_10"
+  },
+  {
+   "id": "lm_25",
+   "levelsCleared": 25,
+   "coin": 30,
+   "locKey": "milestone.lm_25"
+  },
+  {
+   "id": "lm_50",
+   "levelsCleared": 50,
+   "coin": 50,
+   "locKey": "milestone.lm_50"
+  },
+  {
+   "id": "lm_100",
+   "levelsCleared": 100,
+   "coin": 100,
+   "locKey": "milestone.lm_100"
+  },
+  {
+   "id": "lm_200",
+   "levelsCleared": 200,
+   "coin": 150,
+   "locKey": "milestone.lm_200"
+  },
+  {
+   "id": "lm_300",
+   "levelsCleared": 300,
+   "coin": 200,
+   "locKey": "milestone.lm_300"
+  },
+  {
+   "id": "lm_400",
+   "levelsCleared": 400,
+   "coin": 250,
+   "locKey": "milestone.lm_400"
+  },
+  {
+   "id": "lm_534",
+   "levelsCleared": 534,
+   "coin": 400,
+   "locKey": "milestone.lm_534"
+  }
+ ],
+ "totals": {
+  "loginPerCycle": 5055,
+  "dailyQuestPerCycle": 16790,
+  "weeklyQuestPerCycle": 7020,
+  "monthlyQuestPerCycle": 5700,
+  "eventPerCycle": 1440,
+  "streakMilestonesPerCycle": 3130,
+  "levelMilestonesLifetime": 1200
+ },
+ "baseline": {
+  "avgLoginPerDay": 13.8,
+  "avgDailyQuestPerDayAllClear": 46.0,
+  "casualDay": {
+   "wins": 3,
+   "winCoin": 30,
+   "login": 14,
+   "quest": 25,
+   "earn": 69,
+   "hintsUsed": 3,
+   "spend": 60,
+   "net": 9
+  },
+  "engagedDay": {
+   "wins": 5,
+   "winCoin": 50,
+   "dailyChallenge": 30,
+   "login": 14,
+   "quest": 46,
+   "earn": 140,
+   "hintsUsed": 4,
+   "spend": 80,
+   "net": 60
+  },
+  "adsExcluded": true,
+  "note": "Free player (không IAP, không ads) hoà vốn ở mức casual và dư ~60/ngày khi chơi nhiều; ads chỉ cộng thêm, tối đa maxRewardedCoinPerDay."
+ },
+ "rules": {
+  "timeBasis": "UTC",
+  "resetUtcHour": 0,
+  "dayNumber": "floor((utcMidnight(now)-anchorUtcDate)/86400000)",
+  "dayIndex": "dayNumber % 365 + 1",
+  "cycleId": "'C' + (floor(dayNumber/365)+1)",
+  "leapDay": "Chu kỳ đếm theo số ngày từ anchor, không theo lịch; 29/02 chỉ là một ngày thường, chu kỳ trong năm nhuận kết thúc lệch 1 ngày lịch. Tháng thiết kế là nhãn 28-31 ngày của chu kỳ, không phải tháng lịch.",
+  "bridgeDay": "Ngày 365 thuộc tháng 12, không thuộc tuần nào (52 tuần = 364 ngày); thưởng login lr_cycle. Ngày kế tiếp là ngày 1 chu kỳ C{n+1}.",
+  "claimKey": "claim:{cycleId}:{scope}:{periodId}:{refId}",
+  "claimIdempotent": true,
+  "clockGuard": "Lưu maxSeenUtcDay; không lùi. Nhảy tiến nhiều ngày: không bù phần thưởng quá khứ, kỳ nhiệm vụ cũ hết hạn, streak chỉ sửa được khi lỡ đúng 1 ngày bằng sk_streak_repair.",
+  "offline": "Tiến độ và claim ghi ledger cục bộ; ads/IAP cần mạng; đồng bộ server (nếu có sau này) dựa trên claimKey, bản ghi trùng key bị bỏ.",
+  "expiry": "Nhiệm vụ daily hết hạn 00:00 UTC kế tiếp; weekly hết hạn khi sang tuần; monthly khi sang tháng thiết kế; event hết hạn sau endDay. Chưa claim thì mất.",
+  "cycleRollover": "Sang C{n+1}: reset tiến độ nhiệm vụ/sự kiện/milestone per_cycle; giữ coin, streak, best streak, levelMilestones, mua hàng."
+ }
+}

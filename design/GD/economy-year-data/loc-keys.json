@@ -1,0 +1,585 @@
+{
+ "schemaVersion": "1.0.0",
+ "kind": "loc",
+ "languages": [
+  "vi",
+  "en",
+  "fr",
+  "es",
+  "pt"
+ ],
+ "pendingLanguages": [
+  "fr",
+  "es",
+  "pt"
+ ],
+ "keys": {
+  "currency.coin": {
+   "vi": "Coin",
+   "en": "Coins",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.dq_win_3": {
+   "vi": "Thắng 3 level",
+   "en": "Win 3 levels",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.dq_words_20": {
+   "vi": "Tìm 20 từ",
+   "en": "Find 20 words",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.dq_daily": {
+   "vi": "Hoàn thành Daily",
+   "en": "Finish the Daily",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.dq_bot_1": {
+   "vi": "Chơi 1 trận Bot",
+   "en": "Play 1 Bot match",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.dq_extra_1": {
+   "vi": "Tìm 1 từ thưởng",
+   "en": "Find 1 bonus word",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.wq_win_20": {
+   "vi": "Thắng 20 level",
+   "en": "Win 20 levels",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.wq_words_150": {
+   "vi": "Tìm 150 từ",
+   "en": "Find 150 words",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.wq_daily_5": {
+   "vi": "Hoàn thành Daily 5 lần",
+   "en": "Finish the Daily 5 times",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.wq_bot_win_3": {
+   "vi": "Thắng Bot 3 lần",
+   "en": "Beat the Bot 3 times",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.wq_extra_5": {
+   "vi": "Tìm 5 từ thưởng",
+   "en": "Find 5 bonus words",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.wq_login_5": {
+   "vi": "Vào game 5 ngày",
+   "en": "Log in on 5 days",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.mq_win_100": {
+   "vi": "Thắng 100 level",
+   "en": "Win 100 levels",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.mq_daily_20": {
+   "vi": "Hoàn thành Daily 20 lần",
+   "en": "Finish the Daily 20 times",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.mq_login_20": {
+   "vi": "Vào game 20 ngày",
+   "en": "Log in on 20 days",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.mq_words_600": {
+   "vi": "Tìm 600 từ",
+   "en": "Find 600 words",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.eq_win": {
+   "vi": "Thắng level trong sự kiện",
+   "en": "Win levels during the event",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.eq_words": {
+   "vi": "Tìm từ trong sự kiện",
+   "en": "Find words during the event",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "quest.eq_daily": {
+   "vi": "Daily trong sự kiện",
+   "en": "Daily during the event",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "event.newyear": {
+   "vi": "Năm mới",
+   "en": "New Year",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "event.spring": {
+   "vi": "Lễ hội mùa xuân",
+   "en": "Spring Festival",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "event.hearts": {
+   "vi": "Ngày trái tim",
+   "en": "Hearts Day",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "event.wordweek": {
+   "vi": "Tuần lễ chữ",
+   "en": "Word Week",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "event.earth": {
+   "vi": "Ngày Trái Đất",
+   "en": "Earth Day",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "event.summer": {
+   "vi": "Hè rực rỡ",
+   "en": "Summer Splash",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "event.midyear": {
+   "vi": "Giữa năm",
+   "en": "Midyear",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "event.school": {
+   "vi": "Tựu trường",
+   "en": "Back to School",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "event.harvest": {
+   "vi": "Mùa gặt",
+   "en": "Harvest",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "event.spooky": {
+   "vi": "Đêm hoá trang",
+   "en": "Spooky Night",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "event.thanks": {
+   "vi": "Tri ân",
+   "en": "Thanks Week",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "event.winter": {
+   "vi": "Mùa đông diệu kỳ",
+   "en": "Winter Wonder",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "month.01": {
+   "vi": "Tháng 1",
+   "en": "Month 1",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "month.02": {
+   "vi": "Tháng 2",
+   "en": "Month 2",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "month.03": {
+   "vi": "Tháng 3",
+   "en": "Month 3",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "month.04": {
+   "vi": "Tháng 4",
+   "en": "Month 4",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "month.05": {
+   "vi": "Tháng 5",
+   "en": "Month 5",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "month.06": {
+   "vi": "Tháng 6",
+   "en": "Month 6",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "month.07": {
+   "vi": "Tháng 7",
+   "en": "Month 7",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "month.08": {
+   "vi": "Tháng 8",
+   "en": "Month 8",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "month.09": {
+   "vi": "Tháng 9",
+   "en": "Month 9",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "month.10": {
+   "vi": "Tháng 10",
+   "en": "Month 10",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "month.11": {
+   "vi": "Tháng 11",
+   "en": "Month 11",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "month.12": {
+   "vi": "Tháng 12",
+   "en": "Month 12",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "login.base": {
+   "vi": "Thưởng đăng nhập",
+   "en": "Login reward",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "login.week": {
+   "vi": "Thưởng cuối tuần ngày 7",
+   "en": "Day-7 login reward",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "login.month": {
+   "vi": "Thưởng cuối tháng",
+   "en": "Month-end login reward",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "login.cycle": {
+   "vi": "Thưởng ngày cuối chu kỳ",
+   "en": "Cycle-end login reward",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "streak.3": {
+   "vi": "Chuỗi 3 ngày",
+   "en": "3-day streak",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "streak.7": {
+   "vi": "Chuỗi 7 ngày",
+   "en": "7-day streak",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "streak.14": {
+   "vi": "Chuỗi 14 ngày",
+   "en": "14-day streak",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "streak.30": {
+   "vi": "Chuỗi 30 ngày",
+   "en": "30-day streak",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "streak.60": {
+   "vi": "Chuỗi 60 ngày",
+   "en": "60-day streak",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "streak.100": {
+   "vi": "Chuỗi 100 ngày",
+   "en": "100-day streak",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "streak.180": {
+   "vi": "Chuỗi 180 ngày",
+   "en": "180-day streak",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "streak.365": {
+   "vi": "Chuỗi 365 ngày",
+   "en": "365-day streak",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "milestone.lm_10": {
+   "vi": "Hoàn thành 10 level",
+   "en": "Clear 10 levels",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "milestone.lm_25": {
+   "vi": "Hoàn thành 25 level",
+   "en": "Clear 25 levels",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "milestone.lm_50": {
+   "vi": "Hoàn thành 50 level",
+   "en": "Clear 50 levels",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "milestone.lm_100": {
+   "vi": "Hoàn thành 100 level",
+   "en": "Clear 100 levels",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "milestone.lm_200": {
+   "vi": "Hoàn thành 200 level",
+   "en": "Clear 200 levels",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "milestone.lm_300": {
+   "vi": "Hoàn thành 300 level",
+   "en": "Clear 300 levels",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "milestone.lm_400": {
+   "vi": "Hoàn thành 400 level",
+   "en": "Clear 400 levels",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "milestone.lm_534": {
+   "vi": "Hoàn thành 534 level",
+   "en": "Clear 534 levels",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "sink.hint_cell": {
+   "vi": "Gợi ý 1 ô",
+   "en": "Hint: 1 tile",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "sink.hint_word": {
+   "vi": "Gợi ý cả từ",
+   "en": "Hint: whole word",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "sink.streak_repair": {
+   "vi": "Cứu chuỗi",
+   "en": "Streak repair",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "shop.pk_1": {
+   "vi": "Gói 500 coin",
+   "en": "500 coins pack",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "shop.pk_2": {
+   "vi": "Gói 1100 coin",
+   "en": "1100 coins pack",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "shop.pk_3": {
+   "vi": "Gói 2500 coin",
+   "en": "2500 coins pack",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "shop.pk_4": {
+   "vi": "Gói 4500 coin",
+   "en": "4500 coins pack",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "shop.pk_5": {
+   "vi": "Gói 11000 coin",
+   "en": "11000 coins pack",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "shop.pk_noads": {
+   "vi": "Tắt quảng cáo",
+   "en": "Remove ads",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "ad.loading": {
+   "vi": "Đang tải quảng cáo…",
+   "en": "Loading ad…",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "ad.ready": {
+   "vi": "Sẵn sàng",
+   "en": "Ready",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "ad.cooldown": {
+   "vi": "Chờ hồi chiêu",
+   "en": "On cooldown",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "ad.cap": {
+   "vi": "Hết lượt hôm nay",
+   "en": "Daily limit reached",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "ad.nofill": {
+   "vi": "Chưa có quảng cáo, thử lại sau",
+   "en": "No ad available, try later",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "ad.offline": {
+   "vi": "Không có mạng",
+   "en": "You are offline",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "ad.cancel": {
+   "vi": "Đóng sớm, không có thưởng",
+   "en": "Closed early, no reward",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "ad.error": {
+   "vi": "Lỗi quảng cáo, không mất coin",
+   "en": "Ad error, no coins lost",
+   "fr": null,
+   "es": null,
+   "pt": null
+  },
+  "ad.success": {
+   "vi": "Nhận thưởng",
+   "en": "Reward granted",
+   "fr": null,
+   "es": null,
+   "pt": null
+  }
+ }
+}
