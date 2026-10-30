@@ -353,7 +353,7 @@ MonoBehaviour:
     - "T\xECm \u0111\u1EE7 c\xE1c t\u1EEB \u0111\u1EC3 th\u1EAFng. Kh\xF4ng c\u1EA7n
       ruby."
     - Find every word to win. No rubies needed.
-    - "Trouvez tous les mots pour gagner. Aucune pi\xE8ce requise."
+    - Trouvez tous les mots pour gagner. Aucun rubis requis.
     - "Encuentra todas las palabras para ganar. No hacen falta rub\xEDes."
     - "Encontre todas as palavras para vencer. N\xE3o precisa de rubis."
   - key: game.coachDaily
@@ -784,9 +784,9 @@ MonoBehaviour:
     - "Kh\xF4ng tr\u1EEB ruby, kh\xF4ng c\xF3 th\u01B0\u1EDFng. Th\u1EED l\u1EA1i
       sau."
     - No rubies charged, no reward. Try later.
-    - "Aucune pi\xE8ce d\xE9bit\xE9e, aucune r\xE9compense. R\xE9essayez plus tard."
+    - "Aucun rubis d\xE9bit\xE9, aucune r\xE9compense. R\xE9essayez plus tard."
     - "No se cobran rub\xEDes ni hay recompensa. Int\xE9ntalo m\xE1s tarde."
-    - Nenhuma moeda cobrada e nenhuma recompensa. Tente mais tarde.
+    - Nenhum rubi cobrado e nenhuma recompensa. Tente mais tarde.
   - key: rv.s.offline
     values:
     - "B\u1EA1n \u0111ang offline"
@@ -847,7 +847,7 @@ MonoBehaviour:
     values:
     - "Kh\xF4ng c\xF3 th\u01B0\u1EDFng v\xE0 kh\xF4ng b\u1ECB tr\u1EEB ruby."
     - No reward and no rubies charged.
-    - "Aucune r\xE9compense et aucune pi\xE8ce d\xE9bit\xE9e."
+    - "Aucune r\xE9compense et aucun rubis d\xE9bit\xE9."
     - "Sin recompensa y sin cobro de rub\xEDes."
     - "Sem recompensa e sem cobran\xE7a de rubis."
   - key: rv.s.error
@@ -861,7 +861,7 @@ MonoBehaviour:
     values:
     - "Kh\xF4ng c\xF3 th\u01B0\u1EDFng v\xE0 kh\xF4ng b\u1ECB tr\u1EEB ruby."
     - No reward and no rubies charged.
-    - "Aucune r\xE9compense et aucune pi\xE8ce d\xE9bit\xE9e."
+    - "Aucune r\xE9compense et aucun rubis d\xE9bit\xE9."
     - "Sin recompensa y sin cobro de rub\xEDes."
     - "Sem recompensa e sem cobran\xE7a de rubis."
   - key: rv.demo
@@ -2740,9 +2740,9 @@ MonoBehaviour:
     values:
     - "L\u1ED7i qu\u1EA3ng c\xE1o, kh\xF4ng m\u1EA5t ruby"
     - Ad error, no rubies lost
-    - "Erreur de pub, aucune pi\xE8ce perdue"
+    - Erreur de pub, aucun rubis perdu
     - "Error de anuncio, sin perder rub\xEDes"
-    - "Erro no an\xFAncio, nenhuma moeda perdida"
+    - "Erro no an\xFAncio, nenhum rubi perdido"
   - key: ad.success
     values:
     - "Nh\u1EADn th\u01B0\u1EDFng"

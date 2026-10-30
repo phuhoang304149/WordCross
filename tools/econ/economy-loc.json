@@ -16,8 +16,8 @@
  },
  "ad.error": {
   "es": "Error de anuncio, sin perder monedas",
-  "fr": "Erreur de pub, aucune pièce perdue",
-  "pt": "Erro no anúncio, nenhuma moeda perdida"
+  "fr": "Erreur de pub, aucun rubis perdu",
+  "pt": "Erro no anúncio, nenhum rubi perdido"
  },
  "ad.loading": {
   "es": "Cargando anuncio…",
@@ -427,7 +427,7 @@
  "game.coach2": {
   "en": "Find every word to win. No coins needed.",
   "es": "Encuentra todas las palabras para ganar. No hacen falta monedas.",
-  "fr": "Trouvez tous les mots pour gagner. Aucune pièce requise.",
+  "fr": "Trouvez tous les mots pour gagner. Aucun rubis requis.",
   "pt": "Encontre todas as palavras para vencer. Não precisa de moedas.",
   "vi": "Tìm đủ các từ để thắng. Không cần coin."
  },
@@ -693,7 +693,7 @@
  "rv.d.cancel": {
   "en": "No reward and no coins charged.",
   "es": "Sin recompensa y sin cobro de monedas.",
-  "fr": "Aucune récompense et aucune pièce débitée.",
+  "fr": "Aucune récompense et aucun rubis débité.",
   "pt": "Sem recompensa e sem cobrança de moedas.",
   "vi": "Không có thưởng và không bị trừ coin."
  },
@@ -707,15 +707,15 @@
  "rv.d.error": {
   "en": "No reward and no coins charged.",
   "es": "Sin recompensa y sin cobro de monedas.",
-  "fr": "Aucune récompense et aucune pièce débitée.",
+  "fr": "Aucune récompense et aucun rubis débité.",
   "pt": "Sem recompensa e sem cobrança de moedas.",
   "vi": "Không có thưởng và không bị trừ coin."
  },
  "rv.d.nofill": {
   "en": "No coins charged, no reward. Try later.",
   "es": "No se cobran monedas ni hay recompensa. Inténtalo más tarde.",
-  "fr": "Aucune pièce débitée, aucune récompense. Réessayez plus tard.",
-  "pt": "Nenhuma moeda cobrada e nenhuma recompensa. Tente mais tarde.",
+  "fr": "Aucun rubis débité, aucune récompense. Réessayez plus tard.",
+  "pt": "Nenhum rubi cobrado e nenhuma recompensa. Tente mais tarde.",
   "vi": "Không trừ coin, không có thưởng. Thử lại sau."
  },
  "rv.d.offline": {

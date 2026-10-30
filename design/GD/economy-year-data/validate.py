@@ -109,6 +109,9 @@ class Validator:
         used += [p["locKey"] for p in self.cfg["shop"]["packs"]] + [s["locKey"] for s in self.cfg["ads"]["states"]] + [self.cfg["currency"]["displayLocKey"]]
         for k in used:
             self.check(k in keys and keys[k]["vi"] and keys[k]["en"], "thiếu loc " + k)
+        for k, v in keys.items():
+            for lang in self.loc["languages"]:
+                self.check(bool(v.get(lang)), "loc %s thiếu %s" % (k, lang))
 
     def run_totals(self):
         t = {q["id"]: q["coin"] for q in self.qs["templates"]}
