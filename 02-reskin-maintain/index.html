@@ -525,6 +525,20 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "criteria": "AAB/APK release ký đúng, cài máy chạy OTA 1.0.0"
     },
     {
+      "id": "T134",
+      "title": "Hệ thống Coin & chu kỳ 365 ngày (shop, ads, thưởng, nhiệm vụ, lịch) — chỉ qua OTA CLR + AA",
+      "type": "ads-iap-ota",
+      "status": "doing",
+      "screen": "Home · Header coin · popup Nhiệm vụ & Thưởng · Shop · thiếu coin · Main hint · Win",
+      "goal": "Theo design/index.html → GD/economy-year.html + economy-year-data + Ui/screens/economy-year (da8396d)",
+      "scope": "Importer JSON→Addressables; EconomyService ledger + scheduler UTC + claim idempotent; migrate ruby×10→coin; earn/sink; ads rewarded cap/cooldown + interstitial rules; UI coin pill, popup Nhiệm vụ & Thưởng (Hôm nay/Tuần/Tháng/Sự kiện/Năm), thiếu coin, Shop gói mới; loc 5 ngôn ngữ. Code chỉ hot-update, asset chỉ Addressables — không APK",
+      "owner": "CLAUDE (dev worker econ)",
+      "deps": "T130",
+      "criteria": "validate.py pass; batch test scheduler (ngày 1/7/8/364/365/366, lùi đồng hồ, claim trùng, migrate 2 lần); emulator cold start bản production với OTA thật: migrate, login claim, nhiệm vụ, thắng +10, Shop số mới; ảnh econ-final-*; UI khớp design; OTA hash mới",
+      "evidence": "",
+      "note": "[2026-10-30] Mặc định chờ duyệt (cho-duyet econ-coin, econ-anchor): ruby×10→coin; anchor 2026-10-26 thay 2027-01-01. Số liệu GD là đề xuất tuning, dùng nguyên. Worker .git/task-hotupdate/dev-econ.txt."
+    },
+    {
       "id": "T133",
       "title": "Đổi path OTA 1.0.0 về chuẩn chung: <game>/clr/<version>/<platform>/Upload và <game>/data/<version>/<platform>",
       "type": "runtime",

@@ -240,6 +240,18 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 
 <h2>3. Phát hành &amp; tài khoản</h2>
 
+<div class="item" data-id="econ-coin">
+<h3>Coin thay ruby: quy đổi ruby → coin <span class="tag hi">T134</span></h3>
+<p>Mặc định đang làm: <b>coin = ruby × 10</b>, migrate một lần (10 ruby khởi đầu → 100 coin, Hint 2 ruby → 20 coin, khớp GD). Thay toàn bộ ruby bằng coin trên UI. Khác: giữ ruby song song / tỉ lệ khác.</p>
+<textarea placeholder="Đồng ý / tỉ lệ khác"></textarea>
+</div>
+
+<div class="item" data-id="econ-anchor">
+<h3>Ngày neo chu kỳ 365 <span class="tag hi">T134</span></h3>
+<p>GD đề xuất 2027-01-01 nhưng ngày này ở tương lai (dayNumber âm). Mặc định: <b>2026-10-26 UTC (thứ Hai)</b>. Số liệu thưởng/giá dùng nguyên đề xuất GD (chưa chốt tuning).</p>
+<textarea placeholder="Đồng ý / ngày khác"></textarea>
+</div>
+
 <div class="item" data-id="keystore">
 <h3>Mật khẩu keystore release <span class="tag hi">T048 · chặn phát hành</span></h3>
 <p>APK 1.0.0 hiện ký debug key, không nộp Play được. Cần mật khẩu <code>wordCross.keystore</code> — nhập trực tiếp vào máy/SetupTool, không gửi qua chat.</p>
