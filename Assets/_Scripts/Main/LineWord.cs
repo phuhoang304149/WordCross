@@ -99,4 +99,13 @@ public class LineWord : MonoBehaviour {
             }
         }
     }
+
+    public void ShowWordHint()
+    {
+        foreach (var cell in cells)
+        {
+            if (!cell.isShown) cell.ShowHint();
+        }
+        isShown = true;
+    }
 }

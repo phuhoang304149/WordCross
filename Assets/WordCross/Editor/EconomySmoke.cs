@@ -52,6 +52,7 @@ namespace WordCross.Editor
             }
             anchor = DateTime.SpecifyKind(DateTime.Parse(data.anchorUtcDate + "T00:00:00"), DateTimeKind.Utc);
             Wallet();
+            Sinks();
             Calendar();
             Today();
             Reopen();
@@ -81,6 +82,21 @@ namespace WordCross.Editor
             Make(old, clock);
             Check("wallet.old.twice", old.balance == 12, "second init keeps " + old.balance);
             Check("anchor", data.anchorUtcDate == "2026-01-01", data.anchorUtcDate);
+        }
+
+        // Trợ giúp trừ ruby theo GD: Hint ô 20, Hint từ 60, cứu chuỗi 50; thiếu ruby thì không trừ.
+        private void Sinks()
+        {
+            var store = new MemoryEconomyStore { balance = 100 };
+            var econ = Make(store, new FixedEconomyClock { now = Day(4, 10) });
+            store.balance = 100;
+            Check("sink.cost", econ.SinkCost(EconomyService.SINK_HINT_CELL) == 20 && econ.SinkCost(EconomyService.SINK_HINT_WORD) == 60 && econ.SinkCost(EconomyService.SINK_STREAK_REPAIR) == 50, econ.SinkCost(EconomyService.SINK_HINT_CELL) + "/" + econ.SinkCost(EconomyService.SINK_HINT_WORD) + "/" + econ.SinkCost(EconomyService.SINK_STREAK_REPAIR));
+            bool cell = econ.Spend(EconomyService.SINK_HINT_CELL);
+            Check("sink.hintCell", cell && store.balance == 80, "balance=" + store.balance);
+            bool word = econ.Spend(EconomyService.SINK_HINT_WORD);
+            Check("sink.hintWord", word && store.balance == 20, "balance=" + store.balance);
+            bool poor = econ.Spend(EconomyService.SINK_HINT_WORD);
+            Check("sink.lowBalance", !poor && store.balance == 20, "spent=" + poor + " balance=" + store.balance);
         }
 
         // Hôm nay 2026-10-30 UTC: 302 ngày sau neo → ngày 303 của C1.

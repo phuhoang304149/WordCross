@@ -20,7 +20,14 @@ public class LowRubyDialog : Dialog {
     private LocalizationController Loc { get { return Locator<LocalizationController>.Instance; } }
     private EconomyService Econ { get { return Locator<EconomyService>.Instance; } }
 
-    private int HintCost { get { return Econ != null ? Econ.SinkCost(EconomyService.SINK_HINT_CELL) : Const.HINT_COST; } }
+    private string sinkId = EconomyService.SINK_HINT_CELL;
+    private int HintCost { get { return Econ != null ? Econ.SinkCost(sinkId) : Const.HINT_COST; } }
+
+    // Khoản cần trả khiến popup mở (Hint 1 ô hoặc Hint cả từ).
+    public void SetSink(string id)
+    {
+        sinkId = id;
+    }
 
     private int VideoCoin
     {

@@ -14,6 +14,8 @@ public class WordRegion : MonoBehaviour {
     public TextPreview textPreview;
     public Compliment compliment;
     public RectTransform toolsTop;
+    public TMP_Text hintCostText;
+    public TMP_Text hintWordCostText;
 
     private const float DesignWidth = 390f;
     private const float RegionTop = 90f, RegionBottomPad = 6f;
@@ -39,6 +41,11 @@ public class WordRegion : MonoBehaviour {
     {
         instance = this;
         rt = GetComponent<RectTransform>();
+    }
+
+    private void Start()
+    {
+        ShowHintCosts();
     }
 
     public void Load(GameLevel gameLevel)
@@ -335,25 +342,50 @@ public class WordRegion : MonoBehaviour {
 
     public void HintClick()
     {
-        int ballance = CurrencyController.GetBalance();
-        if (ballance >= Const.HINT_COST)
+        var line = lines.Find(x => !x.isShown);
+        if (line != null && SpendRuby(EconomyService.SINK_HINT_CELL, Const.HINT_COST))
         {
-            var line = lines.Find(x => !x.isShown);
+            line.ShowHint();
+            CheckGameComplete();
 
-            if (line != null)
-            {
-                line.ShowHint();
-                CurrencyController.DebitBalance(Const.HINT_COST);
-                CheckGameComplete();
-
-                Prefs.AddToNumHint(GameState.currentWorld, GameState.currentSubWorld, GameState.currentLevel);
-            }
-        }
-        else
-        {
-            DialogController.instance.ShowDialog(DialogType.LowRuby);
+            Prefs.AddToNumHint(GameState.currentWorld, GameState.currentSubWorld, GameState.currentLevel);
         }
         Sound.instance.PlayButton();
+    }
+
+    public void HintWordClick()
+    {
+        var line = lines.Find(x => !x.isShown);
+        if (line != null && SpendRuby(EconomyService.SINK_HINT_WORD, Const.HINT_WORD_COST))
+        {
+            line.ShowWordHint();
+            CheckGameComplete();
+
+            Prefs.AddToNumHint(GameState.currentWorld, GameState.currentSubWorld, GameState.currentLevel);
+        }
+        Sound.instance.PlayButton();
+    }
+
+    // Trừ ruby theo GD (sink); thiếu thì mở popup thiếu ruby (xem video tuỳ chọn, Shop, bỏ qua).
+    private bool SpendRuby(string sinkId, int fallbackCost)
+    {
+        var econ = Locator<EconomyService>.Instance;
+        int cost = econ == null ? fallbackCost : econ.SinkCost(sinkId);
+        if (CurrencyController.GetBalance() < cost)
+        {
+            var dialog = (LowRubyDialog)DialogController.instance.GetDialog(DialogType.LowRuby);
+            dialog.SetSink(sinkId);
+            DialogController.instance.ShowDialog(dialog);
+            return false;
+        }
+        return econ == null ? CurrencyController.DebitBalance(cost) : econ.Spend(sinkId);
+    }
+
+    private void ShowHintCosts()
+    {
+        var econ = Locator<EconomyService>.Instance;
+        if (hintCostText != null) hintCostText.text = (econ == null ? Const.HINT_COST : econ.SinkCost(EconomyService.SINK_HINT_CELL)).ToString();
+        if (hintWordCostText != null) hintWordCostText.text = (econ == null ? Const.HINT_WORD_COST : econ.SinkCost(EconomyService.SINK_HINT_WORD)).ToString();
     }
 
     public void SaveLevelProgress()
