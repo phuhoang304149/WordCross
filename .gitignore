@@ -62,3 +62,8 @@ crashlytics-build.properties
 # ui-preview tooling output / Unity user settings
 /Export/
 /UserSettings/
+
+# Build output HybridCLR (DLL copy vào APK lúc build) và worktree cục bộ
+/[Aa]ssets/StreamingAssets/clr/
+/[Aa]ssets/StreamingAssets/clr.meta
+/.worktrees/
