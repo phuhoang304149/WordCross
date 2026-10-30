@@ -526,17 +526,17 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     },
     {
       "id": "T134",
-      "title": "Hệ thống Coin & chu kỳ 365 ngày (shop, ads, thưởng, nhiệm vụ, lịch) — chỉ qua OTA CLR + AA",
+      "title": "Hệ thống kinh tế ruby, thưởng, nhiệm vụ & chu kỳ 365 ngày (shop, ads, lịch) — chỉ qua OTA CLR + AA",
       "type": "ads-iap-ota",
       "status": "doing",
       "screen": "Home · Header coin · popup Nhiệm vụ & Thưởng · Shop · thiếu coin · Main hint · Win",
       "goal": "Theo design/index.html → GD/economy-year.html + economy-year-data + Ui/screens/economy-year (da8396d)",
-      "scope": "Importer JSON→Addressables; EconomyService ledger + scheduler UTC + claim idempotent; migrate ruby×10→coin; earn/sink; ads rewarded cap/cooldown + interstitial rules; UI coin pill, popup Nhiệm vụ & Thưởng (Hôm nay/Tuần/Tháng/Sự kiện/Năm), thiếu coin, Shop gói mới; loc 5 ngôn ngữ. Code chỉ hot-update, asset chỉ Addressables — không APK",
+      "scope": "8 bước tuần tự (worker Sonnet, trần $2/lượt): 1 nền (anchor 2026-01-01, giữ ruby) · 2 ví + trợ giúp (hint ô 20, hint từ 60) · 3 ads rewarded/interstitial · 4 Shop 6 gói + gói tắt ads + giá store · 5 thưởng thắng/login/chuỗi/mốc · 6 UI Nhiệm vụ & Thưởng + lịch · 7 loc vi/en/fr/es/pt · 8 smoke + merge + OTA R2. Code chỉ hot-update, asset chỉ Addressables",
       "owner": "CLAUDE (dev worker econ)",
       "deps": "T130",
       "criteria": "validate.py pass; batch test scheduler (ngày 1/7/8/364/365/366, lùi đồng hồ, claim trùng, migrate 2 lần); emulator cold start bản production với OTA thật: migrate, login claim, nhiệm vụ, thắng +10, Shop số mới; ảnh econ-final-*; UI khớp design; OTA hash mới",
       "evidence": "",
-      "note": "[2026-10-30] Mặc định chờ duyệt (cho-duyet econ-coin, econ-anchor): ruby×10→coin; anchor 2026-10-26 thay 2027-01-01. Số liệu GD là đề xuất tuning, dùng nguyên. Worker .git/task-hotupdate/dev-econ.txt."
+      "note": "[2026-10-30] Mặc định chờ duyệt (cho-duyet econ-coin, econ-anchor): ruby×10→coin; anchor 2026-10-26 thay 2027-01-01. Số liệu GD là đề xuất tuning, dùng nguyên. Worker .git/task-hotupdate/dev-econ.txt.\n[2026-10-30 USER chốt] Giữ RUBY (không đổi tên coin, không migration, số dư 1:1), số GD áp nguyên cho ruby; anchor 2026-01-01; dùng toàn bộ thông số GD; giá hiển thị từ store; THÊM ô gói tắt ads vào Shop; không git push, có upload R2. Worker Opus lượt đầu đã dừng; nhánh wordcross/econ giữ 21600ca làm nền. Chuỗi .git/task-hotupdate/econ/chain.sh."
     },
     {
       "id": "T133",
