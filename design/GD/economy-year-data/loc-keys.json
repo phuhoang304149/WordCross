@@ -15,8 +15,8 @@
  ],
  "keys": {
   "currency.coin": {
-   "vi": "Coin",
-   "en": "Coins",
+   "vi": "Ruby",
+   "en": "Rubies",
    "fr": null,
    "es": null,
    "pt": null
@@ -477,36 +477,36 @@
    "pt": null
   },
   "shop.pk_1": {
-   "vi": "Gói 500 coin",
-   "en": "500 coins pack",
+   "vi": "Gói 500 ruby",
+   "en": "500 rubies pack",
    "fr": null,
    "es": null,
    "pt": null
   },
   "shop.pk_2": {
-   "vi": "Gói 1100 coin",
-   "en": "1100 coins pack",
+   "vi": "Gói 1100 ruby",
+   "en": "1100 rubies pack",
    "fr": null,
    "es": null,
    "pt": null
   },
   "shop.pk_3": {
-   "vi": "Gói 2500 coin",
-   "en": "2500 coins pack",
+   "vi": "Gói 2500 ruby",
+   "en": "2500 rubies pack",
    "fr": null,
    "es": null,
    "pt": null
   },
   "shop.pk_4": {
-   "vi": "Gói 4500 coin",
-   "en": "4500 coins pack",
+   "vi": "Gói 4500 ruby",
+   "en": "4500 rubies pack",
    "fr": null,
    "es": null,
    "pt": null
   },
   "shop.pk_5": {
-   "vi": "Gói 11000 coin",
-   "en": "11000 coins pack",
+   "vi": "Gói 11000 ruby",
+   "en": "11000 rubies pack",
    "fr": null,
    "es": null,
    "pt": null
@@ -568,8 +568,8 @@
    "pt": null
   },
   "ad.error": {
-   "vi": "Lỗi quảng cáo, không mất coin",
-   "en": "Ad error, no coins lost",
+   "vi": "Lỗi quảng cáo, không mất ruby",
+   "en": "Ad error, no rubies lost",
    "fr": null,
    "es": null,
    "pt": null

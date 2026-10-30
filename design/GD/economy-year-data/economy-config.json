@@ -7,7 +7,9 @@
   "displayLocKey": "currency.coin",
   "startBalance": 100,
   "secondCurrency": null,
-  "designNote": "Coin là thiết kế mới theo yêu cầu user; GD/runtime hiện tại vẫn là ruby (CurrencyController, 10 ruby khởi đầu). Không migration/runtime ở task này."
+  "displayName": "ruby",
+  "runtimeCurrency": "ruby",
+  "designNote": "USER chốt GIỮ RUBY: không đổi tên tiền tệ runtime, không migration, không chuyển đổi số dư; mọi giá trị kinh tế trong dữ liệu này áp dụng trực tiếp cho ruby. Khóa kỹ thuật coin, *Coin, id currency 'coin' và mọi ID/path giữ nguyên để tương thích consumer/runtime; mọi 'coin' trong khóa/trường = lượng ruby, không phải currency coin khác. Upload OTA R2 chỉ sau smoke test pass khi triển khai runtime; không git push; task design này không build/upload."
  },
  "earn": {
   "firstWinCoin": 10,
@@ -231,7 +233,7 @@
   ],
   "rules": [
    "Thưởng chỉ cộng ở callback hoàn thành, idempotent theo sessionId.",
-   "no_fill/offline/error/cancelled/cap/cooldown: không thưởng, không trừ coin, không chặn chơi.",
+   "no_fill/offline/error/cancelled/cap/cooldown: không thưởng, không trừ ruby, không chặn chơi.",
    "Nhiệm vụ không bao giờ requiresAd/requiresPurchase.",
    "Mua bất kỳ gói removesAds tắt interstitial/banner; rewarded vẫn tuỳ chọn."
   ],
@@ -380,7 +382,7 @@
    "net": 60
   },
   "adsExcluded": true,
-  "note": "Free player (không IAP, không ads) hoà vốn ở mức casual và dư ~60/ngày khi chơi nhiều; ads chỉ cộng thêm, tối đa maxRewardedCoinPerDay."
+  "note": "Free player (không IAP, không ads; đơn vị ruby) hoà vốn ở mức casual và dư ~60/ngày khi chơi nhiều; ads chỉ cộng thêm, tối đa maxRewardedCoinPerDay."
  },
  "rules": {
   "timeBasis": "UTC",
@@ -395,6 +397,6 @@
   "clockGuard": "Lưu maxSeenUtcDay; không lùi. Nhảy tiến nhiều ngày: không bù phần thưởng quá khứ, kỳ nhiệm vụ cũ hết hạn, streak chỉ sửa được khi lỡ đúng 1 ngày bằng sk_streak_repair.",
   "offline": "Tiến độ và claim ghi ledger cục bộ; ads/IAP cần mạng; đồng bộ server (nếu có sau này) dựa trên claimKey, bản ghi trùng key bị bỏ.",
   "expiry": "Nhiệm vụ daily hết hạn 00:00 UTC kế tiếp; weekly hết hạn khi sang tuần; monthly khi sang tháng thiết kế; event hết hạn sau endDay. Chưa claim thì mất.",
-  "cycleRollover": "Sang C{n+1}: reset tiến độ nhiệm vụ/sự kiện/milestone per_cycle; giữ coin, streak, best streak, levelMilestones, mua hàng."
+  "cycleRollover": "Sang C{n+1}: reset tiến độ nhiệm vụ/sự kiện/milestone per_cycle; giữ ruby (khóa coin), streak, best streak, levelMilestones, mua hàng."
  }
 }
