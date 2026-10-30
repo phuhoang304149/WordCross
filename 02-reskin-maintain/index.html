@@ -693,6 +693,20 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "criteria": "ProjectSettings iOS id đúng"
     },
     {
+      "id": "T132",
+      "title": "Smoke test UI + luồng chơi trên iOS Simulator (sau full test Android)",
+      "type": "runtime",
+      "status": "waiting",
+      "screen": "Build · thiết bị Android",
+      "goal": "Game chạy trên iOS Simulator: Bootstrap → Home → SelectWorld → SelectLevel → Main → Win, popup, đổi ngôn ngữ",
+      "scope": "Unity batch build iOS (SDK Simulator, không ký), xcodebuild iphonesimulator, HybridCLR Generate cho iOS, CLR + Addressables target iOS lên R2 wordcross/1.0.0/clr|data/ios; điều khiển bằng công cụ iOS Simulator (screenshot/tap/swipe) + simctl log",
+      "owner": "CLAUDE (dev)",
+      "deps": "T123",
+      "criteria": "Ảnh simulator từng màn khớp design (so như Android), 0 exception trong log, chơi thắng level 1, đổi 5 ngôn ngữ",
+      "evidence": "",
+      "note": "[2026-10-30] USER hỏi chạy được không → được: Xcode 27.1, runtime iOS 18.3/18.6/27.0, Unity iOSSupport có sẵn. Giới hạn: Ads tắt (chưa có AdMob iOS ID, T049), IAP không mua được trên simulator (chỉ kiểm Shop mở + không crash), không phải máy thật. Chạy sau khi T123 TMP xong + full test Android."
+    },
+    {
       "id": "T049",
       "title": "AdMob iOS App ID / ad unit",
       "type": "ads-iap-ota",
