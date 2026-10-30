@@ -704,7 +704,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "deps": "T123",
       "criteria": "Ảnh simulator từng màn khớp design (so như Android), 0 exception trong log, chơi thắng level 1, đổi 5 ngôn ngữ",
       "evidence": "",
-      "note": "[2026-10-30] USER hỏi chạy được không → được: Xcode 27.1, runtime iOS 18.3/18.6/27.0, Unity iOSSupport có sẵn. Giới hạn: Ads tắt (chưa có AdMob iOS ID, T049), IAP không mua được trên simulator (chỉ kiểm Shop mở + không crash), không phải máy thật. Chạy sau khi T123 TMP xong + full test Android.\n[2026-10-30 USER] Quy trình iOS: vào ClrConfiguration → Apply cho iOS → build lại CLR cho iOS; sau đó build Addressables iOS và upload theo path tương tự Android (wordcross/1.0.0/clr/ios/…, wordcross/1.0.0/data/ios). Không đụng file Android."
+      "note": "[2026-10-30] USER hỏi chạy được không → được: Xcode 27.1, runtime iOS 18.3/18.6/27.0, Unity iOSSupport có sẵn. Giới hạn: Ads tắt (chưa có AdMob iOS ID, T049), IAP không mua được trên simulator (chỉ kiểm Shop mở + không crash), không phải máy thật. Chạy sau khi T123 TMP xong + full test Android.\n[2026-10-30 USER] Quy trình iOS: vào ClrConfiguration → Apply cho iOS → build lại CLR cho iOS; sau đó build Addressables iOS và upload theo path tương tự Android (wordcross/1.0.0/clr/ios/…, wordcross/1.0.0/data/ios). Không đụng file Android.\n[2026-10-30 USER chốt path] Android GIỮ NGUYÊN (wordcross/1.0.0/clr/android/Upload, wordcross/1.0.0/data/android). iOS tạo thêm nhánh riêng: wordcross/1.0.0/ios/clr và wordcross/1.0.0/ios/data (cấu hình profile/clrUrl iOS sao cho không bị nhân đôi thư mục platform, vd không thành ios/clr/ios/Upload — nếu pipeline bắt buộc thêm hậu tố platform thì báo/ghi rõ đường cuối cùng)."
     },
     {
       "id": "T049",
