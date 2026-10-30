@@ -10,19 +10,24 @@ public class HomeController : BaseController {
     private const int BOT = 2;
     private const int AI = 3;
     private const int LANGUAGE = 4;
+    private const int QUESTS = 5;
     private const int DAILY_FONT = 32;
     private const int DAILY_MIN_FONT = 18;
 
     public TMP_Text resumeText;
     // Chấm đỏ trên nút DAILY (để trống thì tự tìm "Dot" dưới object "Daily" của scene).
     public GameObject dailyDot;
+    // Chấm đỏ trên nút Nhiệm vụ & Thưởng: còn thưởng chờ nhận.
+    public GameObject questsDot;
 
     protected override void Start()
     {
         base.Start();
         UpdateResume();
         UpdateDailyDot();
+        UpdateQuestsDot();
         Invoke("FitDailyLabel", 0f);
+        Locator<EconomyService>.Instance.onChanged += UpdateQuestsDot;
         Locator<LocalizationController>.Instance.onLanguageChanged += OnLanguageChanged;
         Locator<LocalizationController>.Instance.onGameLanguageChanged += OnGameLanguageChanged;
         if (GameState.openDailyOnHome)
@@ -51,8 +56,18 @@ public class HomeController : BaseController {
         dailyDot.SetActive(!challenge.IsSolved(challenge.Today()));
     }
 
+    // Chấm đỏ hiện khi bất kỳ tab nhiệm vụ/thưởng nào có mục nhận được.
+    public void UpdateQuestsDot()
+    {
+        if (questsDot == null) return;
+        var econ = Locator<EconomyService>.Instance;
+        questsDot.SetActive(econ.HasClaimable(econ.LevelsCleared));
+    }
+
     private void OnDestroy()
     {
+        if (Locator<EconomyService>.Instance != null)
+            Locator<EconomyService>.Instance.onChanged -= UpdateQuestsDot;
         if (Locator<LocalizationController>.Instance != null)
             Locator<LocalizationController>.Instance.onLanguageChanged -= OnLanguageChanged;
         if (Locator<LocalizationController>.Instance != null)
@@ -121,6 +136,9 @@ public class HomeController : BaseController {
                 break;
             case LANGUAGE:
                 DialogController.instance.ShowDialog(DialogType.Language);
+                break;
+            case QUESTS:
+                DialogController.instance.ShowDialog(DialogType.Quests);
                 break;
         }
         Sound.instance.PlayButton();

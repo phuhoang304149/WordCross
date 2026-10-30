@@ -42,7 +42,8 @@ public class BaseController : MonoBehaviour {
     {
         Debug.Log("On Application Pause");
         CPlayerPrefs.Save();
-        if (pause == false)
+        // Kinh tế coin (T134): interstitial chỉ sau thắng, không bật lại khi quay về app.
+        if (pause == false && Script.Utils.Locator<WordCross.Gameplay.EconomyService>.Instance == null)
         {
             Timer.Schedule(this, 0.5f, () =>
             {

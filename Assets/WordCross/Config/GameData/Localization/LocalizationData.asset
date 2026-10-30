@@ -19,2061 +19,3002 @@ MonoBehaviour:
   - es
   - pt
   entries:
-  - key: "brand.sub"
-    values:
-    - "DEMO · tên hiển thị chỉnh theo bản chính"
-    - "DEMO · display name to be confirmed"
-    - "DÉMO · le nom affiché sera ajusté dans la version finale"
-    - "DEMO · el nombre visible se ajustará en la versión final"
-    - "DEMO · o nome exibido será ajustado na versão final"
-  - key: "tag.sample"
-    values:
-    - "MẪU"
-    - "SAMPLE"
-    - "EXEMPLE"
-    - "MUESTRA"
-    - "AMOSTRA"
-  - key: "tag.demo"
-    values:
-    - "DEMO"
-    - "DEMO"
-    - "DÉMO"
-    - "DEMO"
-    - "DEMO"
-  - key: "tag.sampleLevel"
-    values:
-    - "Level mẫu (dữ liệu thật rút gọn)"
-    - "Sample level (real data, trimmed)"
-    - "Niveau d'exemple (données réelles, abrégées)"
-    - "Nivel de muestra (datos reales, resumidos)"
-    - "Nível de amostra (dados reais, resumidos)"
-  - key: "common.back"
-    values:
-    - "Quay lại"
-    - "Back"
-    - "Retour"
-    - "Atrás"
-    - "Voltar"
-  - key: "common.close"
-    values:
-    - "Đóng"
-    - "Close"
-    - "Fermer"
-    - "Cerrar"
-    - "Fechar"
-  - key: "common.ok"
-    values:
-    - "OK"
-    - "OK"
-    - "OK"
-    - "OK"
-    - "OK"
-  - key: "common.continue"
-    values:
-    - "TIẾP TỤC"
-    - "CONTINUE"
-    - "CONTINUER"
-    - "CONTINUAR"
-    - "CONTINUAR"
-  - key: "common.gotIt"
-    values:
-    - "ĐÃ HIỂU"
-    - "GOT IT"
-    - "COMPRIS"
-    - "ENTENDIDO"
-    - "ENTENDI"
-  - key: "common.later"
-    values:
-    - "ĐỂ SAU"
-    - "LATER"
-    - "PLUS TARD"
-    - "MÁS TARDE"
-    - "DEPOIS"
-  - key: "common.skip"
-    values:
-    - "BỎ QUA, CHƠI TIẾP"
-    - "SKIP, KEEP PLAYING"
-    - "PASSER, CONTINUER À JOUER"
-    - "OMITIR, SEGUIR JUGANDO"
-    - "PULAR, CONTINUAR JOGANDO"
-  - key: "common.rubies"
-    values:
-    - "ruby"
-    - "rubies"
-    - "rubis"
-    - "rubíes"
-    - "rubis"
-  - key: "common.balance"
-    values:
-    - "Số ruby"
-    - "Ruby balance"
-    - "Solde de rubis"
-    - "Saldo de rubíes"
-    - "Saldo de rubis"
-  - key: "common.addRubies"
-    values:
-    - "Thêm ruby"
-    - "Get rubies"
-    - "Obtenir des rubis"
-    - "Conseguir rubíes"
-    - "Ganhar rubis"
-  - key: "common.soon"
-    values:
-    - "SẮP CÓ"
-    - "SOON"
-    - "BIENTÔT"
-    - "PRONTO"
-    - "EM BREVE"
-  - key: "common.level"
-    values:
-    - "Level {n}"
-    - "Level {n}"
-    - "Niveau {n}"
-    - "Nivel {n}"
-    - "Nível {n}"
-  - key: "common.retry"
-    values:
-    - "THỬ LẠI"
-    - "TRY AGAIN"
-    - "RÉESSAYER"
-    - "REINTENTAR"
-    - "TENTAR DE NOVO"
-  - key: "home.play"
-    values:
-    - "CHƠI"
-    - "PLAY"
-    - "JOUER"
-    - "JUGAR"
-    - "JOGAR"
-  - key: "home.daily"
-    values:
-    - "HÔM NAY"
-    - "DAILY"
-    - "QUOTIDIEN"
-    - "DIARIO"
-    - "DIÁRIO"
-  - key: "home.bot"
-    values:
-    - "ĐẤU BOT"
-    - "VS BOT"
-    - "VS BOT"
-    - "VS BOT"
-    - "VS BOT"
-  - key: "home.ai"
-    values:
-    - "ĐẤU AI"
-    - "VS AI"
-    - "VS IA"
-    - "VS IA"
-    - "VS IA"
-  - key: "home.shop"
-    values:
-    - "CỬA HÀNG"
-    - "SHOP"
-    - "BOUTIQUE"
-    - "TIENDA"
-    - "LOJA"
-  - key: "home.rate"
-    values:
-    - "ĐÁNH GIÁ"
-    - "RATE"
-    - "NOTER"
-    - "VALORAR"
-    - "AVALIAR"
-  - key: "home.lang"
-    values:
-    - "Ngôn ngữ"
-    - "Language"
-    - "Langue"
-    - "Idioma"
-    - "Idioma"
-  - key: "home.resume"
-    values:
-    - "Tiếp tục: Subworld {s} - {l}"
-    - "Resume: Subworld {s} - {l}"
-    - "Reprendre : Sous-monde {s} - {l}"
-    - "Continuar: Submundo {s} - {l}"
-    - "Continuar: Submundo {s} - {l}"
-  - key: "world.title"
-    values:
-    - "Chọn World"
-    - "Select World"
-    - "Choisir un monde"
-    - "Elegir mundo"
-    - "Escolher mundo"
-  - key: "world.name"
-    values:
-    - "World {n}"
-    - "World {n}"
-    - "Monde {n}"
-    - "Mundo {n}"
-    - "Mundo {n}"
-  - key: "world.swipe"
-    values:
-    - "vuốt để đổi"
-    - "swipe to change"
-    - "balayez pour changer"
-    - "desliza para cambiar"
-    - "deslize para mudar"
-  - key: "world.sub"
-    values:
-    - "Subworld {n}"
-    - "Subworld {n}"
-    - "Sous-monde {n}"
-    - "Submundo {n}"
-    - "Submundo {n}"
-  - key: "world.locked"
-    values:
-    - "Chưa mở khoá"
-    - "Locked"
-    - "Verrouillé"
-    - "Bloqueado"
-    - "Bloqueado"
-  - key: "lvl.title"
-    values:
-    - "Subworld {n}"
-    - "Subworld {n}"
-    - "Sous-monde {n}"
-    - "Submundo {n}"
-    - "Submundo {n}"
-  - key: "lvl.locked"
-    values:
-    - "Level {n}, chưa mở"
-    - "Level {n}, locked"
-    - "Niveau {n}, verrouillé"
-    - "Nivel {n}, bloqueado"
-    - "Nível {n}, bloqueado"
-  - key: "lvl.done"
-    values:
-    - "Level {n}, đã xong"
-    - "Level {n}, completed"
-    - "Niveau {n}, terminé"
-    - "Nivel {n}, completado"
-    - "Nível {n}, concluído"
-  - key: "lvl.cur"
-    values:
-    - "Level {n}, level hiện tại"
-    - "Level {n}, current"
-    - "Niveau {n}, niveau actuel"
-    - "Nivel {n}, nivel actual"
-    - "Nível {n}, nível atual"
-  - key: "game.shuffle"
-    values:
-    - "Xáo chữ"
-    - "Shuffle"
-    - "Mélanger"
-    - "Mezclar"
-    - "Embaralhar"
-  - key: "game.hint"
-    values:
-    - "Gợi ý"
-    - "Hint"
-    - "Indice"
-    - "Pista"
-    - "Dica"
-  - key: "game.extra"
-    values:
-    - "Từ thưởng"
-    - "Extra"
-    - "Bonus"
-    - "Extra"
-    - "Extras"
-  - key: "game.ask"
-    values:
-    - "Hỏi bạn"
-    - "Ask friend"
-    - "Demander"
-    - "Preguntar"
-    - "Pedir ajuda"
-  - key: "game.pause"
-    values:
-    - "Tạm dừng"
-    - "Pause"
-    - "Pause"
-    - "Pausa"
-    - "Pausa"
-  - key: "game.banner"
-    values:
-    - "QUẢNG CÁO BANNER (chỗ giữ)"
-    - "BANNER AD (placeholder)"
-    - "BANNIÈRE PUBLICITAIRE (espace réservé)"
-    - "BANNER PUBLICITARIO (marcador)"
-    - "BANNER DE ANÚNCIO (espaço reservado)"
-  - key: "game.nice"
-    values:
-    - "Hay! {w}"
-    - "Nice! {w}"
-    - "Bravo ! {w}"
-    - "¡Bien! {w}"
-    - "Boa! {w}"
-  - key: "game.already"
-    values:
-    - "Đã tìm rồi"
-    - "Already found"
-    - "Déjà trouvé"
-    - "Ya encontrada"
-    - "Já encontrada"
-  - key: "game.notIn"
-    values:
-    - "Không có trong danh sách"
-    - "Not in list"
-    - "Pas dans la liste"
-    - "No está en la lista"
-    - "Não está na lista"
-  - key: "game.extraFound"
-    values:
-    - "Từ thưởng: {w}"
-    - "Extra word: {w}"
-    - "Mot bonus : {w}"
-    - "Palabra extra: {w}"
-    - "Palavra extra: {w}"
-  - key: "game.extraAgain"
-    values:
-    - "Từ thưởng đã có"
-    - "Extra already found"
-    - "Mot bonus déjà trouvé"
-    - "Palabra extra ya encontrada"
-    - "Palavra extra já encontrada"
-  - key: "game.ask.msg"
-    values:
-    - "Mở chia sẻ ảnh chụp (native share, ngoài prototype)"
-    - "Opens screenshot share (native, outside prototype)"
-    - "Ouvre le partage de capture d'écran (natif, hors prototype)"
-    - "Abre el uso compartido de capturas (nativo, fuera del prototipo)"
-    - "Abre o compartilhamento de captura de tela (nativo, fora do protótipo)"
-  - key: "game.coach1"
-    values:
-    - "Vuốt qua các chữ để ghép từ."
-    - "Swipe across the letters to build a word."
-    - "Glissez sur les lettres pour former un mot."
-    - "Desliza sobre las letras para formar una palabra."
-    - "Deslize pelas letras para formar uma palavra."
-  - key: "game.coach2"
-    values:
-    - "Tìm đủ các từ để thắng. Không cần ruby."
-    - "Find every word to win. No rubies needed."
-    - "Trouvez tous les mots pour gagner. Aucun rubis requis."
-    - "Encuentra todas las palabras para ganar. No hacen falta rubíes."
-    - "Encontre todas as palavras para vencer. Não precisa de rubis."
-  - key: "game.coachDaily"
-    values:
-    - "Mục tiêu hôm nay: tìm đủ {n} từ."
-    - "Today's goal: find all {n} words."
-    - "Objectif du jour : trouver les {n} mots."
-    - "Objetivo de hoy: encuentra las {n} palabras."
-    - "Meta de hoje: encontrar as {n} palavras."
-  - key: "game.dailyName"
-    values:
-    - "Ngày {d}"
-    - "Daily {d}"
-    - "Défi {d}"
-    - "Reto {d}"
-    - "Desafio {d}"
-  - key: "game.words"
-    values:
-    - "{a}/{b} từ"
-    - "{a}/{b} words"
-    - "{a}/{b} mots"
-    - "{a}/{b} palabras"
-    - "{a}/{b} palavras"
-  - key: "game.hintFree"
-    values:
-    - "Gợi ý mở 1 chữ. Tuỳ chọn."
-    - "A hint reveals 1 letter. Optional."
-    - "Un indice révèle 1 lettre. Facultatif."
-    - "Una pista revela 1 letra. Opcional."
-    - "Uma dica revela 1 letra. Opcional."
-  - key: "pause.title"
-    values:
-    - "TẠM DỪNG"
-    - "PAUSE"
-    - "PAUSE"
-    - "PAUSA"
-    - "PAUSA"
-  - key: "pause.music"
-    values:
-    - "Nhạc"
-    - "Music"
-    - "Musique"
-    - "Música"
-    - "Música"
-  - key: "pause.sound"
-    values:
-    - "Âm thanh"
-    - "Sound"
-    - "Sons"
-    - "Sonido"
-    - "Som"
-  - key: "pause.continue"
-    values:
-    - "TIẾP TỤC"
-    - "CONTINUE"
-    - "CONTINUER"
-    - "CONTINUAR"
-    - "CONTINUAR"
-  - key: "pause.how"
-    values:
-    - "CÁCH CHƠI"
-    - "HOW TO PLAY"
-    - "COMMENT JOUER"
-    - "CÓMO JUGAR"
-    - "COMO JOGAR"
-  - key: "pause.menu"
-    values:
-    - "VỀ MENU"
-    - "TO MENU"
-    - "AU MENU"
-    - "AL MENÚ"
-    - "PARA O MENU"
-  - key: "pause.quit"
-    values:
-    - "THOÁT"
-    - "QUIT"
-    - "QUITTER"
-    - "SALIR"
-    - "SAIR"
-  - key: "pause.lang"
-    values:
-    - "NGÔN NGỮ"
-    - "LANGUAGE"
-    - "LANGUE"
-    - "IDIOMA"
-    - "IDIOMA"
-  - key: "how.title"
-    values:
-    - "CÁCH CHƠI ?"
-    - "HOW TO PLAY ?"
-    - "COMMENT JOUER ?"
-    - "¿CÓMO JUGAR?"
-    - "COMO JOGAR?"
-  - key: "how.1"
-    values:
-    - "Vuốt để ghép thành từ hợp lệ."
-    - "Swipe to build a valid word."
-    - "Glissez pour former un mot valide."
-    - "Desliza para formar una palabra válida."
-    - "Deslize para formar uma palavra válida."
-  - key: "how.2"
-    values:
-    - "Dùng \"Xáo chữ\" hoặc \"Gợi ý\" khi bí. Bạn cũng có thể chụp màn hình hỏi bạn bè."
-    - "Use \"Shuffle\" or \"Hint\" if you are stuck. You can also take a screenshot and ask friends."
-    - "Utilisez « Mélanger » ou « Indice » si vous bloquez. Vous pouvez aussi faire une capture d'écran et demander à vos amis."
-    - "Usa «Mezclar» o «Pista» si te atascas. También puedes hacer una captura y preguntar a tus amigos."
-    - "Use «Embaralhar» ou «Dica» se travar. Você também pode tirar uma captura de tela e pedir ajuda aos amigos."
-  - key: "how.3"
-    values:
-    - "Xáo chữ miễn phí. Gợi ý tốn ruby nhưng không bắt buộc."
-    - "Shuffle is free. Hints cost rubies but are never required."
-    - "Mélanger est gratuit. Les indices coûtent des rubis mais ne sont jamais obligatoires."
-    - "Mezclar es gratis. Las pistas cuestan rubíes, pero nunca son obligatorias."
-    - "Embaralhar é grátis. As dicas custam rubis, mas nunca são obrigatórias."
-  - key: "win.title"
-    values:
-    - "HOÀN THÀNH LEVEL!"
-    - "LEVEL COMPLETE!"
-    - "NIVEAU TERMINÉ !"
-    - "¡NIVEL COMPLETADO!"
-    - "NÍVEL CONCLUÍDO!"
-  - key: "win.next"
-    values:
-    - "TIẾP"
-    - "NEXT"
-    - "SUIVANT"
-    - "SIGUIENTE"
-    - "PRÓXIMO"
-  - key: "win.menu"
-    values:
-    - "MENU"
-    - "MENU"
-    - "MENU"
-    - "MENÚ"
-    - "MENU"
-  - key: "win.first"
-    values:
-    - "Lần đầu thắng: +{n} ruby"
-    - "First clear: +{n} rubies"
-    - "Première victoire : +{n} rubis"
-    - "Primera victoria: +{n} rubíes"
-    - "Primeira vitória: +{n} rubis"
-  - key: "win.replay"
-    values:
-    - "Chơi lại để luyện tập: không thêm ruby"
-    - "Replay is practice: no extra rubies"
-    - "Rejouer sert à s'entraîner : pas de rubis en plus"
-    - "Repetir es práctica: sin rubíes extra"
-    - "Jogar de novo é treino: sem rubis extras"
-  - key: "win.x2"
-    values:
-    - "XEM VIDEO: +{n} ruby nữa"
-    - "WATCH VIDEO: +{n} more rubies"
-    - "VIDÉO : +{n} rubis de plus"
-    - "VER VÍDEO: +{n} rubíes más"
-    - "ASSISTIR VÍDEO: +{n} rubis a mais"
-  - key: "win.x2done"
-    values:
-    - "Đã nhận thưởng thêm"
-    - "Bonus collected"
-    - "Bonus récupéré"
-    - "Bonus recogido"
-    - "Bônus resgatado"
-  - key: "win.goal"
-    values:
-    - "Tiếp theo: Level {l} · còn {n} level để mở Subworld kế"
-    - "Next: Level {l} · {n} more levels to unlock the next Subworld"
-    - "Suite : niveau {l} · encore {n} niveaux pour débloquer le sous-monde suivant"
-    - "Siguiente: nivel {l} · faltan {n} niveles para desbloquear el siguiente submundo"
-    - "Próximo: nível {l} · faltam {n} níveis para liberar o próximo submundo"
-  - key: "win.goalLast"
-    values:
-    - "Subworld hoàn thành! Tiếp theo: Subworld {s}"
-    - "Subworld complete! Next: Subworld {s}"
-    - "Sous-monde terminé ! Suite : sous-monde {s}"
-    - "¡Submundo completado! Siguiente: submundo {s}"
-    - "Submundo concluído! Próximo: submundo {s}"
-  - key: "win.extraReady"
-    values:
-    - "Từ thưởng {a}/{b}: sẵn sàng nhận"
-    - "Extra words {a}/{b}: ready to claim"
-    - "Mots bonus {a}/{b} : prêt à récupérer"
-    - "Palabras extra {a}/{b}: listas para recoger"
-    - "Palavras extras {a}/{b}: prontas para resgatar"
-  - key: "win.extraNot"
-    values:
-    - "Từ thưởng {a}/{b}"
-    - "Extra words {a}/{b}"
-    - "Mots bonus {a}/{b}"
-    - "Palabras extra {a}/{b}"
-    - "Palavras extras {a}/{b}"
-  - key: "win.dailyTitle"
-    values:
-    - "XONG THỬ THÁCH!"
-    - "DAILY COMPLETE!"
-    - "DÉFI TERMINÉ !"
-    - "¡RETO COMPLETADO!"
-    - "DESAFIO CONCLUÍDO!"
-  - key: "win.dailyReward"
-    values:
-    - "Thưởng hôm nay: +{n} ruby"
-    - "Today's reward: +{n} rubies"
-    - "Récompense du jour : +{n} rubis"
-    - "Recompensa de hoy: +{n} rubíes"
-    - "Recompensa de hoje: +{n} rubis"
-  - key: "win.streak"
-    values:
-    - "Chuỗi {n} ngày"
-    - "{n}-day streak"
-    - "Série de {n} jours"
-    - "Racha de {n} días"
-    - "Sequência de {n} dias"
-  - key: "win.streak.one"
-    values:
-    - "Chuỗi {n} ngày"
-    - "{n}-day streak"
-    - "Série de {n} jour"
-    - "Racha de {n} día"
-    - "Sequência de {n} dia"
-  - key: "win.milestone"
-    values:
-    - "Mốc chuỗi {d} ngày: +{n} ruby"
-    - "{d}-day streak bonus: +{n} rubies"
-    - "Bonus pour {d} jours de suite : +{n} rubis"
-    - "Bono por {d} días seguidos: +{n} rubíes"
-    - "Bônus por {d} dias seguidos: +{n} rubis"
-  - key: "win.dailyNext"
-    values:
-    - "Mai có thử thách mới. Giữ chuỗi nhé!"
-    - "A new puzzle tomorrow. Keep your streak!"
-    - "Un nouveau défi demain. Continuez votre série !"
-    - "Mañana hay un reto nuevo. ¡Mantén tu racha!"
-    - "Amanhã tem desafio novo. Mantenha sua sequência!"
-  - key: "win.toDaily"
-    values:
-    - "VỀ LỊCH NGÀY"
-    - "BACK TO DAILY"
-    - "VOIR LE CALENDRIER"
-    - "VER CALENDARIO"
-    - "VER CALENDÁRIO"
-  - key: "extra.title"
-    values:
-    - "TỪ THƯỞNG"
-    - "EXTRA WORDS"
-    - "MOTS BONUS"
-    - "PALABRAS EXTRA"
-    - "PALAVRAS EXTRAS"
-  - key: "extra.desc"
-    values:
-    - "Tìm thêm từ mới để nhận ruby"
-    - "Find more and more new words to collect rubies"
-    - "Trouvez de nouveaux mots pour gagner des rubis"
-    - "Encuentra más palabras nuevas para conseguir rubíes"
-    - "Encontre mais palavras novas para ganhar rubis"
-  - key: "extra.claim"
-    values:
-    - "NHẬN +{n} RUBY"
-    - "CLAIM +{n} RUBIES"
-    - "RÉCUPÉRER +{n} RUBIS"
-    - "RECOGER +{n} RUBÍES"
-    - "RESGATAR +{n} RUBIS"
-  - key: "extra.claimed"
-    values:
-    - "Đã nhận +{n} ruby"
-    - "Claimed +{n} rubies"
-    - "+{n} rubis récupérés"
-    - "Recogidos +{n} rubíes"
-    - "+{n} rubis resgatados"
-  - key: "extra.note"
-    values:
-    - "Từ thưởng chỉ tính một lần cho mỗi level."
-    - "Each extra word counts once per level."
-    - "Chaque mot bonus compte une fois par niveau."
-    - "Cada palabra extra cuenta una vez por nivel."
-    - "Cada palavra extra conta uma vez por nível."
-  - key: "shop.title"
-    values:
-    - "CỬA HÀNG"
-    - "SHOP"
-    - "BOUTIQUE"
-    - "TIENDA"
-    - "LOJA"
-  - key: "shop.free"
-    values:
-    - "RUBY MIỄN PHÍ"
-    - "FREE RUBIES"
-    - "RUBIS GRATUITS"
-    - "RUBÍES GRATIS"
-    - "RUBIS GRÁTIS"
-  - key: "shop.watch"
-    values:
-    - "XEM"
-    - "WATCH"
-    - "VOIR"
-    - "VER"
-    - "VER"
-  - key: "shop.ready"
-    values:
-    - "Xem video ngắn: +{n} ruby"
-    - "Short video: +{n} rubies"
-    - "Courte vidéo : +{n} rubis"
-    - "Vídeo corto: +{n} rubíes"
-    - "Vídeo curto: +{n} rubis"
-  - key: "shop.cool"
-    values:
-    - "Video sẵn sàng sau {t}"
-    - "Ad available in {t}"
-    - "Vidéo disponible dans {t}"
-    - "Vídeo disponible en {t}"
-    - "Vídeo disponível em {t}"
-  - key: "shop.pack"
-    values:
-    - "{n} ruby"
-    - "{n} rubies"
-    - "{n} rubis"
-    - "{n} rubíes"
-    - "{n} rubis"
-  - key: "shop.note"
-    values:
-    - "Mua bất kỳ gói nào sẽ tắt quảng cáo (không tắt video tuỳ chọn) · giá demo"
-    - "Buy any item removes ads (optional videos stay) · demo prices"
-    - "Tout achat supprime les publicités (les vidéos facultatives restent) · prix de démo"
-    - "Cualquier compra elimina los anuncios (los vídeos opcionales se mantienen) · precios de demo"
-    - "Qualquer compra remove os anúncios (vídeos opcionais continuam) · preços de demonstração"
-  - key: "shop.noCheckout"
-    values:
-    - "DEMO: chưa có thanh toán thật, chưa xác minh IAP."
-    - "DEMO: no real checkout, IAP not verified."
-    - "DÉMO : pas de vrai paiement, achat non vérifié."
-    - "DEMO: no hay pago real, compra no verificada."
-    - "DEMO: sem pagamento real, compra não verificada."
-  - key: "shop.best"
-    values:
-    - "LỜI NHẤT"
-    - "BEST VALUE"
-    - "MEILLEURE OFFRE"
-    - "MEJOR OFERTA"
-    - "MELHOR OFERTA"
-  - key: "shop.adsOff"
-    values:
-    - "Quảng cáo đã tắt (mô phỏng)"
-    - "Ads removed (simulated)"
-    - "Publicités supprimées (simulation)"
-    - "Anuncios eliminados (simulado)"
-    - "Anúncios removidos (simulado)"
-  - key: "rv.title"
-    values:
-    - "XEM VIDEO"
-    - "WATCH A VIDEO"
-    - "REGARDER UNE VIDÉO"
-    - "VER UN VÍDEO"
-    - "ASSISTIR A UM VÍDEO"
-  - key: "rv.value"
-    values:
-    - "Xem hết video để nhận"
-    - "Watch the whole video to get"
-    - "Regardez toute la vidéo pour obtenir"
-    - "Mira el vídeo completo para obtener"
-    - "Assista ao vídeo inteiro para ganhar"
-  - key: "rv.watch"
-    values:
-    - "XEM VIDEO"
-    - "WATCH VIDEO"
-    - "REGARDER LA VIDÉO"
-    - "VER VÍDEO"
-    - "ASSISTIR AO VÍDEO"
-  - key: "rv.no"
-    values:
-    - "KHÔNG, CẢM ƠN"
-    - "NO THANKS"
-    - "NON, MERCI"
-    - "NO, GRACIAS"
-    - "NÃO, OBRIGADO"
-  - key: "rv.s.loading"
-    values:
-    - "Đang tải video…"
-    - "Loading video…"
-    - "Chargement de la vidéo…"
-    - "Cargando vídeo…"
-    - "Carregando vídeo…"
-  - key: "rv.d.loading"
-    values:
-    - "Bạn vẫn chơi bình thường trong lúc chờ."
-    - "You can keep playing while it loads."
-    - "Vous pouvez continuer à jouer pendant le chargement."
-    - "Puedes seguir jugando mientras carga."
-    - "Você pode continuar jogando enquanto carrega."
-  - key: "rv.s.cooldown"
-    values:
-    - "Video tiếp theo sau {t}"
-    - "Next video in {t}"
-    - "Prochaine vidéo dans {t}"
-    - "Próximo vídeo en {t}"
-    - "Próximo vídeo em {t}"
-  - key: "rv.d.cooldown"
-    values:
-    - "Chưa mất gì. Quay lại sau nhé."
-    - "Nothing lost. Come back soon."
-    - "Rien de perdu. Revenez bientôt."
-    - "No has perdido nada. Vuelve pronto."
-    - "Você não perdeu nada. Volte em breve."
-  - key: "rv.s.nofill"
-    values:
-    - "Chưa có video lúc này"
-    - "No video available right now"
-    - "Aucune vidéo disponible pour le moment"
-    - "No hay vídeo disponible ahora"
-    - "Nenhum vídeo disponível agora"
-  - key: "rv.d.nofill"
-    values:
-    - "Không trừ ruby, không có thưởng. Thử lại sau."
-    - "No rubies charged, no reward. Try later."
-    - "Aucun rubis débité, aucune récompense. Réessayez plus tard."
-    - "No se cobran rubíes ni hay recompensa. Inténtalo más tarde."
-    - "Nenhum rubi cobrado e nenhuma recompensa. Tente mais tarde."
-  - key: "rv.s.offline"
-    values:
-    - "Bạn đang offline"
-    - "You're offline"
-    - "Vous êtes hors ligne"
-    - "Estás sin conexión"
-    - "Você está offline"
-  - key: "rv.d.offline"
-    values:
-    - "Ruby từ video cần mạng. Chơi vẫn bình thường."
-    - "Video rubies need internet. Play continues normally."
-    - "Les rubis vidéo nécessitent Internet. Le jeu continue normalement."
-    - "Los rubíes del vídeo necesitan internet. El juego sigue con normalidad."
-    - "Os rubis do vídeo precisam de internet. O jogo continua normalmente."
-  - key: "rv.s.playing"
-    values:
-    - "QUẢNG CÁO MÔ PHỎNG"
-    - "SIMULATED AD"
-    - "PUBLICITÉ SIMULÉE"
-    - "ANUNCIO SIMULADO"
-    - "ANÚNCIO SIMULADO"
-  - key: "rv.d.playing"
-    values:
-    - "Không phải quảng cáo thật. Còn {n}s"
-    - "Not a real ad. {n}s left"
-    - "Ce n'est pas une vraie publicité. Encore {n} s"
-    - "No es un anuncio real. Quedan {n} s"
-    - "Não é um anúncio real. Faltam {n} s"
-  - key: "rv.closeAd"
-    values:
-    - "ĐÓNG QUẢNG CÁO"
-    - "CLOSE AD"
-    - "FERMER LA PUBLICITÉ"
-    - "CERRAR ANUNCIO"
-    - "FECHAR ANÚNCIO"
-  - key: "rv.s.success"
-    values:
-    - "NHẬN THƯỞNG!"
-    - "REWARD EARNED!"
-    - "RÉCOMPENSE OBTENUE !"
-    - "¡RECOMPENSA OBTENIDA!"
-    - "RECOMPENSA GANHA!"
-  - key: "rv.d.success"
-    values:
-    - "Đã cộng {n} ruby."
-    - "{n} rubies added."
-    - "{n} rubis ajoutés."
-    - "Se añadieron {n} rubíes."
-    - "{n} rubis adicionados."
-  - key: "rv.s.cancel"
-    values:
-    - "Đã đóng sớm"
-    - "Closed early"
-    - "Fermée trop tôt"
-    - "Cerrado antes de tiempo"
-    - "Fechado antes do fim"
-  - key: "rv.d.cancel"
-    values:
-    - "Không có thưởng và không bị trừ ruby."
-    - "No reward and no rubies charged."
-    - "Aucune récompense et aucun rubis débité."
-    - "Sin recompensa y sin cobro de rubíes."
-    - "Sem recompensa e sem cobrança de rubis."
-  - key: "rv.s.error"
-    values:
-    - "Có lỗi khi phát video"
-    - "Video failed to play"
-    - "Échec de la lecture de la vidéo"
-    - "Error al reproducir el vídeo"
-    - "Falha ao reproduzir o vídeo"
-  - key: "rv.d.error"
-    values:
-    - "Không có thưởng và không bị trừ ruby."
-    - "No reward and no rubies charged."
-    - "Aucune récompense et aucun rubis débité."
-    - "Sin recompensa y sin cobro de rubíes."
-    - "Sem recompensa e sem cobrança de rubis."
-  - key: "rv.demo"
-    values:
-    - "DEMO · chọn trạng thái quảng cáo để xem"
-    - "DEMO · pick an ad state to preview"
-    - "DÉMO · choisissez un état de publicité à prévisualiser"
-    - "DEMO · elige un estado de anuncio para verlo"
-    - "DEMO · escolha um estado de anúncio para visualizar"
-  - key: "rv.st.loading"
-    values:
-    - "đang tải"
-    - "loading"
-    - "chargement"
-    - "cargando"
-    - "carregando"
-  - key: "rv.st.ready"
-    values:
-    - "sẵn sàng"
-    - "ready"
-    - "prête"
-    - "listo"
-    - "pronto"
-  - key: "rv.st.cooldown"
-    values:
-    - "chờ"
-    - "cooldown"
-    - "attente"
-    - "espera"
-    - "espera"
-  - key: "rv.st.nofill"
-    values:
-    - "hết quảng cáo"
-    - "no-fill"
-    - "aucune pub"
-    - "sin anuncios"
-    - "sem anúncios"
-  - key: "rv.st.offline"
-    values:
-    - "offline"
-    - "offline"
-    - "hors ligne"
-    - "sin conexión"
-    - "offline"
-  - key: "rv.out"
-    values:
-    - "Kết quả khi xem:"
-    - "Outcome when watched:"
-    - "Résultat du visionnage :"
-    - "Resultado al verlo:"
-    - "Resultado ao assistir:"
-  - key: "rv.out.success"
-    values:
-    - "xong"
-    - "complete"
-    - "terminée"
-    - "completo"
-    - "completo"
-  - key: "rv.out.cancel"
-    values:
-    - "đóng sớm"
-    - "cancel"
-    - "fermée"
-    - "cerrado"
-    - "fechado"
-  - key: "rv.out.error"
-    values:
-    - "lỗi"
-    - "error"
-    - "erreur"
-    - "error"
-    - "erro"
-  - key: "low.title"
-    values:
-    - "CẦN {n} RUBY"
-    - "NEED {n} RUBIES"
-    - "IL FAUT {n} RUBIS"
-    - "HACEN FALTA {n} RUBÍES"
-    - "PRECISA DE {n} RUBIS"
-  - key: "low.desc"
-    values:
-    - "Bạn có {a} ruby. Gợi ý là tuỳ chọn, bạn vẫn chơi tiếp được miễn phí."
-    - "You have {a} rubies. Hints are optional; you can keep playing for free."
-    - "Vous avez {a} rubis. Les indices sont facultatifs, vous pouvez continuer à jouer gratuitement."
-    - "Tienes {a} rubíes. Las pistas son opcionales; puedes seguir jugando gratis."
-    - "Você tem {a} rubis. As dicas são opcionais; você pode continuar jogando de graça."
-  - key: "low.watch"
-    values:
-    - "XEM VIDEO +{n} RUBY (tuỳ chọn)"
-    - "WATCH VIDEO +{n} RUBIES (optional)"
-    - "VIDÉO +{n} RUBIS (facultatif)"
-    - "VER VÍDEO +{n} RUBÍES (opcional)"
-    - "VÍDEO +{n} RUBIS (opcional)"
-  - key: "low.shop"
-    values:
-    - "CỬA HÀNG"
-    - "SHOP"
-    - "BOUTIQUE"
-    - "TIENDA"
-    - "LOJA"
-  - key: "rate.title"
-    values:
-    - "BẠN THÍCH GAME?"
-    - "ENJOYING THE GAME?"
-    - "VOUS AIMEZ LE JEU ?"
-    - "¿TE GUSTA EL JUEGO?"
-    - "ESTÁ GOSTANDO DO JOGO?"
-  - key: "rate.desc"
-    values:
-    - "Nếu thích game, hãy đánh giá 5 sao trên cửa hàng."
-    - "If you love the game, please rate us 5 stars in the store."
-    - "Si le jeu vous plaît, donnez-nous 5 étoiles sur la boutique."
-    - "Si te gusta el juego, valóranos con 5 estrellas en la tienda."
-    - "Se você gosta do jogo, avalie com 5 estrelas na loja."
-  - key: "rate.yes"
-    values:
-    - "ĐƯỢC"
-    - "YES"
-    - "OUI"
-    - "SÍ"
-    - "SIM"
-  - key: "rate.later"
-    values:
-    - "ĐỂ SAU"
-    - "LATER"
-    - "PLUS TARD"
-    - "MÁS TARDE"
-    - "DEPOIS"
-  - key: "lang.title"
-    values:
-    - "Ngôn ngữ"
-    - "Language"
-    - "Langue"
-    - "Idioma"
-    - "Idioma"
-  - key: "lang.ui"
-    values:
-    - "Ngôn ngữ giao diện"
-    - "Interface language"
-    - "Langue de l'interface"
-    - "Idioma de la interfaz"
-    - "Idioma da interface"
-  - key: "lang.uiDesc"
-    values:
-    - "Đổi chữ trên nút, popup, thông báo. Không đổi từ trong level."
-    - "Changes button, popup and message text. Does not change level words."
-    - "Change le texte des boutons, fenêtres et messages. Ne change pas les mots des niveaux."
-    - "Cambia el texto de botones, ventanas y mensajes. No cambia las palabras de los niveles."
-    - "Muda o texto de botões, janelas e mensagens. Não muda as palavras dos níveis."
-  - key: "lang.game"
-    values:
-    - "Ngôn ngữ chơi"
-    - "Game language"
-    - "Langue de jeu"
-    - "Idioma de juego"
-    - "Idioma do jogo"
-  - key: "lang.gameDesc"
-    values:
-    - "Bộ level và từ điển. Mỗi ngôn ngữ có tiến độ riêng."
-    - "Level set and dictionary. Each language keeps its own progress."
-    - "Série de niveaux et dictionnaire. Chaque langue garde sa propre progression."
-    - "Conjunto de niveles y diccionario. Cada idioma guarda su propio progreso."
-    - "Conjunto de níveis e dicionário. Cada idioma mantém o próprio progresso."
-  - key: "lang.vi"
-    values:
-    - "Tiếng Việt"
-    - "Vietnamese"
-    - "Vietnamien"
-    - "Vietnamita"
-    - "Vietnamita"
-  - key: "lang.en"
-    values:
-    - "Tiếng Anh"
-    - "English"
-    - "Anglais"
-    - "Inglés"
-    - "Inglês"
-  - key: "lang.fr"
-    values:
-    - "Tiếng Pháp"
-    - "French"
-    - "Français"
-    - "Francés"
-    - "Francês"
-  - key: "lang.es"
-    values:
-    - "Tiếng Tây Ban Nha"
-    - "Spanish"
-    - "Espagnol"
-    - "Español"
-    - "Espanhol"
-  - key: "lang.pt"
-    values:
-    - "Tiếng Bồ Đào Nha"
-    - "Portuguese"
-    - "Portugais"
-    - "Portugués"
-    - "Português"
-  - key: "lang.ui.vi"
-    values:
-    - "Tiếng Việt"
-    - "Tiếng Việt"
-    - "Tiếng Việt"
-    - "Tiếng Việt"
-    - "Tiếng Việt"
-  - key: "lang.ui.en"
-    values:
-    - "English"
-    - "English"
-    - "English"
-    - "English"
-    - "English"
-  - key: "lang.ui.fr"
-    values:
-    - "Français"
-    - "Français"
-    - "Français"
-    - "Français"
-    - "Français"
-  - key: "lang.ui.es"
-    values:
-    - "Español"
-    - "Español"
-    - "Español"
-    - "Español"
-    - "Español"
-  - key: "lang.ui.pt"
-    values:
-    - "Português"
-    - "Português"
-    - "Português"
-    - "Português"
-    - "Português"
-  - key: "lang.playable"
-    values:
-    - "Chơi được · 534 level"
-    - "Playable · 534 levels"
-    - "Jouable · 534 niveaux"
-    - "Jugable · 534 niveles"
-    - "Jogável · 534 níveis"
-  - key: "lang.soon"
-    values:
-    - "Sắp có · đã có từ điển, chưa có level"
-    - "Coming soon · word list only, no levels yet"
-    - "Bientôt · dictionnaire seulement, pas encore de niveaux"
-    - "Próximamente · solo diccionario, aún sin niveles"
-    - "Em breve · só dicionário, ainda sem níveis"
-  - key: "lang.soonVi"
-    values:
-    - "Đề xuất · chưa có từ điển lẫn level"
-    - "Proposed · no word list or levels yet"
-    - "Proposé · ni dictionnaire ni niveaux pour le moment"
-    - "Propuesto · aún sin diccionario ni niveles"
-    - "Proposto · ainda sem dicionário nem níveis"
-  - key: "lang.noteSoon"
-    values:
-    - "Ngôn ngữ này chưa có bộ level hợp lệ nên chưa chơi được."
-    - "This language has no valid level set yet, so it is not playable."
-    - "Cette langue n'a pas encore de série de niveaux valide : elle n'est pas jouable."
-    - "Este idioma aún no tiene un conjunto de niveles válido, así que no se puede jugar."
-    - "Este idioma ainda não tem um conjunto de níveis válido, então não dá para jogar."
-  - key: "lang.saved"
-    values:
-    - "Đã lưu"
-    - "Saved"
-    - "Enregistré"
-    - "Guardado"
-    - "Salvo"
-  - key: "daily.title"
-    values:
-    - "Thử thách hàng ngày"
-    - "Daily Challenge"
-    - "Défi quotidien"
-    - "Reto diario"
-    - "Desafio diário"
-  - key: "daily.today"
-    values:
-    - "Hôm nay · {d}"
-    - "Today · {d}"
-    - "Aujourd'hui · {d}"
-    - "Hoy · {d}"
-    - "Hoje · {d}"
-  - key: "daily.goal"
-    values:
-    - "Mục tiêu: tìm đủ {n} từ trong 1 bàn chung cho mọi người chơi."
-    - "Goal: find all {n} words in one puzzle shared by every player."
-    - "Objectif : trouver les {n} mots d'une grille commune à tous les joueurs."
-    - "Objetivo: encuentra las {n} palabras de un mismo puzle para todos los jugadores."
-    - "Meta: encontrar as {n} palavras de um mesmo quebra-cabeça para todos os jogadores."
-  - key: "daily.play"
-    values:
-    - "CHƠI HÔM NAY"
-    - "PLAY TODAY"
-    - "JOUER AUJOURD'HUI"
-    - "JUGAR HOY"
-    - "JOGAR HOJE"
-  - key: "daily.replay"
-    values:
-    - "CHƠI LẠI (không thưởng)"
-    - "REPLAY (no reward)"
-    - "REJOUER (sans récompense)"
-    - "REPETIR (sin recompensa)"
-    - "JOGAR DE NOVO (sem recompensa)"
-  - key: "daily.playDay"
-    values:
-    - "CHƠI NGÀY {d}"
-    - "PLAY {d}"
-    - "JOUER LE {d}"
-    - "JUGAR EL {d}"
-    - "JOGAR {d}"
-  - key: "daily.reward"
-    values:
-    - "Thưởng: +{n} ruby, nhận một lần"
-    - "Reward: +{n} rubies, claimed once"
-    - "Récompense : +{n} rubis, une seule fois"
-    - "Recompensa: +{n} rubíes, una sola vez"
-    - "Recompensa: +{n} rubis, resgatada uma vez"
-  - key: "daily.rewardDone"
-    values:
-    - "Đã nhận thưởng ngày này"
-    - "Reward already claimed"
-    - "Récompense déjà récupérée"
-    - "Recompensa ya recogida"
-    - "Recompensa já resgatada"
-  - key: "daily.backfill"
-    values:
-    - "Bù ngày bị lỡ: +{n} ruby, giữ chuỗi"
-    - "Make-up day: +{n} ruby, keeps your streak"
-    - "Jour de rattrapage : +{n} rubis, série conservée"
-    - "Día de recuperación: +{n} rubíes, mantiene tu racha"
-    - "Dia de reposição: +{n} rubis, mantém sua sequência"
-  - key: "daily.noReward"
-    values:
-    - "Ngày này không còn thưởng"
-    - "No reward for this day"
-    - "Plus de récompense pour ce jour"
-    - "Este día ya no tiene recompensa"
-    - "Este dia não tem mais recompensa"
-  - key: "daily.streak"
-    values:
-    - "Chuỗi {n} ngày"
-    - "{n}-day streak"
-    - "Série de {n} jours"
-    - "Racha de {n} días"
-    - "Sequência de {n} dias"
-  - key: "daily.best"
-    values:
-    - "Kỷ lục {n}"
-    - "Best {n}"
-    - "Record {n}"
-    - "Récord {n}"
-    - "Recorde {n}"
-  - key: "daily.streakRisk"
-    values:
-    - "Chuỗi của bạn đang chờ! Chơi hôm nay hoặc bù hôm qua để giữ."
-    - "Your streak is waiting! Play today or make up yesterday to keep it."
-    - "Votre série vous attend ! Jouez aujourd'hui ou rattrapez hier pour la garder."
-    - "¡Tu racha te espera! Juega hoy o recupera ayer para mantenerla."
-    - "Sua sequência está esperando! Jogue hoje ou reponha ontem para mantê-la."
-  - key: "daily.streakLost"
-    values:
-    - "Chuỗi đã nghỉ. Kỷ lục {n} vẫn được giữ, bắt đầu lại hôm nay."
-    - "Streak paused. Your best {n} is kept; start again today."
-    - "Série interrompue. Votre record de {n} est conservé ; repartez aujourd'hui."
-    - "Racha en pausa. Tu récord de {n} se conserva; empieza de nuevo hoy."
-    - "Sequência pausada. Seu recorde de {n} foi mantido; recomece hoje."
-  - key: "daily.nextMilestone"
-    values:
-    - "Mốc kế: {d} ngày → +{n} ruby"
-    - "Next bonus: {d} days → +{n} rubies"
-    - "Prochain bonus : {d} jours → +{n} rubis"
-    - "Próximo bonus: {d} días → +{n} rubíes"
-    - "Próximo bônus: {d} dias → +{n} rubis"
-  - key: "daily.legend"
-    values:
-    - "Xanh: đã xong · Cam: bù được · Mờ: chưa đến ngày"
-    - "Teal: done · Orange: make-up · Dimmed: not yet"
-    - "Turquoise : fait · Orange : rattrapable · Estompé : pas encore"
-    - "Turquesa: hecho · Naranja: recuperable · Atenuado: aún no"
-    - "Verde-azulado: feito · Laranja: reposição · Esmaecido: ainda não"
-  - key: "daily.prev"
-    values:
-    - "Tháng trước"
-    - "Previous month"
-    - "Mois précédent"
-    - "Mes anterior"
-    - "Mês anterior"
-  - key: "daily.next"
-    values:
-    - "Tháng sau"
-    - "Next month"
-    - "Mois suivant"
-    - "Mes siguiente"
-    - "Próximo mês"
-  - key: "daily.month"
-    values:
-    - "Tháng {m} · {y}"
-    - "{m} {y}"
-    - "{m} {y}"
-    - "{m} {y}"
-    - "{m} {y}"
-  - key: "daily.dayAria"
-    values:
-    - "Ngày {d}, {s}"
-    - "Day {d}, {s}"
-    - "Jour {d}, {s}"
-    - "Día {d}, {s}"
-    - "Dia {d}, {s}"
-  - key: "daily.s.done"
-    values:
-    - "đã xong"
-    - "completed"
-    - "terminé"
-    - "completado"
-    - "concluído"
-  - key: "daily.s.miss"
-    values:
-    - "bỏ lỡ, bù được"
-    - "missed, can make up"
-    - "manqué, rattrapable"
-    - "perdido, recuperable"
-    - "perdido, pode repor"
-  - key: "daily.s.old"
-    values:
-    - "bỏ lỡ, hết hạn bù"
-    - "missed, make-up expired"
-    - "manqué, rattrapage expiré"
-    - "perdido, recuperación caducada"
-    - "perdido, reposição expirada"
-  - key: "daily.s.today"
-    values:
-    - "hôm nay"
-    - "today"
-    - "aujourd'hui"
-    - "hoy"
-    - "hoje"
-  - key: "daily.s.future"
-    values:
-    - "chưa đến"
-    - "not available yet"
-    - "pas encore disponible"
-    - "aún no disponible"
-    - "ainda não disponível"
-  - key: "daily.tz"
-    values:
-    - "Ngày đổi lúc 00:00 giờ trên máy. Chơi được khi offline."
-    - "Day changes at 00:00 device time. Playable offline."
-    - "Le jour change à 00:00 selon l'heure de l'appareil. Jouable hors ligne."
-    - "El día cambia a las 00:00 según la hora del dispositivo. Se puede jugar sin conexión."
-    - "O dia muda às 00:00 no horário do aparelho. Dá para jogar offline."
-  - key: "daily.demoClock"
-    values:
-    - "Đồng hồ demo: {d}"
-    - "Demo clock: {d}"
-    - "Horloge de démo : {d}"
-    - "Reloj de demo: {d}"
-    - "Relógio de demonstração: {d}"
-  - key: "daily.advance"
-    values:
-    - "DEMO: sang ngày kế"
-    - "DEMO: next day"
-    - "DÉMO : jour suivant"
-    - "DEMO: día siguiente"
-    - "DEMO: próximo dia"
-  - key: "daily.resetDemo"
-    values:
-    - "DEMO: đặt lại dữ liệu"
-    - "DEMO: reset data"
-    - "DÉMO : réinitialiser"
-    - "DEMO: restablecer datos"
-    - "DEMO: redefinir dados"
-  - key: "daily.sample"
-    values:
-    - "Dữ liệu lịch và chuỗi là mẫu để xem luồng."
-    - "Calendar and streak data are samples to preview the flow."
-    - "Le calendrier et la série sont des exemples pour voir le parcours."
-    - "El calendario y la racha son datos de muestra para ver el flujo."
-    - "O calendário e a sequência são dados de amostra para ver o fluxo."
-  - key: "bot.title"
-    values:
-    - "Đấu với Bot"
-    - "Play with Bot"
-    - "Jouer contre le bot"
-    - "Jugar contra el bot"
-    - "Jogar contra o bot"
-  - key: "bot.intro"
-    values:
-    - "Cùng một bàn, cùng ngôn ngữ. Ai tìm được nhiều điểm hơn trong thời gian giới hạn sẽ thắng."
-    - "Same puzzle, same language. Whoever scores more in the time limit wins."
-    - "Même grille, même langue. Qui marque le plus de points dans le temps imparti gagne."
-    - "Mismo puzle, mismo idioma. Gana quien consiga más puntos en el tiempo límite."
-    - "Mesmo quebra-cabeça, mesmo idioma. Vence quem fizer mais pontos no tempo limite."
-  - key: "bot.diff"
-    values:
-    - "Chọn độ khó"
-    - "Choose difficulty"
-    - "Choisir la difficulté"
-    - "Elige la dificultad"
-    - "Escolha a dificuldade"
-  - key: "bot.easy"
-    values:
-    - "Dễ"
-    - "Easy"
-    - "Facile"
-    - "Fácil"
-    - "Fácil"
-  - key: "bot.normal"
-    values:
-    - "Vừa"
-    - "Normal"
-    - "Normal"
-    - "Normal"
-    - "Normal"
-  - key: "bot.hard"
-    values:
-    - "Khó"
-    - "Hard"
-    - "Difficile"
-    - "Difícil"
-    - "Difícil"
-  - key: "bot.name.easy"
-    values:
-    - "Bot Pip"
-    - "Bot Pip"
-    - "Bot Pip"
-    - "Bot Pip"
-    - "Bot Pip"
-  - key: "bot.name.normal"
-    values:
-    - "Bot Zip"
-    - "Bot Zip"
-    - "Bot Zip"
-    - "Bot Zip"
-    - "Bot Zip"
-  - key: "bot.name.hard"
-    values:
-    - "Bot Zap"
-    - "Bot Zap"
-    - "Bot Zap"
-    - "Bot Zap"
-    - "Bot Zap"
-  - key: "bot.d.easy"
-    values:
-    - "Chậm, hay bỏ sót từ. Thắng +{n} ruby"
-    - "Slow, often misses words. Win +{n} rubies"
-    - "Lent, rate souvent des mots. Victoire +{n} rubis"
-    - "Lento, suele dejarse palabras. Victoria +{n} rubíes"
-    - "Lento, costuma perder palavras. Vitória +{n} rubis"
-  - key: "bot.d.normal"
-    values:
-    - "Tốc độ vừa phải. Thắng +{n} ruby"
-    - "Steady pace. Win +{n} rubies"
-    - "Rythme régulier. Victoire +{n} rubis"
-    - "Ritmo constante. Victoria +{n} rubíes"
-    - "Ritmo constante. Vitória +{n} rubis"
-  - key: "bot.d.hard"
-    values:
-    - "Nhanh, ít bỏ sót. Thắng +{n} ruby"
-    - "Fast, rarely misses. Win +{n} rubies"
-    - "Rapide, rate rarement. Victoire +{n} rubis"
-    - "Rápido, rara vez falla. Victoria +{n} rubíes"
-    - "Rápido, raramente perde palavras. Vitória +{n} rubis"
-  - key: "bot.fair"
-    values:
-    - "Bot là chương trình tính sẵn, không phải người thật. Không xem trước đáp án của bạn, không dùng gợi ý."
-    - "The bot is a scripted program, not a real person. It never sees your input and uses no hints."
-    - "Le bot est un programme scripté, pas une vraie personne. Il ne voit jamais vos saisies et n'utilise aucun indice."
-    - "El bot es un programa con guion, no una persona. Nunca ve lo que haces y no usa pistas."
-    - "O bot é um programa roteirizado, não uma pessoa. Ele nunca vê o que você digita e não usa dicas."
-  - key: "bot.rules"
-    values:
-    - "Không gợi ý trong trận. Xáo chữ miễn phí. Từ thưởng không tính điểm."
-    - "No hints in a match. Shuffle is free. Extra words do not score."
-    - "Pas d'indice en match. Mélanger est gratuit. Les mots bonus ne marquent pas de points."
-    - "Sin pistas en la partida. Mezclar es gratis. Las palabras extra no puntúan."
-    - "Sem dicas na partida. Embaralhar é grátis. Palavras extras não pontuam."
-  - key: "bot.start"
-    values:
-    - "BẮT ĐẦU"
-    - "START"
-    - "COMMENCER"
-    - "EMPEZAR"
-    - "COMEÇAR"
-  - key: "bot.cap"
-    values:
-    - "Thưởng bot hôm nay: {a}/{b} ruby"
-    - "Bot rewards today: {a}/{b} rubies"
-    - "Récompenses du bot aujourd'hui : {a}/{b} rubis"
-    - "Recompensas del bot hoy: {a}/{b} rubíes"
-    - "Recompensas do bot hoje: {a}/{b} rubis"
-  - key: "bot.you"
-    values:
-    - "Bạn"
-    - "You"
-    - "Vous"
-    - "Tú"
-    - "Você"
-  - key: "bot.time"
-    values:
-    - "Còn {n}s"
-    - "{n}s left"
-    - "{n} s restantes"
-    - "Quedan {n} s"
-    - "Faltam {n} s"
-  - key: "bot.pts"
-    values:
-    - "{n} điểm"
-    - "{n} pts"
-    - "{n} pts"
-    - "{n} pts"
-    - "{n} pts"
-  - key: "bot.badge"
-    values:
-    - "BOT"
-    - "BOT"
-    - "BOT"
-    - "BOT"
-    - "BOT"
-  - key: "bot.win"
-    values:
-    - "BẠN THẮNG!"
-    - "YOU WIN!"
-    - "VOUS GAGNEZ !"
-    - "¡GANAS!"
-    - "VOCÊ VENCEU!"
-  - key: "bot.lose"
-    values:
-    - "BOT THẮNG"
-    - "BOT WINS"
-    - "LE BOT GAGNE"
-    - "GANA EL BOT"
-    - "O BOT VENCEU"
-  - key: "bot.draw"
-    values:
-    - "HÒA"
-    - "DRAW"
-    - "ÉGALITÉ"
-    - "EMPATE"
-    - "EMPATE"
-  - key: "bot.reward"
-    values:
-    - "Thưởng: +{n} ruby"
-    - "Reward: +{n} rubies"
-    - "Récompense : +{n} rubis"
-    - "Recompensa: +{n} rubíes"
-    - "Recompensa: +{n} rubis"
-  - key: "bot.noReward"
-    values:
-    - "Không thưởng thêm (trận chơi lại hoặc đã đủ giới hạn ngày)"
-    - "No reward (replay or daily cap reached)"
-    - "Pas de récompense (partie rejouée ou plafond du jour atteint)"
-    - "Sin recompensa (partida repetida o límite diario alcanzado)"
-    - "Sem recompensa (partida repetida ou limite diário atingido)"
-  - key: "bot.replay"
-    values:
-    - "CHƠI LẠI CÙNG BÀN"
-    - "REPLAY SAME PUZZLE"
-    - "REJOUER LA MÊME GRILLE"
-    - "REPETIR EL MISMO PUZLE"
-    - "JOGAR O MESMO QUEBRA-CABEÇA"
-  - key: "bot.new"
-    values:
-    - "TRẬN MỚI"
-    - "NEW MATCH"
-    - "NOUVELLE PARTIE"
-    - "NUEVA PARTIDA"
-    - "NOVA PARTIDA"
-  - key: "bot.seed"
-    values:
-    - "Mã trận {s}"
-    - "Match seed {s}"
-    - "Code de partie {s}"
-    - "Código de partida {s}"
-    - "Código da partida {s}"
-  - key: "bot.found"
-    values:
-    - "Từ đã tìm: bạn {a} · bot {b}"
-    - "Words found: you {a} · bot {b}"
-    - "Mots trouvés : vous {a} · bot {b}"
-    - "Palabras halladas: tú {a} · bot {b}"
-    - "Palavras encontradas: você {a} · bot {b}"
-  - key: "bot.leave"
-    values:
-    - "THOÁT TRẬN"
-    - "LEAVE MATCH"
-    - "QUITTER LA PARTIE"
-    - "SALIR DE LA PARTIDA"
-    - "SAIR DA PARTIDA"
-  - key: "bot.sampleNote"
-    values:
-    - "Bàn lấy từ level mẫu thật của World/Subworld tương ứng."
-    - "Puzzle comes from a real sample level of the matching World/Subworld."
-    - "La grille vient d'un vrai niveau d'exemple du monde/sous-monde correspondant."
-    - "El puzle viene de un nivel de muestra real del mundo/submundo correspondiente."
-    - "O quebra-cabeça vem de um nível de amostra real do mundo/submundo correspondente."
-  - key: "ai.title"
-    values:
-    - "ĐẤU AI"
-    - "PLAY WITH AI"
-    - "VS IA"
-    - "VS IA"
-    - "VS IA"
-  - key: "ai.soon"
-    values:
-    - "SẮP RA MẮT"
-    - "COMING SOON"
-    - "BIENTÔT DISPONIBLE"
-    - "PRÓXIMAMENTE"
-    - "EM BREVE"
-  - key: "ai.desc"
-    values:
-    - "Chưa có ngày phát hành. Hiện chưa có ghép trận, thanh toán hay quảng cáo cho tính năng này."
-    - "No release date yet. There is no matchmaking, payment or ads for this feature."
-    - "Pas encore de date de sortie. Pas de matchmaking, de paiement ni de publicités pour cette fonction."
-    - "Aún no hay fecha de lanzamiento. Esta función no tiene emparejamiento, pagos ni anuncios."
-    - "Ainda sem data de lançamento. Este recurso não tem pareamento, pagamento nem anúncios."
-  - key: "ai.note"
-    values:
-    - "Hãy thử đấu Bot hoặc Thử thách hàng ngày trong lúc chờ."
-    - "Try Play with Bot or the Daily Challenge in the meantime."
-    - "En attendant, essayez le match contre le bot ou le défi quotidien."
-    - "Mientras tanto, prueba la partida contra el bot o el reto diario."
-    - "Enquanto isso, experimente jogar contra o bot ou o desafio diário."
-  - key: "ai.toBot"
-    values:
-    - "ĐẤU BOT"
-    - "PLAY WITH BOT"
-    - "VS BOT"
-    - "VS BOT"
-    - "VS BOT"
-  - key: "scr.home.name"
-    values:
-    - "Home"
-    - "Home"
-    - "Accueil"
-    - "Inicio"
-    - "Início"
-  - key: "scr.home.note"
-    values:
-    - "Nền, logo, Play, Daily, Bot, AI (sắp có), Shop, Language"
-    - "Backdrop, logo, Play, Daily, Bot, AI (soon), Shop, Language"
-    - "Fond, logo, Jouer, Quotidien, Bot, IA (bientôt), Boutique, Langue"
-    - "Fondo, logo, Jugar, Diario, Bot, IA (pronto), Tienda, Idioma"
-    - "Fundo, logo, Jogar, Diário, Bot, IA (em breve), Loja, Idioma"
-  - key: "scr.select-world.name"
-    values:
-    - "Chọn World"
-    - "Select World"
-    - "Choisir un monde"
-    - "Elegir mundo"
-    - "Escolher mundo"
-  - key: "scr.select-world.note"
-    values:
-    - "Vuốt theo World 1–6, mỗi World 5 subworld, tiến độ n/tổng thật"
-    - "Swipe World 1–6, 5 subworlds each, real n/total counts"
-    - "Balayez les mondes 1–6, 5 sous-mondes chacun, vrais compteurs n/total"
-    - "Desliza los mundos 1–6, 5 submundos cada uno, conteos n/total reales"
-    - "Deslize pelos mundos 1–6, 5 submundos cada, contagens n/total reais"
-  - key: "scr.select-level.name"
-    values:
-    - "Chọn Level"
-    - "Select Level"
-    - "Choisir un niveau"
-    - "Elegir nivel"
-    - "Escolher nível"
-  - key: "scr.select-level.note"
-    values:
-    - "Lưới level: Subworld 1 có 12 level, còn lại 18"
-    - "Level grid: Subworld 1 has 12 levels, others 18"
-    - "Grille de niveaux : le sous-monde 1 en a 12, les autres 18"
-    - "Cuadrícula de niveles: el submundo 1 tiene 12, los demás 18"
-    - "Grade de níveis: o submundo 1 tem 12, os demais 18"
-  - key: "scr.game.name"
-    values:
-    - "Gameplay"
-    - "Gameplay"
-    - "Partie"
-    - "Partida"
-    - "Partida"
-  - key: "scr.game.note"
-    values:
-    - "Mỗi đáp án một dòng, vòng chữ vuốt, Hint 1 chữ, Shuffle, Extra"
-    - "One line per answer, swipe wheel, 1-letter Hint, Shuffle, Extra"
-    - "Une ligne par réponse, roue de lettres, indice d'1 lettre, mélange, bonus"
-    - "Una línea por respuesta, rueda de letras, pista de 1 letra, mezclar, extra"
-    - "Uma linha por resposta, roda de letras, dica de 1 letra, embaralhar, extras"
-  - key: "scr.daily.name"
-    values:
-    - "Daily Challenge"
-    - "Daily Challenge"
-    - "Défi quotidien"
-    - "Reto diario"
-    - "Desafio diário"
-  - key: "scr.daily.note"
-    values:
-    - "Lịch, mục tiêu, chuỗi, bù ngày, thưởng một lần"
-    - "Calendar, goal, streak, make-up day, once-only reward"
-    - "Calendrier, objectif, série, rattrapage, récompense unique"
-    - "Calendario, objetivo, racha, día de recuperación, recompensa única"
-    - "Calendário, meta, sequência, dia de reposição, recompensa única"
-  - key: "scr.bot-setup.name"
-    values:
-    - "Bot: chọn độ khó"
-    - "Bot: difficulty"
-    - "Bot : difficulté"
-    - "Bot: dificultad"
-    - "Bot: dificuldade"
-  - key: "scr.bot-setup.note"
-    values:
-    - "3 bot, luật công bằng, giới hạn thưởng ngày"
-    - "3 bots, fair rules, daily reward cap"
-    - "3 bots, règles équitables, plafond de récompense par jour"
-    - "3 bots, reglas justas, límite diario de recompensa"
-    - "3 bots, regras justas, limite diário de recompensa"
-  - key: "scr.bot-match.name"
-    values:
-    - "Bot: trận đấu"
-    - "Bot: match"
-    - "Bot : match"
-    - "Bot: partida"
-    - "Bot: partida"
-  - key: "scr.bot-match.note"
-    values:
-    - "Cùng bàn, bot mô phỏng tính sẵn theo mã trận"
-    - "Same puzzle, scripted bot driven by a match seed"
-    - "Même grille, bot scripté piloté par un code de partie"
-    - "Mismo puzle, bot con guion según el código de partida"
-    - "Mesmo quebra-cabeça, bot roteirizado conforme o código da partida"
-  - key: "scr.language.name"
-    values:
-    - "Ngôn ngữ"
-    - "Language"
-    - "Langue"
-    - "Idioma"
-    - "Idioma"
-  - key: "scr.language.note"
-    values:
-    - "Ngôn ngữ UI vi/en/fr/es/pt tách khỏi ngôn ngữ chơi"
-    - "UI vi/en/fr/es/pt separate from game language"
-    - "Langue de l'interface vi/en/fr/es/pt séparée de la langue de jeu"
-    - "Idioma de interfaz vi/en/fr/es/pt separado del idioma de juego"
-    - "Idioma da interface vi/en/fr/es/pt separado do idioma do jogo"
-  - key: "scr.pause.name"
-    values:
-    - "Pause"
-    - "Pause"
-    - "Pause"
-    - "Pausa"
-    - "Pausa"
-  - key: "scr.pause.note"
-    values:
-    - "Continue · How to play · Language · To Menu · Quit"
-    - "Continue · How to play · Language · To Menu · Quit"
-    - "Continuer · Comment jouer · Langue · Au menu · Quitter"
-    - "Continuar · Cómo jugar · Idioma · Al menú · Salir"
-    - "Continuar · Como jogar · Idioma · Para o menu · Sair"
-  - key: "scr.how-to-play.name"
-    values:
-    - "How to play"
-    - "How to play"
-    - "Comment jouer"
-    - "Cómo jugar"
-    - "Como jogar"
-  - key: "scr.how-to-play.note"
-    values:
-    - "Hướng dẫn vuốt, Shuffle/Hint"
-    - "Swipe tutorial, Shuffle/Hint"
-    - "Tutoriel de glissement, Mélanger/Indice"
-    - "Tutorial de deslizar, Mezclar/Pista"
-    - "Tutorial de deslizar, Embaralhar/Dica"
-  - key: "scr.win.name"
-    values:
-    - "Win"
-    - "Win"
-    - "Victoire"
-    - "Victoria"
-    - "Vitória"
-  - key: "scr.win.note"
-    values:
-    - "Thưởng lần đầu, x2 tuỳ chọn, mục tiêu kế"
-    - "First-clear reward, optional x2, next goal"
-    - "Récompense de première victoire, x2 facultatif, objectif suivant"
-    - "Recompensa de primera victoria, x2 opcional, siguiente objetivo"
-    - "Recompensa de primeira vitória, x2 opcional, próxima meta"
-  - key: "scr.extra-word.name"
-    values:
-    - "Extra words"
-    - "Extra words"
-    - "Mots bonus"
-    - "Palabras extra"
-    - "Palavras extras"
-  - key: "scr.extra-word.note"
-    values:
-    - "Tiến độ từ thưởng, nhận ruby"
-    - "Extra-word progress, ruby claim"
-    - "Progression des mots bonus, récupération de rubis"
-    - "Progreso de palabras extra, recoger rubíes"
-    - "Progresso das palavras extras, resgate de rubis"
-  - key: "scr.shop.name"
-    values:
-    - "Shop"
-    - "Shop"
-    - "Boutique"
-    - "Tienda"
-    - "Loja"
-  - key: "scr.shop.note"
-    values:
-    - "5 gói ruby (giá demo), video miễn phí"
-    - "5 ruby packs (demo prices), free video"
-    - "5 packs de rubis (prix de démo), vidéo gratuite"
-    - "5 paquetes de rubíes (precios de demo), vídeo gratis"
-    - "5 pacotes de rubis (preços de demonstração), vídeo grátis"
-  - key: "scr.rewarded-video.name"
-    values:
-    - "Rewarded video"
-    - "Rewarded video"
-    - "Vidéo récompensée"
-    - "Vídeo con recompensa"
-    - "Vídeo com recompensa"
-  - key: "scr.rewarded-video.note"
-    values:
-    - "9 trạng thái quảng cáo mô phỏng, thưởng sau khi xem xong"
-    - "9 simulated ad states, reward after completion"
-    - "9 états de publicité simulée, récompense après la fin"
-    - "9 estados de anuncio simulado, recompensa al terminar"
-    - "9 estados de anúncio simulado, recompensa ao terminar"
-  - key: "scr.low-ruby.name"
-    values:
-    - "Thiếu ruby"
-    - "Not enough rubies"
-    - "Pas assez de rubis"
-    - "Rubíes insuficientes"
-    - "Rubis insuficientes"
-  - key: "scr.low-ruby.note"
-    values:
-    - "Lối chơi miễn phí, video tuỳ chọn, bỏ qua được"
-    - "Free path, optional video, skippable"
-    - "Voie gratuite, vidéo facultative, ignorable"
-    - "Camino gratuito, vídeo opcional, se puede omitir"
-    - "Caminho gratuito, vídeo opcional, pode pular"
-  - key: "scr.rate.name"
-    values:
-    - "Rate"
-    - "Rate"
-    - "Noter"
-    - "Valorar"
-    - "Avaliar"
-  - key: "scr.rate.note"
-    values:
-    - "YES / LATER"
-    - "YES / LATER"
-    - "OUI / PLUS TARD"
-    - "SÍ / MÁS TARDE"
-    - "SIM / DEPOIS"
-  - key: "scr.bot-result.name"
-    values:
-    - "Bot: kết quả"
-    - "Bot: result"
-    - "Bot : résultat"
-    - "Bot: resultado"
-    - "Bot: resultado"
-  - key: "scr.bot-result.note"
-    values:
-    - "Thắng/thua/hòa, thưởng, chơi lại cùng mã trận"
-    - "Win/lose/draw, reward, replay same seed"
-    - "Victoire/défaite/égalité, récompense, rejouer le même code"
-    - "Victoria/derrota/empate, recompensa, repetir el mismo código"
-    - "Vitória/derrota/empate, recompensa, jogar de novo com o mesmo código"
-  - key: "scr.ai-soon.name"
-    values:
-    - "AI: sắp có"
-    - "AI: coming soon"
-    - "IA : bientôt"
-    - "IA: próximamente"
-    - "IA: em breve"
-  - key: "scr.ai-soon.note"
-    values:
-    - "Nút Coming soon, không ghép trận/thanh toán/quảng cáo"
-    - "Coming-soon only; no matchmaking, payment or ads"
-    - "Bouton Bientôt seulement ; pas de matchmaking, paiement ni publicités"
-    - "Solo botón Próximamente; sin emparejamiento, pagos ni anuncios"
-    - "Somente botão Em breve; sem pareamento, pagamento nem anúncios"
-  - key: "cat.title"
-    values:
-    - "WordCross UI"
-    - "WordCross UI"
-    - "WordCross UI"
-    - "WordCross UI"
-    - "WordCross UI"
-  - key: "cat.intro"
-    values:
-    - "Phong cách phẳng, sáng, teal / coral / yellow. Mỗi thẻ mở màn hình thật; xem preview không ảnh hưởng dữ liệu demo."
-    - "Flat, bright teal / coral / yellow. Each card opens a real screen; previews never touch demo data."
-    - "Style plat et lumineux, turquoise / corail / jaune. Chaque carte ouvre un vrai écran ; les aperçus ne touchent jamais aux données de démo."
-    - "Estilo plano y luminoso, turquesa / coral / amarillo. Cada tarjeta abre una pantalla real; las vistas previas nunca tocan los datos de demo."
-    - "Estilo plano e luminoso, verde-azulado / coral / amarelo. Cada cartão abre uma tela real; as prévias nunca mexem nos dados de demonstração."
-  - key: "cat.screens"
-    values:
-    - "Màn hình"
-    - "Screens"
-    - "Écrans"
-    - "Pantallas"
-    - "Telas"
-  - key: "cat.popups"
-    values:
-    - "Popup"
-    - "Popups"
-    - "Fenêtres"
-    - "Ventanas"
-    - "Janelas"
-  - key: "cat.tokens"
-    values:
-    - "Token"
-    - "Tokens"
-    - "Tokens"
-    - "Tokens"
-    - "Tokens"
-  - key: "cat.portal"
-    values:
-    - "← Portal"
-    - "← Portal"
-    - "← Portal"
-    - "← Portal"
-    - "← Portal"
-  - key: "cat.flow"
-    values:
-    - "Home → World → Level → Gameplay · Daily · Bot · Language"
-    - "Home → World → Level → Gameplay · Daily · Bot · Language"
-    - "Accueil → Monde → Niveau → Partie · Quotidien · Bot · Langue"
-    - "Inicio → Mundo → Nivel → Partida · Diario · Bot · Idioma"
-    - "Início → Mundo → Nível → Partida · Diário · Bot · Idioma"
-  - key: "cat.popSub"
-    values:
-    - "Hiển thị trên nền màn hình tương ứng"
-    - "Shown over the matching screen"
-    - "Affichées sur l'écran correspondant"
-    - "Se muestran sobre la pantalla correspondiente"
-    - "Exibidas sobre a tela correspondente"
-  - key: "cat.proto"
-    values:
-    - "Prototype: gameplay dùng level thật (Subworld 1 đủ 12 level + vài level mẫu), Hint mở 1 chữ tốn 2 ruby, Daily/Bot/ads mô phỏng; dữ liệu lưu cục bộ trong trình duyệt. Phần nào là mẫu có nhãn DEMO/MẪU."
-    - "Prototype: gameplay uses real levels (Subworld 1 all 12 + a few samples), a Hint reveals 1 letter for 2 rubies, Daily/Bot/ads are simulated; data is stored locally in the browser. Sample parts carry a DEMO/SAMPLE tag."
-    - "Prototype : le jeu utilise de vrais niveaux (sous-monde 1 complet avec 12 niveaux + quelques exemples), un indice révèle 1 lettre pour 2 rubis, Quotidien/Bot/publicités sont simulés ; les données sont stockées localement dans le navigateur. Les parties d'exemple portent une étiquette DÉMO/EXEMPLE."
-    - "Prototipo: el juego usa niveles reales (submundo 1 con sus 12 niveles + algunas muestras), una pista revela 1 letra por 2 rubíes, Diario/Bot/anuncios son simulados; los datos se guardan localmente en el navegador. Las partes de muestra llevan la etiqueta DEMO/MUESTRA."
-    - "Protótipo: o jogo usa níveis reais (submundo 1 com os 12 níveis + algumas amostras), uma dica revela 1 letra por 2 rubis, Diário/Bot/anúncios são simulados; os dados ficam salvos localmente no navegador. As partes de amostra têm a etiqueta DEMO/AMOSTRA."
-  - key: "cat.resetData"
-    values:
-    - "Đặt lại dữ liệu demo"
-    - "Reset demo data"
-    - "Réinitialiser les données de démo"
-    - "Restablecer datos de demo"
-    - "Redefinir dados de demonstração"
-  - key: "cat.gd"
-    values:
-    - "GD"
-    - "GD"
-    - "GD"
-    - "GD"
-    - "GD"
-  - key: "cat.tokenSub"
-    values:
-    - "global/css/theme.css (:root)"
-    - "global/css/theme.css (:root)"
-    - "global/css/theme.css (:root)"
-    - "global/css/theme.css (:root)"
-    - "global/css/theme.css (:root)"
-  - key: "cat.open"
-    values:
-    - "Mở"
-    - "Open"
-    - "Ouvrir"
-    - "Abrir"
-    - "Abrir"
-  - key: "portal.title"
-    values:
-    - "WordCross Design"
-    - "WordCross Design"
-    - "WordCross Design"
-    - "WordCross Design"
-    - "WordCross Design"
-  - key: "portal.ui"
-    values:
-    - "UI Catalogue"
-    - "UI Catalogue"
-    - "UI Catalogue"
-    - "UI Catalogue"
-    - "UI Catalogue"
-  - key: "portal.uiSub"
-    values:
-    - "Màn hình/popup mở offline, gameplay + Daily + Bot chơi thử"
-    - "Offline screens/popups; playable gameplay, Daily and Bot"
-    - "Écrans/fenêtres hors ligne ; jeu, Quotidien et Bot jouables"
-    - "Pantallas/ventanas sin conexión; juego, Diario y Bot jugables"
-    - "Telas/janelas offline; jogo, Diário e Bot jogáveis"
-  - key: "portal.gd"
-    values:
-    - "GD"
-    - "GD"
-    - "GD"
-    - "GD"
-    - "GD"
-  - key: "portal.gdSub"
-    values:
-    - "Quan sát từ source, level, ngôn ngữ, Daily, Bot, ruby/ads, retention"
-    - "Source observations, levels, languages, Daily, Bot, ruby/ads, retention"
-    - "Observations de la source, niveaux, langues, Quotidien, Bot, rubis/publicités, rétention"
-    - "Observaciones de la fuente, niveles, idiomas, Diario, Bot, rubíes/anuncios, retención"
-    - "Observações da fonte, níveis, idiomas, Diário, Bot, rubis/anúncios, retenção"
-  - key: "shop.adIn"
-    values:
-    - "Video sẵn sàng sau"
-    - "Ad available in"
-    - "Vidéo disponible dans"
-    - "Vídeo disponible en"
-    - "Vídeo disponível em"
-  - key: "shop.adsNote"
-    values:
-    - "Gói tắt quảng cáo và 2 gói lớn nhất sẽ tắt quảng cáo (video tuỳ chọn vẫn còn)"
-    - "No-ads pack and the 2 biggest packs remove ads (optional videos stay)"
-    - "Le pack sans pub et les 2 plus gros packs suppriment les pubs (vidéos facultatives conservées)"
-    - "El pack sin anuncios y los 2 mayores eliminan los anuncios (vídeos opcionales siguen)"
-    - "O pacote sem anúncios e os 2 maiores removem os anúncios (vídeos opcionais continuam)"
-  - key: "rv.s.playingReal"
-    values:
-    - "ĐANG PHÁT VIDEO"
-    - "VIDEO PLAYING"
-    - "VIDÉO EN COURS"
-    - "VÍDEO EN CURSO"
-    - "VÍDEO EM REPRODUÇÃO"
-  - key: "rv.d.playingReal"
-    values:
-    - "Xem đến cuối để nhận {n} ruby."
-    - "Watch to the end to get {n} rubies."
-    - "Regardez jusqu'à la fin pour obtenir {n} rubis."
-    - "Mira hasta el final para obtener {n} rubíes."
-    - "Assista até o fim para ganhar {n} rubis."
-  - key: "home.toast.daily"
-    values:
-    - "Thử thách hàng ngày sắp ra mắt"
-    - "Daily challenge is coming soon"
-    - "Le défi quotidien arrive bientôt"
-    - "El desafío diario llegará pronto"
-    - "O desafio diário chega em breve"
-  - key: "home.toast.bot"
-    values:
-    - "Chế độ đấu Bot sắp ra mắt"
-    - "VS Bot is coming soon"
-    - "Le mode VS Bot arrive bientôt"
-    - "El modo VS Bot llegará pronto"
-    - "O modo VS Bot chega em breve"
-  - key: "home.toast.ai"
-    values:
-    - "Chế độ đấu AI sắp ra mắt"
-    - "VS AI is coming soon"
-    - "Le mode VS IA arrive bientôt"
-    - "El modo VS IA llegará pronto"
-    - "O modo VS IA chega em breve"
-  - key: "common.deviceOnly"
-    values:
-    - "Chức năng này chỉ hoạt động trên Android và iOS"
-    - "This function only works on Android and iOS"
-    - "Cette fonction ne marche que sur Android et iOS"
-    - "Esta función solo funciona en Android e iOS"
-    - "Esta função só funciona em Android e iOS"
-  - key: "shop.success"
-    values:
-    - "Mua hàng thành công"
-    - "Purchase successful!"
-    - "Achat effectué !"
-    - "Tu compra se ha realizado con éxito"
-    - "Sua compra foi concluída com sucesso"
-  - key: "noti.toast"
-    values:
-    - "Bạn nhận được {n} ruby miễn phí"
-    - "You got {n} free rubies"
-    - "Vous avez reçu {n} rubis gratuits"
-    - "Has conseguido {n} rubíes gratis"
-    - "Você ganhou {n} rubis grátis"
-  - key: "noti.letterTitle"
-    values:
-    - "Đã mở khoá chữ"
-    - "Letter unlocked"
-    - "Lettre débloquée"
-    - "Letra desbloqueada"
-    - "Letra desbloqueada"
-  - key: "noti.letter"
-    values:
-    - "Chúng tôi đã mở khoá chữ {c} cho bạn. Vào game và chơi tiếp nhé :)"
-    - "We unlocked the letter {c} for you. Open the game and keep playing :)"
-    - "Nous avons débloqué la lettre {c} pour vous. Ouvrez le jeu et reprenez la partie :)"
-    - "Hemos desbloqueado la letra {c} para ti. Abre el juego y sigue jugando :)"
-    - "Desbloqueamos a letra {c} para você. Abra o jogo e continue jogando :)"
-  - key: "noti.rubyTitle"
-    values:
-    - "Quà ruby"
-    - "Ruby gift"
-    - "Cadeau de rubis"
-    - "Regalo de rubíes"
-    - "Presente de rubis"
-  - key: "noti.ruby"
-    values:
-    - "Bạn nhận được {n} ruby miễn phí. Vào chơi và thử thách bản thân nhé"
-    - "You got {n} free rubies. Play and challenge yourself!"
-    - "Vous avez reçu {n} rubis gratuits. Jouez et relevez le défi !"
-    - "Has conseguido {n} rubíes gratis. ¡Juega y ponte a prueba!"
-    - "Você ganhou {n} rubis grátis. Jogue e desafie-se!"
-  - key: "daily.months"
-    values:
-    - "1|2|3|4|5|6|7|8|9|10|11|12"
-    - "January|February|March|April|May|June|July|August|September|October|November|December"
-    - "Janvier|Février|Mars|Avril|Mai|Juin|Juillet|Août|Septembre|Octobre|Novembre|Décembre"
-    - "Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre"
-    - "Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro"
-  - key: "daily.monthsShort"
-    values:
-    - "1|2|3|4|5|6|7|8|9|10|11|12"
-    - "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-    - "janv.|févr.|mars|avr.|mai|juin|juil.|août|sept.|oct.|nov.|déc."
-    - "ene|feb|mar|abr|may|jun|jul|ago|sept|oct|nov|dic"
-    - "jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez"
-  - key: "daily.shortDate"
-    values:
-    - "{d}/{m}"
-    - "{m} {d}"
-    - "{d} {m}"
-    - "{d} {m}"
-    - "{d} {m}"
-  - key: "daily.weekdays"
-    values:
-    - "T2|T3|T4|T5|T6|T7|CN"
-    - "Mon|Tue|Wed|Thu|Fri|Sat|Sun"
-    - "Lun|Mar|Mer|Jeu|Ven|Sam|Dim"
-    - "Lun|Mar|Mié|Jue|Vie|Sáb|Dom"
-    - "Seg|Ter|Qua|Qui|Sex|Sáb|Dom"
+  - key: brand.sub
+    values:
+    - "DEMO \xB7 t\xEAn hi\u1EC3n th\u1ECB ch\u1EC9nh theo b\u1EA3n ch\xEDnh"
+    - "DEMO \xB7 display name to be confirmed"
+    - "D\xC9MO \xB7 le nom affich\xE9 sera ajust\xE9 dans la version finale"
+    - "DEMO \xB7 el nombre visible se ajustar\xE1 en la versi\xF3n final"
+    - "DEMO \xB7 o nome exibido ser\xE1 ajustado na vers\xE3o final"
+  - key: tag.sample
+    values:
+    - "M\u1EAAU"
+    - SAMPLE
+    - EXEMPLE
+    - MUESTRA
+    - AMOSTRA
+  - key: tag.demo
+    values:
+    - DEMO
+    - DEMO
+    - "D\xC9MO"
+    - DEMO
+    - DEMO
+  - key: tag.sampleLevel
+    values:
+    - "Level m\u1EABu (d\u1EEF li\u1EC7u th\u1EADt r\xFAt g\u1ECDn)"
+    - Sample level (real data, trimmed)
+    - "Niveau d'exemple (donn\xE9es r\xE9elles, abr\xE9g\xE9es)"
+    - Nivel de muestra (datos reales, resumidos)
+    - "N\xEDvel de amostra (dados reais, resumidos)"
+  - key: common.back
+    values:
+    - "Quay l\u1EA1i"
+    - Back
+    - Retour
+    - "Atr\xE1s"
+    - Voltar
+  - key: common.close
+    values:
+    - "\u0110\xF3ng"
+    - Close
+    - Fermer
+    - Cerrar
+    - Fechar
+  - key: common.ok
+    values:
+    - OK
+    - OK
+    - OK
+    - OK
+    - OK
+  - key: common.continue
+    values:
+    - "TI\u1EBEP T\u1EE4C"
+    - CONTINUE
+    - CONTINUER
+    - CONTINUAR
+    - CONTINUAR
+  - key: common.gotIt
+    values:
+    - "\u0110\xC3 HI\u1EC2U"
+    - GOT IT
+    - COMPRIS
+    - ENTENDIDO
+    - ENTENDI
+  - key: common.later
+    values:
+    - "\u0110\u1EC2 SAU"
+    - LATER
+    - PLUS TARD
+    - "M\xC1S TARDE"
+    - DEPOIS
+  - key: common.skip
+    values:
+    - "B\u1ECE QUA, CH\u01A0I TI\u1EBEP"
+    - SKIP, KEEP PLAYING
+    - "PASSER, CONTINUER \xC0 JOUER"
+    - OMITIR, SEGUIR JUGANDO
+    - PULAR, CONTINUAR JOGANDO
+  - key: common.rubies
+    values:
+    - ruby
+    - rubies
+    - rubis
+    - "rub\xEDes"
+    - rubis
+  - key: common.balance
+    values:
+    - "S\u1ED1 ruby"
+    - Ruby balance
+    - Solde de rubis
+    - "Saldo de rub\xEDes"
+    - Saldo de rubis
+  - key: common.addRubies
+    values:
+    - "Th\xEAm ruby"
+    - Get rubies
+    - Obtenir des rubis
+    - "Conseguir rub\xEDes"
+    - Ganhar rubis
+  - key: common.soon
+    values:
+    - "S\u1EAEP C\xD3"
+    - SOON
+    - "BIENT\xD4T"
+    - PRONTO
+    - EM BREVE
+  - key: common.level
+    values:
+    - Level {n}
+    - Level {n}
+    - Niveau {n}
+    - Nivel {n}
+    - "N\xEDvel {n}"
+  - key: common.retry
+    values:
+    - "TH\u1EEC L\u1EA0I"
+    - TRY AGAIN
+    - "R\xC9ESSAYER"
+    - REINTENTAR
+    - TENTAR DE NOVO
+  - key: home.play
+    values:
+    - "CH\u01A0I"
+    - PLAY
+    - JOUER
+    - JUGAR
+    - JOGAR
+  - key: home.daily
+    values:
+    - "H\xD4M NAY"
+    - DAILY
+    - QUOTIDIEN
+    - DIARIO
+    - "DI\xC1RIO"
+  - key: home.bot
+    values:
+    - "\u0110\u1EA4U BOT"
+    - VS BOT
+    - VS BOT
+    - VS BOT
+    - VS BOT
+  - key: home.ai
+    values:
+    - "\u0110\u1EA4U AI"
+    - VS AI
+    - VS IA
+    - VS IA
+    - VS IA
+  - key: home.shop
+    values:
+    - "C\u1EECA H\xC0NG"
+    - SHOP
+    - BOUTIQUE
+    - TIENDA
+    - LOJA
+  - key: home.rate
+    values:
+    - "\u0110\xC1NH GI\xC1"
+    - RATE
+    - NOTER
+    - VALORAR
+    - AVALIAR
+  - key: home.lang
+    values:
+    - "Ng\xF4n ng\u1EEF"
+    - Language
+    - Langue
+    - Idioma
+    - Idioma
+  - key: home.resume
+    values:
+    - "Ti\u1EBFp t\u1EE5c: Subworld {s} - {l}"
+    - 'Resume: Subworld {s} - {l}'
+    - 'Reprendre : Sous-monde {s} - {l}'
+    - 'Continuar: Submundo {s} - {l}'
+    - 'Continuar: Submundo {s} - {l}'
+  - key: world.title
+    values:
+    - "Ch\u1ECDn World"
+    - Select World
+    - Choisir un monde
+    - Elegir mundo
+    - Escolher mundo
+  - key: world.name
+    values:
+    - World {n}
+    - World {n}
+    - Monde {n}
+    - Mundo {n}
+    - Mundo {n}
+  - key: world.swipe
+    values:
+    - "vu\u1ED1t \u0111\u1EC3 \u0111\u1ED5i"
+    - swipe to change
+    - balayez pour changer
+    - desliza para cambiar
+    - deslize para mudar
+  - key: world.sub
+    values:
+    - Subworld {n}
+    - Subworld {n}
+    - Sous-monde {n}
+    - Submundo {n}
+    - Submundo {n}
+  - key: world.locked
+    values:
+    - "Ch\u01B0a m\u1EDF kho\xE1"
+    - Locked
+    - "Verrouill\xE9"
+    - Bloqueado
+    - Bloqueado
+  - key: lvl.title
+    values:
+    - Subworld {n}
+    - Subworld {n}
+    - Sous-monde {n}
+    - Submundo {n}
+    - Submundo {n}
+  - key: lvl.locked
+    values:
+    - "Level {n}, ch\u01B0a m\u1EDF"
+    - Level {n}, locked
+    - "Niveau {n}, verrouill\xE9"
+    - Nivel {n}, bloqueado
+    - "N\xEDvel {n}, bloqueado"
+  - key: lvl.done
+    values:
+    - "Level {n}, \u0111\xE3 xong"
+    - Level {n}, completed
+    - "Niveau {n}, termin\xE9"
+    - Nivel {n}, completado
+    - "N\xEDvel {n}, conclu\xEDdo"
+  - key: lvl.cur
+    values:
+    - "Level {n}, level hi\u1EC7n t\u1EA1i"
+    - Level {n}, current
+    - Niveau {n}, niveau actuel
+    - Nivel {n}, nivel actual
+    - "N\xEDvel {n}, n\xEDvel atual"
+  - key: game.shuffle
+    values:
+    - "X\xE1o ch\u1EEF"
+    - Shuffle
+    - "M\xE9langer"
+    - Mezclar
+    - Embaralhar
+  - key: game.hint
+    values:
+    - "G\u1EE3i \xFD"
+    - Hint
+    - Indice
+    - Pista
+    - Dica
+  - key: game.extra
+    values:
+    - "T\u1EEB th\u01B0\u1EDFng"
+    - Extra
+    - Bonus
+    - Extra
+    - Extras
+  - key: game.ask
+    values:
+    - "H\u1ECFi b\u1EA1n"
+    - Ask friend
+    - Demander
+    - Preguntar
+    - Pedir ajuda
+  - key: game.pause
+    values:
+    - "T\u1EA1m d\u1EEBng"
+    - Pause
+    - Pause
+    - Pausa
+    - Pausa
+  - key: game.banner
+    values:
+    - "QU\u1EA2NG C\xC1O BANNER (ch\u1ED7 gi\u1EEF)"
+    - BANNER AD (placeholder)
+    - "BANNI\xC8RE PUBLICITAIRE (espace r\xE9serv\xE9)"
+    - BANNER PUBLICITARIO (marcador)
+    - "BANNER DE AN\xDANCIO (espa\xE7o reservado)"
+  - key: game.nice
+    values:
+    - Hay! {w}
+    - Nice! {w}
+    - Bravo ! {w}
+    - "\xA1Bien! {w}"
+    - Boa! {w}
+  - key: game.already
+    values:
+    - "\u0110\xE3 t\xECm r\u1ED3i"
+    - Already found
+    - "D\xE9j\xE0 trouv\xE9"
+    - Ya encontrada
+    - "J\xE1 encontrada"
+  - key: game.notIn
+    values:
+    - "Kh\xF4ng c\xF3 trong danh s\xE1ch"
+    - Not in list
+    - Pas dans la liste
+    - "No est\xE1 en la lista"
+    - "N\xE3o est\xE1 na lista"
+  - key: game.extraFound
+    values:
+    - "T\u1EEB th\u01B0\u1EDFng: {w}"
+    - 'Extra word: {w}'
+    - 'Mot bonus : {w}'
+    - 'Palabra extra: {w}'
+    - 'Palavra extra: {w}'
+  - key: game.extraAgain
+    values:
+    - "T\u1EEB th\u01B0\u1EDFng \u0111\xE3 c\xF3"
+    - Extra already found
+    - "Mot bonus d\xE9j\xE0 trouv\xE9"
+    - Palabra extra ya encontrada
+    - "Palavra extra j\xE1 encontrada"
+  - key: game.ask.msg
+    values:
+    - "M\u1EDF chia s\u1EBB \u1EA3nh ch\u1EE5p (native share, ngo\xE0i prototype)"
+    - Opens screenshot share (native, outside prototype)
+    - "Ouvre le partage de capture d'\xE9cran (natif, hors prototype)"
+    - Abre el uso compartido de capturas (nativo, fuera del prototipo)
+    - "Abre o compartilhamento de captura de tela (nativo, fora do prot\xF3tipo)"
+  - key: game.coach1
+    values:
+    - "Vu\u1ED1t qua c\xE1c ch\u1EEF \u0111\u1EC3 gh\xE9p t\u1EEB."
+    - Swipe across the letters to build a word.
+    - Glissez sur les lettres pour former un mot.
+    - Desliza sobre las letras para formar una palabra.
+    - Deslize pelas letras para formar uma palavra.
+  - key: game.coach2
+    values:
+    - "T\xECm \u0111\u1EE7 c\xE1c t\u1EEB \u0111\u1EC3 th\u1EAFng. Kh\xF4ng c\u1EA7n
+      ruby."
+    - Find every word to win. No rubies needed.
+    - Trouvez tous les mots pour gagner. Aucun rubis requis.
+    - "Encuentra todas las palabras para ganar. No hacen falta rub\xEDes."
+    - "Encontre todas as palavras para vencer. N\xE3o precisa de rubis."
+  - key: game.coachDaily
+    values:
+    - "M\u1EE5c ti\xEAu h\xF4m nay: t\xECm \u0111\u1EE7 {n} t\u1EEB."
+    - 'Today''s goal: find all {n} words.'
+    - 'Objectif du jour : trouver les {n} mots.'
+    - 'Objetivo de hoy: encuentra las {n} palabras.'
+    - 'Meta de hoje: encontrar as {n} palavras.'
+  - key: game.dailyName
+    values:
+    - "Ng\xE0y {d}"
+    - Daily {d}
+    - "D\xE9fi {d}"
+    - Reto {d}
+    - Desafio {d}
+  - key: game.words
+    values:
+    - "{a}/{b} t\u1EEB"
+    - '{a}/{b} words'
+    - '{a}/{b} mots'
+    - '{a}/{b} palabras'
+    - '{a}/{b} palavras'
+  - key: game.hintFree
+    values:
+    - "G\u1EE3i \xFD m\u1EDF 1 ch\u1EEF. Tu\u1EF3 ch\u1ECDn."
+    - A hint reveals 1 letter. Optional.
+    - "Un indice r\xE9v\xE8le 1 lettre. Facultatif."
+    - Una pista revela 1 letra. Opcional.
+    - Uma dica revela 1 letra. Opcional.
+  - key: pause.title
+    values:
+    - "T\u1EA0M D\u1EEANG"
+    - PAUSE
+    - PAUSE
+    - PAUSA
+    - PAUSA
+  - key: pause.music
+    values:
+    - "Nh\u1EA1c"
+    - Music
+    - Musique
+    - "M\xFAsica"
+    - "M\xFAsica"
+  - key: pause.sound
+    values:
+    - "\xC2m thanh"
+    - Sound
+    - Sons
+    - Sonido
+    - Som
+  - key: pause.continue
+    values:
+    - "TI\u1EBEP T\u1EE4C"
+    - CONTINUE
+    - CONTINUER
+    - CONTINUAR
+    - CONTINUAR
+  - key: pause.how
+    values:
+    - "C\xC1CH CH\u01A0I"
+    - HOW TO PLAY
+    - COMMENT JOUER
+    - "C\xD3MO JUGAR"
+    - COMO JOGAR
+  - key: pause.menu
+    values:
+    - "V\u1EC0 MENU"
+    - TO MENU
+    - AU MENU
+    - "AL MEN\xDA"
+    - PARA O MENU
+  - key: pause.quit
+    values:
+    - "THO\xC1T"
+    - QUIT
+    - QUITTER
+    - SALIR
+    - SAIR
+  - key: pause.lang
+    values:
+    - "NG\xD4N NG\u1EEE"
+    - LANGUAGE
+    - LANGUE
+    - IDIOMA
+    - IDIOMA
+  - key: how.title
+    values:
+    - "C\xC1CH CH\u01A0I ?"
+    - HOW TO PLAY ?
+    - COMMENT JOUER ?
+    - "\xBFC\xD3MO JUGAR?"
+    - COMO JOGAR?
+  - key: how.1
+    values:
+    - "Vu\u1ED1t \u0111\u1EC3 gh\xE9p th\xE0nh t\u1EEB h\u1EE3p l\u1EC7."
+    - Swipe to build a valid word.
+    - Glissez pour former un mot valide.
+    - "Desliza para formar una palabra v\xE1lida."
+    - "Deslize para formar uma palavra v\xE1lida."
+  - key: how.2
+    values:
+    - "D\xF9ng \"X\xE1o ch\u1EEF\" ho\u1EB7c \"G\u1EE3i \xFD\" khi b\xED. B\u1EA1n
+      c\u0169ng c\xF3 th\u1EC3 ch\u1EE5p m\xE0n h\xECnh h\u1ECFi b\u1EA1n b\xE8."
+    - Use "Shuffle" or "Hint" if you are stuck. You can also take a screenshot and
+      ask friends.
+    - "Utilisez \xAB M\xE9langer \xBB ou \xAB Indice \xBB si vous bloquez. Vous pouvez
+      aussi faire une capture d'\xE9cran et demander \xE0 vos amis."
+    - "Usa \xABMezclar\xBB o \xABPista\xBB si te atascas. Tambi\xE9n puedes hacer
+      una captura y preguntar a tus amigos."
+    - "Use \xABEmbaralhar\xBB ou \xABDica\xBB se travar. Voc\xEA tamb\xE9m pode tirar
+      uma captura de tela e pedir ajuda aos amigos."
+  - key: how.3
+    values:
+    - "X\xE1o ch\u1EEF mi\u1EC5n ph\xED. G\u1EE3i \xFD t\u1ED1n ruby nh\u01B0ng kh\xF4ng
+      b\u1EAFt bu\u1ED9c."
+    - Shuffle is free. Hints cost rubies but are never required.
+    - "M\xE9langer est gratuit. Les indices co\xFBtent des rubis mais ne sont jamais
+      obligatoires."
+    - "Mezclar es gratis. Las pistas cuestan rub\xEDes, pero nunca son obligatorias."
+    - "Embaralhar \xE9 gr\xE1tis. As dicas custam rubis, mas nunca s\xE3o obrigat\xF3rias."
+  - key: win.title
+    values:
+    - "HO\xC0N TH\xC0NH LEVEL!"
+    - LEVEL COMPLETE!
+    - "NIVEAU TERMIN\xC9 !"
+    - "\xA1NIVEL COMPLETADO!"
+    - "N\xCDVEL CONCLU\xCDDO!"
+  - key: win.next
+    values:
+    - "TI\u1EBEP"
+    - NEXT
+    - SUIVANT
+    - SIGUIENTE
+    - "PR\xD3XIMO"
+  - key: win.menu
+    values:
+    - MENU
+    - MENU
+    - MENU
+    - "MEN\xDA"
+    - MENU
+  - key: win.first
+    values:
+    - "L\u1EA7n \u0111\u1EA7u th\u1EAFng: +{n} ruby"
+    - 'First clear: +{n} rubies'
+    - "Premi\xE8re victoire : +{n} rubis"
+    - "Primera victoria: +{n} rub\xEDes"
+    - "Primeira vit\xF3ria: +{n} rubis"
+  - key: win.replay
+    values:
+    - "Ch\u01A1i l\u1EA1i \u0111\u1EC3 luy\u1EC7n t\u1EADp: kh\xF4ng th\xEAm ruby"
+    - 'Replay is practice: no extra rubies'
+    - "Rejouer sert \xE0 s'entra\xEEner : pas de rubis en plus"
+    - "Repetir es pr\xE1ctica: sin rub\xEDes extra"
+    - "Jogar de novo \xE9 treino: sem rubis extras"
+  - key: win.x2
+    values:
+    - "XEM VIDEO: +{n} ruby n\u1EEFa"
+    - 'WATCH VIDEO: +{n} more rubies'
+    - "VID\xC9O : +{n} rubis de plus"
+    - "VER V\xCDDEO: +{n} rub\xEDes m\xE1s"
+    - "ASSISTIR V\xCDDEO: +{n} rubis a mais"
+  - key: win.x2done
+    values:
+    - "\u0110\xE3 nh\u1EADn th\u01B0\u1EDFng th\xEAm"
+    - Bonus collected
+    - "Bonus r\xE9cup\xE9r\xE9"
+    - Bonus recogido
+    - "B\xF4nus resgatado"
+  - key: win.goal
+    values:
+    - "Ti\u1EBFp theo: Level {l} \xB7 c\xF2n {n} level \u0111\u1EC3 m\u1EDF Subworld
+      k\u1EBF"
+    - "Next: Level {l} \xB7 {n} more levels to unlock the next Subworld"
+    - "Suite : niveau {l} \xB7 encore {n} niveaux pour d\xE9bloquer le sous-monde
+      suivant"
+    - "Siguiente: nivel {l} \xB7 faltan {n} niveles para desbloquear el siguiente
+      submundo"
+    - "Pr\xF3ximo: n\xEDvel {l} \xB7 faltam {n} n\xEDveis para liberar o pr\xF3ximo
+      submundo"
+  - key: win.goalLast
+    values:
+    - "Subworld ho\xE0n th\xE0nh! Ti\u1EBFp theo: Subworld {s}"
+    - 'Subworld complete! Next: Subworld {s}'
+    - "Sous-monde termin\xE9 ! Suite : sous-monde {s}"
+    - "\xA1Submundo completado! Siguiente: submundo {s}"
+    - "Submundo conclu\xEDdo! Pr\xF3ximo: submundo {s}"
+  - key: win.extraReady
+    values:
+    - "T\u1EEB th\u01B0\u1EDFng {a}/{b}: s\u1EB5n s\xE0ng nh\u1EADn"
+    - 'Extra words {a}/{b}: ready to claim'
+    - "Mots bonus {a}/{b} : pr\xEAt \xE0 r\xE9cup\xE9rer"
+    - 'Palabras extra {a}/{b}: listas para recoger'
+    - 'Palavras extras {a}/{b}: prontas para resgatar'
+  - key: win.extraNot
+    values:
+    - "T\u1EEB th\u01B0\u1EDFng {a}/{b}"
+    - Extra words {a}/{b}
+    - Mots bonus {a}/{b}
+    - Palabras extra {a}/{b}
+    - Palavras extras {a}/{b}
+  - key: win.dailyTitle
+    values:
+    - "XONG TH\u1EEC TH\xC1CH!"
+    - DAILY COMPLETE!
+    - "D\xC9FI TERMIN\xC9 !"
+    - "\xA1RETO COMPLETADO!"
+    - "DESAFIO CONCLU\xCDDO!"
+  - key: win.dailyReward
+    values:
+    - "Th\u01B0\u1EDFng h\xF4m nay: +{n} ruby"
+    - 'Today''s reward: +{n} rubies'
+    - "R\xE9compense du jour : +{n} rubis"
+    - "Recompensa de hoy: +{n} rub\xEDes"
+    - 'Recompensa de hoje: +{n} rubis'
+  - key: win.streak
+    values:
+    - "Chu\u1ED7i {n} ng\xE0y"
+    - '{n}-day streak'
+    - "S\xE9rie de {n} jours"
+    - "Racha de {n} d\xEDas"
+    - "Sequ\xEAncia de {n} dias"
+  - key: win.streak.one
+    values:
+    - "Chu\u1ED7i {n} ng\xE0y"
+    - '{n}-day streak'
+    - "S\xE9rie de {n} jour"
+    - "Racha de {n} d\xEDa"
+    - "Sequ\xEAncia de {n} dia"
+  - key: win.milestone
+    values:
+    - "M\u1ED1c chu\u1ED7i {d} ng\xE0y: +{n} ruby"
+    - '{d}-day streak bonus: +{n} rubies'
+    - 'Bonus pour {d} jours de suite : +{n} rubis'
+    - "Bono por {d} d\xEDas seguidos: +{n} rub\xEDes"
+    - "B\xF4nus por {d} dias seguidos: +{n} rubis"
+  - key: win.dailyNext
+    values:
+    - "Mai c\xF3 th\u1EED th\xE1ch m\u1EDBi. Gi\u1EEF chu\u1ED7i nh\xE9!"
+    - A new puzzle tomorrow. Keep your streak!
+    - "Un nouveau d\xE9fi demain. Continuez votre s\xE9rie !"
+    - "Ma\xF1ana hay un reto nuevo. \xA1Mant\xE9n tu racha!"
+    - "Amanh\xE3 tem desafio novo. Mantenha sua sequ\xEAncia!"
+  - key: win.toDaily
+    values:
+    - "V\u1EC0 L\u1ECACH NG\xC0Y"
+    - BACK TO DAILY
+    - VOIR LE CALENDRIER
+    - VER CALENDARIO
+    - "VER CALEND\xC1RIO"
+  - key: extra.title
+    values:
+    - "T\u1EEA TH\u01AF\u1EDENG"
+    - EXTRA WORDS
+    - MOTS BONUS
+    - PALABRAS EXTRA
+    - PALAVRAS EXTRAS
+  - key: extra.desc
+    values:
+    - "T\xECm th\xEAm t\u1EEB m\u1EDBi \u0111\u1EC3 nh\u1EADn ruby"
+    - Find more and more new words to collect rubies
+    - Trouvez de nouveaux mots pour gagner des rubis
+    - "Encuentra m\xE1s palabras nuevas para conseguir rub\xEDes"
+    - Encontre mais palavras novas para ganhar rubis
+  - key: extra.claim
+    values:
+    - "NH\u1EACN +{n} RUBY"
+    - CLAIM +{n} RUBIES
+    - "R\xC9CUP\xC9RER +{n} RUBIS"
+    - "RECOGER +{n} RUB\xCDES"
+    - RESGATAR +{n} RUBIS
+  - key: extra.claimed
+    values:
+    - "\u0110\xE3 nh\u1EADn +{n} ruby"
+    - Claimed +{n} rubies
+    - "+{n} rubis r\xE9cup\xE9r\xE9es"
+    - "Recogidas +{n} rub\xEDes"
+    - +{n} rubis resgatadas
+  - key: extra.note
+    values:
+    - "T\u1EEB th\u01B0\u1EDFng ch\u1EC9 t\xEDnh m\u1ED9t l\u1EA7n cho m\u1ED7i level."
+    - Each extra word counts once per level.
+    - Chaque mot bonus compte une fois par niveau.
+    - Cada palabra extra cuenta una vez por nivel.
+    - "Cada palavra extra conta uma vez por n\xEDvel."
+  - key: shop.title
+    values:
+    - "C\u1EECA H\xC0NG"
+    - SHOP
+    - BOUTIQUE
+    - TIENDA
+    - LOJA
+  - key: shop.free
+    values:
+    - "RUBY MI\u1EC4N PH\xCD"
+    - FREE RUBIES
+    - RUBIS GRATUITES
+    - "RUB\xCDES GRATIS"
+    - "RUBIS GR\xC1TIS"
+  - key: shop.watch
+    values:
+    - XEM
+    - WATCH
+    - VOIR
+    - VER
+    - VER
+  - key: shop.ready
+    values:
+    - "Xem video ng\u1EAFn: +{n} ruby"
+    - 'Short video: +{n} rubies'
+    - "Courte vid\xE9o : +{n} rubis"
+    - "V\xEDdeo corto: +{n} rub\xEDes"
+    - "V\xEDdeo curto: +{n} rubis"
+  - key: shop.cool
+    values:
+    - "Video s\u1EB5n s\xE0ng sau {t}"
+    - Ad available in {t}
+    - "Vid\xE9o disponible dans {t}"
+    - "V\xEDdeo disponible en {t}"
+    - "V\xEDdeo dispon\xEDvel em {t}"
+  - key: shop.pack
+    values:
+    - '{n} ruby'
+    - '{n} rubies'
+    - '{n} rubis'
+    - "{n} rub\xEDes"
+    - '{n} rubis'
+  - key: shop.note
+    values:
+    - "G\xF3i 4500, 11000 ruby v\xE0 T\u1EAFt qu\u1EA3ng c\xE1o s\u1EBD t\u1EAFt
+      qu\u1EA3ng c\xE1o xen k\u1EBD v\xE0 banner. Video th\u01B0\u1EDFng v\u1EABn
+      tu\u1EF3 ch\u1ECDn."
+    - The 4500 and 11000 ruby packs and Remove ads turn off interstitials and banners.
+      Reward videos stay optional.
+    - "Les packs 4500 et 11000 rubis et Sans pub suppriment les pubs intercalaires
+      et les banni\xE8res. Les vid\xE9os restent facultatives."
+    - "Los paquetes de 4500 y 11000 rub\xEDes y Sin anuncios quitan los intersticiales
+      y banners. Los v\xEDdeos siguen siendo opcionales."
+    - "Os pacotes de 4500 e 11000 rubis e Sem an\xFAncios removem intersticiais e
+      banners. Os v\xEDdeos continuam opcionais."
+  - key: shop.noCheckout
+    values:
+    - "DEMO: ch\u01B0a c\xF3 thanh to\xE1n th\u1EADt, ch\u01B0a x\xE1c minh IAP."
+    - 'DEMO: no real checkout, IAP not verified.'
+    - "D\xC9MO : pas de vrai paiement, achat non v\xE9rifi\xE9."
+    - 'DEMO: no hay pago real, compra no verificada.'
+    - "DEMO: sem pagamento real, compra n\xE3o verificada."
+  - key: shop.best
+    values:
+    - "L\u1EDCI NH\u1EA4T"
+    - BEST VALUE
+    - MEILLEURE OFFRE
+    - MEJOR OFERTA
+    - MELHOR OFERTA
+  - key: shop.adsOff
+    values:
+    - "\u0110\xE3 t\u1EAFt qu\u1EA3ng c\xE1o"
+    - Ads removed
+    - "Publicit\xE9s supprim\xE9es"
+    - Anuncios eliminados
+    - "An\xFAncios removidos"
+  - key: rv.title
+    values:
+    - XEM VIDEO
+    - WATCH A VIDEO
+    - "REGARDER UNE VID\xC9O"
+    - "VER UN V\xCDDEO"
+    - "ASSISTIR A UM V\xCDDEO"
+  - key: rv.value
+    values:
+    - "Xem h\u1EBFt video \u0111\u1EC3 nh\u1EADn"
+    - Watch the whole video to get
+    - "Regardez toute la vid\xE9o pour obtenir"
+    - "Mira el v\xEDdeo completo para obtener"
+    - "Assista ao v\xEDdeo inteiro para ganhar"
+  - key: rv.watch
+    values:
+    - XEM VIDEO
+    - WATCH VIDEO
+    - "REGARDER LA VID\xC9O"
+    - "VER V\xCDDEO"
+    - "ASSISTIR AO V\xCDDEO"
+  - key: rv.no
+    values:
+    - "KH\xD4NG, C\u1EA2M \u01A0N"
+    - NO THANKS
+    - NON, MERCI
+    - NO, GRACIAS
+    - "N\xC3O, OBRIGADO"
+  - key: rv.s.loading
+    values:
+    - "\u0110ang t\u1EA3i video\u2026"
+    - "Loading video\u2026"
+    - "Chargement de la vid\xE9o\u2026"
+    - "Cargando v\xEDdeo\u2026"
+    - "Carregando v\xEDdeo\u2026"
+  - key: rv.d.loading
+    values:
+    - "B\u1EA1n v\u1EABn ch\u01A1i b\xECnh th\u01B0\u1EDDng trong l\xFAc ch\u1EDD."
+    - You can keep playing while it loads.
+    - "Vous pouvez continuer \xE0 jouer pendant le chargement."
+    - Puedes seguir jugando mientras carga.
+    - "Voc\xEA pode continuar jogando enquanto carrega."
+  - key: rv.s.cooldown
+    values:
+    - "Video ti\u1EBFp theo sau {t}"
+    - Next video in {t}
+    - "Prochaine vid\xE9o dans {t}"
+    - "Pr\xF3ximo v\xEDdeo en {t}"
+    - "Pr\xF3ximo v\xEDdeo em {t}"
+  - key: rv.d.cooldown
+    values:
+    - "Ch\u01B0a m\u1EA5t g\xEC. Quay l\u1EA1i sau nh\xE9."
+    - Nothing lost. Come back soon.
+    - "Rien de perdu. Revenez bient\xF4t."
+    - No has perdido nada. Vuelve pronto.
+    - "Voc\xEA n\xE3o perdeu nada. Volte em breve."
+  - key: rv.s.nofill
+    values:
+    - "Ch\u01B0a c\xF3 video l\xFAc n\xE0y"
+    - No video available right now
+    - "Aucune vid\xE9o disponible pour le moment"
+    - "No hay v\xEDdeo disponible ahora"
+    - "Nenhum v\xEDdeo dispon\xEDvel agora"
+  - key: rv.d.nofill
+    values:
+    - "Kh\xF4ng tr\u1EEB ruby, kh\xF4ng c\xF3 th\u01B0\u1EDFng. Th\u1EED l\u1EA1i
+      sau."
+    - No rubies charged, no reward. Try later.
+    - "Aucun rubis d\xE9bit\xE9, aucune r\xE9compense. R\xE9essayez plus tard."
+    - "No se cobran rub\xEDes ni hay recompensa. Int\xE9ntalo m\xE1s tarde."
+    - Nenhum rubi cobrado e nenhuma recompensa. Tente mais tarde.
+  - key: rv.s.offline
+    values:
+    - "B\u1EA1n \u0111ang offline"
+    - You're offline
+    - "Vous \xEAtes hors ligne"
+    - "Est\xE1s sin conexi\xF3n"
+    - "Voc\xEA est\xE1 offline"
+  - key: rv.d.offline
+    values:
+    - "Ruby t\u1EEB video c\u1EA7n m\u1EA1ng. Ch\u01A1i v\u1EABn b\xECnh th\u01B0\u1EDDng."
+    - Video rubies need internet. Play continues normally.
+    - "Les rubis vid\xE9o n\xE9cessitent Internet. Le jeu continue normalement."
+    - "Las rub\xEDes del v\xEDdeo necesitan internet. El juego sigue con normalidad."
+    - "As rubis do v\xEDdeo precisam de internet. O jogo continua normalmente."
+  - key: rv.s.playing
+    values:
+    - "QU\u1EA2NG C\xC1O M\xD4 PH\u1ECENG"
+    - SIMULATED AD
+    - "PUBLICIT\xC9 SIMUL\xC9E"
+    - ANUNCIO SIMULADO
+    - "AN\xDANCIO SIMULADO"
+  - key: rv.d.playing
+    values:
+    - "Kh\xF4ng ph\u1EA3i qu\u1EA3ng c\xE1o th\u1EADt. C\xF2n {n}s"
+    - Not a real ad. {n}s left
+    - "Ce n'est pas une vraie publicit\xE9. Encore {n} s"
+    - No es un anuncio real. Quedan {n} s
+    - "N\xE3o \xE9 um an\xFAncio real. Faltam {n} s"
+  - key: rv.closeAd
+    values:
+    - "\u0110\xD3NG QU\u1EA2NG C\xC1O"
+    - CLOSE AD
+    - "FERMER LA PUBLICIT\xC9"
+    - CERRAR ANUNCIO
+    - "FECHAR AN\xDANCIO"
+  - key: rv.s.success
+    values:
+    - "NH\u1EACN TH\u01AF\u1EDENG!"
+    - REWARD EARNED!
+    - "R\xC9COMPENSE OBTENUE !"
+    - "\xA1RECOMPENSA OBTENIDA!"
+    - RECOMPENSA GANHA!
+  - key: rv.d.success
+    values:
+    - "\u0110\xE3 c\u1ED9ng {n} ruby."
+    - '{n} rubies added.'
+    - "{n} rubis ajout\xE9es."
+    - "Se a\xF1adieron {n} rub\xEDes."
+    - '{n} rubis adicionadas.'
+  - key: rv.s.cancel
+    values:
+    - "\u0110\xE3 \u0111\xF3ng s\u1EDBm"
+    - Closed early
+    - "Ferm\xE9e trop t\xF4t"
+    - Cerrado antes de tiempo
+    - Fechado antes do fim
+  - key: rv.d.cancel
+    values:
+    - "Kh\xF4ng c\xF3 th\u01B0\u1EDFng v\xE0 kh\xF4ng b\u1ECB tr\u1EEB ruby."
+    - No reward and no rubies charged.
+    - "Aucune r\xE9compense et aucun rubis d\xE9bit\xE9."
+    - "Sin recompensa y sin cobro de rub\xEDes."
+    - "Sem recompensa e sem cobran\xE7a de rubis."
+  - key: rv.s.error
+    values:
+    - "C\xF3 l\u1ED7i khi ph\xE1t video"
+    - Video failed to play
+    - "\xC9chec de la lecture de la vid\xE9o"
+    - "Error al reproducir el v\xEDdeo"
+    - "Falha ao reproduzir o v\xEDdeo"
+  - key: rv.d.error
+    values:
+    - "Kh\xF4ng c\xF3 th\u01B0\u1EDFng v\xE0 kh\xF4ng b\u1ECB tr\u1EEB ruby."
+    - No reward and no rubies charged.
+    - "Aucune r\xE9compense et aucun rubis d\xE9bit\xE9."
+    - "Sin recompensa y sin cobro de rub\xEDes."
+    - "Sem recompensa e sem cobran\xE7a de rubis."
+  - key: rv.demo
+    values:
+    - "DEMO \xB7 ch\u1ECDn tr\u1EA1ng th\xE1i qu\u1EA3ng c\xE1o \u0111\u1EC3 xem"
+    - "DEMO \xB7 pick an ad state to preview"
+    - "D\xC9MO \xB7 choisissez un \xE9tat de publicit\xE9 \xE0 pr\xE9visualiser"
+    - "DEMO \xB7 elige un estado de anuncio para verlo"
+    - "DEMO \xB7 escolha um estado de an\xFAncio para visualizar"
+  - key: rv.st.loading
+    values:
+    - "\u0111ang t\u1EA3i"
+    - loading
+    - chargement
+    - cargando
+    - carregando
+  - key: rv.st.ready
+    values:
+    - "s\u1EB5n s\xE0ng"
+    - ready
+    - "pr\xEAte"
+    - listo
+    - pronto
+  - key: rv.st.cooldown
+    values:
+    - "ch\u1EDD"
+    - cooldown
+    - attente
+    - espera
+    - espera
+  - key: rv.st.nofill
+    values:
+    - "h\u1EBFt qu\u1EA3ng c\xE1o"
+    - no-fill
+    - aucune pub
+    - sin anuncios
+    - "sem an\xFAncios"
+  - key: rv.st.offline
+    values:
+    - offline
+    - offline
+    - hors ligne
+    - "sin conexi\xF3n"
+    - offline
+  - key: rv.out
+    values:
+    - "K\u1EBFt qu\u1EA3 khi xem:"
+    - 'Outcome when watched:'
+    - "R\xE9sultat du visionnage :"
+    - 'Resultado al verlo:'
+    - 'Resultado ao assistir:'
+  - key: rv.out.success
+    values:
+    - xong
+    - complete
+    - "termin\xE9e"
+    - completo
+    - completo
+  - key: rv.out.cancel
+    values:
+    - "\u0111\xF3ng s\u1EDBm"
+    - cancel
+    - "ferm\xE9e"
+    - cerrado
+    - fechado
+  - key: rv.out.error
+    values:
+    - "l\u1ED7i"
+    - error
+    - erreur
+    - error
+    - erro
+  - key: low.title
+    values:
+    - "C\u1EA6N {n} RUBY"
+    - NEED {n} RUBIES
+    - IL FAUT {n} RUBIS
+    - "HACEN FALTA {n} RUB\xCDES"
+    - PRECISA DE {n} RUBIS
+  - key: low.desc
+    values:
+    - "B\u1EA1n c\xF3 {a} ruby. G\u1EE3i \xFD l\xE0 tu\u1EF3 ch\u1ECDn, b\u1EA1n
+      v\u1EABn ch\u01A1i ti\u1EBFp \u0111\u01B0\u1EE3c mi\u1EC5n ph\xED."
+    - You have {a} rubies. Hints are optional; you can keep playing for free.
+    - "Vous avez {a} rubis. Les indices sont facultatifs, vous pouvez continuer \xE0
+      jouer gratuitement."
+    - "Tienes {a} rub\xEDes. Las pistas son opcionales; puedes seguir jugando gratis."
+    - "Voc\xEA tem {a} rubis. As dicas s\xE3o opcionais; voc\xEA pode continuar jogando
+      de gra\xE7a."
+  - key: low.watch
+    values:
+    - "XEM VIDEO +{n} RUBY (tu\u1EF3 ch\u1ECDn)"
+    - WATCH VIDEO +{n} RUBIES (optional)
+    - "VID\xC9O +{n} RUBIS (facultatif)"
+    - "VER V\xCDDEO +{n} RUB\xCDES (opcional)"
+    - "V\xCDDEO +{n} RUBIS (opcional)"
+  - key: low.shop
+    values:
+    - "C\u1EECA H\xC0NG"
+    - SHOP
+    - BOUTIQUE
+    - TIENDA
+    - LOJA
+  - key: rate.title
+    values:
+    - "B\u1EA0N TH\xCDCH GAME?"
+    - ENJOYING THE GAME?
+    - VOUS AIMEZ LE JEU ?
+    - "\xBFTE GUSTA EL JUEGO?"
+    - "EST\xC1 GOSTANDO DO JOGO?"
+  - key: rate.desc
+    values:
+    - "N\u1EBFu th\xEDch game, h\xE3y \u0111\xE1nh gi\xE1 5 sao tr\xEAn c\u1EEDa
+      h\xE0ng."
+    - If you love the game, please rate us 5 stars in the store.
+    - "Si le jeu vous pla\xEEt, donnez-nous 5 \xE9toiles sur la boutique."
+    - "Si te gusta el juego, val\xF3ranos con 5 estrellas en la tienda."
+    - "Se voc\xEA gosta do jogo, avalie com 5 estrelas na loja."
+  - key: rate.yes
+    values:
+    - "\u0110\u01AF\u1EE2C"
+    - YES
+    - OUI
+    - "S\xCD"
+    - SIM
+  - key: rate.later
+    values:
+    - "\u0110\u1EC2 SAU"
+    - LATER
+    - PLUS TARD
+    - "M\xC1S TARDE"
+    - DEPOIS
+  - key: lang.title
+    values:
+    - "Ng\xF4n ng\u1EEF"
+    - Language
+    - Langue
+    - Idioma
+    - Idioma
+  - key: lang.ui
+    values:
+    - "Ng\xF4n ng\u1EEF giao di\u1EC7n"
+    - Interface language
+    - Langue de l'interface
+    - Idioma de la interfaz
+    - Idioma da interface
+  - key: lang.uiDesc
+    values:
+    - "\u0110\u1ED5i ch\u1EEF tr\xEAn n\xFAt, popup, th\xF4ng b\xE1o. Kh\xF4ng \u0111\u1ED5i
+      t\u1EEB trong level."
+    - Changes button, popup and message text. Does not change level words.
+    - "Change le texte des boutons, fen\xEAtres et messages. Ne change pas les mots
+      des niveaux."
+    - Cambia el texto de botones, ventanas y mensajes. No cambia las palabras de
+      los niveles.
+    - "Muda o texto de bot\xF5es, janelas e mensagens. N\xE3o muda as palavras dos
+      n\xEDveis."
+  - key: lang.game
+    values:
+    - "Ng\xF4n ng\u1EEF ch\u01A1i"
+    - Game language
+    - Langue de jeu
+    - Idioma de juego
+    - Idioma do jogo
+  - key: lang.gameDesc
+    values:
+    - "B\u1ED9 level v\xE0 t\u1EEB \u0111i\u1EC3n. M\u1ED7i ng\xF4n ng\u1EEF c\xF3
+      ti\u1EBFn \u0111\u1ED9 ri\xEAng."
+    - Level set and dictionary. Each language keeps its own progress.
+    - "S\xE9rie de niveaux et dictionnaire. Chaque langue garde sa propre progression."
+    - Conjunto de niveles y diccionario. Cada idioma guarda su propio progreso.
+    - "Conjunto de n\xEDveis e dicion\xE1rio. Cada idioma mant\xE9m o pr\xF3prio
+      progresso."
+  - key: lang.vi
+    values:
+    - "Ti\u1EBFng Vi\u1EC7t"
+    - Vietnamese
+    - Vietnamien
+    - Vietnamita
+    - Vietnamita
+  - key: lang.en
+    values:
+    - "Ti\u1EBFng Anh"
+    - English
+    - Anglais
+    - "Ingl\xE9s"
+    - "Ingl\xEAs"
+  - key: lang.fr
+    values:
+    - "Ti\u1EBFng Ph\xE1p"
+    - French
+    - "Fran\xE7ais"
+    - "Franc\xE9s"
+    - "Franc\xEAs"
+  - key: lang.es
+    values:
+    - "Ti\u1EBFng T\xE2y Ban Nha"
+    - Spanish
+    - Espagnol
+    - "Espa\xF1ol"
+    - Espanhol
+  - key: lang.pt
+    values:
+    - "Ti\u1EBFng B\u1ED3 \u0110\xE0o Nha"
+    - Portuguese
+    - Portugais
+    - "Portugu\xE9s"
+    - "Portugu\xEAs"
+  - key: lang.ui.vi
+    values:
+    - "Ti\u1EBFng Vi\u1EC7t"
+    - "Ti\u1EBFng Vi\u1EC7t"
+    - "Ti\u1EBFng Vi\u1EC7t"
+    - "Ti\u1EBFng Vi\u1EC7t"
+    - "Ti\u1EBFng Vi\u1EC7t"
+  - key: lang.ui.en
+    values:
+    - English
+    - English
+    - English
+    - English
+    - English
+  - key: lang.ui.fr
+    values:
+    - "Fran\xE7ais"
+    - "Fran\xE7ais"
+    - "Fran\xE7ais"
+    - "Fran\xE7ais"
+    - "Fran\xE7ais"
+  - key: lang.ui.es
+    values:
+    - "Espa\xF1ol"
+    - "Espa\xF1ol"
+    - "Espa\xF1ol"
+    - "Espa\xF1ol"
+    - "Espa\xF1ol"
+  - key: lang.ui.pt
+    values:
+    - "Portugu\xEAs"
+    - "Portugu\xEAs"
+    - "Portugu\xEAs"
+    - "Portugu\xEAs"
+    - "Portugu\xEAs"
+  - key: lang.playable
+    values:
+    - "Ch\u01A1i \u0111\u01B0\u1EE3c \xB7 534 level"
+    - "Playable \xB7 534 levels"
+    - "Jouable \xB7 534 niveaux"
+    - "Jugable \xB7 534 niveles"
+    - "Jog\xE1vel \xB7 534 n\xEDveis"
+  - key: lang.soon
+    values:
+    - "S\u1EAFp c\xF3 \xB7 \u0111\xE3 c\xF3 t\u1EEB \u0111i\u1EC3n, ch\u01B0a c\xF3
+      level"
+    - "Coming soon \xB7 word list only, no levels yet"
+    - "Bient\xF4t \xB7 dictionnaire seulement, pas encore de niveaux"
+    - "Pr\xF3ximamente \xB7 solo diccionario, a\xFAn sin niveles"
+    - "Em breve \xB7 s\xF3 dicion\xE1rio, ainda sem n\xEDveis"
+  - key: lang.soonVi
+    values:
+    - "\u0110\u1EC1 xu\u1EA5t \xB7 ch\u01B0a c\xF3 t\u1EEB \u0111i\u1EC3n l\u1EABn
+      level"
+    - "Proposed \xB7 no word list or levels yet"
+    - "Propos\xE9 \xB7 ni dictionnaire ni niveaux pour le moment"
+    - "Propuesto \xB7 a\xFAn sin diccionario ni niveles"
+    - "Proposto \xB7 ainda sem dicion\xE1rio nem n\xEDveis"
+  - key: lang.noteSoon
+    values:
+    - "Ng\xF4n ng\u1EEF n\xE0y ch\u01B0a c\xF3 b\u1ED9 level h\u1EE3p l\u1EC7 n\xEAn
+      ch\u01B0a ch\u01A1i \u0111\u01B0\u1EE3c."
+    - This language has no valid level set yet, so it is not playable.
+    - "Cette langue n'a pas encore de s\xE9rie de niveaux valide : elle n'est pas
+      jouable."
+    - "Este idioma a\xFAn no tiene un conjunto de niveles v\xE1lido, as\xED que no
+      se puede jugar."
+    - "Este idioma ainda n\xE3o tem um conjunto de n\xEDveis v\xE1lido, ent\xE3o
+      n\xE3o d\xE1 para jogar."
+  - key: lang.saved
+    values:
+    - "\u0110\xE3 l\u01B0u"
+    - Saved
+    - "Enregistr\xE9"
+    - Guardado
+    - Salvo
+  - key: daily.title
+    values:
+    - "Th\u1EED th\xE1ch h\xE0ng ng\xE0y"
+    - Daily Challenge
+    - "D\xE9fi quotidien"
+    - Reto diario
+    - "Desafio di\xE1rio"
+  - key: daily.today
+    values:
+    - "H\xF4m nay \xB7 {d}"
+    - "Today \xB7 {d}"
+    - "Aujourd'hui \xB7 {d}"
+    - "Hoy \xB7 {d}"
+    - "Hoje \xB7 {d}"
+  - key: daily.goal
+    values:
+    - "M\u1EE5c ti\xEAu: t\xECm \u0111\u1EE7 {n} t\u1EEB trong 1 b\xE0n chung cho
+      m\u1ECDi ng\u01B0\u1EDDi ch\u01A1i."
+    - 'Goal: find all {n} words in one puzzle shared by every player.'
+    - "Objectif : trouver les {n} mots d'une grille commune \xE0 tous les joueurs."
+    - 'Objetivo: encuentra las {n} palabras de un mismo puzle para todos los jugadores.'
+    - "Meta: encontrar as {n} palavras de um mesmo quebra-cabe\xE7a para todos os
+      jogadores."
+  - key: daily.play
+    values:
+    - "CH\u01A0I H\xD4M NAY"
+    - PLAY TODAY
+    - JOUER AUJOURD'HUI
+    - JUGAR HOY
+    - JOGAR HOJE
+  - key: daily.replay
+    values:
+    - "CH\u01A0I L\u1EA0I (kh\xF4ng th\u01B0\u1EDFng)"
+    - REPLAY (no reward)
+    - "REJOUER (sans r\xE9compense)"
+    - REPETIR (sin recompensa)
+    - JOGAR DE NOVO (sem recompensa)
+  - key: daily.playDay
+    values:
+    - "CH\u01A0I NG\xC0Y {d}"
+    - PLAY {d}
+    - JOUER LE {d}
+    - JUGAR EL {d}
+    - JOGAR {d}
+  - key: daily.reward
+    values:
+    - "Th\u01B0\u1EDFng: +{n} ruby, nh\u1EADn m\u1ED9t l\u1EA7n"
+    - 'Reward: +{n} rubies, claimed once'
+    - "R\xE9compense : +{n} rubis, une seule fois"
+    - "Recompensa: +{n} rub\xEDes, una sola vez"
+    - 'Recompensa: +{n} rubis, resgatada uma vez'
+  - key: daily.rewardDone
+    values:
+    - "\u0110\xE3 nh\u1EADn th\u01B0\u1EDFng ng\xE0y n\xE0y"
+    - Reward already claimed
+    - "R\xE9compense d\xE9j\xE0 r\xE9cup\xE9r\xE9e"
+    - Recompensa ya recogida
+    - "Recompensa j\xE1 resgatada"
+  - key: daily.backfill
+    values:
+    - "B\xF9 ng\xE0y b\u1ECB l\u1EE1: +{n} ruby, gi\u1EEF chu\u1ED7i"
+    - 'Make-up day: +{n} rubies, keeps your streak'
+    - "Jour de rattrapage : +{n} rubis, s\xE9rie conserv\xE9e"
+    - "D\xEDa de recuperaci\xF3n: +{n} rub\xEDes, mantiene tu racha"
+    - "Dia de reposi\xE7\xE3o: +{n} rubis, mant\xE9m sua sequ\xEAncia"
+  - key: daily.noReward
+    values:
+    - "Ng\xE0y n\xE0y kh\xF4ng c\xF2n th\u01B0\u1EDFng"
+    - No reward for this day
+    - "Plus de r\xE9compense pour ce jour"
+    - "Este d\xEDa ya no tiene recompensa"
+    - "Este dia n\xE3o tem mais recompensa"
+  - key: daily.streak
+    values:
+    - "Chu\u1ED7i {n} ng\xE0y"
+    - '{n}-day streak'
+    - "S\xE9rie de {n} jours"
+    - "Racha de {n} d\xEDas"
+    - "Sequ\xEAncia de {n} dias"
+  - key: daily.best
+    values:
+    - "K\u1EF7 l\u1EE5c {n}"
+    - Best {n}
+    - Record {n}
+    - "R\xE9cord {n}"
+    - Recorde {n}
+  - key: daily.streakRisk
+    values:
+    - "Chu\u1ED7i c\u1EE7a b\u1EA1n \u0111ang ch\u1EDD! Ch\u01A1i h\xF4m nay ho\u1EB7c
+      b\xF9 h\xF4m qua \u0111\u1EC3 gi\u1EEF."
+    - Your streak is waiting! Play today or make up yesterday to keep it.
+    - "Votre s\xE9rie vous attend ! Jouez aujourd'hui ou rattrapez hier pour la garder."
+    - "\xA1Tu racha te espera! Juega hoy o recupera ayer para mantenerla."
+    - "Sua sequ\xEAncia est\xE1 esperando! Jogue hoje ou reponha ontem para mant\xEA-la."
+  - key: daily.streakLost
+    values:
+    - "Chu\u1ED7i \u0111\xE3 ngh\u1EC9. K\u1EF7 l\u1EE5c {n} v\u1EABn \u0111\u01B0\u1EE3c
+      gi\u1EEF, b\u1EAFt \u0111\u1EA7u l\u1EA1i h\xF4m nay."
+    - Streak paused. Your best {n} is kept; start again today.
+    - "S\xE9rie interrompue. Votre record de {n} est conserv\xE9 ; repartez aujourd'hui."
+    - "Racha en pausa. Tu r\xE9cord de {n} se conserva; empieza de nuevo hoy."
+    - "Sequ\xEAncia pausada. Seu recorde de {n} foi mantido; recomece hoje."
+  - key: daily.nextMilestone
+    values:
+    - "M\u1ED1c k\u1EBF: {d} ng\xE0y \u2192 +{n} ruby"
+    - "Next bonus: {d} days \u2192 +{n} rubies"
+    - "Prochain bonus : {d} jours \u2192 +{n} rubis"
+    - "Pr\xF3ximo bonus: {d} d\xEDas \u2192 +{n} rub\xEDes"
+    - "Pr\xF3ximo b\xF4nus: {d} dias \u2192 +{n} rubis"
+  - key: daily.legend
+    values:
+    - "Xanh: \u0111\xE3 xong \xB7 Cam: b\xF9 \u0111\u01B0\u1EE3c \xB7 M\u1EDD: ch\u01B0a
+      \u0111\u1EBFn ng\xE0y"
+    - "Teal: done \xB7 Orange: make-up \xB7 Dimmed: not yet"
+    - "Turquoise : fait \xB7 Orange : rattrapable \xB7 Estomp\xE9 : pas encore"
+    - "Turquesa: hecho \xB7 Naranja: recuperable \xB7 Atenuado: a\xFAn no"
+    - "Verde-azulado: feito \xB7 Laranja: reposi\xE7\xE3o \xB7 Esmaecido: ainda n\xE3o"
+  - key: daily.prev
+    values:
+    - "Th\xE1ng tr\u01B0\u1EDBc"
+    - Previous month
+    - "Mois pr\xE9c\xE9dent"
+    - Mes anterior
+    - "M\xEAs anterior"
+  - key: daily.next
+    values:
+    - "Th\xE1ng sau"
+    - Next month
+    - Mois suivant
+    - Mes siguiente
+    - "Pr\xF3ximo m\xEAs"
+  - key: daily.month
+    values:
+    - "Th\xE1ng {m} \xB7 {y}"
+    - '{m} {y}'
+    - '{m} {y}'
+    - '{m} {y}'
+    - '{m} {y}'
+  - key: daily.dayAria
+    values:
+    - "Ng\xE0y {d}, {s}"
+    - Day {d}, {s}
+    - Jour {d}, {s}
+    - "D\xEDa {d}, {s}"
+    - Dia {d}, {s}
+  - key: daily.s.done
+    values:
+    - "\u0111\xE3 xong"
+    - completed
+    - "termin\xE9"
+    - completado
+    - "conclu\xEDdo"
+  - key: daily.s.miss
+    values:
+    - "b\u1ECF l\u1EE1, b\xF9 \u0111\u01B0\u1EE3c"
+    - missed, can make up
+    - "manqu\xE9, rattrapable"
+    - perdido, recuperable
+    - perdido, pode repor
+  - key: daily.s.old
+    values:
+    - "b\u1ECF l\u1EE1, h\u1EBFt h\u1EA1n b\xF9"
+    - missed, make-up expired
+    - "manqu\xE9, rattrapage expir\xE9"
+    - "perdido, recuperaci\xF3n caducada"
+    - "perdido, reposi\xE7\xE3o expirada"
+  - key: daily.s.today
+    values:
+    - "h\xF4m nay"
+    - today
+    - aujourd'hui
+    - hoy
+    - hoje
+  - key: daily.s.future
+    values:
+    - "ch\u01B0a \u0111\u1EBFn"
+    - not available yet
+    - pas encore disponible
+    - "a\xFAn no disponible"
+    - "ainda n\xE3o dispon\xEDvel"
+  - key: daily.tz
+    values:
+    - "Ng\xE0y \u0111\u1ED5i l\xFAc 00:00 gi\u1EDD tr\xEAn m\xE1y. Ch\u01A1i \u0111\u01B0\u1EE3c
+      khi offline."
+    - Day changes at 00:00 device time. Playable offline.
+    - "Le jour change \xE0 00:00 selon l'heure de l'appareil. Jouable hors ligne."
+    - "El d\xEDa cambia a las 00:00 seg\xFAn la hora del dispositivo. Se puede jugar
+      sin conexi\xF3n."
+    - "O dia muda \xE0s 00:00 no hor\xE1rio do aparelho. D\xE1 para jogar offline."
+  - key: daily.demoClock
+    values:
+    - "\u0110\u1ED3ng h\u1ED3 demo: {d}"
+    - 'Demo clock: {d}'
+    - "Horloge de d\xE9mo : {d}"
+    - 'Reloj de demo: {d}'
+    - "Rel\xF3gio de demonstra\xE7\xE3o: {d}"
+  - key: daily.advance
+    values:
+    - "DEMO: sang ng\xE0y k\u1EBF"
+    - 'DEMO: next day'
+    - "D\xC9MO : jour suivant"
+    - "DEMO: d\xEDa siguiente"
+    - "DEMO: pr\xF3ximo dia"
+  - key: daily.resetDemo
+    values:
+    - "DEMO: \u0111\u1EB7t l\u1EA1i d\u1EEF li\u1EC7u"
+    - 'DEMO: reset data'
+    - "D\xC9MO : r\xE9initialiser"
+    - 'DEMO: restablecer datos'
+    - 'DEMO: redefinir dados'
+  - key: daily.sample
+    values:
+    - "D\u1EEF li\u1EC7u l\u1ECBch v\xE0 chu\u1ED7i l\xE0 m\u1EABu \u0111\u1EC3 xem
+      lu\u1ED3ng."
+    - Calendar and streak data are samples to preview the flow.
+    - "Le calendrier et la s\xE9rie sont des exemples pour voir le parcours."
+    - El calendario y la racha son datos de muestra para ver el flujo.
+    - "O calend\xE1rio e a sequ\xEAncia s\xE3o dados de amostra para ver o fluxo."
+  - key: bot.title
+    values:
+    - "\u0110\u1EA5u v\u1EDBi Bot"
+    - Play with Bot
+    - Jouer contre le bot
+    - Jugar contra el bot
+    - Jogar contra o bot
+  - key: bot.intro
+    values:
+    - "C\xF9ng m\u1ED9t b\xE0n, c\xF9ng ng\xF4n ng\u1EEF. Ai t\xECm \u0111\u01B0\u1EE3c
+      nhi\u1EC1u \u0111i\u1EC3m h\u01A1n trong th\u1EDDi gian gi\u1EDBi h\u1EA1n
+      s\u1EBD th\u1EAFng."
+    - Same puzzle, same language. Whoever scores more in the time limit wins.
+    - "M\xEAme grille, m\xEAme langue. Qui marque le plus de points dans le temps
+      imparti gagne."
+    - "Mismo puzle, mismo idioma. Gana quien consiga m\xE1s puntos en el tiempo l\xEDmite."
+    - "Mesmo quebra-cabe\xE7a, mesmo idioma. Vence quem fizer mais pontos no tempo
+      limite."
+  - key: bot.diff
+    values:
+    - "Ch\u1ECDn \u0111\u1ED9 kh\xF3"
+    - Choose difficulty
+    - "Choisir la difficult\xE9"
+    - Elige la dificultad
+    - Escolha a dificuldade
+  - key: bot.easy
+    values:
+    - "D\u1EC5"
+    - Easy
+    - Facile
+    - "F\xE1cil"
+    - "F\xE1cil"
+  - key: bot.normal
+    values:
+    - "V\u1EEBa"
+    - Normal
+    - Normal
+    - Normal
+    - Normal
+  - key: bot.hard
+    values:
+    - "Kh\xF3"
+    - Hard
+    - Difficile
+    - "Dif\xEDcil"
+    - "Dif\xEDcil"
+  - key: bot.name.easy
+    values:
+    - Bot Pip
+    - Bot Pip
+    - Bot Pip
+    - Bot Pip
+    - Bot Pip
+  - key: bot.name.normal
+    values:
+    - Bot Zip
+    - Bot Zip
+    - Bot Zip
+    - Bot Zip
+    - Bot Zip
+  - key: bot.name.hard
+    values:
+    - Bot Zap
+    - Bot Zap
+    - Bot Zap
+    - Bot Zap
+    - Bot Zap
+  - key: bot.d.easy
+    values:
+    - "Ch\u1EADm, hay b\u1ECF s\xF3t t\u1EEB. Th\u1EAFng +{n} ruby"
+    - Slow, often misses words. Win +{n} rubies
+    - Lent, rate souvent des mots. Victoire +{n} rubis
+    - "Lento, suele dejarse palabras. Victoria +{n} rub\xEDes"
+    - "Lento, costuma perder palavras. Vit\xF3ria +{n} rubis"
+  - key: bot.d.normal
+    values:
+    - "T\u1ED1c \u0111\u1ED9 v\u1EEBa ph\u1EA3i. Th\u1EAFng +{n} ruby"
+    - Steady pace. Win +{n} rubies
+    - "Rythme r\xE9gulier. Victoire +{n} rubis"
+    - "Ritmo constante. Victoria +{n} rub\xEDes"
+    - "Ritmo constante. Vit\xF3ria +{n} rubis"
+  - key: bot.d.hard
+    values:
+    - "Nhanh, \xEDt b\u1ECF s\xF3t. Th\u1EAFng +{n} ruby"
+    - Fast, rarely misses. Win +{n} rubies
+    - Rapide, rate rarement. Victoire +{n} rubis
+    - "R\xE1pido, rara vez falla. Victoria +{n} rub\xEDes"
+    - "R\xE1pido, raramente perde palavras. Vit\xF3ria +{n} rubis"
+  - key: bot.fair
+    values:
+    - "Bot l\xE0 ch\u01B0\u01A1ng tr\xECnh t\xEDnh s\u1EB5n, kh\xF4ng ph\u1EA3i ng\u01B0\u1EDDi
+      th\u1EADt. Kh\xF4ng xem tr\u01B0\u1EDBc \u0111\xE1p \xE1n c\u1EE7a b\u1EA1n,
+      kh\xF4ng d\xF9ng g\u1EE3i \xFD."
+    - The bot is a scripted program, not a real person. It never sees your input
+      and uses no hints.
+    - "Le bot est un programme script\xE9, pas une vraie personne. Il ne voit jamais
+      vos saisies et n'utilise aucun indice."
+    - El bot es un programa con guion, no una persona. Nunca ve lo que haces y no
+      usa pistas.
+    - "O bot \xE9 um programa roteirizado, n\xE3o uma pessoa. Ele nunca v\xEA o que
+      voc\xEA digita e n\xE3o usa dicas."
+  - key: bot.rules
+    values:
+    - "Kh\xF4ng g\u1EE3i \xFD trong tr\u1EADn. X\xE1o ch\u1EEF mi\u1EC5n ph\xED.
+      T\u1EEB th\u01B0\u1EDFng kh\xF4ng t\xEDnh \u0111i\u1EC3m."
+    - No hints in a match. Shuffle is free. Extra words do not score.
+    - "Pas d'indice en match. M\xE9langer est gratuit. Les mots bonus ne marquent
+      pas de points."
+    - "Sin pistas en la partida. Mezclar es gratis. Las palabras extra no punt\xFAan."
+    - "Sem dicas na partida. Embaralhar \xE9 gr\xE1tis. Palavras extras n\xE3o pontuam."
+  - key: bot.start
+    values:
+    - "B\u1EAET \u0110\u1EA6U"
+    - START
+    - COMMENCER
+    - EMPEZAR
+    - "COME\xC7AR"
+  - key: bot.cap
+    values:
+    - "Th\u01B0\u1EDFng bot h\xF4m nay: {a}/{b} ruby"
+    - 'Bot rewards today: {a}/{b} rubies'
+    - "R\xE9compenses du bot aujourd'hui : {a}/{b} rubis"
+    - "Recompensas del bot hoy: {a}/{b} rub\xEDes"
+    - 'Recompensas do bot hoje: {a}/{b} rubis'
+  - key: bot.you
+    values:
+    - "B\u1EA1n"
+    - You
+    - Vous
+    - "T\xFA"
+    - "Voc\xEA"
+  - key: bot.time
+    values:
+    - "C\xF2n {n}s"
+    - '{n}s left'
+    - '{n} s restantes'
+    - Quedan {n} s
+    - Faltam {n} s
+  - key: bot.pts
+    values:
+    - "{n} \u0111i\u1EC3m"
+    - '{n} pts'
+    - '{n} pts'
+    - '{n} pts'
+    - '{n} pts'
+  - key: bot.badge
+    values:
+    - BOT
+    - BOT
+    - BOT
+    - BOT
+    - BOT
+  - key: bot.win
+    values:
+    - "B\u1EA0N TH\u1EAENG!"
+    - YOU WIN!
+    - VOUS GAGNEZ !
+    - "\xA1GANAS!"
+    - "VOC\xCA VENCEU!"
+  - key: bot.lose
+    values:
+    - "BOT TH\u1EAENG"
+    - BOT WINS
+    - LE BOT GAGNE
+    - GANA EL BOT
+    - O BOT VENCEU
+  - key: bot.draw
+    values:
+    - "H\xD2A"
+    - DRAW
+    - "\xC9GALIT\xC9"
+    - EMPATE
+    - EMPATE
+  - key: bot.reward
+    values:
+    - "Th\u01B0\u1EDFng: +{n} ruby"
+    - 'Reward: +{n} rubies'
+    - "R\xE9compense : +{n} rubis"
+    - "Recompensa: +{n} rub\xEDes"
+    - 'Recompensa: +{n} rubis'
+  - key: bot.noReward
+    values:
+    - "Kh\xF4ng th\u01B0\u1EDFng th\xEAm (tr\u1EADn ch\u01A1i l\u1EA1i ho\u1EB7c
+      \u0111\xE3 \u0111\u1EE7 gi\u1EDBi h\u1EA1n ng\xE0y)"
+    - No reward (replay or daily cap reached)
+    - "Pas de r\xE9compense (partie rejou\xE9e ou plafond du jour atteint)"
+    - "Sin recompensa (partida repetida o l\xEDmite diario alcanzado)"
+    - "Sem recompensa (partida repetida ou limite di\xE1rio atingido)"
+  - key: bot.replay
+    values:
+    - "CH\u01A0I L\u1EA0I C\xD9NG B\xC0N"
+    - REPLAY SAME PUZZLE
+    - "REJOUER LA M\xCAME GRILLE"
+    - REPETIR EL MISMO PUZLE
+    - "JOGAR O MESMO QUEBRA-CABE\xC7A"
+  - key: bot.new
+    values:
+    - "TR\u1EACN M\u1EDAI"
+    - NEW MATCH
+    - NOUVELLE PARTIE
+    - NUEVA PARTIDA
+    - NOVA PARTIDA
+  - key: bot.seed
+    values:
+    - "M\xE3 tr\u1EADn {s}"
+    - Match seed {s}
+    - Code de partie {s}
+    - "C\xF3digo de partida {s}"
+    - "C\xF3digo da partida {s}"
+  - key: bot.found
+    values:
+    - "T\u1EEB \u0111\xE3 t\xECm: b\u1EA1n {a} \xB7 bot {b}"
+    - "Words found: you {a} \xB7 bot {b}"
+    - "Mots trouv\xE9s : vous {a} \xB7 bot {b}"
+    - "Palabras halladas: t\xFA {a} \xB7 bot {b}"
+    - "Palavras encontradas: voc\xEA {a} \xB7 bot {b}"
+  - key: bot.leave
+    values:
+    - "THO\xC1T TR\u1EACN"
+    - LEAVE MATCH
+    - QUITTER LA PARTIE
+    - SALIR DE LA PARTIDA
+    - SAIR DA PARTIDA
+  - key: bot.sampleNote
+    values:
+    - "B\xE0n l\u1EA5y t\u1EEB level m\u1EABu th\u1EADt c\u1EE7a World/Subworld t\u01B0\u01A1ng
+      \u1EE9ng."
+    - Puzzle comes from a real sample level of the matching World/Subworld.
+    - La grille vient d'un vrai niveau d'exemple du monde/sous-monde correspondant.
+    - El puzle viene de un nivel de muestra real del mundo/submundo correspondiente.
+    - "O quebra-cabe\xE7a vem de um n\xEDvel de amostra real do mundo/submundo correspondente."
+  - key: ai.title
+    values:
+    - "\u0110\u1EA4U AI"
+    - PLAY WITH AI
+    - VS IA
+    - VS IA
+    - VS IA
+  - key: ai.soon
+    values:
+    - "S\u1EAEP RA M\u1EAET"
+    - COMING SOON
+    - "BIENT\xD4T DISPONIBLE"
+    - "PR\xD3XIMAMENTE"
+    - EM BREVE
+  - key: ai.desc
+    values:
+    - "Ch\u01B0a c\xF3 ng\xE0y ph\xE1t h\xE0nh. Hi\u1EC7n ch\u01B0a c\xF3 gh\xE9p
+      tr\u1EADn, thanh to\xE1n hay qu\u1EA3ng c\xE1o cho t\xEDnh n\u0103ng n\xE0y."
+    - No release date yet. There is no matchmaking, payment or ads for this feature.
+    - "Pas encore de date de sortie. Pas de matchmaking, de paiement ni de publicit\xE9s
+      pour cette fonction."
+    - "A\xFAn no hay fecha de lanzamiento. Esta funci\xF3n no tiene emparejamiento,
+      pagos ni anuncios."
+    - "Ainda sem data de lan\xE7amento. Este recurso n\xE3o tem pareamento, pagamento
+      nem an\xFAncios."
+  - key: ai.note
+    values:
+    - "H\xE3y th\u1EED \u0111\u1EA5u Bot ho\u1EB7c Th\u1EED th\xE1ch h\xE0ng ng\xE0y
+      trong l\xFAc ch\u1EDD."
+    - Try Play with Bot or the Daily Challenge in the meantime.
+    - "En attendant, essayez le match contre le bot ou le d\xE9fi quotidien."
+    - Mientras tanto, prueba la partida contra el bot o el reto diario.
+    - "Enquanto isso, experimente jogar contra o bot ou o desafio di\xE1rio."
+  - key: ai.toBot
+    values:
+    - "\u0110\u1EA4U BOT"
+    - PLAY WITH BOT
+    - VS BOT
+    - VS BOT
+    - VS BOT
+  - key: scr.home.name
+    values:
+    - Home
+    - Home
+    - Accueil
+    - Inicio
+    - "In\xEDcio"
+  - key: scr.home.note
+    values:
+    - "N\u1EC1n, logo, Play, Daily, Bot, AI (s\u1EAFp c\xF3), Shop, Language"
+    - Backdrop, logo, Play, Daily, Bot, AI (soon), Shop, Language
+    - "Fond, logo, Jouer, Quotidien, Bot, IA (bient\xF4t), Boutique, Langue"
+    - Fondo, logo, Jugar, Diario, Bot, IA (pronto), Tienda, Idioma
+    - "Fundo, logo, Jogar, Di\xE1rio, Bot, IA (em breve), Loja, Idioma"
+  - key: scr.select-world.name
+    values:
+    - "Ch\u1ECDn World"
+    - Select World
+    - Choisir un monde
+    - Elegir mundo
+    - Escolher mundo
+  - key: scr.select-world.note
+    values:
+    - "Vu\u1ED1t theo World 1\u20136, m\u1ED7i World 5 subworld, ti\u1EBFn \u0111\u1ED9
+      n/t\u1ED5ng th\u1EADt"
+    - "Swipe World 1\u20136, 5 subworlds each, real n/total counts"
+    - "Balayez les mondes 1\u20136, 5 sous-mondes chacun, vrais compteurs n/total"
+    - "Desliza los mundos 1\u20136, 5 submundos cada uno, conteos n/total reales"
+    - "Deslize pelos mundos 1\u20136, 5 submundos cada, contagens n/total reais"
+  - key: scr.select-level.name
+    values:
+    - "Ch\u1ECDn Level"
+    - Select Level
+    - Choisir un niveau
+    - Elegir nivel
+    - "Escolher n\xEDvel"
+  - key: scr.select-level.note
+    values:
+    - "L\u01B0\u1EDBi level: Subworld 1 c\xF3 12 level, c\xF2n l\u1EA1i 18"
+    - 'Level grid: Subworld 1 has 12 levels, others 18'
+    - 'Grille de niveaux : le sous-monde 1 en a 12, les autres 18'
+    - "Cuadr\xEDcula de niveles: el submundo 1 tiene 12, los dem\xE1s 18"
+    - "Grade de n\xEDveis: o submundo 1 tem 12, os demais 18"
+  - key: scr.game.name
+    values:
+    - Gameplay
+    - Gameplay
+    - Partie
+    - Partida
+    - Partida
+  - key: scr.game.note
+    values:
+    - "M\u1ED7i \u0111\xE1p \xE1n m\u1ED9t d\xF2ng, v\xF2ng ch\u1EEF vu\u1ED1t, Hint
+      1 ch\u1EEF, Shuffle, Extra"
+    - One line per answer, swipe wheel, 1-letter Hint, Shuffle, Extra
+    - "Une ligne par r\xE9ponse, roue de lettres, indice d'1 lettre, m\xE9lange,
+      bonus"
+    - "Una l\xEDnea por respuesta, rueda de letras, pista de 1 letra, mezclar, extra"
+    - Uma linha por resposta, roda de letras, dica de 1 letra, embaralhar, extras
+  - key: scr.daily.name
+    values:
+    - Daily Challenge
+    - Daily Challenge
+    - "D\xE9fi quotidien"
+    - Reto diario
+    - "Desafio di\xE1rio"
+  - key: scr.daily.note
+    values:
+    - "L\u1ECBch, m\u1EE5c ti\xEAu, chu\u1ED7i, b\xF9 ng\xE0y, th\u01B0\u1EDFng m\u1ED9t
+      l\u1EA7n"
+    - Calendar, goal, streak, make-up day, once-only reward
+    - "Calendrier, objectif, s\xE9rie, rattrapage, r\xE9compense unique"
+    - "Calendario, objetivo, racha, d\xEDa de recuperaci\xF3n, recompensa \xFAnica"
+    - "Calend\xE1rio, meta, sequ\xEAncia, dia de reposi\xE7\xE3o, recompensa \xFAnica"
+  - key: scr.bot-setup.name
+    values:
+    - "Bot: ch\u1ECDn \u0111\u1ED9 kh\xF3"
+    - 'Bot: difficulty'
+    - "Bot : difficult\xE9"
+    - 'Bot: dificultad'
+    - 'Bot: dificuldade'
+  - key: scr.bot-setup.note
+    values:
+    - "3 bot, lu\u1EADt c\xF4ng b\u1EB1ng, gi\u1EDBi h\u1EA1n th\u01B0\u1EDFng ng\xE0y"
+    - 3 bots, fair rules, daily reward cap
+    - "3 bots, r\xE8gles \xE9quitables, plafond de r\xE9compense par jour"
+    - "3 bots, reglas justas, l\xEDmite diario de recompensa"
+    - "3 bots, regras justas, limite di\xE1rio de recompensa"
+  - key: scr.bot-match.name
+    values:
+    - "Bot: tr\u1EADn \u0111\u1EA5u"
+    - 'Bot: match'
+    - 'Bot : match'
+    - 'Bot: partida'
+    - 'Bot: partida'
+  - key: scr.bot-match.note
+    values:
+    - "C\xF9ng b\xE0n, bot m\xF4 ph\u1ECFng t\xEDnh s\u1EB5n theo m\xE3 tr\u1EADn"
+    - Same puzzle, scripted bot driven by a match seed
+    - "M\xEAme grille, bot script\xE9 pilot\xE9 par un code de partie"
+    - "Mismo puzle, bot con guion seg\xFAn el c\xF3digo de partida"
+    - "Mesmo quebra-cabe\xE7a, bot roteirizado conforme o c\xF3digo da partida"
+  - key: scr.language.name
+    values:
+    - "Ng\xF4n ng\u1EEF"
+    - Language
+    - Langue
+    - Idioma
+    - Idioma
+  - key: scr.language.note
+    values:
+    - "Ng\xF4n ng\u1EEF UI vi/en/fr/es/pt t\xE1ch kh\u1ECFi ng\xF4n ng\u1EEF ch\u01A1i"
+    - UI vi/en/fr/es/pt separate from game language
+    - "Langue de l'interface vi/en/fr/es/pt s\xE9par\xE9e de la langue de jeu"
+    - Idioma de interfaz vi/en/fr/es/pt separado del idioma de juego
+    - Idioma da interface vi/en/fr/es/pt separado do idioma do jogo
+  - key: scr.pause.name
+    values:
+    - Pause
+    - Pause
+    - Pause
+    - Pausa
+    - Pausa
+  - key: scr.pause.note
+    values:
+    - "Continue \xB7 How to play \xB7 Language \xB7 To Menu \xB7 Quit"
+    - "Continue \xB7 How to play \xB7 Language \xB7 To Menu \xB7 Quit"
+    - "Continuer \xB7 Comment jouer \xB7 Langue \xB7 Au menu \xB7 Quitter"
+    - "Continuar \xB7 C\xF3mo jugar \xB7 Idioma \xB7 Al men\xFA \xB7 Salir"
+    - "Continuar \xB7 Como jogar \xB7 Idioma \xB7 Para o menu \xB7 Sair"
+  - key: scr.how-to-play.name
+    values:
+    - How to play
+    - How to play
+    - Comment jouer
+    - "C\xF3mo jugar"
+    - Como jogar
+  - key: scr.how-to-play.note
+    values:
+    - "H\u01B0\u1EDBng d\u1EABn vu\u1ED1t, Shuffle/Hint"
+    - Swipe tutorial, Shuffle/Hint
+    - "Tutoriel de glissement, M\xE9langer/Indice"
+    - Tutorial de deslizar, Mezclar/Pista
+    - Tutorial de deslizar, Embaralhar/Dica
+  - key: scr.win.name
+    values:
+    - Win
+    - Win
+    - Victoire
+    - Victoria
+    - "Vit\xF3ria"
+  - key: scr.win.note
+    values:
+    - "Th\u01B0\u1EDFng l\u1EA7n \u0111\u1EA7u, x2 tu\u1EF3 ch\u1ECDn, m\u1EE5c ti\xEAu
+      k\u1EBF"
+    - First-clear reward, optional x2, next goal
+    - "R\xE9compense de premi\xE8re victoire, x2 facultatif, objectif suivant"
+    - Recompensa de primera victoria, x2 opcional, siguiente objetivo
+    - "Recompensa de primeira vit\xF3ria, x2 opcional, pr\xF3xima meta"
+  - key: scr.extra-word.name
+    values:
+    - Extra words
+    - Extra words
+    - Mots bonus
+    - Palabras extra
+    - Palavras extras
+  - key: scr.extra-word.note
+    values:
+    - "Ti\u1EBFn \u0111\u1ED9 t\u1EEB th\u01B0\u1EDFng, nh\u1EADn ruby"
+    - Extra-word progress, ruby claim
+    - "Progression des mots bonus, r\xE9cup\xE9ration de rubis"
+    - "Progreso de palabras extra, recoger rub\xEDes"
+    - Progresso das palavras extras, resgate de rubis
+  - key: scr.shop.name
+    values:
+    - Shop
+    - Shop
+    - Boutique
+    - Tienda
+    - Loja
+  - key: scr.shop.note
+    values:
+    - "5 g\xF3i ruby (gi\xE1 demo), video mi\u1EC5n ph\xED"
+    - 5 ruby packs (demo prices), free video
+    - "5 packs de rubis (prix de d\xE9mo), vid\xE9o gratuite"
+    - "5 paquetes de rub\xEDes (precios de demo), v\xEDdeo gratis"
+    - "5 pacotes de rubis (pre\xE7os de demonstra\xE7\xE3o), v\xEDdeo gr\xE1tis"
+  - key: scr.rewarded-video.name
+    values:
+    - Rewarded video
+    - Rewarded video
+    - "Vid\xE9o r\xE9compens\xE9e"
+    - "V\xEDdeo con recompensa"
+    - "V\xEDdeo com recompensa"
+  - key: scr.rewarded-video.note
+    values:
+    - "9 tr\u1EA1ng th\xE1i qu\u1EA3ng c\xE1o m\xF4 ph\u1ECFng, th\u01B0\u1EDFng
+      sau khi xem xong"
+    - 9 simulated ad states, reward after completion
+    - "9 \xE9tats de publicit\xE9 simul\xE9e, r\xE9compense apr\xE8s la fin"
+    - 9 estados de anuncio simulado, recompensa al terminar
+    - "9 estados de an\xFAncio simulado, recompensa ao terminar"
+  - key: scr.low-ruby.name
+    values:
+    - "Thi\u1EBFu ruby"
+    - Not enough rubies
+    - Pas assez de rubis
+    - "Rub\xEDes insuficientes"
+    - Rubis insuficientes
+  - key: scr.low-ruby.note
+    values:
+    - "L\u1ED1i ch\u01A1i mi\u1EC5n ph\xED, video tu\u1EF3 ch\u1ECDn, b\u1ECF qua
+      \u0111\u01B0\u1EE3c"
+    - Free path, optional video, skippable
+    - "Voie gratuite, vid\xE9o facultative, ignorable"
+    - "Camino gratuito, v\xEDdeo opcional, se puede omitir"
+    - "Caminho gratuito, v\xEDdeo opcional, pode pular"
+  - key: scr.rate.name
+    values:
+    - Rate
+    - Rate
+    - Noter
+    - Valorar
+    - Avaliar
+  - key: scr.rate.note
+    values:
+    - YES / LATER
+    - YES / LATER
+    - OUI / PLUS TARD
+    - "S\xCD / M\xC1S TARDE"
+    - SIM / DEPOIS
+  - key: scr.bot-result.name
+    values:
+    - "Bot: k\u1EBFt qu\u1EA3"
+    - 'Bot: result'
+    - "Bot : r\xE9sultat"
+    - 'Bot: resultado'
+    - 'Bot: resultado'
+  - key: scr.bot-result.note
+    values:
+    - "Th\u1EAFng/thua/h\xF2a, th\u01B0\u1EDFng, ch\u01A1i l\u1EA1i c\xF9ng m\xE3
+      tr\u1EADn"
+    - Win/lose/draw, reward, replay same seed
+    - "Victoire/d\xE9faite/\xE9galit\xE9, r\xE9compense, rejouer le m\xEAme code"
+    - "Victoria/derrota/empate, recompensa, repetir el mismo c\xF3digo"
+    - "Vit\xF3ria/derrota/empate, recompensa, jogar de novo com o mesmo c\xF3digo"
+  - key: scr.ai-soon.name
+    values:
+    - "AI: s\u1EAFp c\xF3"
+    - 'AI: coming soon'
+    - "IA : bient\xF4t"
+    - "IA: pr\xF3ximamente"
+    - 'IA: em breve'
+  - key: scr.ai-soon.note
+    values:
+    - "N\xFAt Coming soon, kh\xF4ng gh\xE9p tr\u1EADn/thanh to\xE1n/qu\u1EA3ng c\xE1o"
+    - Coming-soon only; no matchmaking, payment or ads
+    - "Bouton Bient\xF4t seulement ; pas de matchmaking, paiement ni publicit\xE9s"
+    - "Solo bot\xF3n Pr\xF3ximamente; sin emparejamiento, pagos ni anuncios"
+    - "Somente bot\xE3o Em breve; sem pareamento, pagamento nem an\xFAncios"
+  - key: cat.title
+    values:
+    - WordCross UI
+    - WordCross UI
+    - WordCross UI
+    - WordCross UI
+    - WordCross UI
+  - key: cat.intro
+    values:
+    - "Phong c\xE1ch ph\u1EB3ng, s\xE1ng, teal / coral / yellow. M\u1ED7i th\u1EBB
+      m\u1EDF m\xE0n h\xECnh th\u1EADt; xem preview kh\xF4ng \u1EA3nh h\u01B0\u1EDFng
+      d\u1EEF li\u1EC7u demo."
+    - Flat, bright teal / coral / yellow. Each card opens a real screen; previews
+      never touch demo data.
+    - "Style plat et lumineux, turquoise / corail / jaune. Chaque carte ouvre un
+      vrai \xE9cran ; les aper\xE7us ne touchent jamais aux donn\xE9es de d\xE9mo."
+    - Estilo plano y luminoso, turquesa / coral / amarillo. Cada tarjeta abre una
+      pantalla real; las vistas previas nunca tocan los datos de demo.
+    - "Estilo plano e luminoso, verde-azulado / coral / amarelo. Cada cart\xE3o abre
+      uma tela real; as pr\xE9vias nunca mexem nos dados de demonstra\xE7\xE3o."
+  - key: cat.screens
+    values:
+    - "M\xE0n h\xECnh"
+    - Screens
+    - "\xC9crans"
+    - Pantallas
+    - Telas
+  - key: cat.popups
+    values:
+    - Popup
+    - Popups
+    - "Fen\xEAtres"
+    - Ventanas
+    - Janelas
+  - key: cat.tokens
+    values:
+    - Token
+    - Tokens
+    - Tokens
+    - Tokens
+    - Tokens
+  - key: cat.portal
+    values:
+    - "\u2190 Portal"
+    - "\u2190 Portal"
+    - "\u2190 Portal"
+    - "\u2190 Portal"
+    - "\u2190 Portal"
+  - key: cat.flow
+    values:
+    - "Home \u2192 World \u2192 Level \u2192 Gameplay \xB7 Daily \xB7 Bot \xB7 Language"
+    - "Home \u2192 World \u2192 Level \u2192 Gameplay \xB7 Daily \xB7 Bot \xB7 Language"
+    - "Accueil \u2192 Monde \u2192 Niveau \u2192 Partie \xB7 Quotidien \xB7 Bot \xB7
+      Langue"
+    - "Inicio \u2192 Mundo \u2192 Nivel \u2192 Partida \xB7 Diario \xB7 Bot \xB7
+      Idioma"
+    - "In\xEDcio \u2192 Mundo \u2192 N\xEDvel \u2192 Partida \xB7 Di\xE1rio \xB7
+      Bot \xB7 Idioma"
+  - key: cat.popSub
+    values:
+    - "Hi\u1EC3n th\u1ECB tr\xEAn n\u1EC1n m\xE0n h\xECnh t\u01B0\u01A1ng \u1EE9ng"
+    - Shown over the matching screen
+    - "Affich\xE9es sur l'\xE9cran correspondant"
+    - Se muestran sobre la pantalla correspondiente
+    - Exibidas sobre a tela correspondente
+  - key: cat.proto
+    values:
+    - "Prototype: gameplay d\xF9ng level th\u1EADt (Subworld 1 \u0111\u1EE7 12 level
+      + v\xE0i level m\u1EABu), Hint m\u1EDF 1 ch\u1EEF t\u1ED1n 2 ruby, Daily/Bot/ads
+      m\xF4 ph\u1ECFng; d\u1EEF li\u1EC7u l\u01B0u c\u1EE5c b\u1ED9 trong tr\xECnh
+      duy\u1EC7t. Ph\u1EA7n n\xE0o l\xE0 m\u1EABu c\xF3 nh\xE3n DEMO/M\u1EAAU."
+    - 'Prototype: gameplay uses real levels (Subworld 1 all 12 + a few samples),
+      a Hint reveals 1 letter for 2 rubies, Daily/Bot/ads are simulated; data is
+      stored locally in the browser. Sample parts carry a DEMO/SAMPLE tag.'
+    - "Prototype : le jeu utilise de vrais niveaux (sous-monde 1 complet avec 12
+      niveaux + quelques exemples), un indice r\xE9v\xE8le 1 lettre pour 2 rubis,
+      Quotidien/Bot/publicit\xE9s sont simul\xE9s ; les donn\xE9es sont stock\xE9es
+      localement dans le navigateur. Les parties d'exemple portent une \xE9tiquette
+      D\xC9MO/EXEMPLE."
+    - "Prototipo: el juego usa niveles reales (submundo 1 con sus 12 niveles + algunas
+      muestras), una pista revela 1 letra por 2 rub\xEDes, Diario/Bot/anuncios son
+      simulados; los datos se guardan localmente en el navegador. Las partes de muestra
+      llevan la etiqueta DEMO/MUESTRA."
+    - "Prot\xF3tipo: o jogo usa n\xEDveis reais (submundo 1 com os 12 n\xEDveis +
+      algumas amostras), uma dica revela 1 letra por 2 rubis, Di\xE1rio/Bot/an\xFAncios
+      s\xE3o simulados; os dados ficam salvos localmente no navegador. As partes
+      de amostra t\xEAm a etiqueta DEMO/AMOSTRA."
+  - key: cat.resetData
+    values:
+    - "\u0110\u1EB7t l\u1EA1i d\u1EEF li\u1EC7u demo"
+    - Reset demo data
+    - "R\xE9initialiser les donn\xE9es de d\xE9mo"
+    - Restablecer datos de demo
+    - "Redefinir dados de demonstra\xE7\xE3o"
+  - key: cat.gd
+    values:
+    - GD
+    - GD
+    - GD
+    - GD
+    - GD
+  - key: cat.tokenSub
+    values:
+    - global/css/theme.css (:root)
+    - global/css/theme.css (:root)
+    - global/css/theme.css (:root)
+    - global/css/theme.css (:root)
+    - global/css/theme.css (:root)
+  - key: cat.open
+    values:
+    - "M\u1EDF"
+    - Open
+    - Ouvrir
+    - Abrir
+    - Abrir
+  - key: portal.title
+    values:
+    - WordCross Design
+    - WordCross Design
+    - WordCross Design
+    - WordCross Design
+    - WordCross Design
+  - key: portal.ui
+    values:
+    - UI Catalogue
+    - UI Catalogue
+    - UI Catalogue
+    - UI Catalogue
+    - UI Catalogue
+  - key: portal.uiSub
+    values:
+    - "M\xE0n h\xECnh/popup m\u1EDF offline, gameplay + Daily + Bot ch\u01A1i th\u1EED"
+    - Offline screens/popups; playable gameplay, Daily and Bot
+    - "\xC9crans/fen\xEAtres hors ligne ; jeu, Quotidien et Bot jouables"
+    - "Pantallas/ventanas sin conexi\xF3n; juego, Diario y Bot jugables"
+    - "Telas/janelas offline; jogo, Di\xE1rio e Bot jog\xE1veis"
+  - key: portal.gd
+    values:
+    - GD
+    - GD
+    - GD
+    - GD
+    - GD
+  - key: portal.gdSub
+    values:
+    - "Quan s\xE1t t\u1EEB source, level, ng\xF4n ng\u1EEF, Daily, Bot, ruby/ads,
+      retention"
+    - Source observations, levels, languages, Daily, Bot, ruby/ads, retention
+    - "Observations de la source, niveaux, langues, Quotidien, Bot, rubis/publicit\xE9s,
+      r\xE9tention"
+    - "Observaciones de la fuente, niveles, idiomas, Diario, Bot, rub\xEDes/anuncios,
+      retenci\xF3n"
+    - "Observa\xE7\xF5es da fonte, n\xEDveis, idiomas, Di\xE1rio, Bot, rubis/an\xFAncios,
+      reten\xE7\xE3o"
+  - key: shop.adIn
+    values:
+    - "Video s\u1EB5n s\xE0ng sau"
+    - Ad available in
+    - "Vid\xE9o disponible dans"
+    - "V\xEDdeo disponible en"
+    - "V\xEDdeo dispon\xEDvel em"
+  - key: shop.adsNote
+    values:
+    - "G\xF3i t\u1EAFt qu\u1EA3ng c\xE1o v\xE0 2 g\xF3i l\u1EDBn nh\u1EA5t s\u1EBD
+      t\u1EAFt qu\u1EA3ng c\xE1o (video tu\u1EF3 ch\u1ECDn v\u1EABn c\xF2n)"
+    - No-ads pack and the 2 biggest packs remove ads (optional videos stay)
+    - "Le pack sans pub et les 2 plus gros packs suppriment les pubs (vid\xE9os facultatives
+      conserv\xE9es)"
+    - "El pack sin anuncios y los 2 mayores eliminan los anuncios (v\xEDdeos opcionales
+      siguen)"
+    - "O pacote sem an\xFAncios e os 2 maiores removem os an\xFAncios (v\xEDdeos
+      opcionais continuam)"
+  - key: rv.s.playingReal
+    values:
+    - "\u0110ANG PH\xC1T VIDEO"
+    - VIDEO PLAYING
+    - "VID\xC9O EN COURS"
+    - "V\xCDDEO EN CURSO"
+    - "V\xCDDEO EM REPRODU\xC7\xC3O"
+  - key: rv.d.playingReal
+    values:
+    - "Xem \u0111\u1EBFn cu\u1ED1i \u0111\u1EC3 nh\u1EADn {n} ruby."
+    - Watch to the end to get {n} rubies.
+    - "Regardez jusqu'\xE0 la fin pour obtenir {n} rubis."
+    - "Mira hasta el final para obtener {n} rub\xEDes."
+    - "Assista at\xE9 o fim para ganhar {n} rubis."
+  - key: home.toast.daily
+    values:
+    - "Th\u1EED th\xE1ch h\xE0ng ng\xE0y s\u1EAFp ra m\u1EAFt"
+    - Daily challenge is coming soon
+    - "Le d\xE9fi quotidien arrive bient\xF4t"
+    - "El desaf\xEDo diario llegar\xE1 pronto"
+    - "O desafio di\xE1rio chega em breve"
+  - key: home.toast.bot
+    values:
+    - "Ch\u1EBF \u0111\u1ED9 \u0111\u1EA5u Bot s\u1EAFp ra m\u1EAFt"
+    - VS Bot is coming soon
+    - "Le mode VS Bot arrive bient\xF4t"
+    - "El modo VS Bot llegar\xE1 pronto"
+    - O modo VS Bot chega em breve
+  - key: home.toast.ai
+    values:
+    - "Ch\u1EBF \u0111\u1ED9 \u0111\u1EA5u AI s\u1EAFp ra m\u1EAFt"
+    - VS AI is coming soon
+    - "Le mode VS IA arrive bient\xF4t"
+    - "El modo VS IA llegar\xE1 pronto"
+    - O modo VS IA chega em breve
+  - key: common.deviceOnly
+    values:
+    - "Ch\u1EE9c n\u0103ng n\xE0y ch\u1EC9 ho\u1EA1t \u0111\u1ED9ng tr\xEAn Android
+      v\xE0 iOS"
+    - This function only works on Android and iOS
+    - Cette fonction ne marche que sur Android et iOS
+    - "Esta funci\xF3n solo funciona en Android e iOS"
+    - "Esta fun\xE7\xE3o s\xF3 funciona em Android e iOS"
+  - key: shop.success
+    values:
+    - "Mua h\xE0ng th\xE0nh c\xF4ng"
+    - Purchase successful!
+    - "Achat effectu\xE9 !"
+    - "Tu compra se ha realizado con \xE9xito"
+    - "Sua compra foi conclu\xEDda com sucesso"
+  - key: noti.toast
+    values:
+    - "B\u1EA1n nh\u1EADn \u0111\u01B0\u1EE3c {n} ruby mi\u1EC5n ph\xED"
+    - You got {n} free rubies
+    - "Vous avez re\xE7u {n} rubis gratuites"
+    - "Has conseguido {n} rub\xEDes gratis"
+    - "Voc\xEA ganhou {n} rubis gr\xE1tis"
+  - key: noti.letterTitle
+    values:
+    - "\u0110\xE3 m\u1EDF kho\xE1 ch\u1EEF"
+    - Letter unlocked
+    - "Lettre d\xE9bloqu\xE9e"
+    - Letra desbloqueada
+    - Letra desbloqueada
+  - key: noti.letter
+    values:
+    - "Ch\xFAng t\xF4i \u0111\xE3 m\u1EDF kho\xE1 ch\u1EEF {c} cho b\u1EA1n. V\xE0o
+      game v\xE0 ch\u01A1i ti\u1EBFp nh\xE9 :)"
+    - We unlocked the letter {c} for you. Open the game and keep playing :)
+    - "Nous avons d\xE9bloqu\xE9 la lettre {c} pour vous. Ouvrez le jeu et reprenez
+      la partie :)"
+    - Hemos desbloqueado la letra {c} para ti. Abre el juego y sigue jugando :)
+    - "Desbloqueamos a letra {c} para voc\xEA. Abra o jogo e continue jogando :)"
+  - key: noti.rubyTitle
+    values:
+    - "Qu\xE0 ruby"
+    - Ruby gift
+    - Cadeau de rubis
+    - "Regalo de rub\xEDes"
+    - Presente de rubis
+  - key: noti.ruby
+    values:
+    - "B\u1EA1n nh\u1EADn \u0111\u01B0\u1EE3c {n} ruby mi\u1EC5n ph\xED. V\xE0o ch\u01A1i
+      v\xE0 th\u1EED th\xE1ch b\u1EA3n th\xE2n nh\xE9"
+    - You got {n} free rubies. Play and challenge yourself!
+    - "Vous avez re\xE7u {n} rubis gratuites. Jouez et relevez le d\xE9fi !"
+    - "Has conseguido {n} rub\xEDes gratis. \xA1Juega y ponte a prueba!"
+    - "Voc\xEA ganhou {n} rubis gr\xE1tis. Jogue e desafie-se!"
+  - key: daily.months
+    values:
+    - 1|2|3|4|5|6|7|8|9|10|11|12
+    - January|February|March|April|May|June|July|August|September|October|November|December
+    - "Janvier|F\xE9vrier|Mars|Avril|Mai|Juin|Juillet|Ao\xFBt|Septembre|Octobre|Novembre|D\xE9cembre"
+    - Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre
+    - "Janeiro|Fevereiro|Mar\xE7o|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro"
+  - key: daily.monthsShort
+    values:
+    - 1|2|3|4|5|6|7|8|9|10|11|12
+    - Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec
+    - "janv.|f\xE9vr.|mars|avr.|mai|juin|juil.|ao\xFBt|sept.|oct.|nov.|d\xE9c."
+    - ene|feb|mar|abr|may|jun|jul|ago|sept|oct|nov|dic
+    - jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez
+  - key: daily.shortDate
+    values:
+    - '{d}/{m}'
+    - '{m} {d}'
+    - '{d} {m}'
+    - '{d} {m}'
+    - '{d} {m}'
+  - key: daily.weekdays
+    values:
+    - T2|T3|T4|T5|T6|T7|CN
+    - Mon|Tue|Wed|Thu|Fri|Sat|Sun
+    - Lun|Mar|Mer|Jeu|Ven|Sam|Dim
+    - "Lun|Mar|Mi\xE9|Jue|Vie|S\xE1b|Dom"
+    - "Seg|Ter|Qua|Qui|Sex|S\xE1b|Dom"
+  - key: currency.coin
+    values:
+    - Ruby
+    - Rubies
+    - Rubis
+    - "Rub\xEDes"
+    - Rubis
+  - key: quest.dq_win_3
+    values:
+    - "Th\u1EAFng 3 level"
+    - Win 3 levels
+    - Gagner 3 niveaux
+    - Gana 3 niveles
+    - "Ven\xE7a 3 n\xEDveis"
+  - key: quest.dq_words_20
+    values:
+    - "T\xECm 20 t\u1EEB"
+    - Find 20 words
+    - Trouver 20 mots
+    - Encuentra 20 palabras
+    - Encontre 20 palavras
+  - key: quest.dq_daily
+    values:
+    - "Ho\xE0n th\xE0nh Daily"
+    - Finish the Daily
+    - Finir le Quotidien
+    - Completa el Diario
+    - "Conclua o Di\xE1rio"
+  - key: quest.dq_bot_1
+    values:
+    - "Ch\u01A1i 1 tr\u1EADn Bot"
+    - Play 1 Bot match
+    - Jouer 1 match Bot
+    - Juega 1 partida Bot
+    - Jogue 1 partida Bot
+  - key: quest.dq_extra_1
+    values:
+    - "T\xECm 1 t\u1EEB th\u01B0\u1EDFng"
+    - Find 1 bonus word
+    - Trouver 1 mot bonus
+    - Encuentra 1 palabra extra
+    - Encontre 1 palavra extra
+  - key: quest.wq_win_20
+    values:
+    - "Th\u1EAFng 20 level"
+    - Win 20 levels
+    - Gagner 20 niveaux
+    - Gana 20 niveles
+    - "Ven\xE7a 20 n\xEDveis"
+  - key: quest.wq_words_150
+    values:
+    - "T\xECm 150 t\u1EEB"
+    - Find 150 words
+    - Trouver 150 mots
+    - Encuentra 150 palabras
+    - Encontre 150 palavras
+  - key: quest.wq_daily_5
+    values:
+    - "Ho\xE0n th\xE0nh Daily 5 l\u1EA7n"
+    - Finish the Daily 5 times
+    - Finir le Quotidien 5 fois
+    - Completa el Diario 5 veces
+    - "Conclua o Di\xE1rio 5 vezes"
+  - key: quest.wq_bot_win_3
+    values:
+    - "Th\u1EAFng Bot 3 l\u1EA7n"
+    - Beat the Bot 3 times
+    - Battre le Bot 3 fois
+    - Vence al Bot 3 veces
+    - "Ven\xE7a o Bot 3 vezes"
+  - key: quest.wq_extra_5
+    values:
+    - "T\xECm 5 t\u1EEB th\u01B0\u1EDFng"
+    - Find 5 bonus words
+    - Trouver 5 mots bonus
+    - Encuentra 5 palabras extra
+    - Encontre 5 palavras extras
+  - key: quest.wq_login_5
+    values:
+    - "V\xE0o game 5 ng\xE0y"
+    - Log in on 5 days
+    - Se connecter 5 jours
+    - "Entra 5 d\xEDas"
+    - Entre em 5 dias
+  - key: quest.mq_win_100
+    values:
+    - "Th\u1EAFng 100 level"
+    - Win 100 levels
+    - Gagner 100 niveaux
+    - Gana 100 niveles
+    - "Ven\xE7a 100 n\xEDveis"
+  - key: quest.mq_daily_20
+    values:
+    - "Ho\xE0n th\xE0nh Daily 20 l\u1EA7n"
+    - Finish the Daily 20 times
+    - Finir le Quotidien 20 fois
+    - Completa el Diario 20 veces
+    - "Conclua o Di\xE1rio 20 vezes"
+  - key: quest.mq_login_20
+    values:
+    - "V\xE0o game 20 ng\xE0y"
+    - Log in on 20 days
+    - Se connecter 20 jours
+    - "Entra 20 d\xEDas"
+    - Entre em 20 dias
+  - key: quest.mq_words_600
+    values:
+    - "T\xECm 600 t\u1EEB"
+    - Find 600 words
+    - Trouver 600 mots
+    - Encuentra 600 palabras
+    - Encontre 600 palavras
+  - key: quest.eq_win
+    values:
+    - "Th\u1EAFng level trong s\u1EF1 ki\u1EC7n"
+    - Win levels during the event
+    - "Gagner des niveaux pendant l'\xE9v\xE9nement"
+    - Gana niveles durante el evento
+    - "Ven\xE7a n\xEDveis durante o evento"
+  - key: quest.eq_words
+    values:
+    - "T\xECm t\u1EEB trong s\u1EF1 ki\u1EC7n"
+    - Find words during the event
+    - "Trouver des mots pendant l'\xE9v\xE9nement"
+    - Encuentra palabras durante el evento
+    - Encontre palavras durante o evento
+  - key: quest.eq_daily
+    values:
+    - "Daily trong s\u1EF1 ki\u1EC7n"
+    - Daily during the event
+    - "Quotidien pendant l'\xE9v\xE9nement"
+    - Diario durante el evento
+    - "Di\xE1rio durante o evento"
+  - key: event.newyear
+    values:
+    - "N\u0103m m\u1EDBi"
+    - New Year
+    - Nouvel An
+    - "A\xF1o Nuevo"
+    - Ano Novo
+  - key: event.spring
+    values:
+    - "L\u1EC5 h\u1ED9i m\xF9a xu\xE2n"
+    - Spring Festival
+    - "F\xEAte du printemps"
+    - Fiesta de primavera
+    - Festa da primavera
+  - key: event.hearts
+    values:
+    - "Ng\xE0y tr\xE1i tim"
+    - Hearts Day
+    - "Jour des c\u0153urs"
+    - "D\xEDa de los corazones"
+    - "Dia dos cora\xE7\xF5es"
+  - key: event.wordweek
+    values:
+    - "Tu\u1EA7n l\u1EC5 ch\u1EEF"
+    - Word Week
+    - Semaine des mots
+    - Semana de las palabras
+    - Semana das palavras
+  - key: event.earth
+    values:
+    - "Ng\xE0y Tr\xE1i \u0110\u1EA5t"
+    - Earth Day
+    - Jour de la Terre
+    - "D\xEDa de la Tierra"
+    - Dia da Terra
+  - key: event.summer
+    values:
+    - "H\xE8 r\u1EF1c r\u1EE1"
+    - Summer Splash
+    - "\xC9t\xE9 \xE9clatant"
+    - Verano radiante
+    - "Ver\xE3o radiante"
+  - key: event.midyear
+    values:
+    - "Gi\u1EEFa n\u0103m"
+    - Midyear
+    - "Mi-ann\xE9e"
+    - "Mitad de a\xF1o"
+    - Meio do ano
+  - key: event.school
+    values:
+    - "T\u1EF1u tr\u01B0\u1EDDng"
+    - Back to School
+    - "Rentr\xE9e"
+    - Vuelta al cole
+    - "Volta \xE0s aulas"
+  - key: event.harvest
+    values:
+    - "M\xF9a g\u1EB7t"
+    - Harvest
+    - Moisson
+    - Cosecha
+    - Colheita
+  - key: event.spooky
+    values:
+    - "\u0110\xEAm ho\xE1 trang"
+    - Spooky Night
+    - "Nuit d\xE9guis\xE9e"
+    - Noche de disfraces
+    - Noite das fantasias
+  - key: event.thanks
+    values:
+    - "Tri \xE2n"
+    - Thanks Week
+    - Semaine merci
+    - Semana de gracias
+    - "Semana de gratid\xE3o"
+  - key: event.winter
+    values:
+    - "M\xF9a \u0111\xF4ng di\u1EC7u k\u1EF3"
+    - Winter Wonder
+    - Hiver magique
+    - "Invierno m\xE1gico"
+    - "Inverno m\xE1gico"
+  - key: month.01
+    values:
+    - "Th\xE1ng 1"
+    - Month 1
+    - Mois 1
+    - Mes 1
+    - "M\xEAs 1"
+  - key: month.02
+    values:
+    - "Th\xE1ng 2"
+    - Month 2
+    - Mois 2
+    - Mes 2
+    - "M\xEAs 2"
+  - key: month.03
+    values:
+    - "Th\xE1ng 3"
+    - Month 3
+    - Mois 3
+    - Mes 3
+    - "M\xEAs 3"
+  - key: month.04
+    values:
+    - "Th\xE1ng 4"
+    - Month 4
+    - Mois 4
+    - Mes 4
+    - "M\xEAs 4"
+  - key: month.05
+    values:
+    - "Th\xE1ng 5"
+    - Month 5
+    - Mois 5
+    - Mes 5
+    - "M\xEAs 5"
+  - key: month.06
+    values:
+    - "Th\xE1ng 6"
+    - Month 6
+    - Mois 6
+    - Mes 6
+    - "M\xEAs 6"
+  - key: month.07
+    values:
+    - "Th\xE1ng 7"
+    - Month 7
+    - Mois 7
+    - Mes 7
+    - "M\xEAs 7"
+  - key: month.08
+    values:
+    - "Th\xE1ng 8"
+    - Month 8
+    - Mois 8
+    - Mes 8
+    - "M\xEAs 8"
+  - key: month.09
+    values:
+    - "Th\xE1ng 9"
+    - Month 9
+    - Mois 9
+    - Mes 9
+    - "M\xEAs 9"
+  - key: month.10
+    values:
+    - "Th\xE1ng 10"
+    - Month 10
+    - Mois 10
+    - Mes 10
+    - "M\xEAs 10"
+  - key: month.11
+    values:
+    - "Th\xE1ng 11"
+    - Month 11
+    - Mois 11
+    - Mes 11
+    - "M\xEAs 11"
+  - key: month.12
+    values:
+    - "Th\xE1ng 12"
+    - Month 12
+    - Mois 12
+    - Mes 12
+    - "M\xEAs 12"
+  - key: login.base
+    values:
+    - "Th\u01B0\u1EDFng \u0111\u0103ng nh\u1EADp"
+    - Login reward
+    - "R\xE9compense de connexion"
+    - "Premio de conexi\xF3n"
+    - "Pr\xEAmio de login"
+  - key: login.week
+    values:
+    - "Th\u01B0\u1EDFng cu\u1ED1i tu\u1EA7n ng\xE0y 7"
+    - Day-7 login reward
+    - "R\xE9compense du 7e jour"
+    - "Premio del d\xEDa 7"
+    - "Pr\xEAmio do 7\xBA dia"
+  - key: login.month
+    values:
+    - "Th\u01B0\u1EDFng cu\u1ED1i th\xE1ng"
+    - Month-end login reward
+    - "R\xE9compense de fin de mois"
+    - Premio de fin de mes
+    - "Pr\xEAmio de fim de m\xEAs"
+  - key: login.cycle
+    values:
+    - "Th\u01B0\u1EDFng ng\xE0y cu\u1ED1i chu k\u1EF3"
+    - Cycle-end login reward
+    - "R\xE9compense de fin de cycle"
+    - Premio de fin de ciclo
+    - "Pr\xEAmio de fim de ciclo"
+  - key: streak.3
+    values:
+    - "Chu\u1ED7i 3 ng\xE0y"
+    - 3-day streak
+    - "S\xE9rie de 3 jours"
+    - "Racha de 3 d\xEDas"
+    - "Sequ\xEAncia de 3 dias"
+  - key: streak.7
+    values:
+    - "Chu\u1ED7i 7 ng\xE0y"
+    - 7-day streak
+    - "S\xE9rie de 7 jours"
+    - "Racha de 7 d\xEDas"
+    - "Sequ\xEAncia de 7 dias"
+  - key: streak.14
+    values:
+    - "Chu\u1ED7i 14 ng\xE0y"
+    - 14-day streak
+    - "S\xE9rie de 14 jours"
+    - "Racha de 14 d\xEDas"
+    - "Sequ\xEAncia de 14 dias"
+  - key: streak.30
+    values:
+    - "Chu\u1ED7i 30 ng\xE0y"
+    - 30-day streak
+    - "S\xE9rie de 30 jours"
+    - "Racha de 30 d\xEDas"
+    - "Sequ\xEAncia de 30 dias"
+  - key: streak.60
+    values:
+    - "Chu\u1ED7i 60 ng\xE0y"
+    - 60-day streak
+    - "S\xE9rie de 60 jours"
+    - "Racha de 60 d\xEDas"
+    - "Sequ\xEAncia de 60 dias"
+  - key: streak.100
+    values:
+    - "Chu\u1ED7i 100 ng\xE0y"
+    - 100-day streak
+    - "S\xE9rie de 100 jours"
+    - "Racha de 100 d\xEDas"
+    - "Sequ\xEAncia de 100 dias"
+  - key: streak.180
+    values:
+    - "Chu\u1ED7i 180 ng\xE0y"
+    - 180-day streak
+    - "S\xE9rie de 180 jours"
+    - "Racha de 180 d\xEDas"
+    - "Sequ\xEAncia de 180 dias"
+  - key: streak.365
+    values:
+    - "Chu\u1ED7i 365 ng\xE0y"
+    - 365-day streak
+    - "S\xE9rie de 365 jours"
+    - "Racha de 365 d\xEDas"
+    - "Sequ\xEAncia de 365 dias"
+  - key: milestone.lm_10
+    values:
+    - "Ho\xE0n th\xE0nh 10 level"
+    - Clear 10 levels
+    - Finir 10 niveaux
+    - Completa 10 niveles
+    - "Conclua 10 n\xEDveis"
+  - key: milestone.lm_25
+    values:
+    - "Ho\xE0n th\xE0nh 25 level"
+    - Clear 25 levels
+    - Finir 25 niveaux
+    - Completa 25 niveles
+    - "Conclua 25 n\xEDveis"
+  - key: milestone.lm_50
+    values:
+    - "Ho\xE0n th\xE0nh 50 level"
+    - Clear 50 levels
+    - Finir 50 niveaux
+    - Completa 50 niveles
+    - "Conclua 50 n\xEDveis"
+  - key: milestone.lm_100
+    values:
+    - "Ho\xE0n th\xE0nh 100 level"
+    - Clear 100 levels
+    - Finir 100 niveaux
+    - Completa 100 niveles
+    - "Conclua 100 n\xEDveis"
+  - key: milestone.lm_200
+    values:
+    - "Ho\xE0n th\xE0nh 200 level"
+    - Clear 200 levels
+    - Finir 200 niveaux
+    - Completa 200 niveles
+    - "Conclua 200 n\xEDveis"
+  - key: milestone.lm_300
+    values:
+    - "Ho\xE0n th\xE0nh 300 level"
+    - Clear 300 levels
+    - Finir 300 niveaux
+    - Completa 300 niveles
+    - "Conclua 300 n\xEDveis"
+  - key: milestone.lm_400
+    values:
+    - "Ho\xE0n th\xE0nh 400 level"
+    - Clear 400 levels
+    - Finir 400 niveaux
+    - Completa 400 niveles
+    - "Conclua 400 n\xEDveis"
+  - key: milestone.lm_534
+    values:
+    - "Ho\xE0n th\xE0nh 534 level"
+    - Clear 534 levels
+    - Finir 534 niveaux
+    - Completa 534 niveles
+    - "Conclua 534 n\xEDveis"
+  - key: sink.hint_cell
+    values:
+    - "G\u1EE3i \xFD 1 \xF4"
+    - 'Hint: 1 tile'
+    - 'Indice : 1 case'
+    - 'Pista: 1 casilla'
+    - 'Dica: 1 casa'
+  - key: sink.hint_word
+    values:
+    - "G\u1EE3i \xFD c\u1EA3 t\u1EEB"
+    - 'Hint: whole word'
+    - 'Indice : mot entier'
+    - 'Pista: palabra entera'
+    - 'Dica: palavra inteira'
+  - key: sink.streak_repair
+    values:
+    - "C\u1EE9u chu\u1ED7i"
+    - Streak repair
+    - "Sauver la s\xE9rie"
+    - Salvar racha
+    - "Salvar sequ\xEAncia"
+  - key: shop.pk_1
+    values:
+    - "G\xF3i 500 ruby"
+    - 500 rubies pack
+    - Pack de 500 rubis
+    - "Paquete de 500 rub\xEDes"
+    - Pacote de 500 rubis
+  - key: shop.pk_2
+    values:
+    - "G\xF3i 1100 ruby"
+    - 1100 rubies pack
+    - Pack de 1100 rubis
+    - "Paquete de 1100 rub\xEDes"
+    - Pacote de 1100 rubis
+  - key: shop.pk_3
+    values:
+    - "G\xF3i 2500 ruby"
+    - 2500 rubies pack
+    - Pack de 2500 rubis
+    - "Paquete de 2500 rub\xEDes"
+    - Pacote de 2500 rubis
+  - key: shop.pk_4
+    values:
+    - "G\xF3i 4500 ruby"
+    - 4500 rubies pack
+    - Pack de 4500 rubis
+    - "Paquete de 4500 rub\xEDes"
+    - Pacote de 4500 rubis
+  - key: shop.pk_5
+    values:
+    - "G\xF3i 11000 ruby"
+    - 11000 rubies pack
+    - Pack de 11000 rubis
+    - "Paquete de 11000 rub\xEDes"
+    - Pacote de 11000 rubis
+  - key: shop.pk_noads
+    values:
+    - "T\u1EAFt qu\u1EA3ng c\xE1o"
+    - Remove ads
+    - Sans pub
+    - Sin anuncios
+    - "Sem an\xFAncios"
+  - key: ad.loading
+    values:
+    - "\u0110ang t\u1EA3i qu\u1EA3ng c\xE1o\u2026"
+    - "Loading ad\u2026"
+    - "Chargement de la pub\u2026"
+    - "Cargando anuncio\u2026"
+    - "Carregando an\xFAncio\u2026"
+  - key: ad.ready
+    values:
+    - "S\u1EB5n s\xE0ng"
+    - Ready
+    - "Pr\xEAt"
+    - Listo
+    - Pronto
+  - key: ad.cooldown
+    values:
+    - "Ch\u1EDD h\u1ED3i chi\xEAu"
+    - On cooldown
+    - En recharge
+    - En espera
+    - Em espera
+  - key: ad.cap
+    values:
+    - "H\u1EBFt l\u01B0\u1EE3t h\xF4m nay"
+    - Daily limit reached
+    - Limite du jour atteinte
+    - "L\xEDmite diario alcanzado"
+    - "Limite di\xE1rio atingido"
+  - key: ad.nofill
+    values:
+    - "Ch\u01B0a c\xF3 qu\u1EA3ng c\xE1o, th\u1EED l\u1EA1i sau"
+    - No ad available, try later
+    - "Pas de pub, r\xE9essayez plus tard"
+    - "Sin anuncio, int\xE9ntalo luego"
+    - "Sem an\xFAncio, tente mais tarde"
+  - key: ad.offline
+    values:
+    - "Kh\xF4ng c\xF3 m\u1EA1ng"
+    - You are offline
+    - "Vous \xEAtes hors ligne"
+    - "Sin conexi\xF3n"
+    - "Voc\xEA est\xE1 offline"
+  - key: ad.cancel
+    values:
+    - "\u0110\xF3ng s\u1EDBm, kh\xF4ng c\xF3 th\u01B0\u1EDFng"
+    - Closed early, no reward
+    - "Ferm\xE9e t\xF4t, pas de r\xE9compense"
+    - Cerrado antes, sin premio
+    - "Fechado cedo, sem pr\xEAmio"
+  - key: ad.error
+    values:
+    - "L\u1ED7i qu\u1EA3ng c\xE1o, kh\xF4ng m\u1EA5t ruby"
+    - Ad error, no rubies lost
+    - Erreur de pub, aucun rubis perdu
+    - "Error de anuncio, sin perder rub\xEDes"
+    - "Erro no an\xFAncio, nenhum rubi perdido"
+  - key: ad.success
+    values:
+    - "Nh\u1EADn th\u01B0\u1EDFng"
+    - Reward granted
+    - "R\xE9compense obtenue"
+    - Premio recibido
+    - "Pr\xEAmio recebido"
+  - key: econ.ad.left
+    values:
+    - "C\xF2n {n} l\u01B0\u1EE3t h\xF4m nay"
+    - '{n} left today'
+    - Encore {n} aujourd'hui
+    - Quedan {n} hoy
+    - Restam {n} hoje
+  - key: econ.allClear
+    values:
+    - "Th\u01B0\u1EDFng ho\xE0n th\xE0nh h\u1EBFt"
+    - Clear-all bonus
+    - "Bonus tout termin\xE9"
+    - Bono completar todo
+    - "B\xF4nus concluir tudo"
+  - key: econ.bridge
+    values:
+    - "Ng\xE0y {d} \xB7 Ng\xE0y c\u1EA7u n\u1ED1i"
+    - "Day {d} \xB7 Bridge day"
+    - "Jour {d} \xB7 Transition"
+    - "D\xEDa {d} \xB7 D\xEDa puente"
+    - "Dia {d} \xB7 Dia de liga\xE7\xE3o"
+  - key: econ.claim
+    values:
+    - "NH\u1EACN"
+    - CLAIM
+    - PRENDRE
+    - COBRAR
+    - PEGAR
+  - key: econ.claimed
+    values:
+    - "\u0110\xC3 NH\u1EACN"
+    - CLAIMED
+    - "RE\xC7U"
+    - HECHO
+    - FEITO
+  - key: econ.cycle
+    values:
+    - "Chu k\u1EF3 {c} \xB7 Ng\xE0y {d}/365"
+    - "Cycle {c} \xB7 Day {d}/365"
+    - "Cycle {c} \xB7 Jour {d}/365"
+    - "Ciclo {c} \xB7 D\xEDa {d}/365"
+    - "Ciclo {c} \xB7 Dia {d}/365"
+  - key: econ.dailyQuests
+    values:
+    - "Nhi\u1EC7m v\u1EE5 ng\xE0y \xB7 c\xF2n {t}"
+    - "Daily quests \xB7 {t} left"
+    - "Qu\xEAtes du jour \xB7 reste {t}"
+    - "Misiones del d\xEDa \xB7 quedan {t}"
+    - "Miss\xF5es do dia \xB7 faltam {t}"
+  - key: econ.dayWeek
+    values:
+    - "Ng\xE0y {d} \xB7 Tu\u1EA7n {w}"
+    - "Day {d} \xB7 Week {w}"
+    - "Jour {d} \xB7 Semaine {w}"
+    - "D\xEDa {d} \xB7 Semana {w}"
+    - "Dia {d} \xB7 Semana {w}"
+  - key: econ.extraToast
+    values:
+    - "T\u1EEB th\u01B0\u1EDFng: +{n} ruby"
+    - 'Bonus word: +{n} rubies'
+    - 'Mot bonus : +{n} rubis'
+    - "Palabra extra: +{n} rub\xEDes"
+    - 'Palavra extra: +{n} rubis'
+  - key: econ.free
+    values:
+    - "Nhi\u1EC7m v\u1EE5 kh\xF4ng c\u1EA7n mua hay xem qu\u1EA3ng c\xE1o"
+    - Quests never require purchases or ads
+    - "Les qu\xEAtes n'exigent ni achat ni pub"
+    - Las misiones no exigen compras ni anuncios
+    - "As miss\xF5es n\xE3o exigem compras nem an\xFAncios"
+  - key: econ.legend
+    values:
+    - "Vi\u1EC1n xanh: h\xF4m nay \xB7 H\u1ED3ng: s\u1EF1 ki\u1EC7n \xB7 V\xE0ng:
+      c\u1EA7u n\u1ED1i"
+    - "Teal border: today \xB7 Pink: event \xB7 Yellow: bridge"
+    - "Bord turquoise : aujourd'hui \xB7 Rose : \xE9v\xE9nement \xB7 Jaune : transition"
+    - "Borde turquesa: hoy \xB7 Rosa: evento \xB7 Amarillo: puente"
+    - "Borda turquesa: hoje \xB7 Rosa: evento \xB7 Amarelo: liga\xE7\xE3o"
+  - key: econ.levelMilestones
+    values:
+    - "M\u1ED1c level"
+    - Level milestones
+    - Paliers de niveaux
+    - Hitos de niveles
+    - "Marcos de n\xEDveis"
+  - key: econ.login
+    values:
+    - "Th\u01B0\u1EDFng \u0111\u0103ng nh\u1EADp h\xF4m nay"
+    - Today's login reward
+    - Connexion du jour
+    - Premio de hoy
+    - "Pr\xEAmio de hoje"
+  - key: econ.nextEvent
+    values:
+    - "S\u1EF1 ki\u1EC7n k\u1EBF: {e} (ng\xE0y {a})"
+    - 'Next event: {e} (day {a})'
+    - 'Prochain : {e} (jour {a})'
+    - "Pr\xF3ximo: {e} (d\xEDa {a})"
+    - "Pr\xF3ximo: {e} (dia {a})"
+  - key: econ.noEvent
+    values:
+    - "Kh\xF4ng c\xF3 s\u1EF1 ki\u1EC7n h\xF4m nay"
+    - No event today
+    - "Pas d'\xE9v\xE9nement aujourd'hui"
+    - Hoy no hay evento
+    - Nenhum evento hoje
+  - key: econ.noWeek
+    values:
+    - "Ng\xE0y c\u1EA7u n\u1ED1i: kh\xF4ng c\xF3 nhi\u1EC7m v\u1EE5 tu\u1EA7n"
+    - 'Bridge day: no weekly quests'
+    - "Jour de transition : pas de qu\xEAtes hebdo"
+    - "D\xEDa puente: sin misiones semanales"
+    - "Dia de liga\xE7\xE3o: sem miss\xF5es semanais"
+  - key: econ.periodDays
+    values:
+    - "{p} \xB7 ng\xE0y {a}\u2013{b}"
+    - "{p} \xB7 days {a}\u2013{b}"
+    - "{p} \xB7 jours {a}\u2013{b}"
+    - "{p} \xB7 d\xEDas {a}\u2013{b}"
+    - "{p} \xB7 dias {a}\u2013{b}"
+  - key: econ.progress
+    values:
+    - "{a}/{b} \xB7 +{n} ruby"
+    - "{a}/{b} \xB7 +{n} rubies"
+    - "{a}/{b} \xB7 +{n} rubis"
+    - "{a}/{b} \xB7 +{n} rub\xEDes"
+    - "{a}/{b} \xB7 +{n} rubis"
+  - key: econ.quests
+    values:
+    - "Nhi\u1EC7m v\u1EE5: {q}"
+    - 'Quests: {q}'
+    - "Qu\xEAtes : {q}"
+    - 'Misiones: {q}'
+    - "Miss\xF5es: {q}"
+  - key: econ.repair
+    values:
+    - "C\u1EE9u chu\u1ED7i (l\u1EE1 1 ng\xE0y)"
+    - Repair streak (1 day missed)
+    - "Sauver la s\xE9rie (1 jour manqu\xE9)"
+    - "Salvar racha (1 d\xEDa perdido)"
+    - "Salvar sequ\xEAncia (1 dia perdido)"
+  - key: econ.reward
+    values:
+    - +{n} ruby
+    - +{n} rubies
+    - +{n} rubis
+    - "+{n} rub\xEDes"
+    - +{n} rubis
+  - key: econ.soon
+    values:
+    - "S\u1EAFp c\xF3"
+    - Coming soon
+    - "Bient\xF4t"
+    - Pronto
+    - Em breve
+  - key: econ.streak
+    values:
+    - "Chu\u1ED7i {n} ng\xE0y \xB7 K\u1EF7 l\u1EE5c {b}"
+    - "{n}-day streak \xB7 Best {b}"
+    - "S\xE9rie {n} j \xB7 Record {b}"
+    - "Racha {n} d \xB7 R\xE9cord {b}"
+    - "Sequ\xEAncia {n} d \xB7 Recorde {b}"
+  - key: econ.streakMilestones
+    values:
+    - "M\u1ED1c chu\u1ED7i"
+    - Streak milestones
+    - "Paliers de s\xE9rie"
+    - Hitos de racha
+    - "Marcos de sequ\xEAncia"
+  - key: econ.tab.event
+    values:
+    - "S\u1EF1 ki\u1EC7n"
+    - Event
+    - "\xC9v\xE9nement"
+    - Evento
+    - Evento
+  - key: econ.tab.month
+    values:
+    - "Th\xE1ng"
+    - Month
+    - Mois
+    - Mes
+    - "M\xEAs"
+  - key: econ.tab.today
+    values:
+    - "H\xF4m nay"
+    - Today
+    - Aujourd'hui
+    - Hoy
+    - Hoje
+  - key: econ.tab.week
+    values:
+    - "Tu\u1EA7n"
+    - Week
+    - Semaine
+    - Semana
+    - Semana
+  - key: econ.tab.year
+    values:
+    - "N\u0103m"
+    - Year
+    - "Ann\xE9e"
+    - "A\xF1o"
+    - Ano
+  - key: econ.title
+    values:
+    - "Nhi\u1EC7m v\u1EE5 & Th\u01B0\u1EDFng"
+    - Quests & Rewards
+    - "Qu\xEAtes et r\xE9compenses"
+    - Misiones y premios
+    - "Miss\xF5es e pr\xEAmios"
+  - key: econ.weekN
+    values:
+    - "Tu\u1EA7n {n}"
+    - Week {n}
+    - Semaine {n}
+    - Semana {n}
+    - Semana {n}
+  - key: rv.d.cap
+    values:
+    - "Quay l\u1EA1i ng\xE0y mai \u0111\u1EC3 xem ti\u1EBFp. Ch\u01A1i v\u1EABn b\xECnh
+      th\u01B0\u1EDDng."
+    - Come back tomorrow for more videos. Play continues normally.
+    - "Revenez demain pour d'autres vid\xE9os. Le jeu continue normalement."
+    - "Vuelve ma\xF1ana para ver m\xE1s v\xEDdeos. El juego sigue con normalidad."
+    - "Volte amanh\xE3 para mais v\xEDdeos. O jogo continua normalmente."
+  - key: rv.s.cap
+    values:
+    - "H\u1EBFt l\u01B0\u1EE3t h\xF4m nay"
+    - Daily limit reached
+    - Limite du jour atteinte
+    - "L\xEDmite diario alcanzado"
+    - "Limite di\xE1rio atingido"
+  - key: shop.buying
+    values:
+    - "\u0110ang x\u1EED l\xFD giao d\u1ECBch\u2026"
+    - "Processing purchase\u2026"
+    - "Traitement de l'achat\u2026"
+    - "Procesando la compra\u2026"
+    - "Processando a compra\u2026"
+  - key: shop.cancelled
+    values:
+    - "\u0110\xE3 hu\u1EF7 giao d\u1ECBch, b\u1EA1n kh\xF4ng b\u1ECB tr\u1EEB ti\u1EC1n."
+    - Purchase cancelled. You were not charged.
+    - "Achat annul\xE9. Vous n'avez pas \xE9t\xE9 d\xE9bit\xE9."
+    - Compra cancelada. No se te ha cobrado.
+    - "Compra cancelada. Voc\xEA n\xE3o foi cobrado."
+  - key: shop.error
+    values:
+    - "Giao d\u1ECBch l\u1ED7i, ch\u01B0a c\u1ED9ng ruby. Th\u1EED l\u1EA1i sau."
+    - Purchase failed. No rubies added. Try again later.
+    - "\xC9chec de l'achat. Aucun rubis ajout\xE9. R\xE9essayez plus tard."
+    - "Error en la compra. No se a\xF1adieron rub\xEDes. Int\xE9ntalo m\xE1s tarde."
+    - Falha na compra. Nenhum rubi adicionado. Tente mais tarde.
+  - key: shop.readyLeft
+    values:
+    - "Video ng\u1EAFn: +{n} ruby \xB7 c\xF2n {l} l\u01B0\u1EE3t"
+    - "Short video: +{n} rubies \xB7 {l} left today"
+    - "Courte vid\xE9o : +{n} rubis \xB7 {l} restantes"
+    - "V\xEDdeo corto: +{n} rub\xEDes \xB7 quedan {l}"
+    - "V\xEDdeo curto: +{n} rubis \xB7 restam {l}"
+  - key: shop.storeNotReady
+    values:
+    - "C\u1EEDa h\xE0ng ch\u01B0a s\u1EB5n s\xE0ng, th\u1EED l\u1EA1i sau."
+    - Store not ready. Try again later.
+    - "Boutique indisponible. R\xE9essayez plus tard."
+    - "Tienda no disponible. Int\xE9ntalo m\xE1s tarde."
+    - "Loja indispon\xEDvel. Tente mais tarde."

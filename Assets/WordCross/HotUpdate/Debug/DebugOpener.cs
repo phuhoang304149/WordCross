@@ -181,6 +181,12 @@ namespace WordCross.Gameplay
                 case "aisoon":
                     DialogController.instance.ShowDialog(DialogType.AiSoon);
                     break;
+                case "quests":
+                    DialogController.instance.ShowDialog(DialogType.Quests);
+                    yield return null;
+                    int tab;
+                    if (int.TryParse(arg, out tab)) ((QuestsDialog)DialogController.instance.current).OnTabClick(tab);
+                    break;
                 case "rate":
                     DialogController.instance.ShowDialog(DialogType.RateGame);
                     break;
@@ -211,7 +217,7 @@ namespace WordCross.Gameplay
                 // Chờ dialog mở xong rồi mới giả lập đơn về, để thấy cả toast của Shop.
                 yield return new WaitForSecondsRealtime(1.0f);
                 int rubyBefore = CurrencyController.GetBalance();
-                Purchaser.instance.ProcessPurchase(iapProduct);
+                Purchaser.instance.ProcessPurchase(iapProduct, "debug-" + System.DateTime.UtcNow.Ticks);
                 Debug.Log("[DebugOpener] iap " + iapProduct + " ruby " + rubyBefore + "->" + CurrencyController.GetBalance() + " buy_item=" + CUtils.IsBuyItem());
             }
             Debug.Log("[DebugOpener] opened " + command + " glang=" + Locator<LocalizationController>.Instance.GameLanguage +

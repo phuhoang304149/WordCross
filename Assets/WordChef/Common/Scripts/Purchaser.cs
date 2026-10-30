@@ -16,6 +16,9 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public enum PType { Consumable, NonConsumable, Subscription };
 
+// Trạng thái giao dịch báo cho Shop (đang xử lý / thành công / huỷ / lỗi / store chưa sẵn sàng).
+public enum PurchaseUiState { Processing, Success, Cancelled, Error, StoreNotReady }
+
 [Serializable]
 public class IAPItem
 {
@@ -34,6 +37,8 @@ public class Purchaser : MonoBehaviour
 
     public static Purchaser instance;
     public Action<IAPItem, int> onItemPurchased;
+    public Action<PurchaseUiState, string> onPurchaseState;
+    public Action onProductsReady;
 
 #if CATGAMING_IAP
     private PurchaseService purchaseService;
@@ -58,6 +63,10 @@ public class Purchaser : MonoBehaviour
         if (purchaseService == null) return;
         purchaseService.PendingPurchase -= OnPendingPurchase;
         purchaseService.NoAdsRestored -= OnNoAdsRestored;
+        purchaseService.PurchaseRequested -= OnPurchaseRequested;
+        purchaseService.ProductsReady -= OnProductsReady;
+        purchaseService.purchaseFailure -= OnPurchaseFailed;
+        purchaseService.failure -= OnPurchaseRejected;
         purchaseService.Dispose();
         purchaseService = null;
 #endif
@@ -84,6 +93,10 @@ public class Purchaser : MonoBehaviour
         purchaseService = new PurchaseService();
         purchaseService.PendingPurchase += OnPendingPurchase;
         purchaseService.NoAdsRestored += OnNoAdsRestored;
+        purchaseService.PurchaseRequested += OnPurchaseRequested;
+        purchaseService.ProductsReady += OnProductsReady;
+        purchaseService.purchaseFailure += OnPurchaseFailed;
+        purchaseService.failure += OnPurchaseRejected;
         purchaseService.Init();
 #else
         Debug.Log("Purchaser.InitializePurchasing: CATGAMING_IAP is not defined.");
@@ -111,6 +124,7 @@ public class Purchaser : MonoBehaviour
         {
             Debug.LogWarning("Purchaser.BuyProduct: store is not ready. Product: " + iapItems[index].productID);
             InitializePurchasing();
+            NotifyState(PurchaseUiState.StoreNotReady, iapItems[index].productID);
             return;
         }
 
@@ -118,6 +132,24 @@ public class Purchaser : MonoBehaviour
 #else
         Debug.Log("Purchaser.BuyProduct: CATGAMING_IAP is not defined. Product: " + iapItems[index].productID);
 #endif
+    }
+
+    // Giá hiển thị do store trả (localizedPriceString); null khi store chưa sẵn sàng hoặc sản phẩm chưa có trên store.
+    public string LocalizedPrice(int index)
+    {
+#if CATGAMING_IAP
+        if (purchaseService == null || !purchaseService.IsInitialized) return null;
+        var product = purchaseService.GetProductById(iapItems[index].productID);
+        if (product == null || product.metadata == null || string.IsNullOrEmpty(product.metadata.localizedPriceString)) return null;
+        return product.metadata.localizedPriceString;
+#else
+        return null;
+#endif
+    }
+
+    private void NotifyState(PurchaseUiState state, string productId)
+    {
+        if (onPurchaseState != null) onPurchaseState(state, productId);
     }
 
     public void RestorePurchases()
@@ -128,18 +160,43 @@ public class Purchaser : MonoBehaviour
     }
 
 #if CATGAMING_IAP
-    // Cộng thưởng trước, rồi mới xác nhận đơn với store để đơn lỗi được giao lại ở lần mở sau.
+    private void OnPurchaseRequested(Product product)
+    {
+        NotifyState(PurchaseUiState.Processing, product == null ? null : product.definition.id);
+    }
+
+    private void OnProductsReady(System.Collections.Generic.List<Product> products)
+    {
+        if (onProductsReady != null) onProductsReady();
+    }
+
+    private void OnPurchaseFailed(FailedOrder failed)
+    {
+        bool cancelled = failed != null && failed.FailureReason == PurchaseFailureReason.UserCancelled;
+        NotifyState(cancelled ? PurchaseUiState.Cancelled : PurchaseUiState.Error, null);
+    }
+
+    private void OnPurchaseRejected(PurchaseFailureReason reason)
+    {
+        NotifyState(reason == PurchaseFailureReason.StoreNotConnected ? PurchaseUiState.StoreNotReady : PurchaseUiState.Error, null);
+    }
+
+    // Ghi ledger + cộng ruby trước, rồi mới xác nhận đơn với store để đơn lỗi được giao lại ở lần mở sau.
+    // Thiếu transactionId hoặc EconomyService chưa sẵn sàng thì không cộng, không xác nhận: đơn còn pending và được giao lại.
     private void OnPendingPurchase(PendingOrder order)
     {
         if (order == null || order.CartOrdered == null) return;
 
+        string transactionId = order.Info == null ? null : order.Info.TransactionID;
+        bool handled = true;
         foreach (CartItem cartItem in order.CartOrdered.Items())
         {
             if (cartItem == null || cartItem.Product == null || cartItem.Product.definition == null) continue;
-            ProcessPurchase(cartItem.Product.definition.id);
+            if (!ProcessPurchase(cartItem.Product.definition.id, transactionId)) handled = false;
         }
 
-        purchaseService.ConfirmPurchase(order);
+        if (handled) purchaseService.ConfirmPurchase(order);
+        else NotifyState(PurchaseUiState.Error, null);
     }
 
     private void OnNoAdsRestored(ConfirmedOrder order)
@@ -158,7 +215,8 @@ public class Purchaser : MonoBehaviour
         CUtils.CloseBannerAd();
     }
 
-    public void ProcessPurchase(string productID)
+    // Trả true khi đơn đã được xử lý xong (kể cả đơn đã cộng trước đó hoặc product lạ) và có thể xác nhận với store.
+    public bool ProcessPurchase(string productID, string transactionId)
     {
         IAPItem item = null;
         foreach (var i in iapItems)
@@ -172,23 +230,24 @@ public class Purchaser : MonoBehaviour
         if (item == null)
         {
             Debug.LogWarning("Purchaser.ProcessPurchase: unknown product " + productID);
-            return;
+            return true;
         }
 
-        // Cấp thưởng ở đây (không phụ thuộc Shop đang mở) để đơn giao lại lúc khởi động hay đơn chậm vẫn được cộng.
-        if (item.productType == PType.Consumable)
+        var econ = Script.Utils.Locator<WordCross.Gameplay.EconomyService>.Instance;
+        if (econ == null || string.IsNullOrEmpty(transactionId))
         {
-            CurrencyController.CreditBalance(item.value);
-        }
-        // Or ... a subscription product has been purchased by this user.
-        else if (item.productType == PType.Subscription)
-        {
-            // TODO: The subscription item has been successfully purchased, grant this to the player.
+            Debug.LogWarning("Purchaser.ProcessPurchase: hold order " + productID + " (economy ready=" + (econ != null) + ", transactionId=" + transactionId + ")");
+            return false;
         }
 
-        // Cờ tắt quảng cáo (buy_item) chỉ bật khi gói có removeAds: word.noads, word.item4, word.item5. Gói item1–3 chỉ cộng ruby.
+        // Cấp thưởng ở đây (không phụ thuộc Shop đang mở) để đơn giao lại lúc khởi động hay đơn chậm vẫn được cộng; ledger theo transactionId chặn cộng lặp.
+        bool granted = econ.GrantPurchase(transactionId, productID);
+
+        // Cờ tắt quảng cáo (buy_item) chỉ bật khi gói có removeAds: word.noads, word.item4, word.item5. Gói item1–3 chỉ cộng ruby. Idempotent nên đơn gửi lại vẫn an toàn.
         if (item.removeAds) GrantNoAds();
 
-        if (onItemPurchased != null) onItemPurchased(item, Array.IndexOf(iapItems, item));
+        if (granted && onItemPurchased != null) onItemPurchased(item, Array.IndexOf(iapItems, item));
+        if (granted) NotifyState(PurchaseUiState.Success, productID);
+        return true;
     }
 }

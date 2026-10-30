@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parent
+ROOT = OUT.parents[2]
 MONTH_DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 SCHEMA_VERSION = "1.0.0"
 
@@ -223,7 +224,12 @@ class Builder:
               "ad.error": ("Lỗi quảng cáo, không mất ruby", "Ad error, no rubies lost"), "ad.success": ("Nhận thưởng", "Reward granted")}
         for k, (vi, en) in ad.items():
             add(k, vi, en)
-        return {"schemaVersion": SCHEMA_VERSION, "kind": "loc", "languages": ["vi", "en", "fr", "es", "pt"], "pendingLanguages": ["fr", "es", "pt"], "keys": L}
+        # fr/es/pt: bản dịch từ tools/econ/make_loc.py (economy-loc.json); chữ tiền tệ giữ "coin" như GD, importer đổi sang ruby khi nạp vào game.
+        extra = json.loads((ROOT / "tools" / "econ" / "economy-loc.json").read_text(encoding="utf-8"))
+        for k, v in L.items():
+            for lang in ("fr", "es", "pt"):
+                v[lang] = extra[k][lang]
+        return {"schemaVersion": SCHEMA_VERSION, "kind": "loc", "languages": ["vi", "en", "fr", "es", "pt"], "pendingLanguages": [], "keys": L}
 
 
 def main():

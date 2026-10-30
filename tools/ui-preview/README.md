@@ -17,7 +17,7 @@ In ra đường dẫn ảnh `Build/remote-r2-0.3/qa-shots/preview-<screen>-<th�
 |---|---|
 | `home`, `selectworld`, `selectlevel[:w-s]`, `main:w-s-l` | màn tương ứng (chỉ số bắt đầu từ 0; `main:0-0-0` = level 1) |
 | `pause`, `howto`, `extra[:ready\|notready]`, `win[:first\|replay]` | dialog trong Main, level đang mở khoá (đổi bằng `;level=w-s-l`) |
-| `shop`, `rate`, `language` | dialog trong Home |
+| `shop`, `rate`, `language`, `quests[:tab]` | dialog trong Home (`quests:0..4` = Hôm nay/Tuần/Tháng/Sự kiện/Năm) |
 | `rewarded:<ready\|loading\|cooldown\|nofill\|offline\|playing\|success\|cancel\|error>` | popup rewarded ở Home, giữ nguyên trạng thái |
 | `daily[:fresh\|risk\|safe\|lost]` | dialog Daily ở Home với chuỗi giả (lưu thật; trả lại bằng `reset`) |
 | `dailymain[:state]`, `dailywin[:state]` | Main với bàn Daily hôm nay / Win biến thể Daily (dữ liệu Daily và ruby trả lại sau 1 giây) |

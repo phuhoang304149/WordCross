@@ -18,7 +18,8 @@ public enum RewardedVideoState
     Playing,
     Success,
     Cancel,
-    Error
+    Error,
+    CapReached
 }
 
 public class RewardedVideoDialog : Dialog {
@@ -64,6 +65,10 @@ public class RewardedVideoDialog : Dialog {
 
     private RewardedVideoState state;
     private int amount;
+    // Vị trí quảng cáo thưởng (economy-config ads.rewarded): coin, hồi chiêu, trần/ngày theo vị trí; mặc định video miễn phí của Shop.
+    private string placement = EconomyService.AD_SHOP;
+
+    private EconomyService Econ { get { return Locator<EconomyService>.Instance; } }
     private float loadStart, playStart;
 
     public RewardedVideoState State { get { return state; } }
@@ -88,6 +93,20 @@ public class RewardedVideoDialog : Dialog {
         if (spinner.gameObject.activeSelf) spinnerArc.Rotate(0f, 0f, -360f * Time.unscaledDeltaTime);
     }
 
+    // Gán vị trí và lấy số coin của vị trí đó.
+    public void SetPlacement(string id)
+    {
+        placement = id;
+        var ad = Econ == null ? null : Econ.RewardedFor(id);
+        SetAmount(ad == null ? ConfigController.Config.rewardedVideoAmount : ad.coin);
+    }
+
+    private int CooldownRemain()
+    {
+        if (Econ != null) return Econ.CooldownRemain(placement);
+        return AdmobController.instance != null ? AdmobController.instance.GetRewardedCooldownRemain() : 0;
+    }
+
     public void SetAmount(int value)
     {
         amount = value;
@@ -95,12 +114,13 @@ public class RewardedVideoDialog : Dialog {
         if (state != RewardedVideoState.None) Refresh();
     }
 
-    // Trạng thái hiện tại theo môi trường: cooldown > offline > sẵn sàng > đang tải > hết quảng cáo.
+    // Trạng thái hiện tại theo môi trường: hết lượt > cooldown > offline > sẵn sàng > đang tải > hết quảng cáo.
     public RewardedVideoState GetAvailabilityState()
     {
         AdmobController admob = AdmobController.instance;
+        if (Econ != null && Econ.GetAdState(placement) == EconomyAdState.CapReached) return RewardedVideoState.CapReached;
+        if (CooldownRemain() > 0) return RewardedVideoState.Cooldown;
         if (admob == null) return RewardedVideoState.NoFill;
-        if (admob.GetRewardedCooldownRemain() > 0) return RewardedVideoState.Cooldown;
         if (!admob.IsOnline()) return RewardedVideoState.Offline;
         if (admob.IsRewardedVideoLoaded()) return RewardedVideoState.Ready;
         if (Time.unscaledTime - loadStart < loadTimeout) return RewardedVideoState.Loading;
@@ -111,7 +131,11 @@ public class RewardedVideoDialog : Dialog {
     private void Evaluate()
     {
         // Lưới an toàn: Closed/Failed bị bỏ lỡ (dialog bị ẩn lúc đang phát) thì không kẹt Playing mãi.
-        if (state == RewardedVideoState.Playing && Time.unscaledTime - playStart > PLAYING_TIMEOUT) ShowError();
+        if (state == RewardedVideoState.Playing && Time.unscaledTime - playStart > PLAYING_TIMEOUT)
+        {
+            if (Econ != null) Econ.CancelRewarded();
+            ShowError();
+        }
         if (state == RewardedVideoState.Playing || state == RewardedVideoState.Success) return;
         if (state == RewardedVideoState.Cancel || state == RewardedVideoState.Error) return;
         SetState(GetAvailabilityState());
@@ -172,12 +196,16 @@ public class RewardedVideoDialog : Dialog {
     // Chỉ phản ứng khi dialog đang chờ video của chính nó.
     private void HandleClosed()
     {
-        if (state == RewardedVideoState.Playing) ShowCancel();
+        if (state != RewardedVideoState.Playing) return;
+        if (Econ != null) Econ.CancelRewarded();
+        ShowCancel();
     }
 
     private void HandleFailed()
     {
-        if (state == RewardedVideoState.Playing) ShowError();
+        if (state != RewardedVideoState.Playing) return;
+        if (Econ != null) Econ.CancelRewarded();
+        ShowError();
     }
 
     // Nút chính: XEM VIDEO / THỬ LẠI bắt đầu phát; các trạng thái còn lại chỉ đóng.
@@ -207,6 +235,12 @@ public class RewardedVideoDialog : Dialog {
             return;
         }
 
+        // Phiên thưởng: chỉ callback hoàn thành của đúng phiên này mới cộng coin (RewardedVideoCallBack).
+        if (Econ != null && Econ.BeginRewarded(placement) == null)
+        {
+            SetState(GetAvailabilityState());
+            return;
+        }
         SetState(RewardedVideoState.Playing);
         playStart = Time.unscaledTime;
         AdmobController.instance.ShowRewardBasedVideo();
@@ -243,7 +277,7 @@ public class RewardedVideoDialog : Dialog {
                 primary = Loc.Get("common.ok");
                 break;
             case RewardedVideoState.Cooldown:
-                int remain = AdmobController.instance != null ? AdmobController.instance.GetRewardedCooldownRemain() : 0;
+                int remain = CooldownRemain();
                 title = Loc.Get("rv.s.cooldown", "t", string.Format("{0:00}:{1:00}", remain / 60, remain % 60)); desc = Loc.Get("rv.d.cooldown");
                 primary = Loc.Get("common.ok");
                 break;
@@ -265,6 +299,10 @@ public class RewardedVideoDialog : Dialog {
             case RewardedVideoState.Cancel:
                 title = Loc.Get("rv.s.cancel"); desc = Loc.Get("rv.d.cancel");
                 primary = Loc.Get("common.retry"); primaryCoral = true; secondary = Loc.Get("common.ok");
+                break;
+            case RewardedVideoState.CapReached:
+                title = Loc.Get("rv.s.cap"); desc = Loc.Get("rv.d.cap");
+                primary = Loc.Get("common.ok");
                 break;
             case RewardedVideoState.Error:
                 title = Loc.Get("rv.s.error"); desc = Loc.Get("rv.d.error");

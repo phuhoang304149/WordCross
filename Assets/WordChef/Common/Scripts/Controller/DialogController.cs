@@ -22,7 +22,8 @@ public enum DialogType
     Language,
     Daily,
     LowRuby,
-    AiSoon
+    AiSoon,
+    Quests
 };
 
 public enum DialogShow
