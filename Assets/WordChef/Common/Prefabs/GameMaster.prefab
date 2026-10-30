@@ -466,7 +466,7 @@ MonoBehaviour:
     removeAds: 1
   - productID: word.noads
     productType: 1
-    price: 2.99
+    price: 4.99
     value: 0
     removeAds: 1
 --- !u!1 &140880
