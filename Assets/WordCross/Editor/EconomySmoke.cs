@@ -6,7 +6,7 @@ using WordCross.Gameplay;
 namespace WordCross.Editor
 {
     // cli-smoke cho EconomyService (T134): lịch UTC (ngày 1, tuần 7/8, 364/365/366 sang C2), đồng hồ lùi, nhảy tiến, claim trùng,
-    // migrate ruby 2 lần, nhiệm vụ + thưởng hoàn thành hết, quảng cáo thưởng (phiên, hồi chiêu, trần nhóm), interstitial.
+    // ví ruby (giữ số dư cũ, người mới startBalance), hôm nay 2026-10-30 = ngày 303 C1, mở lại app, nhiệm vụ + thưởng hoàn thành hết, quảng cáo thưởng (phiên, hồi chiêu, trần nhóm), interstitial.
     // Dùng EconomyData.asset thật + store/clock trong bộ nhớ (không đụng PlayerPrefs). Thoát mã 1 nếu có FAIL.
     // Hàm static chỉ là điểm vào cho Unity (-executeMethod), phần việc nằm ở hàm instance.
     public class EconomySmoke
@@ -51,8 +51,10 @@ namespace WordCross.Editor
                 return 1;
             }
             anchor = DateTime.SpecifyKind(DateTime.Parse(data.anchorUtcDate + "T00:00:00"), DateTimeKind.Utc);
-            Migration();
+            Wallet();
             Calendar();
+            Today();
+            Reopen();
             ClockGuard();
             Streak();
             Quests();
@@ -62,21 +64,50 @@ namespace WordCross.Editor
             return failed;
         }
 
-        private void Migration()
+        // Ruby là tiền tệ duy nhất: người cũ giữ nguyên số dư, người mới nhận startBalance, khởi tạo lại không đổi gì.
+        private void Wallet()
         {
             var fresh = new MemoryEconomyStore();
             var clock = new FixedEconomyClock { now = Day(4, 10) };
             Make(fresh, clock);
-            Check("migrate.new", fresh.balance == data.startBalance, "balance=" + fresh.balance);
+            Check("wallet.new", fresh.balance == data.startBalance, "balance=" + fresh.balance);
             Make(fresh, clock);
-            Check("migrate.new.twice", fresh.balance == data.startBalance, "balance=" + fresh.balance);
+            Check("wallet.new.twice", fresh.balance == data.startBalance, "balance=" + fresh.balance);
 
             var old = new MemoryEconomyStore { balance = 7, legacy = true };
             Make(old, clock);
-            Check("migrate.ruby", old.balance == 70, "7 ruby -> " + old.balance);
+            Check("wallet.old.keeps1to1", old.balance == 7, "7 ruby -> " + old.balance);
             old.balance += 5;
             Make(old, clock);
-            Check("migrate.ruby.twice", old.balance == 75, "second init keeps " + old.balance);
+            Check("wallet.old.twice", old.balance == 12, "second init keeps " + old.balance);
+            Check("anchor", data.anchorUtcDate == "2026-01-01", data.anchorUtcDate);
+        }
+
+        // Hôm nay 2026-10-30 UTC: 302 ngày sau neo → ngày 303 của C1.
+        private void Today()
+        {
+            var clock = new FixedEconomyClock { now = new DateTime(2026, 10, 30, 15, 0, 0, DateTimeKind.Utc) };
+            var econ = Make(new MemoryEconomyStore(), clock);
+            Check("today.303", econ.DayNumberAt(clock.now) == 302 && econ.DayIndex == 303 && econ.CycleId == "C1" && !econ.DayRow.bridge, econ.CycleId + " d" + econ.DayIndex + " week=" + econ.PeriodId("weekly"));
+        }
+
+        // Mở lại app (tạo service mới trên cùng store): login/quest/phiên quảng cáo đã nhận không cộng lần hai.
+        private void Reopen()
+        {
+            var store = new MemoryEconomyStore();
+            var clock = new FixedEconomyClock { now = Day(0, 9) };
+            var econ = Make(store, clock);
+            econ.ClaimLogin();
+            econ.AddProgress(EconomyService.METRIC_WIN, 3);
+            econ.ClaimQuest("daily", "dq_win_3");
+            string session = econ.BeginRewarded(EconomyService.AD_SHOP);
+            int got = econ.CompleteRewarded(session);
+            int balance = store.balance;
+            var reopened = Make(store, clock);
+            bool login = reopened.ClaimLogin();
+            bool quest = reopened.ClaimQuest("daily", "dq_win_3");
+            int replay = reopened.CompleteRewarded(session);
+            Check("reopen.noDouble", got > 0 && !login && !quest && replay == 0 && store.balance == balance && reopened.IsLoginClaimed, "login=" + login + " quest=" + quest + " replay=" + replay + " delta=" + (store.balance - balance));
         }
 
         private void Calendar()
