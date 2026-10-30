@@ -57,7 +57,7 @@ Nguồn: Console → Publishing overview (`.../publishing`), đọc 2026-10-30.
 | Financial features | **Đã lưu: "My app doesn't provide any financial features"**, bước Documentation không yêu cầu thêm; mục biến khỏi danh sách cần xử lý | Danh sách của Console (ngân hàng, vay, ví, giao dịch, tiền mã hoá, bảo hiểm…) không có mục nào khớp. IAP qua Play Billing và xu/vật phẩm ảo trong game không thuộc các loại này. |
 | Health apps | **Đã lưu: "My app does not have any health features"**, bước Regional requirements không yêu cầu | Danh sách tính năng sức khoẻ của Console không khớp; nội dung listing 5 locale không có từ khoá sức khoẻ/brain training/stress (đã grep). |
 | Ads | Đã khai "Có quảng cáo" (2019) | Khớp: Google Mobile Ads 11.6.0. Không đổi. |
-| Privacy policy | Đã khai 25/05/2019 | Xem mục 3.2. |
+| Privacy policy | **DRAFT đã đổi sang URL mới (30/10/2026)**: `https://data.catgaming.asia/WordCross/privacypolicy/privacy-policy.html`; tải lại thấy giá trị đã lưu | Xem mục 3.2 và 3.3. |
 | Content rating | IARC 27/05/2019 | Bản cũ. Không khai lại theo suy đoán; USER đang được hỏi riêng. |
 | Target audience & content | **Chưa đổi.** Giá trị cũ đọc được: **13-15, 16-17, 18 and over** (không chọn 5 and under / 6-8 / 9-12) | Chỉ đọc; thoát khỏi trang mà không lưu. Nhóm tuổi phục vụ do USER quyết (đang hỏi riêng). |
 | Data safety | **Chưa khai** (quá hạn từ 23/08/2022) | Xem mục 3.1: còn điểm chưa xác minh. |
@@ -117,3 +117,13 @@ Còn lại thật sự cần quyết/cung cấp:
 1. Backend Nakama có nhận ID thiết bị/dữ liệu mua hàng không, và cấu hình consent AdMob — để khai Data safety.
 2. Hướng xử lý app Removed sau khi đọc lý do gốc trong thông báo Google.
 3. Screenshot sạch (Codex/chủ ảnh) trước khi coi listing sẵn sàng.
+
+### 3.3 Privacy policy mới (USER chốt 2026-10-30)
+
+- Nguồn: `legal/privacypolicy/index.html` (English, HTML tĩnh, không cookie/tracking). Mẫu tham chiếu: R2 `catgaming/wordle/privacypolicy/` (chỉ `privacy-policy.html`, `delete-data.html`; URL thư mục trả 200 `application/octet-stream`, không route index) → dùng đường dẫn file tường minh.
+- R2 (bucket `catgaming`, profile CLI sẵn có): `WordCross/privacypolicy/privacy-policy.html` và `WordCross/privacypolicy/index.html` (cùng nội dung). Khoá phân biệt hoa/thường, khác prefix `wordcross/` của OTA; không đụng CLR/AA/OTA/Wordle.
+- URL public đã kiểm: `https://data.catgaming.asia/WordCross/privacypolicy/privacy-policy.html` → 200, `text/html; charset=utf-8`, sha256 khớp file local: `167569a7f7a7d18bea7e079c812df9341cd3b7b5d5a9bdfdda2e4c2aa88a8f8c`. Lần upload đầu lệch hash vì Cloudflare tự đổi email thành script bảo vệ email; đã dùng `&#64;`/`&#46;` như policy Wordle.
+- Play Console: Privacy policy URL đã Save (DRAFT), reload đọc lại đúng URL. Chưa gửi review/AAB/rollout.
+- Nguồn chứng cứ: Google Mobile Ads data disclosure (developers.google.com/admob/android/privacy/play-data-disclosure): SDK tự thu thập/chia sẻ IP, tương tác sản phẩm, chẩn đoán, ID thiết bị/tài khoản cho quảng cáo, phân tích, chống gian lận. Luồng IAP: `CATGAMING_NAKAMA` **không** có trong define của `ProjectSettings` WordCross (chỉ có trong config game khác), nên `PurchaseService` đi nhánh `PendingPurchase` cục bộ → `Purchaser` cộng thưởng và `ConfirmPurchase`; không có validate receipt qua server, `MainModule.InitServer` không chạy Nakama. Vậy không có backend nhận ID thiết bị/dữ liệu mua hàng.
+- Điểm Data safety mới xác minh (chưa khai, task này không đổi Data safety): (1) điểm "backend Nakama" ở 3.1 đã có câu trả lời: không dùng; (2) AdMob: IP, ID thiết bị (Advertising ID), tương tác quảng cáo, chẩn đoán – chia sẻ với Google. Mua hàng do Google Play xử lý.
+- Còn thiếu thật sự: cấu hình thông điệp consent/GDPR trên AdMob Console (chưa mở nên policy chỉ nói "tuỳ cấu hình"); game không có mục Privacy options trong UI (chỉ có hàm trong `AdmobService`); chưa chạy runtime để xác nhận `CFirebase.LogEvent` là stub và `unity-ads` không khởi tạo; không nêu thời hạn lưu giữ dữ liệu của Google; tên hiển thị trong policy là "Word Crossy" theo hồ sơ cũ.
