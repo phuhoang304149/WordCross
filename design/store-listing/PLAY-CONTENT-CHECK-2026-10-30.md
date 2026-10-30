@@ -24,10 +24,28 @@ Phạm vi: chuẩn bị như app mới trên record hiện hữu. **Chưa gửi 
 |---|---|---|
 | Loại / danh mục | Game / Puzzle | Có |
 | Tags | **Puzzle, Word** — đã chọn trong Console (cả hai nằm trong "Suggested tags", đúng game chữ) và Save, tải lại vẫn thấy | DRAFT đã lưu |
-| Email liên hệ | chuikho@gmail.com | Có (email 2019); USER đang được hỏi riêng |
-| Điện thoại | +84947153576 | Có; USER đang được hỏi riêng |
-| Website | trống | Chưa có; USER đang được hỏi riêng |
+| Email liên hệ | chuikho@gmail.com (hiện trên Console) | USER đã chốt **support@catgaming.asia** — **CHƯA lưu được**, xem 2.1 |
+| Điện thoại | +84947153576 | Giữ nguyên, chưa coi là đã xác nhận |
+| Website | trống (hiện trên Console) | USER đã chốt **https://catgaming.asia** — **CHƯA lưu được**, xem 2.1 |
 | External marketing | bật | Giữ nguyên |
+
+### 2.1 Email/website do USER chốt — kết quả lưu (2026-10-30)
+
+- Đã xác minh record trước khi thao tác: tab ở `.../developers/8227324553133862774/app/4976044463777164379/...`, tiêu đề "Word Crossy".
+- Mở Store settings → "Store listing contact details" → Edit; điền email `support@catgaming.asia`, website `https://catgaming.asia`, giữ phone `+84947153576`. Privacy URL không đụng tới.
+- **Không lưu được dưới dạng DRAFT.** Thanh dưới của form chỉ có "Discard" và "Save and publish" kèm dòng "Changes made will be published to Google Play immediately"; không có nút "Save" hiển thị (nút Save trong DOM có kích thước 0×0). Vì "Save and publish" xuất bản ngay nên **không bấm**; đã bấm Discard (xác nhận Discard) và đọc lại: email vẫn `chuikho@gmail.com`, website trống, phone không đổi. **Cả 2 trường chưa được lưu.**
+- Việc còn lại: cần USER cho phép xuất bản thay đổi liên hệ này ("Save and publish"), hoặc cách khác do USER chọn. Không khẳng định đã gửi/xuất bản gì.
+
+### 2.2 Có gửi review không cần AAB mới không? (chỉ đọc, Publishing overview)
+
+Nguồn: Console → Publishing overview (`.../publishing`), đọc 2026-10-30.
+- Hiển thị: "Managed publishing on", "Last published on January 4, 2020", "Changes not yet submitted for review".
+- Nút **"Submit 1 change for review" đang disabled** (thuộc tính `disabled=true`). Mục thay đổi liệt kê: App content → Health apps ("Complete Health apps declaration"). Phần "What you've told us" liệt kê Sign in details, Advertising ID, Government apps, Financial features (chưa xuất bản, sẽ được xét khi review).
+- Banner "Running quick checks for commonly found issues" (còn "Up to 7 minutes remaining" lúc đọc) và "View 1 issue". Mở ra: **"1 issue found — We found some common issues that are preventing your app from being sent for review. You must address these issues before you can send your changes for review. Incomplete data safety declaration (Policy)"** với nút "Complete declaration".
+- Kết luận cho app này: Console **không** nêu yêu cầu AAB mới như một blocker của việc gửi; blocker hiển thị duy nhất là **Data safety chưa khai**. Nghĩa là thay đổi chỉ-metadata/policy về nguyên tắc có thể gửi không cần AAB (Console không đòi bundle trong danh sách lỗi), nhưng **hiện chưa gửi được** vì Data safety. Chưa rõ nút có mở khoá sau khi khai Data safety hay không, và quick checks chưa kết thúc lúc đọc, nên có thể xuất hiện thêm lỗi.
+- Phân biệt: khả năng review metadata-only nói chung là tính năng chung của Play Console; riêng app này còn các yếu tố **chưa kiểm chứng**: trạng thái "App removed" (02/09/2021, lý do gốc chưa đọc) có thể buộc appeal/resubmit; production track Inactive; cảnh báo artifact cũ. Không có thông báo nào trên Publishing overview nói các yếu tố này chặn nút. Chưa bấm Submit/Publish; không upload AAB.
+- Hai điểm "Save and publish" (Store settings) và "Submit for review" (Publishing overview) là hai cơ chế khác nhau; Store settings hiện chỉ cho xuất bản ngay.
+- Vẫn pending: nhóm tuổi (Target audience), IARC, Privacy policy URL/nội dung, Data safety.
 
 ## 3. App content (Console: còn 1 mục cần xử lý — Data safety)
 
