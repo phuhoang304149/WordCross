@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 // Tên level Main theo design (.game-top .lvl-name): giữa khoảng trống nút pause và pill ruby, tên 19 css + dòng phụ 12 css.
 public class MainTitleFit : MonoBehaviour
 {
-    public Text nameText, subText;
+    public TMP_Text nameText, subText;
     public string headerName = "Header";
     public float designGap = 10f, designWidth = 390f;
     public float nameCss = 19f, subCss = 12f;
@@ -31,14 +32,14 @@ public class MainTitleFit : MonoBehaviour
         return ((RectTransform)canvas.transform).rect.width / designWidth;
     }
 
-    private void SetFont(Text text, float css)
+    private void SetFont(TMP_Text text, float css)
     {
         float localPerCanvas = canvas.transform.lossyScale.x / text.transform.lossyScale.x;
         int size = Mathf.RoundToInt(css * CanvasPerCss() * localPerCanvas);
         text.fontSize = size;
-        text.resizeTextForBestFit = true;
-        text.resizeTextMaxSize = size;
-        text.resizeTextMinSize = Mathf.RoundToInt(size * 0.7f);
+        text.enableAutoSizing = true;
+        text.fontSizeMax = size;
+        text.fontSizeMin = Mathf.RoundToInt(size * 0.7f);
     }
 
     private void LateUpdate()

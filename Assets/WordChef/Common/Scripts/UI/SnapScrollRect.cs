@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -30,7 +31,7 @@ public class SnapScrollRect : MonoBehaviour, IDragHandler, IEndDragHandler, IBeg
     public Transform indicatorRoot;
     [HideInInspector]
     public GameObject[] indicators;
-    public Text tabName;
+    public TMP_Text tabName;
     public string tabNamePrefix;
 
     public ScaleItem scaleItem;

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,8 +11,8 @@ public class ExtraWordDialog : Dialog
     public Transform claimTr;
     public ExtraProgress extraProgress;
     public GameObject claimButton;
-    public Text progressText;
-    public Text claimText;
+    public TMP_Text progressText;
+    public TMP_Text claimText;
 
     // Toạ độ gốc trong prefab (1 dòng mô tả, 1 dòng ghi chú); chữ dài xuống dòng thì dịch các phần tử quanh các giá trị này.
     private const float DESC_Y = 57f, TITLE_Y = 126f, CLOSE_Y = 191f, NOTE_Y = -45f, CLAIM_Y = -120f, BG_HEIGHT = 402f, TEXT_HEIGHT = 30f;
@@ -34,10 +35,10 @@ public class ExtraWordDialog : Dialog
     private void FitTexts()
     {
         Transform content = transform.Find("Content");
-        Text desc = content.Find("Text").GetComponent<Text>();
+        TMP_Text desc = content.Find("Text").GetComponent<TMP_Text>();
         Transform progress = content.Find("VerticalGroup/Progress");
         RectTransform noteRect = (RectTransform)progress.Find("Note");
-        Text note = noteRect.GetComponent<Text>();
+        TMP_Text note = noteRect.GetComponent<TMP_Text>();
         noteRect.sizeDelta = new Vector2(NOTE_WIDTH, noteRect.sizeDelta.y);
 
         float descExtra = ExtraHeight(desc);
@@ -51,11 +52,10 @@ public class ExtraWordDialog : Dialog
     }
 
     // Chiều cao thêm so với một dòng.
-    private float ExtraHeight(Text text)
+    private float ExtraHeight(TMP_Text text)
     {
-        TextGenerator generator = text.cachedTextGeneratorForLayout;
-        generator.Populate(text.text, text.GetGenerationSettings(new Vector2(text.rectTransform.rect.width, 0f)));
-        int lines = Mathf.Max(1, generator.lineCount);
+        text.ForceMeshUpdate();
+        int lines = Mathf.Max(1, text.textInfo.lineCount);
         return text.preferredHeight / lines * (lines - 1);
     }
 

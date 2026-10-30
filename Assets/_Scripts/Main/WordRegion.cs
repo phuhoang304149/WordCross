@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,7 +29,7 @@ public class WordRegion : MonoBehaviour {
     private float sizeCss;
     private float[] colWidthCss;
     private RectTransform coach, coachLabel;
-    private Text coachText;
+    private TMP_Text coachText;
     private float coachHeightCss, lastToolsY = float.NaN;
 
     private RectTransform rt;
@@ -175,16 +176,16 @@ public class WordRegion : MonoBehaviour {
         image.color = new Color32(0xff, 0xf1, 0xc4, 255);
         image.raycastTarget = false;
 
-        var label = new GameObject("Text", typeof(RectTransform), typeof(Text));
+        var label = new GameObject("Text", typeof(RectTransform), typeof(TextMeshProUGUI));
         coachLabel = (RectTransform)label.transform;
         coachLabel.SetParent(coach, false);
         coachLabel.anchorMin = Vector2.zero;
         coachLabel.anchorMax = Vector2.one;
-        coachText = label.GetComponent<Text>();
+        coachText = label.GetComponent<TMP_Text>();
         coachText.font = textPreview.text.font;
         coachText.fontSize = Mathf.RoundToInt(CoachFont * perCss);
-        coachText.fontStyle = FontStyle.Bold;
-        coachText.alignment = TextAnchor.MiddleCenter;
+        coachText.fontStyle = FontStyles.Bold;
+        coachText.alignment = TextAlignmentOptions.Center;
         coachText.color = new Color32(0x6b, 0x4d, 0x00, 255);
         coachText.raycastTarget = false;
 
@@ -206,8 +207,8 @@ public class WordRegion : MonoBehaviour {
         var text = coachText;
         var labelRect = coachLabel;
         labelRect.offsetMin = labelRect.offsetMax = Vector2.zero;
-        text.horizontalOverflow = HorizontalWrapMode.Overflow;
-        text.verticalOverflow = VerticalWrapMode.Truncate;
+        text.textWrappingMode = TextWrappingModes.NoWrap;
+        text.overflowMode = TextOverflowModes.Truncate;
         text.text = message;
 
         float width = text.preferredWidth + CoachPadX * 2 * perCss;
@@ -216,10 +217,10 @@ public class WordRegion : MonoBehaviour {
         {
             // Chữ dài hơn bề ngang màn (fr/es/pt): xuống dòng trong khung và tăng chiều cao theo số dòng.
             width = maxWidth;
-            text.horizontalOverflow = HorizontalWrapMode.Wrap;
+            text.textWrappingMode = TextWrappingModes.Normal;
             labelRect.offsetMin = new Vector2(CoachPadX * perCss, 0f);
             labelRect.offsetMax = new Vector2(-CoachPadX * perCss, 0f);
-            text.verticalOverflow = VerticalWrapMode.Overflow;
+            text.overflowMode = TextOverflowModes.Overflow;
             // Đo từng câu theo bề rộng khi không xuống dòng (cùng đơn vị với preferredWidth ở trên) rồi chia cho bề rộng khung.
             float inner = (width - 2 * CoachPadX * perCss) * CoachWrapSlack;
             int lines = 0;

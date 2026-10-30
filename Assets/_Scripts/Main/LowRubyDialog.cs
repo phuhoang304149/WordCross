@@ -2,19 +2,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using Script.Utils;
 using WordCross.Gameplay;
+using TMPro;
 
 // Popup thiếu ruby (design: popups['low-ruby']): xem video +ruby (luồng RewardedVideoDialog), mở Shop, hoặc bỏ qua.
 public class LowRubyDialog : Dialog {
     public RectTransform card;
     public RectTransform closeX;
-    public Text titleText;
-    public Text messageText;
+    public TMP_Text titleText;
+    public TMP_Text messageText;
     public RectTransform watchButton;
-    public Text watchText;
+    public TMP_Text watchText;
     public RectTransform shopButton;
-    public Text shopText;
+    public TMP_Text shopText;
     public RectTransform skipButton;
-    public Text skipText;
+    public TMP_Text skipText;
 
     private LocalizationController Loc { get { return Locator<LocalizationController>.Instance; } }
 
@@ -92,11 +93,10 @@ public class LowRubyDialog : Dialog {
     }
 
     // Số dòng chữ sau khi xuống dòng theo bề rộng khung hiện tại.
-    private int LineCount(Text text)
+    private int LineCount(TMP_Text text)
     {
-        TextGenerator generator = text.cachedTextGeneratorForLayout;
-        generator.Populate(text.text, text.GetGenerationSettings(new Vector2(text.rectTransform.rect.width, 0f)));
-        return Mathf.Max(1, generator.lineCount);
+        text.ForceMeshUpdate();
+        return Mathf.Max(1, text.textInfo.lineCount);
     }
 
     // Đặt phần tử có mép trên tại top, trả về mép dưới.

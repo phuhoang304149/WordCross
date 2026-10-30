@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,7 +9,7 @@ using WordCross.Gameplay;
 public class SelectLevelController : BaseController {
     public RectTransform mainUI, scrollContent;
     public ScrollRect scrollRect;
-    public Text titleText;
+    public TMP_Text titleText;
     public GridLayoutGroup grid;
     public float cellShadow = 7f;
     // Design screen is 390 wide: grid padding 20 (8 above, 30 below) and gap 12 scale with the canvas width

@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LetterText : MonoBehaviour
 {
     public Image selectDisc;
-    public Text selectGlyph;
-    public Text letter;
+    public TMP_Text selectGlyph;
+    public TMP_Text letter;
 
     public Color idleColor;
 

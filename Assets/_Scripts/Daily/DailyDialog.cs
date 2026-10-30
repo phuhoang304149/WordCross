@@ -3,26 +3,27 @@ using UnityEngine;
 using UnityEngine.UI;
 using Script.Utils;
 using WordCross.Gameplay;
+using TMPro;
 
 // Daily Challenge (design: screens/daily): hero, chuỗi, lịch tháng, thưởng, nút chơi. Mở từ nút DAILY ở Home.
 public class DailyDialog : Dialog
 {
     public const int DAY_CELLS = 42;
 
-    public Text rubyText;
-    public Text heroSmallText, heroTitleText, heroGoalText;
+    public TMP_Text rubyText;
+    public TMP_Text heroSmallText, heroTitleText, heroGoalText;
     public Image streakBackground;
-    public Text streakTitleText, streakBestText, streakNextText, streakMessageText;
-    public Text monthText;
+    public TMP_Text streakTitleText, streakBestText, streakNextText, streakMessageText;
+    public TMP_Text monthText;
     public Button prevButton, nextButton;
-    public Text[] weekdayTexts;
+    public TMP_Text[] weekdayTexts;
     public Button[] dayButtons;
     public Image[] dayBorders;
     public Image[] dayFaces;
-    public Text[] dayTexts;
-    public Text rewardText;
-    public Text playText;
-    public Text legendText, timezoneText;
+    public TMP_Text[] dayTexts;
+    public TMP_Text rewardText;
+    public TMP_Text playText;
+    public TMP_Text legendText, timezoneText;
 
     private readonly Color32 teal = new Color32(18, 181, 166, 255);
     private readonly Color32 coral = new Color32(255, 107, 94, 255);

@@ -2,21 +2,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using Script.Utils;
 using WordCross.Gameplay;
+using TMPro;
 
 // Popup Đấu AI sắp ra mắt (design: popups['ai-soon']): badge AI, tiêu đề, nhãn Sắp ra mắt, 2 đoạn mô tả, nút vô hiệu, nút Đấu Bot.
 public class AiSoonDialog : Dialog {
     public RectTransform card;
     public RectTransform closeX;
     public RectTransform badge;
-    public Text titleText;
+    public TMP_Text titleText;
     public RectTransform pill;
-    public Text pillText;
-    public Text descText;
-    public Text noteText;
+    public TMP_Text pillText;
+    public TMP_Text descText;
+    public TMP_Text noteText;
     public RectTransform soonButton;
-    public Text soonText;
+    public TMP_Text soonText;
     public RectTransform botButton;
-    public Text botText;
+    public TMP_Text botText;
 
     private LocalizationController Loc { get { return Locator<LocalizationController>.Instance; } }
 
@@ -96,11 +97,10 @@ public class AiSoonDialog : Dialog {
     }
 
     // Số dòng chữ sau khi xuống dòng theo bề rộng khung hiện tại.
-    private int LineCount(Text text)
+    private int LineCount(TMP_Text text)
     {
-        TextGenerator generator = text.cachedTextGeneratorForLayout;
-        generator.Populate(text.text, text.GetGenerationSettings(new Vector2(text.rectTransform.rect.width, 0f)));
-        return Mathf.Max(1, generator.lineCount);
+        text.ForceMeshUpdate();
+        return Mathf.Max(1, text.textInfo.lineCount);
     }
 
     // Đặt phần tử có mép trên tại top, trả về mép dưới.

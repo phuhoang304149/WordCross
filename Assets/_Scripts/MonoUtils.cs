@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 
 public class MonoUtils : MonoBehaviour {
-    public Text letter;
+    public TMP_Text letter;
     public Cell cell;
     public LineWord lineWord;
     public Transform textFlyTransform;

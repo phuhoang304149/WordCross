@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -13,7 +14,7 @@ public class Pan : MonoBehaviour
     private const float DesignWidth = 390f, RadiusCss = 84f, RadiusManyCss = 90f;
     private List<Vector3> letterPositions = new List<Vector3>();
     private List<Vector3> letterLocalPositions = new List<Vector3>();
-    private List<Text> letterTexts = new List<Text>();
+    private List<TMP_Text> letterTexts = new List<TMP_Text>();
     private List<LetterText> letterViews = new List<LetterText>();
     private List<int> indexes = new List<int>();
 
@@ -73,7 +74,7 @@ public class Pan : MonoBehaviour
 
         for(int i = 0; i < numLetters; i++)
         {
-            Text letter = Instantiate(MonoUtils.instance.letter);
+            TMP_Text letter = Instantiate(MonoUtils.instance.letter);
             letter.transform.SetParent(centerPoint);
             letter.transform.localScale = Vector3.one;
             letter.transform.localRotation = Quaternion.identity;

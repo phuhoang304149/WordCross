@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -11,12 +12,12 @@ public class ExtraWord : MonoBehaviour {
     public GameObject existMessage;
     public Transform beginPoint, endPoint;
     public GameObject lightEffect, lightOpenEffect;
-    public Text progressText;
+    public TMP_Text progressText;
 
     private int world, subWorld, level;
     private CanvasGroup existMessageCG;
     private bool isMessageShowing;
-    private Text flyText;
+    private TMP_Text flyText;
     
     public static ExtraWord instance;
 
@@ -79,7 +80,7 @@ public class ExtraWord : MonoBehaviour {
 
     private void ShowMessage(string message)
     {
-        existMessage.GetComponentInChildren<Text>(true).text = Locator<LocalizationController>.Instance.Get("game.extraAgain");
+        existMessage.GetComponentInChildren<TMP_Text>(true).text = Locator<LocalizationController>.Instance.Get("game.extraAgain");
         existMessage.SetActive(true);
         existMessageCG.alpha = 0;
         iTween.ValueTo(gameObject, iTween.Hash("from", 0, "to", 1, "time", 0.3f, "OnUpdate", "OnMessageUpdate", "oncomplete", "OnMessageShowComplete"));

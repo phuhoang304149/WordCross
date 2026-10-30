@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,12 +11,12 @@ public class WorldItem : MonoBehaviour {
     public Image play;
     public Button button;
     public Sprite playUnactive;
-    public Text processText, subWorldName;
-    public Text titleText;
+    public TMP_Text processText, subWorldName;
+    public TMP_Text titleText;
     public CanvasGroup canvasGroup;
     public float lockedAlpha = 0.55f;
     public Image indexBack;
-    public Text indexText;
+    public TMP_Text indexText;
     public RectTransform progressFill;
     public Color lockedIndexColor = new Color(0.7216f, 0.7843f, 0.7843f, 1f);
     public Color lockedIndexTextColor = Color.white;

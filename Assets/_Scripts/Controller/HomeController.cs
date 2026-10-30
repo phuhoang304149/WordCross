@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 using Script.Utils;
 using WordCross.Gameplay;
@@ -12,7 +13,7 @@ public class HomeController : BaseController {
     private const int DAILY_FONT = 29;
     private const int DAILY_MIN_FONT = 16;
 
-    public Text resumeText;
+    public TMP_Text resumeText;
     // Chấm đỏ trên nút DAILY (để trống thì tự tìm "Dot" dưới object "Daily" của scene).
     public GameObject dailyDot;
 
@@ -77,7 +78,7 @@ public class HomeController : BaseController {
     {
         var daily = GameObject.Find("Daily");
         if (daily == null) return;
-        var label = daily.GetComponentInChildren<Text>(true);
+        var label = daily.GetComponentInChildren<TMP_Text>(true);
         var group = label == null ? null : label.GetComponentInParent<HorizontalLayoutGroup>();
         if (label == null || group == null) return;
         Canvas.ForceUpdateCanvases();
@@ -86,18 +87,14 @@ public class HomeController : BaseController {
             available -= group.spacing + dailyDot.GetComponent<RectTransform>().rect.width;
         string text = Locator<LocalizationController>.Instance.Get("home.daily");
         int size = DAILY_FONT;
-        var generator = label.cachedTextGeneratorForLayout;
-        var settings = label.GetGenerationSettings(Vector2.zero);
-        settings.resizeTextForBestFit = false;
-        settings.horizontalOverflow = HorizontalWrapMode.Overflow;
-        settings.fontSize = size;
-        while (size > DAILY_MIN_FONT && generator.GetPreferredWidth(text, settings) / label.pixelsPerUnit > available)
+        label.enableAutoSizing = false;
+        label.textWrappingMode = TextWrappingModes.NoWrap;
+        label.fontSize = size;
+        while (size > DAILY_MIN_FONT && label.GetPreferredValues(text).x > available)
         {
             size--;
-            settings.fontSize = size;
+            label.fontSize = size;
         }
-        label.horizontalOverflow = HorizontalWrapMode.Overflow;
-        label.fontSize = size;
     }
 
     private void UpdateResume()

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,12 +11,12 @@ public class WinDialog : Dialog {
 
     [Header("Reward (design: popups.win)")]
     public GameObject rewardHolder;
-    public Text rewardAmountText;
-    public Text rewardText;
+    public TMP_Text rewardAmountText;
+    public TMP_Text rewardText;
     public Button doubleRewardButton;
-    public Text doubleRewardText;
-    public Text goalText;
-    public Text extraWordsText;
+    public TMP_Text doubleRewardText;
+    public TMP_Text goalText;
+    public TMP_Text extraWordsText;
 
     // Kinh tế thưởng thắng level (số đề xuất theo design ECON, chỉnh tại đây hoặc trên prefab).
     [Header("Economy")]
@@ -188,7 +189,7 @@ public class WinDialog : Dialog {
         extraWordsText.gameObject.SetActive(true);
         ApplyDailyLayout();
         FitGoal(dailyResult.milestone > 0 ? 2 : 1);
-        FitSingleLine(extraWordsText, extraWordsText.rectTransform, extraWordsText.fontSize);
+        FitSingleLine(extraWordsText, extraWordsText.rectTransform, Mathf.RoundToInt(extraWordsText.fontSize));
     }
 
     // Design popups.win biến thể Daily: không có hàng sao và nút MENU, ruby cỡ lớn, dòng chuỗi nằm trước nút video, nút về Daily cao 88.
@@ -212,15 +213,14 @@ public class WinDialog : Dialog {
         ((RectTransform)next).sizeDelta = new Vector2(504, 88);
         next.GetComponent<Image>().pixelsPerUnitMultiplier = 128f / 88f;
         next.GetComponent<Shadow>().effectDistance = new Vector2(0, -6.8f);
-        next.GetComponentInChildren<Text>().fontSize = 29;
+        next.GetComponentInChildren<TMP_Text>().fontSize = 29;
     }
 
     // Dòng mục tiêu có khung cao cố định, chữ tràn căn giữa: chữ dài (fr/es/pt) xuống thêm dòng thì nới khung và card để không đè dòng dưới.
     private void FitGoal(int baseLines)
     {
-        TextGenerator generator = goalText.cachedTextGeneratorForLayout;
-        generator.Populate(goalText.text, goalText.GetGenerationSettings(new Vector2(goalText.rectTransform.rect.width, 0f)));
-        int lines = Mathf.Max(1, generator.lineCount);
+        goalText.ForceMeshUpdate();
+        int lines = Mathf.Max(1, goalText.textInfo.lineCount);
         if (lines <= baseLines) return;
 
         float extra = goalText.preferredHeight / lines * (lines - baseLines);
@@ -314,20 +314,17 @@ public class WinDialog : Dialog {
     }
 
     // Nút một dòng: chuỗi dài (fr/es/pt) giảm cỡ chữ từ cỡ gốc xuống tối thiểu 14 cho vừa bề ngang nút (khung chữ trên prefab hẹp hơn nút nên đo theo nút).
-    private void FitSingleLine(Text text, RectTransform area, int maxSize)
+    private void FitSingleLine(TMP_Text text, RectTransform area, int maxSize)
     {
-        TextGenerator generator = text.cachedTextGeneratorForLayout;
-        TextGenerationSettings settings = text.GetGenerationSettings(Vector2.zero);
-        settings.resizeTextForBestFit = false;
-        settings.horizontalOverflow = HorizontalWrapMode.Overflow;
+        text.enableAutoSizing = false;
+        text.textWrappingMode = TextWrappingModes.NoWrap;
         int size = maxSize;
-        settings.fontSize = size;
-        while (size > BUTTON_MIN_FONT && generator.GetPreferredWidth(text.text, settings) / text.pixelsPerUnit > area.rect.width - 2 * BUTTON_PADDING)
+        text.fontSize = size;
+        while (size > BUTTON_MIN_FONT && text.GetPreferredValues(text.text).x > area.rect.width - 2 * BUTTON_PADDING)
         {
             size--;
-            settings.fontSize = size;
+            text.fontSize = size;
         }
-        text.fontSize = size;
     }
 
     public void DoubleRewardClick()

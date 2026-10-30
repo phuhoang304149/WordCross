@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -35,7 +36,7 @@ public class CButton : MonoBehaviour {
 
         if (buttonText != null && !activeTextColor.Equals(Color.clear) && !inActiveTextColor.Equals(Color.clear))
         {
-            buttonText.GetComponent<Text>().color = isActive ? activeTextColor : inActiveTextColor;
+            buttonText.GetComponent<TMP_Text>().color = isActive ? activeTextColor : inActiveTextColor;
         }
 
         for (int i = 0; i < images.Length; i++)
