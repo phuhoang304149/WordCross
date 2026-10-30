@@ -181,6 +181,12 @@ namespace WordCross.Gameplay
                 case "aisoon":
                     DialogController.instance.ShowDialog(DialogType.AiSoon);
                     break;
+                case "quests":
+                    DialogController.instance.ShowDialog(DialogType.Quests);
+                    yield return null;
+                    int tab;
+                    if (int.TryParse(arg, out tab)) ((QuestsDialog)DialogController.instance.current).OnTabClick(tab);
+                    break;
                 case "rate":
                     DialogController.instance.ShowDialog(DialogType.RateGame);
                     break;

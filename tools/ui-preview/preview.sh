@@ -2,7 +2,7 @@
 # One command to look at a screen of a worktree on the real phone.
 #   tools/ui-preview/preview.sh [--keep] [--name N] [--wait MIN] [--settle SEC] [--rebuild] [--no-build] <worktree> <screen>
 # screen: home | selectworld | selectlevel[:w-s] | main:w-s-l | pause | win[:first|replay] | extra[:ready|notready] | howto |
-#         lowruby | aisoon | shop | rate | language | rewarded:<state>   (optional ;ruby=N and ;level=w-s-l suffixes) — see README.md
+#         lowruby | aisoon | quests[:tab 0-4] | shop | rate | language | rewarded:<state>   (optional ;ruby=N and ;level=w-s-l suffixes) — see README.md
 set -euo pipefail
 HERE=$(cd "$(dirname "$0")" && pwd)
 . "$HERE/lib/common.sh"
@@ -26,7 +26,7 @@ VER=$(sed -n 's/^  bundleVersion: //p' "$WT/ProjectSettings/ProjectSettings.asse
 [ -n "$VER" ] || die "cannot read bundleVersion from $WT/ProjectSettings/ProjectSettings.asset"
 HEADNAME=${SPEC%%[:;]*}; HEADNAME=$(printf '%s' "$HEADNAME" | tr 'A-Z' 'a-z')
 case "$HEADNAME" in
-  home|aisoon|shop|rate|language|rewarded|reset|daily|noads|iap|tmpprobe) SCENE=Home ;;
+  home|aisoon|quests|shop|rate|language|rewarded|reset|daily|noads|iap|tmpprobe) SCENE=Home ;;
   selectworld) SCENE=SelectWorld ;; selectlevel) SCENE=SelectLevel ;;
   main|pause|win|extra|howto|lowruby|dailymain|dailywin) SCENE=Main ;;
   *) die "unknown screen '$SPEC'" ;;
