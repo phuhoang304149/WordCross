@@ -133,12 +133,12 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "criteria": "Mở app thấy nền teal + logo ngay; icon mới trên launcher"
     },
     {
-      "type": "ui",
-      "status": "doing",
+      "type": "runtime",
+      "status": "done",
       "owner": "CLAUDE (dev)",
       "deps": "",
-      "evidence": "[2026-10-30] Phần nền TRONG APK xong: 8 TMP font asset Baloo2/CookieRun dynamic 2048 trong Addressables, preserve Unity.TextMeshPro; probe trên máy đủ dấu vi/fr/es/pt, character spacing 0/6/12 hoạt động (preview-tmpprobe-*). APK release wordcrossy_1.0.0_202001035_RELEASE.apk (sha256 fd2cd4e1…) + .aab (d203e0da…), cert SHA-256 2d0988af…e1189106, Build/remote-r2-1.0.0/release/. OTA 1.0.0 CLR 47eb9dc2 (curl khớp), 15/15 sha256. Merge e549d2c.",
-      "note": "[2026-10-30 USER duyệt] USER: chuyển TMP ở bản APK kế tiếp. CẦN APK.\n[2026-10-30] Đang làm: worker APK release (prompt .git/task-hotupdate/dev-apk-release.txt). T123 đợt này chỉ phần nền TMP cần APK; chuyển UI Text→TMP làm sau bằng OTA.\n[2026-10-30] Còn: chuyển UI Text → TMP + letter-spacing theo design (OTA AA/CLR).",
+      "evidence": "[2026-10-30] Phần nền TRONG APK xong: 8 TMP font asset Baloo2/CookieRun dynamic 2048 trong Addressables, preserve Unity.TextMeshPro; probe trên máy đủ dấu vi/fr/es/pt, character spacing 0/6/12 hoạt động (preview-tmpprobe-*). APK release wordcrossy_1.0.0_202001035_RELEASE.apk (sha256 fd2cd4e1…) + .aab (d203e0da…), cert SHA-256 2d0988af…e1189106, Build/remote-r2-1.0.0/release/. OTA 1.0.0 CLR 47eb9dc2 (curl khớp), 15/15 sha256. Merge e549d2c. | [2026-10-30] Chuyển toàn bộ UGUI Text → TextMeshProUGUI (converter 2f03b02, code 5b7b1ae, prefab/scene 9bf447c; 0 Text UGUI còn trong scene/prefab game). Hiệu chỉnh cỡ ×1.11 + line spacing + letter-spacing design (cc0d338, 2816206). Sửa màu override prefab instance Text.prefab (m_Color→m_fontColor): số chi phí Gợi ý coral, 7 chữ navy (d7e395e). Emulator 1220×2712 vi/en/fr/es/pt: chữ không tràn, dấu đúng; ảnh qa-shots/preview-sweep-*, preview-tmpfinal-*, tmpfinal-*. OTA 1.0.0 đường mới: hotupdate.hash 1ff2346f… (curl 200, khớp), catalog_1.0.0.hash 7660f1f8…; 12/12 sha256; cold start APK release pm clear tải từ wordcross/clr/1.0.0/android/Upload, preload 540/540, 0 lỗi Unity. Merge 156fbdb + 75aded1.",
+      "note": "[2026-10-30 USER duyệt] USER: chuyển TMP ở bản APK kế tiếp. CẦN APK.\n[2026-10-30] Đang làm: worker APK release (prompt .git/task-hotupdate/dev-apk-release.txt). T123 đợt này chỉ phần nền TMP cần APK; chuyển UI Text→TMP làm sau bằng OTA.\n[2026-10-30] Còn: chuyển UI Text → TMP + letter-spacing theo design (OTA AA/CLR).\n[2026-10-30] Chưa: Win trên APK release + OTA thật (chỉ preview vi/fr), ảnh Daily fr, đồng hồ Shop chỉ đọc code. Máy thật offline (USER: không cần chờ). Preview tool mặc định APK 0.3 → luôn đặt WC_ORIGINAL_APK=APK release 1.0.0.",
       "id": "T123",
       "title": "Chuyển chữ UI sang TextMeshPro (letter-spacing theo design)",
       "screen": "Nền tảng · Unity / HybridCLR / Addressables",
@@ -536,7 +536,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "deps": "T123",
       "criteria": "curl 200 wordcross/clr/1.0.0/android/Upload/hotupdate.hash + wordcross/data/1.0.0/android/catalog_1.0.0.hash; APK release mới cold start tải từ path mới (log); Apply Selected Profile cho ra đúng path",
       "evidence": "[2026-10-30] Config: WordCrossConfig clrUrl …/wordcross/clr, addressableUrl …/wordcross/data; ClrConfiguration/clr.json …/wordcross/clr/1.0.0; AA LoadPath …/wordcross/data/1.0.0/android. APK release mới sha256 8c6e8976… (59.949.130 B), AAB 095e6241… (53.640.927 B), cert SHA-256 2d0988af…9106; APK nhúng assets/clr/config.json + aa/settings.json đường mới. Upload 11 file, curl 200 + sha256 11/11: hotupdate.hash cc3b8a5b…, catalog_1.0.0.hash aad51392… (điều phối curl lại khớp). Emulator-5556: pm clear cold start tải CLR từ wordcross/clr/1.0.0/android/Upload, preload 540/540, 0 lỗi Unity, Home + logo teal đúng. Merge cab244c. Đường cũ wordcross/1.0.0/* giữ nguyên.",
-      "note": "[2026-10-30 USER] Ảnh R2 catgaming/solitaire-farm/clr/1.0.9/{android,ios}. Đã probe public: solitaire-farm/clr/1.0.9/android/Upload/hotupdate.hash 200, solitaire-farm/data/1.0.9/{android,ios}/catalog_1.0.9.hash 200; wordcross 0.3 cũng theo chuẩn này. CẦN APK (URL CLR/AA trong APK). Chạy sau khi T123 merge.\n[2026-10-30] Chờ USER: khi nào xoá đường cũ wordcross/1.0.0/* (cho-duyet old-path). Lưu ý: luồng T123 TMP có thể OTA vào đường cũ → điều phối upload lại vào đường mới sau khi T123 merge."
+      "note": "[2026-10-30 USER] Ảnh R2 catgaming/solitaire-farm/clr/1.0.9/{android,ios}. Đã probe public: solitaire-farm/clr/1.0.9/android/Upload/hotupdate.hash 200, solitaire-farm/data/1.0.9/{android,ios}/catalog_1.0.9.hash 200; wordcross 0.3 cũng theo chuẩn này. CẦN APK (URL CLR/AA trong APK). Chạy sau khi T123 merge.\n[2026-10-30] Chờ USER: khi nào xoá đường cũ wordcross/1.0.0/* (cho-duyet old-path). Lưu ý: luồng T123 TMP có thể OTA vào đường cũ → điều phối upload lại vào đường mới sau khi T123 merge.\n[2026-10-30] OTA T123 đã lên đường mới, không ghi vào đường cũ → AN TOÀN để USER xoá wordcross/1.0.0/* trên R2."
     },
     {
       "id": "T052",
@@ -933,15 +933,15 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T131",
       "title": "Nút Daily tiếng Việt đổi nhãn \"HÔM NAY\" (thay HÀNG NGÀY) + giá dự phòng word.noads 4.99",
-      "type": "content",
-      "status": "waiting",
+      "type": "runtime",
+      "status": "done",
       "screen": "Màn Home",
       "goal": "Nhãn vi ngắn, 1 dòng cỡ design; giá noads đúng quyết định",
       "scope": "LocalizationData home.daily vi, design i18n.js; Purchaser iapItems word.noads price 4.99; design/GD iap-products",
       "owner": "CLAUDE (dev)",
       "deps": "T123",
       "criteria": "Home vi hiện HÔM NAY 1 dòng đúng cỡ chữ design; giá noads 4.99 trong game + GD",
-      "evidence": "",
+      "evidence": "[2026-10-30] home.daily vi \"HÔM NAY\" (2fd463c): Home vi nhãn 1 dòng, không co chữ, chấm đỏ đúng (emulator). Giá dự phòng word.noads 4.99 trong GameMaster.prefab. OTA 1.0.0 đường mới: hotupdate.hash 1ff2346f… (curl 200, khớp), catalog_1.0.0.hash 7660f1f8…; 12/12 sha256; cold start APK release pm clear tải từ wordcross/clr/1.0.0/android/Upload, preload 540/540, 0 lỗi Unity. Merge 156fbdb + 75aded1.",
       "note": "[2026-10-30 USER duyệt] Chạy sau khi worker TMP (T123) merge để tránh xung đột prefab/LocalizationData. OTA AA+CLR."
     },
     {
