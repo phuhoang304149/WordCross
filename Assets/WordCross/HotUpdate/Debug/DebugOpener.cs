@@ -232,7 +232,7 @@ namespace WordCross.Gameplay
             var report = new System.Text.StringBuilder("[DebugOpener] letters:");
             Canvas canvas = Pan.instance.centerPoint.GetComponentInParent<Canvas>().rootCanvas;
             Camera camera = canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;
-            foreach (UnityEngine.UI.Text text in Pan.instance.centerPoint.GetComponentsInChildren<UnityEngine.UI.Text>())
+            foreach (TMP_Text text in Pan.instance.centerPoint.GetComponentsInChildren<TMP_Text>())
             {
                 Vector2 point = RectTransformUtility.WorldToScreenPoint(camera, text.transform.position);
                 report.Append(' ').Append(text.text).Append('@').Append(Mathf.RoundToInt(point.x)).Append(',').Append(Mathf.RoundToInt(Screen.height - point.y));

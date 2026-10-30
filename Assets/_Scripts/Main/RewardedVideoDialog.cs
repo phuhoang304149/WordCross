@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,23 +22,23 @@ public enum RewardedVideoState
 }
 
 public class RewardedVideoDialog : Dialog {
-    public Text amountText;
-    public Text messageText;
+    public TMP_Text amountText;
+    public TMP_Text messageText;
 
     [Header("States (design: popups.rewarded)")]
     public RectTransform card;
     public RectTransform closeX;
-    public Text titleText;
+    public TMP_Text titleText;
     public RectTransform amountHolder;
     public RectTransform spinner;
     public RectTransform spinnerArc;
     public RectTransform adBox;
-    public Text adBoxText;
+    public TMP_Text adBoxText;
     public Button primaryButton;
-    public Text primaryText;
+    public TMP_Text primaryText;
     public Shadow primaryShadow;
     public Button secondaryButton;
-    public Text secondaryText;
+    public TMP_Text secondaryText;
 
     // Thời gian chờ video tải trước khi coi là hết quảng cáo.
     public float loadTimeout = 8f;
@@ -314,11 +315,10 @@ public class RewardedVideoDialog : Dialog {
     }
 
     // Số dòng chữ sau khi xuống dòng theo bề rộng khung hiện tại.
-    private int LineCount(Text text)
+    private int LineCount(TMP_Text text)
     {
-        TextGenerator generator = text.cachedTextGeneratorForLayout;
-        generator.Populate(text.text, text.GetGenerationSettings(new Vector2(text.rectTransform.rect.width, 0f)));
-        return Mathf.Max(1, generator.lineCount);
+        text.ForceMeshUpdate();
+        return Mathf.Max(1, text.textInfo.lineCount);
     }
 
     // Đặt phần tử có mép trên tại top, trả về mép dưới.

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -33,10 +34,10 @@ public class Toast : MonoBehaviour
 
     public void SetMessage(string msg)
     {
-        messageTransform.GetComponent<Text>().text = msg;
+        messageTransform.GetComponent<TMP_Text>().text = msg;
         Timer.Schedule(this, 0, () =>
         {
-            backgroundTransform.sizeDelta = new Vector2(messageTransform.GetComponent<Text>().preferredWidth + 30, backgroundTransform.sizeDelta.y);
+            backgroundTransform.sizeDelta = new Vector2(messageTransform.GetComponent<TMP_Text>().preferredWidth + 30, backgroundTransform.sizeDelta.y);
         });
     }
 

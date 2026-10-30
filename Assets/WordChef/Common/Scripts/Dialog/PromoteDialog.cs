@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 
 public class PromoteDialog : Dialog{
     public Image feature;
-    public Text promoteMessage;
+    public TMP_Text promoteMessage;
 
     [HideInInspector]
     public Promote promote;

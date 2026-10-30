@@ -6,6 +6,7 @@ using TMPro;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace WordCross.Editor
@@ -17,18 +18,51 @@ namespace WordCross.Editor
     // Hàm static chỉ là điểm vào cho Unity (menu / -executeMethod), phần việc nằm ở hàm instance.
     public class TextToTmpConverter
     {
+        // Text có hai kiểu tham chiếu script trong YAML: kiểu cũ (guid UnityEngine.UI.dll + fileID class) và kiểu Unity 6 (guid file .cs + 11500000).
         private const string TextGuid = "f70555f144d8491a825f0804e09c671c";
         private const long TextFileId = 708705254;
+        private const string TextGuidOld = "f5f67c52d1564df4a8936ccd202a3bd8";
+        private const string TextGuid6 = "5f7201a12d95ffc409449d95f23cf332";
+        private const string ShadowGuid6 = "cfabb0440166ab443bba8876756fdfa9";
+        private const string OutlineGuid6 = "e19747de3f5aca642ab2be37e372fb86";
+        private const string FontFolder = "Assets/WordCross/Fonts/Baloo2/static/";
+        // Cỡ chữ TMP = cỡ UGUI x hệ số này (hiệu chỉnh theo ảnh đo trên máy).
+        private const float SizeScale = 1f;
         private const string TmpGuid = "f4688fdb7df04437aeb418b961361dc5";
         private const string DefaultFont = "Assets/WordCross/Fonts/Baloo2/static/Baloo2-Bold SDF.asset";
         private const string ShadowFileId = "1573420865";
         private const string OutlineFileId = "-900027084";
         private const string MaterialFolder = "Assets/WordCross/Fonts/Materials";
 
+        // letter-spacing của design (theme.css, đơn vị em/100): .btn 0.02em (mọi nhãn nút), .logo h1 0.02em, .tagx 0.06em, .adbox 0.08em.
+        private static readonly KeyValuePair<Regex, float>[] SpacingRules =
+        {
+            new KeyValuePair<Regex, float>(new Regex(@"Home\.unity\|Canvas/Buttons/(Play|Daily|VsBot|VsAI|Shop|Language|Rate)/(Content/)?Label$"), 2f),
+            new KeyValuePair<Regex, float>(new Regex(@"Home\.unity\|Canvas/Tray/Image/Text$"), 2f),
+            new KeyValuePair<Regex, float>(new Regex(@"WinDialog\.prefab\|.*/(DoubleReward|Next|Menu)/Text$"), 2f),
+            new KeyValuePair<Regex, float>(new Regex(@"PauseDialog\.prefab\|.*/(Continue|HowtoPlayButton|Menu|Quit|LanguageButton)/Text$"), 2f),
+            new KeyValuePair<Regex, float>(new Regex(@"RateDialog\.prefab\|.*/(Later|Yes)/Text$"), 2f),
+            new KeyValuePair<Regex, float>(new Regex(@"RewardedVideoDialog\.prefab\|.*/(Primary|Secondary)/Text$"), 2f),
+            new KeyValuePair<Regex, float>(new Regex(@"RewardedVideoDialog\.prefab\|.*/AdBox/Text$"), 8f),
+            new KeyValuePair<Regex, float>(new Regex(@"LowRubyDialog\.prefab\|.*/(Watch|Shop|Skip)/Text$"), 2f),
+            new KeyValuePair<Regex, float>(new Regex(@"AiSoonDialog\.prefab\|.*/(Soon|Bot)/Text$"), 2f),
+            new KeyValuePair<Regex, float>(new Regex(@"AiSoonDialog\.prefab\|.*/Pill/Text$"), 6f),
+            new KeyValuePair<Regex, float>(new Regex(@"HowToPlayDialog\.prefab\|.*/GotItButton/Text$"), 2f),
+            new KeyValuePair<Regex, float>(new Regex(@"ExtraWordDialog\.prefab\|.*/Claim/Text$"), 2f),
+            new KeyValuePair<Regex, float>(new Regex(@"DailyDialog\.prefab\|.*/PlayButton/Text$"), 2f),
+            new KeyValuePair<Regex, float>(new Regex(@"ShopDialog\.prefab\|.*/WatchBtn/Text$"), 2f),
+            new KeyValuePair<Regex, float>(new Regex(@"ShopDialog\.prefab\|.*/ShopItem[^/]*/Price$"), 2f),
+            new KeyValuePair<Regex, float>(new Regex(@"ShopItem\.prefab\|ShopItem/Price$"), 2f),
+        };
+
         private static readonly Regex BlockRegex = new Regex(@"--- !u!(\d+) &(-?\d+)[^\n]*\n.*?(?=\n--- !u!|\z)", RegexOptions.Singleline);
         private static readonly Regex GameObjectRegex = new Regex(@"m_GameObject: \{fileID: (-?\d+)\}");
         private static readonly Regex ScriptRegex = new Regex(@"m_Script: \{fileID: (-?\d+), guid: ([0-9a-f]+)");
 
+        private static readonly Regex ModificationRegex = new Regex(
+            @"    - target: \{fileID: (-?\d+), guid: ([0-9a-f]+),\s+type: 3\}\n      propertyPath: ([^\n]+)\n      value: ((?:.|\n)*?)\n      objectReference: ([^\n]*)\n");
+
+        private readonly Dictionary<string, HashSet<string>> convertedByPrefab = new Dictionary<string, HashSet<string>>();
         private TMP_FontAsset fontAsset;
         private int converted;
         private int skipped;
@@ -47,6 +81,20 @@ namespace WordCross.Editor
             new TextToTmpConverter().ConvertAssets(assets.Split(';'), font);
         }
 
+        // -executeMethod WordCross.Editor.TextToTmpConverter.ListFromArgs -tmpAssets "a.prefab;b.unity" -tmpOut file.txt
+        public static void ListFromArgs()
+        {
+            var args = Environment.GetCommandLineArgs();
+            string assets = null;
+            string output = null;
+            for (var i = 0; i < args.Length - 1; i++)
+            {
+                if (args[i] == "-tmpAssets") assets = args[i + 1];
+                if (args[i] == "-tmpOut") output = args[i + 1];
+            }
+            new TextToTmpConverter().ListTexts(assets.Split(';'), output);
+        }
+
         [MenuItem("WordCross/Fonts/Convert Selected Text To TMP")]
         public static void ConvertSelected()
         {
@@ -63,7 +111,39 @@ namespace WordCross.Editor
                 if (path.EndsWith(".prefab")) ConvertPrefab(path);
                 else if (path.EndsWith(".unity")) ConvertScene(path);
             }
+            foreach (var path in paths) RewriteOverrides(path);
             Debug.Log("[TMPCONV] xong: chuyển " + converted + ", bỏ qua " + skipped);
+        }
+
+        public void ListTexts(string[] paths, string output)
+        {
+            var sb = new System.Text.StringBuilder();
+            foreach (var path in paths)
+            {
+                var roots = new List<GameObject>();
+                Scene scene = default(Scene);
+                if (path.EndsWith(".prefab")) roots.Add(PrefabUtility.LoadPrefabContents(path));
+                else
+                {
+                    scene = EditorSceneManager.OpenScene(path, OpenSceneMode.Single);
+                    roots.AddRange(scene.GetRootGameObjects());
+                }
+                foreach (var root in roots)
+                    foreach (var text in root.GetComponentsInChildren<Text>(true))
+                    {
+                        var names = new List<string>();
+                        for (var t = text.transform; t != null; t = t.parent) names.Insert(0, t.name);
+                        var button = text.GetComponentInParent<Button>(true);
+                        sb.Append(path).Append('|').Append(string.Join("/", names)).Append("|font=").Append(text.font != null ? text.font.name : "null")
+                            .Append("|size=").Append(text.fontSize).Append("|style=").Append(text.fontStyle).Append("|best=").Append(text.resizeTextForBestFit ? text.resizeTextMinSize + "-" + text.resizeTextMaxSize : "no")
+                            .Append("|hw=").Append(text.horizontalOverflow).Append("|vw=").Append(text.verticalOverflow).Append("|al=").Append(text.alignment).Append("|ls=").Append(text.lineSpacing)
+                            .Append("|btn=").Append(button != null ? button.name : "-").Append("|nested=").Append(PrefabUtility.GetCorrespondingObjectFromSource(text) != null)
+                            .Append("|fx=").Append(text.GetComponent<Shadow>() != null ? "S" : "").Append(text.GetComponent<Outline>() != null ? "O" : "")
+                            .Append("|text=").Append(text.text.Replace("\n", "\\n")).Append('\n');
+                    }
+                if (path.EndsWith(".prefab")) PrefabUtility.UnloadPrefabContents(roots[0]);
+            }
+            File.WriteAllText(output, sb.ToString());
         }
 
         private void ConvertPrefab(string path)
@@ -95,12 +175,25 @@ namespace WordCross.Editor
                     skipped++;
                     continue;
                 }
-                Convert(text);
+                Convert(text, System.IO.Path.GetFileName(path) + "|" + HierarchyPath(text.transform));
                 converted++;
             }
         }
 
-        private void Convert(Text text)
+        private string HierarchyPath(Transform transform)
+        {
+            var names = new List<string>();
+            for (var t = transform; t != null; t = t.parent) names.Insert(0, t.name);
+            return string.Join("/", names);
+        }
+
+        private TMP_FontAsset FontFor(Font font)
+        {
+            var asset = font == null ? null : AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(FontFolder + font.name + " SDF.asset");
+            return asset != null ? asset : fontAsset;
+        }
+
+        private void Convert(Text text, string key)
         {
             var go = text.gameObject;
             var shadow = go.GetComponent<Shadow>();
@@ -109,24 +202,28 @@ namespace WordCross.Editor
 
             UnityEngine.Object.DestroyImmediate(text);
             var tmp = go.AddComponent<TextMeshProUGUI>();
-            tmp.font = fontAsset;
+            var font = FontFor(text.font);
+            tmp.font = font;
             tmp.text = data.text;
             tmp.color = data.color;
             tmp.raycastTarget = data.raycastTarget;
             tmp.maskable = data.maskable;
             tmp.richText = data.richText;
-            tmp.fontSize = data.fontSize;
+            tmp.fontSize = data.fontSize * SizeScale;
             tmp.fontStyle = data.fontStyle;
             tmp.alignment = data.alignment;
-            tmp.lineSpacing = (data.lineSpacing - 1f) * 100f;
+            // UGUI nhân chiều cao dòng của font; TMP cộng thêm theo % của cỡ chữ: quy đổi qua chiều cao dòng (em) của font.
+            tmp.lineSpacing = (data.lineSpacing - 1f) * 100f * font.faceInfo.lineHeight / font.faceInfo.pointSize;
+            foreach (var rule in SpacingRules)
+                if (rule.Key.IsMatch(key)) tmp.characterSpacing = rule.Value;
             tmp.textWrappingMode = data.horizontalWrap ? TextWrappingModes.Normal : TextWrappingModes.NoWrap;
             tmp.overflowMode = data.verticalTruncate ? TextOverflowModes.Truncate : TextOverflowModes.Overflow;
             tmp.enableAutoSizing = data.bestFit;
-            tmp.fontSizeMin = data.minSize;
-            tmp.fontSizeMax = data.maxSize;
+            tmp.fontSizeMin = data.minSize * SizeScale;
+            tmp.fontSizeMax = data.maxSize * SizeScale;
             tmp.enabled = data.enabled;
 
-            var preset = ResolveMaterial(data.fontSize, shadow, outline);
+            var preset = ResolveMaterial(font, data.fontSize, shadow, outline);
             if (preset != null) tmp.fontSharedMaterial = preset;
             if (outline != null) UnityEngine.Object.DestroyImmediate(outline);
             if (shadow != null) UnityEngine.Object.DestroyImmediate(shadow);
@@ -134,7 +231,7 @@ namespace WordCross.Editor
 
         // Shadow -> Underlay, Outline -> Outline của TMP, dùng chung một Material Preset (không tạo instance riêng cho từng text).
         // Hệ số quy đổi từ pixel sang đơn vị shader là ước lượng, cần chỉnh bằng mắt ở giai đoạn 2.
-        private Material ResolveMaterial(float fontSize, Shadow shadow, Outline outline)
+        private Material ResolveMaterial(TMP_FontAsset fontAsset, float fontSize, Shadow shadow, Outline outline)
         {
             if (shadow == null && outline == null) return null;
             if (!Directory.Exists(MaterialFolder)) AssetDatabase.CreateFolder("Assets/WordCross/Fonts", "Materials");
@@ -178,6 +275,8 @@ namespace WordCross.Editor
             var savedBlocks = ParseBlocks(File.ReadAllText(path));
 
             var textByGameObject = ReadComponents(originalBlocks, TextGuid, TextFileId);
+            foreach (var pair in ReadComponents(originalBlocks, TextGuidOld, TextFileId)) textByGameObject[pair.Key] = pair.Value;
+            foreach (var pair in ReadComponents(originalBlocks, TextGuid6, 11500000)) textByGameObject[pair.Key] = pair.Value;
             var tmpByGameObject = ReadComponents(savedBlocks, TmpGuid, 11500000);
             var savedById = new Dictionary<string, Block>();
             foreach (var block in savedBlocks) savedById[block.id] = block;
@@ -194,6 +293,9 @@ namespace WordCross.Editor
                 oldBlock.text = "--- !u!114 &" + oldBlock.id + "\nMonoBehaviour:\n" + HeaderOf(oldBlock.text) + BodyOf(tmpText);
                 replaced++;
                 gameObjectIds[pair.Key] = pair.Value;
+                var prefabGuid = AssetDatabase.AssetPathToGUID(path);
+                if (!convertedByPrefab.ContainsKey(prefabGuid)) convertedByPrefab[prefabGuid] = new HashSet<string>();
+                convertedByPrefab[prefabGuid].Add(pair.Value);
             }
 
             // gỡ Shadow/Outline trên các GameObject vừa chuyển
@@ -203,8 +305,9 @@ namespace WordCross.Editor
                 var script = ScriptRegex.Match(block.text);
                 var owner = GameObjectRegex.Match(block.text);
                 if (!script.Success || !owner.Success || !gameObjectIds.ContainsKey(owner.Groups[1].Value)) continue;
-                if (script.Groups[2].Value != TextGuid) continue;
-                if (script.Groups[1].Value == ShadowFileId || script.Groups[1].Value == OutlineFileId) removedIds.Add(block.id);
+                var legacy = (script.Groups[2].Value == TextGuid || script.Groups[2].Value == TextGuidOld) && (script.Groups[1].Value == ShadowFileId || script.Groups[1].Value == OutlineFileId);
+                var modern = script.Groups[2].Value == ShadowGuid6 || script.Groups[2].Value == OutlineGuid6;
+                if (legacy || modern) removedIds.Add(block.id);
             }
             foreach (var block in originalBlocks)
             {
@@ -222,6 +325,76 @@ namespace WordCross.Editor
             File.WriteAllText(path, builder.ToString());
             AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
             Debug.Log("[TMPCONV] " + path + ": ghép " + replaced + " khối TMP, gỡ " + removedIds.Count + " Shadow/Outline");
+        }
+
+        // Prefab instance (trong scene hoặc prefab khác) ghi đè thuộc tính của Text bằng propertyPath của Text:
+        // đổi sang propertyPath tương ứng của TMP, nếu không các ghi đè (chữ, cỡ, căn lề...) bị Unity bỏ qua.
+        private void RewriteOverrides(string path)
+        {
+            var yaml = File.ReadAllText(path);
+            var rewritten = 0;
+            var result = ModificationRegex.Replace(yaml, match =>
+            {
+                HashSet<string> ids;
+                if (!convertedByPrefab.TryGetValue(match.Groups[2].Value, out ids) || !ids.Contains(match.Groups[1].Value)) return match.Value;
+                var head = "    - target: {fileID: " + match.Groups[1].Value + ", guid: " + match.Groups[2].Value + ", type: 3}\n      propertyPath: ";
+                var value = match.Groups[4].Value;
+                var reference = match.Groups[5].Value;
+                var property = match.Groups[3].Value;
+                string[] names;
+                string[] values;
+                string[] references;
+                switch (property)
+                {
+                    case "m_Text": names = new[] { "m_text" }; values = new[] { value }; references = new[] { reference }; break;
+                    case "m_FontData.m_FontSize":
+                        names = new[] { "m_fontSize", "m_fontSizeBase" };
+                        values = new[] { Scaled(value), Scaled(value) };
+                        references = new[] { reference, reference };
+                        break;
+                    case "m_FontData.m_MinSize": names = new[] { "m_fontSizeMin" }; values = new[] { Scaled(value) }; references = new[] { reference }; break;
+                    case "m_FontData.m_MaxSize": names = new[] { "m_fontSizeMax" }; values = new[] { Scaled(value) }; references = new[] { reference }; break;
+                    case "m_FontData.m_BestFit": names = new[] { "m_enableAutoSizing" }; values = new[] { value }; references = new[] { reference }; break;
+                    case "m_FontData.m_FontStyle": names = new[] { "m_fontStyle" }; values = new[] { value }; references = new[] { reference }; break;
+                    case "m_FontData.m_Font":
+                        names = new[] { "m_fontAsset" };
+                        values = new[] { "" };
+                        references = new[] { TmpFontReference(reference) };
+                        break;
+                    case "m_FontData.m_Alignment":
+                        var anchor = int.Parse(value);
+                        names = new[] { "m_HorizontalAlignment", "m_VerticalAlignment" };
+                        values = new[] { new[] { "1", "2", "4" }[anchor % 3], new[] { "256", "512", "1024" }[anchor / 3] };
+                        references = new[] { reference, reference };
+                        break;
+                    default: return match.Value;
+                }
+                var builder = new System.Text.StringBuilder();
+                for (var i = 0; i < names.Length; i++)
+                    builder.Append(head).Append(names[i]).Append("\n      value: ").Append(values[i]).Append("\n      objectReference: ").Append(references[i]).Append('\n');
+                rewritten++;
+                return builder.ToString();
+            });
+            if (rewritten == 0) return;
+            File.WriteAllText(path, result);
+            AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
+            Debug.Log("[TMPCONV] " + path + ": đổi " + rewritten + " ghi đè prefab instance sang thuộc tính TMP");
+        }
+
+        private string Scaled(string value)
+        {
+            return (float.Parse(value, System.Globalization.CultureInfo.InvariantCulture) * SizeScale).ToString("0.##", System.Globalization.CultureInfo.InvariantCulture);
+        }
+
+        // Tham chiếu Font cũ -> TMP_FontAsset cùng tên (Baloo2-ExtraBold -> Baloo2-ExtraBold SDF).
+        private string TmpFontReference(string reference)
+        {
+            var guid = Regex.Match(reference, @"guid: ([0-9a-f]+)").Groups[1].Value;
+            var fontPath = AssetDatabase.GUIDToAssetPath(guid);
+            var assetPath = FontFolder + System.IO.Path.GetFileNameWithoutExtension(fontPath) + " SDF.asset";
+            var assetGuid = AssetDatabase.AssetPathToGUID(assetPath);
+            if (string.IsNullOrEmpty(assetGuid)) assetGuid = AssetDatabase.AssetPathToGUID(DefaultFont);
+            return "{fileID: 11400000, guid: " + assetGuid + ", type: 2}";
         }
 
         // Phần từ sau dòng "MonoBehaviour:" đến trước "m_GameObject:" (hideFlags, thông tin prefab kiểu cũ/mới của file gốc).

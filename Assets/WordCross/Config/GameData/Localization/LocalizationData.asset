@@ -147,7 +147,7 @@ MonoBehaviour:
     - "JOGAR"
   - key: "home.daily"
     values:
-    - "HÀNG NGÀY"
+    - "HÔM NAY"
     - "DAILY"
     - "QUOTIDIEN"
     - "DIARIO"

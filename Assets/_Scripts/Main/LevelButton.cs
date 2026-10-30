@@ -1,11 +1,12 @@
 ﻿using System.Collections;
+using TMPro;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour {
-    public Text levelText;
+    public TMP_Text levelText;
     public int world, subWorld, level;
     public Transform centerPoint;
     public Image background;

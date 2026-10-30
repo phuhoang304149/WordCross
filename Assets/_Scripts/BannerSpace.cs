@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Script.Utils;
 using WordCross.Gameplay;
+using TMPro;
 
 // Chừa vùng banner AdMob dưới vòng chữ ở màn Main (design: .banner cao 50 + lề dưới 12, chỉ khi chưa tắt quảng cáo).
 // Bố cục trong scene là bố cục không banner; có banner thì đẩy cả cụm vòng chữ + nút công cụ lên đúng 62 css.
@@ -99,18 +100,18 @@ public class BannerSpace : MonoBehaviour
         img.texture = tex;
         img.raycastTarget = false;
 
-        var label = new GameObject("Label", typeof(RectTransform), typeof(Text));
+        var label = new GameObject("Label", typeof(RectTransform), typeof(TextMeshProUGUI));
         var lrect = (RectTransform)label.transform;
         lrect.SetParent(rect, false);
         lrect.anchorMin = Vector2.zero;
         lrect.anchorMax = Vector2.one;
         lrect.offsetMin = lrect.offsetMax = Vector2.zero;
-        var text = label.GetComponent<Text>();
+        var text = label.GetComponent<TMP_Text>();
         var source = MainController.instance.levelNameText;
         text.font = source.font;
-        text.fontSize = Mathf.RoundToInt(11 * perCss);
-        text.fontStyle = FontStyle.Bold;
-        text.alignment = TextAnchor.MiddleCenter;
+        text.fontSize = Mathf.RoundToInt(12.2f * perCss);
+        text.fontStyle = FontStyles.Bold;
+        text.alignment = TextAlignmentOptions.Center;
         text.color = new Color32(0x8a, 0xa0, 0xa0, 255);
         text.raycastTarget = false;
         text.text = Locator<LocalizationController>.Instance.Get("game.banner");

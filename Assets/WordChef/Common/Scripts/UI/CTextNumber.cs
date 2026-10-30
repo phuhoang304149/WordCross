@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class CTextNumber : MonoBehaviour
@@ -22,7 +23,7 @@ public class CTextNumber : MonoBehaviour
 
     private void UpdateUI()
     {
-        Text text = GetComponent<Text>();
+        TMP_Text text = GetComponent<TMP_Text>();
         text.text = Number.ToString();
     }
 }

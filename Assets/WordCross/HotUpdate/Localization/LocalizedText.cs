@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace WordCross.Gameplay
 {
-    // Gắn lên Text / TMP_Text: hiển thị chuỗi theo key, tự cập nhật khi đổi ngôn ngữ.
+    // Gắn lên TMP_Text: hiển thị chuỗi theo key, tự cập nhật khi đổi ngôn ngữ.
     [DisallowMultipleComponent]
     public class LocalizedText : MonoBehaviour
     {
@@ -20,12 +20,10 @@ namespace WordCross.Gameplay
         public string key;
         public Arg[] args = new Arg[0];
 
-        private Text text;
         private TMP_Text tmp;
 
         private void Awake()
         {
-            text = GetComponent<Text>();
             tmp = GetComponent<TMP_Text>();
         }
 
@@ -78,7 +76,6 @@ namespace WordCross.Gameplay
                 pairs[i * 2 + 1] = args[i].value;
             }
             var value = Locator<LocalizationController>.Instance.Get(key, pairs);
-            if (text != null) text.text = value;
             if (tmp != null) tmp.text = value;
         }
     }

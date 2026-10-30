@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,7 +8,7 @@ using Script.Utils;
 using WordCross.Gameplay;
 
 public class MainController : BaseController {
-    public Text levelNameText, levelSubText;
+    public TMP_Text levelNameText, levelSubText;
 
     private int world, subWorld, level;
     private bool isGameComplete;

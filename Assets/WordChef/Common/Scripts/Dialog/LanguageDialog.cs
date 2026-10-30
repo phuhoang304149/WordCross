@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -59,18 +60,18 @@ public class LanguageDialog : Dialog
     private void BuildGameSection()
     {
         var content = transform.Find("Content") as RectTransform;
-        var font = content.Find("Title").GetComponent<Text>().font;
+        var font = content.Find("Title").GetComponent<TMP_Text>().font;
         var template = content.Find("Option_en") as RectTransform;
 
         // Vị trí và cỡ theo design (css px x 1,6914, gốc là tâm canvas 660x1397).
-        AddLabel(content, font, "lang.ui", 519, 34, 27, FontStyle.Bold, headingColor);
-        AddLabel(content, font, "lang.uiDesc", 449, 66, 24, FontStyle.Normal, captionColor);
-        AddLabel(content, font, "lang.game", 34, 34, 27, FontStyle.Bold, headingColor);
-        AddLabel(content, font, "lang.gameDesc", -20, 33, 24, FontStyle.Normal, captionColor);
+        AddLabel(content, font, "lang.ui", 519, 34, 27, FontStyles.Bold, headingColor);
+        AddLabel(content, font, "lang.uiDesc", 449, 66, 24, FontStyles.Normal, captionColor);
+        AddLabel(content, font, "lang.game", 34, 34, 27, FontStyles.Bold, headingColor);
+        AddLabel(content, font, "lang.gameDesc", -20, 33, 24, FontStyles.Normal, captionColor);
         var loc = Locator<LocalizationController>.Instance;
         var allPlayable = true;
         foreach (var gameCode in gameCodes) allPlayable &= loc.IsGamePlayable(gameCode);
-        if (!allPlayable) AddLabel(content, font, "lang.noteSoon", -694, 25, 20, FontStyle.Normal, captionColor, TextAnchor.MiddleCenter);
+        if (!allPlayable) AddLabel(content, font, "lang.noteSoon", -694, 25, 20, FontStyles.Normal, captionColor, TextAlignmentOptions.Center);
 
         for (var i = 0; i < gameCodes.Length; i++)
         {
@@ -88,15 +89,15 @@ public class LanguageDialog : Dialog
             name.pivot = new Vector2(0, 0.5f);
             name.sizeDelta = new Vector2(545, 34);
             name.anchoredPosition = new Vector2(-272.5f, 14);
-            name.GetComponent<Text>().alignment = TextAnchor.MiddleLeft;
-            name.GetComponent<Text>().fontSize = 27;
+            name.GetComponent<TMP_Text>().alignment = TextAlignmentOptions.Left;
+            name.GetComponent<TMP_Text>().fontSize = 27;
             name.GetComponent<LocalizedText>().SetKey("lang." + code);
 
             var caption = Instantiate(name.gameObject, row).GetComponent<RectTransform>();
             caption.name = "Caption";
             caption.sizeDelta = new Vector2(545, 25);
             caption.anchoredPosition = new Vector2(-272.5f, -19);
-            var captionText = caption.GetComponent<Text>();
+            var captionText = caption.GetComponent<TMP_Text>();
             captionText.fontSize = 20;
             captionText.color = captionColor;
             caption.GetComponent<LocalizedText>().SetKey(playable ? "lang.playable" : code == "vi" ? "lang.soonVi" : "lang.soon");
@@ -119,22 +120,22 @@ public class LanguageDialog : Dialog
         }
     }
 
-    private void AddLabel(RectTransform parent, Font font, string key, float y, float height, int size, FontStyle style, Color color, TextAnchor alignment = TextAnchor.MiddleLeft)
+    private void AddLabel(RectTransform parent, TMP_FontAsset font, string key, float y, float height, int size, FontStyles style, Color color, TextAlignmentOptions alignment = TextAlignmentOptions.Left)
     {
         var go = new GameObject("Label_" + key, typeof(RectTransform));
         var rect = go.GetComponent<RectTransform>();
         rect.SetParent(parent, false);
         rect.anchoredPosition = new Vector2(0, y);
         rect.sizeDelta = new Vector2(599, height);
-        var text = go.AddComponent<Text>();
+        var text = go.AddComponent<TextMeshProUGUI>();
         text.font = font;
         text.fontSize = size;
         text.fontStyle = style;
         text.color = color;
         text.alignment = alignment;
-        text.horizontalOverflow = HorizontalWrapMode.Wrap;
-        text.verticalOverflow = VerticalWrapMode.Overflow;
-        text.lineSpacing = 0.92f;
+        text.textWrappingMode = TextWrappingModes.Normal;
+        text.overflowMode = TextOverflowModes.Overflow;
+        text.lineSpacing = -8f;
         text.raycastTarget = false;
         go.AddComponent<LocalizedText>().SetKey(key);
     }

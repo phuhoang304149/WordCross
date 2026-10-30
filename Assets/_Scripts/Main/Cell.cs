@@ -1,11 +1,12 @@
 ﻿using System.Collections;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Cell : MonoBehaviour
 {
-    public Text letterText;
+    public TMP_Text letterText;
     public Image background, fill;
     public Color shownColor, hintColor, hintTextColor;
     public string letter;

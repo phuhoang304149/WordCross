@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 
 public class PromoteQuitDialog : YesNoDialog{
     public Image feature;
-    public Text promoteMessage;
+    public TMP_Text promoteMessage;
     public Transform installBtn;
 
     [HideInInspector]

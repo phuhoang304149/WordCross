@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,7 +9,7 @@ public class TextPreview : MonoBehaviour {
     public GameObject content;
     public RectTransform backgroundRT, textRT;
     public string word;
-    public Text text;
+    public TMP_Text text;
 
     [Header("")]
     public Color answerColor;
@@ -20,7 +21,7 @@ public class TextPreview : MonoBehaviour {
     public static TextPreview instance;
 
     // Design (.preview b): mỗi chữ một ô 38 css cao, rộng tối thiểu 32, lề 8, cách nhau 4, chữ 20 css nâu #5a4100.
-    private const float DesignWidth = 390f, ChipHeight = 38f, ChipMinWidth = 32f, ChipPad = 8f, ChipGap = 4f, ChipFont = 20f;
+    private const float DesignWidth = 390f, ChipHeight = 38f, ChipMinWidth = 32f, ChipPad = 8f, ChipGap = 4f, ChipFont = 22.2f;
     private readonly List<GameObject> chips = new List<GameObject>();
 
     private void Awake()
@@ -54,18 +55,18 @@ public class TextPreview : MonoBehaviour {
             image.color = backgroundRT.GetComponent<Image>().color;
             image.raycastTarget = false;
 
-            GameObject label = new GameObject("Text", typeof(RectTransform), typeof(Text));
+            GameObject label = new GameObject("Text", typeof(RectTransform), typeof(TextMeshProUGUI));
             RectTransform labelRect = (RectTransform)label.transform;
             labelRect.SetParent(rect, false);
             labelRect.anchorMin = Vector2.zero;
             labelRect.anchorMax = Vector2.one;
             labelRect.offsetMin = labelRect.offsetMax = Vector2.zero;
-            Text chipText = label.GetComponent<Text>();
+            TMP_Text chipText = label.GetComponent<TMP_Text>();
             chipText.font = text.font;
             chipText.fontSize = Mathf.RoundToInt(ChipFont * perCss);
-            chipText.fontStyle = FontStyle.Bold;
-            chipText.alignment = TextAnchor.MiddleCenter;
-            chipText.horizontalOverflow = HorizontalWrapMode.Overflow;
+            chipText.fontStyle = FontStyles.Bold;
+            chipText.alignment = TextAlignmentOptions.Center;
+            chipText.textWrappingMode = TextWrappingModes.NoWrap;
             chipText.color = new Color32(0x5a, 0x41, 0x00, 255);
             chipText.raycastTarget = false;
             chipText.text = word[i].ToString();

@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 using Script.Utils;
 using WordCross.Gameplay;
 
 public class ShopDialog : Dialog
 {
-    public Text[] numRubyTexts, priceTexts;
+    public TMP_Text[] numRubyTexts, priceTexts;
 
     protected override void Start()
     {
