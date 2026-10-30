@@ -527,16 +527,16 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
     {
       "id": "T133",
       "title": "Đổi path OTA 1.0.0 về chuẩn chung: <game>/clr/<version>/<platform>/Upload và <game>/data/<version>/<platform>",
-      "type": "compile",
-      "status": "waiting",
+      "type": "runtime",
+      "status": "done",
       "screen": "OTA · R2 RemoteLoadPath",
       "goal": "Giống solitaire-farm và WordCross 0.3: wordcross/clr/1.0.0/android/Upload, wordcross/data/1.0.0/android (iOS: …/ios)",
       "scope": "WordCrossConfig clrUrl/addressableUrl (bỏ {version} giữa, để pipeline nối /<version>), ClrConfiguration + clr.json, AA profile Remote.LoadPath/BuildPath, script upload wordcross-r2-manifest.py, preview serve.py/preview.sh; build lại APK + AAB release (URL nằm trong APK); upload CLR + AA vào path mới; giữ path cũ wordcross/1.0.0/* tới khi USER cho xoá",
       "owner": "CLAUDE (dev)",
       "deps": "T123",
       "criteria": "curl 200 wordcross/clr/1.0.0/android/Upload/hotupdate.hash + wordcross/data/1.0.0/android/catalog_1.0.0.hash; APK release mới cold start tải từ path mới (log); Apply Selected Profile cho ra đúng path",
-      "evidence": "",
-      "note": "[2026-10-30 USER] Ảnh R2 catgaming/solitaire-farm/clr/1.0.9/{android,ios}. Đã probe public: solitaire-farm/clr/1.0.9/android/Upload/hotupdate.hash 200, solitaire-farm/data/1.0.9/{android,ios}/catalog_1.0.9.hash 200; wordcross 0.3 cũng theo chuẩn này. CẦN APK (URL CLR/AA trong APK). Chạy sau khi T123 merge."
+      "evidence": "[2026-10-30] Config: WordCrossConfig clrUrl …/wordcross/clr, addressableUrl …/wordcross/data; ClrConfiguration/clr.json …/wordcross/clr/1.0.0; AA LoadPath …/wordcross/data/1.0.0/android. APK release mới sha256 8c6e8976… (59.949.130 B), AAB 095e6241… (53.640.927 B), cert SHA-256 2d0988af…9106; APK nhúng assets/clr/config.json + aa/settings.json đường mới. Upload 11 file, curl 200 + sha256 11/11: hotupdate.hash cc3b8a5b…, catalog_1.0.0.hash aad51392… (điều phối curl lại khớp). Emulator-5556: pm clear cold start tải CLR từ wordcross/clr/1.0.0/android/Upload, preload 540/540, 0 lỗi Unity, Home + logo teal đúng. Merge cab244c. Đường cũ wordcross/1.0.0/* giữ nguyên.",
+      "note": "[2026-10-30 USER] Ảnh R2 catgaming/solitaire-farm/clr/1.0.9/{android,ios}. Đã probe public: solitaire-farm/clr/1.0.9/android/Upload/hotupdate.hash 200, solitaire-farm/data/1.0.9/{android,ios}/catalog_1.0.9.hash 200; wordcross 0.3 cũng theo chuẩn này. CẦN APK (URL CLR/AA trong APK). Chạy sau khi T123 merge.\n[2026-10-30] Chờ USER: khi nào xoá đường cũ wordcross/1.0.0/* (cho-duyet old-path). Lưu ý: luồng T123 TMP có thể OTA vào đường cũ → điều phối upload lại vào đường mới sau khi T123 merge."
     },
     {
       "id": "T052",
