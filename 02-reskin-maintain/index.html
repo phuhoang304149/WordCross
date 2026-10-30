@@ -525,6 +525,20 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "criteria": "AAB/APK release ký đúng, cài máy chạy OTA 1.0.0"
     },
     {
+      "id": "T133",
+      "title": "Đổi path OTA 1.0.0 về chuẩn chung: <game>/clr/<version>/<platform>/Upload và <game>/data/<version>/<platform>",
+      "type": "compile",
+      "status": "waiting",
+      "screen": "OTA · R2 RemoteLoadPath",
+      "goal": "Giống solitaire-farm và WordCross 0.3: wordcross/clr/1.0.0/android/Upload, wordcross/data/1.0.0/android (iOS: …/ios)",
+      "scope": "WordCrossConfig clrUrl/addressableUrl (bỏ {version} giữa, để pipeline nối /<version>), ClrConfiguration + clr.json, AA profile Remote.LoadPath/BuildPath, script upload wordcross-r2-manifest.py, preview serve.py/preview.sh; build lại APK + AAB release (URL nằm trong APK); upload CLR + AA vào path mới; giữ path cũ wordcross/1.0.0/* tới khi USER cho xoá",
+      "owner": "CLAUDE (dev)",
+      "deps": "T123",
+      "criteria": "curl 200 wordcross/clr/1.0.0/android/Upload/hotupdate.hash + wordcross/data/1.0.0/android/catalog_1.0.0.hash; APK release mới cold start tải từ path mới (log); Apply Selected Profile cho ra đúng path",
+      "evidence": "",
+      "note": "[2026-10-30 USER] Ảnh R2 catgaming/solitaire-farm/clr/1.0.9/{android,ios}. Đã probe public: solitaire-farm/clr/1.0.9/android/Upload/hotupdate.hash 200, solitaire-farm/data/1.0.9/{android,ios}/catalog_1.0.9.hash 200; wordcross 0.3 cũng theo chuẩn này. CẦN APK (URL CLR/AA trong APK). Chạy sau khi T123 merge."
+    },
+    {
       "id": "T052",
       "title": "Xử lý trạng thái app Removed by Google trước phát hành",
       "type": "manual",
@@ -704,7 +718,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "deps": "T123",
       "criteria": "Ảnh simulator từng màn khớp design (so như Android), 0 exception trong log, chơi thắng level 1, đổi 5 ngôn ngữ",
       "evidence": "",
-      "note": "[2026-10-30] USER hỏi chạy được không → được: Xcode 27.1, runtime iOS 18.3/18.6/27.0, Unity iOSSupport có sẵn. Giới hạn: Ads tắt (chưa có AdMob iOS ID, T049), IAP không mua được trên simulator (chỉ kiểm Shop mở + không crash), không phải máy thật. Chạy sau khi T123 TMP xong + full test Android.\n[2026-10-30 USER] Quy trình iOS: vào ClrConfiguration → Apply cho iOS → build lại CLR cho iOS; sau đó build Addressables iOS và upload theo path tương tự Android (wordcross/1.0.0/clr/ios/…, wordcross/1.0.0/data/ios). Không đụng file Android.\n[2026-10-30 USER chốt path] Android GIỮ NGUYÊN (wordcross/1.0.0/clr/android/Upload, wordcross/1.0.0/data/android). iOS tạo thêm nhánh riêng: wordcross/1.0.0/ios/clr và wordcross/1.0.0/ios/data (cấu hình profile/clrUrl iOS sao cho không bị nhân đôi thư mục platform, vd không thành ios/clr/ios/Upload — nếu pipeline bắt buộc thêm hậu tố platform thì báo/ghi rõ đường cuối cùng)."
+      "note": "[2026-10-30] USER hỏi chạy được không → được: Xcode 27.1, runtime iOS 18.3/18.6/27.0, Unity iOSSupport có sẵn. Giới hạn: Ads tắt (chưa có AdMob iOS ID, T049), IAP không mua được trên simulator (chỉ kiểm Shop mở + không crash), không phải máy thật. Chạy sau khi T123 TMP xong + full test Android.\n[2026-10-30 USER] Quy trình iOS: vào ClrConfiguration → Apply cho iOS → build lại CLR cho iOS; sau đó build Addressables iOS và upload theo path tương tự Android (wordcross/1.0.0/clr/ios/…, wordcross/1.0.0/data/ios). Không đụng file Android.\n[2026-10-30 USER chốt path] Android GIỮ NGUYÊN (wordcross/1.0.0/clr/android/Upload, wordcross/1.0.0/data/android). iOS tạo thêm nhánh riêng: wordcross/1.0.0/ios/clr và wordcross/1.0.0/ios/data (cấu hình profile/clrUrl iOS sao cho không bị nhân đôi thư mục platform, vd không thành ios/clr/ios/Upload — nếu pipeline bắt buộc thêm hậu tố platform thì báo/ghi rõ đường cuối cùng).\n[2026-10-30 USER] THAY quyết định path trước: theo chuẩn các project khác (solitaire-farm) → iOS: wordcross/clr/1.0.0/ios/Upload, wordcross/data/1.0.0/ios. Làm sau T133."
     },
     {
       "id": "T049",
