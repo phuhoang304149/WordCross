@@ -255,12 +255,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 26.64
+  m_fontSizeBase: 26.64
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 1
-  m_fontSizeMax: 26
+  m_fontSizeMin: 1.11
+  m_fontSizeMax: 28.86
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: -35.244003
+  m_lineSpacing: -47.63
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -376,12 +376,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 26.64
+  m_fontSizeBase: 26.64
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 1
-  m_fontSizeMax: 26
+  m_fontSizeMin: 1.11
+  m_fontSizeMax: 28.86
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: -35.244003
+  m_lineSpacing: -47.63
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -481,12 +481,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44
-  m_fontSizeBase: 44
+  m_fontSize: 48.84
+  m_fontSizeBase: 48.84
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 1
-  m_fontSizeMax: 48
+  m_fontSizeMin: 1.11
+  m_fontSizeMax: 53.28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -494,7 +494,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1405,12 +1405,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 27.75
+  m_fontSizeBase: 27.75
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 1
-  m_fontSizeMax: 28
+  m_fontSizeMin: 1.11
+  m_fontSizeMax: 31.08
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1418,7 +1418,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1609,12 +1609,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 27.75
+  m_fontSizeBase: 27.75
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 1
-  m_fontSizeMax: 28
+  m_fontSizeMin: 1.11
+  m_fontSizeMax: 31.08
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1622,7 +1622,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1813,12 +1813,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 27.75
+  m_fontSizeBase: 27.75
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 1
-  m_fontSizeMax: 28
+  m_fontSizeMin: 1.11
+  m_fontSizeMax: 31.08
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1826,7 +1826,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -2017,12 +2017,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 27.75
+  m_fontSizeBase: 27.75
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 1
-  m_fontSizeMax: 30
+  m_fontSizeMin: 1.11
+  m_fontSizeMax: 33.3
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2030,7 +2030,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -2221,12 +2221,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 27.75
+  m_fontSizeBase: 27.75
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 1
-  m_fontSizeMax: 30
+  m_fontSizeMin: 1.11
+  m_fontSizeMax: 33.3
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2234,7 +2234,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -2356,12 +2356,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 26.64
+  m_fontSizeBase: 26.64
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 1
-  m_fontSizeMax: 26
+  m_fontSizeMin: 1.11
+  m_fontSizeMax: 28.86
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -2369,7 +2369,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: -35.244003
+  m_lineSpacing: -47.63
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -2642,12 +2642,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29
-  m_fontSizeBase: 29
+  m_fontSize: 32.19
+  m_fontSizeBase: 32.19
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 1
-  m_fontSizeMax: 31
+  m_fontSizeMin: 1.11
+  m_fontSizeMax: 34.41
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2655,7 +2655,7 @@ MonoBehaviour:
   m_characterSpacing: 2
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
