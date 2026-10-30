@@ -1,0 +1,26 @@
+Word Crossy: Nối Chữ là trò chơi giải đố chữ kết hợp vuốt nối chữ cái với ô chữ. Bạn vuốt qua các chữ cái trên vòng tròn để ghép thành từ, rồi xem từ đó điền vào đúng vị trí trên bảng. Điền đủ các ô trống để qua màn và chơi tiếp màn sau.
+
+CÁCH CHƠI
+• Vuốt qua các chữ cái trên vòng tròn để ghép từ
+• Từ đúng sẽ tự điền vào ô chữ trên bảng
+• Tìm đủ các từ trên bảng để thắng màn
+• Xáo chữ bất cứ lúc nào để nhìn các chữ theo cách mới
+
+KẸT RỒI? DÙNG GỢI Ý
+• Mỗi gợi ý mở ra một chữ trên bảng
+• Gợi ý tốn ruby, nhưng bạn không bắt buộc phải dùng để qua màn
+• Thắng màn lần đầu để nhận ruby
+
+TỪ THƯỞNG
+Có những từ bạn vuốt ra không nằm trên bảng nhưng vẫn hợp lệ. Hãy tìm các từ thưởng này rồi nhận ruby. Mỗi từ thưởng chỉ được tính một lần trong mỗi màn.
+
+THỬ THÁCH HÀNG NGÀY
+Quay lại mỗi ngày để giải một bàn chơi mới. Hoàn thành để nhận thưởng và tạo chuỗi ngày liên tiếp, có thêm quà ở các mốc chuỗi.
+
+CÁC THẾ GIỚI ĐỂ KHÁM PHÁ
+Chọn một thế giới, rồi chọn màn chơi. Vuốt để chuyển giữa các thế giới và xem bạn có thể chơi tiếp ở đâu.
+
+MUA TRONG ỨNG DỤNG VÀ QUẢNG CÁO
+Word Crossy miễn phí và có quảng cáo. Bạn có thể mua thêm tùy chọn trong ứng dụng, gồm các gói ruby và gói tắt quảng cáo. Một số phần thưởng nhận được khi xem video quảng cáo, và việc xem luôn do bạn quyết định.
+
+Tải Word Crossy và bắt đầu vuốt ngay.

@@ -214,7 +214,7 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 </div>
 
 <div class="item" data-id="noads-price">
-<h3>Tạo word.noads trên Play + giá <span class="tag hi">T121 · cần làm trước phát hành</span></h3>
+<h3>[ĐÃ DUYỆT 2026-10-30: USD 4.99, không thêm ô Shop → T121/T131] Tạo word.noads trên Play + giá <span class="tag hi">T121 · cần làm trước phát hành</span></h3>
 <p>Play có đủ word.item1..5 (Active, giá khớp). <code>word.noads</code> (gói tắt quảng cáo vĩnh viễn, không tiêu thụ) chưa có — Codex tạo dở thì dừng vì màn hình Mac khoá, chưa lưu. Game đã sẵn sàng; thiếu sản phẩm thì các gói ruby vẫn mua được (T130). Shop chưa có ô bán gói này (design không có).</p>
 <label class="opt"><input type="radio" name="noads-price" value="4.99">USD 4.99</label>
 <label class="opt"><input type="radio" name="noads-price" value="2.99">USD 2.99</label>
@@ -223,10 +223,18 @@ button{background:var(--teal);color:#fff;border:0;border-radius:8px;padding:8px 
 </div>
 
 <div class="item" data-id="daily-vi">
-<h3>Nút “HÀNG NGÀY” ở Home (vi) <span class="tag">T129</span></h3>
+<h3>[ĐÃ DUYỆT 2026-10-30: đổi “HÔM NAY” → T131] Nút “HÀNG NGÀY” ở Home (vi) <span class="tag">T129</span></h3>
 <p>Có chấm đỏ thì chữ vi không đủ chỗ ở cỡ design (design render Chrome cũng xuống 2 dòng). Hiện tại: 1 dòng, co chữ nhẹ.</p>
 <label class="opt"><input type="radio" name="daily-vi" value="co">Giữ 1 dòng co chữ (hiện tại)</label>
 <label class="opt"><input type="radio" name="daily-vi" value="ngan">Đổi nhãn ngắn hơn (vd “HÔM NAY”)</label>
+<textarea placeholder="Ghi chú"></textarea>
+</div>
+
+<div class="item" data-id="old-path">
+<h3>Xoá đường OTA cũ wordcross/1.0.0/* trên R2? <span class="tag">T133</span></h3>
+<p>1.0.0 đã chuyển sang chuẩn chung <code>wordcross/clr/1.0.0/android/Upload</code> + <code>wordcross/data/1.0.0/android</code> (APK/AAB release mới trỏ đường này). Đường cũ <code>wordcross/1.0.0/clr|data</code> chỉ còn APK <code>*_oldpath</code> nội bộ dùng. Không xoá khi chưa có lệnh của bạn.</p>
+<label class="opt"><input type="radio" name="old-path" value="xoa">Xoá đường cũ</label>
+<label class="opt"><input type="radio" name="old-path" value="giu">Giữ tạm</label>
 <textarea placeholder="Ghi chú"></textarea>
 </div>
 

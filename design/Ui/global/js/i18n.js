@@ -12,7 +12,7 @@ window.WC_ROWS = {
   'common.later': ['ĐỂ SAU', 'LATER'], 'common.skip': ['BỎ QUA, CHƠI TIẾP', 'SKIP, KEEP PLAYING'],
   'common.rubies': ['ruby', 'rubies'], 'common.balance': ['Số ruby', 'Ruby balance'], 'common.addRubies': ['Thêm ruby', 'Get rubies'],
   'common.soon': ['SẮP CÓ', 'SOON'], 'common.level': ['Level {n}', 'Level {n}'], 'common.retry': ['THỬ LẠI', 'TRY AGAIN'],
-  'home.play': ['CHƠI', 'PLAY'], 'home.daily': ['HÀNG NGÀY', 'DAILY'], 'home.bot': ['ĐẤU BOT', 'VS BOT'],
+  'home.play': ['CHƠI', 'PLAY'], 'home.daily': ['HÔM NAY', 'DAILY'], 'home.bot': ['ĐẤU BOT', 'VS BOT'],
   'home.ai': ['ĐẤU AI', 'VS AI'], 'home.shop': ['CỬA HÀNG', 'SHOP'], 'home.rate': ['ĐÁNH GIÁ', 'RATE'],
   'home.lang': ['Ngôn ngữ', 'Language'], 'home.resume': ['Tiếp tục: Subworld {s} - {l}', 'Resume: Subworld {s} - {l}'],
   'world.title': ['Chọn World', 'Select World'], 'world.name': ['World {n}', 'World {n}'], 'world.swipe': ['vuốt để đổi', 'swipe to change'],

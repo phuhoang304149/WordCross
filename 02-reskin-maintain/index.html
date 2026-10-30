@@ -525,6 +525,20 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "criteria": "AAB/APK release ký đúng, cài máy chạy OTA 1.0.0"
     },
     {
+      "id": "T133",
+      "title": "Đổi path OTA 1.0.0 về chuẩn chung: <game>/clr/<version>/<platform>/Upload và <game>/data/<version>/<platform>",
+      "type": "runtime",
+      "status": "done",
+      "screen": "OTA · R2 RemoteLoadPath",
+      "goal": "Giống solitaire-farm và WordCross 0.3: wordcross/clr/1.0.0/android/Upload, wordcross/data/1.0.0/android (iOS: …/ios)",
+      "scope": "WordCrossConfig clrUrl/addressableUrl (bỏ {version} giữa, để pipeline nối /<version>), ClrConfiguration + clr.json, AA profile Remote.LoadPath/BuildPath, script upload wordcross-r2-manifest.py, preview serve.py/preview.sh; build lại APK + AAB release (URL nằm trong APK); upload CLR + AA vào path mới; giữ path cũ wordcross/1.0.0/* tới khi USER cho xoá",
+      "owner": "CLAUDE (dev)",
+      "deps": "T123",
+      "criteria": "curl 200 wordcross/clr/1.0.0/android/Upload/hotupdate.hash + wordcross/data/1.0.0/android/catalog_1.0.0.hash; APK release mới cold start tải từ path mới (log); Apply Selected Profile cho ra đúng path",
+      "evidence": "[2026-10-30] Config: WordCrossConfig clrUrl …/wordcross/clr, addressableUrl …/wordcross/data; ClrConfiguration/clr.json …/wordcross/clr/1.0.0; AA LoadPath …/wordcross/data/1.0.0/android. APK release mới sha256 8c6e8976… (59.949.130 B), AAB 095e6241… (53.640.927 B), cert SHA-256 2d0988af…9106; APK nhúng assets/clr/config.json + aa/settings.json đường mới. Upload 11 file, curl 200 + sha256 11/11: hotupdate.hash cc3b8a5b…, catalog_1.0.0.hash aad51392… (điều phối curl lại khớp). Emulator-5556: pm clear cold start tải CLR từ wordcross/clr/1.0.0/android/Upload, preload 540/540, 0 lỗi Unity, Home + logo teal đúng. Merge cab244c. Đường cũ wordcross/1.0.0/* giữ nguyên.",
+      "note": "[2026-10-30 USER] Ảnh R2 catgaming/solitaire-farm/clr/1.0.9/{android,ios}. Đã probe public: solitaire-farm/clr/1.0.9/android/Upload/hotupdate.hash 200, solitaire-farm/data/1.0.9/{android,ios}/catalog_1.0.9.hash 200; wordcross 0.3 cũng theo chuẩn này. CẦN APK (URL CLR/AA trong APK). Chạy sau khi T123 merge.\n[2026-10-30] Chờ USER: khi nào xoá đường cũ wordcross/1.0.0/* (cho-duyet old-path). Lưu ý: luồng T123 TMP có thể OTA vào đường cũ → điều phối upload lại vào đường mới sau khi T123 merge."
+    },
+    {
       "id": "T052",
       "title": "Xử lý trạng thái app Removed by Google trước phát hành",
       "type": "manual",
@@ -691,6 +705,20 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "goal": "Trùng Android",
       "scope": "PlayerSettings iOS applicationIdentifier",
       "criteria": "ProjectSettings iOS id đúng"
+    },
+    {
+      "id": "T132",
+      "title": "Smoke test UI + luồng chơi trên iOS Simulator (sau full test Android)",
+      "type": "runtime",
+      "status": "waiting",
+      "screen": "Build · thiết bị Android",
+      "goal": "Game chạy trên iOS Simulator: Bootstrap → Home → SelectWorld → SelectLevel → Main → Win, popup, đổi ngôn ngữ",
+      "scope": "Unity batch build iOS (SDK Simulator, không ký), xcodebuild iphonesimulator, HybridCLR Generate cho iOS, CLR + Addressables target iOS lên R2 wordcross/1.0.0/clr|data/ios; điều khiển bằng công cụ iOS Simulator (screenshot/tap/swipe) + simctl log",
+      "owner": "CLAUDE (dev)",
+      "deps": "T123",
+      "criteria": "Ảnh simulator từng màn khớp design (so như Android), 0 exception trong log, chơi thắng level 1, đổi 5 ngôn ngữ",
+      "evidence": "",
+      "note": "[2026-10-30] USER hỏi chạy được không → được: Xcode 27.1, runtime iOS 18.3/18.6/27.0, Unity iOSSupport có sẵn. Giới hạn: Ads tắt (chưa có AdMob iOS ID, T049), IAP không mua được trên simulator (chỉ kiểm Shop mở + không crash), không phải máy thật. Chạy sau khi T123 TMP xong + full test Android.\n[2026-10-30 USER] Quy trình iOS: vào ClrConfiguration → Apply cho iOS → build lại CLR cho iOS; sau đó build Addressables iOS và upload theo path tương tự Android (wordcross/1.0.0/clr/ios/…, wordcross/1.0.0/data/ios). Không đụng file Android.\n[2026-10-30 USER chốt path] Android GIỮ NGUYÊN (wordcross/1.0.0/clr/android/Upload, wordcross/1.0.0/data/android). iOS tạo thêm nhánh riêng: wordcross/1.0.0/ios/clr và wordcross/1.0.0/ios/data (cấu hình profile/clrUrl iOS sao cho không bị nhân đôi thư mục platform, vd không thành ios/clr/ios/Upload — nếu pipeline bắt buộc thêm hậu tố platform thì báo/ghi rõ đường cuối cùng).\n[2026-10-30 USER] THAY quyết định path trước: theo chuẩn các project khác (solitaire-farm) → iOS: wordcross/clr/1.0.0/ios/Upload, wordcross/data/1.0.0/ios. Làm sau T133."
     },
     {
       "id": "T049",
@@ -901,6 +929,20 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "criteria": "5 ngôn ngữ nhãn Daily 1 dòng, không ngắt từ, khớp design",
       "evidence": "[2026-10-30] Nguyên nhân: nhãn trong HorizontalLayoutGroup Content, FitDailyLabel tìm nhầm group. Sửa FitDailyLabel co cả cụm 1 dòng + padding phải 44 (26/26 css như design). Máy: vi/en/fr/es/pt đều 1 dòng, cỡ en/fr/es/pt 17 css = design, vi co nhẹ; chấm đỏ lệch ≤1,6 css. Ảnh qa-shots/t129-final-home-*. OTA 1.0.0 CLR efe01f90 (curl khớp) + AA catalog f797e3fc, 9/9 sha256, cold start 540 asset 4,73s; merge e7e2503.",
       "note": "[2026-10-30] Thấy trên ảnh ota4-final-home.png (OTA live 1.0.0).\n[2026-10-30] Design Chrome cũng wrap vi 2 dòng (thiếu ~5 css); đã chọn 1 dòng co chữ → cho-duyet."
+    },
+    {
+      "id": "T131",
+      "title": "Nút Daily tiếng Việt đổi nhãn \"HÔM NAY\" (thay HÀNG NGÀY) + giá dự phòng word.noads 4.99",
+      "type": "content",
+      "status": "waiting",
+      "screen": "Màn Home",
+      "goal": "Nhãn vi ngắn, 1 dòng cỡ design; giá noads đúng quyết định",
+      "scope": "LocalizationData home.daily vi, design i18n.js; Purchaser iapItems word.noads price 4.99; design/GD iap-products",
+      "owner": "CLAUDE (dev)",
+      "deps": "T123",
+      "criteria": "Home vi hiện HÔM NAY 1 dòng đúng cỡ chữ design; giá noads 4.99 trong game + GD",
+      "evidence": "",
+      "note": "[2026-10-30 USER duyệt] Chạy sau khi worker TMP (T123) merge để tránh xung đột prefab/LocalizationData. OTA AA+CLR."
     },
     {
       "id": "T018",
@@ -1370,7 +1412,7 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "owner": "USER",
       "deps": "",
       "evidence": "[2026-10-30] Codex đọc Play Console 05:21: word.item1..5 đều có, Active, 174 quốc gia, giá Hoa Kỳ khớp game; item4 tên Play \"Buy 460 coin\" (game 450). word.noads CHƯA có — tạo dở bị chặn vì màn hình Mac khoá, chưa lưu. Bảng ở design/GD/index.html#iap-products.",
-      "note": "[2026-10-30 USER duyệt] USER: lên playstore check, thiếu thì thêm; không làm được thì ghi toàn bộ product id vào design/index.html phần GD để USER check. Đơn mã lạ: giữ như hiện tại.\n[2026-10-30] Chờ USER kiểm/tạo trên Play Console.\n[2026-10-30] Còn: tạo word.noads (non-consumable, giá đề xuất USD 4.99) trên Play.",
+      "note": "[2026-10-30 USER duyệt] USER: lên playstore check, thiếu thì thêm; không làm được thì ghi toàn bộ product id vào design/index.html phần GD để USER check. Đơn mã lạ: giữ như hiện tại.\n[2026-10-30] Chờ USER kiểm/tạo trên Play Console.\n[2026-10-30] Còn: tạo word.noads (non-consumable, giá đề xuất USD 4.99) trên Play.\n[2026-10-30 USER duyệt] word.noads giá USD 4.99; KHÔNG thêm ô bán trong Shop. Còn: tạo sản phẩm trên Play (USER/Codex).",
       "id": "T121",
       "title": "Đối chiếu product ID với Play Console; thiếu thì thêm; ghi toàn bộ product ID vào design/index.html phần GD",
       "screen": "Ads · IAP",
