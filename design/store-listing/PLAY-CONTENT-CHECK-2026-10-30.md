@@ -162,3 +162,11 @@ Còn lại thật sự cần quyết/cung cấp:
 - **Chưa gửi**: Content Rating (questionnaire mới) nằm ở "Changes not yet submitted for review". Giữ lại chưa Submit vì điểm IARC textual sexual references (porn/whore) chưa được xác minh theo định nghĩa.
 - **Screenshot (draft listing, đọc bằng DOM)**: en-US 5, fr-FR 5, pt-BR 5, vi 5, es-ES 4 (thiếu 1). Chưa xác nhận thứ tự/nội dung từng ảnh và chưa bấm Save/Publish listing.
 - **Chặn upload**: Browser tích hợp không có tool chọn file; fetch/img từ localhost bị CSP chặn; osascript không có quyền assistive access. Cần USER cấp quyền Accessibility cho osascript hoặc upload tay ảnh còn thiếu của es-ES.
+
+## Cập nhật sau (Claude, 2026-10-30 ~12:50) — thay các dòng "chưa gửi/thiếu ảnh" ở trên
+
+- **Listing 5 locale đã đẩy bằng Play Developer API (CLI)** rồi `edits:commit` thành công: tên, mô tả ngắn/dài, 5 ảnh theo thứ tự 01→05, feature graphic, icon cho en-US, vi, fr-FR, es-ES, pt-BR. Không dùng hộp chọn file. Console es-ES cũng đã đúng thứ tự 01→05.
+- **Trạng thái**: Publishing overview → "Changes in review" (quick checks tối đa ~14 phút), gồm listing các locale và Content Rating (đã được đưa vào cùng đợt). Managed publishing vẫn ON; chưa bấm Publish đợt này vì Console chưa chuyển sang "ready to publish".
+- Đã PUBLISH trước đó: Privacy policy URL, Data safety, Health apps.
+- Vẫn mở: điểm IARC textual sexual references (porn/whore) chưa xác minh định nghĩa.
+- Key service account: `/Volumes/PM981/workspace/ssh/Google Play Console/` (không đưa vào repo).
