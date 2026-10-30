@@ -528,15 +528,15 @@ Mọi khóa là chuỗi. Đây là schema, KHÔNG phải task đã làm.</pre></
       "id": "T134",
       "title": "Hệ thống kinh tế ruby, thưởng, nhiệm vụ & chu kỳ 365 ngày (shop, ads, lịch) — chỉ qua OTA CLR + AA",
       "type": "ads-iap-ota",
-      "status": "doing",
+      "status": "done",
       "screen": "Home · Header coin · popup Nhiệm vụ & Thưởng · Shop · thiếu coin · Main hint · Win",
       "goal": "Theo design/index.html → GD/economy-year.html + economy-year-data + Ui/screens/economy-year (da8396d)",
       "scope": "8 bước tuần tự (worker Sonnet, trần $2/lượt): 1 nền (anchor 2026-01-01, giữ ruby) · 2 ví + trợ giúp (hint ô 20, hint từ 60) · 3 ads rewarded/interstitial · 4 Shop 6 gói + gói tắt ads + giá store · 5 thưởng thắng/login/chuỗi/mốc · 6 UI Nhiệm vụ & Thưởng + lịch · 7 loc vi/en/fr/es/pt · 8 smoke + merge + OTA R2. Code chỉ hot-update, asset chỉ Addressables",
       "owner": "CLAUDE (dev worker econ)",
       "deps": "T130",
       "criteria": "validate.py pass; batch test scheduler (ngày 1/7/8/364/365/366, lùi đồng hồ, claim trùng, migrate 2 lần); emulator cold start bản production với OTA thật: migrate, login claim, nhiệm vụ, thắng +10, Shop số mới; ảnh econ-final-*; UI khớp design; OTA hash mới",
-      "evidence": "",
-      "note": "[2026-10-30] Mặc định chờ duyệt (cho-duyet econ-coin, econ-anchor): ruby×10→coin; anchor 2026-10-26 thay 2027-01-01. Số liệu GD là đề xuất tuning, dùng nguyên. Worker .git/task-hotupdate/dev-econ.txt.\n[2026-10-30 USER chốt] Giữ RUBY (không đổi tên coin, không migration, số dư 1:1), số GD áp nguyên cho ruby; anchor 2026-01-01; dùng toàn bộ thông số GD; giá hiển thị từ store; THÊM ô gói tắt ads vào Shop; không git push, có upload R2. Worker Opus lượt đầu đã dừng; nhánh wordcross/econ giữ 21600ca làm nền. Chuỗi .git/task-hotupdate/econ/chain.sh."
+      "evidence": "[2026-10-30] Nhánh wordcross/econ merge 197812a (commit theo hạng mục: 10cbc9f anchor 2026-01-01, 5d75b75 giữ ruby, 27ede6e smoke, 7befe1e ví+hint ô 20/từ 60, 2925f53 ads, 9177fa1 IAP ledger transactionId, 17354c9 Shop 6 hàng + Tắt quảng cáo, 207823b thưởng, 17e88f0 popup Nhiệm vụ & Thưởng + nút Home, 1316d4b preview, 3b94456 loc 413 key đủ 5 ngôn ngữ, 0f34b28 fix ghi chú Shop). EconomySmoke 69/69, validate.py OK, compile 0 lỗi. OTA CLR+AA đường chuẩn: hotupdate.hash e891e403…, catalog_1.0.0.hash 6cad9bd0…, 9/9 sha256 public khớp; rollback Build/remote-r2-1.0.0/econ-prev/ + rollback-note.txt. Cold start APK production (pm clear, emulator-5556): tải OTA mới, 0 lỗi Unity, Home có nút Nhiệm vụ & Thưởng; ảnh qa-shots/econ-{cold-home,home,quests-tab0,quests-tab1,quests-claimed,home-after-claim,shop,win,win-replay}.png. Không cần APK. Chi phí worker Sonnet ≈ $8.8 (s2–s8) + s1 và lượt Opus đầu (đã dừng, không có số).",
+      "note": "[2026-10-30] Mặc định chờ duyệt (cho-duyet econ-coin, econ-anchor): ruby×10→coin; anchor 2026-10-26 thay 2027-01-01. Số liệu GD là đề xuất tuning, dùng nguyên. Worker .git/task-hotupdate/dev-econ.txt.\n[2026-10-30 USER chốt] Giữ RUBY (không đổi tên coin, không migration, số dư 1:1), số GD áp nguyên cho ruby; anchor 2026-01-01; dùng toàn bộ thông số GD; giá hiển thị từ store; THÊM ô gói tắt ads vào Shop; không git push, có upload R2. Worker Opus lượt đầu đã dừng; nhánh wordcross/econ giữ 21600ca làm nền. Chuỗi .git/task-hotupdate/econ/chain.sh.\n[2026-10-30] Chưa xác minh: callback AdMob thật (no_fill/offline), mua IAP thật (word.noads còn Draft trên Play), interstitial đếm 5 level đầu bằng Utils.GetLeaderboardScore() trên máy, fr/es/pt chưa người bản ngữ duyệt, USER manual test UI. Chờ duyệt: econ-lang-reward, econ-daily-old."
     },
     {
       "id": "T133",
