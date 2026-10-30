@@ -238,6 +238,15 @@ namespace WordCross.Gameplay
             return true;
         }
 
+        // Cấp ruby của gói IAP sau đơn hợp lệ: khoá trọn đời theo transactionId + productId nên callback gửi lại / mở lại app không cộng lặp.
+        // Trả false khi đã cộng rồi, thiếu transactionId hoặc productId không thuộc gói nào.
+        public bool GrantPurchase(string transactionId, string productId)
+        {
+            var pack = PackFor(productId);
+            if (pack == null || string.IsNullOrEmpty(transactionId)) return false;
+            return TryClaim(LIFE_PREFIX + "iap:" + transactionId + ":" + productId, pack.coin);
+        }
+
         public bool Spend(string sinkId)
         {
             var sink = Sink(sinkId);

@@ -53,6 +53,7 @@ namespace WordCross.Editor
             anchor = DateTime.SpecifyKind(DateTime.Parse(data.anchorUtcDate + "T00:00:00"), DateTimeKind.Utc);
             Wallet();
             Sinks();
+            Purchases();
             Calendar();
             Today();
             Reopen();
@@ -97,6 +98,43 @@ namespace WordCross.Editor
             Check("sink.hintWord", word && store.balance == 20, "balance=" + store.balance);
             bool poor = econ.Spend(EconomyService.SINK_HINT_WORD);
             Check("sink.lowBalance", !poor && store.balance == 20, "spent=" + poor + " balance=" + store.balance);
+        }
+
+        // Gói Shop theo GD: item1..5 = 500/1100/2500/4500/11000 ruby, noads = 0 ruby; cấp một lần theo transactionId (callback gửi lại / mở lại app / qua ngày không cộng lặp).
+        private void Purchases()
+        {
+            var expected = new[] { "word.item1:500", "word.item2:1100", "word.item3:2500", "word.item4:4500", "word.item5:11000", "word.noads:0" };
+            var store = new MemoryEconomyStore { balance = 0 };
+            var clock = new FixedEconomyClock { now = Day(4, 10) };
+            var econ = Make(store, clock);
+            store.balance = 0;
+            foreach (var entry in expected)
+            {
+                var parts = entry.Split(':');
+                var pack = econ.PackFor(parts[0]);
+                Check("pack." + parts[0], pack != null && pack.coin == int.Parse(parts[1]) && pack.removesAds == (parts[0] == "word.item4" || parts[0] == "word.item5" || parts[0] == "word.noads"), pack == null ? "missing" : pack.coin + " removesAds=" + pack.removesAds);
+            }
+
+            bool first = econ.GrantPurchase("GPA.1", "word.item2");
+            bool resend = econ.GrantPurchase("GPA.1", "word.item2");
+            Check("iap.grantOnce", first && !resend && store.balance == 1100, "first=" + first + " resend=" + resend + " balance=" + store.balance);
+            bool other = econ.GrantPurchase("GPA.2", "word.item2");
+            Check("iap.newTransaction", other && store.balance == 2200, "balance=" + store.balance);
+
+            var reopened = Make(store, clock);
+            bool again = reopened.GrantPurchase("GPA.1", "word.item2");
+            Check("iap.reopen", !again && store.balance == 2200, "again=" + again + " balance=" + store.balance);
+
+            clock.now = Day(40, 10);
+            var later = Make(store, clock);
+            bool afterDays = later.GrantPurchase("GPA.2", "word.item2");
+            Check("iap.afterDays", !afterDays && store.balance == 2200, "again=" + afterDays + " balance=" + store.balance);
+
+            int before = store.balance;
+            bool noTx = later.GrantPurchase("", "word.item1");
+            bool unknown = later.GrantPurchase("GPA.9", "word.unknown");
+            bool noAds = later.GrantPurchase("GPA.3", "word.noads");
+            Check("iap.guards", !noTx && !unknown && noAds && store.balance == before, "noTx=" + noTx + " unknown=" + unknown + " noAds=" + noAds + " delta=" + (store.balance - before));
         }
 
         // Hôm nay 2026-10-30 UTC: 302 ngày sau neo → ngày 303 của C1.
