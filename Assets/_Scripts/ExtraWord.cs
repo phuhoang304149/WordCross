@@ -92,6 +92,9 @@ public class ExtraWord : MonoBehaviour {
         Prefs.SetExtraWords(world, subWorld, level, extraWords.ToArray());
         Prefs.extraProgress++;
         Prefs.totalExtraAdded++;
+        // Coin từ thưởng (T134): chỉ từ đầu tiên của mỗi level, ledger ghi trước khi cộng.
+        var econ = Locator<EconomyService>.Instance;
+        if (econ != null) econ.OnExtraWord(Prefs.progressKeys.Of("w" + world + "s" + subWorld + "l" + level));
     }
 
     private void OnMessageUpdate(float value)

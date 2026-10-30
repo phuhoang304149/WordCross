@@ -277,15 +277,16 @@ namespace WordCross.Gameplay
 
         // ---------- thắng / từ / daily / bot ----------
 
-        // Thắng level chính: tính tiến độ nhiệm vụ mọi lần thắng; coin chỉ lần đầu (firstClear do tiến độ level quyết định) + 20 cho level đầu tiên của tài khoản.
-        public int OnLevelWon(bool firstClear, bool firstLevel)
+        // Thắng level chính: tiến độ nhiệm vụ mọi lần thắng; coin chỉ lần đầu (firstClear do tiến độ level quyết định) + 20 cho level đầu tiên của tài khoản.
+        // levelKey (mỗi level một khoá, đã gồm ngôn ngữ tiến độ) được ghi ledger trước khi cộng nên gọi lại cùng level không cộng lặp.
+        public int OnLevelWon(bool firstClear, bool firstLevel, string levelKey)
         {
             AddProgress(METRIC_WIN, 1);
-            int coin = firstClear ? data.firstWinCoin : data.replayWinCoin;
-            if (firstClear && firstLevel && !claims.Contains(FIRST_WIN_KEY))
+            int coin = data.replayWinCoin;
+            if (firstClear && claims.Add(LIFE_PREFIX + "win:" + levelKey))
             {
-                claims.Add(FIRST_WIN_KEY);
-                coin += data.firstEverWinBonusCoin;
+                coin = data.firstWinCoin;
+                if (firstLevel && claims.Add(FIRST_WIN_KEY)) coin += data.firstEverWinBonusCoin;
             }
             Save();
             if (coin <= 0) return 0;
@@ -299,11 +300,13 @@ namespace WordCross.Gameplay
             AddProgress(METRIC_WORDS, 1);
         }
 
-        // Từ thưởng mới: tiến độ nhiệm vụ; coin chỉ cho từ thưởng đầu tiên của level (tối đa extraWordCapPerLevel = 1).
-        public int OnExtraWord(bool firstInLevel)
+        // Từ thưởng mới: tiến độ nhiệm vụ; coin chỉ cho từ thưởng đầu tiên của mỗi level (trần extraWordCapPerLevel = 1, khoá ledger theo levelKey).
+        public int OnExtraWord(string levelKey)
         {
             AddProgress(METRIC_EXTRA, 1);
-            if (!firstInLevel || data.extraWordCapPerLevel <= 0) return 0;
+            if (data.extraWordCapPerLevel <= 0 || data.extraWordCoin <= 0) return 0;
+            if (!claims.Add(LIFE_PREFIX + "extra:" + levelKey)) return 0;
+            Save();
             store.Credit(data.extraWordCoin);
             Changed();
             return data.extraWordCoin;
@@ -519,6 +522,24 @@ namespace WordCross.Gameplay
                     return TryClaim(ClaimKey(SCOPE_STREAK, id), milestone.coin);
             return false;
         }
+
+        // Số level đã qua của tiến độ đang chơi: các sub-world trước (unlockedWorld, unlockedSubWorld) + unlockedLevel; unlockedWorld >= NUM_WORLDS là đã hết.
+        public int CountLevelsCleared(int unlockedWorld, int unlockedSubWorld, int unlockedLevel)
+        {
+            int total = 0;
+            for (int w = 0; w < Superpow.Utils.NUM_WORLDS; w++)
+            {
+                for (int s = 0; s < Const.NUM_SUBWORLD; s++)
+                {
+                    int count = Superpow.Utils.GetNumLevels(w, s);
+                    if (w < unlockedWorld || (w == unlockedWorld && s < unlockedSubWorld)) total += count;
+                    else if (w == unlockedWorld && s == unlockedSubWorld) total += Mathf.Clamp(unlockedLevel, 0, count);
+                }
+            }
+            return total;
+        }
+
+        public int LevelsCleared { get { return CountLevelsCleared(Prefs.unlockedWorld, Prefs.unlockedSubWorld, Prefs.unlockedLevel); } }
 
         public QuestState GetLevelMilestoneState(EconomyData.Milestone milestone, int levelsCleared)
         {

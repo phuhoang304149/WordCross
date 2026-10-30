@@ -24,7 +24,8 @@ public class DailyResult
 public class DailyChallenge
 {
     // Kinh tế (THAY ĐỔI KINH TẾ, số đề xuất theo design ECON): chỉnh tại đây.
-    public int baseReward = 3;          // thưởng thắng bàn của hôm nay, một lần
+    // thưởng thắng bàn của hôm nay, một lần: dailyChallengeCoin của EconomyData (30); 3 chỉ là dự phòng khi chưa có EconomyService.
+    public int baseReward { get { var econ = Locator<EconomyService>.Instance; return econ == null ? 3 : econ.Data.dailyChallengeCoin; } }
     public int backfillReward = 1;      // thưởng bù bàn của hôm qua, một lần
     public int[] milestoneDays = { 3, 7, 14 };
     public int[] milestoneRewards = { 2, 5, 8 };

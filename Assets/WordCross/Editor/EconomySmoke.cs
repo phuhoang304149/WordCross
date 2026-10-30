@@ -278,18 +278,31 @@ namespace WordCross.Editor
             Check("quest.botUnavailable", econ.GetQuestState("daily", econ.Quest("dq_bot_1")) == QuestState.Unavailable, string.Join(",", econ.QuestRefs("daily")));
             clock.now = Day(2, 5);
             econ.Tick();
-            econ.OnExtraWord(true);
+            econ.OnExtraWord("w0s0l9");
             econ.OnDailyChallengeDone();
             econ.ClaimQuest("daily", "dq_daily");
             econ.ClaimQuest("daily", "dq_extra_1");
             Check("quest.allClearSkipsBot", econ.GetAllClearState("daily") == QuestState.Claimable, string.Join(",", econ.QuestRefs("daily")) + " " + econ.GetAllClearState("daily"));
             Check("quest.levelMilestone", econ.GetLevelMilestoneState(data.levelMilestones[0], 10) == QuestState.Claimable && econ.ClaimLevelMilestone("lm_10", 10) && !econ.ClaimLevelMilestone("lm_10", 10), "lm_10 once");
             balance = store.balance;
-            int win = econ.OnLevelWon(true, true);
-            int win2 = econ.OnLevelWon(true, true);
-            int replay = econ.OnLevelWon(false, false);
-            Check("earn.win", win == 30 && win2 == 10 && replay == 0 && store.balance - balance == 40, "first=" + win + " second=" + win2 + " replay=" + replay);
+            int win = econ.OnLevelWon(true, true, "w0s0l0");
+            int again = econ.OnLevelWon(true, true, "w0s0l0");
+            int win2 = econ.OnLevelWon(true, false, "w0s0l1");
+            int replay = econ.OnLevelWon(false, false, "w0s0l0");
+            Check("earn.win", win == 30 && win2 == 10 && again == 0 && replay == 0 && store.balance - balance == 40, "first=" + win + " again=" + again + " second=" + win2 + " replay=" + replay);
+            balance = store.balance;
+            int extra1 = econ.OnExtraWord("w0s0l0");
+            int extra2 = econ.OnExtraWord("w0s0l0");
+            int extra3 = econ.OnExtraWord("w0s0l1");
+            Check("earn.extraWord", extra1 == 5 && extra2 == 0 && extra3 == 5 && store.balance - balance == 10, extra1 + "/" + extra2 + "/" + extra3);
+            Check("earn.dailyChallenge", data.dailyChallengeCoin == 30 && data.firstWinCoin == 10 && data.firstEverWinBonusCoin == 20 && data.replayWinCoin == 0 && data.botDrawCoin == 5, "daily=" + data.dailyChallengeCoin);
+            Check("earn.levelsCleared", econ.CountLevelsCleared(0, 0, 0) == 0 && econ.CountLevelsCleared(0, 0, 7) == 7 && econ.CountLevelsCleared(Superpow.Utils.NUM_WORLDS, 0, 0) == data.levelMilestones[data.levelMilestones.Length - 1].days, econ.CountLevelsCleared(Superpow.Utils.NUM_WORLDS, 0, 0).ToString());
+            var reopenedWin = Make(store, clock);
+            Check("earn.win.reopen", reopenedWin.OnLevelWon(true, true, "w0s0l0") == 0 && reopenedWin.OnExtraWord("w0s0l0") == 0, "ledger persists");
             Check("earn.bot", econ.OnBotMatch("hard", 1) == 15 && econ.OnBotMatch("hard", 1) == 15 && econ.OnBotMatch("hard", 1) == 15 && econ.OnBotMatch("hard", 1) == 15 && econ.OnBotMatch("easy", 1) == 0, "cap 60/day");
+            balance = store.balance;
+            clock.now = clock.now.AddDays(1);
+            Check("earn.bot.draw", econ.OnBotMatch("easy", 0) == 5 && econ.OnBotMatch("medium", 1) == 10 && econ.OnBotMatch("easy", 1) == 5 && econ.OnBotMatch("easy", -1) == 0 && store.balance - balance == 20, "next day cap resets");
         }
 
         private void Rewarded()

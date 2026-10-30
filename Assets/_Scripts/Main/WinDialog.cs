@@ -149,7 +149,7 @@ public class WinDialog : Dialog {
             // Lưu tiến độ trước khi cộng thưởng để thưởng không bị nhận lại nếu app chết giữa chừng.
             CPlayerPrefs.Save();
             // Coin (T134): thắng lần đầu firstWinCoin, level đầu tiên của tài khoản thêm firstEverWinBonusCoin (khoá ledger trọn đời).
-            if (Econ != null) reward = Econ.OnLevelWon(true, isTutorial);
+            if (Econ != null) reward = Econ.OnLevelWon(true, isTutorial, LevelKey());
             else CurrencyController.CreditBalance(reward);
 
             if (GPGSController.instance != null)
@@ -161,8 +161,14 @@ public class WinDialog : Dialog {
         else if (Econ != null)
         {
             // Chơi lại: chỉ tính tiến độ nhiệm vụ "thắng level", replayWinCoin = 0.
-            reward = Econ.OnLevelWon(false, false);
+            reward = Econ.OnLevelWon(false, false, LevelKey());
         }
+    }
+
+    // Khoá ledger của level (gồm ngôn ngữ tiến độ vì mỗi ngôn ngữ có tiến độ riêng).
+    private string LevelKey()
+    {
+        return Prefs.progressKeys.Of("w" + world + "s" + subWorld + "l" + level);
     }
 
     // Thắng bàn Daily: không đổi tiến độ chính (unlocked*/current*), thưởng + chuỗi + mốc do DailyChallenge ghi.
