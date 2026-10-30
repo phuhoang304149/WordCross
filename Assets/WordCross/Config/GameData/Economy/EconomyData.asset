@@ -1,0 +1,5198 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c2e26657752542a3a61b8519bfd6662, type: 3}
+  m_Name: EconomyData
+  m_EditorClassIdentifier: WordCross.Gameplay.HotUpdate::WordCross.Gameplay.EconomyData
+  startBalance: 100
+  rubyToCoin: 10
+  firstWinCoin: 10
+  firstEverWinBonusCoin: 20
+  replayWinCoin: 0
+  dailyChallengeCoin: 30
+  botEasyCoin: 5
+  botMediumCoin: 10
+  botHardCoin: 15
+  botDrawCoin: 5
+  botDailyCap: 60
+  extraWordCoin: 5
+  extraWordCapPerLevel: 1
+  sinks:
+  - id: sk_hint_cell
+    coin: 20
+    locKey: sink.hint_cell
+    maxMissedDays: 0
+  - id: sk_hint_word
+    coin: 60
+    locKey: sink.hint_word
+    maxMissedDays: 0
+  - id: sk_streak_repair
+    coin: 50
+    locKey: sink.streak_repair
+    maxMissedDays: 1
+  packs:
+  - id: pk_1
+    productId: word.item1
+    coin: 500
+    removesAds: 0
+    locKey: shop.pk_1
+  - id: pk_2
+    productId: word.item2
+    coin: 1100
+    removesAds: 0
+    locKey: shop.pk_2
+  - id: pk_3
+    productId: word.item3
+    coin: 2500
+    removesAds: 0
+    locKey: shop.pk_3
+  - id: pk_4
+    productId: word.item4
+    coin: 4500
+    removesAds: 1
+    locKey: shop.pk_4
+  - id: pk_5
+    productId: word.item5
+    coin: 11000
+    removesAds: 1
+    locKey: shop.pk_5
+  - id: pk_noads
+    productId: word.noads
+    coin: 0
+    removesAds: 1
+    locKey: shop.pk_noads
+  rewarded:
+  - id: ad_shop_free
+    placement: shop
+    coin: 20
+    cooldownSec: 120
+    dailyCap: 5
+    sharedCapGroup: rw_coin
+  - id: ad_low_coin
+    placement: low_coin_popup
+    coin: 20
+    cooldownSec: 120
+    dailyCap: 5
+    sharedCapGroup: rw_coin
+  - id: ad_win_x2
+    placement: win_dialog
+    coin: 10
+    cooldownSec: 120
+    dailyCap: 5
+    sharedCapGroup: rw_x2
+  - id: ad_daily_x2
+    placement: daily_challenge
+    coin: 30
+    cooldownSec: 120
+    dailyCap: 1
+    sharedCapGroup: rw_x2
+  interstitial:
+    graceLevels: 5
+    minGapSec: 90
+    dailyCap: 6
+    blockedAfterRewardedSec: 30
+    disabledBy:
+    - word.noads
+    - word.item4
+    - word.item5
+  maxRewardedCoinPerDay: 180
+  streakMilestones:
+  - id: st_3
+    days: 3
+    coin: 20
+    locKey: streak.3
+  - id: st_7
+    days: 7
+    coin: 40
+    locKey: streak.7
+  - id: st_14
+    days: 14
+    coin: 70
+    locKey: streak.14
+  - id: st_30
+    days: 30
+    coin: 150
+    locKey: streak.30
+  - id: st_60
+    days: 60
+    coin: 250
+    locKey: streak.60
+  - id: st_100
+    days: 100
+    coin: 400
+    locKey: streak.100
+  - id: st_180
+    days: 180
+    coin: 700
+    locKey: streak.180
+  - id: st_365
+    days: 365
+    coin: 1500
+    locKey: streak.365
+  levelMilestones:
+  - id: lm_10
+    days: 10
+    coin: 20
+    locKey: milestone.lm_10
+  - id: lm_25
+    days: 25
+    coin: 30
+    locKey: milestone.lm_25
+  - id: lm_50
+    days: 50
+    coin: 50
+    locKey: milestone.lm_50
+  - id: lm_100
+    days: 100
+    coin: 100
+    locKey: milestone.lm_100
+  - id: lm_200
+    days: 200
+    coin: 150
+    locKey: milestone.lm_200
+  - id: lm_300
+    days: 300
+    coin: 200
+    locKey: milestone.lm_300
+  - id: lm_400
+    days: 400
+    coin: 250
+    locKey: milestone.lm_400
+  - id: lm_534
+    days: 534
+    coin: 400
+    locKey: milestone.lm_534
+  quests:
+  - id: dq_win_3
+    scope: daily
+    metric: levels_won
+    target: 3
+    coin: 15
+    locKey: quest.dq_win_3
+  - id: dq_words_20
+    scope: daily
+    metric: words_found
+    target: 20
+    coin: 15
+    locKey: quest.dq_words_20
+  - id: dq_daily
+    scope: daily
+    metric: daily_challenge_done
+    target: 1
+    coin: 10
+    locKey: quest.dq_daily
+  - id: dq_bot_1
+    scope: daily
+    metric: bot_match_played
+    target: 1
+    coin: 10
+    locKey: quest.dq_bot_1
+  - id: dq_extra_1
+    scope: daily
+    metric: extra_word_found
+    target: 1
+    coin: 10
+    locKey: quest.dq_extra_1
+  - id: wq_win_20
+    scope: weekly
+    metric: levels_won
+    target: 20
+    coin: 40
+    locKey: quest.wq_win_20
+  - id: wq_words_150
+    scope: weekly
+    metric: words_found
+    target: 150
+    coin: 40
+    locKey: quest.wq_words_150
+  - id: wq_daily_5
+    scope: weekly
+    metric: daily_challenge_done
+    target: 5
+    coin: 40
+    locKey: quest.wq_daily_5
+  - id: wq_bot_win_3
+    scope: weekly
+    metric: bot_match_won
+    target: 3
+    coin: 30
+    locKey: quest.wq_bot_win_3
+  - id: wq_extra_5
+    scope: weekly
+    metric: extra_word_found
+    target: 5
+    coin: 30
+    locKey: quest.wq_extra_5
+  - id: wq_login_5
+    scope: weekly
+    metric: login_days
+    target: 5
+    coin: 30
+    locKey: quest.wq_login_5
+  - id: mq_win_100
+    scope: monthly
+    metric: levels_won
+    target: 100
+    coin: 150
+    locKey: quest.mq_win_100
+  - id: mq_daily_20
+    scope: monthly
+    metric: daily_challenge_done
+    target: 20
+    coin: 150
+    locKey: quest.mq_daily_20
+  - id: mq_login_20
+    scope: monthly
+    metric: login_days
+    target: 20
+    coin: 100
+    locKey: quest.mq_login_20
+  - id: mq_words_600
+    scope: monthly
+    metric: words_found
+    target: 600
+    coin: 100
+    locKey: quest.mq_words_600
+  - id: eq_newyear_win
+    scope: event
+    metric: levels_won
+    target: 8
+    coin: 20
+    locKey: quest.eq_win
+  - id: eq_newyear_words
+    scope: event
+    metric: words_found
+    target: 48
+    coin: 20
+    locKey: quest.eq_words
+  - id: eq_newyear_daily
+    scope: event
+    metric: daily_challenge_done
+    target: 3
+    coin: 30
+    locKey: quest.eq_daily
+  - id: eq_spring_win
+    scope: event
+    metric: levels_won
+    target: 10
+    coin: 20
+    locKey: quest.eq_win
+  - id: eq_spring_words
+    scope: event
+    metric: words_found
+    target: 60
+    coin: 20
+    locKey: quest.eq_words
+  - id: eq_spring_daily
+    scope: event
+    metric: daily_challenge_done
+    target: 3
+    coin: 30
+    locKey: quest.eq_daily
+  - id: eq_hearts_win
+    scope: event
+    metric: levels_won
+    target: 4
+    coin: 20
+    locKey: quest.eq_win
+  - id: eq_hearts_words
+    scope: event
+    metric: words_found
+    target: 24
+    coin: 20
+    locKey: quest.eq_words
+  - id: eq_hearts_daily
+    scope: event
+    metric: daily_challenge_done
+    target: 1
+    coin: 30
+    locKey: quest.eq_daily
+  - id: eq_wordweek_win
+    scope: event
+    metric: levels_won
+    target: 8
+    coin: 20
+    locKey: quest.eq_win
+  - id: eq_wordweek_words
+    scope: event
+    metric: words_found
+    target: 48
+    coin: 20
+    locKey: quest.eq_words
+  - id: eq_wordweek_daily
+    scope: event
+    metric: daily_challenge_done
+    target: 3
+    coin: 30
+    locKey: quest.eq_daily
+  - id: eq_earth_win
+    scope: event
+    metric: levels_won
+    target: 4
+    coin: 20
+    locKey: quest.eq_win
+  - id: eq_earth_words
+    scope: event
+    metric: words_found
+    target: 24
+    coin: 20
+    locKey: quest.eq_words
+  - id: eq_earth_daily
+    scope: event
+    metric: daily_challenge_done
+    target: 1
+    coin: 30
+    locKey: quest.eq_daily
+  - id: eq_summer_win
+    scope: event
+    metric: levels_won
+    target: 12
+    coin: 20
+    locKey: quest.eq_win
+  - id: eq_summer_words
+    scope: event
+    metric: words_found
+    target: 72
+    coin: 20
+    locKey: quest.eq_words
+  - id: eq_summer_daily
+    scope: event
+    metric: daily_challenge_done
+    target: 3
+    coin: 30
+    locKey: quest.eq_daily
+  - id: eq_midyear_win
+    scope: event
+    metric: levels_won
+    target: 4
+    coin: 20
+    locKey: quest.eq_win
+  - id: eq_midyear_words
+    scope: event
+    metric: words_found
+    target: 24
+    coin: 20
+    locKey: quest.eq_words
+  - id: eq_midyear_daily
+    scope: event
+    metric: daily_challenge_done
+    target: 1
+    coin: 30
+    locKey: quest.eq_daily
+  - id: eq_school_win
+    scope: event
+    metric: levels_won
+    target: 8
+    coin: 20
+    locKey: quest.eq_win
+  - id: eq_school_words
+    scope: event
+    metric: words_found
+    target: 48
+    coin: 20
+    locKey: quest.eq_words
+  - id: eq_school_daily
+    scope: event
+    metric: daily_challenge_done
+    target: 3
+    coin: 30
+    locKey: quest.eq_daily
+  - id: eq_harvest_win
+    scope: event
+    metric: levels_won
+    target: 8
+    coin: 20
+    locKey: quest.eq_win
+  - id: eq_harvest_words
+    scope: event
+    metric: words_found
+    target: 48
+    coin: 20
+    locKey: quest.eq_words
+  - id: eq_harvest_daily
+    scope: event
+    metric: daily_challenge_done
+    target: 3
+    coin: 30
+    locKey: quest.eq_daily
+  - id: eq_spooky_win
+    scope: event
+    metric: levels_won
+    target: 6
+    coin: 20
+    locKey: quest.eq_win
+  - id: eq_spooky_words
+    scope: event
+    metric: words_found
+    target: 36
+    coin: 20
+    locKey: quest.eq_words
+  - id: eq_spooky_daily
+    scope: event
+    metric: daily_challenge_done
+    target: 1
+    coin: 30
+    locKey: quest.eq_daily
+  - id: eq_thanks_win
+    scope: event
+    metric: levels_won
+    target: 8
+    coin: 20
+    locKey: quest.eq_win
+  - id: eq_thanks_words
+    scope: event
+    metric: words_found
+    target: 48
+    coin: 20
+    locKey: quest.eq_words
+  - id: eq_thanks_daily
+    scope: event
+    metric: daily_challenge_done
+    target: 3
+    coin: 30
+    locKey: quest.eq_daily
+  - id: eq_winter_win
+    scope: event
+    metric: levels_won
+    target: 12
+    coin: 20
+    locKey: quest.eq_win
+  - id: eq_winter_words
+    scope: event
+    metric: words_found
+    target: 72
+    coin: 20
+    locKey: quest.eq_words
+  - id: eq_winter_daily
+    scope: event
+    metric: daily_challenge_done
+    target: 3
+    coin: 30
+    locKey: quest.eq_daily
+  dailyAllClearCoin: 10
+  anchorUtcDate: 2026-10-26
+  lengthDays: 365
+  loginRewards:
+  - id: lr_base
+    coin: 10
+    locKey: login.base
+  - id: lr_week
+    coin: 25
+    locKey: login.week
+  - id: lr_month
+    coin: 60
+    locKey: login.month
+  - id: lr_cycle
+    coin: 100
+    locKey: login.cycle
+  days:
+  - day: 1
+    month: 1
+    week: 1
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_newyear
+    bridge: 0
+  - day: 2
+    month: 1
+    week: 1
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_newyear
+    bridge: 0
+  - day: 3
+    month: 1
+    week: 1
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_newyear
+    bridge: 0
+  - day: 4
+    month: 1
+    week: 1
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_newyear
+    bridge: 0
+  - day: 5
+    month: 1
+    week: 1
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_newyear
+    bridge: 0
+  - day: 6
+    month: 1
+    week: 1
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_newyear
+    bridge: 0
+  - day: 7
+    month: 1
+    week: 1
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_newyear
+    bridge: 0
+  - day: 8
+    month: 1
+    week: 2
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 9
+    month: 1
+    week: 2
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 10
+    month: 1
+    week: 2
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 11
+    month: 1
+    week: 2
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 12
+    month: 1
+    week: 2
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 13
+    month: 1
+    week: 2
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 14
+    month: 1
+    week: 2
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 15
+    month: 1
+    week: 3
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 16
+    month: 1
+    week: 3
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 17
+    month: 1
+    week: 3
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 18
+    month: 1
+    week: 3
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 19
+    month: 1
+    week: 3
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 20
+    month: 1
+    week: 3
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 21
+    month: 1
+    week: 3
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 22
+    month: 1
+    week: 4
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 23
+    month: 1
+    week: 4
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 24
+    month: 1
+    week: 4
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 25
+    month: 1
+    week: 4
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 26
+    month: 1
+    week: 4
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 27
+    month: 1
+    week: 4
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 28
+    month: 1
+    week: 4
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 29
+    month: 1
+    week: 5
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 30
+    month: 1
+    week: 5
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 31
+    month: 1
+    week: 5
+    dow: 3
+    loginRef: lr_month
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 32
+    month: 2
+    week: 5
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_spring
+    bridge: 0
+  - day: 33
+    month: 2
+    week: 5
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_spring
+    bridge: 0
+  - day: 34
+    month: 2
+    week: 5
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_spring
+    bridge: 0
+  - day: 35
+    month: 2
+    week: 5
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_spring
+    bridge: 0
+  - day: 36
+    month: 2
+    week: 6
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_spring
+    bridge: 0
+  - day: 37
+    month: 2
+    week: 6
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_spring
+    bridge: 0
+  - day: 38
+    month: 2
+    week: 6
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_spring
+    bridge: 0
+  - day: 39
+    month: 2
+    week: 6
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_spring
+    bridge: 0
+  - day: 40
+    month: 2
+    week: 6
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_spring
+    bridge: 0
+  - day: 41
+    month: 2
+    week: 6
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 42
+    month: 2
+    week: 6
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 43
+    month: 2
+    week: 7
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 44
+    month: 2
+    week: 7
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 45
+    month: 2
+    week: 7
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_hearts
+    bridge: 0
+  - day: 46
+    month: 2
+    week: 7
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_hearts
+    bridge: 0
+  - day: 47
+    month: 2
+    week: 7
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 48
+    month: 2
+    week: 7
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 49
+    month: 2
+    week: 7
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 50
+    month: 2
+    week: 8
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 51
+    month: 2
+    week: 8
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 52
+    month: 2
+    week: 8
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 53
+    month: 2
+    week: 8
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 54
+    month: 2
+    week: 8
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 55
+    month: 2
+    week: 8
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 56
+    month: 2
+    week: 8
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 57
+    month: 2
+    week: 9
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 58
+    month: 2
+    week: 9
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 59
+    month: 2
+    week: 9
+    dow: 3
+    loginRef: lr_month
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 60
+    month: 3
+    week: 9
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 61
+    month: 3
+    week: 9
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 62
+    month: 3
+    week: 9
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 63
+    month: 3
+    week: 9
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 64
+    month: 3
+    week: 10
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 65
+    month: 3
+    week: 10
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 66
+    month: 3
+    week: 10
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 67
+    month: 3
+    week: 10
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 68
+    month: 3
+    week: 10
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 69
+    month: 3
+    week: 10
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 70
+    month: 3
+    week: 10
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 71
+    month: 3
+    week: 11
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 72
+    month: 3
+    week: 11
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 73
+    month: 3
+    week: 11
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 74
+    month: 3
+    week: 11
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 75
+    month: 3
+    week: 11
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 76
+    month: 3
+    week: 11
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 77
+    month: 3
+    week: 11
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 78
+    month: 3
+    week: 12
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 79
+    month: 3
+    week: 12
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 80
+    month: 3
+    week: 12
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 81
+    month: 3
+    week: 12
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 82
+    month: 3
+    week: 12
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 83
+    month: 3
+    week: 12
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 84
+    month: 3
+    week: 12
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 85
+    month: 3
+    week: 13
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 86
+    month: 3
+    week: 13
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 87
+    month: 3
+    week: 13
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 88
+    month: 3
+    week: 13
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 89
+    month: 3
+    week: 13
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 90
+    month: 3
+    week: 13
+    dow: 6
+    loginRef: lr_month
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 91
+    month: 4
+    week: 13
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_wordweek
+    bridge: 0
+  - day: 92
+    month: 4
+    week: 14
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_wordweek
+    bridge: 0
+  - day: 93
+    month: 4
+    week: 14
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_wordweek
+    bridge: 0
+  - day: 94
+    month: 4
+    week: 14
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_wordweek
+    bridge: 0
+  - day: 95
+    month: 4
+    week: 14
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_wordweek
+    bridge: 0
+  - day: 96
+    month: 4
+    week: 14
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_wordweek
+    bridge: 0
+  - day: 97
+    month: 4
+    week: 14
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_wordweek
+    bridge: 0
+  - day: 98
+    month: 4
+    week: 14
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 99
+    month: 4
+    week: 15
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 100
+    month: 4
+    week: 15
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 101
+    month: 4
+    week: 15
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 102
+    month: 4
+    week: 15
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 103
+    month: 4
+    week: 15
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 104
+    month: 4
+    week: 15
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 105
+    month: 4
+    week: 15
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 106
+    month: 4
+    week: 16
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 107
+    month: 4
+    week: 16
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 108
+    month: 4
+    week: 16
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 109
+    month: 4
+    week: 16
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 110
+    month: 4
+    week: 16
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 111
+    month: 4
+    week: 16
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 112
+    month: 4
+    week: 16
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_earth
+    bridge: 0
+  - day: 113
+    month: 4
+    week: 17
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_earth
+    bridge: 0
+  - day: 114
+    month: 4
+    week: 17
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 115
+    month: 4
+    week: 17
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 116
+    month: 4
+    week: 17
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 117
+    month: 4
+    week: 17
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 118
+    month: 4
+    week: 17
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 119
+    month: 4
+    week: 17
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 120
+    month: 4
+    week: 18
+    dow: 1
+    loginRef: lr_month
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 121
+    month: 5
+    week: 18
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 122
+    month: 5
+    week: 18
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 123
+    month: 5
+    week: 18
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 124
+    month: 5
+    week: 18
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 125
+    month: 5
+    week: 18
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 126
+    month: 5
+    week: 18
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 127
+    month: 5
+    week: 19
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 128
+    month: 5
+    week: 19
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 129
+    month: 5
+    week: 19
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 130
+    month: 5
+    week: 19
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 131
+    month: 5
+    week: 19
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 132
+    month: 5
+    week: 19
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 133
+    month: 5
+    week: 19
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 134
+    month: 5
+    week: 20
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 135
+    month: 5
+    week: 20
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 136
+    month: 5
+    week: 20
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 137
+    month: 5
+    week: 20
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 138
+    month: 5
+    week: 20
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 139
+    month: 5
+    week: 20
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 140
+    month: 5
+    week: 20
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 141
+    month: 5
+    week: 21
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 142
+    month: 5
+    week: 21
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 143
+    month: 5
+    week: 21
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 144
+    month: 5
+    week: 21
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 145
+    month: 5
+    week: 21
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 146
+    month: 5
+    week: 21
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 147
+    month: 5
+    week: 21
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 148
+    month: 5
+    week: 22
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 149
+    month: 5
+    week: 22
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 150
+    month: 5
+    week: 22
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 151
+    month: 5
+    week: 22
+    dow: 4
+    loginRef: lr_month
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 152
+    month: 6
+    week: 22
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_summer
+    bridge: 0
+  - day: 153
+    month: 6
+    week: 22
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_summer
+    bridge: 0
+  - day: 154
+    month: 6
+    week: 22
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_summer
+    bridge: 0
+  - day: 155
+    month: 6
+    week: 23
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_summer
+    bridge: 0
+  - day: 156
+    month: 6
+    week: 23
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_summer
+    bridge: 0
+  - day: 157
+    month: 6
+    week: 23
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_summer
+    bridge: 0
+  - day: 158
+    month: 6
+    week: 23
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_summer
+    bridge: 0
+  - day: 159
+    month: 6
+    week: 23
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_summer
+    bridge: 0
+  - day: 160
+    month: 6
+    week: 23
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_summer
+    bridge: 0
+  - day: 161
+    month: 6
+    week: 23
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_summer
+    bridge: 0
+  - day: 162
+    month: 6
+    week: 24
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_summer
+    bridge: 0
+  - day: 163
+    month: 6
+    week: 24
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_summer
+    bridge: 0
+  - day: 164
+    month: 6
+    week: 24
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_summer
+    bridge: 0
+  - day: 165
+    month: 6
+    week: 24
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_summer
+    bridge: 0
+  - day: 166
+    month: 6
+    week: 24
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_summer
+    bridge: 0
+  - day: 167
+    month: 6
+    week: 24
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 168
+    month: 6
+    week: 24
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 169
+    month: 6
+    week: 25
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 170
+    month: 6
+    week: 25
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 171
+    month: 6
+    week: 25
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 172
+    month: 6
+    week: 25
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 173
+    month: 6
+    week: 25
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 174
+    month: 6
+    week: 25
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 175
+    month: 6
+    week: 25
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 176
+    month: 6
+    week: 26
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 177
+    month: 6
+    week: 26
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 178
+    month: 6
+    week: 26
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 179
+    month: 6
+    week: 26
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 180
+    month: 6
+    week: 26
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 181
+    month: 6
+    week: 26
+    dow: 6
+    loginRef: lr_month
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 182
+    month: 7
+    week: 26
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_midyear
+    bridge: 0
+  - day: 183
+    month: 7
+    week: 27
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_midyear
+    bridge: 0
+  - day: 184
+    month: 7
+    week: 27
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_midyear
+    bridge: 0
+  - day: 185
+    month: 7
+    week: 27
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 186
+    month: 7
+    week: 27
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 187
+    month: 7
+    week: 27
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 188
+    month: 7
+    week: 27
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 189
+    month: 7
+    week: 27
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 190
+    month: 7
+    week: 28
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 191
+    month: 7
+    week: 28
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 192
+    month: 7
+    week: 28
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 193
+    month: 7
+    week: 28
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 194
+    month: 7
+    week: 28
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 195
+    month: 7
+    week: 28
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 196
+    month: 7
+    week: 28
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 197
+    month: 7
+    week: 29
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 198
+    month: 7
+    week: 29
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 199
+    month: 7
+    week: 29
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 200
+    month: 7
+    week: 29
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 201
+    month: 7
+    week: 29
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 202
+    month: 7
+    week: 29
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 203
+    month: 7
+    week: 29
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 204
+    month: 7
+    week: 30
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 205
+    month: 7
+    week: 30
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 206
+    month: 7
+    week: 30
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 207
+    month: 7
+    week: 30
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 208
+    month: 7
+    week: 30
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 209
+    month: 7
+    week: 30
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 210
+    month: 7
+    week: 30
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 211
+    month: 7
+    week: 31
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 212
+    month: 7
+    week: 31
+    dow: 2
+    loginRef: lr_month
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 213
+    month: 8
+    week: 31
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 214
+    month: 8
+    week: 31
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 215
+    month: 8
+    week: 31
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 216
+    month: 8
+    week: 31
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 217
+    month: 8
+    week: 31
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 218
+    month: 8
+    week: 32
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 219
+    month: 8
+    week: 32
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 220
+    month: 8
+    week: 32
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 221
+    month: 8
+    week: 32
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 222
+    month: 8
+    week: 32
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 223
+    month: 8
+    week: 32
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 224
+    month: 8
+    week: 32
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 225
+    month: 8
+    week: 33
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 226
+    month: 8
+    week: 33
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 227
+    month: 8
+    week: 33
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 228
+    month: 8
+    week: 33
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 229
+    month: 8
+    week: 33
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 230
+    month: 8
+    week: 33
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 231
+    month: 8
+    week: 33
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 232
+    month: 8
+    week: 34
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 233
+    month: 8
+    week: 34
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 234
+    month: 8
+    week: 34
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 235
+    month: 8
+    week: 34
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 236
+    month: 8
+    week: 34
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 237
+    month: 8
+    week: 34
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 238
+    month: 8
+    week: 34
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 239
+    month: 8
+    week: 35
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 240
+    month: 8
+    week: 35
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 241
+    month: 8
+    week: 35
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 242
+    month: 8
+    week: 35
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 243
+    month: 8
+    week: 35
+    dow: 5
+    loginRef: lr_month
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 244
+    month: 9
+    week: 35
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_school
+    bridge: 0
+  - day: 245
+    month: 9
+    week: 35
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_school
+    bridge: 0
+  - day: 246
+    month: 9
+    week: 36
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_school
+    bridge: 0
+  - day: 247
+    month: 9
+    week: 36
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_school
+    bridge: 0
+  - day: 248
+    month: 9
+    week: 36
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_school
+    bridge: 0
+  - day: 249
+    month: 9
+    week: 36
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_school
+    bridge: 0
+  - day: 250
+    month: 9
+    week: 36
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_school
+    bridge: 0
+  - day: 251
+    month: 9
+    week: 36
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 252
+    month: 9
+    week: 36
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 253
+    month: 9
+    week: 37
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 254
+    month: 9
+    week: 37
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 255
+    month: 9
+    week: 37
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 256
+    month: 9
+    week: 37
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 257
+    month: 9
+    week: 37
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 258
+    month: 9
+    week: 37
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 259
+    month: 9
+    week: 37
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 260
+    month: 9
+    week: 38
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 261
+    month: 9
+    week: 38
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 262
+    month: 9
+    week: 38
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 263
+    month: 9
+    week: 38
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 264
+    month: 9
+    week: 38
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 265
+    month: 9
+    week: 38
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 266
+    month: 9
+    week: 38
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 267
+    month: 9
+    week: 39
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 268
+    month: 9
+    week: 39
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 269
+    month: 9
+    week: 39
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 270
+    month: 9
+    week: 39
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 271
+    month: 9
+    week: 39
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 272
+    month: 9
+    week: 39
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 273
+    month: 9
+    week: 39
+    dow: 7
+    loginRef: lr_month
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 274
+    month: 10
+    week: 40
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_harvest
+    bridge: 0
+  - day: 275
+    month: 10
+    week: 40
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_harvest
+    bridge: 0
+  - day: 276
+    month: 10
+    week: 40
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_harvest
+    bridge: 0
+  - day: 277
+    month: 10
+    week: 40
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_harvest
+    bridge: 0
+  - day: 278
+    month: 10
+    week: 40
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_harvest
+    bridge: 0
+  - day: 279
+    month: 10
+    week: 40
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_harvest
+    bridge: 0
+  - day: 280
+    month: 10
+    week: 40
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_harvest
+    bridge: 0
+  - day: 281
+    month: 10
+    week: 41
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 282
+    month: 10
+    week: 41
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 283
+    month: 10
+    week: 41
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 284
+    month: 10
+    week: 41
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 285
+    month: 10
+    week: 41
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 286
+    month: 10
+    week: 41
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 287
+    month: 10
+    week: 41
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 288
+    month: 10
+    week: 42
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 289
+    month: 10
+    week: 42
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 290
+    month: 10
+    week: 42
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 291
+    month: 10
+    week: 42
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 292
+    month: 10
+    week: 42
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 293
+    month: 10
+    week: 42
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 294
+    month: 10
+    week: 42
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 295
+    month: 10
+    week: 43
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 296
+    month: 10
+    week: 43
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 297
+    month: 10
+    week: 43
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 298
+    month: 10
+    week: 43
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 299
+    month: 10
+    week: 43
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 300
+    month: 10
+    week: 43
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_spooky
+    bridge: 0
+  - day: 301
+    month: 10
+    week: 43
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_spooky
+    bridge: 0
+  - day: 302
+    month: 10
+    week: 44
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_spooky
+    bridge: 0
+  - day: 303
+    month: 10
+    week: 44
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_spooky
+    bridge: 0
+  - day: 304
+    month: 10
+    week: 44
+    dow: 3
+    loginRef: lr_month
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_spooky
+    bridge: 0
+  - day: 305
+    month: 11
+    week: 44
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 306
+    month: 11
+    week: 44
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 307
+    month: 11
+    week: 44
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 308
+    month: 11
+    week: 44
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 309
+    month: 11
+    week: 45
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 310
+    month: 11
+    week: 45
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 311
+    month: 11
+    week: 45
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 312
+    month: 11
+    week: 45
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 313
+    month: 11
+    week: 45
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 314
+    month: 11
+    week: 45
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 315
+    month: 11
+    week: 45
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 316
+    month: 11
+    week: 46
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 317
+    month: 11
+    week: 46
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 318
+    month: 11
+    week: 46
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 319
+    month: 11
+    week: 46
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 320
+    month: 11
+    week: 46
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 321
+    month: 11
+    week: 46
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 322
+    month: 11
+    week: 46
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 323
+    month: 11
+    week: 47
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 324
+    month: 11
+    week: 47
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 325
+    month: 11
+    week: 47
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_thanks
+    bridge: 0
+  - day: 326
+    month: 11
+    week: 47
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_thanks
+    bridge: 0
+  - day: 327
+    month: 11
+    week: 47
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_thanks
+    bridge: 0
+  - day: 328
+    month: 11
+    week: 47
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_thanks
+    bridge: 0
+  - day: 329
+    month: 11
+    week: 47
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_thanks
+    bridge: 0
+  - day: 330
+    month: 11
+    week: 48
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_thanks
+    bridge: 0
+  - day: 331
+    month: 11
+    week: 48
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_thanks
+    bridge: 0
+  - day: 332
+    month: 11
+    week: 48
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 333
+    month: 11
+    week: 48
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 334
+    month: 11
+    week: 48
+    dow: 5
+    loginRef: lr_month
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 335
+    month: 12
+    week: 48
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 336
+    month: 12
+    week: 48
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 337
+    month: 12
+    week: 49
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 338
+    month: 12
+    week: 49
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 339
+    month: 12
+    week: 49
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 340
+    month: 12
+    week: 49
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 341
+    month: 12
+    week: 49
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 342
+    month: 12
+    week: 49
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 343
+    month: 12
+    week: 49
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 344
+    month: 12
+    week: 50
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 345
+    month: 12
+    week: 50
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 346
+    month: 12
+    week: 50
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 347
+    month: 12
+    week: 50
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 348
+    month: 12
+    week: 50
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 349
+    month: 12
+    week: 50
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 350
+    month: 12
+    week: 50
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: 
+    bridge: 0
+  - day: 351
+    month: 12
+    week: 51
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: 
+    bridge: 0
+  - day: 352
+    month: 12
+    week: 51
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: 
+    bridge: 0
+  - day: 353
+    month: 12
+    week: 51
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: 
+    bridge: 0
+  - day: 354
+    month: 12
+    week: 51
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: 
+    bridge: 0
+  - day: 355
+    month: 12
+    week: 51
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_winter
+    bridge: 0
+  - day: 356
+    month: 12
+    week: 51
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_winter
+    bridge: 0
+  - day: 357
+    month: 12
+    week: 51
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_winter
+    bridge: 0
+  - day: 358
+    month: 12
+    week: 52
+    dow: 1
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_winter
+    bridge: 0
+  - day: 359
+    month: 12
+    week: 52
+    dow: 2
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_winter
+    bridge: 0
+  - day: 360
+    month: 12
+    week: 52
+    dow: 3
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_winter
+    bridge: 0
+  - day: 361
+    month: 12
+    week: 52
+    dow: 4
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_win_3
+    - dq_words_20
+    - dq_daily
+    eventRef: ev_winter
+    bridge: 0
+  - day: 362
+    month: 12
+    week: 52
+    dow: 5
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_words_20
+    - dq_daily
+    - dq_bot_1
+    eventRef: ev_winter
+    bridge: 0
+  - day: 363
+    month: 12
+    week: 52
+    dow: 6
+    loginRef: lr_base
+    dailyQuestRefs:
+    - dq_daily
+    - dq_bot_1
+    - dq_extra_1
+    eventRef: ev_winter
+    bridge: 0
+  - day: 364
+    month: 12
+    week: 52
+    dow: 7
+    loginRef: lr_week
+    dailyQuestRefs:
+    - dq_bot_1
+    - dq_extra_1
+    - dq_win_3
+    eventRef: ev_winter
+    bridge: 0
+  - day: 365
+    month: 12
+    week: 0
+    dow: 1
+    loginRef: lr_cycle
+    dailyQuestRefs:
+    - dq_extra_1
+    - dq_win_3
+    - dq_words_20
+    eventRef: ev_winter
+    bridge: 1
+  weeks:
+  - id: 1
+    startDay: 1
+    endDay: 7
+    questRefs:
+    - wq_win_20
+    - wq_words_150
+    - wq_daily_5
+    allClearCoin: 30
+    locKey: 
+  - id: 2
+    startDay: 8
+    endDay: 14
+    questRefs:
+    - wq_words_150
+    - wq_daily_5
+    - wq_bot_win_3
+    allClearCoin: 30
+    locKey: 
+  - id: 3
+    startDay: 15
+    endDay: 21
+    questRefs:
+    - wq_daily_5
+    - wq_bot_win_3
+    - wq_extra_5
+    allClearCoin: 30
+    locKey: 
+  - id: 4
+    startDay: 22
+    endDay: 28
+    questRefs:
+    - wq_bot_win_3
+    - wq_extra_5
+    - wq_login_5
+    allClearCoin: 30
+    locKey: 
+  - id: 5
+    startDay: 29
+    endDay: 35
+    questRefs:
+    - wq_extra_5
+    - wq_login_5
+    - wq_win_20
+    allClearCoin: 30
+    locKey: 
+  - id: 6
+    startDay: 36
+    endDay: 42
+    questRefs:
+    - wq_login_5
+    - wq_win_20
+    - wq_words_150
+    allClearCoin: 30
+    locKey: 
+  - id: 7
+    startDay: 43
+    endDay: 49
+    questRefs:
+    - wq_win_20
+    - wq_words_150
+    - wq_daily_5
+    allClearCoin: 30
+    locKey: 
+  - id: 8
+    startDay: 50
+    endDay: 56
+    questRefs:
+    - wq_words_150
+    - wq_daily_5
+    - wq_bot_win_3
+    allClearCoin: 30
+    locKey: 
+  - id: 9
+    startDay: 57
+    endDay: 63
+    questRefs:
+    - wq_daily_5
+    - wq_bot_win_3
+    - wq_extra_5
+    allClearCoin: 30
+    locKey: 
+  - id: 10
+    startDay: 64
+    endDay: 70
+    questRefs:
+    - wq_bot_win_3
+    - wq_extra_5
+    - wq_login_5
+    allClearCoin: 30
+    locKey: 
+  - id: 11
+    startDay: 71
+    endDay: 77
+    questRefs:
+    - wq_extra_5
+    - wq_login_5
+    - wq_win_20
+    allClearCoin: 30
+    locKey: 
+  - id: 12
+    startDay: 78
+    endDay: 84
+    questRefs:
+    - wq_login_5
+    - wq_win_20
+    - wq_words_150
+    allClearCoin: 30
+    locKey: 
+  - id: 13
+    startDay: 85
+    endDay: 91
+    questRefs:
+    - wq_win_20
+    - wq_words_150
+    - wq_daily_5
+    allClearCoin: 30
+    locKey: 
+  - id: 14
+    startDay: 92
+    endDay: 98
+    questRefs:
+    - wq_words_150
+    - wq_daily_5
+    - wq_bot_win_3
+    allClearCoin: 30
+    locKey: 
+  - id: 15
+    startDay: 99
+    endDay: 105
+    questRefs:
+    - wq_daily_5
+    - wq_bot_win_3
+    - wq_extra_5
+    allClearCoin: 30
+    locKey: 
+  - id: 16
+    startDay: 106
+    endDay: 112
+    questRefs:
+    - wq_bot_win_3
+    - wq_extra_5
+    - wq_login_5
+    allClearCoin: 30
+    locKey: 
+  - id: 17
+    startDay: 113
+    endDay: 119
+    questRefs:
+    - wq_extra_5
+    - wq_login_5
+    - wq_win_20
+    allClearCoin: 30
+    locKey: 
+  - id: 18
+    startDay: 120
+    endDay: 126
+    questRefs:
+    - wq_login_5
+    - wq_win_20
+    - wq_words_150
+    allClearCoin: 30
+    locKey: 
+  - id: 19
+    startDay: 127
+    endDay: 133
+    questRefs:
+    - wq_win_20
+    - wq_words_150
+    - wq_daily_5
+    allClearCoin: 30
+    locKey: 
+  - id: 20
+    startDay: 134
+    endDay: 140
+    questRefs:
+    - wq_words_150
+    - wq_daily_5
+    - wq_bot_win_3
+    allClearCoin: 30
+    locKey: 
+  - id: 21
+    startDay: 141
+    endDay: 147
+    questRefs:
+    - wq_daily_5
+    - wq_bot_win_3
+    - wq_extra_5
+    allClearCoin: 30
+    locKey: 
+  - id: 22
+    startDay: 148
+    endDay: 154
+    questRefs:
+    - wq_bot_win_3
+    - wq_extra_5
+    - wq_login_5
+    allClearCoin: 30
+    locKey: 
+  - id: 23
+    startDay: 155
+    endDay: 161
+    questRefs:
+    - wq_extra_5
+    - wq_login_5
+    - wq_win_20
+    allClearCoin: 30
+    locKey: 
+  - id: 24
+    startDay: 162
+    endDay: 168
+    questRefs:
+    - wq_login_5
+    - wq_win_20
+    - wq_words_150
+    allClearCoin: 30
+    locKey: 
+  - id: 25
+    startDay: 169
+    endDay: 175
+    questRefs:
+    - wq_win_20
+    - wq_words_150
+    - wq_daily_5
+    allClearCoin: 30
+    locKey: 
+  - id: 26
+    startDay: 176
+    endDay: 182
+    questRefs:
+    - wq_words_150
+    - wq_daily_5
+    - wq_bot_win_3
+    allClearCoin: 30
+    locKey: 
+  - id: 27
+    startDay: 183
+    endDay: 189
+    questRefs:
+    - wq_daily_5
+    - wq_bot_win_3
+    - wq_extra_5
+    allClearCoin: 30
+    locKey: 
+  - id: 28
+    startDay: 190
+    endDay: 196
+    questRefs:
+    - wq_bot_win_3
+    - wq_extra_5
+    - wq_login_5
+    allClearCoin: 30
+    locKey: 
+  - id: 29
+    startDay: 197
+    endDay: 203
+    questRefs:
+    - wq_extra_5
+    - wq_login_5
+    - wq_win_20
+    allClearCoin: 30
+    locKey: 
+  - id: 30
+    startDay: 204
+    endDay: 210
+    questRefs:
+    - wq_login_5
+    - wq_win_20
+    - wq_words_150
+    allClearCoin: 30
+    locKey: 
+  - id: 31
+    startDay: 211
+    endDay: 217
+    questRefs:
+    - wq_win_20
+    - wq_words_150
+    - wq_daily_5
+    allClearCoin: 30
+    locKey: 
+  - id: 32
+    startDay: 218
+    endDay: 224
+    questRefs:
+    - wq_words_150
+    - wq_daily_5
+    - wq_bot_win_3
+    allClearCoin: 30
+    locKey: 
+  - id: 33
+    startDay: 225
+    endDay: 231
+    questRefs:
+    - wq_daily_5
+    - wq_bot_win_3
+    - wq_extra_5
+    allClearCoin: 30
+    locKey: 
+  - id: 34
+    startDay: 232
+    endDay: 238
+    questRefs:
+    - wq_bot_win_3
+    - wq_extra_5
+    - wq_login_5
+    allClearCoin: 30
+    locKey: 
+  - id: 35
+    startDay: 239
+    endDay: 245
+    questRefs:
+    - wq_extra_5
+    - wq_login_5
+    - wq_win_20
+    allClearCoin: 30
+    locKey: 
+  - id: 36
+    startDay: 246
+    endDay: 252
+    questRefs:
+    - wq_login_5
+    - wq_win_20
+    - wq_words_150
+    allClearCoin: 30
+    locKey: 
+  - id: 37
+    startDay: 253
+    endDay: 259
+    questRefs:
+    - wq_win_20
+    - wq_words_150
+    - wq_daily_5
+    allClearCoin: 30
+    locKey: 
+  - id: 38
+    startDay: 260
+    endDay: 266
+    questRefs:
+    - wq_words_150
+    - wq_daily_5
+    - wq_bot_win_3
+    allClearCoin: 30
+    locKey: 
+  - id: 39
+    startDay: 267
+    endDay: 273
+    questRefs:
+    - wq_daily_5
+    - wq_bot_win_3
+    - wq_extra_5
+    allClearCoin: 30
+    locKey: 
+  - id: 40
+    startDay: 274
+    endDay: 280
+    questRefs:
+    - wq_bot_win_3
+    - wq_extra_5
+    - wq_login_5
+    allClearCoin: 30
+    locKey: 
+  - id: 41
+    startDay: 281
+    endDay: 287
+    questRefs:
+    - wq_extra_5
+    - wq_login_5
+    - wq_win_20
+    allClearCoin: 30
+    locKey: 
+  - id: 42
+    startDay: 288
+    endDay: 294
+    questRefs:
+    - wq_login_5
+    - wq_win_20
+    - wq_words_150
+    allClearCoin: 30
+    locKey: 
+  - id: 43
+    startDay: 295
+    endDay: 301
+    questRefs:
+    - wq_win_20
+    - wq_words_150
+    - wq_daily_5
+    allClearCoin: 30
+    locKey: 
+  - id: 44
+    startDay: 302
+    endDay: 308
+    questRefs:
+    - wq_words_150
+    - wq_daily_5
+    - wq_bot_win_3
+    allClearCoin: 30
+    locKey: 
+  - id: 45
+    startDay: 309
+    endDay: 315
+    questRefs:
+    - wq_daily_5
+    - wq_bot_win_3
+    - wq_extra_5
+    allClearCoin: 30
+    locKey: 
+  - id: 46
+    startDay: 316
+    endDay: 322
+    questRefs:
+    - wq_bot_win_3
+    - wq_extra_5
+    - wq_login_5
+    allClearCoin: 30
+    locKey: 
+  - id: 47
+    startDay: 323
+    endDay: 329
+    questRefs:
+    - wq_extra_5
+    - wq_login_5
+    - wq_win_20
+    allClearCoin: 30
+    locKey: 
+  - id: 48
+    startDay: 330
+    endDay: 336
+    questRefs:
+    - wq_login_5
+    - wq_win_20
+    - wq_words_150
+    allClearCoin: 30
+    locKey: 
+  - id: 49
+    startDay: 337
+    endDay: 343
+    questRefs:
+    - wq_win_20
+    - wq_words_150
+    - wq_daily_5
+    allClearCoin: 30
+    locKey: 
+  - id: 50
+    startDay: 344
+    endDay: 350
+    questRefs:
+    - wq_words_150
+    - wq_daily_5
+    - wq_bot_win_3
+    allClearCoin: 30
+    locKey: 
+  - id: 51
+    startDay: 351
+    endDay: 357
+    questRefs:
+    - wq_daily_5
+    - wq_bot_win_3
+    - wq_extra_5
+    allClearCoin: 30
+    locKey: 
+  - id: 52
+    startDay: 358
+    endDay: 364
+    questRefs:
+    - wq_bot_win_3
+    - wq_extra_5
+    - wq_login_5
+    allClearCoin: 30
+    locKey: 
+  months:
+  - id: 1
+    startDay: 1
+    endDay: 31
+    questRefs:
+    - mq_win_100
+    - mq_daily_20
+    - mq_login_20
+    allClearCoin: 100
+    locKey: month.01
+  - id: 2
+    startDay: 32
+    endDay: 59
+    questRefs:
+    - mq_daily_20
+    - mq_login_20
+    - mq_words_600
+    allClearCoin: 100
+    locKey: month.02
+  - id: 3
+    startDay: 60
+    endDay: 90
+    questRefs:
+    - mq_login_20
+    - mq_words_600
+    - mq_win_100
+    allClearCoin: 100
+    locKey: month.03
+  - id: 4
+    startDay: 91
+    endDay: 120
+    questRefs:
+    - mq_words_600
+    - mq_win_100
+    - mq_daily_20
+    allClearCoin: 100
+    locKey: month.04
+  - id: 5
+    startDay: 121
+    endDay: 151
+    questRefs:
+    - mq_win_100
+    - mq_daily_20
+    - mq_login_20
+    allClearCoin: 100
+    locKey: month.05
+  - id: 6
+    startDay: 152
+    endDay: 181
+    questRefs:
+    - mq_daily_20
+    - mq_login_20
+    - mq_words_600
+    allClearCoin: 100
+    locKey: month.06
+  - id: 7
+    startDay: 182
+    endDay: 212
+    questRefs:
+    - mq_login_20
+    - mq_words_600
+    - mq_win_100
+    allClearCoin: 100
+    locKey: month.07
+  - id: 8
+    startDay: 213
+    endDay: 243
+    questRefs:
+    - mq_words_600
+    - mq_win_100
+    - mq_daily_20
+    allClearCoin: 100
+    locKey: month.08
+  - id: 9
+    startDay: 244
+    endDay: 273
+    questRefs:
+    - mq_win_100
+    - mq_daily_20
+    - mq_login_20
+    allClearCoin: 100
+    locKey: month.09
+  - id: 10
+    startDay: 274
+    endDay: 304
+    questRefs:
+    - mq_daily_20
+    - mq_login_20
+    - mq_words_600
+    allClearCoin: 100
+    locKey: month.10
+  - id: 11
+    startDay: 305
+    endDay: 334
+    questRefs:
+    - mq_login_20
+    - mq_words_600
+    - mq_win_100
+    allClearCoin: 100
+    locKey: month.11
+  - id: 12
+    startDay: 335
+    endDay: 365
+    questRefs:
+    - mq_words_600
+    - mq_win_100
+    - mq_daily_20
+    allClearCoin: 100
+    locKey: month.12
+  events:
+  - id: ev_newyear
+    startDay: 1
+    endDay: 7
+    questRefs:
+    - eq_newyear_win
+    - eq_newyear_words
+    - eq_newyear_daily
+    allClearCoin: 50
+    locKey: event.newyear
+  - id: ev_spring
+    startDay: 32
+    endDay: 40
+    questRefs:
+    - eq_spring_win
+    - eq_spring_words
+    - eq_spring_daily
+    allClearCoin: 50
+    locKey: event.spring
+  - id: ev_hearts
+    startDay: 45
+    endDay: 46
+    questRefs:
+    - eq_hearts_win
+    - eq_hearts_words
+    - eq_hearts_daily
+    allClearCoin: 50
+    locKey: event.hearts
+  - id: ev_wordweek
+    startDay: 91
+    endDay: 97
+    questRefs:
+    - eq_wordweek_win
+    - eq_wordweek_words
+    - eq_wordweek_daily
+    allClearCoin: 50
+    locKey: event.wordweek
+  - id: ev_earth
+    startDay: 112
+    endDay: 113
+    questRefs:
+    - eq_earth_win
+    - eq_earth_words
+    - eq_earth_daily
+    allClearCoin: 50
+    locKey: event.earth
+  - id: ev_summer
+    startDay: 152
+    endDay: 166
+    questRefs:
+    - eq_summer_win
+    - eq_summer_words
+    - eq_summer_daily
+    allClearCoin: 50
+    locKey: event.summer
+  - id: ev_midyear
+    startDay: 182
+    endDay: 184
+    questRefs:
+    - eq_midyear_win
+    - eq_midyear_words
+    - eq_midyear_daily
+    allClearCoin: 50
+    locKey: event.midyear
+  - id: ev_school
+    startDay: 244
+    endDay: 250
+    questRefs:
+    - eq_school_win
+    - eq_school_words
+    - eq_school_daily
+    allClearCoin: 50
+    locKey: event.school
+  - id: ev_harvest
+    startDay: 274
+    endDay: 280
+    questRefs:
+    - eq_harvest_win
+    - eq_harvest_words
+    - eq_harvest_daily
+    allClearCoin: 50
+    locKey: event.harvest
+  - id: ev_spooky
+    startDay: 300
+    endDay: 304
+    questRefs:
+    - eq_spooky_win
+    - eq_spooky_words
+    - eq_spooky_daily
+    allClearCoin: 50
+    locKey: event.spooky
+  - id: ev_thanks
+    startDay: 325
+    endDay: 331
+    questRefs:
+    - eq_thanks_win
+    - eq_thanks_words
+    - eq_thanks_daily
+    allClearCoin: 50
+    locKey: event.thanks
+  - id: ev_winter
+    startDay: 355
+    endDay: 365
+    questRefs:
+    - eq_winter_win
+    - eq_winter_words
+    - eq_winter_daily
+    allClearCoin: 50
+    locKey: event.winter

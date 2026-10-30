@@ -1,0 +1,890 @@
+{
+ "ad.cancel": {
+  "es": "Cerrado antes, sin premio",
+  "fr": "Fermée tôt, pas de récompense",
+  "pt": "Fechado cedo, sem prêmio"
+ },
+ "ad.cap": {
+  "es": "Límite diario alcanzado",
+  "fr": "Limite du jour atteinte",
+  "pt": "Limite diário atingido"
+ },
+ "ad.cooldown": {
+  "es": "En espera",
+  "fr": "En recharge",
+  "pt": "Em espera"
+ },
+ "ad.error": {
+  "es": "Error de anuncio, sin perder monedas",
+  "fr": "Erreur de pub, aucune pièce perdue",
+  "pt": "Erro no anúncio, nenhuma moeda perdida"
+ },
+ "ad.loading": {
+  "es": "Cargando anuncio…",
+  "fr": "Chargement de la pub…",
+  "pt": "Carregando anúncio…"
+ },
+ "ad.nofill": {
+  "es": "Sin anuncio, inténtalo luego",
+  "fr": "Pas de pub, réessayez plus tard",
+  "pt": "Sem anúncio, tente mais tarde"
+ },
+ "ad.offline": {
+  "es": "Sin conexión",
+  "fr": "Vous êtes hors ligne",
+  "pt": "Você está offline"
+ },
+ "ad.ready": {
+  "es": "Listo",
+  "fr": "Prêt",
+  "pt": "Pronto"
+ },
+ "ad.success": {
+  "es": "Premio recibido",
+  "fr": "Récompense obtenue",
+  "pt": "Prêmio recebido"
+ },
+ "bot.cap": {
+  "en": "Bot rewards today: {a}/{b} coins",
+  "es": "Recompensas del bot hoy: {a}/{b} monedas",
+  "fr": "Récompenses du bot aujourd'hui : {a}/{b} pièces",
+  "pt": "Recompensas do bot hoje: {a}/{b} moedas",
+  "vi": "Thưởng bot hôm nay: {a}/{b} coin"
+ },
+ "bot.d.easy": {
+  "en": "Slow, often misses words. Win +{n} coins",
+  "es": "Lento, suele dejarse palabras. Victoria +{n} monedas",
+  "fr": "Lent, rate souvent des mots. Victoire +{n} pièces",
+  "pt": "Lento, costuma perder palavras. Vitória +{n} moedas",
+  "vi": "Chậm, hay bỏ sót từ. Thắng +{n} coin"
+ },
+ "bot.d.hard": {
+  "en": "Fast, rarely misses. Win +{n} coins",
+  "es": "Rápido, rara vez falla. Victoria +{n} monedas",
+  "fr": "Rapide, rate rarement. Victoire +{n} pièces",
+  "pt": "Rápido, raramente perde palavras. Vitória +{n} moedas",
+  "vi": "Nhanh, ít bỏ sót. Thắng +{n} coin"
+ },
+ "bot.d.normal": {
+  "en": "Steady pace. Win +{n} coins",
+  "es": "Ritmo constante. Victoria +{n} monedas",
+  "fr": "Rythme régulier. Victoire +{n} pièces",
+  "pt": "Ritmo constante. Vitória +{n} moedas",
+  "vi": "Tốc độ vừa phải. Thắng +{n} coin"
+ },
+ "bot.reward": {
+  "en": "Reward: +{n} coins",
+  "es": "Recompensa: +{n} monedas",
+  "fr": "Récompense : +{n} pièces",
+  "pt": "Recompensa: +{n} moedas",
+  "vi": "Thưởng: +{n} coin"
+ },
+ "common.addRubies": {
+  "en": "Get coins",
+  "es": "Conseguir monedas",
+  "fr": "Obtenir des pièces",
+  "pt": "Ganhar moedas",
+  "vi": "Thêm coin"
+ },
+ "common.balance": {
+  "en": "Coin balance",
+  "es": "Saldo de monedas",
+  "fr": "Solde de pièces",
+  "pt": "Saldo de moedas",
+  "vi": "Số coin"
+ },
+ "common.rubies": {
+  "en": "coins",
+  "es": "monedas",
+  "fr": "pièces",
+  "pt": "moedas",
+  "vi": "coin"
+ },
+ "currency.coin": {
+  "es": "Monedas",
+  "fr": "Pièces",
+  "pt": "Moedas"
+ },
+ "daily.backfill": {
+  "en": "Make-up day: +{n} coins, keeps your streak",
+  "es": "Día de recuperación: +{n} monedas, mantiene tu racha",
+  "fr": "Jour de rattrapage : +{n} pièces, série conservée",
+  "pt": "Dia de reposição: +{n} moedas, mantém sua sequência",
+  "vi": "Bù ngày bị lỡ: +{n} coin, giữ chuỗi"
+ },
+ "daily.nextMilestone": {
+  "en": "Next bonus: {d} days → +{n} coins",
+  "es": "Próximo bonus: {d} días → +{n} monedas",
+  "fr": "Prochain bonus : {d} jours → +{n} pièces",
+  "pt": "Próximo bônus: {d} dias → +{n} moedas",
+  "vi": "Mốc kế: {d} ngày → +{n} coin"
+ },
+ "daily.reward": {
+  "en": "Reward: +{n} coins, claimed once",
+  "es": "Recompensa: +{n} monedas, una sola vez",
+  "fr": "Récompense : +{n} pièces, une seule fois",
+  "pt": "Recompensa: +{n} moedas, resgatada uma vez",
+  "vi": "Thưởng: +{n} coin, nhận một lần"
+ },
+ "econ.ad.left": {
+  "en": "{n} left today",
+  "es": "Quedan {n} hoy",
+  "fr": "Encore {n} aujourd'hui",
+  "pt": "Restam {n} hoje",
+  "vi": "Còn {n} lượt hôm nay"
+ },
+ "econ.allClear": {
+  "en": "Clear-all bonus",
+  "es": "Bono completar todo",
+  "fr": "Bonus tout terminé",
+  "pt": "Bônus concluir tudo",
+  "vi": "Thưởng hoàn thành hết"
+ },
+ "econ.bridge": {
+  "en": "Day {d} · Bridge day",
+  "es": "Día {d} · Día puente",
+  "fr": "Jour {d} · Transition",
+  "pt": "Dia {d} · Dia de ligação",
+  "vi": "Ngày {d} · Ngày cầu nối"
+ },
+ "econ.claim": {
+  "en": "CLAIM",
+  "es": "COBRAR",
+  "fr": "PRENDRE",
+  "pt": "PEGAR",
+  "vi": "NHẬN"
+ },
+ "econ.claimed": {
+  "en": "CLAIMED",
+  "es": "HECHO",
+  "fr": "REÇU",
+  "pt": "FEITO",
+  "vi": "ĐÃ NHẬN"
+ },
+ "econ.cycle": {
+  "en": "Cycle {c} · Day {d}/365",
+  "es": "Ciclo {c} · Día {d}/365",
+  "fr": "Cycle {c} · Jour {d}/365",
+  "pt": "Ciclo {c} · Dia {d}/365",
+  "vi": "Chu kỳ {c} · Ngày {d}/365"
+ },
+ "econ.dailyQuests": {
+  "en": "Daily quests · {t} left",
+  "es": "Misiones del día · quedan {t}",
+  "fr": "Quêtes du jour · reste {t}",
+  "pt": "Missões do dia · faltam {t}",
+  "vi": "Nhiệm vụ ngày · còn {t}"
+ },
+ "econ.dayWeek": {
+  "en": "Day {d} · Week {w}",
+  "es": "Día {d} · Semana {w}",
+  "fr": "Jour {d} · Semaine {w}",
+  "pt": "Dia {d} · Semana {w}",
+  "vi": "Ngày {d} · Tuần {w}"
+ },
+ "econ.extraToast": {
+  "en": "Bonus word: +{n} coins",
+  "es": "Palabra extra: +{n} monedas",
+  "fr": "Mot bonus : +{n} pièces",
+  "pt": "Palavra extra: +{n} moedas",
+  "vi": "Từ thưởng: +{n} coin"
+ },
+ "econ.free": {
+  "en": "Quests never require purchases or ads",
+  "es": "Las misiones no exigen compras ni anuncios",
+  "fr": "Les quêtes n'exigent ni achat ni pub",
+  "pt": "As missões não exigem compras nem anúncios",
+  "vi": "Nhiệm vụ không cần mua hay xem quảng cáo"
+ },
+ "econ.legend": {
+  "en": "Teal border: today · Pink: event · Yellow: bridge",
+  "es": "Borde turquesa: hoy · Rosa: evento · Amarillo: puente",
+  "fr": "Bord turquoise : aujourd'hui · Rose : événement · Jaune : transition",
+  "pt": "Borda turquesa: hoje · Rosa: evento · Amarelo: ligação",
+  "vi": "Viền xanh: hôm nay · Hồng: sự kiện · Vàng: cầu nối"
+ },
+ "econ.levelMilestones": {
+  "en": "Level milestones",
+  "es": "Hitos de niveles",
+  "fr": "Paliers de niveaux",
+  "pt": "Marcos de níveis",
+  "vi": "Mốc level"
+ },
+ "econ.login": {
+  "en": "Today's login reward",
+  "es": "Premio de hoy",
+  "fr": "Connexion du jour",
+  "pt": "Prêmio de hoje",
+  "vi": "Thưởng đăng nhập hôm nay"
+ },
+ "econ.nextEvent": {
+  "en": "Next event: {e} (day {a})",
+  "es": "Próximo: {e} (día {a})",
+  "fr": "Prochain : {e} (jour {a})",
+  "pt": "Próximo: {e} (dia {a})",
+  "vi": "Sự kiện kế: {e} (ngày {a})"
+ },
+ "econ.noEvent": {
+  "en": "No event today",
+  "es": "Hoy no hay evento",
+  "fr": "Pas d'événement aujourd'hui",
+  "pt": "Nenhum evento hoje",
+  "vi": "Không có sự kiện hôm nay"
+ },
+ "econ.noWeek": {
+  "en": "Bridge day: no weekly quests",
+  "es": "Día puente: sin misiones semanales",
+  "fr": "Jour de transition : pas de quêtes hebdo",
+  "pt": "Dia de ligação: sem missões semanais",
+  "vi": "Ngày cầu nối: không có nhiệm vụ tuần"
+ },
+ "econ.periodDays": {
+  "en": "{p} · days {a}–{b}",
+  "es": "{p} · días {a}–{b}",
+  "fr": "{p} · jours {a}–{b}",
+  "pt": "{p} · dias {a}–{b}",
+  "vi": "{p} · ngày {a}–{b}"
+ },
+ "econ.progress": {
+  "en": "{a}/{b} · +{n} coins",
+  "es": "{a}/{b} · +{n} monedas",
+  "fr": "{a}/{b} · +{n} pièces",
+  "pt": "{a}/{b} · +{n} moedas",
+  "vi": "{a}/{b} · +{n} coin"
+ },
+ "econ.quests": {
+  "en": "Quests: {q}",
+  "es": "Misiones: {q}",
+  "fr": "Quêtes : {q}",
+  "pt": "Missões: {q}",
+  "vi": "Nhiệm vụ: {q}"
+ },
+ "econ.repair": {
+  "en": "Repair streak (1 day missed)",
+  "es": "Salvar racha (1 día perdido)",
+  "fr": "Sauver la série (1 jour manqué)",
+  "pt": "Salvar sequência (1 dia perdido)",
+  "vi": "Cứu chuỗi (lỡ 1 ngày)"
+ },
+ "econ.reward": {
+  "en": "+{n} coins",
+  "es": "+{n} monedas",
+  "fr": "+{n} pièces",
+  "pt": "+{n} moedas",
+  "vi": "+{n} coin"
+ },
+ "econ.soon": {
+  "en": "Coming soon",
+  "es": "Pronto",
+  "fr": "Bientôt",
+  "pt": "Em breve",
+  "vi": "Sắp có"
+ },
+ "econ.streak": {
+  "en": "{n}-day streak · Best {b}",
+  "es": "Racha {n} d · Récord {b}",
+  "fr": "Série {n} j · Record {b}",
+  "pt": "Sequência {n} d · Recorde {b}",
+  "vi": "Chuỗi {n} ngày · Kỷ lục {b}"
+ },
+ "econ.streakMilestones": {
+  "en": "Streak milestones",
+  "es": "Hitos de racha",
+  "fr": "Paliers de série",
+  "pt": "Marcos de sequência",
+  "vi": "Mốc chuỗi"
+ },
+ "econ.tab.event": {
+  "en": "Event",
+  "es": "Evento",
+  "fr": "Événement",
+  "pt": "Evento",
+  "vi": "Sự kiện"
+ },
+ "econ.tab.month": {
+  "en": "Month",
+  "es": "Mes",
+  "fr": "Mois",
+  "pt": "Mês",
+  "vi": "Tháng"
+ },
+ "econ.tab.today": {
+  "en": "Today",
+  "es": "Hoy",
+  "fr": "Aujourd'hui",
+  "pt": "Hoje",
+  "vi": "Hôm nay"
+ },
+ "econ.tab.week": {
+  "en": "Week",
+  "es": "Semana",
+  "fr": "Semaine",
+  "pt": "Semana",
+  "vi": "Tuần"
+ },
+ "econ.tab.year": {
+  "en": "Year",
+  "es": "Año",
+  "fr": "Année",
+  "pt": "Ano",
+  "vi": "Năm"
+ },
+ "econ.title": {
+  "en": "Quests & Rewards",
+  "es": "Misiones y premios",
+  "fr": "Quêtes et récompenses",
+  "pt": "Missões e prêmios",
+  "vi": "Nhiệm vụ & Thưởng"
+ },
+ "econ.weekN": {
+  "en": "Week {n}",
+  "es": "Semana {n}",
+  "fr": "Semaine {n}",
+  "pt": "Semana {n}",
+  "vi": "Tuần {n}"
+ },
+ "event.earth": {
+  "es": "Día de la Tierra",
+  "fr": "Jour de la Terre",
+  "pt": "Dia da Terra"
+ },
+ "event.harvest": {
+  "es": "Cosecha",
+  "fr": "Moisson",
+  "pt": "Colheita"
+ },
+ "event.hearts": {
+  "es": "Día de los corazones",
+  "fr": "Jour des cœurs",
+  "pt": "Dia dos corações"
+ },
+ "event.midyear": {
+  "es": "Mitad de año",
+  "fr": "Mi-année",
+  "pt": "Meio do ano"
+ },
+ "event.newyear": {
+  "es": "Año Nuevo",
+  "fr": "Nouvel An",
+  "pt": "Ano Novo"
+ },
+ "event.school": {
+  "es": "Vuelta al cole",
+  "fr": "Rentrée",
+  "pt": "Volta às aulas"
+ },
+ "event.spooky": {
+  "es": "Noche de disfraces",
+  "fr": "Nuit déguisée",
+  "pt": "Noite das fantasias"
+ },
+ "event.spring": {
+  "es": "Fiesta de primavera",
+  "fr": "Fête du printemps",
+  "pt": "Festa da primavera"
+ },
+ "event.summer": {
+  "es": "Verano radiante",
+  "fr": "Été éclatant",
+  "pt": "Verão radiante"
+ },
+ "event.thanks": {
+  "es": "Semana de gracias",
+  "fr": "Semaine merci",
+  "pt": "Semana de gratidão"
+ },
+ "event.winter": {
+  "es": "Invierno mágico",
+  "fr": "Hiver magique",
+  "pt": "Inverno mágico"
+ },
+ "event.wordweek": {
+  "es": "Semana de las palabras",
+  "fr": "Semaine des mots",
+  "pt": "Semana das palavras"
+ },
+ "extra.claim": {
+  "en": "CLAIM +{n} COINS",
+  "es": "RECOGER +{n} MONEDAS",
+  "fr": "RÉCUPÉRER +{n} PIÈCES",
+  "pt": "RESGATAR +{n} MOEDAS",
+  "vi": "NHẬN +{n} COIN"
+ },
+ "extra.claimed": {
+  "en": "Claimed +{n} coins",
+  "es": "Recogidas +{n} monedas",
+  "fr": "+{n} pièces récupérées",
+  "pt": "+{n} moedas resgatadas",
+  "vi": "Đã nhận +{n} coin"
+ },
+ "extra.desc": {
+  "en": "Find more and more new words to collect coins",
+  "es": "Encuentra más palabras nuevas para conseguir monedas",
+  "fr": "Trouvez de nouveaux mots pour gagner des pièces",
+  "pt": "Encontre mais palavras novas para ganhar moedas",
+  "vi": "Tìm thêm từ mới để nhận coin"
+ },
+ "game.coach2": {
+  "en": "Find every word to win. No coins needed.",
+  "es": "Encuentra todas las palabras para ganar. No hacen falta monedas.",
+  "fr": "Trouvez tous les mots pour gagner. Aucune pièce requise.",
+  "pt": "Encontre todas as palavras para vencer. Não precisa de moedas.",
+  "vi": "Tìm đủ các từ để thắng. Không cần coin."
+ },
+ "how.3": {
+  "en": "Shuffle is free. Hints cost coins but are never required.",
+  "es": "Mezclar es gratis. Las pistas cuestan monedas, pero nunca son obligatorias.",
+  "fr": "Mélanger est gratuit. Les indices coûtent des pièces mais ne sont jamais obligatoires.",
+  "pt": "Embaralhar é grátis. As dicas custam moedas, mas nunca são obrigatórias.",
+  "vi": "Xáo chữ miễn phí. Gợi ý tốn coin nhưng không bắt buộc."
+ },
+ "login.base": {
+  "es": "Premio de conexión",
+  "fr": "Récompense de connexion",
+  "pt": "Prêmio de login"
+ },
+ "login.cycle": {
+  "es": "Premio de fin de ciclo",
+  "fr": "Récompense de fin de cycle",
+  "pt": "Prêmio de fim de ciclo"
+ },
+ "login.month": {
+  "es": "Premio de fin de mes",
+  "fr": "Récompense de fin de mois",
+  "pt": "Prêmio de fim de mês"
+ },
+ "login.week": {
+  "es": "Premio del día 7",
+  "fr": "Récompense du 7e jour",
+  "pt": "Prêmio do 7º dia"
+ },
+ "low.desc": {
+  "en": "You have {a} coins. Hints are optional; you can keep playing for free.",
+  "es": "Tienes {a} monedas. Las pistas son opcionales; puedes seguir jugando gratis.",
+  "fr": "Vous avez {a} pièces. Les indices sont facultatifs, vous pouvez continuer à jouer gratuitement.",
+  "pt": "Você tem {a} moedas. As dicas são opcionais; você pode continuar jogando de graça.",
+  "vi": "Bạn có {a} coin. Gợi ý là tuỳ chọn, bạn vẫn chơi tiếp được miễn phí."
+ },
+ "low.title": {
+  "en": "NEED {n} COINS",
+  "es": "HACEN FALTA {n} MONEDAS",
+  "fr": "IL FAUT {n} PIÈCES",
+  "pt": "PRECISA DE {n} MOEDAS",
+  "vi": "CẦN {n} COIN"
+ },
+ "low.watch": {
+  "en": "WATCH VIDEO +{n} COINS (optional)",
+  "es": "VER VÍDEO +{n} MONEDAS (opcional)",
+  "fr": "VIDÉO +{n} PIÈCES (facultatif)",
+  "pt": "VÍDEO +{n} MOEDAS (opcional)",
+  "vi": "XEM VIDEO +{n} COIN (tuỳ chọn)"
+ },
+ "milestone.lm_10": {
+  "es": "Completa 10 niveles",
+  "fr": "Finir 10 niveaux",
+  "pt": "Conclua 10 níveis"
+ },
+ "milestone.lm_100": {
+  "es": "Completa 100 niveles",
+  "fr": "Finir 100 niveaux",
+  "pt": "Conclua 100 níveis"
+ },
+ "milestone.lm_200": {
+  "es": "Completa 200 niveles",
+  "fr": "Finir 200 niveaux",
+  "pt": "Conclua 200 níveis"
+ },
+ "milestone.lm_25": {
+  "es": "Completa 25 niveles",
+  "fr": "Finir 25 niveaux",
+  "pt": "Conclua 25 níveis"
+ },
+ "milestone.lm_300": {
+  "es": "Completa 300 niveles",
+  "fr": "Finir 300 niveaux",
+  "pt": "Conclua 300 níveis"
+ },
+ "milestone.lm_400": {
+  "es": "Completa 400 niveles",
+  "fr": "Finir 400 niveaux",
+  "pt": "Conclua 400 níveis"
+ },
+ "milestone.lm_50": {
+  "es": "Completa 50 niveles",
+  "fr": "Finir 50 niveaux",
+  "pt": "Conclua 50 níveis"
+ },
+ "milestone.lm_534": {
+  "es": "Completa 534 niveles",
+  "fr": "Finir 534 niveaux",
+  "pt": "Conclua 534 níveis"
+ },
+ "month.01": {
+  "es": "Mes 1",
+  "fr": "Mois 1",
+  "pt": "Mês 1"
+ },
+ "month.02": {
+  "es": "Mes 2",
+  "fr": "Mois 2",
+  "pt": "Mês 2"
+ },
+ "month.03": {
+  "es": "Mes 3",
+  "fr": "Mois 3",
+  "pt": "Mês 3"
+ },
+ "month.04": {
+  "es": "Mes 4",
+  "fr": "Mois 4",
+  "pt": "Mês 4"
+ },
+ "month.05": {
+  "es": "Mes 5",
+  "fr": "Mois 5",
+  "pt": "Mês 5"
+ },
+ "month.06": {
+  "es": "Mes 6",
+  "fr": "Mois 6",
+  "pt": "Mês 6"
+ },
+ "month.07": {
+  "es": "Mes 7",
+  "fr": "Mois 7",
+  "pt": "Mês 7"
+ },
+ "month.08": {
+  "es": "Mes 8",
+  "fr": "Mois 8",
+  "pt": "Mês 8"
+ },
+ "month.09": {
+  "es": "Mes 9",
+  "fr": "Mois 9",
+  "pt": "Mês 9"
+ },
+ "month.10": {
+  "es": "Mes 10",
+  "fr": "Mois 10",
+  "pt": "Mês 10"
+ },
+ "month.11": {
+  "es": "Mes 11",
+  "fr": "Mois 11",
+  "pt": "Mês 11"
+ },
+ "month.12": {
+  "es": "Mes 12",
+  "fr": "Mois 12",
+  "pt": "Mês 12"
+ },
+ "noti.ruby": {
+  "en": "You got {n} free coins. Play and challenge yourself!",
+  "es": "Has conseguido {n} monedas gratis. ¡Juega y ponte a prueba!",
+  "fr": "Vous avez reçu {n} pièces gratuites. Jouez et relevez le défi !",
+  "pt": "Você ganhou {n} moedas grátis. Jogue e desafie-se!",
+  "vi": "Bạn nhận được {n} coin miễn phí. Vào chơi và thử thách bản thân nhé"
+ },
+ "noti.rubyTitle": {
+  "en": "Coin gift",
+  "es": "Regalo de monedas",
+  "fr": "Cadeau de pièces",
+  "pt": "Presente de moedas",
+  "vi": "Quà coin"
+ },
+ "noti.toast": {
+  "en": "You got {n} free coins",
+  "es": "Has conseguido {n} monedas gratis",
+  "fr": "Vous avez reçu {n} pièces gratuites",
+  "pt": "Você ganhou {n} moedas grátis",
+  "vi": "Bạn nhận được {n} coin miễn phí"
+ },
+ "quest.dq_bot_1": {
+  "es": "Juega 1 partida Bot",
+  "fr": "Jouer 1 match Bot",
+  "pt": "Jogue 1 partida Bot"
+ },
+ "quest.dq_daily": {
+  "es": "Completa el Diario",
+  "fr": "Finir le Quotidien",
+  "pt": "Conclua o Diário"
+ },
+ "quest.dq_extra_1": {
+  "es": "Encuentra 1 palabra extra",
+  "fr": "Trouver 1 mot bonus",
+  "pt": "Encontre 1 palavra extra"
+ },
+ "quest.dq_win_3": {
+  "es": "Gana 3 niveles",
+  "fr": "Gagner 3 niveaux",
+  "pt": "Vença 3 níveis"
+ },
+ "quest.dq_words_20": {
+  "es": "Encuentra 20 palabras",
+  "fr": "Trouver 20 mots",
+  "pt": "Encontre 20 palavras"
+ },
+ "quest.eq_daily": {
+  "es": "Diario durante el evento",
+  "fr": "Quotidien pendant l'événement",
+  "pt": "Diário durante o evento"
+ },
+ "quest.eq_win": {
+  "es": "Gana niveles durante el evento",
+  "fr": "Gagner des niveaux pendant l'événement",
+  "pt": "Vença níveis durante o evento"
+ },
+ "quest.eq_words": {
+  "es": "Encuentra palabras durante el evento",
+  "fr": "Trouver des mots pendant l'événement",
+  "pt": "Encontre palavras durante o evento"
+ },
+ "quest.mq_daily_20": {
+  "es": "Completa el Diario 20 veces",
+  "fr": "Finir le Quotidien 20 fois",
+  "pt": "Conclua o Diário 20 vezes"
+ },
+ "quest.mq_login_20": {
+  "es": "Entra 20 días",
+  "fr": "Se connecter 20 jours",
+  "pt": "Entre em 20 dias"
+ },
+ "quest.mq_win_100": {
+  "es": "Gana 100 niveles",
+  "fr": "Gagner 100 niveaux",
+  "pt": "Vença 100 níveis"
+ },
+ "quest.mq_words_600": {
+  "es": "Encuentra 600 palabras",
+  "fr": "Trouver 600 mots",
+  "pt": "Encontre 600 palavras"
+ },
+ "quest.wq_bot_win_3": {
+  "es": "Vence al Bot 3 veces",
+  "fr": "Battre le Bot 3 fois",
+  "pt": "Vença o Bot 3 vezes"
+ },
+ "quest.wq_daily_5": {
+  "es": "Completa el Diario 5 veces",
+  "fr": "Finir le Quotidien 5 fois",
+  "pt": "Conclua o Diário 5 vezes"
+ },
+ "quest.wq_extra_5": {
+  "es": "Encuentra 5 palabras extra",
+  "fr": "Trouver 5 mots bonus",
+  "pt": "Encontre 5 palavras extras"
+ },
+ "quest.wq_login_5": {
+  "es": "Entra 5 días",
+  "fr": "Se connecter 5 jours",
+  "pt": "Entre em 5 dias"
+ },
+ "quest.wq_win_20": {
+  "es": "Gana 20 niveles",
+  "fr": "Gagner 20 niveaux",
+  "pt": "Vença 20 níveis"
+ },
+ "quest.wq_words_150": {
+  "es": "Encuentra 150 palabras",
+  "fr": "Trouver 150 mots",
+  "pt": "Encontre 150 palavras"
+ },
+ "rv.d.cancel": {
+  "en": "No reward and no coins charged.",
+  "es": "Sin recompensa y sin cobro de monedas.",
+  "fr": "Aucune récompense et aucune pièce débitée.",
+  "pt": "Sem recompensa e sem cobrança de moedas.",
+  "vi": "Không có thưởng và không bị trừ coin."
+ },
+ "rv.d.cap": {
+  "en": "Come back tomorrow for more videos. Play continues normally.",
+  "es": "Vuelve mañana para ver más vídeos. El juego sigue con normalidad.",
+  "fr": "Revenez demain pour d'autres vidéos. Le jeu continue normalement.",
+  "pt": "Volte amanhã para mais vídeos. O jogo continua normalmente.",
+  "vi": "Quay lại ngày mai để xem tiếp. Chơi vẫn bình thường."
+ },
+ "rv.d.error": {
+  "en": "No reward and no coins charged.",
+  "es": "Sin recompensa y sin cobro de monedas.",
+  "fr": "Aucune récompense et aucune pièce débitée.",
+  "pt": "Sem recompensa e sem cobrança de moedas.",
+  "vi": "Không có thưởng và không bị trừ coin."
+ },
+ "rv.d.nofill": {
+  "en": "No coins charged, no reward. Try later.",
+  "es": "No se cobran monedas ni hay recompensa. Inténtalo más tarde.",
+  "fr": "Aucune pièce débitée, aucune récompense. Réessayez plus tard.",
+  "pt": "Nenhuma moeda cobrada e nenhuma recompensa. Tente mais tarde.",
+  "vi": "Không trừ coin, không có thưởng. Thử lại sau."
+ },
+ "rv.d.offline": {
+  "en": "Video coins need internet. Play continues normally.",
+  "es": "Las monedas del vídeo necesitan internet. El juego sigue con normalidad.",
+  "fr": "Les pièces vidéo nécessitent Internet. Le jeu continue normalement.",
+  "pt": "As moedas do vídeo precisam de internet. O jogo continua normalmente.",
+  "vi": "Coin từ video cần mạng. Chơi vẫn bình thường."
+ },
+ "rv.d.playingReal": {
+  "en": "Watch to the end to get {n} coins.",
+  "es": "Mira hasta el final para obtener {n} monedas.",
+  "fr": "Regardez jusqu'à la fin pour obtenir {n} pièces.",
+  "pt": "Assista até o fim para ganhar {n} moedas.",
+  "vi": "Xem đến cuối để nhận {n} coin."
+ },
+ "rv.d.success": {
+  "en": "{n} coins added.",
+  "es": "Se añadieron {n} monedas.",
+  "fr": "{n} pièces ajoutées.",
+  "pt": "{n} moedas adicionadas.",
+  "vi": "Đã cộng {n} coin."
+ },
+ "rv.s.cap": {
+  "en": "Daily limit reached",
+  "es": "Límite diario alcanzado",
+  "fr": "Limite du jour atteinte",
+  "pt": "Limite diário atingido",
+  "vi": "Hết lượt hôm nay"
+ },
+ "shop.free": {
+  "en": "FREE COINS",
+  "es": "MONEDAS GRATIS",
+  "fr": "PIÈCES GRATUITES",
+  "pt": "MOEDAS GRÁTIS",
+  "vi": "COIN MIỄN PHÍ"
+ },
+ "shop.pack": {
+  "en": "{n} coins",
+  "es": "{n} monedas",
+  "fr": "{n} pièces",
+  "pt": "{n} moedas",
+  "vi": "{n} coin"
+ },
+ "shop.pk_1": {
+  "es": "Paquete de 500 monedas",
+  "fr": "Pack de 500 pièces",
+  "pt": "Pacote de 500 moedas"
+ },
+ "shop.pk_2": {
+  "es": "Paquete de 1100 monedas",
+  "fr": "Pack de 1100 pièces",
+  "pt": "Pacote de 1100 moedas"
+ },
+ "shop.pk_3": {
+  "es": "Paquete de 2500 monedas",
+  "fr": "Pack de 2500 pièces",
+  "pt": "Pacote de 2500 moedas"
+ },
+ "shop.pk_4": {
+  "es": "Paquete de 4500 monedas",
+  "fr": "Pack de 4500 pièces",
+  "pt": "Pacote de 4500 moedas"
+ },
+ "shop.pk_5": {
+  "es": "Paquete de 11000 monedas",
+  "fr": "Pack de 11000 pièces",
+  "pt": "Pacote de 11000 moedas"
+ },
+ "shop.pk_noads": {
+  "es": "Sin anuncios",
+  "fr": "Sans pub",
+  "pt": "Sem anúncios"
+ },
+ "shop.ready": {
+  "en": "Short video: +{n} coins",
+  "es": "Vídeo corto: +{n} monedas",
+  "fr": "Courte vidéo : +{n} pièces",
+  "pt": "Vídeo curto: +{n} moedas",
+  "vi": "Xem video ngắn: +{n} coin"
+ },
+ "sink.hint_cell": {
+  "es": "Pista: 1 casilla",
+  "fr": "Indice : 1 case",
+  "pt": "Dica: 1 casa"
+ },
+ "sink.hint_word": {
+  "es": "Pista: palabra entera",
+  "fr": "Indice : mot entier",
+  "pt": "Dica: palavra inteira"
+ },
+ "sink.streak_repair": {
+  "es": "Salvar racha",
+  "fr": "Sauver la série",
+  "pt": "Salvar sequência"
+ },
+ "streak.100": {
+  "es": "Racha de 100 días",
+  "fr": "Série de 100 jours",
+  "pt": "Sequência de 100 dias"
+ },
+ "streak.14": {
+  "es": "Racha de 14 días",
+  "fr": "Série de 14 jours",
+  "pt": "Sequência de 14 dias"
+ },
+ "streak.180": {
+  "es": "Racha de 180 días",
+  "fr": "Série de 180 jours",
+  "pt": "Sequência de 180 dias"
+ },
+ "streak.3": {
+  "es": "Racha de 3 días",
+  "fr": "Série de 3 jours",
+  "pt": "Sequência de 3 dias"
+ },
+ "streak.30": {
+  "es": "Racha de 30 días",
+  "fr": "Série de 30 jours",
+  "pt": "Sequência de 30 dias"
+ },
+ "streak.365": {
+  "es": "Racha de 365 días",
+  "fr": "Série de 365 jours",
+  "pt": "Sequência de 365 dias"
+ },
+ "streak.60": {
+  "es": "Racha de 60 días",
+  "fr": "Série de 60 jours",
+  "pt": "Sequência de 60 dias"
+ },
+ "streak.7": {
+  "es": "Racha de 7 días",
+  "fr": "Série de 7 jours",
+  "pt": "Sequência de 7 dias"
+ },
+ "win.dailyReward": {
+  "en": "Today's reward: +{n} coins",
+  "es": "Recompensa de hoy: +{n} monedas",
+  "fr": "Récompense du jour : +{n} pièces",
+  "pt": "Recompensa de hoje: +{n} moedas",
+  "vi": "Thưởng hôm nay: +{n} coin"
+ },
+ "win.first": {
+  "en": "First clear: +{n} coins",
+  "es": "Primera victoria: +{n} monedas",
+  "fr": "Première victoire : +{n} pièces",
+  "pt": "Primeira vitória: +{n} moedas",
+  "vi": "Lần đầu thắng: +{n} coin"
+ },
+ "win.milestone": {
+  "en": "{d}-day streak bonus: +{n} coins",
+  "es": "Bono por {d} días seguidos: +{n} monedas",
+  "fr": "Bonus pour {d} jours de suite : +{n} pièces",
+  "pt": "Bônus por {d} dias seguidos: +{n} moedas",
+  "vi": "Mốc chuỗi {d} ngày: +{n} coin"
+ },
+ "win.replay": {
+  "en": "Replay is practice: no extra coins",
+  "es": "Repetir es práctica: sin monedas extra",
+  "fr": "Rejouer sert à s'entraîner : pas de pièces en plus",
+  "pt": "Jogar de novo é treino: sem moedas extras",
+  "vi": "Chơi lại để luyện tập: không thêm coin"
+ },
+ "win.x2": {
+  "en": "WATCH VIDEO: +{n} more coins",
+  "es": "VER VÍDEO: +{n} monedas más",
+  "fr": "VIDÉO : +{n} pièces de plus",
+  "pt": "ASSISTIR VÍDEO: +{n} moedas a mais",
+  "vi": "XEM VIDEO: +{n} coin nữa"
+ }
+}

@@ -2234,6 +2234,10 @@ MonoBehaviour:
     asset: {fileID: 11400000, guid: 3b642fa24566e482084e607f920c2256, type: 2}
     address: Assets/WordCross/Fonts/CookieRun/CookieRun Black SDF.asset
     label: 
+  - path: Assets/WordCross/Config/GameData/Economy/EconomyData.asset
+    asset: {fileID: 11400000, guid: ea68486132fb64c6399ed22e74d04cd1, type: 2}
+    address: Assets/WordCross/Config/GameData/Economy/EconomyData.asset
+    label: 
   noLoadGroupLabel: no_load
   noLoadScriptableObjects: []
   assetGroupLabel: preload_4
