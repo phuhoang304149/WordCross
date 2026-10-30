@@ -13,10 +13,13 @@ public class RewardedButton : MonoBehaviour
 
     private const string ACTION_NAME = "rewarded_video";
     private bool isEventAttached;
+    private string subKey;
+    private int subLeft = -1;
 
     private void Start()
     {
         if (readyText != null) readyText.SetArg("n", Amount());
+        UpdateSub();
         if (timerText != null) timerText.onCountDownComplete += OnCountDownComplete;
 
 #if UNITY_ANDROID || UNITY_IOS
@@ -54,6 +57,23 @@ public class RewardedButton : MonoBehaviour
     private void IUpdate()
     {
         content.SetActive(IsActionAvailable());
+        UpdateSub();
+    }
+
+    // Dòng phụ của hàng free: số lượt còn lại hôm nay (trần nhóm rw_coin) hoặc "đã hết lượt"; hồi chiêu do đồng hồ bên dưới hiển thị.
+    private void UpdateSub()
+    {
+        if (readyText == null || Econ == null) return;
+        bool capped = Econ.GetAdState(EconomyService.AD_SHOP) == EconomyAdState.CapReached;
+        string key = capped ? "rv.s.cap" : "shop.readyLeft";
+        int left = capped ? 0 : Econ.RewardedLeft(EconomyService.AD_SHOP);
+        if (key == subKey && left == subLeft) return;
+        subKey = key;
+        subLeft = left;
+        readyText.SetKey(key);
+        if (capped) return;
+        readyText.SetArg("n", Amount());
+        readyText.SetArg("l", left);
     }
 
     // Mở popup xác nhận (design: rewarded-video ready); popup tự xử lý loading/cooldown/nofill/offline và phát video.
@@ -81,6 +101,7 @@ public class RewardedButton : MonoBehaviour
         if (!isActiveAndEnabled) return;
         content.SetActive(false);
         ShowTimerText(Cooldown());
+        UpdateSub();
     }
 
     private void OnCountDownComplete()

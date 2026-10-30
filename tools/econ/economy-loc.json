@@ -746,12 +746,47 @@
   "pt": "Limite diário atingido",
   "vi": "Hết lượt hôm nay"
  },
+ "shop.adsOff": {
+  "en": "Ads removed",
+  "es": "Anuncios eliminados",
+  "fr": "Publicités supprimées",
+  "pt": "Anúncios removidos",
+  "vi": "Đã tắt quảng cáo"
+ },
+ "shop.buying": {
+  "en": "Processing purchase…",
+  "es": "Procesando la compra…",
+  "fr": "Traitement de l'achat…",
+  "pt": "Processando a compra…",
+  "vi": "Đang xử lý giao dịch…"
+ },
+ "shop.cancelled": {
+  "en": "Purchase cancelled. You were not charged.",
+  "es": "Compra cancelada. No se te ha cobrado.",
+  "fr": "Achat annulé. Vous n'avez pas été débité.",
+  "pt": "Compra cancelada. Você não foi cobrado.",
+  "vi": "Đã huỷ giao dịch, bạn không bị trừ tiền."
+ },
+ "shop.error": {
+  "en": "Purchase failed. No rubies added. Try again later.",
+  "es": "Error en la compra. No se añadieron rubíes. Inténtalo más tarde.",
+  "fr": "Échec de l'achat. Aucun rubis ajouté. Réessayez plus tard.",
+  "pt": "Falha na compra. Nenhum rubi adicionado. Tente mais tarde.",
+  "vi": "Giao dịch lỗi, chưa cộng ruby. Thử lại sau."
+ },
  "shop.free": {
   "en": "FREE COINS",
   "es": "MONEDAS GRATIS",
   "fr": "PIÈCES GRATUITES",
   "pt": "MOEDAS GRÁTIS",
   "vi": "COIN MIỄN PHÍ"
+ },
+ "shop.note": {
+  "en": "The 4500 and 11000 ruby packs and Remove ads turn off interstitials and banners. Reward videos stay optional.",
+  "es": "Los paquetes de 4500 y 11000 rubíes y Sin anuncios quitan los intersticiales y banners. Los vídeos siguen siendo opcionales.",
+  "fr": "Les packs 4500 et 11000 rubis et Sans pub suppriment les pubs intercalaires et les bannières. Les vidéos restent facultatives.",
+  "pt": "Os pacotes de 4500 e 11000 rubis e Sem anúncios removem intersticiais e banners. Os vídeos continuam opcionais.",
+  "vi": "Gói 4500, 11000 ruby và Tắt quảng cáo sẽ tắt quảng cáo xen kẽ và banner. Video thưởng vẫn tuỳ chọn."
  },
  "shop.pack": {
   "en": "{n} coins",
@@ -796,6 +831,20 @@
   "fr": "Courte vidéo : +{n} pièces",
   "pt": "Vídeo curto: +{n} moedas",
   "vi": "Xem video ngắn: +{n} coin"
+ },
+ "shop.readyLeft": {
+  "en": "Short video: +{n} rubies · {l} left today",
+  "es": "Vídeo corto: +{n} rubíes · quedan {l}",
+  "fr": "Courte vidéo : +{n} rubis · {l} restantes",
+  "pt": "Vídeo curto: +{n} rubis · restam {l}",
+  "vi": "Video ngắn: +{n} ruby · còn {l} lượt"
+ },
+ "shop.storeNotReady": {
+  "en": "Store not ready. Try again later.",
+  "es": "Tienda no disponible. Inténtalo más tarde.",
+  "fr": "Boutique indisponible. Réessayez plus tard.",
+  "pt": "Loja indisponível. Tente mais tarde.",
+  "vi": "Cửa hàng chưa sẵn sàng, thử lại sau."
  },
  "sink.hint_cell": {
   "es": "Pista: 1 casilla",

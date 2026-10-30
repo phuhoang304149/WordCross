@@ -684,15 +684,17 @@ MonoBehaviour:
     - '{n} rubis'
   - key: shop.note
     values:
-    - "Mua b\u1EA5t k\u1EF3 g\xF3i n\xE0o s\u1EBD t\u1EAFt qu\u1EA3ng c\xE1o (kh\xF4ng
-      t\u1EAFt video tu\u1EF3 ch\u1ECDn) \xB7 gi\xE1 demo"
-    - "Buy any item removes ads (optional videos stay) \xB7 demo prices"
-    - "Tout achat supprime les publicit\xE9s (les vid\xE9os facultatives restent)
-      \xB7 prix de d\xE9mo"
-    - "Cualquier compra elimina los anuncios (los v\xEDdeos opcionales se mantienen)
-      \xB7 precios de demo"
-    - "Qualquer compra remove os an\xFAncios (v\xEDdeos opcionais continuam) \xB7
-      pre\xE7os de demonstra\xE7\xE3o"
+    - "G\xF3i 4500, 11000 ruby v\xE0 T\u1EAFt qu\u1EA3ng c\xE1o s\u1EBD t\u1EAFt
+      qu\u1EA3ng c\xE1o xen k\u1EBD v\xE0 banner. Video th\u01B0\u1EDFng v\u1EABn
+      tu\u1EF3 ch\u1ECDn."
+    - The 4500 and 11000 ruby packs and Remove ads turn off interstitials and banners.
+      Reward videos stay optional.
+    - "Les packs 4500 et 11000 rubis et Sans pub suppriment les pubs intercalaires
+      et les banni\xE8res. Les vid\xE9os restent facultatives."
+    - "Los paquetes de 4500 y 11000 rub\xEDes y Sin anuncios quitan los intersticiales
+      y banners. Los v\xEDdeos siguen siendo opcionales."
+    - "Os pacotes de 4500 e 11000 rubis e Sem an\xFAncios removem intersticiais e
+      banners. Os v\xEDdeos continuam opcionais."
   - key: shop.noCheckout
     values:
     - "DEMO: ch\u01B0a c\xF3 thanh to\xE1n th\u1EADt, ch\u01B0a x\xE1c minh IAP."
@@ -709,11 +711,11 @@ MonoBehaviour:
     - MELHOR OFERTA
   - key: shop.adsOff
     values:
-    - "Qu\u1EA3ng c\xE1o \u0111\xE3 t\u1EAFt (m\xF4 ph\u1ECFng)"
-    - Ads removed (simulated)
-    - "Publicit\xE9s supprim\xE9es (simulation)"
-    - Anuncios eliminados (simulado)
-    - "An\xFAncios removidos (simulado)"
+    - "\u0110\xE3 t\u1EAFt qu\u1EA3ng c\xE1o"
+    - Ads removed
+    - "Publicit\xE9s supprim\xE9es"
+    - Anuncios eliminados
+    - "An\xFAncios removidos"
   - key: rv.title
     values:
     - XEM VIDEO
@@ -2981,3 +2983,38 @@ MonoBehaviour:
     - Limite du jour atteinte
     - "L\xEDmite diario alcanzado"
     - "Limite di\xE1rio atingido"
+  - key: shop.buying
+    values:
+    - "\u0110ang x\u1EED l\xFD giao d\u1ECBch\u2026"
+    - "Processing purchase\u2026"
+    - "Traitement de l'achat\u2026"
+    - "Procesando la compra\u2026"
+    - "Processando a compra\u2026"
+  - key: shop.cancelled
+    values:
+    - "\u0110\xE3 hu\u1EF7 giao d\u1ECBch, b\u1EA1n kh\xF4ng b\u1ECB tr\u1EEB ti\u1EC1n."
+    - Purchase cancelled. You were not charged.
+    - "Achat annul\xE9. Vous n'avez pas \xE9t\xE9 d\xE9bit\xE9."
+    - Compra cancelada. No se te ha cobrado.
+    - "Compra cancelada. Voc\xEA n\xE3o foi cobrado."
+  - key: shop.error
+    values:
+    - "Giao d\u1ECBch l\u1ED7i, ch\u01B0a c\u1ED9ng ruby. Th\u1EED l\u1EA1i sau."
+    - Purchase failed. No rubies added. Try again later.
+    - "\xC9chec de l'achat. Aucun rubis ajout\xE9. R\xE9essayez plus tard."
+    - "Error en la compra. No se a\xF1adieron rub\xEDes. Int\xE9ntalo m\xE1s tarde."
+    - Falha na compra. Nenhum rubi adicionado. Tente mais tarde.
+  - key: shop.readyLeft
+    values:
+    - "Video ng\u1EAFn: +{n} ruby \xB7 c\xF2n {l} l\u01B0\u1EE3t"
+    - "Short video: +{n} rubies \xB7 {l} left today"
+    - "Courte vid\xE9o : +{n} rubis \xB7 {l} restantes"
+    - "V\xEDdeo corto: +{n} rub\xEDes \xB7 quedan {l}"
+    - "V\xEDdeo curto: +{n} rubis \xB7 restam {l}"
+  - key: shop.storeNotReady
+    values:
+    - "C\u1EEDa h\xE0ng ch\u01B0a s\u1EB5n s\xE0ng, th\u1EED l\u1EA1i sau."
+    - Store not ready. Try again later.
+    - "Boutique indisponible. R\xE9essayez plus tard."
+    - "Tienda no disponible. Int\xE9ntalo m\xE1s tarde."
+    - "Loja indispon\xEDvel. Tente mais tarde."

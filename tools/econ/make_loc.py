@@ -135,5 +135,14 @@ put("noti.toast", "Bạn nhận được {n} coin miễn phí", "You got {n} fre
 put("noti.rubyTitle", "Quà coin", "Coin gift", "Cadeau de pièces", "Regalo de monedas", "Presente de moedas")
 put("noti.ruby", "Bạn nhận được {n} coin miễn phí. Vào chơi và thử thách bản thân nhé", "You got {n} free coins. Play and challenge yourself!", "Vous avez reçu {n} pièces gratuites. Jouez et relevez le défi !", "Has conseguido {n} monedas gratis. ¡Juega y ponte a prueba!", "Você ganhou {n} moedas grátis. Jogue e desafie-se!")
 
+# ---- T134 bước 4: Shop (ghi chú quy tắc tắt ads, trạng thái giao dịch, lượt video free) — viết thẳng "ruby", không qua đổi coin ----
+put("shop.note", "Gói 4500, 11000 ruby và Tắt quảng cáo sẽ tắt quảng cáo xen kẽ và banner. Video thưởng vẫn tuỳ chọn.", "The 4500 and 11000 ruby packs and Remove ads turn off interstitials and banners. Reward videos stay optional.", "Les packs 4500 et 11000 rubis et Sans pub suppriment les pubs intercalaires et les bannières. Les vidéos restent facultatives.", "Los paquetes de 4500 y 11000 rubíes y Sin anuncios quitan los intersticiales y banners. Los vídeos siguen siendo opcionales.", "Os pacotes de 4500 e 11000 rubis e Sem anúncios removem intersticiais e banners. Os vídeos continuam opcionais.")
+put("shop.adsOff", "Đã tắt quảng cáo", "Ads removed", "Publicités supprimées", "Anuncios eliminados", "Anúncios removidos")
+put("shop.buying", "Đang xử lý giao dịch…", "Processing purchase…", "Traitement de l'achat…", "Procesando la compra…", "Processando a compra…")
+put("shop.cancelled", "Đã huỷ giao dịch, bạn không bị trừ tiền.", "Purchase cancelled. You were not charged.", "Achat annulé. Vous n'avez pas été débité.", "Compra cancelada. No se te ha cobrado.", "Compra cancelada. Você não foi cobrado.")
+put("shop.error", "Giao dịch lỗi, chưa cộng ruby. Thử lại sau.", "Purchase failed. No rubies added. Try again later.", "Échec de l'achat. Aucun rubis ajouté. Réessayez plus tard.", "Error en la compra. No se añadieron rubíes. Inténtalo más tarde.", "Falha na compra. Nenhum rubi adicionado. Tente mais tarde.")
+put("shop.storeNotReady", "Cửa hàng chưa sẵn sàng, thử lại sau.", "Store not ready. Try again later.", "Boutique indisponible. Réessayez plus tard.", "Tienda no disponible. Inténtalo más tarde.", "Loja indisponível. Tente mais tarde.")
+put("shop.readyLeft", "Video ngắn: +{n} ruby · còn {l} lượt", "Short video: +{n} rubies · {l} left today", "Courte vidéo : +{n} rubis · {l} restantes", "Vídeo corto: +{n} rubíes · quedan {l}", "Vídeo curto: +{n} rubis · restam {l}")
+
 json.dump(T, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "economy-loc.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1, sort_keys=True)
 print(len(T))
