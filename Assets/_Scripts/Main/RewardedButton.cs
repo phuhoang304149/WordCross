@@ -16,7 +16,7 @@ public class RewardedButton : MonoBehaviour
 
     private void Start()
     {
-        if (readyText != null) readyText.SetArg("n", ConfigController.Config.rewardedVideoAmount);
+        if (readyText != null) readyText.SetArg("n", Amount());
         if (timerText != null) timerText.onCountDownComplete += OnCountDownComplete;
 
 #if UNITY_ANDROID || UNITY_IOS
@@ -26,8 +26,7 @@ public class RewardedButton : MonoBehaviour
         if (!IsActionAvailable())
         {
             content.SetActive(false);
-            int remainTime = (int)(ConfigController.Config.rewardedVideoPeriod - CUtils.GetActionDeltaTime(ACTION_NAME));
-            ShowTimerText(remainTime);
+            ShowTimerText(RemainTime());
         }
 
         InvokeRepeating("IUpdate", 1, 1);
@@ -42,7 +41,7 @@ public class RewardedButton : MonoBehaviour
             content.SetActive(false);
             // Coroutine của TimerText đã chết khi Shop bị ẩn; Stop để Run() chạy lại.
             if (timerText != null) timerText.Stop();
-            ShowTimerText((int)(ConfigController.Config.rewardedVideoPeriod - CUtils.GetActionDeltaTime(ACTION_NAME)));
+            ShowTimerText(RemainTime());
         }
     }
 
@@ -62,7 +61,7 @@ public class RewardedButton : MonoBehaviour
     {
         Sound.instance.PlayButton();
         var dialog = (RewardedVideoDialog)DialogController.instance.GetDialog(DialogType.RewardedVideo);
-        dialog.SetAmount(ConfigController.Config.rewardedVideoAmount);
+        dialog.SetPlacement(EconomyService.AD_SHOP);
         DialogController.instance.ShowDialog(dialog, DialogShow.STACK);
     }
 
@@ -81,7 +80,7 @@ public class RewardedButton : MonoBehaviour
         // Shop bị ẩn dưới popup (STACK): coroutine TimerText không chạy được trên object tắt; OnEnable dựng lại khi hiện.
         if (!isActiveAndEnabled) return;
         content.SetActive(false);
-        ShowTimerText(ConfigController.Config.rewardedVideoPeriod);
+        ShowTimerText(Cooldown());
     }
 
     private void OnCountDownComplete()
@@ -95,8 +94,30 @@ public class RewardedButton : MonoBehaviour
         return IsActionAvailable() && IsAdAvailable();
     }
 
+    private EconomyService Econ { get { return Script.Utils.Locator<EconomyService>.Instance; } }
+
+    // Video miễn phí của Shop theo economy-config (ad_shop_free): ruby, hồi chiêu và thời gian còn lại; không có EconomyService thì dùng cấu hình cũ.
+    private int Amount()
+    {
+        var ad = Econ == null ? null : Econ.RewardedFor(EconomyService.AD_SHOP);
+        return ad == null ? ConfigController.Config.rewardedVideoAmount : ad.coin;
+    }
+
+    private int Cooldown()
+    {
+        var ad = Econ == null ? null : Econ.RewardedFor(EconomyService.AD_SHOP);
+        return ad == null ? ConfigController.Config.rewardedVideoPeriod : ad.cooldownSec;
+    }
+
+    private int RemainTime()
+    {
+        if (Econ != null) return Econ.CooldownRemain(EconomyService.AD_SHOP);
+        return (int)(ConfigController.Config.rewardedVideoPeriod - CUtils.GetActionDeltaTime(ACTION_NAME));
+    }
+
     private bool IsActionAvailable()
     {
+        if (Econ != null) return Econ.CooldownRemain(EconomyService.AD_SHOP) <= 0;
         return CUtils.IsActionAvailable(ACTION_NAME, ConfigController.Config.rewardedVideoPeriod);
     }
 
