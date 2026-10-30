@@ -2991,6 +2991,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - preload_3
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea68486132fb64c6399ed22e74d04cd1
+    m_Address: Assets/WordCross/Config/GameData/Economy/EconomyData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - preload_3
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: eafac6a9a865dca4bb0ae5056a830924
     m_Address: Assets/WordCross/Config/GameData/Levels/World_4/SubWorld_4/Level_4.asset
     m_ReadOnly: 0
