@@ -1,0 +1,6 @@
+Tagline: Vuốt chữ. Điền ô chữ.
+Home: Vuốt, giải, chơi tiếp
+SelectWorld: Chọn thế giới để khám phá
+Gameplay: Vuốt chữ để điền bảng
+Daily: Mỗi ngày một thử thách mới
+Win: Qua màn! Nhận ruby

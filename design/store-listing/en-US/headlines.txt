@@ -1,0 +1,6 @@
+Tagline: Swipe letters. Fill the crossword.
+Home: Swipe, solve, repeat
+SelectWorld: Pick a world to explore
+Gameplay: Swipe letters to fill the grid
+Daily: A new puzzle every day
+Win: Level cleared! Earn rubies
