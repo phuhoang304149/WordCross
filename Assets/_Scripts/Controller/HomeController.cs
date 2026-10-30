@@ -10,8 +10,8 @@ public class HomeController : BaseController {
     private const int BOT = 2;
     private const int AI = 3;
     private const int LANGUAGE = 4;
-    private const int DAILY_FONT = 29;
-    private const int DAILY_MIN_FONT = 16;
+    private const int DAILY_FONT = 32;
+    private const int DAILY_MIN_FONT = 18;
 
     public TMP_Text resumeText;
     // Chấm đỏ trên nút DAILY (để trống thì tự tìm "Dot" dưới object "Daily" của scene).

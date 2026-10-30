@@ -11,6 +11,8 @@ public class MainTitleFit : MonoBehaviour
     public float nameCss = 19f, subCss = 12f;
     public float nameDy, subDy = 1.5f;
 
+    private const float TmpMetric = 1.11f;
+
     private RectTransform back, pill;
     private float nameY, subY;
     private Canvas canvas;
@@ -35,7 +37,7 @@ public class MainTitleFit : MonoBehaviour
     private void SetFont(TMP_Text text, float css)
     {
         float localPerCanvas = canvas.transform.lossyScale.x / text.transform.lossyScale.x;
-        int size = Mathf.RoundToInt(css * CanvasPerCss() * localPerCanvas);
+        int size = Mathf.RoundToInt(css * TmpMetric * CanvasPerCss() * localPerCanvas);
         text.fontSize = size;
         text.enableAutoSizing = true;
         text.fontSizeMax = size;

@@ -19,7 +19,7 @@ public class WordRegion : MonoBehaviour {
     private const float RegionTop = 90f, RegionBottomPad = 6f;
     private const float MaxCell = 40f, MinCell = 14f, CellGapCss = 4f, RowGapCss = 6f, ColGapCss = 14f;
     private const float BlockGap = 12f, PreviewHeight = 46f, MessageHeight = 18f;
-    private const float CoachPadX = 14f, CoachPadY = 8f, CoachFont = 12.85f, CoachLine = 17.55f, CoachMargin = 18f, CoachWrapSlack = 0.94f;
+    private const float CoachPadX = 14f, CoachPadY = 8f, CoachFont = 14.26f, CoachLine = 17.55f, CoachMargin = 18f, CoachWrapSlack = 0.94f;
 
     private List<LineWord> lines = new List<LineWord>();
     private List<string> validWords = new List<string>();
@@ -182,9 +182,9 @@ public class WordRegion : MonoBehaviour {
         coachLabel.anchorMin = Vector2.zero;
         coachLabel.anchorMax = Vector2.one;
         coachText = label.GetComponent<TMP_Text>();
-        coachText.font = textPreview.text.font;
+        coachText.font = MainController.instance.levelNameText.font;
         coachText.fontSize = Mathf.RoundToInt(CoachFont * perCss);
-        coachText.fontStyle = FontStyles.Bold;
+        coachText.fontStyle = FontStyles.Normal;
         coachText.alignment = TextAlignmentOptions.Center;
         coachText.color = new Color32(0x6b, 0x4d, 0x00, 255);
         coachText.raycastTarget = false;

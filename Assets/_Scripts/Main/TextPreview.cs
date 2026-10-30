@@ -21,7 +21,7 @@ public class TextPreview : MonoBehaviour {
     public static TextPreview instance;
 
     // Design (.preview b): mỗi chữ một ô 38 css cao, rộng tối thiểu 32, lề 8, cách nhau 4, chữ 20 css nâu #5a4100.
-    private const float DesignWidth = 390f, ChipHeight = 38f, ChipMinWidth = 32f, ChipPad = 8f, ChipGap = 4f, ChipFont = 20f;
+    private const float DesignWidth = 390f, ChipHeight = 38f, ChipMinWidth = 32f, ChipPad = 8f, ChipGap = 4f, ChipFont = 22.2f;
     private readonly List<GameObject> chips = new List<GameObject>();
 
     private void Awake()

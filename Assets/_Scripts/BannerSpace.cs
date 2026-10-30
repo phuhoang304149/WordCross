@@ -109,7 +109,7 @@ public class BannerSpace : MonoBehaviour
         var text = label.GetComponent<TMP_Text>();
         var source = MainController.instance.levelNameText;
         text.font = source.font;
-        text.fontSize = Mathf.RoundToInt(11 * perCss);
+        text.fontSize = Mathf.RoundToInt(12.2f * perCss);
         text.fontStyle = FontStyles.Bold;
         text.alignment = TextAlignmentOptions.Center;
         text.color = new Color32(0x8a, 0xa0, 0xa0, 255);

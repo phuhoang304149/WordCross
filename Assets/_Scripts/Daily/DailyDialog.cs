@@ -187,6 +187,7 @@ public class DailyDialog : Dialog
         DateTime month = daily.Parse(viewMonth + "-01");
         string[] names = Loc.Get("daily.months").Split('|');
         monthText.text = Loc.Get("daily.month", "m", names[month.Month - 1], "y", month.Year);
+        monthText.textWrappingMode = TextWrappingModes.NoWrap;
         bool hasNext = string.CompareOrdinal(viewMonth, today.Substring(0, 7)) < 0;
         nextButton.interactable = hasNext;
         foreach (Graphic graphic in nextButton.GetComponentsInChildren<Graphic>()) graphic.canvasRenderer.SetAlpha(hasNext ? 1f : 0.35f);

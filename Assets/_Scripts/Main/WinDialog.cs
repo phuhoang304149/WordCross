@@ -27,8 +27,8 @@ public class WinDialog : Dialog {
     public int videoCooldown = 120;
 
     private const string VIDEO_ACTION = "rewarded_video";
-    private const int BUTTON_FONT = 29;
-    private const int BUTTON_MIN_FONT = 14;
+    private const int BUTTON_FONT = 32;
+    private const int BUTTON_MIN_FONT = 16;
     private const float BUTTON_PADDING = 26f;
 
     private LocalizationController Loc { get { return Locator<LocalizationController>.Instance; } }
@@ -202,7 +202,7 @@ public class WinDialog : Dialog {
         RectTransform holder = rewardHolder.GetComponent<RectTransform>();
         holder.sizeDelta = new Vector2(504, 93);
         ((RectTransform)holder.Find("RubyIcon")).anchoredPosition = new Vector2(-49, 0);
-        rewardAmountText.fontSize = 74;
+        rewardAmountText.fontSize = 82;
         rewardAmountText.rectTransform.anchoredPosition = new Vector2(38, 0);
         rewardAmountText.rectTransform.sizeDelta = new Vector2(130, 100);
 
@@ -213,7 +213,7 @@ public class WinDialog : Dialog {
         ((RectTransform)next).sizeDelta = new Vector2(504, 88);
         next.GetComponent<Image>().pixelsPerUnitMultiplier = 128f / 88f;
         next.GetComponent<Shadow>().effectDistance = new Vector2(0, -6.8f);
-        next.GetComponentInChildren<TMP_Text>().fontSize = 29;
+        next.GetComponentInChildren<TMP_Text>().fontSize = 32;
     }
 
     // Dòng mục tiêu có khung cao cố định, chữ tràn căn giữa: chữ dài (fr/es/pt) xuống thêm dòng thì nới khung và card để không đè dòng dưới.
